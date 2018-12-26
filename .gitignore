@@ -1,6 +1,9 @@
 # Cloud9
 .c9/
 
+# Sphinx / ReadTheDocs
+docs/build/
+
 # General Purpose Files
 *.db
 *.rdb
