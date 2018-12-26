@@ -10,7 +10,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ ahnew [--item {Item Name}] [--starting {Starting Bid Price (Number)}] [--currency {Currency Name (Singular,Plural)}] [--duration {Duration Timecode}] [--roles {Role ID(s)/Mention(s)/Name(s)}] [--forward {User ID(s)/Mention(s)/Name(s)}]
+    |bot_prefix|\ ahnew [--item {item name}] [--starting {starting bid price (number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {role id(s)/mention(s)/q_name(s)}] [--forward {user id(s)/mention(s)/q_name(s)}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^

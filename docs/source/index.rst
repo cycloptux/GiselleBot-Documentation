@@ -19,6 +19,7 @@ Welcome to GiselleBot's documentation!
    auction-house
    custom-reactions
    feedback
+   giveaway
 
 
 
