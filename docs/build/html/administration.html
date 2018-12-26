@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Administration &mdash; GiselleBot 2.0.0-alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Auction House" href="auction-house.html" />
+    <link rel="prev" title="Modules Documentation" href="modules-docs.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GiselleBot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction &amp; History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical-info.html">Technical Info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot-invite.html">Invite GiselleBot to your Discord Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules-docs.html">Modules Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Administration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#log">!log</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#command-syntax">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-description">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logignore">!logignore</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#greet">!greet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#permissions-needed">Permissions Needed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#greetdm">!greetdm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Permissions Needed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#greetmsg">!greetmsg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Permissions Needed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#greetdmmsg">!greetdmmsg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Permissions Needed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#greetdel">!greetdel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Permissions Needed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#autoassignrole">!autoassignrole</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Command Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Command Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Permissions Needed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auction-house.html">Auction House</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-reactions.html">Custom Reactions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiselleBot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Administration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/administration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="administration">
+<h1>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h1>
+<p>The Administration module contains tools used to manage a Discord server and its members.</p>
+<hr class="docutils" />
+<div class="section" id="log">
+<h2>!log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="command-syntax">
+<h3>Command Syntax<a class="headerlink" href="#command-syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!log [type(s)]
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-description">
+<h3>Command Description<a class="headerlink" href="#command-description" title="Permalink to this headline">¶</a></h3>
+<p>Toggles one or more logger types in the current channel. Available loggers are:</p>
+<ul class="simple">
+<li><strong>Members</strong>: User joined/left the server.</li>
+<li><strong>Users</strong>: Username change, nickname change, avatar change.</li>
+<li><strong>Roles</strong>: Role added to user, role removed from user, role created, role edited, role deleted.</li>
+<li><strong>Channels</strong>: Channel created, channel edited*, channel deleted.</li>
+<li><strong>Server</strong>: Server info updated*, emoji created, emoji deleted, emoji updated.</li>
+<li><strong>Messages</strong>: Message deleted, message edited, message pinned, message unpinned.</li>
+<li><strong>Voice</strong>: User connected to/disconnected from/switched voice channel.</li>
+<li><strong>Moderation</strong>: Administrators/moderators using a sensitive command, user struck by a moderation action (warn/kick/ban/mute/…), user evaded from a moderation action**.</li>
+<li><strong>Warning</strong>: This one is a more verbose version the moderation log, focused on moderation actions. Activating this logger enabled the case/scoring system.</li>
+<li><strong>ALL</strong>: Activates all loggers in the current channel.</li>
+</ul>
+<p>You can also print the list of available loggers within Discord by using <code class="docutils literal notranslate"><span class="pre">!log</span></code> without any additional argument.</p>
+<div class="line-block">
+<div class="line"><sub>*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.</sub></div>
+<div class="line"><sub>**: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.</sub></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!log members
+!log voice messages
+!log ALL
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="logignore">
+<h2>!logignore<a class="headerlink" href="#logignore" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Command Syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!logignore (logger type) [entity id/mention/q_name]
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Command Description<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Add a filter to skip logging certain events. Any action that comes from a user/channel/role that is added to the filter won’t generate a logging entry. Please refer to the list below for a list of supported filters:</p>
+<ul class="simple">
+<li><strong>Members</strong>: Users.</li>
+<li><strong>Users</strong>: Users.</li>
+<li><strong>Roles</strong>: Roles.</li>
+<li><strong>Channels</strong>: Channels.</li>
+<li><strong>Server</strong>: <em>N/A</em>.</li>
+<li><strong>Messages</strong>: Users, Channels.</li>
+<li><strong>Voice</strong>: Users, Channels.</li>
+<li><strong>Moderation</strong>: Users.</li>
+<li><strong>Warning</strong>: Users.</li>
+</ul>
+<p>You can also print the list of currently set filters by using <code class="docutils literal notranslate"><span class="pre">!logignore</span> <span class="pre">(logger</span> <span class="pre">type)</span></code> without any additional argument.</p>
+</div>
+<div class="section" id="id3">
+<h3>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!logignore members @cycloptux#1543
+!logignore channels #admin-chat
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="greet">
+<h2>!greet<a class="headerlink" href="#greet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Command Description<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Toggles announcements on the current channel when someone joins the server.</p>
+</div>
+<div class="section" id="permissions-needed">
+<h3>Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Server</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="greetdm">
+<h2>!greetdm<a class="headerlink" href="#greetdm" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Command Description<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Toggles announcements via Direct Message when someone joins the server (this is separate from greet - you can have both, any or neither enabled).</p>
+</div>
+<div class="section" id="id6">
+<h3>Permissions Needed<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Server</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="greetmsg">
+<h2>!greetmsg<a class="headerlink" href="#greetmsg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Command Syntax<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetmsg [message]
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Command Description<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Sets a new join announcement message which will be shown in the server’s channel. Using it with no message will show the current greet message.</p>
+<p>You can use one (or more) of these placeholders in your message:
+* <strong>%user%</strong>: This will be replaced with a mention of the user.
+* <strong>%server%</strong>: This will be replaced with the server name.
+* <strong>%now%</strong>: This will be replaced with the current time, with format <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">HH:mm:ss</span> <span class="pre">(UTC)</span></code>.
+* <strong>%server_time%</strong>: This will be replaced with the current time, with format <code class="docutils literal notranslate"><span class="pre">HH:mm</span> <span class="pre">UTC</span></code>.</p>
+<p>You can use embed json from <a class="reference external" href="https://embedbuilder.nadekobot.me/">https://embedbuilder.nadekobot.me/</a> instead of a regular text, if you want the message to be embedded.</p>
+</div>
+<div class="section" id="id9">
+<h3>Permissions Needed<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Server</p>
+</div>
+<div class="section" id="id10">
+<h3>Examples<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetmsg Welcome, %user%.
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="greetdmmsg">
+<h2>!greetdmmsg<a class="headerlink" href="#greetdmmsg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Command Syntax<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetdmmsg [message]
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>Command Description<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Sets a new join announcement message which will be sent to the user who joined. Using it with no message will show the current DM greet message.</p>
+<p>You can use one (or more) of these placeholders in your message:</p>
+<ul class="simple">
+<li><strong>%user%</strong>: This will be replaced with a mention of the user.</li>
+<li><strong>%server%</strong>: This will be replaced with the server name.</li>
+<li><strong>%now%</strong>: This will be replaced with the current time, with format <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">HH:mm:ss</span> <span class="pre">(UTC)</span></code>.</li>
+<li><strong>%server_time%</strong>: This will be replaced with the current time, with format <code class="docutils literal notranslate"><span class="pre">HH:mm</span> <span class="pre">UTC</span></code>.</li>
+</ul>
+<p>You can use embed json from <a class="reference external" href="https://embedbuilder.nadekobot.me/">https://embedbuilder.nadekobot.me/</a> instead of a regular text, if you want the message to be embedded.</p>
+</div>
+<div class="section" id="id13">
+<h3>Permissions Needed<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Server</p>
+</div>
+<div class="section" id="id14">
+<h3>Examples<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetdmmsg Welcome to %server%, %user%.
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="greetdel">
+<h2>!greetdel<a class="headerlink" href="#greetdel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>Command Syntax<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetdel (seconds)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>Command Description<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 1800 (30 minutes).</p>
+</div>
+<div class="section" id="id17">
+<h3>Permissions Needed<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Server</p>
+</div>
+<div class="section" id="id18">
+<h3>Examples<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!greetdel 0
+!greetdel 30
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="autoassignrole">
+<h2>!autoassignrole<a class="headerlink" href="#autoassignrole" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h3>Command Syntax<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!autoassignrole [role id/mention/q_name]
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>Command Description<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>Automaticaly assigns a specified role to every user who joins the server. Provide no parameters to disable.</p>
+</div>
+<div class="section" id="id21">
+<h3>Permissions Needed<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p><strong>User</strong>: Manage Roles
+<strong>Bot</strong>: Manage Roles</p>
+</div>
+<div class="section" id="id22">
+<h3>Examples<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!aar
+!aar RoleName
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="auction-house.html" class="btn btn-neutral float-right" title="Auction House" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules-docs.html" class="btn btn-neutral" title="Modules Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, cycloptux
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
