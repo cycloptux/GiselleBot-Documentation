@@ -1,7 +1,7 @@
 Custom Reactions
 ================
 
-The Custom Reactions module enables server administrators to set up custom bot reactions and build pseudo-commands.
+The Custom Reactions module enables users to set up custom bot reactions and build pseudo-commands in a server.
 
 !togglecustreact
 ----------------
@@ -60,7 +60,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. code-block:: none
 
-    !ecr <cr_id> [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
+    !ecr (reaction_id) [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -85,7 +85,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. code-block:: none
 
-    !scr <cr_id>
+    !scr (reaction_id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -121,7 +121,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. code-block:: none
 
-    !dcr <cr_id>
+    !dcr (reaction_id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^

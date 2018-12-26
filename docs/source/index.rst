@@ -17,6 +17,7 @@ Welcome to GiselleBot's documentation!
    administration
    auction-house
    custom-reactions
+   feedback
 
 
 
