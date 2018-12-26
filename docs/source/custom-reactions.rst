@@ -64,7 +64,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Edits an existing custom reaction for the current server. Users can only edit their own custom reactions.
+Edits an existing custom reaction for the current server. Global custom reactions can only be edited by the bot owner.
 
 You cannot edit the trigger text of a custom reaction: if you want to change the trigger text of a reaction, delete the existing one and add a new custom reaction.
 
@@ -89,16 +89,55 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Edits an existing custom reaction for the current server. Users can only edit their own custom reactions.
-
-You cannot edit the trigger text of a custom reaction: if you want to change the trigger text of a reaction, delete the existing one and add a new custom reaction.
-
-The presence of an optional parameter will **toggle** the option to the opposite of what it was before the edit. ``--global``, on the other hand, will need to be added or removed accordingly, depending on the scope of the reaction.
+Prints the current configuration for a specific custom reaction.
 
 Examples
 ^^^^^^^^
 .. code-block:: none
 
-    !ecr 1 --out Hello %user%! The current time is %server\_time%.  --delete
+    !scr 3
 
 ....
+
+!listcustreact
+--------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. code-block:: none
+
+    !lcr
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all available custom reactions in the current server (including global reactions).
+
+....
+
+!delcustreact
+-------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. code-block:: none
+
+    !dcr <cr_id>
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Deletes a specific custom reaction. Global custom reactions can only be deleted by the bot owner.
+
+Examples
+^^^^^^^^
+.. code-block:: none
+
+    !dcr 3
+
+....
+
+!crclear
+--------
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Deletes all server specific custom reactions. Global custom reactions can only be deleted by the bot owner.
