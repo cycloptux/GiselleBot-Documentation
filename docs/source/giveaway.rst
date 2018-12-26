@@ -1,17 +1,19 @@
-Feedback Workflows
+Giveaway Campaigns
 ==================
 
-The Feedback Workflows module enables users to set up Q/A workflows that are presented to those that send a Direct Message to the bot. The Q/As can be set up to be a sequence of multi-choice or open questions, with the final output being sent into a server channel by the bot itself.
+The Giveaway Campaigns module enables users to start and manage giveaways in a Discord server.
+
+Partially inspired by `GiveawayBot <https://giveawaybot.party/>`_.
 
 
-|bot_prefix|\ workflowpreview
------------------------------
+|bot_prefix|\ gstart
+--------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ wfp
+    |bot_prefix|\ gstart [--prize {prize name}] [--winners {# of winners (Number)}] [--duration {duration
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^

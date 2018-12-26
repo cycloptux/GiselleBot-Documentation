@@ -13,6 +13,7 @@ Welcome to GiselleBot's documentation!
    introduction
    technical-info
    bot-invite
+   credits
    modules-docs
    administration
    auction-house

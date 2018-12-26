@@ -3,14 +3,16 @@ Custom Reactions
 
 The Custom Reactions module enables users to set up custom bot reactions and build pseudo-commands in a server.
 
-!togglecustreact
-----------------
+Partially inspired by `NadekoBot <https://nadekobot.me/>`_.
+
+|bot_prefix|\ togglecustreact
+-----------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !tcr
+    |bot_prefix|\ tcr
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -18,14 +20,14 @@ Toggles the custom reactions module on the whole Discord server.
 
 ....
 
-!addcustreact
--------------
+|bot_prefix|\ addcustreact
+--------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !acr (--in {trigger text}) (--out {response text}) [--anywhere] [--dm] [--delete] [--global]
+    |bot_prefix|\ acr (--in {trigger text}) (--out {response text}) [--anywhere] [--dm] [--delete] [--global]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -47,20 +49,20 @@ You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regu
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !acr --in what time is it --out Hello %user%! The current time is %now%. --anywhere
+    |bot_prefix|\ acr --in what time is it --out Hello %user%! The current time is %now%. --anywhere
 
 ....
 
-!editcustreact
---------------
+|bot_prefix|\ editcustreact
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !ecr (reaction_id) [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
+    |bot_prefix|\ ecr (reaction_id) [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -72,20 +74,20 @@ The presence of an optional parameter will **toggle** the option to the opposite
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !ecr 1 --out Hello %user%! The current time is %server\_time%.  --delete
+    |bot_prefix|\ ecr 1 --out Hello %user%! The current time is %server\_time%.  --delete
 
 ....
 
-!showcustreact
---------------
+|bot_prefix|\ showcustreact
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !scr (reaction_id)
+    |bot_prefix|\ scr (reaction_id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -93,20 +95,20 @@ Prints the current configuration for a specific custom reaction.
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !scr 3
+    |bot_prefix|\ scr 3
 
 ....
 
-!listcustreact
---------------
+|bot_prefix|\ listcustreact
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !lcr
+    |bot_prefix|\ lcr
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -114,14 +116,14 @@ Lists all available custom reactions in the current server (including global rea
 
 ....
 
-!delcustreact
--------------
+|bot_prefix|\ delcustreact
+--------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !dcr (reaction_id)
+    |bot_prefix|\ dcr (reaction_id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -129,14 +131,14 @@ Deletes a specific custom reaction. Global custom reactions can only be deleted 
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !dcr 3
+    |bot_prefix|\ dcr 3
 
 ....
 
-!crclear
---------
+|bot_prefix|\ crclear
+---------------------
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^

@@ -24,10 +24,14 @@ copyright = '2018, cycloptux'
 author = 'cycloptux'
 
 # The short X.Y version
-version = ''
+version = '2.0'
 # The full version, including alpha/beta/rc tags
 release = '2.0.0-alpha'
 
+# Substitutions
+rst_prolog = '''
+.. |bot_prefix| replace:: !
+'''
 
 # -- General configuration ---------------------------------------------------
 

@@ -3,14 +3,14 @@ Auction House
 
 The Auction House module lets server members bid for items within a certain span of time.
 
-!ahnew
-------
+|bot_prefix|\ ahnew
+-------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !ahnew [--item {Item Name}] [--starting {Starting Bid Price (Number)}] [--currency {Currency Name (Singular,Plural)}] [--duration {Duration Timecode}] [--roles {Role ID(s)/Mention(s)/Name(s)}] [--forward {User ID(s)/Mention(s)/Name(s)}]
+    |bot_prefix|\ ahnew [--item {Item Name}] [--starting {Starting Bid Price (Number)}] [--currency {Currency Name (Singular,Plural)}] [--duration {Duration Timecode}] [--roles {Role ID(s)/Mention(s)/Name(s)}] [--forward {User ID(s)/Mention(s)/Name(s)}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -27,14 +27,14 @@ All parameters are optional, the default values (on omission) are:
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !ahnew --item Steam Key --starting 100 --currency buck,bucks --duration 5d --roles "Auction Enabled" @Gamers --forward cycloptux#1543
+    |bot_prefix|\ ahnew --item Steam Key --starting 100 --currency buck,bucks --duration 5d --roles "Auction Enabled" @Gamers --forward cycloptux#1543
 
 ....
 
-!ahstop
--------
+|bot_prefix|\ ahstop
+--------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -42,14 +42,14 @@ Stops the auction (in the current channel) that was started by the command autho
 
 ....
 
-!bid
-----
+|bot_prefix|\ bid
+-----------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !bid (amount)
+    |bot_prefix|\ bid (amount)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -57,6 +57,6 @@ Lets a user bid a certain amount for the current auction. Validation rules are i
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !bid 110
+    |bot_prefix|\ bid 110

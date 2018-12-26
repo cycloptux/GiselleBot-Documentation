@@ -3,15 +3,18 @@ Administration
 
 The Administration module contains tools used to manage a Discord server and its members.
 
+Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_ and `NadekoBot <https://nadekobot.me/>`_.
+
 ....
 
-!log
-----
+|bot_prefix|\ log
+-----------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal:: 
     
-    !log [type(s)]
+    |bot_prefix|\ log [type(s)]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -28,29 +31,29 @@ Toggles one or more logger types in the current channel. Available loggers are:
 * **Warning**: This one is a more verbose version the moderation log, focused on moderation actions. Activating this logger enabled the case/scoring system.
 * **ALL**: Activates all loggers in the current channel.
 
-You can also print the list of available loggers within Discord by using ``!log`` without any additional argument.
+You can also print the list of available loggers within Discord by using ``|bot_prefix|\ log`` without any additional argument.
 
 | :sub:`\*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.`
 | :sub:`\*\*: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.`
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !log members
-    !log voice messages
-    !log ALL
+    |bot_prefix|\ log members
+    |bot_prefix|\ log voice messages
+    |bot_prefix|\ log ALL
 
 ....
 
-!logignore
------------
+|bot_prefix|\ logignore
+-----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !logignore (logger type) [entity id/mention/q_name]
+    |bot_prefix|\ logignore (logger type) [entity id/mention/q_name]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -66,19 +69,19 @@ Add a filter to skip logging certain events. Any action that comes from a user/c
 * **Moderation**: Users.
 * **Warning**: Users.
 
-You can also print the list of currently set filters by using ``!logignore (logger type)`` without any additional argument.
+You can also print the list of currently set filters by using ``|bot_prefix|\ logignore (logger type)`` without any additional argument.
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !logignore members @cycloptux#1543
-    !logignore channels #admin-chat
+    |bot_prefix|\ logignore members @cycloptux#1543
+    |bot_prefix|\ logignore channels #admin-chat
     
 ....
 
-!greet
-------
+|bot_prefix|\ greet
+-------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -86,12 +89,12 @@ Toggles announcements on the current channel when someone joins the server.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Server
+| **User**: Manage Server
 
 ....
 
-!greetdm
---------
+|bot_prefix|\ greetdm
+---------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -99,23 +102,25 @@ Toggles announcements via Direct Message when someone joins the server (this is 
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Server
+| **User**: Manage Server
 
 ....
 
-!greetmsg
----------
+|bot_prefix|\ greetmsg
+----------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetmsg [message]
+    |bot_prefix|\ greetmsg [message]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Sets a new join announcement message which will be shown in the server's channel. Using it with no message will show the current greet message.
 
 You can use one (or more) of these placeholders in your message:
+
 * **%user%**: This will be replaced with a mention of the user.
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
@@ -125,23 +130,24 @@ You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regu
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Server
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetmsg Welcome, %user%.
+    |bot_prefix|\ greetmsg Welcome, %user%.
 
 ....
 
-!greetdmmsg
------------
+|bot_prefix|\ greetdmmsg
+------------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetdmmsg [message]
+    |bot_prefix|\ greetdmmsg [message]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -158,23 +164,24 @@ You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regu
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Server
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetdmmsg Welcome to %server%, %user%.
+    |bot_prefix|\ greetdmmsg Welcome to %server%, %user%.
 
 ....
 
-!greetdel
----------
+|bot_prefix|\ greetdel
+----------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetdel (seconds)
+    |bot_prefix|\ greetdel (seconds)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -182,24 +189,25 @@ Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set i
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Server
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !greetdel 0
-    !greetdel 30
+    |bot_prefix|\ greetdel 0
+    |bot_prefix|\ greetdel 30
 
 ....
 
-!autoassignrole
----------------
+|bot_prefix|\ autoassignrole
+----------------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !autoassignrole [role id/mention/q_name]
+    |bot_prefix|\ autoassignrole [role id/mention/q_name]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -207,14 +215,15 @@ Automaticaly assigns a specified role to every user who joins the server. Provid
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-**User**: Manage Roles
-**Bot**: Manage Roles
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
 
 Examples
 ^^^^^^^^
-.. code-block:: none
+.. parsed-literal::
 
-    !aar
-    !aar RoleName
+    |bot_prefix|\ aar
+    |bot_prefix|\ aar RoleName
     
     
