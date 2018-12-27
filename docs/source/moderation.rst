@@ -228,7 +228,7 @@ The list of "warning commands" is the following:
 * |bot_prefix|\ cmute
 * |bot_prefix|\ cimageban
 
-By default, warning commands will generate a new case if the **Warning** log is active. Upon generating a case, a DM will be sent to the target user(s), notifying them of the moderation action that has been triggered on them, who did that and the specifics of the rules that are broken, if applicable. Please refer to the "Warning Point System" section below for more details about the rules system.
+By default, warning commands will generate a new case if the **Warning** log is active. Upon generating a case, a DM will be sent to the target user(s), notifying them of the moderation action that has been triggered on them, who issued the moderation action and the specifics of the rules that are broken, if applicable. Please refer to the "Warning Point System" section below for more details about the rules system.
 
 These commands support being used on multiple users at once: if more than one user is targeted by these commands, the parameters will be parallelized for all of the users, while multiple cases will be generated.
 
@@ -281,7 +281,7 @@ As said above, these commands will automatically generate a server-specific case
 * **Suggested moderation action & number of points to next warning threshold**
 * Case ID & timestamp (in footer)
 
-If any of these parameters are missing, the bot will tag the user upon action log generation prompting them to fill in the missing arguments using the |bot_prefix|\ edit command.
+If any of the rule, reason or attachments parameters are missing, the bot will tag the moderator upon action log generation prompting them to fill in the missing arguments using the |bot_prefix|\ edit command. The bot will also tag the moderator the first time that the user reaches a suggested action threshold.
 
 Each command has a "un-" version that reverts the active warning command. "un-" commands will follow a similar syntax but will never generate a new case, hence rendering the set of warning parameters (every parameter after the user identifier(s)) useless.
 
@@ -345,6 +345,29 @@ The specific permissions for this command will be set (or checked/updated) every
 
 ....
 
+|bot_prefix|\ cban
+------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+|bot_prefix|\ cban applies the role configured in |bot_prefix|\ channelbanrole (or creates a default "#%channel% Banned Users" role at the bottom of the role list with no permissions if the channel ban role is not configured) to the target user(s) and sets the channel permissions for the ban role, as described in the previous sections.
+
+The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+....
+
+|bot_prefix|\ cmute
+------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+|bot_prefix|\ cmute applies the role configured in |bot_prefix|\ channelmuterole (or creates a default "#%channel% Muted Users" role at the bottom of the role list with no permissions if the channel mute role is not configured) to the target user(s) and sets the channel permissions for the mute role, as described in the previous sections.
+
+The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+....
 
 
 
