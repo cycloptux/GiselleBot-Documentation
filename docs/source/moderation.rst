@@ -315,6 +315,11 @@ Command Description
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles, Mute Members
+| **Bot**: Manage Roles, Mute Members
+
 ....
 
 |bot_prefix|\ ban
@@ -331,10 +336,17 @@ Command Description
 
 |bot_prefix|\ ban has one additional, optional argument before the user identifier(s): either the number 24, or the number 7. If this argument is omitted, the user is banned without their message history being deleted. Otherwise, the bot uses the native ban API to delete the last 24 hours or 7 days of the banned users' message history.
 
+This also works banning users that are currently not in the server. It is advised to use the user ID for that.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Ban Members
+| **Bot**: Ban Members
+
 ....
 
 |bot_prefix|\ imageban
-------------------
+----------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -342,6 +354,11 @@ Command Description
 |bot_prefix|\ imageban applies the role configured in |bot_prefix|\ imagebanrole (or creates a default "Image Banned Users" role at the bottom of the role list with no permissions if the image ban role is not configured) to the target user(s) and sets all channel permissions for the image ban role, as described in the previous sections.
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
 
 ....
 
@@ -355,10 +372,15 @@ Command Description
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
 ....
 
 |bot_prefix|\ cmute
-------------------
+-------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -367,58 +389,220 @@ Command Description
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles, Mute Members
+| **Bot**: Manage Roles, Mute Members
+
 ....
 
+|bot_prefix|\ cimageban
+-----------------------
 
+Command Description
+^^^^^^^^^^^^^^^^^^^
 
+|bot_prefix|\ cimageban applies the role configured in |bot_prefix|\ channelimagebanrole (or creates a default "#%channel% Image Banned Users" role at the bottom of the role list with no permissions if the channel image ban role is not configured) to the target user(s) and sets the channel permissions for the image ban role, as described in the previous sections.
 
+The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
 
+....
 
+|bot_prefix|\ unmute
+--------------------
 
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
 
+    |bot_prefix|\ unmute (user id(s)/mention(s)/q_name(s))
 
+Command Description
+^^^^^^^^^^^^^^^^^^^
 
+Lifts the mute role from the target user(s). 
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles, Mute Members
+| **Bot**: Manage Roles, Mute Members
 
+....
 
+|bot_prefix|\ unban
+-------------------
 
+Command Description
+^^^^^^^^^^^^^^^^^^^
 
+Lifts the ban status from the target user(s). 
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Ban Members
+| **Bot**: Ban Members
 
+....
 
+|bot_prefix|\ imageunban
+------------------------
 
+Command Description
+^^^^^^^^^^^^^^^^^^^
 
+Lifts the image ban role from the target user(s). 
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
 
+....
 
+|bot_prefix|\ cunmute
+---------------------
 
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
 
+    |bot_prefix|\ cunmute [channel id/mention/q_name] (user id(s)/mention(s)/q_name(s))
 
+Command Description
+^^^^^^^^^^^^^^^^^^^
 
+Lifts the channel mute role from the target user(s). Omission of the channel identifier will result in the current channel being considered by the command.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+....
+
+|bot_prefix|\ cunban
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ cunban [channel id/mention/q_name] (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Lifts the channel ban role from the target user(s). Omission of the channel identifier will result in the current channel being considered by the command.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+....
+
+|bot_prefix|\ cimageunban
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ cimageunban [channel id/mention/q_name] (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Lifts the channel image ban role from the target user(s). Omission of the channel identifier will result in the current channel being considered by the command.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+....
+
+Utility Commands
+================
+
+These moderation commands may be used in conjunction with the rest of the moderation module to keep your server clean.
 
 |bot_prefix|\ kick
 ------------------
 
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ kick (user id(s)/mention(s)/q_name(s)) [--reason {textual description}] 
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-xxxxxxxxx
+Kicks the target user(s) from the current server. The ``--reason`` tag is used to specify a reason that will appear in the native Discord audit log.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Kick Members
+| **Bot**: Kick Members
 
 ....
 
 |bot_prefix|\ prune
-------------------
+-------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ prune (# of messages) [filter item] [--ignore {filter ignore}] [--force]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-xxxxxxxxxxx
+Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **500** messages. If you need to delete more than 500, you can append ``--force`` to remove the cap.
+
+**BEWARE**: There isn't a higher cap. This command could potentially nuke a whole channel if ``--force`` is used. For this reason, the usage of the ``--force`` parameter is restricted to those with **Administrator** permissions.
+
+The filter items serve to delete/ignore a subset of messages in the set of messages specified by the integer argument. The list of available filters is:
+
+* ``images``: deletes all images in the set of messages
+* ``bots``: deletes all messages from bots in the set of messages
+* ``links``: deletes all messages with links in the set of messages
+* ``emojis``: deletes all messages with emojis in the set of messages
+* ``reactions``: deletes all of the reactions off of the messages in the set of messages, **not the messages themselves**
+* ``embeds``: deletes all embeds in the set of messages (this doesn't include embeds that are generated by links, see ``links`` for that)
+* ``text``: deletes messages that only contain plain text in the set of messages
+* ``invites``: deletes messages containing Discord invites in the set of messages
+* ``mentions``: deletes messages containing a mention to a user, role, "@everyone" or "@here" in the set of messages
+* ``{user mention}``: deletes messages sent by the specified user in the set of messages
+* ``{any text string}``: deletes messages containing matching text from the supplied text string in the set of messages (for example, |bot_prefix|\ prune 100 "donald trump" would delete all messages containing "donald trump" in the last 100 messages)
+
+You can add an ``--ignore`` tag, combined with the aforementioned filter items, to ignore (and not delete) messages meeting that criteria. For example "|bot_prefix|\ purge 100 bots --ignore embeds" would delete all bot messages that weren't embeds.
+
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ prune 100
+    |bot_prefix|\ purge 500 bots
+    |bot_prefix|\ clear 2500 @cycloptux#1543 --ignore images
 
 ....
 
-Evasion Action
-==============
+Evasion Actions
+===============
 
 In addition to the active behavior of the warning commands, the following commands also support a special "evasion" action log:
 
