@@ -3,28 +3,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+**************************************
 Welcome to GiselleBot's documentation!
-======================================
+**************************************
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Contents
    
    introduction
    technical-info
    bot-invite
    credits
    modules-docs
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Modules & Command List
+   
    administration
    auction-house
    custom-reactions
    feedback
    giveaway
+   moderation
 
 
-
+******************
 Indices and tables
-==================
+******************
 
 * :ref:`genindex`
 * :ref:`modindex`

@@ -1,5 +1,6 @@
+*************
 Auction House
-=============
+*************
 
 The Auction House module lets server members bid for items within a certain span of time.
 

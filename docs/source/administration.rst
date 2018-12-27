@@ -1,11 +1,14 @@
+**************
 Administration
-=====================
+**************
 
 The Administration module contains tools used to manage a Discord server and its members.
 
 Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_ and `NadekoBot <https://nadekobot.me/>`_.
 
 ....
+
+.. _log-warning:
 
 |bot_prefix|\ log
 -----------------
@@ -28,7 +31,7 @@ Toggles one or more logger types in the current channel. Available loggers are:
 * **Messages**: Message deleted, message edited, message pinned, message unpinned.
 * **Voice**: User connected to/disconnected from/switched voice channel.
 * **Moderation**: Administrators/moderators using a sensitive command, user struck by a moderation action (warn/kick/ban/mute/...), user evaded from a moderation action\*\*.
-* **Warning**: This one is a more verbose version the moderation log, focused on moderation actions. Activating this logger enabled the case/scoring system.
+* **Warning**: This one is a more verbose version the moderation log, focused on moderation actions. Activating this logger enables the case/scoring system.
 * **ALL**: Activates all loggers in the current channel.
 
 You can also print the list of available loggers within Discord by using ``|bot_prefix|\ log`` without any additional argument.

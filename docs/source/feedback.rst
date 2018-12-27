@@ -1,5 +1,6 @@
+******************
 Feedback Workflows
-==================
+******************
 
 The Feedback Workflows module enables users to set up Q/A workflows that are presented to those that send a Direct Message to the bot. The Q/As can be set up to be a sequence of multi-choice or open questions, with the final output being sent into a server channel by the bot itself.
 
