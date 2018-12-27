@@ -211,6 +211,8 @@ Permissions Needed
 
 ....
 
+.. _moderation:
+
 Moderation Commands
 ===================
 
@@ -615,3 +617,216 @@ In addition to the active behavior of the warning commands, the following comman
 An "evasion" action happens when a user that is hit with one of these moderation actions leaves the server and rejoins while the corresponding role is still supposed to be up (either because the timed role still has to expire, or the role has been set as permanent by skipping the corresponding time code).
 
 If still applicable, the role will be applied again as soon as the user rejoins the server and an "evasion" log will appear in the warning log.
+
+....
+
+Warning Point System
+====================
+
+To account for the nature and severity of various infractions, users will incur a certain number of points based on which rule they break. Moderators will be able to use their judgment to adjust the default value of an infraction by adding or subtracting points from the warning. At certain point thresholds, it is recommended that certain moderation actions (such as a mute or ban) be taken against the user.
+
+This section will describe the details of the "default" warning point system backend as well as point out options or commands to configure parts of the system.
+
+Point Accumulation and Thresholds
+---------------------------------
+
+In addition to a user's total points being the sum of the points of their infractions, the following rules apply to points:
+
+* Warning points expire after **90 days**, at which point the value of the infraction decreases to **1**.
+* The first warning for a particular rule is considered to be a "soft warning" and worth half points (e.g., if a user broke the toxic attitudes rule and the NSFW rule, both infractions would be recorded at half points, but breaking the toxic attitudes rule twice would result in the second infraction being recorded at full points).
+* Each case score can be manually adjusted (``--padj``) but it must always be >= 0. Validation rules are in place for a score not to be negative. Any adjustment that brings the score to a negative value will make the score account for 0.
+* In order to preserve the severity of a banned user's warning history, points for banned users will not expire **while the user is banned**. Unbanning a user will make the points behave as usual again.
+
+The following thresholds apply to the point total of a user. A user reaching one of these thresholds will cause the action log message related to that warning to include a tag of the issuing moderator informing him/her of the user reaching the threshold.
+
+* 18 **unexpired** points: The bot will recommend in the action log that the user in question be muted.
+* 27 **unexpired** points: The bot will recommend in the action log that the user in question be banned.
+* 54 points **total, even if expired**: The bot will recommend in the action log that the user in question be banned. This is referred to as the "absolute ban threshold".
+* *(not implemented yet)* **Three channel specific warnings**: The bot will recommend in the action log that the user be banned from that specific channel, regardless of the total point value. A user can simultaneously reach this threshold and the point thresholds, and the message in the action log should be constructed accordingly.
+
+The justification for these thresholds are as follows:
+
+* Rules are given point values based on a severity from 1 to 10.
+* Since the first infraction is worth half points, only even numbers should be used for rule values.
+* 6 is the average rule value.
+* A "full warning" (i.e., one soft warning and one regular warning) would be 9 points on average.
+* Two "full warnings" should result in a mute, and three should result in a ban.
+* The absolute ban threshold is twice the ban threshold, a considerable feat even in one's lifetime of the server.
+
+Default Rules and Points
+------------------------
+
+Ideally, users would configure their own rules and point values. However, there are definitely some rules that are common among servers and can be provided as a default hard-coded table. The default table is provided to use as a base:
+
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Rule Name                                               | Rule Alias        | Rule Description                                                                                                                                                                                                                                                                                                                                                                                                     | Rule Points |
++=========================================================+===================+======================================================================================================================================================================================================================================================================================================================================================================================================================+=============+
+| No Toxic Attitudes                                      | Toxic Attitudes   | Please behave and do not make a nuisance of yourself on the server, including "trolling" or otherwise being disruptive or making others feel uncomfortable.                                                                                                                                                                                                                                                          | 6           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| No Offensive Content, Hate Speech or Sensitive Material | Offensive Content | Please refrain from posting offensive content such as politics, religion, acts of violence, rape, suicide, school shootings, and other serious topics. Also keep in mind that hate speech including racial slurs or derivatives thereof, sexist or homophobic statements, and other similar types of behavior is not tolerated on this server.                                                                       | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| No Harassment                                           | Harassment        | This applies both to DMs and public chat channels, and includes insults or other actions that target a specific user in order to make them feel uncomfortable or unwelcome.                                                                                                                                                                                                                                          | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Be Respectful to Moderators                             | Arguing           | While measured discussion and questions regarding why you were warned for something is fine, attacking the moderators or becoming belligerent over being warned will likely result in another warning. You are welcome to provide feedback in the relevant channels on the Discord server if your concern is general, or you may DM a moderator or administrator regarding your warning if your concern is specific. | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Do Not Incite Others to Break The Rules                 | Incitement        | Encouraging the breaking of rules, inciting others to be blatantly rude and offensive, or otherwise promoting and/or encouraging conflicts between other members will result in punitive measures for both rulebreakers and those encouraging rule breaking.                                                                                                                                                         | 10          |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Do Not Spam the Server or its Members                   | Spam              | Spam is a broad term used to define unsolicited or repetitious messages received electronically. Spamming is prohibited on this server and in DMs to server members. This includes image spam, text/link/emoji spam, and tag spam.                                                                                                                                                                                   | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Do Not Share Other People’s Personal Information        | Personal Info     | Please do not share other people’s personal information such as real names, addresses, other social media accounts, etc. without their permission. Sharing this with malicious intent may be construed as doxxing, which will result in an instant ban.                                                                                                                                                              | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| No Advertising                                          | Advertising       | Advertisement of other discord servers, giveaways, unofficial tournaments, or one’s own social media/content creation channels is prohibited without approval from a Discord Moderator. This includes advertisement in group channels as well as in Direct Messages (DMs) to server members.                                                                                                                         | 6           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Follow Channel Rules                                    | Channel Rules     | Please remember to read channel descriptions and pins, and comply with channel specific rules.                                                                                                                                                                                                                                                                                                                       | 6           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Violating Game ToS                                      | Game ToS          | Violation of the game’s terms of service, especially hacking or modding the game, will result in an instant ban from the Discord server and possibly within the game as well.                                                                                                                                                                                                                                        | 54          |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Violating Discord ToS                                   | Discord ToS       | Please keep in mind that Discord itself has specific behavioral and content guidelines that you can read at https://discordapp.com/guidelines. Some of these violations may result in an instant ban. Of particular note are the following:                                                                                                                                                                          | 10          |
+|                                                         |                   |                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
+|                                                         |                   | - You must be at least 13 years of age to use Discord                                                                                                                                                                                                                                                                                                                                                                |             |
+|                                                         |                   | - Sharing sexually explicit content of minors, both real and animated/drawn, is prohibited                                                                                                                                                                                                                                                                                                                           |             |
+|                                                         |                   | - Glorifying self harm or suicide                                                                                                                                                                                                                                                                                                                                                                                    |             |
+|                                                         |                   | - Sharing pirated or illegally acquired content is prohibited                                                                                                                                                                                                                                                                                                                                                        |             |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| User Profile Must Meet Certain Criteria                 | User Profile      | Your profile picture and display name (i.e., your server nickname if you have one set, or your actual username if not) should be compliant with the rules of the server. In addition, your display name must not imitate another user and meet the following criteria:                                                                                                                                               | 4           |
+|                                                         |                   |                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
+|                                                         |                   | - Easily taggable/readable                                                                                                                                                                                                                                                                                                                                                                                           |             |
+|                                                         |                   | - Contains no inappropriate content                                                                                                                                                                                                                                                                                                                                                                                  |             |
+|                                                         |                   | - Does not deliberately hoist you to the top of the online list                                                                                                                                                                                                                                                                                                                                                      |             |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| No NSFW Content                                         | NSFW              | Dissemination of NSFW content in any form is prohibited in all chats and includes excessive gore/extreme violence, content related to self harm or harming others, pornography or excessively sexual content. Any in game art is exempt from this rule unless otherwise noted.This rule applies to both images and text, although some leniency will be allowed for text content.                                    | 8           |
++---------------------------------------------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+
+....
+
+Warning System Commands
+=======================
+
+This section will describe all those commands that are needed to use (and configure, to a certain extent) the warning system, as described in the previous section.
+
+....
+
+|bot_prefix|\ warnhistory
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ warnhistory (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Shows the warning history of one (or more) user(s) in reverse chronological order. By default, this only includes a short summary for each warning. Warn histories longer than 2000 characters are paginated via reaction "buttons".
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ warnhistory 123456789098765432
+    |bot_prefix|\ history @cycloptux#1543
+
+....
+
+|bot_prefix|\ case
+------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ case (case id(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Prints a detailed log embed for the selected case(s).
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ case 2
+    |bot_prefix|\ case 12 15 34
+
+....
+
+|bot_prefix|\ edit
+------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ edit (case id) [--rule {rule id/name/alias}] [--reason {textual description}] [--attachment/--att {urls}] [--padj {signed/unsigned number}] [--just/--justification {textual justification}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Edits an existing case. You cannot edit a case type (e.g. turning a warn into a mute). Only the original case owner (the issuing moderator) or a server administrator can edit a case.
+
+Editing a case will generate a new warning log entry with the new details. The old entry will be edited with a clickable link that will bring you to the new edit.
+
+Please refer to :ref:`moderation` for more details about the individual parameters. Please also note that editing a case won't send a new DM to the target user, nor generate a new case ID.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ edit 3 --reason Spamming phishing links in the #general channel --padj +4 --just For repeated spamming despite being warned about it
+
+....
+
+|bot_prefix|\ delete
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ delete (case id(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Deletes one (or more) existing case(s). Deleted cases are never actually removed from the bot memory and can be restored in the future if you remember the case ID(s).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ delete 3 4 10
+
+....
+
+|bot_prefix|\ restore
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ restore (case id(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Restores one (or more) previously deleted case(s).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ restore 3 4
+
+....
+
