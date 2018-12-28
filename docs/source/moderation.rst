@@ -830,3 +830,170 @@ Examples
 
 ....
 
+|bot_prefix|\ listrules
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ listrules [rule id/name/alias] [--server] [--channel [channel id/mention/q_name]] [--mod]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Lists the rules (both custom and default sets) of the server in order by Rule ID, including the Rule Title and Description for each rule. Provide an ID/Name/Alias to show a specific rule only. By default, the list will show both server wide and channel-specific rules. Use ``--server`` to limit the rules to the server wide ones. Use ``--channel`` with a channel tag to show only channel specific rules for that channel (omitting the channel identifier will show the rules for the current channel).
+
+The rule alias and points will be shown if a moderator or administrator appends the ``--mod`` parameter to the command. 
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ listrules
+    |bot_prefix|\ listrules --channel #general
+    |bot_prefix|\ listrules NSFW --mod
+
+....
+
+|bot_prefix|\ addrule
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ addrule (--name {rule name}) (--alias {rule alias}) (--description {rule description}) (--points {rule points (number)}) [--channel [channel id/mention/q_name]]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Adds a custom rule to the rules list. Adding a custom rule generates a server-specific rule ID for that rule automatically, starting from ``s_1``. Adding a channel identifier will assign that rule as being channel-specific (this is primarily used to track how close a user is to reaching a channel ban threshold, *please note that channel ban thresholds are not implemented yet*).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ deleterule
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ delrule (rule id/name/alias)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Deletes a custom rule from the list of rules. Use |bot_prefix|\ toggleglobalrule to hide a default rule from the list of rules (see below).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ editrule
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ editrule (rule id/name/alias) [--name {rule name}] [--alias {rule alias}] [--description {rule description}] [--points {rule points (number)}] [--channel [-/channel id/mention/q_name]]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Updates one or more fields of an existing rule to the new values.
+
+Use ``--channel -`` to convert a channel-specific rule into a server wide rule.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ toggleglobalrule
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ tgrule (rule id(s)/name(s)/alias(es))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Hides (or unhides) one or more global/default rule(s) from the rules list.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ warnexpiry *(not implemented yet)*
+------------------------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ warnexpiry (# of days)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Sets the number of days after which warnings will expire for a particular server. Provide no arguments to reset to the default.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ expirypoints *(not implemented yet)*
+--------------------------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expirypoints (# of points)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Sets the number of points a warning will decay to after they expire. Provide no arguments to reset to the default.
+
+Any warnings worth fewer points than the !expirypoints value will not decay.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+|bot_prefix|\ setthreshold *(not implemented yet)*
+--------------------------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ setthreshold ("mute"/"ban"/"absban") (# of points)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Sets the number of points at which a mute, ban, or "absolute ban" is recommended. Integrity checks should ensure that mute points < ban points < absolute ban points.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
