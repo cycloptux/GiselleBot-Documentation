@@ -24,9 +24,14 @@ Welcome to GiselleBot's documentation!
    administration
    auction-house
    custom-reactions
+   moderation
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Modules & Command List (Premium)
+   
    feedback
    giveaway
-   moderation
 
 
 ******************
