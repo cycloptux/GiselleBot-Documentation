@@ -60,6 +60,30 @@ Examples
 
 ....
 
+|bot_prefix|\ greroll
+------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greroll [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Picks a new winner from the latest giveaway. The message ID is optional: if omitted, the most recent giveaway in the channel will be rerolled.
+
+This command will only reroll one winner and won't overwrite the existing winners.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greroll
+    |bot_prefix|\ greroll 123456789098765432
+
+....
+
 |bot_prefix|\ greaction
 -----------------------
 
