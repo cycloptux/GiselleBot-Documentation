@@ -13,6 +13,7 @@ Welcome to GiselleBot's documentation!
    
    introduction
    technical-info
+   permissions-system
    bot-invite
    credits
    modules-docs
@@ -26,6 +27,7 @@ Welcome to GiselleBot's documentation!
    custom-reactions
    moderation
    social
+   youtube
    
 .. toctree::
    :maxdepth: 1
