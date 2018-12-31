@@ -25,6 +25,7 @@ Welcome to GiselleBot's documentation!
    auction-house
    custom-reactions
    moderation
+   social
    
 .. toctree::
    :maxdepth: 1
