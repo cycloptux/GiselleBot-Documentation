@@ -116,6 +116,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 If used without any channel identifier, this command will toggle the in-channel notification for level ups in the whole server.
+
 If used with one or more channel identifiers, it will toggle the channel into the blacklist/whitelist of channels that will show the in-channel notification. See below for more details.
 
 Permissions Needed
@@ -143,7 +144,9 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the notification channel mode from blacklist (default) to whitelist and viceversa.
+
 **Blacklist** mode will make any channel that is added with the above command **not** show the level up message, while the rest of the channels will show the in-channel level up message.
+
 **Whitelist** mode will only make the in-channel level up message appear in the selected channels.
 
 ....
