@@ -41,7 +41,7 @@ The format to set a workflow question is:
 
 .. parsed-literal::
 
-    (message/reaction)|(text of the question)|(list of reactions)/[validation words]|[alias]
+    (message/reaction)|(text of the question)|(list of reactions)/[validation words]|[alias]|[Trello mapping]
     
 Each question has to be set using 4 fields, separated by one ``|`` character.
 
@@ -52,9 +52,16 @@ Each question has to be set using 4 fields, separated by one ``|`` character.
   * If ``reaction`` is selected in the first field, this field will list all of the possible answers, using ``;`` to separate these answers. If this is the case, this field is **mandatory**. Please note that, due to Discord limitations, there can only be a maximum of 20 answers. Answers from the 21st onward will be ignored.
   * If ``message`` is selected in the first field, this field will include a list of validation words: any anwer given by the target user will be ignored unless the message contains at least one of the chosen words/sentences (case insensitive). Again, you can separate words/sentences with ``;``. If this is the case, this field is optional.
 
-* Fourth field: The question "alias". This is the title that will replace the full question when the feedback is posted in the server channel. This field is optional.
+* Fourth field: The question "alias". This is the title that will replace the full question when the feedback is posted in the server channel. This field is optional, but it's higly suggested that you set an alias.
+* Fifth field: This will map the question into one of the entities of the Trello board:
 
-Please note that a field being "optional" means that its content can be left blank, but the field itself has to exist; e.g. ``message|Heads or Tails?||The user picked...``
+  * ``title`` will use the answer as the title of a card. 
+  * ``list`` will use the answer as the title of a list.
+  * ``label`` will add the answer as a card label. 
+  * ``attachment`` will add the answer as a card attachment.
+  * ``description`` will add the answer as part of the description text, with the format: ``{Alias}: {Text}``.
+
+Please note that a field being "optional" means that its content can be left blank, but the field itself has to exist; e.g. ``message|Heads or Tails?||The user picked...|``
 
 ....
 
