@@ -28,6 +28,9 @@ Examples
 
 ....
 
+|bot_prefix|\ msearch
+---------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -39,6 +42,9 @@ Command Description
 Searches a song with the given keyword and shows a selection of results to play.
 
 ....
+
+|bot_prefix|\ mskip
+-------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -54,6 +60,9 @@ This command will have a voting feature soon. For the time being, anyone can ski
 
 ....
 
+|bot_prefix|\ mstop
+-------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -65,6 +74,9 @@ Command Description
 Immediately stops the ongoing playlist.
 
 ....
+
+|bot_prefix|\ mpause
+--------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -78,6 +90,9 @@ Pauses the currently playing track. **Only available in Patreon-enabled servers.
 
 ....
 
+|bot_prefix|\ mresume
+---------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -89,6 +104,9 @@ Command Description
 Resumes paused music. **Only available in Patreon-enabled servers.**
 
 ....
+
+|bot_prefix|\ mvolume
+---------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -102,6 +120,9 @@ Check or change the current volume. **Only available in Patreon-enabled servers.
 
 ....
 
+|bot_prefix|\ mnp
+-----------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -113,6 +134,9 @@ Command Description
 Shows what song the bot is currently playing.
 
 ....
+
+|bot_prefix|\ mqueue
+--------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -126,6 +150,9 @@ Shows the music queue.
 
 ....
 
+|bot_prefix|\ mlyrics
+---------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -137,6 +164,9 @@ Command Description
 Gets the lyrics of the current playing song **or** looks for lyrics by song name or keyword. **Only available in Patreon-enabled servers.**
 
 ....
+
+|bot_prefix|\ mremove
+---------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -150,6 +180,9 @@ Removes a certain entry from the queue.
 
 ....
 
+|bot_prefix|\ mskipto
+---------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -161,6 +194,9 @@ Command Description
 Skips to a certain position in the queue.
 
 ....
+
+|bot_prefix|\ mrmdupes
+----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -174,6 +210,9 @@ Removes duplicate songs from the queue.
 
 ....
 
+|bot_prefix|\ mleavecleanup
+---------------------------
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
@@ -185,6 +224,9 @@ Command Description
 Removes absent users' songs from the queue.
 
 ....
+
+|bot_prefix|\ mchannel
+----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
