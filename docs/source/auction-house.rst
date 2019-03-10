@@ -56,6 +56,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lets a user bid a certain amount for the current auction. Validation rules are in place to make sure that the bid is valid before it's registered. Invalid bids will still be registered in the detailed .csv that is sent to the author, but those will not interfere with the actual auction.
 
+Please note that this command will always be available to everyone, ignoring the permissions set for the module.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::

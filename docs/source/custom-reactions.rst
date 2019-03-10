@@ -35,12 +35,14 @@ Command Description
 Adds a new custom reaction for the current server.
 
 Optional Parameters:
+
 * ``anywhere``: Triggers the reaction based on a text that appears anywhere in a message, instead of starting with the trigger text. Default: off.
 * ``dm``: Sends the response text via DM instead of using the current channel. Default: off.
 * ``delete``: Deletes the original message after a reaction is triggered. Default: off.
 * ``global``: **Bot owner only**. Makes the custom reaction global, hence triggering in any server the bot is. Default: off.
 
 You can use one (or more) of these placeholders in your response message:
+
 * **%user%**: This will be replaced with a mention of the user.
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
