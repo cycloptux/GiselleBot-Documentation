@@ -61,7 +61,7 @@ Examples
 ....
 
 |bot_prefix|\ greroll
-------------------
+---------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
