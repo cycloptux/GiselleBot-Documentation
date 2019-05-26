@@ -11,6 +11,10 @@ Each entity in Discord is mapped with a unique ID. Knowing what an ID is, and ho
 
 There are a lot of guides and tutorials about how to activate Developer Mode and how to get an ID for an entity in Discord. `This link <https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID->`_ will bring you to the official Discord support page about this topic.
 
+Obtaining a role ID may be trivial: you can obtain the role ID by prepending a role mention with ``\``, but that message will still mention the role.
+
+In order to make your life easier, the bot offers a |bot_prefix|\ roleid command. More details **here** (link currently not working).
+
 Parenthesis
 ===========
 
@@ -29,7 +33,7 @@ Parenthesis are used into command syntax snippets. The type of parenthesis indic
 Names and Double Quotes
 =======================
 
-Within the documentation, you may find the tag ``q_name`` in command syntax snippets. That's a short name for "name surrounded by double quotes", and is generally used for Discord or role **plain** names:
+Within the documentation, you may find the tag ``q_name`` in command syntax snippets. That's a short name for "name surrounded by double quotes", and is generally used for Discord user, channel or role **plain** names:
 
 .. parsed-literal::
 
