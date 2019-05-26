@@ -15,3 +15,4 @@ Discord Bots & Technical References
 * `Logger <https://discordbots.org/bot/298822483060981760>`_
 * `Rythm <https://rythmbot.co/>`_
 * `GiveawayBot <https://giveawaybot.party/>`_
+* `YAGPDB <https://yagpdb.xyz/>`_
