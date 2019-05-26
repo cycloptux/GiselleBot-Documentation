@@ -4,7 +4,7 @@ Custom Reactions
 
 The Custom Reactions module enables users to set up custom bot reactions and build pseudo-commands in a server.
 
-Partially inspired by `NadekoBot <https://nadekobot.me/>`_.
+Partially inspired by `NadekoBot <https://nadeko.bot/>`_.
 
 |bot_prefix|\ togglecustreact
 -----------------------------
@@ -48,7 +48,7 @@ You can use one (or more) of these placeholders in your response message:
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 
-You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regular text in the response parameter, if you want the message to be embedded.
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text in the response parameter, if you want the message to be embedded.
 
 Examples
 ^^^^^^^^

@@ -4,7 +4,7 @@ Administration
 
 The Administration module contains tools used to manage a Discord server and its members.
 
-Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_ and `NadekoBot <https://nadekobot.me/>`_.
+Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_ and `NadekoBot <https://nadeko.bot/>`_.
 
 ....
 
@@ -129,7 +129,7 @@ You can use one (or more) of these placeholders in your message:
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 
-You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regular text, if you want the message to be embedded.
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -163,7 +163,7 @@ You can use one (or more) of these placeholders in your message:
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 
-You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regular text, if you want the message to be embedded.
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
