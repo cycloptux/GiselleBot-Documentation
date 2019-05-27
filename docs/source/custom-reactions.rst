@@ -39,7 +39,7 @@ Optional Parameters:
 * ``anywhere``: Triggers the reaction based on a text that appears anywhere in a message, instead of starting with the trigger text. Default: off.
 * ``dm``: Sends the response text via DM instead of using the current channel. Default: off.
 * ``delete``: Deletes the original message after a reaction is triggered. Default: off.
-* ``global``: **Bot owner only**. Makes the custom reaction global, hence triggering in any server the bot is. Default: off.
+* ``global``: **Bot Owner**. Makes the custom reaction global, hence triggering in any server the bot is. Default: off.
 
 You can use one (or more) of these placeholders in your response message:
 
