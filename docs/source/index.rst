@@ -12,17 +12,18 @@ Welcome to GiselleBot's documentation!
    :caption: Contents
    
    introduction
-   technical-info
-   permissions-system
    bot-invite
    credits
    modules-docs
+   permissions-system
+   patreon-perks
    
 .. toctree::
    :maxdepth: 1
    :caption: Modules & Command List
    
    administration
+   alarm
    auction-house
    custom-reactions
    moderation
