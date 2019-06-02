@@ -248,7 +248,11 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Automaticaly removes one or more specified roles from any user after the specified amount of time, no matter how that role was gained.
 
-Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+Providing one or more role identifiers **and a time code** will set the expiration time of those roles.
+
+Providing one or more role identifiers **without a time code** will disable the expiration of those roles.
+
+Provide no parameters to show the current settings.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
