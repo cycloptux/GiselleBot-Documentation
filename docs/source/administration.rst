@@ -30,11 +30,13 @@ Toggles one or more logger types in the current channel. Available loggers are:
 * **Server**: Server info updated*, emoji created, emoji deleted, emoji updated.
 * **Messages**: Message deleted, message edited, message pinned, message unpinned.
 * **Voice**: User connected to/disconnected from/switched voice channel.
-* **Moderation**: Administrators/moderators using a sensitive command, user struck by a moderation action (warn/kick/ban/mute/...), user evaded from a moderation action\*\*.
+* **Moderation**: Auto-moderation actions, administrators/moderators using a sensitive command, user struck by a moderation action (warn/kick/ban/mute/...), user evaded from a moderation action\*\*.
 * **Warning**: This one is a more verbose version the moderation log, focused on moderation actions. Activating this logger enables the case/scoring system.
-* **ALL**: Activates all loggers in the current channel.
+* **ALL**: Activates all available loggers in the current channel.
 
-You can also print the list of available loggers within Discord by using ``|bot_prefix|\ log`` without any additional argument.
+You can also print the list of available loggers within Discord by using |bot_prefix|\ log without any additional argument.
+
+The **Members**, **Users**, **Messages**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Roles**, **Channels**, **Server** and **Voice** loggers, you can unlock them via **Patreon** pledges (see: :ref:`patreon-perks`).
 
 | :sub:`\*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.`
 | :sub:`\*\*: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.`
@@ -72,7 +74,7 @@ Add a filter to skip logging certain events. Any action that comes from a user/c
 * **Moderation**: Users.
 * **Warning**: Users.
 
-You can also print the list of currently set filters by using ``|bot_prefix|\ logignore (logger type)`` without any additional argument.
+You can also print the list of currently set filters by using |bot_prefix|\ logignore (logger type) without any additional argument.
 
 Examples
 ^^^^^^^^
