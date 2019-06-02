@@ -65,13 +65,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ ecr (reaction_id) [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
+    |bot_prefix|\ ecr (reaction_id) [--in {trigger text}] [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Edits an existing custom reaction for the current server. Global custom reactions can only be edited by the bot owner.
 
-You cannot edit the trigger text of a custom reaction: if you want to change the trigger text of a reaction, delete the existing one and add a new custom reaction.
+.. You cannot edit the trigger text of a custom reaction: if you want to change the trigger text of a reaction, delete the existing one and add a new custom reaction. <-- Not true anymore
 
 The presence of an optional parameter will **toggle** the option to the opposite of what it was before the edit. ``--global``, on the other hand, will need to be added or removed accordingly, depending on the scope of the reaction.
 
