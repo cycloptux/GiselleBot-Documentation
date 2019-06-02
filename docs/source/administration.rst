@@ -233,4 +233,34 @@ Examples
     |bot_prefix|\ aar
     |bot_prefix|\ aar RoleName1 RoleName2
     
+....
+
+|bot_prefix|\ autoremoverole
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autoremoverole [time code] [role id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Automaticaly removes one or more specified roles from any user after the specified amount of time, no matter how that role was gained.
+
+Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ arr
+    |bot_prefix|\ arr 1h RoleName1 RoleName2
+    |bot_prefix|\ arr RoleName2
     
