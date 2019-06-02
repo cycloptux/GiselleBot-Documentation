@@ -212,11 +212,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ autoassignrole [role id/mention/q_name]
+    |bot_prefix|\ autoassignrole [role id(s)/mention(s)/q_name(s)]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Automaticaly assigns a specified role to every user who joins the server. Provide no parameters to disable.
+Automaticaly assigns one or more specified roles to every user who joins the server.
+
+Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -229,6 +231,6 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ aar
-    |bot_prefix|\ aar RoleName
+    |bot_prefix|\ aar RoleName1 RoleName2
     
     
