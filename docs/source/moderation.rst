@@ -1112,11 +1112,6 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 * **Channels**: Ignore messages sent in specific channels in a server.
 * **Servers (Server Invites only)**: Ignore Discord server invites pointing to a specific server. You need to use the server ID to add this kind of whitelisting option. Applying this whitelist rule enables instant, temporary or permanent invites (including vanity URLs) for one or more server(s).
 
-* **Auto-warn**: Automatically apply a generic warning on the offending user. Specify a rule with the dedicated option.
-* **Auto-mute**: Automatically mute the offending user. The applied mute is a temporary, 2 hours long, mute.
-* **Auto-kick**: Automatically kick the offending user.
-* **Auto-ban**: Automatically ban the offending user.
-
 **Extra options**
 
 * **Moderators alerting**: 
