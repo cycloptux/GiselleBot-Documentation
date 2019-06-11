@@ -30,7 +30,7 @@ Examples
 ....
 
 |bot_prefix|\ remindlist
---------------------------
+------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -51,7 +51,7 @@ Examples
 ....
 
 |bot_prefix|\ reminddel
---------------------------
+-----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^

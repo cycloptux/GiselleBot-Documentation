@@ -6,7 +6,7 @@ A special thanks to my friend and partner, NaviKing#3820, for the design of this
 
 The purpose of this module is to warn users, track their infractions, and give the moderators the power to punish users accordingly.
 
-In order to fully take advantage of this module, enabling the case/scoring system is suggested. The scoring system is enabled if the **Warning** log is enabled in a server channel. Please refer to the :ref:`log-warning` section in the **Administration** module documentation.
+In order to fully take advantage of this module, enabling the case/scoring system is suggested. The scoring system is enabled if the **Warning** log is enabled in a server channel. Please refer to the :ref:`log-command` section in the **Administration** module documentation.
 
 ....
 
