@@ -8,7 +8,7 @@ Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_
 
 ....
 
-.. _log-warning:
+.. _log-command:
 
 |bot_prefix|\ log
 -----------------

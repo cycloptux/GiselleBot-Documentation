@@ -1054,7 +1054,7 @@ Command Description
 
 Sets the number of points a warning will decay to after they expire. Provide no arguments to reset to the default.
 
-Any warnings worth fewer points than the !expirypoints value will not decay.
+Any warnings worth fewer points than the |bot_prefix|\ expirypoints value will not decay.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1114,8 +1114,8 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 
 **Extra options**
 
-* **Moderators alerting**: 
-* **Moderation rule**: 
+* **Moderators alerting**: Each auto moderator action will be logged into the **Moderation** logger (refer to :ref:`log-command`). If this option is enabled, each log entry will also include a mention to the current moderator role(s).
+* **Moderation rule**: If a moderation action is taken against the offending user, this option will let you select one rule to use for that action.
 
 ....
 
