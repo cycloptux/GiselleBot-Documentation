@@ -8,6 +8,8 @@ In order to better understand this module (and the rest of the connector modules
 
 By default, each tweet will be posted to the webhook by using the Twitter account username as author, and Twitter avatar as Discord profile picture. These settings (and other details) can be customized for each stream.
 
+Tweet URLs will be posted to Discord, while the tweet preview will leverage the native parsing of Twitter content offered by Discord.
+
 |bot_prefix|\ twthook
 ---------------------
 
@@ -23,14 +25,14 @@ Starts a streaming service for the selected Twitter account. If a new tweet is f
 
 **Customization Params**
 
-``--sfw``
-"""""""""
+``--nsfw``
+""""""""""
 
-Twitter streams are parsed to look for "bad words" or "possibly sensitive" content before being posted. Any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
+Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted. If this parameter is used, any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
 
-Please note that this check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can skip this check by adding the ``--sfw`` param. This is usually the suggested behavior if you know what you're doing.
+Please note that this check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
 
-**Default**: ``false`` (tweets will be censored)
+**Default**: ``false`` (tweets won't be censored)
 
 ``--filter (first word) [second word] [...]``
 """""""""""""""""""""""""""""""""""""""""""""
