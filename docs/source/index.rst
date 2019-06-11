@@ -33,6 +33,12 @@ Welcome to GiselleBot's documentation!
    
 .. toctree::
    :maxdepth: 1
+   :caption: Social Network Connectors
+   
+   twitter
+   
+.. toctree::
+   :maxdepth: 1
    :caption: Modules & Command List (Premium)
    
    feedback
