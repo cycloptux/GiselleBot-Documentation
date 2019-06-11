@@ -97,6 +97,19 @@ Examples
 
 ....
 
+|bot_prefix|\ twtehook
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ twtreook (Twitter username/stream index) [new customization params]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Replaces all previously set customization params for the selected Twitter stream with a new set of customization params. The stream index is the number shown with |bot_prefix|\ twtlhook.
+
 |bot_prefix|\ twtrhook
 ----------------------
 
