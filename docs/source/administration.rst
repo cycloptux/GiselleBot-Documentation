@@ -352,9 +352,11 @@ Each role group can be configured by editing the following settings:
 
 * **Name**: Custom name for the group.
 * **Mode**: Given a group of Discord roles, the assignment mode defines how roles will be assigned to users:
+
   * **Single Mode**: Users can only have 1 role within this group.
   * **Multiple Mode**: Users can have a minimum and a maximum number of roles within this group.
   * **None**: No specific rules are applied. Required and ignored roles (see below) still apply.
+  
 * **Required Roles**: This setting requires users to have **at least one** of the specified roles to be able to self-assign one role within this group.
 * **Ignored Roles**: This setting requires users **not** to have **any** of the specified roles to be able to self-assign one role within this group. Or, in other words, users with at least one of the specified roles won't have access to this group.
 
