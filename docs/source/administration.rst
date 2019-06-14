@@ -342,7 +342,7 @@ Examples
 Self-assignable Roles
 =====================
 
-**IMPORTANT NOTE**: The bot will be able to assign a role only if he has both "Manage Roles" permissions **AND** if the role it's trying to assign is **lower** than the highest role the bot has. Please arrange your roles accordingly.
+**IMPORTANT NOTE**: The bot will be able to assign a role only if it has both "Manage Roles" permissions **AND** if the role it's trying to assign is **lower** than the highest role the bot has. Please arrange your roles accordingly.
 
 Before we delve into the actual self-assignable roles, it's very important that you become familiar with **role groups**.
 
