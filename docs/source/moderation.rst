@@ -1122,14 +1122,14 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 |bot_prefix|\ automodsetup
 --------------------------
 
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Opens the auto moderation setup menu. Use the menu items to configure the above settings. Please note that not all of the settings will have a meaning in all of the triggers.
-
-Examples
-^^^^^^^^
+Command Syntax
+^^^^^^^^^^^^^^
 .. parsed-literal::
 
     |bot_prefix|\ amset
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Opens the auto moderation interactive setup menu. Use the menu items to configure the above settings. Please note that not all of the settings will have a meaning in all of the triggers.
 
