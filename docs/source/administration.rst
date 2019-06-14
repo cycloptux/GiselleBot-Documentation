@@ -4,11 +4,14 @@ Administration
 
 The Administration module contains tools used to manage a Discord server and its members.
 
-Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_ and `NadekoBot <https://nadeko.bot/>`_.
+Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_, `YAGPDB <https://yagpdb.xyz/>`_ and `NadekoBot <https://nadeko.bot/>`_.
 
 ....
 
 .. _log-command:
+
+Server Activity Logging
+=======================
 
 |bot_prefix|\ log
 -----------------
@@ -84,6 +87,9 @@ Examples
     |bot_prefix|\ logignore channels #admin-chat
     
 ....
+
+New Members Management
+======================
 
 |bot_prefix|\ greet
 -------------------
@@ -205,6 +211,9 @@ Examples
 
 ....
 
+Automated Roles Assignment/Removal
+==================================
+
 |bot_prefix|\ autoassignrole
 ----------------------------
 
@@ -268,3 +277,335 @@ Examples
     |bot_prefix|\ arr 1h RoleName1 RoleName2
     |bot_prefix|\ arr RoleName2
     
+....
+
+|bot_prefix|\ vcrole
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autoassignrole [role id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Automaticaly assigns one or more specified roles to every user who joins the server.
+
+Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ aar
+    |bot_prefix|\ aar RoleName1 RoleName2
+    
+....
+
+|bot_prefix|\ vcrolelist
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autoassignrole [role id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Automaticaly assigns one or more specified roles to every user who joins the server.
+
+Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ aar
+    |bot_prefix|\ aar RoleName1 RoleName2
+    
+....
+    
+Self-assignable Roles
+=====================
+
+**IMPORTANT NOTE**: The bot will be able to assign a role only if he has both "Manage Roles" permissions **AND** if the role it's trying to assign is **lower** than the highest role the bot has. Please arrange your roles accordingly.
+
+Before we delve into the actual self-assignable roles, it's very important that you become familiar with **role groups**.
+
+A role group is a group of Discord roles that will share the same set of assignment rules.
+
+Each role group can be configured by editing the following settings:
+
+* **Name**: Custom name for the group.
+* **Mode**: Given a group of Discord roles, the assignment mode defines how roles will be assigned to users:
+  * **Single Mode**: Users can only have 1 role within this group.
+  * **Multiple Mode**: Users can have a minimum and a maximum number of roles within this group.
+  * **None**: No specific rules are applied. Required and ignored roles (see below) still apply.
+* **Required Roles**: This setting requires users to have **at least one** of the specified roles to be able to self-assign one role within this group.
+* **Ignored Roles**: This setting requires users **not** to have **any** of the specified roles to be able to self-assign one role within this group. Or, in other words, users with at least one of the specified roles won't have access to this group.
+
+In **Single** or **Multiple** mode, you'll also have access to additional, optional settings:
+
+**Single Mode Settings**
+
+* **Require 1 role in group at all times (after initial assignment)**: Whether the role is assigned by a 3rd party or self-assigned, users won't be able to self-remove **all** of the roles in the group.
+* **Remove existing role when assigning another role in group**: Self-assigning a role within this group will remove any other group role from the user.
+
+**Multiple Mode Settings**
+
+* **Minimum number of roles**: Users won't be able to self-remove a role if the removal would bring them under this threshold of group roles.
+* **Maximum number of roles**: Users won't be able to self-assign a role if the assignment would bring them over this threshold of group roles.
+
+Please note that **one role can be assigned to more than one group**. While possible, this is generally not recommended unless you know what you are doing. In such cases, you must design your settings to avoid conflicts between the different group settings. **Conflicting settings will cause unpredictable behaviors**.
+
+Once a role group is configured, two ways of self-assigning a group will be available to users:
+
+* **Role Menus**: Interactive menus using Discord emoji reactions to assign and remove roles. Role menus can be created from scratch using bot commands (see below) or "attached" to an existing user message.
+* **Manual Commands**: The |bot_prefix|\ iam and |bot_prefix|\ iamnot commands will **always** be available to anyone. Specific permissions will need to be handled by using the "Required Roles" and "Ignored Roles" settings.
+
+Here's the full list of available commands for this sub-module:
+
+|bot_prefix|\ sargs
+-------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Opens the self-assignable roles (i.e. role groups) interactive setup menu. Use the menu items to configure the above settings. Please note that mode-specific settings will only work if the corresponding mode is currently set as active.
+
+....
+
+|bot_prefix|\ asar
+------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ asar [group id] (role id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Adds one or more roles to the specified group. If the group ID is omitted, group **0** will be used as target role group.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ asar "Group 1"
+    |bot_prefix|\ asar 2 @Testing123
+    |bot_prefix|\ asar 12 123456789098765432 
+
+....
+
+|bot_prefix|\ rsar
+------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ rsar [group id] (role id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Removes one or more roles from the specified group. If the group ID is omitted, the role(s) will be removed from **all** role groups.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rsar "Group 1"
+    |bot_prefix|\ rsar 2 @Testing123
+    |bot_prefix|\ rsar 12 123456789098765432 
+
+....
+
+|bot_prefix|\ lsar
+------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Prints a list of all role groups and the relative self-assignable groups. Please note that this command is always available to everyone.
+
+....
+
+|bot_prefix|\ adsarm
+--------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the automatic deletion of the "public" self-assignable roles-related messages upon using the |bot_prefix|\ iam and |bot_prefix|\ iamnot commands.
+
+Only successful messages will be deleted.
+
+The user-sent message will be deleted immediately. The confirmation message will be deleted after 5 seconds.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
+....
+
+|bot_prefix|\ iam
+-----------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ iam (role id/mention/name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Assings one role among those that are flagged as self-assignable, provided the requirements are met. Please note that this command is always available to everyone.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ iam Group 1
+    |bot_prefix|\ iam @Testing123
+    |bot_prefix|\ iam 123456789098765432 
+    
+....
+
+|bot_prefix|\ iamnot
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ iamnot (role id/mention/name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Removes one role among those that are flagged as self-assignable, provided the requirements are met. Please note that this command is always available to everyone.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ iamnot Group 1
+    |bot_prefix|\ iamnot @Testing123
+    |bot_prefix|\ iamnot 123456789098765432 
+    
+....
+
+|bot_prefix|\ rmcreate
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ rmcreate [group id] [--m {message id}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Starts an interactive process to build a role menu (i.e. a message whose reactions will assign or remove the roles in the specified role group). The bot will guide you through the process of creating the role menu, follow the in-Discord instructions.
+
+If a valid message ID is specified through the dedicated parameter, the role menu will be created on the target message.
+
+If the group ID is omitted, group **0** will be used as source role group.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmcreate
+    |bot_prefix|\ rmcreate 1 --m 123456789098765432
+    
+....
+
+|bot_prefix|\ rmremove
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ rmremove [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Removes a role menu from an existing message. The message itself won't be deleted, nor the existing reactions will be removed, but the bot will now not do anything with reactions on that message.
+
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmremove 123456789098765432
+    
+....
+
+|bot_prefix|\ rmupdate
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ rmupdate [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Updates a role menu with a new reaction if a role was added to the particular role group.
+
+Please note that, in order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
+
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmupdate 123456789098765432
