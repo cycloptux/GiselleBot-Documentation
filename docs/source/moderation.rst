@@ -148,7 +148,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ channelbanrole [channel id/mention/q_name] [role id/mention/q_name]
+    |bot_prefix|\ cbanrole [channel id/mention/q_name] [role id/mention/q_name]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -172,7 +172,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ channelmuterole [channel id/mention/q_name] [role id/mention/q_name]
+    |bot_prefix|\ cmuterole [channel id/mention/q_name] [role id/mention/q_name]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -196,7 +196,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ channelimagebanrole [channel id/mention/q_name] [role id/mention/q_name]
+    |bot_prefix|\ cimagebanrole [channel id/mention/q_name] [role id/mention/q_name]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
