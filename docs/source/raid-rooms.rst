@@ -22,6 +22,8 @@ When a text raid room expires, a chat log is dumped and saved (encrypted). The c
 
 One or more roles can be set as "supervisor" roles. Supervisors will have moderation powers over raid rooms, similar to how moderators have powers over the rest of the server (see :ref:`supervisor-commands`).
 
+Out of the box, each server is limited to having a total of **4 simultaneous raid rooms**. If you want to remove this limitation, you can unlock the number of raid rooms via **Patreon** pledges (see: :ref:`patreon-perks`).
+
 ....
 
 .. _first-setup:
