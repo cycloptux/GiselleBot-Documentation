@@ -44,9 +44,16 @@ Optional Parameters:
 You can use one (or more) of these placeholders in your response message:
 
 * **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
 * **%server%**: This will be replaced with the server name.
+* **%channel%**: This will be replaced with the channel name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%target%**: This will be replaced with anything the user wrote after the trigger.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text in the response parameter, if you want the message to be embedded.
 
