@@ -27,6 +27,7 @@ Welcome to GiselleBot's documentation!
    auction-house
    custom-reactions
    moderation
+   raid-rooms
    social
    youtube
    
@@ -43,7 +44,6 @@ Welcome to GiselleBot's documentation!
    feedback
    giveaway
    music
-   raid-rooms
 
 
 ******************
