@@ -28,6 +28,7 @@ Welcome to GiselleBot's documentation!
    custom-reactions
    moderation
    raid-rooms
+   send
    social
    youtube
    
