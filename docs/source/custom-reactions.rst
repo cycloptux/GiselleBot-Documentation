@@ -72,7 +72,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ ecr (reaction_id) [--in {trigger text}] [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
+    |bot_prefix|\ ecr (reaction id) [--in {trigger text}] [--out {response text}] [--anywhere] [--dm] [--delete] [--global]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -97,7 +97,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ scr (reaction_id)
+    |bot_prefix|\ scr (reaction id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -133,7 +133,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ dcr (reaction_id)
+    |bot_prefix|\ dcr (reaction id)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
