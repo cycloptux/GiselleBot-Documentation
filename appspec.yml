@@ -6,6 +6,6 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/01-create-folder.sh
-    - location: scripts/02-create-folder.sh
+    - location: scripts/02-clean-build.sh
   AfterInstall:
     - location: scripts/03-set-permissions.sh
