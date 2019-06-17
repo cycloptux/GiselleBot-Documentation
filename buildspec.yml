@@ -5,7 +5,8 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - apt-get install python3-sphinx -y
+      - apt-get install python3-sphinx python3-pip -y
+      - pip3 install sphinx_rtd_theme
   build:
     commands:
       - cd docs/
