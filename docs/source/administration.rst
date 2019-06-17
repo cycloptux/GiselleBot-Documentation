@@ -4,7 +4,8 @@ Administration
 
 The Administration module contains tools used to manage a Discord server and its members.
 
-Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_, `YAGPDB <https://yagpdb.xyz/>`_ and `NadekoBot <https://nadeko.bot/>`_.
+.. seealso::
+    Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_, `YAGPDB <https://yagpdb.xyz/>`_ and `NadekoBot <https://nadeko.bot/>`_.
 
 ....
 
@@ -39,7 +40,9 @@ Toggles one or more logger types in the current channel. Available loggers are:
 
 You can also print the list of available loggers within Discord by using |bot_prefix|\ log without any additional argument.
 
-The **Members**, **Users**, **Messages**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Roles**, **Channels**, **Server** and **Voice** loggers, you can unlock them via **Patreon** pledges (see: :ref:`patreon-perks`).
+.. admonition:: Patreon
+
+    The **Members**, **Users**, **Messages**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Roles**, **Channels**, **Server** and **Voice** loggers, you can unlock them via **Patreon** pledges (see: :ref:`patreon-perks`).
 
 | :sub:`\*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.`
 | :sub:`\*\*: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.`

@@ -4,7 +4,8 @@ Custom Reactions
 
 The Custom Reactions module enables users to set up custom bot reactions and build pseudo-commands in a server.
 
-Partially inspired by `NadekoBot <https://nadeko.bot/>`_.
+.. seealso::
+    Partially inspired by `NadekoBot <https://nadeko.bot/>`_.
 
 |bot_prefix|\ togglecustreact
 -----------------------------

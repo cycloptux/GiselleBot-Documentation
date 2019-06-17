@@ -4,8 +4,12 @@ Music
 
 The Music module enables users to listen to YouTube music in a Discord server's dedicated voice channel.
 
-Partially inspired by `Rythm <https://rythmbot.co/>`_.
+.. seealso::
+    Partially inspired by `Rythm <https://rythmbot.co/>`_.
+    
+.. admonition:: Patreon
 
+    Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume and |bot_prefix|\ mlyrics can be unlocked via **Patreon** pledges (see: :ref:`patreon-perks`).
 
 |bot_prefix|\ mplay
 -------------------
@@ -86,7 +90,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Pauses the currently playing track. **Only available in Patreon-enabled servers.**
+Pauses the currently playing track.
 
 ....
 
@@ -101,7 +105,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Resumes paused music. **Only available in Patreon-enabled servers.**
+Resumes paused music.
 
 ....
 
@@ -116,7 +120,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Check or change the current volume. **Only available in Patreon-enabled servers.**
+Check or change the current volume.
 
 ....
 
@@ -161,7 +165,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Gets the lyrics of the current playing song **or** looks for lyrics by song name or keyword. **Only available in Patreon-enabled servers.**
+Gets the lyrics of the current playing song **or** looks for lyrics by song name or keyword.
 
 ....
 

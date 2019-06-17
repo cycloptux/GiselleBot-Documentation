@@ -4,8 +4,8 @@ Giveaway Campaigns
 
 The Giveaway Campaigns module enables users to start and manage giveaways in a Discord server.
 
-Partially inspired by `GiveawayBot <https://giveawaybot.party/>`_.
-
+.. seealso::
+    Partially inspired by `GiveawayBot <https://giveawaybot.party/>`_.
 
 |bot_prefix|\ gstart
 --------------------

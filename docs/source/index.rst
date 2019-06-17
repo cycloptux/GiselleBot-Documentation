@@ -15,7 +15,6 @@ Welcome to GiselleBot's documentation!
    bot-invite
    credits
    modules-docs
-   permissions-system
    patreon-perks
    
 .. toctree::
@@ -26,7 +25,10 @@ Welcome to GiselleBot's documentation!
    alarm
    auction-house
    custom-reactions
+   forms
+   miscellaneous
    moderation
+   permissions-system
    raid-rooms
    send
    social
@@ -42,7 +44,6 @@ Welcome to GiselleBot's documentation!
    :maxdepth: 1
    :caption: Modules & Command List (Premium)
    
-   feedback
    giveaway
    music
 
