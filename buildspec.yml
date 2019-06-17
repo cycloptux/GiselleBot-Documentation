@@ -15,3 +15,5 @@ phases:
 artifacts:
   files:
     - docs/build/html/*
+    - appspec.yml
+  discard-paths: yes
