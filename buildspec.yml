@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - apt-get install python3-sphinx
+      - apt-get install python3-sphinx -y
   build:
     commands:
       - cd docs/
