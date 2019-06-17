@@ -14,7 +14,7 @@ phases:
 
 artifacts:
   files:
-    - docs/build/html/*
+    - docs/build/html/**/*
     - appspec.yml
     - scripts/01-create-folder.sh
     - scripts/02-clean-build.sh
