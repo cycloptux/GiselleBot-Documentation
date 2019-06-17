@@ -1,0 +1,14 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - apt-get install python3-sphinx
+  build:
+    commands:
+      - cd docs/
+      - make clean html
+
+artifacts:
+  files:
+    - build*/**
