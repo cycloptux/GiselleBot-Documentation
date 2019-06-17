@@ -16,6 +16,7 @@ artifacts:
   files:
     - docs/build/html/*
     - appspec.yml
-    - scripts/create-folder.sh
-    - scripts/set-permissions.sh
+    - scripts/01-create-folder.sh
+    - scripts/02-clean-build.sh
+    - scripts/03-set-permissions.sh
   discard-paths: no
