@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/testDeploy
+hooks:
+  BeforeInstall:
+    - location: scripts/create-folder.sh
+  AfterInstall:
+    - location: scripts/set-permissions.sh
