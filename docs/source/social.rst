@@ -2,15 +2,16 @@
 Social/EXP Leaderboards
 ***********************
 
-The Social module tracks users' activity in a server and rewards a certain number of experience points on each message. A server and a global leaderboards exist, making users aware of how much they are engaging with the community.
+The Social module tracks users' activity in a server (and globally) and rewards a certain number of experience points on each message. A server and a global leaderboards exist, making users aware of how much they are engaging with the community.
 
-These limitations are applied to avoid users manipulating their EXP:
+.. warning::
+    These limitations are applied to avoid users manipulating their EXP:
+    
+    * EXP is calculated on the amount of messages that are sent by the user. Message length doesn't change the amount of EXP earned on each message.
+    * Each message is given a random EXP value, ranging from 10 to 20 EXP.
+    * A cooldown is applied after each EXP gain to avoid users spamming messages to power level their profile.
 
-* EXP is calculated on the amount of messages that are sent by the user. Message length doesn't change the amount of EXP earned on each message.
-* Each message is given a random EXP value, ranging from 10 to 20 EXP.
-* A cooldown is applied after each EXP gain to avoid users spamming messages to power level their profile.
-
-If the level up notifications are enabled on a server, users may be notified by DM or in the current channel as soon as they level up. Global level ups are not notified.
+If the level up notifications are enabled on a server, users may be notified by DM or in the current channel as soon as they level up. Global level ups are never notified.
 
 |bot_prefix|\ profile
 ---------------------
@@ -145,7 +146,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the notification channel mode from blacklist (default) to whitelist and viceversa.
 
-**Blacklist** mode will make any channel that is added with the above command **not** show the level up message, while the rest of the channels will show the in-channel level up message.
+**Blacklist** mode will make any channel that is added with the above command **not** to show the level up message, while the rest of the channels will show the in-channel level up message.
 
 **Whitelist** mode will only make the in-channel level up message appear in the selected channels.
 
@@ -163,3 +164,18 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the DM notification for level ups for all server members.
+
+....
+
+|bot_prefix|\ notifystatus
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ notifystatus
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows the current status of the level up notification settings, as set by the above commands.
