@@ -1,4 +1,4 @@
-.. _permissions-system:
+.. _permissions:
 
 ******************
 Permissions System

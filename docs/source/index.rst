@@ -28,7 +28,7 @@ Welcome to GiselleBot's documentation!
    forms
    miscellaneous
    moderation
-   permissions-system
+   permissions
    raid-rooms
    send
    social

@@ -117,7 +117,7 @@ Each question has to be set using 5 fields, separated by one ``|`` character.
 .. hint::
     In order to ease the creation of these complex strings, you can use this `Forms Builder Helper <https://docs.google.com/spreadsheets/d/1rn6CY2PVD2Nn0cda1gfF_E3OysBcBN63ma-BG602NyI/edit?usp=sharing>`_ to create a pre-made string to be used in this phase. Just create a copy of that sheet and customize it to your needs.
     
-When setting the authorization channel, "authorized users" will be those that are enabled to use the module using the :ref:`permissions-system`, not those that are mentioned in when a new feedback is posted.
+When setting the authorization channel, "authorized users" will be those that are enabled to use the module using the :ref:`permissions`, not those that are mentioned in when a new feedback is posted.
 
 ....
 
