@@ -10,6 +10,9 @@ By default, each tweet will be posted to the webhook by using the Twitter accoun
 
 Tweet URLs will be posted to Discord, while the tweet preview will leverage the native parsing of Twitter content offered by Discord.
 
+.. note:
+    The goal of this module is offering a **free alternative** to something that is usually only achieved through the use of paid services. On the other hand, due to limitations that are applied to the free Twitter API, this module might suffer from command cooldowns and/or miss a few tweets every once in a while.
+
 |bot_prefix|\ twthook
 ---------------------
 
@@ -30,7 +33,8 @@ Starts a streaming service for the selected Twitter account. If a new tweet is f
 
 Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted. If this parameter is used, any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
 
-Please note that this check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
+.. note:
+    This check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
 
 **Default**: ``false`` (tweets won't be censored)
 

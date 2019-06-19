@@ -95,8 +95,11 @@ Each question has to be set using 5 fields, separated by one ``|`` character.
 * Second field: The actual question.
 * Third field:
 
-  * If ``reaction`` is selected in the first field, this field will list all of the possible answers, using ``;`` to separate these answers. If this is the case, this field is **mandatory**. Please note that, due to Discord limitations, there can only be a maximum of 20 answers. Answers from the 21st onward will be ignored.
+  * If ``reaction`` is selected in the first field, this field will list all of the possible answers, using ``;`` to separate these answers. If this is the case, this field is **mandatory**.
   * If ``message`` is selected in the first field, this field will include a list of validation words: any anwer given by the target user will be ignored unless the message contains at least one of the chosen words/sentences (case insensitive). Again, you can separate words/sentences with ``;``. If this is the case, this field is optional.
+
+.. note:
+    Due to Discord limitations, there can only be a maximum of 20 answers in a reaction question. Answers from the 21st onward will be ignored.
 
 * Fourth field: The question "alias". This is the title that will replace the full question when the feedback is posted in the server channel. This field is optional, but it's higly suggested that you set an alias.
 * Fifth field: This will map the question into one of the entities of the Trello board (only useful if you are interested in Trello integration, you can choose whether or not including Trello integration later):
@@ -109,7 +112,7 @@ Each question has to be set using 5 fields, separated by one ``|`` character.
   * ``private`` will show the answer into the "in-Discord" embed but won't upload the field to Trello whatsoever.
 
 .. warning::
-    Please note that a field being "optional" means that its content can be left blank, but the field itself has to exist; e.g. ``message|Heads or Tails?||The user picked...|``
+    A field being "optional" means that its content can be left blank, but the field itself has to exist; e.g. ``message|Heads or Tails?||The user picked...|``
     
 .. hint::
     In order to ease the creation of these complex strings, you can use this `Forms Builder Helper <https://docs.google.com/spreadsheets/d/1rn6CY2PVD2Nn0cda1gfF_E3OysBcBN63ma-BG602NyI/edit?usp=sharing>`_ to create a pre-made string to be used in this phase. Just create a copy of that sheet and customize it to your needs.

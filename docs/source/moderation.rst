@@ -246,7 +246,10 @@ The following commands also support being set as "automatically expiring after X
 * |bot_prefix|\ cmute
 * |bot_prefix|\ cimageban
 
-This is achieved by **prepending** the target users with a time code. Please note that this time setting will overwrite the previous setting each time the command is run on a specified user: this also applies to converting a permanent action into a timed one and vice-versa, without removing the role on the target user.
+This is achieved by **prepending** the target users with a time code.
+
+.. note:
+    This time setting will overwrite the previous setting each time the command is run on a specified user: this also applies to converting a permanent action into a timed one and vice-versa, without removing the role on the target user.
 
 (Common) Command Syntax
 -----------------------
@@ -904,6 +907,8 @@ Examples
 
 ....
 
+.. _listrules:
+
 |bot_prefix|\ listrules
 -----------------------
 
@@ -942,7 +947,10 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Adds a custom rule to the rules list. Adding a custom rule generates a server-specific rule ID for that rule automatically, starting from ``s_1``. Adding a channel identifier will assign that rule as being channel-specific (this is primarily used to track how close a user is to reaching a channel ban threshold, *please note that channel ban thresholds are not implemented yet*).
+Adds a custom rule to the rules list. Adding a custom rule generates a server-specific rule ID for that rule automatically, starting from ``s_1``. Adding a channel identifier will assign that rule as being channel-specific (this is primarily used to track how close a user is to reaching a channel ban threshold)
+
+.. note:
+    Channel ban thresholds are not implemented yet.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1094,7 +1102,10 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 * **Server Invites**: recognizes Discord server invites in user messages; this trigger supports **shortened** URLs (e.g. Discord invites hidden behind a bit.ly shortening service), and ignores invites pointing to the current server.
 * **Mass Mention**: counts the number of mentions (roles, users or everyone/here) in a message and triggers if the number of mentions is over a threshold. The default threshold is **10**, but can be configured in each server.
 * **Banned Words**: checks the message against a list of words, configured by the user, and triggers if one or more words are found within the message. Punctuation and letter case are ignored. The parser can be configured to trigger on an "exact match" (e.g. banned word: ``test``, matching word: ``test``), if the banned word is found at the "beginning of a word" within the message (e.g. banned word: ``test``, matching word: ``testing``), or "anywhere in word" (e.g. banned word: ``test``, matching word: ``attestation``).
-* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default threshold is **3** messages in **10** seconds, but can be configured in each server. Please note that Discord lag can cause false positives.
+* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default threshold is **3** messages in **10** seconds, but can be configured in each server.
+
+.. note:
+    Discord lag or connection problems can cause Anti-Spam false positives.
 
 **Supported actions**
 
@@ -1131,5 +1142,8 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Opens the auto moderation interactive setup menu. Use the menu items to configure the above settings. Please note that not all of the settings will have a meaning in all of the triggers.
+Opens the auto moderation interactive setup menu. Use the menu items to configure the above settings.
+
+.. note:
+    Not all of the settings will have a meaning in all of the triggers. Read the above descriptions to understand what each option means within the specific trigger.
 

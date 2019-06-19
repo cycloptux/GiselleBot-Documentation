@@ -10,4 +10,5 @@ If you don't, here's a direct invite: https://discordapp.com/oauth2/authorize?cl
 
 The set of permissions that Giselle asks for enables most, if not all, of her commands in your server. Giving administrator permissions is advised if you are going to use her for logging and moderation purposes, but it's not required.
 
-Please note that, by default, not all of GiselleBot's commands are enabled for everyone in a server. Refer to :ref:`permissions-system` for more info.
+.. note:
+    By default, not all of GiselleBot's commands are enabled for everyone in a server. Refer to :ref:`permissions-system` for more info.

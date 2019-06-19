@@ -375,7 +375,8 @@ In **Single** or **Multiple** mode, you'll also have access to additional, optio
 * **Minimum number of roles**: Users won't be able to self-remove a role if the removal would bring them under this threshold of group roles.
 * **Maximum number of roles**: Users won't be able to self-assign a role if the assignment would bring them over this threshold of group roles.
 
-Please note that **one role can be assigned to more than one group**. While possible, this is generally not recommended unless you know what you are doing. In such cases, you must design your settings to avoid conflicts between the different group settings. **Conflicting settings will cause unpredictable behaviors**.
+.. warning:
+    **One role can be assigned to more than one group**. While technically possible, this is generally not recommended unless you know what you are doing. In such cases, you must design your settings to avoid conflicts between the different group settings. **Conflicting settings will cause unpredictable behaviors**.
 
 Once a role group is configured, two ways of self-assigning a group will be available to users:
 
@@ -389,7 +390,10 @@ Here's the full list of available commands for this sub-module:
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Opens the self-assignable roles (i.e. role groups) interactive setup menu. Use the menu items to configure the above settings. Please note that mode-specific settings will only work if the corresponding mode is currently set as active.
+Opens the self-assignable roles (i.e. role groups) interactive setup menu. Use the menu items to configure the above settings.
+
+.. note:
+    Mode-specific settings will only work if the corresponding mode is currently set as active.
 
 ....
 
@@ -451,12 +455,17 @@ Examples
 
 ....
 
+.. _lsar:
+
 |bot_prefix|\ lsar
 ------------------
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Prints a list of all role groups and the relative self-assignable groups. Please note that this command is always available to everyone.
+Prints a list of all role groups and the relative self-assignable groups.
+
+.. note:
+    This command is always available to everyone.
 
 ....
 
@@ -479,6 +488,8 @@ Permissions Needed
 
 ....
 
+.. _iam:
+
 |bot_prefix|\ iam
 -----------------
 
@@ -490,7 +501,10 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Assings one role among those that are flagged as self-assignable, provided the requirements are met. Please note that this command is always available to everyone.
+Assings one role among those that are flagged as self-assignable, provided the requirements are met.
+
+.. note:
+    This command is always available to everyone.
 
 Examples
 ^^^^^^^^
@@ -501,6 +515,8 @@ Examples
     |bot_prefix|\ iam 123456789098765432 
     
 ....
+
+.. _iamnot:
 
 |bot_prefix|\ iamnot
 --------------------
@@ -513,7 +529,10 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Removes one role among those that are flagged as self-assignable, provided the requirements are met. Please note that this command is always available to everyone.
+Removes one role among those that are flagged as self-assignable, provided the requirements are met.
+
+.. note:
+    This command is always available to everyone.
 
 Examples
 ^^^^^^^^
@@ -599,7 +618,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Updates a role menu with a new reaction if a role was added to the particular role group.
 
-Please note that, in order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
+.. note:
+    In order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
 
 If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
 

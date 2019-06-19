@@ -95,7 +95,10 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets a custom emoji for the giveaway campaign in the current server. Please note that you **must** use reactions that are either global or present in the server. Failing to do so may result in the giveaway reaction not to work.
+Sets a custom emoji for the giveaway campaign in the current server.
+
+.. warning:
+    You **must** use reactions that are either "global" (Discord native emojis) or present in the server. Failing to do so may result in the giveaway reaction not to work.
 
 Examples
 ^^^^^^^^

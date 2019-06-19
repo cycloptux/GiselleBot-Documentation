@@ -15,7 +15,12 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Starts a new auction in the current channel. The currency parameter will define which currency names will be used in the message, separate singular and plural with a simple comma ``,``. Please note that no currency is actually used. The roles parameter will restrict the ability to vote to users that have (at least one of) the defined role(s). The forward parameter will define more users that will receive the auction closure notification via DM (the author of the auction will always be notified). The final notification will also include a .csv containing the full bid history, for auditing purposes.
+Starts a new auction in the current channel. The currency parameter will define which currency names will be used in the message, separate singular and plural with a simple comma ``,``.
+
+.. note:
+    No currency (see :ref:`currency-system`) is actually used.
+    
+The roles parameter will restrict the ability to vote to users that have (at least one of) the defined role(s). The forward parameter will define more users that will receive the auction closure notification via DM (the author of the auction will always be notified). The final notification will also include a .csv containing the full bid history, for auditing purposes.
 
 All parameters are optional, the default values (on omission) are:
 
@@ -43,6 +48,8 @@ Stops the auction (in the current channel) that was started by the command autho
 
 ....
 
+.. _bid:
+
 |bot_prefix|\ bid
 -----------------
 
@@ -56,7 +63,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lets a user bid a certain amount for the current auction. Validation rules are in place to make sure that the bid is valid before it's registered. Invalid bids will still be registered in the detailed .csv that is sent to the author, but those will not interfere with the actual auction.
 
-Please note that this command will always be available to everyone, ignoring the permissions set for the module.
+.. note:
+    This command is always available to everyone.
 
 Examples
 ^^^^^^^^
