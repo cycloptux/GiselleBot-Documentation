@@ -9,6 +9,44 @@ The Administration module contains tools used to manage a Discord server and its
 
 ....
 
+Bot Prefix
+==========
+
+|bot_prefix|\ prefix
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ prefix [new prefix]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the bot prefix for all bot commands within the current server.
+
+Using the command without any argument will show the current prefix.
+
+.. warning:
+    The prefix cannot contain spaces. If spaces are used, only the first "word" will be considered.
+
+.. note:
+    Generally speaking, there will never be a space in between the prefix and the command itself.
+    A common prefix being used is a mention of the bot. If the bot mention is used, a space will be automatically added after the mention. This only applies if the bot mention is used, while any other mention will be considered as a normal character string.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ prefix
+    |bot_prefix|\ prefix b?
+    
+....
+
 .. _log-command:
 
 Server Activity Logging
