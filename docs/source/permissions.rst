@@ -10,7 +10,7 @@ This module lets administrators authorize server members to use any of the bot's
 
 Each module can be enabled for a list of roles and/or individual users, so that authorized members will immediately have access to all of the commands contained in said module. Discord permissions checks (e.g. "Manage Messages") will still apply and take precedence, where applicable. The list of Discord permissions needed to run each command is written below each command within this documentation.
 
-Modules can also be **completely disabled** within a server, which means not even administrators will be able to use them unless the module is re-enabled (see :ref:`rolepermtogglemod`).
+Modules can also be **completely disabled** within a server, which means not even administrators will be able to use them unless the module is re-enabled (see :ref:`permtogglemod`).
 
 **Before** role permissions are checked, another layer of permissions are checked **for non-administrator members**: channel overrides. Each module can be locked to be only run **within** a specified set of channels (**whitelist** mode) or **outside** a specified set of channels (**blacklist** mode). See :ref:`channel-overrides`.
 
@@ -22,14 +22,14 @@ Modules can also be **completely disabled** within a server, which means not eve
 Roles and Users Permissions
 ===========================
 
-|bot_prefix|\ rolepermshow
+|bot_prefix|\ permshow
 --------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rps
+    |bot_prefix|\ pes
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -37,14 +37,14 @@ Shows a summary of all the modules that are available within the current Discord
 
 ....
 
-|bot_prefix|\ rolepermshowmod
+|bot_prefix|\ permshowmod
 -----------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpsm (module name)
+    |bot_prefix|\ pesm (module name)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -54,18 +54,18 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpsm moderation
+    |bot_prefix|\ pesm moderation
     
 ....
 
-|bot_prefix|\ rolepermenablemod
+|bot_prefix|\ permenablemod
 -------------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpem (module name) (role and/or user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ peem (module name) (role and/or user id(s)/mention(s)/q_name(s))
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -75,19 +75,19 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpem moderation "Discord Moderators"
-    |bot_prefix|\ rpem administration @Staff
+    |bot_prefix|\ peem moderation "Discord Moderators"
+    |bot_prefix|\ peem administration @Staff
     
 ....
     
-|bot_prefix|\ rolepermdisablemod
+|bot_prefix|\ permdisablemod
 --------------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpdm (module name) (role and/or user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ pedm (module name) (role and/or user id(s)/mention(s)/q_name(s))
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -97,21 +97,21 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rpdm moderation "Not Discord Moderators"
-    |bot_prefix|\ rpdm administration @Lil Staff
+    |bot_prefix|\ pedm moderation "Not Discord Moderators"
+    |bot_prefix|\ pedm administration @Lil Staff
     
 ....
 
-.. _rolepermtogglemod:
+.. _permtogglemod:
 
-|bot_prefix|\ rolepermtogglemod
+|bot_prefix|\ permtogglemod
 -------------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rptm (module name)
+    |bot_prefix|\ petm (module name)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -123,7 +123,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rptm alarm
+    |bot_prefix|\ petm alarm
     
 ....
 
