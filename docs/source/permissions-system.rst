@@ -10,7 +10,7 @@ This module lets administrators authorize server members to use any of the bot's
 
 Each module can be enabled for a list of roles and/or individual users, so that authorized members will immediately have access to all of the commands contained in said module. Discord permissions checks (e.g. "Manage Messages") will still apply and take precedence, where applicable. The list of Discord permissions needed to run each command is written below each command within this documentation.
 
-Modules can also be **completely disabled** within a server, which means not even administrators will be able to use them unless the module is re-enabled (see ........).
+Modules can also be **completely disabled** within a server, which means not even administrators will be able to use them unless the module is re-enabled (see :ref:`rolepermtogglemod`).
 
 **Before** role permissions are checked, another layer of permissions are checked **for non-administrator members**: channel permissions. Each module can be locked to be only run **within** a specified set of channels (**whitelist** mode) or **outside** a specified set of channels (**blacklist** mode).
 
@@ -101,6 +101,8 @@ Examples
     |bot_prefix|\ rpdm administration @Lil Staff
     
 ....
+
+.. _rolepermtogglemod:
 
 |bot_prefix|\ rolepermtogglemod
 -------------------------------
