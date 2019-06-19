@@ -24,8 +24,10 @@ Welcome to GiselleBot's documentation!
    administration
    alarm
    auction-house
+   currency
    custom-reactions
    forms
+   games
    miscellaneous
    moderation
    permissions

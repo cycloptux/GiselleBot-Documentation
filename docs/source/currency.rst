@@ -52,7 +52,7 @@ Once a day (by default, but the cooldown can be configured by the bot owner) use
 ....
 
 |bot_prefix|\ cleaderboard
--------------------------
+--------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
