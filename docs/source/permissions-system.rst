@@ -127,6 +127,9 @@ Examples
     
 ....
 
+Channel Overrides
+=================
+
 |bot_prefix|\ chanpermtoggle
 ----------------------------
 
