@@ -19,11 +19,36 @@ Modules can also be **completely disabled** within a server, which means not eve
     
 ....
 
+Default Module Permissions
+==========================
+
+Here's the list of modules that are automatically enabled for everyone as soon as the bot joins a server and those that are locked to administrators only. Internal module permissions and in-Discord permissions checks (e.g. "Manage Messages") still apply.
+
+Available to everyone
+---------------------
+
+* alarm
+* currency
+* games
+* miscellaneous
+* poll
+* raidroom
+* reactions
+* social
+* util
+
+Available to administrators
+---------------------------
+
+*Full list work-in-progress*
+
+....
+
 Roles and Users Permissions
 ===========================
 
 |bot_prefix|\ permshow
---------------------------
+----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
