@@ -237,7 +237,10 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 1800 (30 minutes).
+Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 1800 (30 minutes).
+
+.. note::
+    This does not apply to DM greet messages.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -327,13 +330,16 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ autoassignrole [role id(s)/mention(s)/q_name(s)]
+    |bot_prefix|\ vcrole [role id/mention/q_name]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Automaticaly assigns one or more specified roles to every user who joins the server.
+Automaticaly assigns a role to users who join the voice channel you're in when you run this command. Provide no role identifier to disable.
 
-Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+Provide no parameters to disable this feature.
+
+.. warning:
+    You must be in a voice channel to run this command.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -345,8 +351,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ aar
-    |bot_prefix|\ aar RoleName1 RoleName2
+    |bot_prefix|\ vcrole
+    |bot_prefix|\ vcrole VoiceRoleName
     
 ....
 
@@ -357,26 +363,11 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ autoassignrole [role id(s)/mention(s)/q_name(s)]
+    |bot_prefix|\ vcrolelist
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Automaticaly assigns one or more specified roles to every user who joins the server.
-
-Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-
-| **User**: Manage Roles
-| **Bot**: Manage Roles
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ aar
-    |bot_prefix|\ aar RoleName1 RoleName2
+Shows a list of currently set voice channel roles.
     
 ....
     
