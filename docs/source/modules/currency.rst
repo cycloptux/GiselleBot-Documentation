@@ -36,6 +36,8 @@ Examples
     
 ....
 
+.. _timely:
+
 |bot_prefix|\ timely
 --------------------
 

@@ -31,6 +31,7 @@ release = '2.0.0-alpha'
 # Substitutions
 rst_prolog = '''
 .. |bot_prefix| replace:: !
+.. |bot_prefix_name| replace:: an exclamation point
 '''
 
 # -- General configuration ---------------------------------------------------

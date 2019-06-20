@@ -14,40 +14,36 @@ Welcome to GiselleBot's documentation!
    introduction
    bot-invite
    credits
-   modules-docs
+   docs-101
    patreon-perks
    
 .. toctree::
    :maxdepth: 1
-   :caption: Modules & Command List
+   :caption: Use Cases & Guides
+   :glob:
    
-   administration
-   alarm
-   auction-house
-   currency
-   custom-reactions
-   forms
-   games
-   miscellaneous
-   moderation
-   permissions
-   raid-rooms
-   send
-   social
-   youtube
+   guides/*
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Modules & Command List
+   :glob:
+   
+   modules/*
    
 .. toctree::
    :maxdepth: 1
    :caption: Social Network Connectors
+   :glob:
    
-   twitter
+   social_networks/*
    
 .. toctree::
    :maxdepth: 1
    :caption: Modules & Command List (Premium)
+   :glob:
    
-   giveaway
-   music
+   premium_modules/*
 
 
 ******************

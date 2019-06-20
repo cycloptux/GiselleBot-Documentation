@@ -1,3 +1,5 @@
+.. _administration:
+
 **************
 Administration
 **************
@@ -11,6 +13,8 @@ The Administration module contains tools used to manage a Discord server and its
 
 Bot Prefix
 ==========
+
+.. _prefix:
 
 |bot_prefix|\ prefix
 --------------------
@@ -295,7 +299,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ autoremoverole [time code] [role id(s)/mention(s)/q_name(s)]
+    |bot_prefix|\ arr [time code] [role id(s)/mention(s)/q_name(s)]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -371,6 +375,8 @@ Shows a list of currently set voice channel roles.
     
 ....
     
+.. _self-assignable-roles:
+
 Self-assignable Roles
 =====================
 

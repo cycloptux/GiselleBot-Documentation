@@ -40,6 +40,8 @@ Within the documentation, you may find the tag ``q_name`` in command syntax snip
     "cycloptux Development#1543"
     "Role With Spaces"
     
+.. _timecode:
+
 Time Format Code
 ================
 
@@ -61,7 +63,8 @@ Time durations are indicated through the use of a standard time format, which co
 
 If specified, the time code may allow an extra bit, ``s`` for second(s). Each time bit has to be prepended with an actual (positive, integer) number, or omitted if the corresponding time bit would be set to 0.
 
-**Important Note**: While some flexibility is allowed in time codes, be sure to write the time bits in the correct order: ``mo > w > d > h > m > s``
+.. warning:
+    **Important Note**: While some flexibility is allowed in time codes, be sure to write the time bits in the correct order: ``mo > w > d > h > m > s``
 
 That said, a typical time code would be like this:
 
