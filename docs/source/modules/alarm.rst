@@ -4,9 +4,6 @@ Alarms & Reminders
 
 This module includes tools to set timed reminders.
 
-.. seealso::
-    Partially inspired by `NadekoBot <https://nadeko.bot/>`_.
-
 |bot_prefix|\ remind
 --------------------
 

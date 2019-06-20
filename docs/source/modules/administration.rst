@@ -7,7 +7,7 @@ Administration
 The Administration module contains tools used to manage a Discord server and its members.
 
 .. seealso::
-    Partially inspired by `Logger <https://discordbots.org/bot/298822483060981760>`_, `YAGPDB <https://yagpdb.xyz/>`_ and `NadekoBot <https://nadeko.bot/>`_.
+    NaviKing#3820 wrote a very good guide about a few real use cases of using the administration module. You can find it here: :ref:`guide-administration`
 
 ....
 

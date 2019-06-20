@@ -1,3 +1,5 @@
+.. _guide-administration:
+
 *********************************************
 Step 1: Configuring the Administration Module
 *********************************************

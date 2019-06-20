@@ -4,9 +4,6 @@ Music
 
 The Music module enables users to listen to YouTube music in a Discord server's dedicated voice channel.
 
-.. seealso::
-    Partially inspired by `Rythm <https://rythmbot.co/>`_.
-    
 .. admonition:: Patreon
 
     Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume and |bot_prefix|\ mlyrics can be unlocked via **Patreon** pledges (see: :ref:`patreon-perks`).
