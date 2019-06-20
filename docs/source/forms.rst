@@ -15,7 +15,7 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
     
     1. Each form will be sent to one board, you cannot have 2 forms posting to the same board (this will be fixed in the near future).
     2. The Trello board must exist before a card is uploaded, its name must be exactly what the bot will tell you to be after creating a form, and must be adjusted if you change your server name or form name (more details later) (this will be fixed in the near future).
-    3. You must invite the bot to your Trello team and give it permissions to edit the board in order for the bot to monitor, post and update cards.
+    3. You must **invite** the bot to your Trello team and give it permissions to edit the board in order for the bot to monitor, post and update cards.
     4. You must **pair** the Discord server with the Trello team by using the |bot_prefix|\ trellopair command. Each Discord server can only be paired with 1 Trello team.
 
 .. note::
