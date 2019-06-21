@@ -12,6 +12,7 @@ Welcome to GiselleBot's documentation!
    :caption: Contents
    
    introduction
+   technical-and-security
    bot-invite
    credits
    docs-101
