@@ -58,7 +58,7 @@ Encryption at Rest
 ------------------
 * All storage media (hard disks, object storage repositories, etc.) are protected through low-level encryption.
 * Sensitive and personal data stored in the database are encrypted with AES-128-GCM algorithm.
-* Archives that are sent to the user via Direct Message by temporarily (the archives are deleted after a certain amount of time, from 1 week to 1 month on average) storing them into an Object Storage bucket are encrypted using 7-Zip's encryption algorithm, based on AES-256. The password is purposedly never logged into the bot internal logs and is only known to the end user. As an extra layer of security, users can decide to delete the bot's message so that the password is also removed from Discord itself.
+* Archives that are sent to the user via Direct Message by temporarily (the archives are deleted after a certain amount of time, from 1 week to 1 month on average) storing them into an Object Storage bucket are encrypted using 7-Zip's encryption algorithm, based on AES-256. The password is purposefully never logged into the bot internal logs and is only known to the end user. As an extra layer of security, users can decide to delete the bot's message so that the password is also removed from Discord itself.
 
 Authentication, Authorization, Auditing
 ---------------------------------------
