@@ -4,6 +4,8 @@ Modules Documentation 101
 
 Throughout the whole documentation website, you'll find different ways of explaining commands and a few keywords to indicate particular ways of writing a parameter.
 
+.. _discord-ids:
+
 Server/Guild, Channel, Message, Role, User IDs
 ==============================================
 
@@ -13,7 +15,7 @@ There are a lot of guides and tutorials about how to activate Developer Mode and
 
 Obtaining a role ID may be trivial: you can obtain the role ID by prepending a role mention with ``\``, but that message will still mention the role.
 
-In order to make your life easier, the bot offers a |bot_prefix|\ roleid command. More details **here** (link currently not working).
+In order to make your life easier, the bot offers a :ref:`roleid` command.
 
 Parenthesis
 ===========
