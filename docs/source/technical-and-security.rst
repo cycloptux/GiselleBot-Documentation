@@ -50,7 +50,8 @@ Regarding the security aspects of the bot, here's a list of features that have b
 Encryption in Transit
 ---------------------
 * Internal network communications between the web server, application server, and db server(s) only happen on a private network within the cloud infrastructure and never go through the internet.
-* Network connections between the application server, web server and DB machines are encrypted using SSL/TLS (specifically, TLS 1.1+) encryption, with 2-way validation of server and client certificates.
+* Network connections between the application server, web server and DB machines are encrypted using SSL/TLS (specifically, TLS 1.1+) encryption, with 2-way forced validation of server and client certificates.
+* Network connections between the API gateway and the application server are encrypted using HTTPS (TLS 1.2+) encryption, with forced 2-way validation of server and client certificates.
 * The certificates used to encrypt data in transit are released by an internal Certificate Authority (which is shutdown when not in use, to protect its keys). The certificates are signed by an intermediate CA which then points at the root CA, so that the root CA key is never used and the intermediate CA can be killed if compromised.
 * The web server and API gateway are only exposed to the internet through HTTPS (HSTS). The web access itself is also protected through `Cloudflare <https://www.cloudflare.com/>`_. The network connection between Cloudflare and the actual web server is also protected by strict HTTPS.
 
