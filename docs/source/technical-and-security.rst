@@ -2,7 +2,7 @@
 Technical & Security Background
 *******************************
 
-Other than being a developer, I work as an IT Security Analyst for a big IT company (10K+ employees) in the Telecom & Media industry. This security background also drove a lot of choices during the bot development and deployment, which will be listed and descripted in this page.
+Other than being a developer, I work as an IT Security Analyst for a big IT company (10K+ employees) in the Telecom & Media industry. This security background also drove a lot of choices during the bot development and deployment, which will be listed and described in this page.
 
 ....
 
@@ -38,7 +38,7 @@ Other than the plain computing power, the cloud infrastructure offers a few othe
 * A DNS managed service, hosting both the public cycloptux.com domain and the internal private domain.
 * A Key Management System, storing the secret keys and API keys used by the bot. Private keys and/or credentials are never stored on the actual servers, they are fetched during the startup of each service.
 * An IAM service, enabling the virtual servers to communicate with the cloud services without having to store credentials within the system itself.
-* An automatic build & deployment service, updating the documentation website as soon as a change is pushed to the `GitHub documentation repository <https://github.com/cycloptux/GiselleBot>`_.
+* An automatic build & deployment pipeline service, updating the documentation website as soon as a change is pushed to the `GitHub documentation repository <https://github.com/cycloptux/GiselleBot>`_.
 
 ....
 
