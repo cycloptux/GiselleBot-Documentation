@@ -33,6 +33,30 @@ Examples
 
 ....
 
+|bot_prefix|\ gedit
+-------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ gedit [message id] [--prize {prize name}] [--winners {# of winners (number)}]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Edits an existing giveaway in the current channel. The message ID is optional: if omitted, the most recent giveaway in the channel will be ended.
+
+Giveaway editing is limited to prize and number of winners.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ gedit --prize 2 Free Steam Keys
+    |bot_prefix|\ gedit 123456789098765432 --winners 5
+
+....
+
 |bot_prefix|\ gend
 ------------------
 
