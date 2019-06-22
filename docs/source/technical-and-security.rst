@@ -19,7 +19,7 @@ At the time of writing this page (June 21st, 2019), here are some dates and numb
 * Development started in October, 2017, making Giselle (the main bot) 1 year and a half old.
 * Giselle turned from being a private bot into a public bot in March, 2018.
 * Since her launch, Giselle has handled over 27,000 successful commands, with an average of 45 successful commands per day.
-* Since her public launch, there haven't been any major downtime in her online status, except for 2-3 days of downtime due to a Discord outage during summer, 2018.
+* Since her public launch, there hasn't been any major downtime in her online status, except for 2-3 days of downtime due to a Discord outage during summer, 2018.
 
 ....
 
