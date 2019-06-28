@@ -84,7 +84,7 @@ You can also print the list of available loggers within Discord by using |bot_pr
 
 .. admonition:: Patreon
 
-    The **Members**, **Users**, **Messages**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Roles**, **Channels**, **Server** and **Voice** loggers, you can unlock them via **Patreon** pledges (see: :ref:`patreon-perks`).
+    The **Members**, **Messages**, **Roles**, **Channels**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Users**, **Server** and **Voice** loggers, you can unlock them via **Patreon** pledges (see: :ref:`patreon-perks`).
 
 | :sub:`\*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.`
 | :sub:`\*\*: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.`
@@ -110,6 +110,11 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Patreon
+
+    This feature is only available to **Patreon**-enabled servers (see: :ref:`patreon-perks`).
+
 Add a filter to skip logging certain events. Any action that comes from a user/channel/role that is added to the filter won't generate a logging entry. Please refer to the list below for a list of supported filters:
 
 * **Members**: Users.
