@@ -37,7 +37,7 @@ Server Activity Logging
 
 Logging server activity is important to supplement Discord's server Audit Log and to capture activity that it does not, such as deleted messages and attachments. Discord's Audit Log also clears out old activity, while messages in a channel will remain forever. 
 
-The logging module also includes the ability to selectively ignore specific users and channels meaning that you are still able to control the information that is logged on your server. This is important if your logs are visible to a group of people that not all channels are visible to.
+The logging module also includes the ability (only for patrons of the bot developer) to selectively ignore specific users and channels meaning that you are still able to control the information that is logged on your server. This is important if your logs are visible to a group of people that not all channels are visible to.
 
 Logging Example
 ^^^^^^^^^^^^^^^
@@ -47,28 +47,28 @@ Here is one way to set up the logging for your server.
 1. Create the following channels
 
   a. #log-members
-  b. #log-users
+  b. #log-users (If you are a patron of the bot developer)
   c. #log-messages
   d. #log-mod
   e. #log-warn
-  f. #log-roles (If you are a patron of the bot developer)
-  g. #log-channels (If you are a patron of the bot developer)
+  f. #log-roles 
+  g. #log-channels
   h. #log-voice (If you are a patron of the bot developer)
   i. #log-server (If you are a patron of the bot developer)
 
 2. Run the following commands in each channel
 
   a. |bot_prefix|\ log members
-  b. |bot_prefix|\ log users
+  b. |bot_prefix|\ log users (if you are a patron)
   c. |bot_prefix|\ log messages
   d. |bot_prefix|\ log mod
   e. |bot_prefix|\ log warn
-  f. |bot_prefix|\ log roles (if you are a patron)
-  g. |bot_prefix|\ log channels (if you are a patron)
+  f. |bot_prefix|\ log roles
+  g. |bot_prefix|\ log channels
   h. |bot_prefix|\ log voice (if you are a patron)
   i. |bot_prefix|\ log server (if you are a patron)
 
-3. If your Discord name is @NaviKing#3820 and you have an #admin-channel that isn't visible to Moderators, you could have the bot ignore you and all the messages in that channel using the following commands
+3. If your Discord name is @NaviKing#3820, you are a patron and you have an #admin-channel that isn't visible to Moderators, you could have the bot ignore you and all the messages in that channel using the following commands
   
   a. |bot_prefix|\ logignore channels #admin-channel
   b. |bot_prefix|\ logignore members @NaviKing#3820

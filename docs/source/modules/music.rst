@@ -6,6 +6,7 @@ The Music module enables users to listen to YouTube music in a Discord server's 
 
 .. admonition:: Patreon
 
+    By default, each server is limited to having a maximum of 3 songs in a queue, and each song can only be a maximum of 8 minutes long. You can unlock up to 50 songs-queues and uncap the duration limit (also enabling the streaming of live channels) **Patreon** pledges (see: :ref:`patreon-perks`).
     Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume and |bot_prefix|\ mlyrics can be unlocked via **Patreon** pledges (see: :ref:`patreon-perks`).
 
 |bot_prefix|\ mplay
