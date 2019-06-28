@@ -1,8 +1,8 @@
 .. _administration:
 
-**************
-Administration
-**************
+*********************
+Server Administration
+*********************
 
 The Administration module contains tools used to manage a Discord server and its members.
 

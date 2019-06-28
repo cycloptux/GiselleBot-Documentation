@@ -1,6 +1,6 @@
-***********************
-Social/EXP Leaderboards
-***********************
+******************
+Social/EXP Ranking
+******************
 
 The Social module tracks users' activity in a server (and globally) and rewards a certain number of experience points on each message. A server and a global leaderboards exist, making users aware of how much they are engaging with the community.
 
