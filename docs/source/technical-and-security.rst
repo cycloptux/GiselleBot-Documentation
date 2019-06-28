@@ -62,7 +62,7 @@ Encryption at Rest
 * Commands that generate big files (such as a chat log) might transmit the file to the user via Direct Message by temporarily storing it into an encrypted Object Storage bucket. The archive itself is also encrypted using 7-Zip's encryption algorithm, based on AES-256.
   
   * The password is purposefully never logged into the bot internal logs and is only known to the end user.
-  * As an extra layer of security, users can decide to delete the bot's message so that the password is also removed from Discord itself.
+  * As an extra layer of security, users can decide to delete the bot's message so that the password is also removed from Discord itself. Refer to :ref:`deletedm` for more info.
   * The retention for these files is currently set to 30 days. Lowering the retention to 7 or 14 days is under consideration.
  
 

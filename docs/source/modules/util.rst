@@ -288,3 +288,35 @@ Examples
 
     |bot_prefix|\ remrole "Discord Moderator" @cycloptux#1543 NaviKing#3820
     |bot_prefix|\ remrole cycloptux#1543 Staff "Network Developer"
+
+....
+
+.. _deletedm:
+
+|bot_prefix|\ deletedm
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ deletedm (message id)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+.. note::
+    This command is only available in a Direct Message channel with the bot. It will **not** work in actual servers, and it's not subject to any permissions.
+
+Deletes a direct message sent by the bot. This can be particularly useful as a privacy/security feature to delete previously sent passwords to encrypted archives, in order to make them completely unrecoverable.
+
+.. seealso::
+    Refer to :ref:`discord-ids` if you don't know how to obtain a message ID.
+
+.. note::
+    Non-sensitive direct messages (e.g. moderation actions) might still be logged into the owner-restricted bot console.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ deletedm 123456789098765432
