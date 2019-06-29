@@ -47,6 +47,8 @@ Permissions Needed
 
 ....
 
+.. _submit:
+
 |bot_prefix|\ submit
 --------------------
 
@@ -216,7 +218,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Publishes an existing form, making it available to server members through the dedicated section of the bot Direct Messages behavior (see ..........).
+Publishes an existing form, making it available to server members through the dedicated section of the bot Direct Messages behavior (see :ref:`submit`).
 
 ....
 
