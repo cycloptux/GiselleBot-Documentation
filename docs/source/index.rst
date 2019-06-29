@@ -7,11 +7,33 @@
 Welcome to GiselleBot's documentation!
 **************************************
 
+**GiselleBot** is a Discord bot, developed by Cyc (cycloptux#1543 on Discord).
+
+Giselle was born as a "small" project to help the Brave Frontier-based Coalition (a group of people that played the same mobile game, Brave Frontier, from gumi Inc.) handle the kind-of-complicated (and fully documented, thanks to my friend and business partner NaviKing) members application workflow.
+
+Over time, a lot of side functions were added to help with day-to-day Discord usage, moderation, logging, roles management and so on.
+
+Nowadays, the bot is used on servers both large and small, official and unofficial. Built with security in mind, this actively developed bot is feature rich while still being flexible and easy to use. Key features include:
+
+* Points based automatic and manual moderation system with half a dozen possible moderation actions, configurable rules list, and prompts to ensure moderators fill out every required piece of information on a warning for impeccable moderation documentation.
+* Self assignable roles system that includes the ability to add roles to yourself via message reactions, not just bot commands! Configure groups of self assignable roles separately to require (or forbid) certain roles for obtaining them and set a minimum and maximum number of roles in each group
+* Deep logging, including members, channels, roles, messages, server, voice, and moderation-related actions (including logging of deleted attachments)
+* Social networks integrations, streaming tweets from Twitter to Discord in real-time (more integrations to come)
+* New user management, including greet messages, automatically assigned roles, and automatically removed roles
+* Permissions system to configure the usage of each module
+* Social and currency system to allow users to rank up based on activity and earn currency to use on games in the bot
+* Unique form builder module for creating guild applications, feedback surveys, bug reports, and so much more; all within Discord
+* Unique Raid Room module to allow people to create and disband temporary voice and text channels for co-op (or competitive) gameplay
+* Custom reactions: create your own commands with your own input and output text!
+* Music: listen to music in your voice channels
+* Much much more!
+
+....
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents
    
-   introduction
    technical-and-security
    bot-invite
    credits
@@ -45,12 +67,3 @@ Welcome to GiselleBot's documentation!
    :glob:
    
    premium_modules/*
-
-
-******************
-Indices and tables
-******************
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
