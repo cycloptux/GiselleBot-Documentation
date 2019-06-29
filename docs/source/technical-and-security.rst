@@ -16,10 +16,10 @@ At the time of writing this page (June 21st, 2019), here are some dates and numb
 * ~38,000 code lines, excluding JSON files.
 * 48 technical dependencies, including performance enhancement libraries and self-coded libraries.
 * Present in 125 Discord servers, covering over 50,000 users.
-* Development started in October, 2017, making Giselle (the main bot) 1 year and a half old.
-* Giselle turned from being a private bot into a public bot in March, 2018.
-* Since her launch, Giselle has handled over 27,000 successful commands, with an average of 45 successful commands per day.
-* Since her public launch, there hasn't been any major downtime in her online status, except for 2-3 days of downtime due to a Discord outage during summer, 2018.
+* Development started in October, 2017, making GiselleBot 1 year and a half old.
+* GiselleBot turned from being a private bot into a public bot in March, 2018.
+* Since its launch, GiselleBot has handled over 27,000 successful commands, with an average of 45 successful commands per day.
+* Since its public launch, there hasn't been any major downtime in its online status, except for 2-3 days of downtime due to a Discord outage during summer, 2018.
 
 ....
 
@@ -28,7 +28,7 @@ Infrastructure
 
 The bot is hosted in a cloud infrastructure. The infrastructure is currently composed of 3 main components:
 
-* 1 Web Server, hosting her dashboard (work-in-progress), documentation website and the API gateway used to communicate with the bots from the dashboard.
+* 1 Web Server, hosting its dashboard (work-in-progress), documentation website and the API gateway used to communicate with the bots from the dashboard.
 * 1 Application Server, hosting the bot itself.
 * 3 MongoDB machines, forming a Replica Set.
 

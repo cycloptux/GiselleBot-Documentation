@@ -1,15 +1,12 @@
-.. GiselleBot documentation master file, created by
-   sphinx-quickstart on Tue Dec 11 00:45:34 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. Documentation master file, created by sphinx-quickstart on Tue Dec 11 00:45:34 2018.
 
 **************************************
-Welcome to GiselleBot's documentation!
+Welcome to |bot_name|'s documentation!
 **************************************
 
-**GiselleBot** is a Discord bot, developed by Cyc (cycloptux#1543 on Discord).
+|bot_name| is a Discord bot, developed by Cyc (cycloptux#1543 on Discord).
 
-Giselle was born as a "small" project to help the Brave Frontier-based Coalition (a group of people that played the same mobile game, Brave Frontier, from gumi Inc.) handle the kind-of-complicated (and fully documented, thanks to my friend and business partner NaviKing) members application workflow.
+|bot_name| was born as a "small" project to help the Brave Frontier-based Coalition (a group of people that played the same mobile game, Brave Frontier, from gumi Inc.) handle the kind-of-complicated (and fully documented, thanks to my friend and business partner NaviKing) members application workflow.
 
 Over time, a lot of side functions were added to help with day-to-day Discord usage, moderation, logging, roles management and so on.
 
