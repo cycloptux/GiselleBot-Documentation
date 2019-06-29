@@ -76,8 +76,8 @@ Urban Dictionary text lookup. The output will be the highest ranked result. The 
 
 Using ``--more`` will show up to 5 results, if available.
 
-.. note::
-    By default, given the nature of the website, the output of any Urban Dictionary lookup will be checked against a list of "not safe for work" words and "censored" accordingly. This check will be skipped if the channel where the command is run is set as **NSFW**.
+.. warning::
+    Given the nature of the website, Urban Dictionary lookups will only be executed in channels that are marked as **NSFW**.
 
 Examples
 ^^^^^^^^

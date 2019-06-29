@@ -345,7 +345,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Exports the current forms submission stats for the current server.
+Exports the current forms submission statistics and contents for the current server.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
