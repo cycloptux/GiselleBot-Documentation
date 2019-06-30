@@ -45,8 +45,6 @@ By becoming a **Tier 2** (or higher) patron, you'll unlock the **giveaway module
 * support for **live events** streaming
 * access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
 
-This Patreon tier will soon be extended with more perks (to be announced).
-
 Tier 3: Unlocked Original Modules
 =================================
 
