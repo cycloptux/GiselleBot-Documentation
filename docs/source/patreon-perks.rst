@@ -16,7 +16,7 @@ Within the various module pages you'll find details about the perks that are unl
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You need to be an **administrator** (or a representative of similar rank) of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please send a DM to cycloptux#1543 or NaviKing#3820 to get your perks activated.
+    You need to be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please send a DM to cycloptux#1543 or NaviKing#3820 to get your perks activated.
 
 Tier 0: Show Your Support!
 ==========================
