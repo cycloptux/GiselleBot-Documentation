@@ -144,29 +144,28 @@ Permissions Needed
 
 ....
 
-|bot_prefix|\ currencyrate
---------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ currencyrate [server id/q_name] [multiplier]
+..  |bot_prefix|\ currencyrate
+    --------------------------
     
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Sets the currency multiplier (applies to :ref:`games` and :ref:`timely`) for the current server or another specified server. The default multiplier is (obviously) **1**.
-
-Running the command with no arguments will show the current settings.
-
-.. warning::
-    Using this command is not recommended. The multipliers will usually conflict with games multipliers, resulting in people generating an insanely high amount of currency.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Bot Owner
-
-....
+    Command Syntax
+    ^^^^^^^^^^^^^^
+    .. parsed-literal::
+    
+        |bot_prefix|\ currencyrate [server id/q_name] [multiplier]
+        
+    Command Description
+    ^^^^^^^^^^^^^^^^^^^
+    Sets the currency multiplier (applies to :ref:`games` and :ref:`timely`) for the current server or another specified server. The default multiplier is (obviously) **1**.
+    
+    Running the command with no arguments will show the current settings.
+    
+    .. warning::
+        Using this command is not recommended. The multipliers will usually conflict with games multipliers, resulting in people generating an insanely high amount of currency.
+    
+    Permissions Needed
+    ^^^^^^^^^^^^^^^^^^
+    | **User**: Bot Owner
+    
 
 |bot_prefix|\ award
 -------------------
