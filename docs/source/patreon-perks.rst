@@ -51,4 +51,4 @@ Tier 3: Unlocked Original Modules
 By becoming a **Tier 3** (or higher) patron, you'll unlock the whole potential of |bot_name|'s original modules:
 
 * create **up to 20 forms** in your server (removing the default cap of 1 form)
-* **uncapping the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
+* **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
