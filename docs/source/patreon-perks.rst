@@ -33,7 +33,7 @@ By becoming a **Tier 1** (or higher) patron, you'll get access to:
 * **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 
 Tier 2: Premium Support, Extended Music & Giveaway Module
-========================================
+=========================================================
 
 By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://discord.gg/s6yq6U5>`_, where you'll get a priority answer from the developer upon encountering any issue.
 
