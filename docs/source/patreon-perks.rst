@@ -23,27 +23,29 @@ Tier 0: Show Your Support!
 
 For a very small pledge, you're showing your appreciation of my work and participating in the costs of keeping the bot up. This tier won't give you any extra perks.
 
-Tier 1: Premium Support & Basic Addons
-======================================
+Tier 1: Basic Addons
+====================
 
-By becoming a **Tier 1** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://discord.gg/s6yq6U5>`_, where you'll get a priority answer from the developer upon encountering any issue.
-
-You'll also get to pick a custom color for your name in the official support server.
-
-Tier 1 patrons will get access to:
+By becoming a **Tier 1** (or higher) patron, you'll get access to:
 
 * **unlimited repeating messages** (removing the default cap of 5 repeating messages per server)
 * **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
+* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 
-Tier 2: Extended Music & Giveaway Module
+Tier 2: Premium Support, Extended Music & Giveaway Module
 ========================================
 
-By becoming a **Tier 2** (or higher) patron, you'll unlock the **giveaway module** and get access to the whole potential of the music module:
+By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://discord.gg/s6yq6U5>`_, where you'll get a priority answer from the developer upon encountering any issue.
+
+You'll also get to pick a custom color for your name in the official support server.
+
+Tier 2 patrons unlock the **giveaway module** and get access to the whole potential of the music module:
 
 * **up to 50 songs in a playing queue** (removing the default cap of 3 songs)
 * **uncapping of songs duration**, removing the 8 minutes cap
 * support for **live events** streaming
 * access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
+* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **7%** for **all users** in your server!
 
 Tier 3: Unlocked Original Modules
 =================================
@@ -52,3 +54,4 @@ By becoming a **Tier 3** (or higher) patron, you'll unlock the whole potential o
 
 * create **up to 20 forms** in your server (removing the default cap of 1 form)
 * **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
+* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **12%** for **all users** in your server!
