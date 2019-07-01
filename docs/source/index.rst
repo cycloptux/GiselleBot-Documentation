@@ -60,6 +60,13 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    
 .. toctree::
    :maxdepth: 1
+   :caption: Games Integrations
+   :glob:
+   
+   games_integrations/*
+   
+.. toctree::
+   :maxdepth: 1
    :caption: Modules & Command List (Premium)
    :glob:
    
