@@ -42,8 +42,6 @@ If the game is omitted, the **Brave Frontier** feed will be toggled.
 .. warning::
     If you move your feed, all those news that were already posted will not carry over to the new channel.
     
-!newsfeed toggle --region gl,eu --lang de
-
 Examples
 ^^^^^^^^
 .. parsed-literal::
