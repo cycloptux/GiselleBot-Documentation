@@ -43,6 +43,8 @@ Twitter streams may be parsed to look for "bad words" or "possibly sensitive" co
 
 Adds a **whitelist** filter to the stream. In this example, if the tweet contains ``first word`` and/or (see below) ``second word``, the tweet will sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
 
+You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
+
 **Default**: No filter
 
 ``--mode (AND/OR)``
