@@ -146,6 +146,33 @@ Examples
 
 ....
 
+|bot_prefix|\ shorturl
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ shorturl (long URL)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Converts a long URL into a short URL using TinyURL as shortening service.
+
+URLs that are already known to the bot will be fetched from the local cache. Users will have the ability to request an additional online check by clicking on the available reaction if the fetched URL is invalid.
+
+.. note::
+    According to the `TinyURL website <https://tinyurl.com/>`_, their short URLs never expire. This means a new request will probably still give the same result from the online cache.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ shorturl http://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M 
+
+....
+
 |bot_prefix|\ savechat
 ----------------------
 

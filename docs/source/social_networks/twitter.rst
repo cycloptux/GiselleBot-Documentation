@@ -55,6 +55,21 @@ Sets the filter behavior when more than 1 word is added to the whitelist filter.
 
 **Default**: ``OR``
 
+``--include`` or ``--exclude``
+""""""""""""""""""""""""""""""
+
+Sets the filter behavior one or more words are added to the whitelist filter.
+
+* ``--include`` will only allow tweets that contain the filtered word(s).
+* ``--exclude`` will only allow tweets that **do not** contain the filtered word(s).
+
+These parameters will work together with ``--mode (AND/OR)``, allowing the Twitter connector to filter based on INCLUDING the filter items (e.g., at least one filter item (OR) or all filter items (AND) are included in the tweet) or EXCLUDING filter items (e.g., post if all filter items are absent from the tweet (AND) or at least one filter item is absent from the tweet (OR)).
+
+**Default**: ``--include``
+
+.. note::
+    Using both parameters in the same command will give ``--include`` the strict priority and ignore ``--exclude``.
+
 ``--header (message)``
 """"""""""""""""""""""
 
@@ -112,7 +127,10 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Replaces all previously set customization params for the selected Twitter stream with a new set of customization params. The stream index is the number shown with |bot_prefix|\ twtlhook.
+**Replaces** all previously set customization params for the selected Twitter stream with a new set of customization params. The stream index is the number shown with |bot_prefix|\ twtlhook.
+
+.. warning::
+    Editing the webhook will not change the existing params, it will completely replace them. Take note of the existing params first, and use them in the command!
 
 |bot_prefix|\ twtrhook
 ----------------------
