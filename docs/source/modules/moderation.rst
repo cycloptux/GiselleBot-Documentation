@@ -1094,7 +1094,7 @@ Permissions Needed
 Auto Moderation
 ===============
 
-An auto moderation feature is available. The current auto moderator currently supports **4** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
+An auto moderation feature is available. The current auto moderator currently supports **5** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
 
 By default, administrators and moderators (refer to :ref:`moderation-role`) are immune to auto moderation triggers.
 
@@ -1103,7 +1103,8 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 * **Server Invites**: recognizes Discord server invites in user messages; this trigger supports **shortened** URLs (e.g. Discord invites hidden behind a bit.ly shortening service), and ignores invites pointing to the current server.
 * **Mass Mention**: counts the number of mentions (roles, users or everyone/here) in a message and triggers if the number of mentions is over a threshold. The default threshold is **10**, but can be configured in each server.
 * **Banned Words**: checks the message against a list of words, configured by the user, and triggers if one or more words are found within the message. Punctuation and letter case are ignored. The parser can be configured to trigger on an "exact match" (e.g. banned word: ``test``, matching word: ``test``), if the banned word is found at the "beginning of a word" within the message (e.g. banned word: ``test``, matching word: ``testing``), or "anywhere in word" (e.g. banned word: ``test``, matching word: ``attestation``).
-* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default threshold is **3** messages in **10** seconds, but can be configured in each server.
+* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
+* **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
 
 .. note:
     Discord lag or connection problems can cause Anti-Spam false positives.
