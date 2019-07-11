@@ -13,7 +13,7 @@ Permalink URLs will be posted to Discord, while the submission preview will leve
 .. note::
     The goal of this module is offering a **free alternative** to something that is usually only achieved through the use of paid services. On the other hand, due to limitations that are applied to the free Reddit API, this module might suffer from delays (new posts will be checked **every 5~15 minutes**) and/or miss a few posts in high-traffic subreddits (**the module will only catch up to 100 new posts in each check window**).
     
-.. note::
+.. warning::
     Checks are in place to minimize the amount of duplicate posts that might happen due to a few inconsistencies in the Reddit API. These checks may be less effective when a subreddit is first added, but are built to get better over time.
 
 
@@ -100,10 +100,10 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%title%**: This will be replaced with the title of the submission (e.g. ``Without saying what the category is, what are your top five?``)
 * **%flair%**: This will be replaced with the name of the flair assigned to the post, if present, or "*None*" if no flair is assigned
 * **%url%**: This will be replaced with the "URL" parameter of a post, which will be an URL to the comments if the post is a text post, or the URL of the content (image, video, link...) otherwise
-* **%timestamp% or %timestamp\_utc%**: This will be replaced with the current UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
-* **%timestamp\_pst%**: This will be replaced with the current PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
+* **%timestamp% or %timestamp\_utc%**: This will be replaced with the submission creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_pst%**: This will be replaced with the submission creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 
-All headers will be followed by the actual Twitter status URL, rendering of that URL will be done by Discord.
+All headers will be followed by the actual Reddit post permalink URL, rendering of that URL will be done by Discord.
 
 **Default**: ``New submission in /r/%subreddit% from /u/%author%!``
 

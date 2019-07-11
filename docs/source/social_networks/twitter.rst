@@ -34,7 +34,7 @@ Starts a streaming service for the selected Twitter account. If a new tweet is f
 Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted. If this parameter is used, any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
 
 .. note::
-    This check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
+    This check is unaccurate. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
 
 **Default**: ``false`` (tweets won't be censored)
 
