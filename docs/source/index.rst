@@ -6,6 +6,9 @@ Welcome to |bot_name|'s documentation!
 
 |bot_name| is a Discord bot, developed by Cyc (cycloptux#1543 on Discord).
 
+.. seealso::
+   Need more help or stuck with something? Join my official Support Server on Discord! https://discord.gg/s6yq6U5
+
 |bot_name| was born as a "small" project to help the Brave Frontier-based Coalition (a group of people that played the same mobile game, Brave Frontier, from gumi Inc.) handle the kind-of-complicated (and fully documented, thanks to my friend and business partner NaviKing) members application workflow.
 
 Over time, a lot of side functions were added to help with day-to-day Discord usage, moderation, logging, roles management and so on.
