@@ -1,6 +1,6 @@
-****************
-Reddit Connector
-****************
+***********************
+Reddit Connector (BETA)
+***********************
 
 The Reddit connector offers an easy way to stream new submissions from any subreddit to one (or more) of the webhooks configured in your Discord server.
 

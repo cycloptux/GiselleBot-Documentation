@@ -1,6 +1,6 @@
-**********
-RSS Reader
-**********
+*****************
+RSS Reader (BETA)
+*****************
 
 The RSS (Really Simple Syndication) reader offers an easy way to stream new items from any RSS (XML, Atom) feed to one (or more) of the webhooks configured in your Discord server.
 
