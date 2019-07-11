@@ -61,12 +61,12 @@ Skips to the next queued song. If 3 or more people are listening to the same son
 
 For a vote skip to take effect, **70%** of the voice channel members must agree.
 
-.. note:
+.. note::
     Let's assume there are 10 users in the music voice channel.
     The threshold for skipping is calculated as 70% of 10 = 7 (numbers will be rounded down if needed).
     For the vote skip to take effect, you would then need 7 positive votes.
 
-.. note:
+.. note::
     Vote skip will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
     Administrators will bypass the voting system.
 
@@ -85,7 +85,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Immediately stops the ongoing playlist.
 
-.. note:
+.. note::
     This command is only available if you are alone in the voice channel or if you have "Manage Channels" permissions.
 
 ....
@@ -103,7 +103,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Pauses the currently playing track.
 
-.. note:
+.. note::
     This command is only available if you are alone in the voice channel or if you have "Manage Channels" permissions.
 
 ....
@@ -136,7 +136,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Rewinds the currently playing track and starts playing it from the beginning.
 
-.. note:
+.. note::
     This command is only available if you are alone in the voice channel or if you have "Manage Channels" permissions.
 
 ....
@@ -154,7 +154,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Checks or changes the current volume.
 
-.. note:
+.. note::
     This command is only available if you are alone in the voice channel or if you have "Manage Channels" permissions.
 
 ....
@@ -217,7 +217,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Removes a certain entry from the queue. 
 
-.. note:
+.. note::
     This command is only available if you are alone in the voice channel or if you have "Manage Channels" permissions.
 
 ....
@@ -237,12 +237,12 @@ Skips to a certain position in the queue. If 3 or more people are listening to t
 
 For a vote skip to take effect, **70%** of the voice channel members must agree.
 
-.. note:
+.. note::
     Let's assume there are 10 users in the music voice channel.
     The threshold for skipping is calculated as 70% of 10 = 7 (numbers will be rounded down if needed).
     For the vote skip to take effect, you would then need 7 positive votes.
 
-.. note:
+.. note::
     Vote skip will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
     Administrators will bypass the voting system.
 

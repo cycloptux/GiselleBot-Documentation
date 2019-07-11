@@ -88,7 +88,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Sets a custom emoji as currency in the current server. Using the command without the extra emoji argument will reset the currency emoji to the default one.
 
-.. warning:
+.. warning::
     You **must** use reactions that are either "global" (Discord native emojis) or present in the server. Failing to do so may result in the currency emoji not to work.
     
 Permissions Needed
@@ -202,7 +202,7 @@ Each reacting user will be gifted with the selected amount of currency. You can 
 
 By default, each user will be rewarded with the specified amount of currency. You can set a maximum amount of currency for the event "bucket" by using the ``--pot-size`` parameter (e.g. if ``--amount 50 --p 100`` is used, only the first 2 users will actually receive 50 currency each). You can also set a custom duration for the event.
 
-.. note:
+.. note::
     Checks are in place to ensure that users will only receive their gift the first time they react. Reacting more than once will **not** assign any extra currency.
 
 Here are the default values for the command parameters, on omission:

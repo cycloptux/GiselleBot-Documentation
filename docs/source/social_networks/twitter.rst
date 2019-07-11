@@ -2,7 +2,7 @@
 Twitter Connector
 *****************
 
-The Twitter connector offers an easy way to stream tweets from any Twitter account to one (or more) of the webhooks configured in your Discord account.
+The Twitter connector offers an easy way to stream tweets from any Twitter account to one (or more) of the webhooks configured in your Discord server.
 
 In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
@@ -10,7 +10,7 @@ By default, each tweet will be posted to the webhook by using the Twitter accoun
 
 Tweet URLs will be posted to Discord, while the tweet preview will leverage the native parsing of Twitter content offered by Discord.
 
-.. note:
+.. note::
     The goal of this module is offering a **free alternative** to something that is usually only achieved through the use of paid services. On the other hand, due to limitations that are applied to the free Twitter API, this module might suffer from command cooldowns and/or miss a few tweets every once in a while.
 
 |bot_prefix|\ twthook
@@ -33,7 +33,7 @@ Starts a streaming service for the selected Twitter account. If a new tweet is f
 
 Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted. If this parameter is used, any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
 
-.. note:
+.. note::
     This check is very prone to false positives. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
 
 **Default**: ``false`` (tweets won't be censored)
@@ -41,7 +41,7 @@ Twitter streams may be parsed to look for "bad words" or "possibly sensitive" co
 ``--filter (first word) [second word] [...]``
 """""""""""""""""""""""""""""""""""""""""""""
 
-Adds a **whitelist** filter to the stream. In this example, if the tweet contains ``first word`` and/or (see below) ``second word``, the tweet will sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
+Adds a **whitelist** filter to the stream. In this example, if the tweet contains ``first word`` and/or (see below) ``second word``, the tweet will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
 
@@ -114,7 +114,7 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ twthook cnnbrk https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
-    |bot_prefix|\ twthook pokemon https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild tweet appeared!d
+    |bot_prefix|\ twthook pokemon https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild tweet appeared!
 
 ....
 

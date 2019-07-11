@@ -130,7 +130,7 @@ The default interval time is set to 1 day, and the first message will begin bein
 
 The ``--no-redundant`` parameter will instruct the bot to skip sending a repeating message if the latest message in the channel is still the last repeating message.
 
-.. note:
+.. note::
     Using the 2nd syntax (the one that specifies the time of the day) will automatically set the interval to 1 day, and repeat the message everyday around the same clock time.
 
 Permissions Needed

@@ -31,10 +31,10 @@ Sets the bot prefix for all bot commands within the current server.
 
 Using the command without any argument will show the current prefix.
 
-.. warning:
+.. warning::
     The prefix cannot contain spaces. If spaces are used, only the first "word" will be considered.
 
-.. note:
+.. note::
     Generally speaking, there will never be a space in between the prefix and the command itself.
     A common prefix being used is a mention of the bot. If the bot mention is used, a space will be automatically added after the mention. This only applies if the bot mention is used, while any other mention will be considered as a normal character string.
 
@@ -347,7 +347,7 @@ Automaticaly assigns a role to users who join the voice channel you're in when y
 
 Provide no parameters to disable this feature.
 
-.. warning:
+.. warning::
     You must be in a voice channel to run this command.
 
 Permissions Needed
@@ -415,7 +415,7 @@ In **Single** or **Multiple** mode, you'll also have access to additional, optio
 * **Minimum number of roles**: Users won't be able to self-remove a role if the removal would bring them under this threshold of group roles.
 * **Maximum number of roles**: Users won't be able to self-assign a role if the assignment would bring them over this threshold of group roles.
 
-.. warning:
+.. warning::
     **One role can be assigned to more than one group**. While technically possible, this is generally not recommended unless you know what you are doing. In such cases, you must design your settings to avoid conflicts between the different group settings. **Conflicting settings will cause unpredictable behaviors**.
 
 Once a role group is configured, two ways of self-assigning a group will be available to users:
@@ -432,7 +432,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Opens the self-assignable roles (i.e. role groups) interactive setup menu. Use the menu items to configure the above settings.
 
-.. note:
+.. note::
     Mode-specific settings will only work if the corresponding mode is currently set as active.
 
 ....
@@ -504,7 +504,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints a list of all role groups and the relative self-assignable groups.
 
-.. note:
+.. note::
     This command is always available to everyone.
 
 ....
@@ -543,7 +543,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Assings one role among those that are flagged as self-assignable, provided the requirements are met.
 
-.. note:
+.. note::
     This command is always available to everyone.
 
 Examples
@@ -571,7 +571,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Removes one role among those that are flagged as self-assignable, provided the requirements are met.
 
-.. note:
+.. note::
     This command is always available to everyone.
 
 Examples
@@ -658,7 +658,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Updates a role menu with a new reaction if a role was added to the particular role group.
 
-.. note:
+.. note::
     In order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
 
 If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.

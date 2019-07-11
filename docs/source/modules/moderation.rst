@@ -248,7 +248,7 @@ The following commands also support being set as "automatically expiring after X
 
 This is achieved by **prepending** the target users with a time code.
 
-.. note:
+.. note::
     This time setting will overwrite the previous setting each time the command is run on a specified user: this also applies to converting a permanent action into a timed one and vice-versa, without removing the role on the target user.
 
 (Common) Command Syntax
@@ -950,7 +950,7 @@ Command Description
 
 Adds a custom rule to the rules list. Adding a custom rule generates a server-specific rule ID for that rule automatically, starting from ``s_1``. Adding a channel identifier will assign that rule as being channel-specific (this is primarily used to track how close a user is to reaching a channel ban threshold)
 
-.. note:
+.. note::
     Channel ban thresholds are not implemented yet.
 
 Permissions Needed
@@ -1106,7 +1106,7 @@ By default, administrators and moderators (refer to :ref:`moderation-role`) are 
 * **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
 * **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
 
-.. note:
+.. note::
     Discord lag or connection problems can cause Anti-Spam false positives.
 
 **Supported actions**
@@ -1146,6 +1146,6 @@ Command Description
 
 Opens the auto moderation interactive setup menu. Use the menu items to configure the above settings.
 
-.. note:
+.. note::
     Not all of the settings will have a meaning in all of the triggers. Read the above descriptions to understand what each option means within the specific trigger.
 
