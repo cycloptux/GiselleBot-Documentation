@@ -193,7 +193,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ wfsq (form id) (question_ids)
+    |bot_prefix|\ fosq (form id) (question_ids)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -203,7 +203,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ wfsq 1 4 5 1 2 3
+    |bot_prefix|\ fosq 1 4 5 1 2 3
 
 ....
 
