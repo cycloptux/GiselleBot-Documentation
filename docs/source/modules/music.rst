@@ -4,6 +4,8 @@ Music
 
 The Music module enables users to listen to YouTube music in a Discord server's dedicated voice channel.
 
+The Music module must be first enabled by an Administrator by setting a music channel with the |bot_prefix|\ mchannel command.
+
 .. admonition:: Patreon
 
     By default, each server is limited to having a maximum of **3 songs in a queue**, and each song can only be a maximum of **8 minutes long**. You can unlock up to **50 song-queues** and uncap the duration limit (also enabling the streaming of **live channels**) via **Patreon** pledges (see: :ref:`patreon-perks`).
