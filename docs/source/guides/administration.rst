@@ -61,8 +61,8 @@ Here is one way to set up the logging for your server.
   a. |bot_prefix|\ log members
   b. |bot_prefix|\ log users (if you are a patron)
   c. |bot_prefix|\ log messages
-  d. |bot_prefix|\ log mod
-  e. |bot_prefix|\ log warn
+  d. |bot_prefix|\ log moderation
+  e. |bot_prefix|\ log warning
   f. |bot_prefix|\ log roles
   g. |bot_prefix|\ log channels
   h. |bot_prefix|\ log voice (if you are a patron)
