@@ -125,7 +125,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ twtreook (Twitter username/stream index) [new customization params]
+    |bot_prefix|\ twtehook (Twitter username/stream index) [new customization params]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^

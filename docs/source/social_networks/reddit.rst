@@ -1,6 +1,6 @@
-***********************
-Reddit Connector (BETA)
-***********************
+****************
+Reddit Connector
+****************
 
 The Reddit connector offers an easy way to stream new submissions from any subreddit to one (or more) of the webhooks configured in your Discord server.
 
@@ -144,7 +144,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ reddreook (subreddit name/stream index) [new customization params]
+    |bot_prefix|\ reddehook (subreddit name/stream index) [new customization params]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
