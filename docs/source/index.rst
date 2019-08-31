@@ -28,6 +28,13 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
 * Music: listen to music in your voice channels
 * Much much more!
 
+.. seealso::
+   |bot_name| is also listed on **Discord Bot List** and **Bots on Discord**. If you like the bot and want to support its growth, be sure to vote for it on those websites!
+   
+   * **Discord Bot List**: https://discordbots.org/bot/356831787445387285 (rewards included! Refer to :ref:`dblnotify`)
+   * **Bots on Discord**: https://bots.ondiscord.xyz/bots/356831787445387285?vote
+   
+
 ....
 
 .. toctree::
