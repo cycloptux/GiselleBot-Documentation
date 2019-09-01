@@ -82,7 +82,7 @@ Starts a live feed on the specified webhook. When a new transition is found, its
 
 Adds a **whitelist**, **inclusive** filter for Azur Lane server regions to the stream. Transitions that are referring to (one of) the selected region(s) will be sent to the webhook, while the rest will be skipped.
 
-This parameter only supports these region codes: ``#cn`` ``#en`` ``#jp`` ``#kr``
+This parameter only supports these region codes: ``cn`` ``en`` ``jp`` ``kr``
 
 Region codes are case-insensitive.
 
@@ -95,7 +95,7 @@ Adds a **whitelist** filter to the feed. In this example, if the status quote co
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
 
-The filter only checks the "quote text", column **G** of the `Azur Lane Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1TGtR5Ffp4segbB4sFYfi1J9dyGc48jbQdBlwELpgzaQ/edit?usp=sharing>`_, and the additional message hashtags.
+The filter only checks the "quote text", column **G** of the `Azur Lane Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1TGtR5Ffp4segbB4sFYfi1J9dyGc48jbQdBlwELpgzaQ/edit?usp=sharing>`_, and the additional message hashtags (if you filter by hashtag, you must include the "#").
 
 **Default**: No filter
 
