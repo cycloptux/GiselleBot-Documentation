@@ -350,7 +350,7 @@ Examples
 
 ....
 
-.. nsfwjs:
+.. _nsfwjs:
 
 NSFW Images Detection Tools
 ---------------------------
@@ -424,7 +424,7 @@ Examples
     
 ....
 
-.. nsfwthreshold:
+.. _nsfwthreshold:
 
 |bot_prefix|\ nsfwthreshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
