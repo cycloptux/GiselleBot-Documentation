@@ -1,6 +1,8 @@
-*****************
-Server Moderation
-*****************
+.. _moderation-module:
+
+**************************
+Server Moderation (Manual)
+**************************
 
 A special thanks to my friend and partner, NaviKing#3820, for the design of this module.
 

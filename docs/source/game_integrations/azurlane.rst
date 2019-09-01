@@ -78,7 +78,7 @@ Starts a live feed on the specified webhook. When a new transition is found, its
 **Customization Params**
 
 ``--region (first region code) [second region code] [...]``
-""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Adds a **whitelist**, **inclusive** filter for Azur Lane server regions to the stream. Transitions that are referring to (one of) the selected region(s) will be sent to the webhook, while the rest will be skipped.
 

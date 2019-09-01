@@ -347,3 +347,113 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ deletedm 123456789098765432
+
+....
+
+.. nsfwjs:
+
+NSFW Images Detection Tools
+---------------------------
+
+|bot_name| implements an (experimental) **NSFW images detection system** using **TensorFlow.js** as its base.
+
+The detection system is based on `Infinite Red's NSFW JS library <https://nsfwjs.com/>`_ and `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ to classify any image as a composition of **5** categories:
+
+* **Drawings**: Safe for work drawings (including anime).
+* **Hentai**: Hentai and pornographic drawings.
+* **Neutral**: Safe for work neutral images.
+* **Porn**: Pornographic images, sexual acts.
+* **Sexy**: Sexually explicit images, not pornography.
+
+The module was furtherly converted into a back-end module and customized with a caching system to enhance its performance.
+
+.. seealso::
+    `This interesting article by Infinite Red <https://nsfwjs.com/>`_ explains the reasons behind the creation of the original NSFW JS client-side module.
+
+.. warning::
+    This module, by no means, is supposed to reliably recognize all NSFW images. Its main purpose is quickly classifying provided images and supporting humans in better moderating a server.
+    
+    The module itself will not store or expose any sexually explicit images. The output will not contain a direct link to the original image, and a censored (low resolution, blurred) version of the image will be locally cached and used to refer to the original image.
+
+|bot_prefix|\ nsfwcheck
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Command Syntax
+""""""""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcheck (image URL, or image as a message attachment)
+    
+Command Description
+"""""""""""""""""""
+
+Submits an image against the `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ (as explained above) and returns a detailed output about the classification.
+
+Examples
+""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcheck http://www.lenna.org/lena_std.tif
+    
+.. seealso::
+    For those of you with a background in image processing - yes, **Lenna** is actually flagged as **NSFW with a confidence score of 81.9%!**
+    
+    If you don't know what I'm talking about, refer to `this Wikipedia page <https://en.wikipedia.org/wiki/Lenna>`_.
+
+....
+
+|bot_prefix|\ nsfwcache
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Command Syntax
+""""""""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcache (cache ID)
+    
+Command Description
+"""""""""""""""""""
+
+Recalls an image classification output by its cache ID (as given in the footer of the |bot_prefix|\ nsfwcheck command.
+
+Examples
+""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcache 5d6c4cd78e422b00137d14ce
+    
+....
+
+.. nsfwthreshold:
+
+|bot_prefix|\ nsfwthreshold
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Command Syntax
+""""""""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwthreshold [new threshold, or "-"]
+    
+Command Description
+"""""""""""""""""""
+
+While the classification scores given to an image cannot be tuned, each server can choose its own NSFW threshold (the sum of NSFW-related scores over which an image is considered NSFW).
+
+The new threshold is an integer within the range ``[0, 100]``, inclusive of ``0`` (treat **all** images as NSFW) and ``100`` (only treat an image as NSFW if the model recognize it as having no-SFW components - which is highly unlikely, hence basically meaning "treat **no** images as NSFW").
+
+Running the command with ``-`` as argument will reset the server threshold to the global, default threshold of **60%**.
+
+Running the command with no arguments will show the current value for the server.
+
+Examples
+""""""""
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwthreshold 80
+    |bot_prefix|\ nsfwthreshold -
+    |bot_prefix|\ nsfwthreshold
+    
+Permissions Needed
+""""""""""""""""""
+| **User**: Administrator
