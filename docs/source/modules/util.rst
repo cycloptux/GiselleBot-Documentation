@@ -6,6 +6,160 @@ This module contains generally useful, atomic commands that aren't otherwise cat
 
 These commands might be safe for use by anyone, or locked behind in-Discord permissions.
 
+.. _nsfwjs:
+
+NSFW Images Detection Tools
+===========================
+
+|bot_name| implements an (experimental) **NSFW images detection system** using **TensorFlow.js** as its base.
+
+The detection system is based on `Infinite Red's NSFW JS library <https://nsfwjs.com/>`_ and `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ to classify any image as a composition of **5** categories:
+
+* **Drawings**: Safe for work drawings (including anime).
+* **Hentai**: Hentai and pornographic drawings.
+* **Neutral**: Safe for work neutral images.
+* **Porn**: Pornographic images, sexual acts.
+* **Sexy**: Sexually explicit images, not pornography.
+
+The module was furtherly converted into a back-end module and customized with a caching system to enhance its performance.
+
+.. seealso::
+    `This interesting article by Infinite Red <https://nsfwjs.com/>`_ explains the reasons behind the creation of the original NSFW JS client-side module.
+
+.. warning::
+    This module, by no means, is supposed to reliably recognize all NSFW images. Its main purpose is quickly classifying provided images and supporting humans in better moderating a server.
+    
+    The module itself will not store or expose any sexually explicit images. The output will not contain a direct link to the original image, and a censored (low resolution, blurred) version of the image will be locally cached and used to refer to the original image.
+    
+Here's an example of an output of this command, and the corresponding censored image:
+
+.. image:: ../images/util_image_00.png
+    :width: 600
+    :align: center
+    :alt: NSFW Images Detection Output Example
+    
+.. image:: ../images/util_image_01.jpg
+    :align: center
+    :alt: NSFW Images Detection Censored Image Example    
+    
+.. seealso::
+    For those of you with a background in image processing - yes, **Lenna** is actually flagged as **NSFW with a confidence score of 81.9%!**
+    
+    If you don't know what I'm talking about, refer to `this Wikipedia page <https://en.wikipedia.org/wiki/Lenna>`_.
+
+|bot_prefix|\ nsfwcheck
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcheck (image URL, or image as a message attachment)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Submits an image against the `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ (as explained above) and returns a detailed output about the classification.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcheck http://www.lenna.org/lena_std.tif
+    
+....
+
+|bot_prefix|\ nsfwcache
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcache (cache ID)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Recalls an image classification output by its cache ID (as given in the footer of the |bot_prefix|\ nsfwcheck command.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwcache 5d6c4cd78e422b00137d14ce
+    
+....
+
+.. _nsfwthreshold:
+
+|bot_prefix|\ nsfwthreshold
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwthreshold [new threshold, or "-"]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+While the classification scores given to an image cannot be tuned, each server can choose its own NSFW threshold (the sum of NSFW-related scores over which an image is considered NSFW).
+
+The new threshold is an integer within the range ``[0, 100]``, inclusive of ``0`` (treat **all** images as NSFW) and ``100`` (only treat an image as NSFW if the model recognize it as having no-SFW components - which is highly unlikely, hence basically meaning "treat **no** images as NSFW").
+
+Running the command with ``-`` as argument will reset the server threshold to the global, default threshold of **60%**.
+
+Running the command with no arguments will show the current value for the server.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsfwthreshold 80
+    |bot_prefix|\ nsfwthreshold -
+    |bot_prefix|\ nsfwthreshold
+    
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+....
+
+Server-related Tools
+====================
+
+|bot_prefix|\ serverinfo
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ sinfo
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Prints a bunch of info about the current server.
+
+....
+
+|bot_prefix|\ serveremojis
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ semoji
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows all of the emojis from the current server into an embed.
+
+....
+
 |bot_prefix|\ searchuser
 ------------------------
 
@@ -33,6 +187,73 @@ Examples
     |bot_prefix|\ searchuser cycloptux#1543
     |bot_prefix|\ searchuser 123456789098765432
     
+....
+
+Message-related Tools
+=====================
+
+|bot_prefix|\ savechat
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ savechat [# of messages]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Dumps a certain number of messages from the channel in which the command is run. The saved messages are compiled into a ``.csv`` file.
+
+The file will be sent to the author of the command via Direct Message. Instead of receiving the actual file as Discord attachment, the author will receive:
+
+* An URL to an **encrypted** ``.zip`` file containing the actual ``.csv``.
+* The password to decrypt the archive.
+
+.. note::
+    The archive password is unknown to anyone but the author of the command, not even the bot developer!
+    The archive will only be available for 30 days, after which it will be deleted.
+
+If the number of messages isn't specified, the default value of **150** messages will be used.
+
+.. warning::
+    This command might be very slow, or even fail, if you are trying to dump a high amount of messages. Please be patient.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ savechat 500
+
+....
+
+|bot_prefix|\ emojify
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojify (any number of emoji names, without the : :)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Converts a sequence of words into a sequence of emojis, provided the bot has access to the emojis.
+
+Emoji names are case-sensitive.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojify BlobOwO BlobPats
+
 ....
 
 |bot_prefix|\ embed
@@ -92,126 +313,40 @@ Examples
     
 ....
 
-|bot_prefix|\ serverinfo
-------------------------
+.. _deletedm:
 
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ sinfo
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Prints a bunch of info about the current server.
-
-....
-
-|bot_prefix|\ serveremojis
---------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ semoji
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Shows all of the emojis from the current server into an embed.
-
-....
-
-|bot_prefix|\ emojify
----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ emojify (any number of emoji names, without the : :)
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Converts a sequence of words into a sequence of emojis, provided the bot has access to the emojis.
-
-Emoji names are case-sensitive.
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ emojify BlobOwO BlobPats
-
-....
-
-|bot_prefix|\ shorturl
+|bot_prefix|\ deletedm
 ----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ shorturl (long URL)
-
+    |bot_prefix|\ deletedm (message id)
+    
 Command Description
 ^^^^^^^^^^^^^^^^^^^
+.. note::
+    This command is only available in a Direct Message channel with the bot. It will **not** work in actual servers, and it's not subject to any permissions.
 
-Converts a long URL into a short URL using TinyURL as shortening service.
+Deletes a direct message sent by the bot. This can be particularly useful as a privacy/security feature to delete previously sent passwords to encrypted archives, in order to make them completely unrecoverable.
 
-URLs that are already known to the bot will be fetched from the local cache. Users will have the ability to request an additional online check by clicking on the available reaction if the fetched URL is invalid.
+.. seealso::
+    Refer to :ref:`discord-ids` if you don't know how to obtain a message ID.
 
 .. note::
-    According to the `TinyURL website <https://tinyurl.com/>`_, their short URLs never expire. This means a new request will probably still give the same result from the online cache.
+    Non-sensitive direct messages (e.g. moderation actions) might still be logged into the owner-restricted bot console.
 
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ shorturl http://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M 
+    |bot_prefix|\ deletedm 123456789098765432
 
 ....
 
-|bot_prefix|\ savechat
-----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ savechat [# of messages]
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Dumps a certain number of messages from the channel in which the command is run. The saved messages are compiled into a ``.csv`` file.
-
-The file will be sent to the author of the command via Direct Message. Instead of receiving the actual file as Discord attachment, the author will receive:
-
-* An URL to an **encrypted** ``.zip`` file containing the actual ``.csv``.
-* The password to decrypt the archive.
-
-.. note::
-    The archive password is unknown to anyone but the author of the command, not even the bot developer!
-    The archive will only be available for 30 days, after which it will be deleted.
-
-If the number of messages isn't specified, the default value of **150** messages will be used.
-
-.. warning::
-    This command might be very slow, or even fail, if you are trying to dump a high amount of messages. Please be patient.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Manage Messages
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ savechat 500
-
-....
+Role-related Tools
+==================
 
 .. _roleid:
 
@@ -318,153 +453,30 @@ Examples
 
 ....
 
-.. _deletedm:
+Other Tools
+===========
 
-|bot_prefix|\ deletedm
+|bot_prefix|\ shorturl
 ----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ deletedm (message id)
-    
+    |bot_prefix|\ shorturl (long URL)
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-.. note::
-    This command is only available in a Direct Message channel with the bot. It will **not** work in actual servers, and it's not subject to any permissions.
 
-Deletes a direct message sent by the bot. This can be particularly useful as a privacy/security feature to delete previously sent passwords to encrypted archives, in order to make them completely unrecoverable.
+Converts a long URL into a short URL using TinyURL as shortening service.
 
-.. seealso::
-    Refer to :ref:`discord-ids` if you don't know how to obtain a message ID.
+URLs that are already known to the bot will be fetched from the local cache. Users will have the ability to request an additional online check by clicking on the available reaction if the fetched URL is invalid.
 
 .. note::
-    Non-sensitive direct messages (e.g. moderation actions) might still be logged into the owner-restricted bot console.
+    According to the `TinyURL website <https://tinyurl.com/>`_, their short URLs never expire. This means a new request will probably still give the same result from the online cache.
 
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ deletedm 123456789098765432
-
-....
-
-.. _nsfwjs:
-
-NSFW Images Detection Tools
----------------------------
-
-|bot_name| implements an (experimental) **NSFW images detection system** using **TensorFlow.js** as its base.
-
-The detection system is based on `Infinite Red's NSFW JS library <https://nsfwjs.com/>`_ and `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ to classify any image as a composition of **5** categories:
-
-* **Drawings**: Safe for work drawings (including anime).
-* **Hentai**: Hentai and pornographic drawings.
-* **Neutral**: Safe for work neutral images.
-* **Porn**: Pornographic images, sexual acts.
-* **Sexy**: Sexually explicit images, not pornography.
-
-The module was furtherly converted into a back-end module and customized with a caching system to enhance its performance.
-
-.. seealso::
-    `This interesting article by Infinite Red <https://nsfwjs.com/>`_ explains the reasons behind the creation of the original NSFW JS client-side module.
-
-.. warning::
-    This module, by no means, is supposed to reliably recognize all NSFW images. Its main purpose is quickly classifying provided images and supporting humans in better moderating a server.
-    
-    The module itself will not store or expose any sexually explicit images. The output will not contain a direct link to the original image, and a censored (low resolution, blurred) version of the image will be locally cached and used to refer to the original image.
-    
-Here's an example of an output of this command, and the corresponding censored image:
-
-.. image:: ../images/util_image_00.png
-    :width: 600
-    :align: center
-    :alt: NSFW Images Detection Output Example
-    
-.. image:: ../images/util_image_01.jpg
-    :align: center
-    :alt: NSFW Images Detection Censored Image Example    
-    
-.. seealso::
-    For those of you with a background in image processing - yes, **Lenna** is actually flagged as **NSFW with a confidence score of 81.9%!**
-    
-    If you don't know what I'm talking about, refer to `this Wikipedia page <https://en.wikipedia.org/wiki/Lenna>`_.
-
-|bot_prefix|\ nsfwcheck
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Command Syntax
-""""""""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwcheck (image URL, or image as a message attachment)
-    
-Command Description
-"""""""""""""""""""
-
-Submits an image against the `GantMan's Inception v3 Keras Model for NSFW detection <https://github.com/gantman/nsfw_model/>`_ (as explained above) and returns a detailed output about the classification.
-
-Examples
-""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwcheck http://www.lenna.org/lena_std.tif
-    
-....
-
-|bot_prefix|\ nsfwcache
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Command Syntax
-""""""""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwcache (cache ID)
-    
-Command Description
-"""""""""""""""""""
-
-Recalls an image classification output by its cache ID (as given in the footer of the |bot_prefix|\ nsfwcheck command.
-
-Examples
-""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwcache 5d6c4cd78e422b00137d14ce
-    
-....
-
-.. _nsfwthreshold:
-
-|bot_prefix|\ nsfwthreshold
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Command Syntax
-""""""""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwthreshold [new threshold, or "-"]
-    
-Command Description
-"""""""""""""""""""
-
-While the classification scores given to an image cannot be tuned, each server can choose its own NSFW threshold (the sum of NSFW-related scores over which an image is considered NSFW).
-
-The new threshold is an integer within the range ``[0, 100]``, inclusive of ``0`` (treat **all** images as NSFW) and ``100`` (only treat an image as NSFW if the model recognize it as having no-SFW components - which is highly unlikely, hence basically meaning "treat **no** images as NSFW").
-
-Running the command with ``-`` as argument will reset the server threshold to the global, default threshold of **60%**.
-
-Running the command with no arguments will show the current value for the server.
-
-Examples
-""""""""
-.. parsed-literal::
-
-    |bot_prefix|\ nsfwthreshold 80
-    |bot_prefix|\ nsfwthreshold -
-    |bot_prefix|\ nsfwthreshold
-    
-Permissions Needed
-""""""""""""""""""
-| **User**: Administrator
+    |bot_prefix|\ shorturl http://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M 
