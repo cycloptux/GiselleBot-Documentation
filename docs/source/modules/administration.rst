@@ -138,6 +138,23 @@ Examples
     
 ....
 
+|bot_prefix|\ logmatt
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ logmatt
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles message attachments logging on deleted messages.
+
+By default, deleting a message that contains an image as attachment will trigger an automatic reupload of said image into the Messages logging channel. If you don't want images to be saved, you can turn this feature off. Use the same command again to re-enable this feature.
+
+....
+
 New Members Management
 ======================
 
