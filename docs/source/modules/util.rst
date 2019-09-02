@@ -374,6 +374,22 @@ The module was furtherly converted into a back-end module and customized with a 
     This module, by no means, is supposed to reliably recognize all NSFW images. Its main purpose is quickly classifying provided images and supporting humans in better moderating a server.
     
     The module itself will not store or expose any sexually explicit images. The output will not contain a direct link to the original image, and a censored (low resolution, blurred) version of the image will be locally cached and used to refer to the original image.
+    
+Here's an example of an output of this command, and the corresponding censored image:
+
+.. image:: ../images/util_image_00.png
+    :width: 600
+    :align: center
+    :alt: NSFW Images Detection Output Example
+    
+.. image:: ../images/util_image_01.jpg
+    :align: center
+    :alt: NSFW Images Detection Censored Image Example    
+    
+.. seealso::
+    For those of you with a background in image processing - yes, **Lenna** is actually flagged as **NSFW with a confidence score of 81.9%!**
+    
+    If you don't know what I'm talking about, refer to `this Wikipedia page <https://en.wikipedia.org/wiki/Lenna>`_.
 
 |bot_prefix|\ nsfwcheck
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -395,11 +411,6 @@ Examples
 
     |bot_prefix|\ nsfwcheck http://www.lenna.org/lena_std.tif
     
-.. seealso::
-    For those of you with a background in image processing - yes, **Lenna** is actually flagged as **NSFW with a confidence score of 81.9%!**
-    
-    If you don't know what I'm talking about, refer to `this Wikipedia page <https://en.wikipedia.org/wiki/Lenna>`_.
-
 ....
 
 |bot_prefix|\ nsfwcache
