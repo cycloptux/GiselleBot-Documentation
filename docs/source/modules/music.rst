@@ -12,6 +12,39 @@ The Music module must be first enabled by an Administrator by setting a music ch
     
     Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume and |bot_prefix|\ mlyrics can be unlocked via **Patreon** pledges (see: :ref:`patreon-perks`).
 
+|bot_prefix|\ mchannel
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mchannel [channel id, or "-"]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a channel as the authorized music channel for the bot.
+
+Running this command while being in a voice channel will turn the current voice channel into the authorized music channel. You can also use the ID of a voice channel.
+
+Running this command while not in a voice channel and without any extra argument will show the current authorized music channel.
+
+Using "-" as argument will remove the current authorized music channel and disable the music module until a voice channel is authorized.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Administrator
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mchannel
+    |bot_prefix|\ mchannel 123456789098765432
+    |bot_prefix|\ mchannel -
+
+....
+
 |bot_prefix|\ mplay
 -------------------
 
@@ -277,36 +310,3 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Removes absent users' songs from the queue.
-
-....
-
-|bot_prefix|\ mchannel
-----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ mchannel [channel id, or "-"]
-    
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Sets a channel as the authorized music channel for the bot.
-
-Running this command while being in a voice channel will turn the current voice channel into the authorized music channel. You can also use the ID of a voice channel.
-
-Running this command while not in a voice channel and without any extra argument will show the current authorized music channel.
-
-Using "-" as argument will remove the current authorized music channel and disable the music module until a voice channel is authorized.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ mchannel
-    |bot_prefix|\ mchannel 123456789098765432
-    |bot_prefix|\ mchannel -
