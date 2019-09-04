@@ -160,10 +160,6 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lists all repeating messages within the server.
 
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Manage Messages
-
 Examples
 ^^^^^^^^
 .. parsed-literal::
