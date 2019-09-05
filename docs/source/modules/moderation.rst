@@ -521,8 +521,8 @@ Lifts the channel mute role from the target user(s). Omission of the channel ide
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles
-| **Bot**: Manage Roles
+| **User**: Manage Roles, Mute Members
+| **Bot**: Manage Roles, Mute Members
 
 ....
 
@@ -1090,64 +1090,3 @@ Sets the number of points at which a mute, ban, or "absolute ban" is recommended
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Administrator
-
-....
-
-Auto Moderation
-===============
-
-An auto moderation feature is available. The current auto moderator currently supports **5** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
-
-By default, administrators and moderators (refer to :ref:`moderation-role`) are immune to auto moderation triggers.
-
-**Supported triggers**
-
-* **Server Invites**: recognizes Discord server invites in user messages; this trigger supports **shortened** URLs (e.g. Discord invites hidden behind a bit.ly shortening service), and ignores invites pointing to the current server.
-* **Mass Mention**: counts the number of mentions (roles, users or everyone/here) in a message and triggers if the number of mentions is over a threshold. The default threshold is **10**, but can be configured in each server.
-* **Banned Words**: checks the message against a list of words, configured by the user, and triggers if one or more words are found within the message. Punctuation and letter case are ignored. The parser can be configured to trigger on an "exact match" (e.g. banned word: ``test``, matching word: ``test``), if the banned word is found at the "beginning of a word" within the message (e.g. banned word: ``test``, matching word: ``testing``), or "anywhere in word" (e.g. banned word: ``test``, matching word: ``attestation``).
-* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
-* **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
-
-.. note::
-    Discord lag or connection problems can cause Anti-Spam false positives.
-
-**Supported actions**
-
-* **Automatic deletion of the offending message**.
-* **Auto-warn**: Automatically apply a generic warning on the offending user. Specify a rule with the dedicated option.
-* **Auto-mute**: Automatically mute the offending user. The applied mute is a temporary, 2 hours long, mute.
-* **Auto-kick**: Automatically kick the offending user.
-* **Auto-ban**: Automatically ban the offending user.
-
-
-**Whitelisting options**
-
-* **Users**: Ignore messages/actions performed by specific users in a server.
-* **Roles**: Ignore messages/actions performed by specific roles in a server.
-* **Channels**: Ignore messages sent in specific channels in a server.
-* **Servers (Server Invites only)**: Ignore Discord server invites pointing to a specific server. You need to use the server ID to add this kind of whitelisting option. Applying this whitelist rule enables instant, temporary or permanent invites (including vanity URLs) for one or more server(s).
-
-**Extra options**
-
-* **Moderators alerting**: Each auto moderator action will be logged into the **Moderation** logger (refer to :ref:`log-command`). If this option is enabled, each log entry will also include a mention to the current moderator role(s).
-* **Moderation rule**: If a moderation action is taken against the offending user, this option will let you select one rule to use for that action.
-
-....
-
-|bot_prefix|\ automodsetup
---------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ amset
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Opens the auto moderation interactive setup menu. Use the menu items to configure the above settings.
-
-.. note::
-    Not all of the settings will have a meaning in all of the triggers. Read the above descriptions to understand what each option means within the specific trigger.
-
