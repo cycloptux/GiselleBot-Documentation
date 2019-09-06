@@ -82,3 +82,5 @@ Infrastructure Security
 * Each host is protected by an infrastructure firewall **and** a local firewall, making sure that only the required ports are open.
 * Cloud infrastructure management portals are protected by strong passwords and multi-factor authentication.
 * Encryption keys, secret access keys, secret tokens, credentials, etc. are **never** stored into local drives. An external Key Management System (KMS) is used to fetch secret keys at runtime.
+* The database is backed up every 12 hours, and the retention policy for backup files is set to keep backups on a highly available Object Storage repository for at least 30 days.
+* The source code for the bot, and all of its related dependencies, is stored in private Git-based repositories, and the configuration files are also saved every 12 hours.
