@@ -47,7 +47,7 @@ Runs a command within the current server, after certain amount of time. See abov
 
 |bot_name| will treat the command (or message) as if it was sent in the current channel, after the specified amount of time.
 
-Permissions for the target command will be checked when initially scheduling, and at run-time.
+Permissions for the target command will be checked when initially scheduling, and at run-time. Although, the actual correct formatting of the command will only be checked at run-time, so be sure to test the commands beforehand if you are not sure about their correctness.
 
 Limitations apply to the maximum interval of time you can set for the scheduler, and can be increased for Patreon servers. See above.
 
