@@ -51,6 +51,9 @@ Permissions for the target command will be checked when initially scheduling, an
 
 Limitations apply to the maximum interval of time you can set for the scheduler, and can be increased for Patreon servers. See above.
 
+.. note::
+    Up to **5** schedulers can be active at any time for each user within a server. This limitation cannot (currently) be increased.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
@@ -73,6 +76,8 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lists all schedulers that the user created within the server. Administrators will be able to see all schedulers created by anyone within the current server.
+
+It may take up to a few seconds before a newly added scheduler appears in the list.
 
 Examples
 ^^^^^^^^
