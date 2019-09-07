@@ -4,6 +4,8 @@ Send
 
 This module allows authorized users to send messages through the bot, and/or editing previously sent messages.
 
+.. _msgsend:
+
 |bot_prefix|\ msgsend
 ---------------------
 

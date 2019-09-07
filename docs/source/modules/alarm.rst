@@ -105,6 +105,8 @@ Examples
 
 ....
 
+.. _repeat:
+
 |bot_prefix|\ repeat
 --------------------
 

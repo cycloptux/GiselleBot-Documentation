@@ -28,12 +28,14 @@ Available to everyone
 ---------------------
 
 * alarm
+* azurlane
 * currency
 * games
 * miscellaneous
-* poll
+* music
 * raidroom
 * reactions
+* scheduler
 * social
 * util
 

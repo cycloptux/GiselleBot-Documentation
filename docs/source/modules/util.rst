@@ -398,6 +398,8 @@ Examples
     
 ....
 
+.. _addrole:
+
 |bot_prefix|\ addrole
 ---------------------
 
@@ -425,6 +427,8 @@ Examples
     |bot_prefix|\ addrole cycloptux#1543 Staff "Network Developer"
     
 ....
+
+.. _remrole:
 
 |bot_prefix|\ remrole
 ---------------------
