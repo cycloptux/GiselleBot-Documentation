@@ -1,5 +1,3 @@
-.. Documentation master file, created by sphinx-quickstart on Tue Dec 11 00:45:34 2018.
-
 **************************************
 Welcome to |bot_name|'s documentation!
 **************************************
