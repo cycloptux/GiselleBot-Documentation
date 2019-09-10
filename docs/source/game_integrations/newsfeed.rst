@@ -2,7 +2,7 @@
 Brave Frontier News Feed
 ************************
 
-Be notified when a new in-game news is published in **Brave Frontier (Global)**, **Brave Frontier 2 (Japan)**, or **Brave Frontier: The Last Summoner**.
+Be notified when a new in-game news is published in **Brave Frontier (Global)** and **Brave Frontier 2 (Japan)**.
 
 The news URL and a preview will be posted in the specified channel, as you see them in-game.
 
@@ -20,11 +20,12 @@ Command Description
 
 Enables or disables one or more News Feed(s) in the current channel.
 
-* For **Brave Frontier** by gumi, the GL news feed is supported. EU news feed support was dropped after the game was discontinued. The game identifier is ``bf1`` or ``bf``.
+* For **Brave Frontier** by gumi, the GL news feed is supported. The game identifier is ``bf1`` or ``bf``.
 * For **Brave Frontier 2** by Alim, JP is the only available feed. The game identifier is ``bf2``.
-* For **Brave Frontier: The Last Summoner** by gumi, GL is the only available feed. The game identifier is ``bftls``.
 
-The Brave Frontier and Brave Frontier: The Last Summoner feeds also support sending updates whenever a news is updated.
+This module used to support Brave Frontier and Brave Frontier: The Last Summoner by **gumi Europe** as well, but the support for those feeds was dropped after the games were discontinued.
+
+The Brave Frontier (GL) feed also supports sending updates whenever a news is updated.
 
 .. note::
     Once enabled, the feed won't post any old news. It will only start posting as soon as new (or updated) news are published.
@@ -48,5 +49,5 @@ Examples
     
     |bot_prefix|\ newsfeed toggle
     |bot_prefix|\ newsfeed toggle --game bf2
-    |bot_prefix|\ newsfeed toggle --game bf1,bftls
+    |bot_prefix|\ newsfeed toggle --game bf1,bf2
     
