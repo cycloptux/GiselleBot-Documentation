@@ -110,12 +110,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-This function is specifically built with reaction contests in mind. When run on a certain number of messages, this command will generate **2 .csv files**:
-
-1. A .csv with the same output of |bot_prefix|\ resummary, showing the list of messages with reactions within the last ``# of messages`` in the current channel, including the list of reactions and number of uses per each reaction. This is further enhanced with a "Fraudulent Flag" and a "Fraudulent Votes" extra column (more details about these in the next few lines).
-2. A 2nd .csv with the list of users that meet that "Fraudulent Votes" criteria, with a separate record for each message they reacted to (including how they reacted to the message).
-
-This export is focused on highlighting reactions that are added by Discord accounts that have been recently created, in order to perform a better analysis of potential "fraudulent votes": duplicate reactions added by newly created accounts just for the sake of increasing one's message's reactions.
+This function is specifically built with reaction contests in mind. Its output is focused on highlighting reactions that are added by Discord accounts that have been recently created, in order to perform a better analysis of potential "fraudulent votes": duplicate reactions added by newly created accounts just for the sake of increasing one's message's reactions.
 
 The ``--age`` and ``--joined`` parameters will define how to recognize a suspect user:
 
@@ -138,6 +133,13 @@ Omitting ``--age`` and/or ``--joined`` parameters will disable the corresponding
 
 Omitting the ``--members`` parameter will set its default value of 0, making every message with at least 1 suspect member being flagged as fraudulent.
 
+Using the ``--csv`` parameter instructs |bot_name| to send 2 ``.csv`` files to the command author:
+
+1. A .csv with the same output of |bot_prefix|\ resummary, showing the list of messages with reactions within the last ``# of messages`` in the current channel, including the list of reactions and number of uses per each reaction. This is further enhanced with a "Fraudulent Flag" and a "Fraudulent Votes" extra column.
+2. A 2nd .csv with the list of users that meet that "Fraudulent Votes" criteria, with a separate record for each message they reacted to (including how they reacted to the message).
+
+Using the ``--silent`` parameter suppresses the in-channel embed output (this only works if used with ``--csv``).
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Messages
@@ -148,4 +150,4 @@ Examples
 
     |bot_prefix|\ recontest --age 5d --joined 1d
     |bot_prefix|\ recontest
-    |bot_prefix|\ recontest 50 --age 2w --joined 1w --members 10
+    |bot_prefix|\ recontest 50 --age 2w --joined 1w --members 10 --csv --silent
