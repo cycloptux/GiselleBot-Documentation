@@ -85,8 +85,10 @@ Examples
     
 ....
 
+.. _permenablemod:
+
 |bot_prefix|\ permenablemod
--------------------------------
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -108,7 +110,7 @@ Examples
 ....
     
 |bot_prefix|\ permdisablemod
---------------------------------
+----------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^

@@ -1012,7 +1012,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ halflogic (none/first/each)
+    |bot_prefix|\ halflogic (none/first/first-with-points/each/each-with-points)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -1021,6 +1021,7 @@ As described in :ref:`point-accumulation`, the first warning for a particular ru
 
 * **none**: Don't halve the points for any warnings.
 * **first**: Only halve the first warning a user receives (server-wide).
+* **first-with-points**: Only halve the first warning a user receives **excluding 0-points rules warnings** (server-wide).
 * **each**: Halve the first warning a user receives under each rule (default).
 
 Using the command with no arguments will show the current settings for the server.

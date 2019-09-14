@@ -460,6 +460,8 @@ Examples
 Other Tools
 ===========
 
+.. _shorturl:
+
 |bot_prefix|\ shorturl
 ----------------------
 

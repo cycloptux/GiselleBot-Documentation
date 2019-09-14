@@ -96,3 +96,56 @@ Examples
     |bot_prefix|\ reunique 
     |bot_prefix|\ reunique 20 --csv --silent
     |bot_prefix|\ reunique --csv
+    
+....
+
+|bot_prefix|\ recontest
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ recontest [# of messages] [--age (time code)] [--joined (time code)] [--members (number)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+This function is specifically built with reaction contests in mind. When run on a certain number of messages, this command will generate **2 .csv files**:
+
+1. A .csv with the same output of |bot_prefix|\ resummary, showing the list of messages with reactions within the last ``# of messages`` in the current channel, including the list of reactions and number of uses per each reaction. This is further enhanced with a "Fraudulent Flag" and a "Fraudulent Votes" extra column (more details about these in the next few lines).
+2. A 2nd .csv with the list of users that meet that "Fraudulent Votes" criteria, with a separate record for each message they reacted to (including how they reacted to the message).
+
+This export is focused on highlighting reactions that are added by Discord accounts that have been recently created, in order to perform a better analysis of potential "fraudulent votes": duplicate reactions added by newly created accounts just for the sake of increasing one's message's reactions.
+
+The ``--age`` and ``--joined`` parameters will define how to recognize a suspect user:
+
+* ``--age`` defines the minimum age of the Discord account to avoid being flagged.
+* ``--joined`` defines the minimum amount of time the user needs to be on the server to avoid being flagged.
+
+The ``--members`` parameter, on the other hand, defines the minimum number of members needed to pass **both** checks for a message to be flagged as having fraudulent reaction votes.
+
+As a practical example:
+
+.. parsed-literal::
+    
+    |bot_prefix|\ recontest 50 --age 1w --joined 3d --members 5
+    
+would flag any messages, within the last 50 messages in the current channel, with more than **5** (unique) members that have reacted to the message with a Discord account that is **less than 1 week old** and that joined the server **less than 3 days ago**.
+
+If the number of messages is omitted, the bot will scan the latest 10 messages.
+
+Omitting ``--age`` and/or ``--joined`` parameters will disable the corresponding check from being relevant in recognizing fraudulent votes (e.g. omitting ``--age`` will mark any account as suspect, regardless of its actual Discord age).
+
+Omitting the ``--members`` parameter will set its default value of 0, making every message with at least 1 suspect member being flagged as fraudulent.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ recontest --age 5d --joined 1d
+    |bot_prefix|\ recontest
+    |bot_prefix|\ recontest 50 --age 2w --joined 1w --members 10
