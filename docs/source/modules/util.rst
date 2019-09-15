@@ -229,6 +229,62 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ savechat 500
+    
+....
+
+|bot_prefix|\ pin
+-----------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ pin [message ID(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Pins one or more messages in the current channel. Provide no arguments to pin the latest message in the current channel (before the actual |bot_prefix|\ pin command message).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ pin
+    |bot_prefix|\ pin 123456789098765432
+    |bot_prefix|\ pin 123456789098765432 234567890987654321 345678909876543212
+
+....
+
+|bot_prefix|\ unpin
+-------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ unpin [message ID(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Unpins one or more messages in the current channel. Provide no arguments to unpin the latest message in the current channel (before the actual |bot_prefix|\ unpin command message).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ unpin
+    |bot_prefix|\ unpin 123456789098765432
+    |bot_prefix|\ unpin 123456789098765432 234567890987654321 345678909876543212
 
 ....
 
