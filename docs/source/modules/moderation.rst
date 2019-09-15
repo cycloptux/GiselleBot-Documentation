@@ -308,6 +308,8 @@ Command Description
 
 |bot_prefix|\ warn does nothing but DM the user(s) with their warning. Its purpose is to officially record an infraction so that the accumulation of infractions can later be used to justify a mute or a ban (see the "Warning Point System" described later).
 
+Refer to :ref:`moderation` for the exact command syntax.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
@@ -325,6 +327,10 @@ Command Description
 |bot_prefix|\ mute applies the role configured in |bot_prefix|\ muterole (or creates a default "Muted Users" role at the bottom of the role list with no permissions if the mute role is not configured) to the target user(s) and sets all channel permissions (except for the ones configured as mute chat(s)) for the mute role, as described in the previous sections.
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+The mute can be permanent (users will be muted until manual removal) or timed (users will be unmuted automatically after a certain time span).
+
+Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -349,6 +355,8 @@ Command Description
 
 This also works banning users that are currently not in the server. It is advised to use the user ID for that.
 
+Refer to :ref:`moderation` for the exact command syntax.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Ban Members
@@ -363,6 +371,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 
 |bot_prefix|\ delayban mutes a user for the specified amount of time. If this mute status isn't removed with |bot_prefix|\ cancelban before the timer is out, the user will be banned from the server. If the time argument is omitted, it will default to 24 hours.
+
+Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -381,6 +391,10 @@ Command Description
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+The image ban can be permanent (users will be image banned until manual removal) or timed (users will be image unbanned automatically after a certain time span).
+
+Refer to :ref:`moderation` for the exact command syntax.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Roles
@@ -397,6 +411,10 @@ Command Description
 |bot_prefix|\ cban applies the role configured in |bot_prefix|\ channelbanrole (or creates a default "#%channel% Banned Users" role at the bottom of the role list with no permissions if the channel ban role is not configured) to the target user(s) and sets the channel permissions for the ban role, as described in the previous sections.
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+The channel ban can be permanent (users will be channel banned until manual removal) or timed (users will be channel unbanned automatically after a certain time span).
+
+Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -415,6 +433,10 @@ Command Description
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
 
+The channel mute can be permanent (users will be channel muted until manual removal) or timed (users will be channel unmuted automatically after a certain time span).
+
+Refer to :ref:`moderation` for the exact command syntax.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Roles, Mute Members
@@ -431,6 +453,10 @@ Command Description
 |bot_prefix|\ cimageban applies the role configured in |bot_prefix|\ channelimagebanrole (or creates a default "#%channel% Image Banned Users" role at the bottom of the role list with no permissions if the channel image ban role is not configured) to the target user(s) and sets the channel permissions for the image ban role, as described in the previous sections.
 
 The specific permissions for this command will be set (or checked/updated) every time the command is run, hence making the command slightly slower than usual. This is normal.
+
+The channel image ban can be permanent (users will be channel image banned until manual removal) or timed (users will be channel image unbanned automatically after a certain time span).
+
+Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -463,6 +489,12 @@ Permissions Needed
 |bot_prefix|\ unban
 -------------------
 
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ unban (user id(s)/mention(s)/q_name(s))
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
@@ -477,6 +509,12 @@ Permissions Needed
 
 |bot_prefix|\ cancelban
 -----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ cancelban (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -493,6 +531,12 @@ Permissions Needed
 |bot_prefix|\ imageunban
 ------------------------
 
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ imageunban (user id(s)/mention(s)/q_name(s))
+    
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
