@@ -105,6 +105,130 @@ Examples
 
 ....
 
+|bot_prefix|\ expaddrole
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expar (level) (role id(s)/mention(s)/q_name(s)) [--persistent] [--volatile]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Adds one (or more) **existing** role(s) as reward for reaching a certain EXP level.
+
+By default, obtained roles are removed if, and when, a reward of higher tier is reached. This behavior can be customized by using the ``--persistent`` or ``--volatile`` tags:
+
+* A **persistent** role is kept "forever", even after obtaining a role given at a higher tier (level).
+* A **volatile** role is removed as soon as the user reaches the immediate next level.
+
+"Adding" a role that already exists on a level replaces its settings with the new settings.
+
+.. note::
+    Let's make a practical example. User X is currently Lv. 4, and the server currently has these settings:
+    
+    * "Rookie", obtained at level 5, **volatile**;
+    * "Known Member", obtained at level 5, **persistent**;
+    * "Junior", obtained at level 7;
+    * "Senior", obtained at level 10.
+    
+    Upon levelling up to Lv. 5, X will obtain **Rookie** and **Known Member**.
+    Upon levelling up to Lv. 6, X will lose **Rookie** (volatile).
+    Upon levelling up to Lv. 7, X will obtain **Junior**, and keep **Known Member** (persistent).
+    Upon levelling up to Lv. 10, X will obtain **Senior**, lose **Junior**, and keep **Known Member** (persistent).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expar 5 @Rookie --volatile
+    |bot_prefix|\ expar 5 "Known Member" --persistent
+    |bot_prefix|\ expar 7 Junior
+    |bot_prefix|\ expar 10 @Senior
+    |bot_prefix|\ expar 15 "VIP Member" 123456789098765432 --persistent
+
+....
+
+|bot_prefix|\ expremrole
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ exprr (level) (role id(s)/mention(s)/q_name(s))
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Removes one (or more) role(s) as reward for reaching a certain EXP level.
+
+.. note::
+    This command will **not** remove any previously aquired role(s) from server members. It will only stop server members from obtaining the role(s) upon levelling up.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ exprr 5 @Rookie
+    |bot_prefix|\ exprr 15 123456789098765432
+
+....
+
+|bot_prefix|\ exproles
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ exproles
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all of the EXP roles that are currently set in the current server.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Roles
+
+....
+
+|bot_prefix|\ exprapply
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ exprapply
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Recalculates the EXP role(s) each server member is entitled to have, and applies the correct set of roles to each user.
+
+The command will apply the highest EXP tier role(s) and every "persistent" role below the current user level.
+
+.. note::
+    This command will **not** remove any previously aquired role(s) from server members, even if the role in question is set as EXP role and no longer available to the user based on the current EXP roles chain.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+....
+
 |bot_prefix|\ notifychannel
 ---------------------------
 
