@@ -297,7 +297,12 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Automaticaly assigns one or more specified roles to every user who joins the server.
 
-Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role. Provide no parameters to show the current settings.
+Providing one or more role identifiers will toggle whether or not users will receive that role upon joining the server, for each role.
+
+.. note::
+    In other words, after activating a role, use the same command on that role to disable the auto assignment on join.
+
+Provide no parameters to show the current settings.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
