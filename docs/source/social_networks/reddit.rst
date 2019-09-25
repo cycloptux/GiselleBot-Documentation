@@ -99,7 +99,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%author%**: This will be replaced with the Reddit account name of the author of the post, excluding any prefix (``/u/`` or ``u/``) (e.g. ``cycloptux``)
 * **%title%**: This will be replaced with the title of the submission (e.g. ``Without saying what the category is, what are your top five?``)
 * **%flair%**: This will be replaced with the name of the flair assigned to the post, if present, or "*None*" if no flair is assigned
-* **%url%**: This will be replaced with the "URL" parameter of a post, which will be an URL to the comments if the post is a text post, or the URL of the content (image, video, link...) otherwise
+* **%content\_url%**: This will be replaced with the "URL" parameter of a post, which will be an URL to the comments if the post is a text post, or the URL of the content (image, video, link...) otherwise
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the submission creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the submission creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 

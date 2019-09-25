@@ -99,7 +99,7 @@ Here's the list of supported tags:
 
 All headers will be followed by the actual item URL, rendering of that URL will be done by Discord.
 
-**Default**: ``New item found in %feed\_name%!``
+**Default**: ``New item found in %feed_name%!``
 
 ``--webhook-name (custom name)``
 """"""""""""""""""""""""""""""""
