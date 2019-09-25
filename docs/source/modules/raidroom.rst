@@ -368,31 +368,6 @@ Examples
 
 ....
 
-|bot_prefix|\ rrsbreak
-----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ rrsunban (room id)
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Forcefully closes the room, deleting the corresponding channel, without warning the room master. If the room type was set as text, a chat log is dumped and saved (encrypted). The chat log will be posted into the raid rooms logger channel (see :ref:`first-setup`).
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **Bot**: Manage Channels, Manage Messages
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ rrsbreak abcdef
-
-....
-
 Administrator Commands
 ======================
 
