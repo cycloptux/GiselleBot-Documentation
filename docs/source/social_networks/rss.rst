@@ -96,8 +96,11 @@ Here's the list of supported tags:
 * **%categories%**: This will be replaced with the tags ("categories") assigned to an item, as a comma-separated list (fallback: *None*)
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the item creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the item creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
+* **%url%**: This will be replaced with the item URL. See below for more info.
 
-All headers will be followed by the actual item URL, rendering of that URL will be done by Discord.
+By default, without an explicit use of ``%url%``, all headers will be followed by the actual item URL on a new line; rendering of that URL will be done by Discord.
+
+If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
 **Default**: ``New item found in %feed_name%!``
 

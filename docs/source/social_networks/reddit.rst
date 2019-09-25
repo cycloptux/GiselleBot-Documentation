@@ -102,8 +102,11 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%content\_url%**: This will be replaced with the "URL" parameter of a post, which will be an URL to the comments if the post is a text post, or the URL of the content (image, video, link...) otherwise
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the submission creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the submission creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
+* **%url%**: This will be replaced with the Reddit post permalink URL. See below for more info.
 
-All headers will be followed by the actual Reddit post permalink URL, rendering of that URL will be done by Discord.
+By default, without an explicit use of ``%url%``, all headers will be followed by the actual Reddit post permalink URL on a new line; rendering of that URL will be done by Discord.
+
+If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
 **Default**: ``New submission in /r/%subreddit% from /u/%author%!``
 

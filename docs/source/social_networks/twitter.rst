@@ -83,8 +83,11 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%name%**: This will be replaced with the actual name of an account. E.g. ``CNN Breaking News``
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the current UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the current PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
+* **%url%**: This will be replaced with the Twitter status URL. See below for more info.
 
-All headers will be followed by the actual Twitter status URL, rendering of that URL will be done by Discord.
+By default, without an explicit use of ``%url%``, all headers will be followed by the actual Twitter status URL on a new line; rendering of that URL will be done by Discord.
+
+If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
 **Default**: ``New tweet from %name%!``
 
