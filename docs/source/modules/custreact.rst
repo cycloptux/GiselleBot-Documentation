@@ -99,7 +99,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Prints the current configuration for a specific custom reaction.
+Prints the current configuration for a specific custom reaction. It will also preview how the reaction is printed when triggered in a server (placeholders will **not** be replaced in this preview).
 
 Examples
 ^^^^^^^^
