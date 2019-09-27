@@ -89,6 +89,18 @@ By default, without an explicit use of ``%url%``, all headers will be followed b
 
 If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
+The Twitter module adds three extra, dynamic placeholders. These dynamic placeholders will be replaced with the corresponding value if the runtime value is present/applicable, or **deleted** if they are not applicable.
+
+These three tags are:
+
+* **%media\_url%**: This will be replaced with the direct URLs to all medias posted in the tweet, each one on a new line.
+* **%media\_all\_url\_if\_multiple%**: This will be replaced with the direct URLs to all medias posted in the tweet, each one on a new line, **only if there's more than 1 media in the tweet**.
+* **%media\_extra\_url\_if\_multiple%**: This will be replaced with the direct URLs to all medias posted in the tweet **minus the first one**, each one on a new line, **only if there's more than 1 media in the tweet**.
+
+By default, the first media on a tweet is shown in the default Discord preview of the tweet. This means that, by using ``%media_url%`` or ``%media_all_url_if_multiple%``, you will get a duplicate preview of the first available media (one from the Twitter preview itself, one from the direct link preview.
+
+By using ``%media_extra_url_if_multiple%`` you can avoid the first media URL from being posted, hence having the default Twitter preview for the first media, and the direct URLs for the 2nd onwards.
+
 **Default**: ``New tweet from %name%!``
 
 ``--webhook-name (custom name)``
