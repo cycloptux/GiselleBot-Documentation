@@ -56,6 +56,7 @@ Each message will be followed by a list of hashtags, that users may use to filte
 
 * The region code whom the message refers to: ``#cn`` ``#en`` ``#jp``
 * The current status of the region, using a technical status tag: ``#gateway_error`` ``#maintenance`` ``#partial_maintenance`` ``#server_outage`` ``#operational``
+* If maintenance notes are found, the message will print the maintenance notes (and track their changes throughout a maintenance).
 * The quote ID (refer to the `Mahjong Soul Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_) for the region status transition and/or server status transition: e.g. ``#r_01`` ``#r_02`` ``s_02`` ...
 
 .. image:: ../images/mahjongsoul_image_00.png
