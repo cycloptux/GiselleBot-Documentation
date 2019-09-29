@@ -1,0 +1,216 @@
+************************
+Mahjong Soul Integration
+************************
+
+This module contains a few commands used to get information about **Mahjong Soul**, a Japanese mahjong game platform developed by Cat Food Studio and distributed, in its English and Japanese version, by Yostar. The game is available as a browser game, with Android and iOS mobile apps to be released in the future.
+
+The game was released in 4 regions/versions:
+
+* **CN** (Chinese)
+* **JP** (Japanese)
+* **EN** (English/Global)
+
+Commands
+========
+
+|bot_prefix|\ mjsstatus
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjsstatus [--region {region code}]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Checks the status of Mahjong Soul's game servers. Omitting the region code will assume ``--region en`` and show the status of the (4, at the time of writing this page) English servers.
+
+The Chinese region will print 2 embeds: one for the Android servers, one for the iOS servers. Other regions have common servers among the 2 platforms.
+    
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ mjsstatus
+    |bot_prefix|\ mjsstatus --region cn
+    
+....
+
+Server Status Live Feed
+=======================
+
+The Mahjong Soul Server Status Feed offers an easy way to monitor Mahjong Soul servers availability for **any region**, and be notified when something changes on one (or more) of the webhooks configured in your Discord server.
+
+In order to better understand this module, it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+
+By default, the status feed mascot will be the Mahjong Soul character (ship) **San Diego**, and all of the feed messages will be Mahjong Soul-themed.
+
+The full list of feed messages and monitored transitions can be found `in this Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_.
+
+.. note::
+    The spreadsheet contains a few yellow lines that are currently not used for technical reasons. These will be populated if/when they'll be applicable.
+
+Each message will be followed by a list of hashtags, that users may use to filter the specific messages they are interested into, indicating:
+
+* The region code whom the message refers to: ``#cn`` ``#en`` ``#jp``
+* The current status of the region, using a technical status tag: ``#gateway_error`` ``#maintenance`` ``#partial_maintenance`` ``#server_outage`` ``#operational``
+* The quote ID (refer to the `Mahjong Soul Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_) for the region status transition and/or server status transition: e.g. ``#r_01`` ``#r_02`` ``s_02`` ...
+
+.. image:: ../images/mahjongsoul_image_00.png
+    :width: 600
+    :align: center
+    :alt: Mahjong Soul Status Feed Example
+    
+|bot_prefix|\ mjshook
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjshook (webhook URL) [customization params]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Starts a live feed on the specified webhook. When a new transition is found, its notification will be sent to the specified webhook service.
+
+**Customization Params**
+
+``--region (first region code) [second region code] [...]``
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Adds a **whitelist**, **inclusive** filter for Mahjong Soul server regions to the stream. Transitions that are referring to (one of) the selected region(s) will be sent to the webhook, while the rest will be skipped.
+
+This parameter only supports these region codes: ``cn`` ``en`` ``jp``
+
+Region codes are case-insensitive.
+
+**Default**: No filter (all regions)
+
+``--filter (first word) [second word] [...]``
+"""""""""""""""""""""""""""""""""""""""""""""
+
+Adds a **whitelist** filter to the feed. In this example, if the status quote contains ``first word`` and/or (see below) ``second word``, the submission will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive. This is especially effective if you are using the provided hashtags to filter specific events of interest.
+
+You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
+
+The filter only checks the "quote text", column **G** of the `Mahjong Soul Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_, and the additional message hashtags (if you filter by hashtag, you must include the "#").
+
+**Default**: No filter
+
+``--mode (AND/OR)``
+"""""""""""""""""""
+
+Sets the filter behavior when more than 1 word is added to the whitelist filter.
+
+* ``AND`` will only allow status transition notifications that contain *all* of the filtered words.
+* ``OR`` will allow status transition notifications that cointain at least one of the filtered words.
+
+**Default**: ``OR``
+
+``--include`` or ``--exclude``
+""""""""""""""""""""""""""""""
+
+Sets the filter behavior one or more words are added to the whitelist filter.
+
+* ``--include`` will only allow status transition notifications that contain the filtered word(s).
+* ``--exclude`` will only allow status transition notifications that **do not** contain the filtered word(s).
+
+These parameters will work together with ``--mode (AND/OR)``, allowing the server status feed to filter based on INCLUDING the filter items (e.g., at least one filter item (OR) or all filter items (AND) are included in the submission) or EXCLUDING filter items (e.g., post if all filter items are absent from the submission (AND) or at least one filter item is absent from the submission (OR)).
+
+**Default**: ``--include``
+
+.. note::
+    Using both parameters in the same command will give ``--include`` the strict priority and ignore ``--exclude``.
+
+``--header (message)``
+""""""""""""""""""""""
+
+Adds a custom header message when status transition notifications are posted. Custom headers can have a maximum of **1024** characters.
+
+Custom headers support a few dynamic tags that are replaced with their respective "real" value during run-time. These are:
+
+* **%region%**: This will be replaced with the region name, capitalized (e.g. ``Chinese``, ``English``, ...)
+* **%region\_code%**: This will be replaced with the region code, uppercase (e.g. ``CN``, ``EN``, ...)
+* **%timestamp% or %timestamp\_utc%**: This will be replaced with the status transition UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_pst%**: This will be replaced with the status transition PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
+
+All headers will be followed by the actual quote text, including the additional hashtags.
+
+**Default**: ``Jyanashi Sama, Ichihime here with an important message for you from the %region% region!``
+
+``--webhook-name (custom name)``
+""""""""""""""""""""""""""""""""
+
+Adds a custom username to the webhook when status transition notifications are posted. Custom usernames can have a maximum of 32 characters.
+
+**Default**: "MahjongSoul雀魂 Status Feed :: Offered by |bot_name|\ "
+
+``--no-username-overwrite``
+"""""""""""""""""""""""""""
+
+Removes any custom name from the webhook. The real webhook name (the one that you assigned when creating the webhook in Discord) will be used.
+
+**Default**: ``false`` (Custom or default names will be applied)
+
+``--no-avatar-overwrite``
+"""""""""""""""""""""""""
+
+Removes any custom avatar from the webhook. The real webhook avatar (the one that you assigned when creating the webhook in Discord) will be used.
+
+**Default**: ``false`` (Automated avatars will be applied)
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjshook https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
+    |bot_prefix|\ mjshook https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --region en --header %region\_code% server status changed at %timestamp%
+
+....
+
+|bot_prefix|\ mjsehook
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjsehook (feed index) [new customization params]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**Replaces** all previously set customization params for the selected feed with a new set of customization params. The feed index is the number shown with |bot_prefix|\ mjslhook.
+
+.. warning::
+    Editing the webhook will not change the existing params, it will completely replace them. Take note of the existing params first, and use them in the command!
+
+|bot_prefix|\ mjsrhook
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjsrhook (feed index)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Stops a previously set feed and removes its link to the server webhook. The stream index is the number shown with |bot_prefix|\ mjslhook.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mjsrhook 1
+
+....
+
+|bot_prefix|\ mjslhook
+----------------------
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Prints a list of all feeds that are linked to webhooks in the current server.
