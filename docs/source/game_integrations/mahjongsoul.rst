@@ -27,8 +27,6 @@ Command Description
 
 Checks the status of Mahjong Soul's game servers. Omitting the region code will assume ``--region en`` and show the status of the (4, at the time of writing this page) English servers.
 
-The Chinese region will print 2 embeds: one for the Android servers, one for the iOS servers. Other regions have common servers among the 2 platforms.
-    
 Examples
 ^^^^^^^^
 .. parsed-literal::
