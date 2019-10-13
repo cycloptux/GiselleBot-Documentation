@@ -1019,6 +1019,9 @@ Command Description
 
 Deletes a custom rule from the list of rules. Use |bot_prefix|\ toggleglobalrule to hide a default rule from the list of rules (see below).
 
+.. note::
+    In order to preserve the history of users that were previously moderated according to a specific rule, "deleted" rules are never actually deleted. "Deleted" rules are instead **hidden**, and running the |bot_prefix|\ deleterule again on the same rule ID will restore the rule in its previous, visible state.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Administrator
