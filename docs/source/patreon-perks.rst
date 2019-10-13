@@ -13,10 +13,13 @@ As a way to cover the hosting (and development) costs of the bot and its infrast
 
 Within the various module pages you'll find details about the perks that are unlocked by being a patron. Here's a summary of the available Patreon tiers and the corresponding unlocked perks, the pricing details will be on the Patreon page.
 
+.. note::
+    As an alternative way of gaining access to Patreon-locked features, if you are a representative of a "large" Discord server (for reference, servers with at least ~1,500 members and an active userbase), you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
+
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You need to be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please send a DM to cycloptux#1543 or NaviKing#3820 to get your perks activated.
+    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please send a DM to cycloptux#1543 or NaviKing#3820 to get your perks activated.
 
 Tier 0: Show Your Support!
 ==========================
