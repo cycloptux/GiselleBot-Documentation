@@ -1,20 +1,22 @@
 .. _patreon-perks:
 
 *************
-Patreon Perks
+Premium Perks
 *************
 
-Throughout this documentation, you'll find a few notes about Patreon-locked features. Here's a link to the Patreon page of the developer: https://www.patreon.com/cycloptux
+Throughout this documentation, you'll find a few notes about Premium-locked features. These features are only unlocked by either becoming a Patron for the developer, or by establishing a partnership with the developer.
+
+Here's a link to our Patreon page: https://www.patreon.com/cycloptux
 
 As a way to cover the hosting (and development) costs of the bot and its infrastructure, Patreon is used as the main source of month-to-month income.
 
 .. seealso::
     `Patreon <https://www.patreon.com/>`_ is a membership platform that makes it easy for artists and creators to get paid. Within the Patreon dictionary, subscribers are called "patrons".
 
-Within the various module pages you'll find details about the perks that are unlocked by being a patron. Here's a summary of the available Patreon tiers and the corresponding unlocked perks, the pricing details will be on the Patreon page.
+Here's a summary of the available Premium tiers and the corresponding unlocked perks, the pricing details will be on the Patreon page.
 
 .. note::
-    As an alternative way of gaining access to Patreon-locked features, if you are a representative of a "large" Discord server (for reference, servers with at least ~1,500 members and an active userbase), you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
+    As an alternative way of gaining access to Premium-locked features, if you are a representative of a "large" Discord server (for reference, servers with at least ~1,500 members and an active userbase), you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
 
 More perks will be added over time, including free currency and early access to new features!
 
@@ -33,6 +35,7 @@ By becoming a **Tier 1** (or higher) patron, you'll get access to:
 
 * **unlimited repeating messages** (removing the default cap of 5 repeating messages per server)
 * **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
+* **Command Scheduling** interval raised from 1 hour to **12 hours**
 * **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 
 Tier 2: Premium Support, Extended Music & Giveaway Module
@@ -46,8 +49,9 @@ Tier 2 patrons unlock the **giveaway module** and get access to the whole potent
 
 * **up to 50 songs in a playing queue** (removing the default cap of 3 songs)
 * **uncapping of songs duration**, removing the 8 minutes cap
-* support for **live events** streaming
+* support for **YouTube live events** streaming
 * access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
+* **Command Scheduling** interval raised to **1 week**
 * **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **7%** for **all users** in your server!
 
 Tier 3: Unlocked Original Modules
@@ -57,4 +61,5 @@ By becoming a **Tier 3** (or higher) patron, you'll unlock the whole potential o
 
 * create **up to 20 forms** in your server (removing the default cap of 1 form)
 * **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
+* **Command Scheduling** interval raised to **1 month**
 * **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **12%** for **all users** in your server!

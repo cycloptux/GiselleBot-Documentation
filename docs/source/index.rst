@@ -43,7 +43,7 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    bot-invite
    credits
    docs-101
-   patreon-perks
+   premium-perks
    
 .. toctree::
    :maxdepth: 1
