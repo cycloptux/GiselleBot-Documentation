@@ -15,7 +15,7 @@ The current implementation of the command is experimental. As soon as it's stabl
 * Scheduling a command as **"recurring"**, hence being run **every N minutes**.
 * Scheduling a command to be run on a different channel than the one where you originally set the scheduler into.
 
-.. admonition:: Patreon
+.. admonition:: Premium
 
     By default, each server is limited to scheduling commands within a time interval of no more than **1 hour**. You can unlock higher interval times via **Patreon** pledges (see: :ref:`patreon-perks`):
     

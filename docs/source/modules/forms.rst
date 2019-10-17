@@ -21,7 +21,7 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
 .. note::
     A **web dashboard (BETA)** will soon be available to create, edit and and maintain forms.
     
-.. admonition:: Patreon
+.. admonition:: Premium
 
     Out of the box, each server is limited to having a total of **1 available form**. If you want to remove this limitation and have up to **20** forms, you can unlock the number of forms via **Patreon** pledges (see: :ref:`patreon-perks`).
 
