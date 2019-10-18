@@ -308,7 +308,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 **This command is only available to Elevated Users.**
 
-Pauses a trivia, given its ID. Pausing a trivia will make users unable to submit answers for that trivia. If the trivia game was set as **timed**, the timer for the currently running question will keep clocking, but will then freeze without moving to the next question.
+Pauses a trivia, given its ID. Pausing a trivia will make users unable to submit answers for that trivia. If the trivia game was set as **timed**, the timer for the current question will continue to count down to zero, but the next question will not appear until the game is unpaused.
 
 If the ID is omitted, the command will attempt to pause the trivia game in the current channel, if any.
 
