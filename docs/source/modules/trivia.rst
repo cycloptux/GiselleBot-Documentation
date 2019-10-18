@@ -7,7 +7,7 @@ Trivia
     
 This module lets users play trivia quiz games on Discord. The module gets its default questions from the **Open Trivia Database**, which offers more than 3,000 validated questions in more than 15 categories.
 
-The trivia module is meant to be public and used by anyone for fun. Users with "Manage Messages" permissions, hereafter called "Elevated Users", will also have access to extra settings that will make them able to set trivia quiz games up for use by other users (typical use cases include events, giveaways, etc.).
+The trivia module is meant to be public and used by anyone for fun. Users with "Manage Messages" & "Manage Roles" permissions, hereafter called "Elevated Users", will also have access to extra settings that will make them able to set trivia quiz games up for use by other users (typical use cases include events, giveaways, etc.).
 
 Trivia games can be **timed** or **immediate**.
 
@@ -310,7 +310,7 @@ If the ID is omitted, the command will attempt to pause the trivia game in the c
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Messages
+| **User**: Manage Messages, Manage Roles
 
 Examples
 ^^^^^^^^
@@ -340,7 +340,7 @@ If the ID is omitted, the command will attempt to resume the paused trivia game 
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Messages
+| **User**: Manage Messages, Manage Roles
 
 Examples
 ^^^^^^^^
@@ -372,7 +372,7 @@ If the ID is omitted, the command will attempt to delete the paused trivia game 
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Messages
+| **User**: Manage Messages, Manage Roles
 
 Examples
 ^^^^^^^^
