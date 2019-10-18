@@ -215,6 +215,8 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the final results of a trivia game. This is the same embed that is printed when a trivia game ends, showing the top 5 users and their corresponding scores.
+
+This command only works on completed trivia games.
     
 Examples
 ^^^^^^^^
@@ -236,6 +238,8 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Shows a detailed list of questions and the corresponding submitted answers for the user running this command, showing whether the given answers are correct or not.
+
+This command only works on completed trivia games.
 
 Examples
 ^^^^^^^^
@@ -281,7 +285,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Shows the list of all (non-deleted) trivias in the server: their ID, name and status.
+Shows the list of all (non-deleted) trivia games in the server: their ID, name and status.
 
 Examples
 ^^^^^^^^
