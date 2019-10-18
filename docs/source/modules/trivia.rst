@@ -17,7 +17,7 @@ Trivia games can be **timed** or **immediate**.
 Depending on the "type" of user running the command(s), some limitations apply to the usage of the trivia module. The following table shows such limitations.
 
 +-------------------------+----+-----------+-------+---------+-----+-----+
-| User Type               | MQ | MT        | RR    | TC      | AD  | CT  |
+| User Type               | MQ | MT        | RR    | TC      | AD  | SE  |
 +=========================+====+===========+=======+=========+=====+=====+
 | Normal (non-"Elevated") | 10 | 3 minutes | No    | No      | No  | No  |
 +-------------------------+----+-----------+-------+---------+-----+-----+
@@ -31,7 +31,7 @@ Depending on the "type" of user running the command(s), some limitations apply t
 * **RR**: Can set role restrictions
 * **TC**: Can set a different target channel
 * **AD**: Can configure auto-deletion of messages
-* **CT**: Can configure someone else's trivia
+* **SE**: Can configure and/or start someone else's trivia
 
 | :sub:`\*: Users are not allowed to set a role restriction to roles higher than the highest role they have.`
 | :sub:`\*\*: Users are not allowed to set a target channel to a channel they don't have R/W access to (Read Messages and/or Send Messages).`
