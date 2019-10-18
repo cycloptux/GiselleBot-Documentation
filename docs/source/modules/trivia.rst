@@ -66,7 +66,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Initialized a trivia in the current channel.
+Initializes a trivia in the current channel.
 
 Default settings are:
 
@@ -97,9 +97,9 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Opens the trivia game interactive setup menu. Use the menu items to configure the above settings.
 
-**Name** will show in the title of each embed related to that trivia, and it's limited to 128 characters.
+**Name** will show in the title of each embed related to that trivia. Trivia names cannot be longer than 128 characters.
 
-**Description** will appear on each question, and in the starting and final embed, and it's limited to 1024 characters.
+**Description** will appear on each question, and in the starting and final embed. Trivia descriptions cannot be longer than 1024 characters.
 
 **Categories** can be left blank ("any category") or it can be used to restrict the questions to **one or more** categories. At the time of writing this documentation page, the categories available from the Open Trivia Database are:
 
