@@ -235,7 +235,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Shows a detailed list of questions and the corresponding subitted answers for the user running this command, showing whether the given answers are correct or not.
+Shows a detailed list of questions and the corresponding submitted answers for the user running this command, showing whether the given answers are correct or not.
 
 Examples
 ^^^^^^^^
