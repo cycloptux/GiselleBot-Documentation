@@ -3,7 +3,7 @@ Trivia
 ******
 
 .. warning::
-    This module is currently on a **Closed Beta Test (CBT)** phase. The module design is reaching its stable phase and it's still not final. This documentation page will be updated as the module reached its Release Candidate (RC) phase.
+    This module is currently on a **Closed Beta Test (CBT)** phase. The module design is reaching its stable phase and isn't currently final. This documentation page will be updated as the module reaches its Release Candidate (RC) phase.
     
 This module lets users play trivia quiz games on Discord. The module gets its default questions from the **Open Trivia Database**, which offers more than 3,000 validated questions in more than 15 categories.
 
