@@ -36,9 +36,15 @@ Depending on the "type" of user running the command(s), some limitations apply t
 | :sub:`\*: Users are not allowed to set a role restriction to roles higher than the highest role they have.`
 | :sub:`\*\*: Users are not allowed to set a target channel to a channel they don't have R/W access to (Read Messages and/or Send Messages).`
 
+The module also includes a set of "template" commands. As an alternative way of starting a trivia (other than initializing a new one with default settings), users can save a trivia template and load it at a later time. Trivia templates will be assigned with a new set of IDs ("template IDs") and will not directly be linked to their original trivia game configuration.
+
+Template commands can be recognized by their ``triviat-`` prefix.
+
 .. admonition:: Premium
 
     As shown in the table, premium-enabled servers will have an increased cap of 30 questions and can set an interval for timed trivia games up to 1 week.
+    
+    Additionally, template commands and |bot_prefix|\ triviaexport are only available within Premium-enabled servers.
 
 |bot_prefix|\ triviacategories
 ------------------------------
@@ -385,3 +391,158 @@ Examples
     |bot_prefix|\ trdelete
     |bot_prefix|\ trdelete 2
     
+....
+
+|bot_prefix|\ triviaexport
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trexp [trivia id]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available to Elevated Users in Premium-enabled servers.**
+
+**This command only works on completed trivia games.**
+
+Exports the detailed info about a completed trivia into a ``.csv`` file. The file will contain the complete list of users who answered to the trivia game and the corresponding correctness (or incorrectness) for each question in the trivia.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages, Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trexp 2
+    
+....
+
+|bot_prefix|\ triviatsave
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtsave [trivia id]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available to Elevated Users in Premium-enabled servers.**
+
+Saves the current configuration for the selected trivia into a "template" which can then be re-used with |bot_prefix|\ trtload. Each run of this command will generate a new **template ID**.
+
+Once saved, a template becomes independent from the corresponding original trivia game: changing the settings for the originating trivia game will **not** update the corresponding template.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages, Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtsave 3
+    
+....
+
+|bot_prefix|\ triviatload
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtload [template id]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available in Premium-enabled servers.**
+
+Loads a previously saved configuration from a template, creating a new trivia game with a new trivia ID.
+
+The new trivia game will be set in a "Initialized" status, and can be immediately started with |bot_prefix|\ trstart or furtherly configured with |bot_prefix|\ trset.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtload 1
+    
+....
+
+|bot_prefix|\ triviatdelete
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtdelete [template id]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available to Elevated Users in Premium-enabled servers.**
+
+Deletes a previously saved configuration template (it will not delete the originating trivia game).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages, Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtdelete 1
+    
+....
+
+|bot_prefix|\ triviatshow
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtshow [template id]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available in Premium-enabled servers.**
+
+Shows the current configuration of a trivia template, given its ID.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtshow 1
+    
+....
+
+|bot_prefix|\ triviatlist
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtlist
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+**This command is only available in Premium-enabled servers.**
+
+Shows the list of all (non-deleted) trivia templates in the server: their ID, name and basic info.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ trtls
