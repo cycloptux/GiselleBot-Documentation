@@ -34,12 +34,21 @@ The subreddit name shall not contain the ``/r/`` or ``r/`` prefixes, but the com
 
 **Customization Params**
 
-``--nsfw``
-""""""""""
+``--nsfw [censor/skip/only]``
+"""""""""""""""""""""""""""""
 
-Reddit submissions might be natively flagged as "NSFW". If this parameter is used, any NSFW submission will still sent to your webhook, but the URL will be flagged with a "NSFW" tag and the submission won't be previewed in Discord.
+Reddit submissions might be natively flagged as "NSFW".
 
-**Default**: ``false`` (submissions won't be censored if flagged as "NSFW")
+Depending on the selected parameter, these are the NSFW behaviors:
+
+* **censor** will post a NSFW URL surrounded by ``< >`` angle brackets, disabling the default Discord URL auto-embed preview. **This censorship will also be applied to the content URL, if it's added to the header using the corresponding placeholder.** Refer to the ``--header`` param for more info.
+* **skip** will completely ignore NSFW-flagged items, "cleaning" the stream from NSFW items.
+* **only** will only post NSFW-flagged items and skip the rest. The items will not be censored. You can use this mode to create a complementary NSFW stream of the previous "clean" stream.
+
+.. note::
+    This check relies on the author (or a very fast moderator) flagging the submission as NSFW. If you know that the subreddit you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
+
+**Default**: ``false`` (both SFW and NSFW -uncensored- items will be posted), or ``censor`` if ``--nsfw`` is used without any specific mode.
 
 ``--flair (first flair) [second flair] [...]``
 """"""""""""""""""""""""""""""""""""""""""""""

@@ -28,15 +28,21 @@ Starts a streaming service for the selected Twitter account. If a new tweet is f
 
 **Customization Params**
 
-``--nsfw``
-""""""""""
+``--nsfw [censor/skip/only]``
+"""""""""""""""""""""""""""""
 
-Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted. If this parameter is used, any content that triggers the sensitive check will still sent to your webhook, but the URL will be flagged with a short description of the alarm that was triggered and the tweet won't be previewed in Discord.
+Twitter streams may be parsed to look for "bad words" or "possibly sensitive" content before being posted.
+
+Depending on the selected parameter, these are the NSFW behaviors:
+
+* **censor** will post a NSFW URL surrounded by ``< >`` angle brackets, disabling the default Discord URL auto-embed preview.
+* **skip** will completely ignore NSFW-flagged items, "cleaning" the stream from NSFW items.
+* **only** will only post NSFW-flagged items and skip the rest. The items will not be censored. You can use this mode to create a complementary NSFW stream of the previous "clean" stream.
 
 .. note::
     This check is unaccurate. If you know that the Twitter account you are going to stream is "safe for work", you can safely skip this check. This is usually the suggested behavior if you know what you're doing.
 
-**Default**: ``false`` (tweets won't be censored)
+**Default**: ``false`` (both SFW and NSFW -uncensored- items will be posted), or ``censor`` if ``--nsfw`` is used without any specific mode.
 
 ``--filter (first word) [second word] [...]``
 """""""""""""""""""""""""""""""""""""""""""""
