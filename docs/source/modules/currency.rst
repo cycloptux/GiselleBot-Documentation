@@ -68,7 +68,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can vote for |bot_name| on `Discord Bot List <https://discordbots.org/bot/356831787445387285>`_ (click on the website name to be sent to the bot page).
 
-Any Discord user can vote for each bot once every 12 hours. Each vote for |bot_name| will award you with 125 currency coins.
+Any Discord user can vote for each bot once every 12 hours. Each vote for |bot_name| will award you with **125 currency coins**.
 
 To help give |bot_name| a better chance to fight for the top spots, votes will count double on the weekend (Fridays, Saturdays and Sundays). This also means **double the amount of coins**!
 
@@ -93,7 +93,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can vote for |bot_name| on `Bots for Discord <https://botsfordiscord.com/bot/356831787445387285>`_ (click on the website name to be sent to the bot page).
 
-Any Discord user can vote for each bot once per day. The window opens at midnight, UTC. Each vote for |bot_name| will award you with 250 currency coins.
+Any Discord user can vote for each bot once per day. The window opens at midnight, UTC. Each vote for |bot_name| will award you with **250 currency coins**.
 
 Even though the website doesn't award double points during weekends (see: :ref:`dblnotify`), |bot_name| will still award **double the amount of coins** on **Fridays, Saturdays and Sundays**!
 
