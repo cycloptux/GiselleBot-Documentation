@@ -12,7 +12,8 @@ Tweet URLs will be posted to Discord, while the tweet preview will leverage the 
 
 .. note::
     The goal of this module is offering a **free alternative** to something that is usually only achieved through the use of paid services. On the other hand, due to limitations that are applied to the free Twitter API, this module might suffer from command cooldowns and/or miss a few tweets every once in a while.
-
+    
+    
 |bot_prefix|\ twthook
 ---------------------
 
@@ -25,6 +26,10 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Starts a streaming service for the selected Twitter account. If a new tweet is found, it will be sent to the specified webhook service.
+
+.. warning::
+    Discord webhooks are a very powerful feature, but they (currently) lack 2-way authentication of messages. This means that a malicious user knowing a webhook URL will be able, with some effort, to forge a message containing any kind of content using external tools and send that message to the webhook.
+    In order to protect yourself from this (rare) occasion, make sure you run this command in non-public channels.
 
 **Customization Params**
 

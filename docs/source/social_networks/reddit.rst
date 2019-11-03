@@ -32,6 +32,10 @@ Starts a streaming service for the selected subreddit. If a new submission is fo
 
 The subreddit name shall not contain the ``/r/`` or ``r/`` prefixes, but the command should work even if those are used.
 
+.. warning::
+    Discord webhooks are a very powerful feature, but they (currently) lack 2-way authentication of messages. This means that a malicious user knowing a webhook URL will be able, with some effort, to forge a message containing any kind of content using external tools and send that message to the webhook.
+    In order to protect yourself from this (rare) occasion, make sure you run this command in non-public channels.
+
 **Customization Params**
 
 ``--nsfw [censor/skip/only]``
