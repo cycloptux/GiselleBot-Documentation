@@ -17,7 +17,7 @@ The current implementation of the command is experimental. As soon as it's stabl
 
 .. admonition:: Premium
 
-    By default, each server is limited to scheduling commands within a time interval of no more than **1 hour**. You can unlock higher interval times via **Patreon** pledges (see: :ref:`patreon-perks`):
+    By default, each server is limited to scheduling commands within a time interval of no more than **1 hour**. You can unlock higher interval times as a **Premium** feature (see: :ref:`premium-perks`):
     
     * **Tier 1** patron servers will have their cap increased to **12 hours**.
     * **Tier 2** patron servers will have their cap increased to **1 week** (7 days).
@@ -49,7 +49,7 @@ Runs a command within the current server, after certain amount of time. See abov
 
 Permissions for the target command will be checked when initially scheduling, and at run-time. Although, the actual correct formatting of the command will only be checked at run-time, so be sure to test the commands beforehand if you are not sure about their correctness.
 
-Limitations apply to the maximum interval of time you can set for the scheduler, and can be increased for Patreon servers. See above.
+Limitations apply to the maximum interval of time you can set for the scheduler, and can be increased for **Premium**-enabled servers servers. See above.
 
 .. note::
     Up to **5** schedulers can be active at any time for each user within a server. This limitation cannot (currently) be increased.

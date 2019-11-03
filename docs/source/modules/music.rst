@@ -8,9 +8,9 @@ The Music module must be first enabled by an Administrator by setting a music ch
 
 .. admonition:: Premium
 
-    By default, each server is limited to having a maximum of **3 songs in a queue**, and each song can only be a maximum of **8 minutes long**. You can unlock up to **50 song-queues** and uncap the duration limit (also enabling the streaming of **live channels**) via **Patreon** pledges (see: :ref:`patreon-perks`).
+    By default, each server is limited to having a maximum of **3 songs in a queue**, and each song can only be a maximum of **8 minutes long**. You can unlock up to **50 song-queues** and uncap the duration limit (also enabling the streaming of **live channels**) as a **Premium** feature (see: :ref:`premium-perks`).
     
-    Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, and |bot_prefix|\ mvolume can be unlocked via **Patreon** pledges (see: :ref:`patreon-perks`).
+    Out of the following commands, |bot_prefix|\ mpause, |bot_prefix|\ mresume, and |bot_prefix|\ mvolume can be unlocked as a **Premium** feature (see: :ref:`premium-perks`).
 
 |bot_prefix|\ mchannel
 ----------------------

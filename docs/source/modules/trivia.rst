@@ -1,9 +1,6 @@
 ******
 Trivia
 ******
-
-.. warning::
-    This module is currently on a **Closed Beta Test (CBT)** phase. The module design is reaching its stable phase and isn't currently final. This documentation page will be updated as the module reaches its Release Candidate (RC) phase.
     
 This module lets users play trivia quiz games on Discord. The module gets its default questions from the **Open Trivia Database**, which offers more than 3,000 validated questions in more than 15 categories.
 
@@ -409,6 +406,8 @@ Command Description
 **This command only works on completed trivia games.**
 
 Exports the detailed info about a completed trivia into a ``.csv`` file. The file will contain the complete list of users who answered to the trivia game and the corresponding correctness (or incorrectness) for each question in the trivia.
+
+*This is the only way of having a full list of users. The top 5 users are shown in the trivia final results embed.*
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^

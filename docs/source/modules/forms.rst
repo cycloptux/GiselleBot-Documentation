@@ -23,7 +23,7 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
     
 .. admonition:: Premium
 
-    Out of the box, each server is limited to having a total of **1 available form**. If you want to remove this limitation and have up to **20** forms, you can unlock the number of forms via **Patreon** pledges (see: :ref:`patreon-perks`).
+    Out of the box, each server is limited to having a total of **1 available form**. If you want to remove this limitation and have up to **20** forms, you can unlock the number of forms as a **Premium** feature (see: :ref:`premium-perks`).
 
 .. _trellopair:
 

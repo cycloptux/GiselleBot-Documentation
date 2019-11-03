@@ -126,7 +126,7 @@ This command has a quick syntax (with 2 variations) and a full syntax. It is adv
 
 .. admonition:: Premium
 
-    Each server can have a maximum of 5 repeating messages. If you need more repeating messages, you can unlock more via **Patreon** pledges (see: :ref:`patreon-perks`).
+    Each server can have a maximum of 5 repeating messages. If you need more repeating messages, you can unlock more as a **Premium** feature (see: :ref:`premium-perks`).
 
 The default interval time is set to 1 day, and the first message will begin being sent after the first time interval has passed.
 
