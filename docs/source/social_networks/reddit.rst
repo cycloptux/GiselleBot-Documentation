@@ -69,6 +69,8 @@ Adds a **whitelist** filter to the stream. In this example, if the submission co
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
 
+The filter works on partial words (e.g. "announce" will work on both "announcement" and "announced").
+
 **Default**: No filter
 
 ``--mode (AND/OR)``

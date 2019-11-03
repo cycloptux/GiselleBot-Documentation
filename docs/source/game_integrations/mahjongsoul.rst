@@ -95,6 +95,8 @@ Adds a **whitelist** filter to the feed. In this example, if the status quote co
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
 
+The filter works on partial words (e.g. "announce" will work on both "announcement" and "announced").
+
 The filter only checks the "quote text", column **G** of the `Mahjong Soul Server Status Feed Sentences Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_, and the additional message hashtags (if you filter by hashtag, you must include the "#").
 
 **Default**: No filter
