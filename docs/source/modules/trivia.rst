@@ -39,7 +39,7 @@ Template commands can be recognized by their ``triviat-`` prefix.
 
 .. admonition:: Premium
 
-    As shown in the table, premium-enabled servers will have an increased cap of 30 questions and can set an interval for timed trivia games up to 1 week.
+    As shown in the table, premium-enabled servers will have an increased cap of 30 questions and can set an interval for timed trivia games up to 1 week (see: :ref:`premium-perks`).
     
     Additionally, template commands and |bot_prefix|\ triviaexport are only available within Premium-enabled servers.
 
