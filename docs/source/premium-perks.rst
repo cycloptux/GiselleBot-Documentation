@@ -1,4 +1,4 @@
-.. _patreon-perks:
+.. _premium-perks:
 
 *************
 Premium Perks
@@ -16,12 +16,13 @@ As a way to cover the hosting (and development) costs of the bot and its infrast
 Here's a summary of the available Premium tiers and the corresponding unlocked perks, the pricing details will be on the Patreon page.
 
 .. note::
-    As an alternative way of gaining access to Premium-locked features, if you are a representative of a "large" Discord server (for reference, servers with at least ~1,500 members and an active userbase), you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
+    As an alternative way of gaining access to Premium-locked features, if you are a representative of a "large" Discord server, you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
+    For reference, "large" refers to servers with at least ~1,000 members and an active userbase, but you can still apply if you don't meet those requirements: we'll review the specific potential of your server on an individual base.
 
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please send a DM to cycloptux#1543 or NaviKing#3820 to get your perks activated.
+    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 on Discord to request the activation of the premium perks in your server**.
 
 Tier 0: Show Your Support!
 ==========================
@@ -33,33 +34,36 @@ Tier 1: Basic Addons
 
 By becoming a **Tier 1** (or higher) patron, you'll get access to:
 
-* **unlimited repeating messages** (removing the default cap of 5 repeating messages per server)
-* **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
-* **Command Scheduling** interval raised from 1 hour to **12 hours**
-* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
+* (Alarms & Reminders) **unlimited repeating messages** (removing the default cap of 5 repeating messages per server)
+* (Server Administration) **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
+* (Command Scheduler) **Command Scheduling** interval raised from 1 hour to **12 hours**
+* (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 
-Tier 2: Premium Support, Extended Music & Giveaway Module
-=========================================================
+Tier 2: Premium Support, Extended Music, Trivia & Giveaway Module
+=================================================================
 
 By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://discord.gg/s6yq6U5>`_, where you'll get a priority answer from the developer upon encountering any issue.
 
 You'll also get to pick a custom color for your name in the official support server.
 
-Tier 2 patrons unlock the **giveaway module** and get access to the whole potential of the music module:
+Tier 2 patrons unlock the **giveaway module**, unlock some improvements on the **trivia module** and get the whole potential of the **music module**, plus some more perks:
 
-* **up to 50 songs in a playing queue** (removing the default cap of 3 songs)
-* **uncapping of songs duration**, removing the 8 minutes cap
-* support for **YouTube live events** streaming
-* access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
-* **Command Scheduling** interval raised to **1 week**
-* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **7%** for **all users** in your server!
+* (Trivia) **up to 30 questions** per trivia game
+* (Trivia) maximum trivia games duration raised to **up to 7 days**
+* (Music) **up to 50 songs in a playing queue** (removing the default cap of 3 songs)
+* (Music) **uncapping of songs duration**, removing the 8 minutes cap
+* (Music) support for **YouTube live events** streaming
+* (Music) access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
+* (Command Scheduler) **Command Scheduling** interval raised to **1 week**
+* (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **7%** for **all users** in your server!
 
 Tier 3: Unlocked Original Modules
 =================================
 
 By becoming a **Tier 3** (or higher) patron, you'll unlock the whole potential of |bot_name|'s original modules:
 
-* create **up to 20 forms** in your server (removing the default cap of 1 form)
-* **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
-* **Command Scheduling** interval raised to **1 month**
-* **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **12%** for **all users** in your server!
+* (Forms Builder) create **up to 20 forms** in your server (removing the default cap of 1 form)
+* (Raid Rooms) **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 3 simultaneous rooms)
+* (Trivia) get access to the |bot_prefix|\ triviaexport command, and to the full list of **"Trivia Template" commands**: |bot_prefix|\ triviatsave, |bot_prefix|\ triviatload, |bot_prefix|\ triviatdelete and |bot_prefix|\ triviatshow.
+* (Command Scheduler) **Command Scheduling** interval raised to **1 month**
+* (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **12%** for **all users** in your server!
