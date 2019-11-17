@@ -7,6 +7,7 @@ phases:
     commands:
       - apt-get install python3-sphinx python3-pip -y
       - pip3 install sphinx_rtd_theme
+      - pip3 install "urllib3<1.25"
       # - pip3 install guzzle_sphinx_theme
   build:
     commands:
