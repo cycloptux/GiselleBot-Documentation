@@ -62,11 +62,66 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-.. note::
-    This command is only available in a Direct Message channel with the bot. It will **not** work in actual servers, and it's not subject to any permissions other than a blacklist check (see |bot_prefix|\ formblacklist).
-
 Shows the available forms for the servers a user is currently in, giving the option to start filling a submission.
 
+.. note::
+    This command is supposed to be run in a **Direct Message channel** with |bot_name|\ . In that case, |bot_name| will start the submission by showing a list of servers the user can pick among.
+    
+    If used within an actual server, it will make |bot_name| send a DM to the user running the command, showing the available forms for the specific server the command was run into.
+    
+    This command **is not subject to any permissions** other than a specific blacklist check (see |bot_prefix|\ formblacklist).
+    
+    The actual form submission must always happen though |bot_name|\ 's DMs.
+
+....
+
+|bot_prefix|\ submitreact
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ submitreact [--m {message id}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Other than sending the :ref:`submit` command to |bot_name| via DM, or using it in a server to quickly start the DM workflow, authorized people can enable a specific reaction on a message of choice (or a message created by |bot_name| for that purpose) to have |bot_name| send the initial form submission DM to the user clicking on the reaction.
+
+This command starts a simple interactive process to build this "submit reaction message". |bot_name| will guide you through the process of creating this reaction, just follow the in-Discord instructions.
+
+If a valid message ID is specified through the dedicated parameter, the submit reaction will be created on the target message.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ submitreact
+    |bot_prefix|\ submitreact --m 123456789098765432
+    
+....
+
+|bot_prefix|\ submitreactremove
+-------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ submitreactremove [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Removes the submit reaction behavior from an existing message. The message itself won't be deleted, nor the existing reactions will be removed, but |bot_name| will now not do anything with the reaction on that message.
+
+If the message ID is omitted (or is invalid), |bot_name| will attempt to pick the latest submit reaction message in the current channel.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ submitreactremove 123456789098765432
+    
 ....
 
 |bot_prefix|\ forminit
