@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - apt-get install python-sphinx python3-pip -y
-      - pip3 install sphinx_rtd_theme
+      - apt-get install python3-pip -y
+      - pip3 install sphinx sphinx_rtd_theme
       # - pip3 install guzzle_sphinx_theme
   build:
     commands:
