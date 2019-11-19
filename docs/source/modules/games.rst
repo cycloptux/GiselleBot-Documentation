@@ -4,7 +4,7 @@
 Games
 *****
 
-As a way of betting, spending and/or earning currency (see :ref:`currency-system`), a few game are available.
+As a way of betting, spending and/or earning currency (see :ref:`currency-system`), a few simple games are available.
 
 ....
 
