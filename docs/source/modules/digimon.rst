@@ -217,6 +217,21 @@ Returns a Digimon to the user's Digi-Dex once it has finished exercising in the 
 
 ....
 
+|bot_prefix|\ dgfarm
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ dgfarm
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows info and parameters about the user's Digi-Farm.
+
+....
+
 |bot_prefix|\ dgdrop
 --------------------
 
