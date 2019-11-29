@@ -4,7 +4,8 @@ Reddit Connector
 
 The Reddit connector offers an easy way to stream new submissions from any subreddit to one (or more) of the webhooks configured in your Discord server.
 
-In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+.. seealso::
+    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
 By default, each submission will be posted to the webhook by using the subreddit name (prefixed with ``/r/``) as author, and the subreddit mobile icon (if present) as Discord profile picture. These settings (and other details) can be customized for each stream.
 

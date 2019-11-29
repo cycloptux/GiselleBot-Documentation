@@ -44,7 +44,8 @@ Server Status Live Feed
 
 The Azur Lane Server Status Feed offers an easy way to monitor Azur Lane servers availability for **any region**, and be notified when something changes on one (or more) of the webhooks configured in your Discord server.
 
-In order to better understand this module, it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+.. seealso::
+    In order to better understand this module, it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
 By default, the status feed mascot will be the Azur Lane character (ship) **San Diego**, and all of the feed messages will be Azur Lane-themed.
 
