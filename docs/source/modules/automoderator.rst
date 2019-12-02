@@ -2,7 +2,7 @@
 Server Moderation (AutoModerator)
 *********************************
 
-|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **5** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
+|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **6** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
 
 .. warning::
     This guide assumes you are familiar with the manual moderation module of |bot_name|\ . If you have any doubt about one or more of the actions or parameters that are used within the AutoModerator module, try checking :ref:`moderation-module` first.
@@ -17,12 +17,13 @@ Supported Triggers
 * **Server Invites**: recognizes Discord server invites in user messages; this trigger supports **shortened** URLs (e.g. Discord invites hidden behind a bit.ly shortening service), and ignores invites pointing to the current server.
 * **Mass Mention**: counts the number of mentions (roles, users or everyone/here) in a message and triggers if the number of mentions is over a threshold. The default threshold is **10**, but can be configured in each server.
 * **Banned Words**: checks the message against a list of words, configured by the user, and triggers if one or more words are found within the message. Punctuation and letter case are ignored. The parser can be configured to trigger on an "exact match" (e.g. banned word: ``test``, matching word: ``test``), if the banned word is found at the "beginning of a word" within the message (e.g. banned word: ``test``, matching word: ``testing``), or "anywhere in word" (e.g. banned word: ``test``, matching word: ``attestation``).
-* **Anti-Spam**: counts the number of messages **with the same content** sent by a user within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
+* **Anti-Spam**: counts the number of messages **with the same content** sent by a user, in a channel, within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
+* **Anti-Attachment Spam**: counts the number of **attachments** sent by a user, in a channel, within a certain span of time and triggers if the number of attachments is over a threshold. The default (allowed) threshold pair is **5** attachments in **10** seconds, but can be configured in each server.
 * **NSFW Images**: recognizes possible NSFW images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is over the NSFW threshold for the server. Refer to :ref:`nsfwjs` for a deeper explanation of this detection system, and to :ref:`nsfwthreshold` to configure the server threshold.
 * **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
 
 .. note::
-    Discord lag or connection problems can cause Anti-Spam false positives.
+    Discord lag or connection problems can cause Anti-Spam and Anti-Attachment Spam false positives.
     
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.

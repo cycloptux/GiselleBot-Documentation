@@ -468,7 +468,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Adds any number of roles to any number of users.
+Adds any number of roles to any number of users. If ``@everyone`` (or the server ID) is used as one of the parameters, the role(s) will be given to everyone in the server.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -497,7 +497,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Removes any number of roles from any number of users.
+Removes any number of roles from any number of users. If ``@everyone`` (or the server ID) is used as one of the parameters, the role(s) will be removed from everyone in the server.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
