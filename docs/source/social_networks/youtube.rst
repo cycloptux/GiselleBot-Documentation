@@ -188,7 +188,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%video\_status%**: This will be replaced with the word ``added`` if the notification refers to the upload of a new video, or the word ``updated`` if the notification refers to the update of a video's title or description.
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the video upload timestamp in UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the video upload timestamp in PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
-* **%url%**: This will be replaced with the Twitter status URL. See below for more info.
+* **%url%**: This will be replaced with the YouTube video URL. See below for more info.
 
 By default, without an explicit use of ``%url%``, all headers will be followed by the actual YouTube video URL on a new line; rendering of that URL will be done by Discord.
 
