@@ -40,7 +40,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ ytchannel (YouTube video identifier)
+    |bot_prefix|\ ytvideo (YouTube video identifier)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^

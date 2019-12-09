@@ -45,8 +45,7 @@ rst_prolog = '''
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = ['sphinx_sitemap']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -111,12 +110,18 @@ html_context = {
     ],
 }
 
+# The URL which points to the root of the HTML documentation. It is used to indicate the location of document like canonical_url.
+html_baseurl = 'https://docs.cycloptux.com/gisellebot/'
+
+# A list of paths that contain extra files not directly related to the documentation, such as robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They are copied to the output directory. They will overwrite any existing file of the same name.
+# As these files are not meant to be built, they are automatically excluded from source files.
+html_extra_path = ['robots.txt']
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'GiselleBotdoc'
-
 
 # -- Options for LaTeX output ------------------------------------------------
 
