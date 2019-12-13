@@ -126,6 +126,18 @@ Starts a notification service for the selected YouTube channel. If a new video i
 
 **Customization Params**
 
+``--event (first event) [second event] [...]``
+""""""""""""""""""""""""""""""""""""""""""""""
+
+Adds a **whitelist**, **inclusive** filter for specific events to the service. Notifications will only be sent if the actual notification event is equal to one of the filtered events.
+
+The **only** supported events for this feed are:
+
+* ``added``, corresponding to new YouTube videos being uploaded;
+* ``updated``, corresponding to YouTube videos having their title or description changed.
+
+**Default**: No filter
+
 ``--nsfw [censor/skip/only]``
 """""""""""""""""""""""""""""
 

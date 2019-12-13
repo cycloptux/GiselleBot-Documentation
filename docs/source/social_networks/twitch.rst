@@ -117,6 +117,18 @@ You can also set "composite words" (two or more words as a single game name) by 
 
 **Default**: No filter
 
+``--event (first event) [second event] [...]``
+""""""""""""""""""""""""""""""""""""""""""""""
+
+Adds a **whitelist**, **inclusive** filter for specific events to the service. Notifications will only be sent if the actual notification event is equal to one of the filtered events.
+
+The **only** supported events for this feed are:
+
+* ``live``, corresponding to Twitch users going live on a game;
+* ``offline``, corresponding to Twitch users ending their stream.
+
+**Default**: No filter
+
 ``--header (message)``
 """"""""""""""""""""""
 
