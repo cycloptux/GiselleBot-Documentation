@@ -98,7 +98,7 @@ Region codes are case-insensitive.
 
 Adds a **whitelist** filter to the feed. In this example, if the status quote contains ``first word`` and/or (see below) ``second word``, the submission will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive. This is especially effective if you are using the provided hashtags to filter specific events of interest.
 
-You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will accont as 2 filter elements: ``foo bar`` and ``test``.
+You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will count as 2 filter elements: ``foo bar`` and ``test``.
 
 The filter works on partial words (e.g. "announce" will work on both "announcement" and "announced").
 

@@ -110,7 +110,7 @@ Starts a notification service for the selected Twitch account. If a user starts 
 
 Adds a **whitelist**, **inclusive** filter for game names to the service. Notifications for the selected user will only be sent if the streamed game is equal to one of the filtered games. Actions related to other games will be skipped.
 
-You can also set "composite words" (two or more words as a single game name) by quoting them: ``"league of legends" fortnite`` will accont as 2 game filter elements: ``league of legends`` and ``fortnite``. All filters are case-insensitive, but the game name has to be exact for the filter to work correctly.
+You can also set "composite words" (two or more words as a single game name) by quoting them: ``"league of legends" fortnite`` will count as 2 game filter elements: ``league of legends`` and ``fortnite``. All filters are case-insensitive, but the game name has to be exact for the filter to work correctly.
 
 .. warning::
     This parameter will only work for games that are set at the beginning of a stream. Changing the game throughout a stream will not trigger the additional "Live" notification.
