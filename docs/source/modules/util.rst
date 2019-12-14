@@ -558,12 +558,10 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Converts a long URL into a short URL using TinyURL as shortening service.
-
-URLs that are already known to the bot will be fetched from the local cache. Users will have the ability to request an additional online check by clicking on the available reaction if the fetched URL is invalid.
+Converts a long URL into a short URL using the proprietary **gisl.eu** shortening service.
 
 .. note::
-    According to the `TinyURL website <https://tinyurl.com/>`_, their short URLs never expire. This means a new request will probably still give the same result from the online cache.
+    URLs shortened using the gisl.eu service never expire, unless deleted by the person that created the short URL (feature not available yet).
 
 Examples
 ^^^^^^^^
