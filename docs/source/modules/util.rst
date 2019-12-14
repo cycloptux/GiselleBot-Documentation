@@ -288,6 +288,34 @@ Examples
 
 ....
 
+|bot_prefix|\ toggleembed
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ temb [message ID(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Hides or unhides an embed in a message. Provide no arguments to hide/unhide the latest message containing an embed in the current channel.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ temb
+    |bot_prefix|\ temb 123456789098765432
+    |bot_prefix|\ temb 123456789098765432 234567890987654321 345678909876543212
+
+....
+
 |bot_prefix|\ emojify
 ---------------------
 
