@@ -85,23 +85,3 @@ Examples
 
     |bot_prefix|\ urban guinea tee
     
-....
-
-|bot_prefix|\ ytsearch
-----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ vsearch (search string)
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Looks for YouTube videos based on the selected lookup string. The top result will be available to be played in Discord.
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ ytsearch veritasium

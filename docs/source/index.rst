@@ -67,10 +67,10 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    
 .. toctree::
    :maxdepth: 1
-   :caption: Modules & Command List
+   :caption: Moderation & Administration
    :glob:
    
-   modules/*
+   moderation_and_administration/*
    
 .. toctree::
    :maxdepth: 1
@@ -81,10 +81,31 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    
 .. toctree::
    :maxdepth: 1
+   :caption: Fun & Games
+   :glob:
+   
+   fun_and_games/*
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Utility
+   :glob:
+   
+   utility/*
+   
+.. toctree::
+   :maxdepth: 1
    :caption: Game Integrations
    :glob:
    
    game_integrations/*
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Other Modules
+   :glob:
+   
+   other_modules/*
    
 .. toctree::
    :maxdepth: 1
