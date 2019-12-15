@@ -562,6 +562,7 @@ Converts a long URL into a short URL using the proprietary **gisl.eu** shortenin
 
 .. note::
     URLs shortened using the gisl.eu service never expire, unless deleted by the person that created the short URL (feature not available yet).
+    The original URLs are saved as encrypted strings within the redirection database. Any sensitive data contained in the URL (authentication keys, login info, etc.) will not be exposed in case of a breach.
 
 Examples
 ^^^^^^^^
