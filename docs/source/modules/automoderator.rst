@@ -2,7 +2,7 @@
 Server Moderation (AutoModerator)
 *********************************
 
-|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **6** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
+|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **7** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
 
 .. warning::
     This guide assumes you are familiar with the manual moderation module of |bot_name|\ . If you have any doubt about one or more of the actions or parameters that are used within the AutoModerator module, try checking :ref:`moderation-module` first.
@@ -24,6 +24,9 @@ Supported Triggers
 
 .. note::
     Discord lag or connection problems can cause Anti-Spam and Anti-Attachment Spam false positives.
+    
+.. note::
+    The Server Invites, Banned Words and NSFW Images triggers also support message editing: messages will be re-checked upon being edited.
     
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
