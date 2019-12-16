@@ -371,7 +371,7 @@ Examples
 Administrator Commands
 ======================
 
-Other than being automatically treated as supervisors, administrators also have access to a few configuration commands used to apply server-specific raid room settings.
+Administrators and server managers (users with "Manage Server" permissions) have access to a few configuration commands used to apply server-specific raid room settings.
 
 .. _rrasetsvrole:
 
@@ -390,7 +390,7 @@ Toggles one or more role(s) as supervisor role (see :ref:`supervisor-commands`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Guild
 | **Bot**: Manage Channels, Manage Messages
 
 Examples
@@ -424,12 +424,12 @@ Type can be either ``text`` or ``voice``. The overall default is ``text``.
 ``--members``
 """""""""""""
 
-This param lets administrators configure the default value for the number of members in a raid room if ``--members`` is omitted in :ref:`rrcreate`.
+This param lets administrators and managers configure the default value for the number of members in a raid room if ``--members`` is omitted in :ref:`rrcreate`.
 
 ``--max-members``
 """""""""""""""""
 
-This param lets administrators configure the soft cap for the maximum number of members that a user can request by using the ``--members`` param in :ref:`rrcreate`.
+This param lets administrators and managers configure the soft cap for the maximum number of members that a user can request by using the ``--members`` param in :ref:`rrcreate`.
 
 The hard cap for the maximum number of members that can join a room is set to 9999.
 
@@ -438,12 +438,12 @@ The hard cap for the minimum number of members that can join a room is set to 2.
 ``--duration``
 """"""""""""""
 
-This param lets administrators configure the default value for the duration of a raid room if ``--duration`` is omitted in :ref:`rrcreate`.
+This param lets administrators and managers configure the default value for the duration of a raid room if ``--duration`` is omitted in :ref:`rrcreate`.
 
 ``--max-duration``
 """"""""""""""""""
 
-This param lets administrators configure the soft cap for the duration of a raid room that a user can request by using the ``--duration`` param in :ref:`rrcreate`.
+This param lets administrators and managers configure the soft cap for the duration of a raid room that a user can request by using the ``--duration`` param in :ref:`rrcreate`.
 
 The hard cap for the longest duration of a room is set to 1 year.
 
@@ -451,7 +451,7 @@ The hard cap for the shortest duration of a room is set to 10 minutes.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Guild
 | **Bot**: Manage Channels, Manage Messages
 
 Examples

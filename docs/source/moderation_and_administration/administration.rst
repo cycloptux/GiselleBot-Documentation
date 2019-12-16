@@ -40,7 +40,7 @@ Using the command without any argument will show the current prefix.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^

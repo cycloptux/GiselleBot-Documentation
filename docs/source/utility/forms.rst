@@ -45,7 +45,7 @@ Pairs a Discord server with a Trello team. Using the command without the team na
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 

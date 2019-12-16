@@ -123,7 +123,7 @@ Examples
     
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 

@@ -4,7 +4,7 @@ Music
 
 The Music module enables users to listen to YouTube music in a Discord server's dedicated voice channel.
 
-The Music module must be first enabled by an Administrator by setting a music channel with the |bot_prefix|\ mchannel command.
+The Music module must be first enabled by a server manager (someone with **Manage Server** permissions) by setting a music channel with the |bot_prefix|\ mchannel command.
 
 .. admonition:: Premium
 
@@ -33,7 +33,7 @@ Using "-" as argument will remove the current authorized music channel and disab
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
@@ -103,7 +103,7 @@ For a vote skip to take effect, **70%** of the voice channel members must agree.
 
 .. note::
     Vote skip will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
-    Administrators will bypass the voting system.
+    Server managers (users with "Manage Server" permissions) will bypass the voting system.
 
 ....
 
@@ -279,7 +279,7 @@ For a vote skip to take effect, **70%** of the voice channel members must agree.
 
 .. note::
     Vote skip will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
-    Administrators will bypass the voting system.
+    Server managers (users with "Manage Server" permissions) will bypass the voting system.
 
 ....
 

@@ -19,7 +19,7 @@ The Administration module is the first module you should use when managing a Dis
 This guide will serve as a brief introduction for how, why, and when you should use these commands. It is not meant as a replacement to the documentation for each command. For more details, please consult the :ref:`administration` full documentation page.
 
 .. warning::
-    This guide assumes you have all the necessary permissions to run each command. The easiest way to make sure all commands work is to have the Administrator permission on one of your roles, and to make sure the bot has Administrator on one of its roles. For specifics on the permissions needed for each command, see :ref:`administration`.
+    This guide assumes you have all the necessary permissions to run each command. The easiest way (but not necessarily suggested, in an absolute way) to make sure all commands work is to have the Administrator permission on one of your roles, and to make sure the bot has Administrator on one of its roles. For specifics on the permissions needed for each command, see :ref:`administration`.
 
 Bot Prefix
 ----------

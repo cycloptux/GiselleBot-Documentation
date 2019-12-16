@@ -75,7 +75,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Lists all schedulers that the user created within the server. Administrators will be able to see all schedulers created by anyone within the current server.
+Lists all schedulers that the user created within the server. Server managers (users with "Manage Server" permissions) will be able to see all schedulers created by anyone within the current server.
 
 It may take up to a few seconds before a newly added scheduler appears in the list.
 
@@ -99,7 +99,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Deletes a scheduler on the specified index, as shown by |bot_prefix|\ schedulelist. Users can only remove their own schedulers. Administrators can remove any scheduler created by anyone within the current server.
+Deletes a scheduler on the specified index, as shown by |bot_prefix|\ schedulelist. Users can only remove their own schedulers. Server managers (users with "Manage Server" permissions) can remove any scheduler created by anyone within the current server.
 
 Examples
 ^^^^^^^^

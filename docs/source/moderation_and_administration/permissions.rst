@@ -4,15 +4,15 @@
 Permissions System
 ******************
 
-As soon as you invite the bot to your server, a few modules will be immediately available to all of your members. The restricted modules, on the other hand, will only be available to server **administrators**.
+As soon as you invite the bot to your server, a few modules will be immediately available to all of your members. The restricted modules, on the other hand, will only be available to **server managers** (users with "Manage Server" permissions).
 
-This module lets administrators authorize server members to use any of the bot's modules, on a module basis.
+This module lets server managers authorize server members to use any of the bot's modules, on a module basis.
 
 Each module can be enabled for a list of roles and/or individual users, so that authorized members will immediately have access to all of the commands contained in said module. Discord permissions checks (e.g. "Manage Messages") will still apply and take precedence, where applicable. The list of Discord permissions needed to run each command is written below each command within this documentation.
 
-Modules can also be **completely disabled** within a server, which means not even administrators will be able to use them unless the module is re-enabled (see :ref:`permtogglemod`).
+Modules can also be **completely disabled** within a server, which means not even server managers will be able to use them unless the module is re-enabled (see :ref:`permtogglemod`).
 
-**Before** role permissions are checked, another layer of permissions are checked **for non-administrator members**: channel overrides. Each module can be locked to be only run **within** a specified set of channels (**whitelist** mode) or **outside** a specified set of channels (**blacklist** mode). See :ref:`channel-overrides`.
+**Before** role permissions are checked, another layer of permissions are checked **for non-manager members**: channel overrides. Each module can be locked to be only run **within** a specified set of channels (**whitelist** mode) or **outside** a specified set of channels (**blacklist** mode). See :ref:`channel-overrides`.
 
 .. note::
     A small subset of commands ignores these limitations and can **always** be run by everyone in the server, as long as the whole module isn't disabled. These commands have a dedicated way of setting their permissions, which is usually specified in the dedicated module page. This particular set contains the following commands: :ref:`bid`, :ref:`listrules`, :ref:`lsar`, :ref:`iam` and :ref:`iamnot`.
@@ -22,7 +22,7 @@ Modules can also be **completely disabled** within a server, which means not eve
 Default Module Permissions
 ==========================
 
-Here's the list of modules that are automatically enabled for everyone as soon as the bot joins a server and those that are locked to administrators only. Internal module permissions and in-Discord permissions checks (e.g. "Manage Messages") still apply.
+Here's the list of modules that are automatically enabled for everyone as soon as the bot joins a server and those that are locked to server managers only. Internal module permissions and in-Discord permissions checks (e.g. "Manage Messages") still apply.
 
 Available to everyone
 ---------------------
@@ -39,8 +39,8 @@ Available to everyone
 * social
 * util
 
-Available to administrators
----------------------------
+Available to managers
+---------------------
 
 *Full list work-in-progress*
 
@@ -134,7 +134,7 @@ Examples
 .. _permtogglemod:
 
 |bot_prefix|\ permtogglemod
--------------------------------
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -146,7 +146,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the whole module within the current server.
 
-Completely disabling a module will render it unusable by anyone, including administrators. The module will virtually disappear from the server until re-enabled.
+Completely disabling a module will render it unusable by anyone, including administrators and managers. The module will virtually disappear from the server until re-enabled.
 
 Examples
 ^^^^^^^^

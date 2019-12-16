@@ -15,7 +15,7 @@ In order to fully take advantage of this module, enabling the case/scoring syste
 Configuration Commands
 ======================
 
-These configuration commands are only enabled for those with Administrator permissions. The usage of these commands will be recorded in the **Moderation** log.
+These configuration commands are only enabled for those with Manage Server permissions. The usage of these commands will be recorded in the **Moderation** log.
 
 .. _moderation-role:
 
@@ -34,7 +34,7 @@ Adds or removes a role as a moderator role (Mod Role), enabling/disabling them t
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
@@ -63,7 +63,7 @@ If enabled, attempting to take moderation actions on a moderator will return an 
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -86,7 +86,7 @@ Muted users will have the following permissions disabled for every channel (besi
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 | **Bot**: Manage Roles, Mute Members
 
 ....
@@ -115,7 +115,7 @@ When the bot sets channel permissions for the mute role, this special channel(s)
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -138,7 +138,7 @@ Image banned users will have the following permissions disabled for every channe
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 | **Bot**: Manage Roles
 
 ....
@@ -162,7 +162,7 @@ Channel banned users will have the following permissions disabled for the specif
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 | **Bot**: Manage Roles
 
 ....
@@ -186,7 +186,7 @@ Muted users will have the following permissions disabled for the specified chann
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 | **Bot**: Manage Roles, Mute Members
 
 ....
@@ -210,7 +210,7 @@ Image banned users will have the following permissions disabled for the specifie
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 | **Bot**: Manage Roles
 
 ....
@@ -918,7 +918,7 @@ Deletes one (or more) existing case(s). Deleted cases are never actually removed
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
@@ -944,7 +944,7 @@ Restores one (or more) previously deleted case(s).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 Examples
 ^^^^^^^^
@@ -1001,7 +1001,7 @@ Adds a custom rule to the rules list. Adding a custom rule generates a server-sp
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1024,7 +1024,7 @@ Deletes a custom rule from the list of rules. Use |bot_prefix|\ toggleglobalrule
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1046,7 +1046,7 @@ Use ``--channel -`` to convert a channel-specific rule into a server wide rule.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1075,7 +1075,7 @@ Using the command with no arguments will show the current settings for the serve
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1095,7 +1095,7 @@ Sets the number of days after which warnings will expire for a particular server
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1117,7 +1117,7 @@ Any warnings worth fewer points than the |bot_prefix|\ expirypoints value will n
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
 
 ....
 
@@ -1137,4 +1137,4 @@ Sets the number of points at which a mute, ban, or "absolute ban" is recommended
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Administrator
+| **User**: Manage Server
