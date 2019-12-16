@@ -31,7 +31,7 @@ release = '3.2.0'
 # Substitutions
 rst_prolog = '''
 .. |bot_name| replace:: GiselleBot
-.. |bot_invite| replace:: https://discordapp.com/oauth2/authorize?client_id=356831787445387285&permissions=301329654&scope=bot
+.. |bot_invite| replace:: https://gisl.eu/invite
 .. |bot_prefix| replace:: !
 .. |bot_prefix_name| replace:: an exclamation point
 '''
