@@ -299,7 +299,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Hides or unhides an embed in a message. Provide no arguments to hide/unhide the latest message containing an embed in the current channel.
+Hides or unhides an embed in a message in the current channel. Provide no arguments to hide/unhide the latest message containing an embed in the channel.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
