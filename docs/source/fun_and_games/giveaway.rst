@@ -98,6 +98,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Picks one (or more, if the ``--winners`` parameter is used) new winner(s) for an already ended giveaway. The message ID is optional: if omitted, the most recent (ended) giveaway in the channel will be considered.
 
+You can only reroll up to 10 winners per command run.
+
 This command will not overwrite the existing winners in the original message. It will also keep track of former winners and previous rerolls to make sure that the new winners weren't already picked in a previous iteration of the command.
 
 .. note::
