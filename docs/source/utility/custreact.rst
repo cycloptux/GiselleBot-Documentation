@@ -153,3 +153,7 @@ Examples
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Deletes all server specific custom reactions. Global custom reactions can only be deleted by the bot owner.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
