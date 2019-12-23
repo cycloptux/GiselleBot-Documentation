@@ -82,7 +82,7 @@ Examples
 
     |bot_prefix|\ gcend
     |bot_prefix|\ gcend 123456789098765432
-
+    
 ....
 
 |bot_prefix|\ gcreroll
@@ -111,6 +111,21 @@ Examples
 
     |bot_prefix|\ gcreroll
     |bot_prefix|\ gcreroll 123456789098765432 --winners 5
+
+....
+
+|bot_prefix|\ gclist
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ gclist
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all ongoing giveaways in the current server.
 
 ....
 
