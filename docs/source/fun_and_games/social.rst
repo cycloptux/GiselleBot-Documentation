@@ -229,6 +229,39 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ noexprole
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ noexprole [- {or} role id/mention/q_name]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+In order to block certain users from gaining server EXP when messaging (refer to the top of this page), server managers can set one role as "No-Experience Role": users having this role will not gain any experience from their messages.
+
+Running this command with one role identifier as argument will set that role as No-EXP Role.
+
+Running this command with ``-`` as argument will disable this feature (removing the "No-EXP Role" flag from the former role).
+
+Running this command without arguments will show the current No-EXP Role, if any.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ noexprole @Spammer
+    |bot_prefix|\ noexprole
+    |bot_prefix|\ noexprole -
+
+....
+
 |bot_prefix|\ notifychannel
 ---------------------------
 
