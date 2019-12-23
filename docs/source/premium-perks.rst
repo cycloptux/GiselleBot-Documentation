@@ -39,14 +39,14 @@ By becoming a **Tier 1** (or higher) patron, you'll get access to:
 * (Command Scheduler) **Command Scheduling** interval raised from 1 hour to **12 hours**
 * (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 
-Tier 2: Premium Support, Extended Music, Trivia & Giveaway Module
-=================================================================
+Tier 2: Premium Support, Extended Modules
+=========================================
 
 By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://gisl.eu/docs>`_, where you'll get a priority answer from the developer upon encountering any issue.
 
 You'll also get to pick a custom color for your name in the official support server.
 
-Tier 2 patrons unlock the **giveaway module**, unlock some improvements on the **trivia module** and get the whole potential of the **music module**, plus some more perks:
+Tier 2 patrons unlock some improvements on the **trivia module** and get the whole potential of the **music module**, plus some more perks:
 
 * (Trivia) **up to 30 questions** per trivia game
 * (Trivia) maximum trivia games duration raised to **up to 7 days**
