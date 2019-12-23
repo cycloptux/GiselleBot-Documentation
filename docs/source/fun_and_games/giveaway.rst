@@ -121,11 +121,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ gcreaction (emoji)
+    |bot_prefix|\ gcreaction [emoji]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Sets a custom emoji for the giveaway campaign in the current server.
+
+Use with no parameters (no emoji) to show the current giveaway reaction emoji. Use with ``-`` as parameter to restore the default emoji: 🧩
 
 .. warning::
     You **must** use reactions that are either "global" (Discord native emojis) or present in the server.
@@ -140,4 +142,6 @@ Examples
 
     |bot_prefix|\ gcreaction 😀
     |bot_prefix|\ gcreaction :BlobOwO:
+    |bot_prefix|\ gcreaction -
+    |bot_prefix|\ gcreaction
 
