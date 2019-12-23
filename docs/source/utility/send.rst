@@ -70,6 +70,11 @@ This command is meant to test the functionality of a Discord webhook. For this r
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Webhooks
+| **Bot**: Manage Webhooks
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
