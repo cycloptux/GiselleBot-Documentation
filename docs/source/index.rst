@@ -108,10 +108,3 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    :glob:
    
    other_modules/*
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: Modules & Command List (Premium)
-   :glob:
-   
-   premium_modules/*
