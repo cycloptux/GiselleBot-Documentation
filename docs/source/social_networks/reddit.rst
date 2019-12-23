@@ -147,6 +147,10 @@ Removes any custom avatar from the webhook. The real webhook avatar (the one tha
 
 **Default**: ``false`` (Automated avatars will be applied)
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Webhooks
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
@@ -172,6 +176,10 @@ Command Description
 .. warning::
     Editing the webhook will not change the existing params, it will completely replace them. Take note of the existing params first, and use them in the command!
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Webhooks
+
 |bot_prefix|\ reddrhook
 -----------------------
 
@@ -184,6 +192,10 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Stops a previously set Reddit stream and removes its link to the server webhook. The stream index is the number shown with |bot_prefix|\ reddlhook.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Webhooks
 
 Examples
 ^^^^^^^^
