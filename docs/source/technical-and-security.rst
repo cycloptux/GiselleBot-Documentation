@@ -60,7 +60,7 @@ Encryption in Transit
 Encryption at Rest
 ------------------
 * All storage media (hard disks, object storage repositories, etc.) are protected through low-level encryption.
-* Sensitive and personal data stored in the database is encrypted with AES-128-GCM algorithm.
+* Potentially sensitive and personal data (basically, anything that can be assimilated to a string) stored in the database is encrypted using military-grade AES-256-GCM and AES-128-GCM algorithms.
 * Commands that generate big files (such as a chat log) may transmit the file to the user via Direct Message by temporarily storing it into an encrypted Object Storage bucket. The archive itself is also encrypted using 7-Zip's encryption algorithm, based on AES-256.
   
   * The password is purposefully never logged into the bot internal logs and is only known to the end user.
