@@ -30,20 +30,44 @@ Available to everyone
 * alarm
 * azurlane
 * currency
+* digimon
 * games
+* help
+* mahjongsoul
 * miscellaneous
 * music
 * raidroom
 * reactions
 * scheduler
 * social
+* trivia
+* twitch
 * util
+* youtube
 
-Available to managers
+....
+
+Permissions Debugging
+=====================
+
+|bot_prefix|\ verbose
 ---------------------
 
-*Full list work-in-progress*
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
 
+    |bot_prefix|\ verbose
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles **verbose mode** for the **current user** in the **current server**.
+
+Users in verbose mode will have |bot_name| send a Direct Message to them whenever one of their commands is rejected silently for a permissions issue. The output of verbose mode is always sent via DM, hence it can be activated on a user's basis on each specific server without messing with the server's activities.
+
+.. note::
+    This command is always available to everyone.
+    
 ....
 
 Roles and Users Permissions
