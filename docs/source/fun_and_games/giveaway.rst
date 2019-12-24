@@ -142,6 +142,8 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Sets a custom emoji for the giveaway campaign in the current server.
 
+This change only applies to new giveaways: giveaway campaigns that are already running will keep their former reaction setting.
+
 Use with no parameters (no emoji) to show the current giveaway reaction emoji. Use with ``-`` as parameter to restore the default emoji: 🧩
 
 .. warning::
