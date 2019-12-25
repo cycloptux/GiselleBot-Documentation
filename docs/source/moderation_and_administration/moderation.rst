@@ -650,10 +650,12 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **500** messages. If you need to delete more than 500, you can append ``--force`` to remove the cap.
+Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **500** messages.
 
-.. warning::
-    **BEWARE**: There isn't a higher cap. This command could potentially nuke a whole channel if ``--force`` is used. For this reason, the usage of the ``--force`` parameter is restricted to those with **Administrator** permissions.
+..  If you need to delete more than 500, you can append ``--force`` to remove the cap.
+
+    .. warning::
+        **BEWARE**: There isn't a higher cap. This command could potentially nuke a whole channel if ``--force`` is used. For this reason, the usage of the ``--force`` parameter is restricted to those with **Administrator** permissions.
 
 The filter items serve to delete/ignore a subset of messages in the set of messages specified by the integer argument. The list of available filters is:
 
