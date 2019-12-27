@@ -353,7 +353,9 @@ Command Description
 
 |bot_prefix|\ ban has one additional, optional argument before the user identifier(s): either the number 24, or the number 7. If this argument is omitted, the user is banned without their message history being deleted. Otherwise, the bot uses the native ban API to delete the last 24 hours or 7 days of the banned users' message history.
 
-This also works banning users that are currently not in the server. It is advised to use the user ID for that.
+The same parameter can also be passed by using the ``--days`` argument (e.g. ``--days 1`` or ``--days 7``).
+
+This command also works for banning users that are currently not in the server, as long as the user is known/cached by the bot. It is advised to use the user ID for that.
 
 Refer to :ref:`moderation` for the exact command syntax.
 
