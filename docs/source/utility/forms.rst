@@ -19,7 +19,7 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
     
 
 .. note::
-    A **web dashboard (BETA)** will soon be available to create, edit and and maintain forms.
+    Users that are enabled to use the module using the :ref:`permissions` will always be authorized to accept or reject any submission coming from any form. In order to enable more roles to accept/reject specific forms, you can set one or more roles as "authorized roles" on each form both during the initial setup of the form and through the |bot_prefix|\ formsetup command.
     
 .. admonition:: Premium
 
@@ -176,8 +176,6 @@ Each question has to be set using 5 fields, separated by one ``|`` character.
 .. hint::
     In order to ease the creation of these complex strings, you can use this `Forms Builder Helper <https://docs.google.com/spreadsheets/d/1rn6CY2PVD2Nn0cda1gfF_E3OysBcBN63ma-BG602NyI/edit?usp=sharing>`_ to create a pre-made string to be used in this phase. Just create a copy of that sheet and customize it to your needs.
     
-When setting the authorization channel, "authorized users" will be those that are enabled to use the module using the :ref:`permissions`, not those that are mentioned in when a new feedback is posted.
-
 ....
 
 |bot_prefix|\ formsetup
@@ -204,11 +202,7 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
 4. "Set color" sets the form embeds color.
 5. "Set authorization channel" sets the channel where form submissions are sent to for the initial validation by the authorized users. This option is mandatory.
 6. "Set forwarding channel(s)" sets the additional forwarding channels where, if set, the public in-Discord summary message will be sent to. This is optional.
-7. "Set role mention(s)" sets the list of mentioned roles when a submission is received.
-
-.. note::
-    Mentioned roles are **not** the roles that are authorized to validate the entry: those roles are set through the **Permissions** module (see :ref:`permenablemod`).
-
+7. "Set authorized role(s)" sets the list of roles that will be both authorized to accept and reject submissions to the current form, and mentioned within the authorization channel when a submission is received.
 8. "Toggle share mode" sets the final target of a validated submission to either Trello, or just Discord.
 9. "Toggle publish status" works as an alias of |bot_prefix|\ formpublish and |bot_prefix|\ formwithhold to make a form available or unavailable for server members through |bot_name|\ 's DMs.
 10. "Toggle upvoting" enables or disables the upvote tracking feature (and upvote arrow application for new submissions) on a specific form.
