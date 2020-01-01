@@ -1032,6 +1032,29 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ toggleglobalrule
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ toggleglobalrule (rule id/name/alias)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Deletes (hides) a default native rule from the list of rules. Use |bot_prefix|\ deleterule to hide a custom rule from the list of rules (see above).
+
+.. note::
+    In order to preserve the history of users that were previously moderated according to a specific rule, "deleted" rules are never actually deleted. "Deleted" rules are instead **hidden**, and running the |bot_prefix|\ toggleglobalrule again on the same rule ID will restore the rule in its previous, visible state.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+....
+
 |bot_prefix|\ editrule
 ----------------------
 
