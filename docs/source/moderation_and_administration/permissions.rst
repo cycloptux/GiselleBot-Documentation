@@ -65,7 +65,11 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles **verbose mode** for the **current user** in the **current server**.
 
-Users in verbose mode will have |bot_name| send a Direct Message to them whenever one of their commands is rejected silently for a permissions issue. The output of verbose mode is always sent via DM, hence it can be activated on a user's basis on each specific server without messing with the server's activities.
+Users in verbose mode will have |bot_name| send a Direct Message to them whenever one of their commands is rejected silently for a permissions issue.
+
+In addition, users incorrectly typing a command may receive a DM with a suggestion of a correct command they actually have access to (e.g. typing |bot_prefix|\ bang as moderator will suggest |bot_prefix|\ ban, while typing the same incorrect command as normal user will suggest |bot_prefix|\ urban).
+
+The output of verbose mode is **always sent via DM**, hence it can be activated on a user's basis on each specific server without messing with the server's activities.
 
 .. note::
     This command is always available to everyone.
