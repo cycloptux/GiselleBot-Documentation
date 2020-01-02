@@ -366,6 +366,29 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ timeban
+---------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+|bot_prefix|\ timeban bans a user from the current server for the specified amount of time.
+
+Once the ban period has ended, as long as the user hasn't been permanently banned by "overwriting" the timed ban with a fully fledged |bot_prefix|\ ban (or manually re-allowed through |bot_prefix|\ unban), the ban will be automatically lifted. If the time argument is omitted, it will default to 24 hours.
+
+Please allow for up to 1 extra minute before the ban is actually lifted after it has officially expired.
+
+This command also works for banning users that are currently not in the server, as long as the user is known/cached by the bot. It is advised to use the user ID for that.
+
+Refer to :ref:`moderation` for the exact command syntax.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Ban Members
+| **Bot**: Ban Members
+
+....
+
 |bot_prefix|\ delayban
 ----------------------
 
