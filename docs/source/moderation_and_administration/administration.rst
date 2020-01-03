@@ -550,6 +550,32 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ sarmr
+-------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the **periodic monitoring of role requirements** for self-assigned roles.
+
+The configuration of self-assignable roles allows for preventing users with certain roles from receiving roles from a certain group, or to only receive roles from a group if they already have (one or more) different, particular role(s).
+
+By default, the monitoring feature is **disabled** and prerequisite checks only happen upon the assignment (or removal) of the role.
+
+Upon activating the periodic monitoring feature, self-assignable roles are re-checked automatically so that if a user fails the prerequisite checks (e.g. by either having an ignored role, or losing a required role, or having multiple roles from a group in "Single" mode), they will lose the previously acquired role.
+
+Since one role can be in multiple groups, and these groups may have different settings, a role will only be removed if that role fails **all** of the prerequisite checks among the different group settings.
+
+.. note::
+    This check only happens every 15-30 minutes.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+....
+
 .. _iam:
 
 |bot_prefix|\ iam
