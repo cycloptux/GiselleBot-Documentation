@@ -1049,3 +1049,46 @@ Command Description
 Lists all **pending** submitted emojis that users submitted through this system, with a quick link to jump to the verification channel message.
 
 If this command is used with a user identifier, it will filter the output on emojis submitted by the specified user.
+
+....
+
+.. _emojisubmit:
+
+|bot_prefix|\ emojisubmit
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojisubmit [existing emoji, or image URL] (valid emoji name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lets users submit a new emoji, provided they have at least one of the "emoji submitter" roles.
+
+.. note::
+    This command is always available to everyone. A proper configuration of the emoji submitter roles will avoid an improper use of this command.
+    
+    Users won't need "Manage Emojis" permissions to run this command, but |bot_name| will still check for its own "Manage Emojis" permissions to be sure it can (eventually) upload the emoji upon a successful verification, if any.
+    
+    By default, no role is set as emoji submitter role (before a proper configuration) and this command will not have any effect.
+
+The emoji image can be provided by using an existing emoji **(this will only work if the bot has access to the emoji from another server)**, or a valid image URL, or an image provided in forms of an attachment to the submit message. Emoji images must be under 256 KB in size and one of these formats: ``.jpg``, ``.jpeg``, ``.png``, ``.gif``.
+
+Emoji names must be at least 2 characters long (and no more than 32 characters long) and can only contain alphanumeric characters and underscores. **You must not include the colon (:) characters in the emoji name.** Users are also not allowed to submit an emoji that has the same name of an existing server emoji.
+
+|bot_name| will attempt to limit the amount of duplicate emoji submissions by checking, wherever possible, the ID of the submitted emoji with the IDs of already active server emojis.
+
+In order to avoid unpredictable conflicts, if a user tries to submit an emoji while having more than one "emoji submitter" role up, **only the highest role will be considered** for the optional limits/configurations.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **Bot**: Manage Emojis
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ emojisubmit https://cdn.discordapp.com/emojis/614486002291048459.gif?v=1 amegablobsweats

@@ -15,7 +15,7 @@ Modules can also be **completely disabled** within a server, which means not eve
 **Before** role permissions are checked, another layer of permissions are checked **for non-manager members**: channel overrides. Each module can be locked to be only run **within** a specified set of channels (**whitelist** mode) or **outside** a specified set of channels (**blacklist** mode). See :ref:`channel-overrides`.
 
 .. note::
-    A small subset of commands ignores these limitations and can **always** be run by everyone in the server, as long as the whole module isn't disabled. These commands have a dedicated way of setting their permissions, which is usually specified in the dedicated module page. This particular set contains the following commands: :ref:`verbose`, :ref:`bid`, :ref:`listrules`, :ref:`submit`, :ref:`lsar`, :ref:`iam` and :ref:`iamnot`.
+    A small subset of commands ignores these limitations and can **always** be run by everyone in the server, as long as the whole module isn't disabled. These commands have a dedicated way of setting their permissions, which is usually specified in the dedicated module page. This particular set contains the following commands: :ref:`verbose`, :ref:`emojisubmit`, :ref:`bid`, :ref:`listrules`, :ref:`submit`, :ref:`lsar`, :ref:`iam` and :ref:`iamnot`.
     
 ....
 
