@@ -191,7 +191,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetmsg [message]
+    |bot_prefix|\ greetmsg [message content]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -200,9 +200,14 @@ Sets a new join announcement message which will be shown in the server's channel
 You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
@@ -225,7 +230,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetdmmsg [message]
+    |bot_prefix|\ greetdmmsg [message content]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -234,9 +239,14 @@ Sets a new join announcement message which will be sent to the user who joined. 
 You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
@@ -404,7 +414,7 @@ Shows a list of currently set voice channel roles.
     
 .. _self-assignable-roles:
 
-Self-assignable Roles
+Self-Assignable Roles
 =====================
 
 **IMPORTANT NOTE**: The bot will be able to assign a role only if it has both "Manage Roles" permissions **AND** if the role it's trying to assign is **lower** than the highest role the bot has. Please arrange your roles accordingly.
@@ -424,6 +434,14 @@ Each role group can be configured by editing the following settings:
   
 * **Required Roles**: This setting requires users to have **at least one** of the specified roles to be able to self-assign one role within this group.
 * **Ignored Roles**: This setting requires users **not** to have **any** of the specified roles to be able to self-assign one role within this group. Or, in other words, users with at least one of the specified roles won't have access to this group.
+* **Prerequisites Check**: Toggles the **periodic monitoring of role requirements** for self-assigned roles.
+
+  * The configuration of self-assignable roles allows for preventing users with certain roles from receiving roles from a certain group, or to only receive roles from a group if they already have (one or more) different, particular role(s).
+  * By default, the monitoring feature is **disabled** and prerequisite checks only happen upon the assignment (or removal) of the role.
+  * Upon activating the periodic monitoring feature, self-assignable roles **within the selected group** are re-checked automatically so that if a user fails the prerequisite checks (e.g. by either having an ignored role, or losing a required role, or having multiple roles from a group in "Single" mode), they will lose the previously acquired role.
+
+.. note::
+    Prerequisites checks only happen every 15-30 minutes.
 
 In **Single** or **Multiple** mode, you'll also have access to additional, optional settings:
 
@@ -547,32 +565,6 @@ Permissions Needed
 
 | **User**: Manage Messages
 | **Bot**: Manage Messages
-
-....
-
-|bot_prefix|\ sarmr
--------------------
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Toggles the **periodic monitoring of role requirements** for self-assigned roles.
-
-The configuration of self-assignable roles allows for preventing users with certain roles from receiving roles from a certain group, or to only receive roles from a group if they already have (one or more) different, particular role(s).
-
-By default, the monitoring feature is **disabled** and prerequisite checks only happen upon the assignment (or removal) of the role.
-
-Upon activating the periodic monitoring feature, self-assignable roles are re-checked automatically so that if a user fails the prerequisite checks (e.g. by either having an ignored role, or losing a required role, or having multiple roles from a group in "Single" mode), they will lose the previously acquired role.
-
-Since one role can be in multiple groups, and these groups may have different settings, a role will only be removed if that role fails **all** of the prerequisite checks among the different group settings.
-
-.. note::
-    This check only happens every 15-30 minutes.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-
-| **User**: Manage Roles
-| **Bot**: Manage Roles
 
 ....
 
@@ -722,3 +714,338 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ rmupdate 123456789098765432
+
+....
+
+Nitro Server Boost Notifications
+================================
+
+With Server Boosts, Discord added a way for you and your community to work together to unlock fresh new and improved collective perks for a server of your choice, each month, and share those epic perks to the rest of the server community.
+
+.. seealso::
+    You can find everything about Server Boosts at this link: https://support.discordapp.com/hc/en-us/articles/360028038352
+    
+With |bot_name|\ , Server Boosts can now be tracked efficiently, and your members can be greeted through a custom message when they gift your server with a Boost!
+
+.. note::
+    Due to technical issues (specifically, the lack of a real "event" in case of a Server Boost), |bot_name| will do its best to keep track of the Boosts that are gifted to your server. That said, users gifting more than 1 Boost to your server will not trigger the Boost event, and the removal of a Boost won't always be able to track down who removed the Boost.
+    
+Here's the full list of available commands for this sub-module:
+
+|bot_prefix|\ nsbaddnotif
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbaddnotif [channel id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles Nitro Server Boost announcements, on the selected channel(s), when someone **Boosts** the server.
+
+If used without any (valid) argument, the command will show which channels are currently enabled for these announcements.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbaddnotif
+    |bot_prefix|\ nsbaddnotif 123456789098765432 234567890987654321
+    
+....
+
+|bot_prefix|\ nsbaddtemplate
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbaddtemplate [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new Nitro Server Boost announcement message which will be shown in the selected server's channel(s) when someone **Boosts** the server. Using it with no message will show the current template.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbaddtemplate
+    |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch! **%server%** now has **%boost_number% boost(s)**.
+    
+....
+
+|bot_prefix|\ nsbremnotif
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbremnotif [channel id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles Nitro Server Boost announcements, on the selected channel(s), when someone **removes a Boost** for the server.
+
+If used without any (valid) argument, the command will show which channels are currently enabled for these announcements.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbremnotif
+    |bot_prefix|\ nsbremnotif 123456789098765432 234567890987654321
+    
+....
+
+|bot_prefix|\ nsbremtemplate
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbremtemplate [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new Nitro Server Boost announcement message which will be shown in the selected server's channel(s) when someone **removes a Boost** for the server. Using it with no message will show the current template.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbremtemplate
+    |bot_prefix|\ nsbremtemplate Oh no! %user% has just withdrawn a boost! **%server%** now has **%boost_number% boost(s)**.
+    
+....
+
+|bot_prefix|\ nsbdmnotif
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbaddnotif [channel id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles Nitro Server Boost announcements, on the selected channel(s), when someone **Boosts** the server.
+
+If used without any (valid) argument, the command will show which channels are currently enabled for these announcements.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbaddnotif
+    |bot_prefix|\ nsbaddnotif 123456789098765432 234567890987654321
+    
+....
+
+|bot_prefix|\ nsbdmtemplate
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ nsbdmtemplate [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new Nitro Server Boost "thank you" message which will be sent to the user who boost the server. Using it with no message will show the current template.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ nsbdmtemplate
+    |bot_prefix|\ nsbdmtemplate Thanks for boosting **%server%**! The server now has **%boost_number% boost(s)**.
+    
+....
+
+|bot_prefix|\ nsblist
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ nsblist
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all members that contributed with at least one Server Boost in the current server.
+
+....
+
+.. _emoji-submission:
+
+Emoji Submissions
+=================
+
+Through the "Emoji Submissions" sub-module, you can let your members submit new emojis to be used your server.
+
+You can configure one or more roles that will be allowed to submit new emojis. If a user tries to submit an emoji while having more than one role up, **only the highest role will be considered** in order to avoid unpredictable conflicts.
+
+For each role, you will be able to configure:
+
+* Whether the role will be allowed to submit emojis without further verification.
+  
+  * By setting a verification channel, authorized users (more on that below) will be able to accept or reject an emoji submission before it's actually uploaded.
+  * By disabling the verification channel, the emoji will be immediately uploaded without further verification.
+  * By **default**, the additional verification step is **disabled**.
+  
+* Which roles will be able to accept or reject an emoji submission, provided you enabled the verification channel.
+
+  * These roles will also be mentioned within the verification channel when a submission is received.
+  * Users that are enabled to use the administration module using the :ref:`permissions` will always be authorized to accept or reject any emoji submission.
+  * By **default**, **no additional roles** are enabled to accept or reject emoji submissions.
+  
+* How many emojis (submitted through this system) the role will be allowed to have up at any given time.
+
+  * If the verification step is active, users are virtually allowed to submit any number of emojis. By setting a maximum number of emojis through the dedicated setting, you are locking the maximum number of **accepted** emojis.
+  * By **default**, there is no limit to how many active emojis a user can have.
+
+* Whether the **periodic monitoring of prerequisites** is active for this role.
+
+  * If this option is active, the emojis will be deleted if the user leaves the server and/or if the user loses the role that they "used" to submit the emoji. For example, you can have Nitro Boosters submit one or more emojis, and then have their emoji removed if they stop boosting the server (hence losing the Nitro Boost role).
+  * Even if this option is disabled, emojis that are manually deleted will also be removed from this system.
+  * By **default**, this option is disabled.
+
+.. note::
+    Prerequisites checks only happen every 15-30 minutes.
+
+Here's the full list of available commands for this sub-module:
+
+|bot_prefix|\ esubrole
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ esubrole [role id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the "emoji submitter" status of the selected role(s).
+
+If used without any (valid) argument, the command will show which roles are currently enabled to submit new emojis.
+
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Emojis
+| **Bot**: Manage Emojis
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ esubrole
+    |bot_prefix|\ esubrole 123456789098765432 234567890987654321
+    
+....
+
+|bot_prefix|\ esubsetup
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ esubset (role id/mention/q_name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Opens the interactive setup menu for the selected role. Use the menu items to configure the settings shown in :ref:`emoji-submission`.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Emojis
+| **Bot**: Manage Emojis
+
+....
+
+|bot_prefix|\ esublist
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ esublist [user id/mention/name]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all **active/accepted** submitted emojis that users submitted through this system.
+
+If this command is used with a user identifier, it will filter the output on emojis submitted by the specified user.
+
+....
+
+|bot_prefix|\ esubpending
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ esubpending [user id/mention/name]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists all **pending** submitted emojis that users submitted through this system, with a quick link to jump to the verification channel message.
+
+If this command is used with a user identifier, it will filter the output on emojis submitted by the specified user.
