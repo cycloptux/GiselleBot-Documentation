@@ -981,6 +981,9 @@ Toggles the "emoji submitter" status of the selected role(s).
 
 If used without any (valid) argument, the command will show which roles are currently enabled to submit new emojis.
 
+.. note::
+    If you want to add the "everyone" role as a submitter role, you must either use the mention (which will obviously ping everyone) or the **server ID**.
+
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
