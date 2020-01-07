@@ -51,6 +51,10 @@ You can use one (or more) of these placeholders in your response message:
 * **%channel%**: This will be replaced with the channel name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%prefix%**: This will be replaced with the current prefix for the server.
+* **%globalprefix%**: This will be replaced with the default, global prefix.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 * **%target%**: This will be replaced with anything the user wrote after the trigger.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text in the response parameter, if you want the message to be embedded.
