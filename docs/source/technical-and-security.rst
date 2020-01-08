@@ -30,7 +30,7 @@ The bot is hosted in a public cloud infrastructure (specifically, Amazon Web Ser
 
 * 1 Web Server, hosting the bot dashboard (work-in-progress), documentation website and the API gateway used to communicate with the bots from the external world.
 * 1 Application Server, hosting the bot itself.
-* 3 MongoDB machines, forming an high-availability Replica Set.
+* 3 MongoDB machines, forming a high-availability Replica Set.
 * 1 Container Platform, currently composed of a cluster of 7 virtual server instances, hosting the supporting microservices.
 
 Other than the plain computing power, the cloud infrastructure offers a few other managed services used by the bot:

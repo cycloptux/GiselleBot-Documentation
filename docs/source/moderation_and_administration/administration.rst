@@ -788,7 +788,7 @@ Examples
 .. parsed-literal::
     
     |bot_prefix|\ nsbaddtemplate
-    |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch! **%server%** now has **%boost_number% boost(s)**.
+    |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch!\nThe total Boost count for **%server%** is now **%boost_number%**.
     
 ....
 
@@ -848,7 +848,7 @@ Examples
 .. parsed-literal::
     
     |bot_prefix|\ nsbremtemplate
-    |bot_prefix|\ nsbremtemplate Oh no! %user% has just withdrawn a boost! **%server%** now has **%boost_number% boost(s)**.
+    |bot_prefix|\ nsbremtemplate Oh no! %user% has just withdrawn a boost!\nThe total Boost count for **%server%** is now **%boost_number%**.
     
 ....
 
@@ -859,20 +859,11 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal:: 
     
-    |bot_prefix|\ nsbaddnotif [channel id(s)/mention(s)/q_name(s)]
+    |bot_prefix|\ nsbdmnotif
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Toggles Nitro Server Boost announcements, on the selected channel(s), when someone **Boosts** the server.
-
-If used without any (valid) argument, the command will show which channels are currently enabled for these announcements.
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-    
-    |bot_prefix|\ nsbaddnotif
-    |bot_prefix|\ nsbaddnotif 123456789098765432 234567890987654321
+Toggles Nitro Server Boost "thank you" messages, sent to the users who **Boost** the server via Direct Message.
     
 ....
 
@@ -908,7 +899,7 @@ Examples
 .. parsed-literal::
     
     |bot_prefix|\ nsbdmtemplate
-    |bot_prefix|\ nsbdmtemplate Thanks for boosting **%server%**! The server now has **%boost_number% boost(s)**.
+    |bot_prefix|\ nsbdmtemplate Thanks for boosting **%server%**! Our total Boost count is now **%boost_number%**.
     
 ....
 
