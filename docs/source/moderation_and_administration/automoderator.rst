@@ -52,6 +52,9 @@ Whitelisting Options
 * **Channels**: Ignore messages sent in specific channels in a server.
 * **Servers (Server Invites only)**: Ignore Discord server invites pointing to a specific server. You need to use the server ID to add this kind of whitelisting option. Applying this whitelist rule enables instant, temporary or permanent invites (including vanity URLs) for one or more server(s).
 
+.. note::
+    When adding or removing roles and channels through :ref:`automodsetup`, other than toggling individual roles and channels, you can quickly add or remove all roles and/or channels from the list by using the following special tags: **ALL_ROLES**, **ALL_CHANNELS**, **NO_ROLES**, **NO_CHANNELS**.
+
 ....
 
 Extra Options
@@ -72,6 +75,7 @@ You must save the changes you applied (option **1** of the menu) in order for th
 .. note::
     The AutoModerator will also be configurable through the online dashboard, as soon as it's available for public use.
     
+.. _automodsetup:
 
 |bot_prefix|\ automodsetup
 --------------------------
