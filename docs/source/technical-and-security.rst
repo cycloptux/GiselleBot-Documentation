@@ -36,7 +36,7 @@ The bot is hosted in a public cloud infrastructure (specifically, Amazon Web Ser
 Other than the plain computing power, the cloud infrastructure offers a few other managed services used by the bot:
 
 * An advanced Load Balancer, used to balance the requests sent by the bot(s) to the additional microservices (running in a high-availability configuration).
-* Object Storage buckets, hosting the temporary (encrypted) files that are sent to end-users upon using a bunch of commands.
+* Object Storage buckets, hosting the temporary (encrypted) files that are sent to end-users via a variety of commands.
 * A DNS managed service, hosting the public cycloptux.com domain, the short gisl.eu domain and the internal private domain.
 * A Key Management System, storing the secret keys and API keys used by the bot. Private keys and/or credentials are never stored on the actual servers, they are fetched during the startup of each service.
 * An IAM service, enabling the virtual servers to communicate with the cloud services without having to store credentials within the system itself.
