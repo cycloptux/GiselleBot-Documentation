@@ -863,7 +863,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Toggles Nitro Server Boost "thank you" messages, sent to the users who **Boost** the server via Direct Message.
+Toggles Nitro Server Boost "thank you" messages, sent to the users who **Boost** the server, via Direct Message.
     
 ....
 
