@@ -149,9 +149,11 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Toggles message attachments logging on deleted messages.
+Opens an interactive menu to configure the message attachments logging feature on deleted messages.
 
-By default, deleting a message that contains an image as attachment will trigger an automatic reupload of said image into the Messages logging channel. If you don't want images to be saved, you can turn this feature off. Use the same command again to re-enable this feature.
+By default, deleting a message that contains an image as attachment will trigger an automatic reupload of said image into the Messages logging channel.
+
+Within the configuration menu, users will be able to enable or disable this feature, and to limit the feature to certain channels (**whitelist** mode) or exclude certain channels from this extra logging feature (**blacklist** mode).
 
 ....
 
