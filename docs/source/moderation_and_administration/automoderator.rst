@@ -33,7 +33,7 @@ Supported Triggers
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
     
 .. warning::
-    The QR Codes trigger, by no means, is supposed to reliably recognize all QR codes. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
+    The QR Codes trigger, by no means, is supposed to reliably recognize all QR codes when posted as photographs (while its recognition rate is close to 100% when working on digital screenshots). Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
 
 ....
 
