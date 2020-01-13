@@ -2,7 +2,7 @@
 Server Moderation (AutoModerator)
 *********************************
 
-|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **7** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
+|bot_name| offers an auto moderation feature to be used alongside normal, manual moderation. The current auto moderator currently supports **8** triggers (messages or actions performed by users) and **5** actions (actions performed on the offending user and/or message). Each trigger can be configured with an extra whitelist, as described below.
 
 .. warning::
     This guide assumes you are familiar with the manual moderation module of |bot_name|\ . If you have any doubt about one or more of the actions or parameters that are used within the AutoModerator module, try checking :ref:`moderation-module` first.
@@ -20,6 +20,7 @@ Supported Triggers
 * **Anti-Spam**: counts the number of messages **with the same content** sent by a user, in a channel, within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
 * **Anti-Attachment Spam**: counts the number of **attachments** sent by a user, in a channel, within a certain span of time and triggers if the number of attachments is over a threshold. The default (allowed) threshold pair is **5** attachments in **10** seconds, but can be configured in each server.
 * **NSFW Images**: recognizes possible NSFW images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is over the NSFW threshold for the server. Refer to :ref:`nsfwjs` for a deeper explanation of this detection system, and to :ref:`nsfwthreshold` to configure the server threshold.
+* **QR Codes**: attempts to recognize QR codes contained in images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is confirmed to contain a QR code.
 * **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
 
 .. note::
@@ -30,6 +31,9 @@ Supported Triggers
     
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
+    
+.. warning::
+    The QR Codes trigger, by no means, is supposed to reliably recognize all QR codes. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
 
 ....
 
