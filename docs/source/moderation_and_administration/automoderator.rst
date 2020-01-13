@@ -27,7 +27,7 @@ Supported Triggers
     Discord lag or connection problems can cause Anti-Spam and Anti-Attachment Spam false positives.
     
 .. note::
-    The Server Invites, Banned Words and NSFW Images triggers also support message editing: messages will be re-checked upon being edited.
+    The Server Invites, Banned Words, NSFW Images and QR Codes triggers also support message editing: messages will be re-checked upon being edited.
     
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
