@@ -20,7 +20,7 @@ Supported Triggers
 * **Anti-Spam**: counts the number of messages **with the same content** sent by a user, in a channel, within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
 * **Anti-Attachment Spam**: counts the number of **attachments** sent by a user, in a channel, within a certain span of time and triggers if the number of attachments is over a threshold. The default (allowed) threshold pair is **5** attachments in **10** seconds, but can be configured in each server.
 * **NSFW Images**: recognizes possible NSFW images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is over the NSFW threshold for the server. Refer to :ref:`nsfwjs` for a deeper explanation of this detection system, and to :ref:`nsfwthreshold` to configure the server threshold.
-* **QR Codes**: attempts to recognize QR codes contained in images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is confirmed to contain a QR code.
+* **QR Codes**: recognizes QR codes contained in images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is confirmed to contain a QR code.
 * **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
 
 .. note::
