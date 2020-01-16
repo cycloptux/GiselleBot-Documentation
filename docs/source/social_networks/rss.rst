@@ -25,7 +25,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rsshook (RSS feed URL) (webhook URL) [customization params]
+    |bot_prefix|\ rsshook (RSS feed URL) (webhook URL or --channel (channel id/mention/q_name)) [customization params]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -34,6 +34,11 @@ Starts a streaming service for the selected RSS feed. If a new item is found, it
 .. warning::
     Discord webhooks are a very powerful feature, but they (currently) lack 2-way authentication of messages. This means that a malicious user knowing a webhook URL will be able, with some effort, to forge a message containing any kind of content using external tools and send that message to the webhook.
     In order to protect yourself from this (rare) occasion, make sure you run this command in non-public channels.
+    
+.. note::
+    Alternatively, you can replace the webhook URL with the ``--channel (channel id/mention/q_name)`` parameter: a new (unique) webhook will be created and the URL from the new webhook will be automatically used for this feed.
+    
+    This alternative option requires |bot_name| to have "Manage Webhooks" permissions.
 
 **Customization Params**
 
