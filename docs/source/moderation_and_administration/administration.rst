@@ -1098,7 +1098,7 @@ Through the "Image Gallery Channels" sub-module, you can set one or more channel
 
 You can configure one or more channels as image galleries. When a channel is configured as a gallery, only those messages containing **image attachments and no text at all** will be kept, while everything else will be deleted. This check also happens on edited messages.
 
-Users with **Manage Messages** permissions (on their role and/or through channel overrides) will be able to post messages that contain text.
+Users with **Manage Messages, Manage Channels or Administrator** permissions (on their role and/or through channel overrides) will be able to post messages that contain text.
 
 Here's the full list of available commands for this sub-module:
 
