@@ -1096,7 +1096,7 @@ Image Gallery Channels
 
 Through the "Image Gallery Channels" sub-module, you can set one or more channels to only "accept" image attachments, hence becoming a virtual gallery.
 
-You can configure one or more channels as image galleries. When a channel is configured as a gallery, only those messages containing **image attachments and no text at all** will be kept, while everything else will be deleted.
+You can configure one or more channels as image galleries. When a channel is configured as a gallery, only those messages containing **image attachments and no text at all** will be kept, while everything else will be deleted. This check also happens on edited messages.
 
 Users with **Manage Messages** permissions (on their role and/or through channel overrides) will be able to post messages that contain text.
 
