@@ -1088,3 +1088,45 @@ Examples
 .. parsed-literal::
     
     |bot_prefix|\ emojisubmit https://cdn.discordapp.com/emojis/614486002291048459.gif?v=1 amegablobsweats
+
+....
+
+Image Gallery Channels
+======================
+
+Through the "Image Gallery Channels" sub-module, you can set one or more channels to only "accept" image attachments, hence becoming a virtual gallery.
+
+You can configure one or more channels as image galleries. When a channel is configured as a gallery, only those messages containing **image attachments and no text at all** will be kept, while everything else will be deleted.
+
+Users with **Manage Messages** permissions (on their role and/or through channel overrides) will be able to post messages that contain text.
+
+Here's the full list of available commands for this sub-module:
+
+|bot_prefix|\ imggallery
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ imggallery [channel id(s)/mention(s)/q_name(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the Image Gallery mode on the selected channel(s).
+
+If used without any (valid) argument, the command will show which channels are currently enabled as image galleries.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ imggallery
+    |bot_prefix|\ imggallery 123456789098765432 234567890987654321
+
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Messages
+| **Bot**: Manage Messages
