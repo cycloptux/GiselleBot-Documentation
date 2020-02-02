@@ -32,6 +32,8 @@ Supported Triggers
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
     
+When more then one trigger is active and a message is potentially breaking more than one of the active triggers, this priority order will apply: ``Server Invites > Mass Mentions > Banned Words > Anti-Spam > Anti-Attachment Spam > QR Codes > NSFW Images``.
+    
 ....
 
 Supported Actions
@@ -42,6 +44,8 @@ Supported Actions
 * **Auto-mute**: Automatically mute the offending user. The applied mute is a temporary, 2 hours long, mute.
 * **Auto-kick**: Automatically kick the offending user.
 * **Auto-ban**: Automatically ban the offending user.
+
+When more then one action is configured on a trigger, this priority order will apply: ``Ban > Mute > Kick > Warn``.
 
 ....
 
