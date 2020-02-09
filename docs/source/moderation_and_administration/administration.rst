@@ -157,8 +157,12 @@ Within the configuration menu, users will be able to enable or disable this feat
 
 ....
 
-New Members Management
-======================
+Greet Messages
+==============
+
+The Greet Messages submodule lets server managers configure automatic and configurable messages that |bot_name| sill send when a user joins your server, or obtains a specific role.
+
+Both use cases can be configured to send greet messages to a channel or to the user through a Direct Message.
 
 |bot_prefix|\ greet
 -------------------
@@ -178,7 +182,7 @@ Permissions Needed
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Toggles announcements via Direct Message when someone joins the server (this is separate from greet - you can have both, any or neither enabled).
+Toggles announcements via Direct Message when someone joins the server (this is separate from greet - you can have both, any, or neither enabled).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -290,6 +294,171 @@ Examples
 
     |bot_prefix|\ greetdel 0
     |bot_prefix|\ greetdel 30
+
+....
+
+|bot_prefix|\ greetrole
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetrole (role id/mention/q_name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles announcements on the current channel when someone obtains a certain role.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetrole @Beta Tester
+    |bot_prefix|\ greetrole 123456789098765432
+    |bot_prefix|\ greetrole "Top Secret Pass"
+
+....
+
+|bot_prefix|\ greetroledm
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledm (role id/mention/q_name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles announcements via Direct Message when someone obtains a certain role (this is separate from greetrole - you can have both, any, or neither enabled).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledm @Beta Tester
+    |bot_prefix|\ greetroledm 123456789098765432
+    |bot_prefix|\ greetroledm "Top Secret Pass"
+
+....
+
+|bot_prefix|\ greetrolemsg
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetrolemsg (role id/mention/q_name) [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new role greeting message which will be shown in the server's channel. Using it with no message will show the current greet message.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%role%**: This will be replaced with the name (in plain text) of the obtained role.
+* **%role\_mention%**: This will be replaced with the mention of the obtained role.
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetrolemsg Congratulations for obtaining the **%role%** role, %user%! With great power comes great responsibility...
+
+....
+
+|bot_prefix|\ greetroledmmsg
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledmmsg (role id/mention/q_name) [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new role greeting message which will be sent to the user who obtained the role. Using it with no message will show the current DM greet message.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%role%**: This will be replaced with the name (in plain text) of the obtained role.
+* **%role\_mention%**: This will be replaced with the mention of the obtained role.
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledmmsg Congratulations for obtaining the **%role%** role in **%server%**, %user%! With great power comes great responsibility...
+
+....
+
+|bot_prefix|\ greetroledel
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledel (role id/mention/q_name) (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time it takes (in seconds) for **in-server** role greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+
+.. note::
+    This setting does not apply to DM greet messages.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledel @Beta Tester 0
+    |bot_prefix|\ greetroledel "Top Secret Pass" 30
 
 ....
 
