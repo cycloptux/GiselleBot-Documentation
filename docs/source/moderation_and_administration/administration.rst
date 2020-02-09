@@ -275,10 +275,10 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 1800 (30 minutes).
+Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
 
 .. note::
-    This does not apply to DM greet messages.
+    This setting does not apply to DM greet messages.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
