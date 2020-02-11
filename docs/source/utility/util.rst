@@ -158,14 +158,13 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the full list of bots that are present in the server.
 
-If the ``--detail`` additional parameter is used, the command will attempt scanning the top 4 most used bot listing websites to get info about the bot owner, and post a link to the found page.
+If the ``--detail`` additional parameter is used, the command will attempt scanning the top 3 most used bot listing websites to get info about the bot owner, and post a link to the found page.
 
 The command will scan:
 
  * **Top.gg / Discord Bot List**: https://top.gg/
  * **Bots on Discord**: https://bots.ondiscord.xyz/
  * **Discord Bots**: https://discord.bots.gg/
- * **Bots for Discord**: https://botsfordiscord.com/
  
 This additional scan is usually very slow (about ~5 seconds per bot).
 

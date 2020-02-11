@@ -32,7 +32,6 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    * **Discord Bot List**: https://discordbots.org/bot/356831787445387285 (rewards included! Refer to :ref:`dblnotify`)
    * **Bots on Discord**: https://bots.ondiscord.xyz/bots/356831787445387285?vote
    * **Discord Bots**: https://discord.bots.gg/bots/356831787445387285
-   * **Bots for Discord**: https://botsfordiscord.com/bot/356831787445387285 (rewards included! Refer to :ref:`bfdnotify`)
 
 .. https://cookie-bar.eu/ cookieBAR - a free & easy solution to the EU cookie law.
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?always=1"></script>
@@ -43,10 +42,6 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    &emsp;
    <a href="https://bots.ondiscord.xyz/bots/356831787445387285" >
    <img src="https://bots.ondiscord.xyz/bots/356831787445387285/embed" alt="GiselleBot" /></a></center> 
-   <br />
-   <center><a href="https://botsfordiscord.com/bots/356831787445387285" >
-   <img src="https://botsfordiscord.com/api/bot/356831787445387285/widget" title="Visit GiselleBot listed on Bots for Discord!" alt="GiselleBot's Widget Failed to Load" /></a></center> 
-   
 
 ....
 

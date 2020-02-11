@@ -78,31 +78,6 @@ Users will only be notified once per vote reset.
 
 ....
 
-.. _bfdnotify:
-
-|bot_prefix|\ bfdnotify
------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ bfdnotify
-    
-Command Description
-^^^^^^^^^^^^^^^^^^^
-As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can vote for |bot_name| on `Bots for Discord <https://botsfordiscord.com/bot/356831787445387285>`_ (click on the website name to be sent to the bot page).
-
-Any Discord user can vote for each bot once per day. The window opens at midnight, UTC. Each vote for |bot_name| will award you with **250 currency coins**.
-
-Even though the website doesn't award double points during weekends (see: :ref:`dblnotify`), |bot_name| will still award **double the amount of coins** on **Fridays, Saturdays and Sundays**!
-
-By enabling the notification service using the |bot_prefix|\ bfdnotify command in any server, you will also be notified when your Bots for Discord vote is available, thus being able to actively collect your daily coins efficiently. Each run of the command will toggle its previous state.
-
-Users will only be notified once per vote reset.
-
-....
-
 |bot_prefix|\ cleaderboard
 --------------------------
 
