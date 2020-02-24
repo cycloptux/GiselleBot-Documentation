@@ -366,6 +366,34 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ emojify BlobOwO BlobPats
+    
+....
+
+|bot_prefix|\ emojifyverbose
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojifyverbose (emoji name, without the : :)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Converts one word into the corresponding emoji, provided the bot has access to that emoji. The response will also include info about the server where the emoji was fetched from.
+
+Emoji names are case-sensitive.
+
+By default, this command only tries to fetch emojis from the current server, effectively limitating its usefulness.
+
+By setting one, or more, server(s) as emojify source servers using the |bot_prefix|\ emojifysource command, |bot_name| will look for emojis in those servers as well as the current server when the |bot_prefix|\ emojify command is used.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojifyverbose BlobOwO
 
 ....
 
