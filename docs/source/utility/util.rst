@@ -357,11 +357,51 @@ Converts a sequence of words into a sequence of emojis, provided the bot has acc
 
 Emoji names are case-sensitive.
 
+By default, this command only tries to fetch emojis from the current server, effectively limitating its usefulness.
+
+By setting one, or more, server(s) as emojify source servers using the |bot_prefix|\ emojifysource command, |bot_name| will look for emojis in those servers as well as the current server when the |bot_prefix|\ emojify command is used.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
     |bot_prefix|\ emojify BlobOwO BlobPats
+
+....
+
+|bot_prefix|\ emojifysource
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojifysource [server id(s)]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+By default, the |bot_prefix|\ emojify command only tries to fetch emojis from the current server, effectively limitating its usefulness.
+
+By setting one, or more, server(s) as emojify source servers, |bot_name| will look for emojis in those servers as well as the current server when the |bot_prefix|\ emojify command is used.
+
+.. note::
+    |bot_name| must be in the emojify source server for it to correctly fetch emojis. You can, although, preemptively authorize a server before |bot_name| has been invited in it.
+    
+If used without any server ID, this command will show the current list of servers that are set as emojify source.
+
+If used with one or more server IDs, it will toggle each server into the list of servers that will be used as emojify source servers.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Emojis
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojifysource
+    |bot_prefix|\ emojifysource 123456789098765432 234567890987654321 345678909876543212
 
 ....
 
