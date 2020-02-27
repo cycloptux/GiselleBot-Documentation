@@ -433,6 +433,28 @@ Examples
 
 ....
 
+|bot_prefix|\ emojifyexclude
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ emojifyexclude
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Makes the emojis contained in the server where the command is run unavailable to the |bot_prefix|\ emojify command.
+
+Run the command again to toggle the exclusion status of the server.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+....
+
 |bot_prefix|\ embed
 -------------------
 
