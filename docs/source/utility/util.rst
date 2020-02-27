@@ -420,6 +420,8 @@ If used without any server ID, this command will show the current list of server
 
 If used with one or more server IDs, it will toggle each server into the list of servers that will be used as emojify source servers.
 
+When a server is set as unavailable through the |bot_prefix|\ emojifyexclude command, it will appear with a ``:no_entry:`` sign.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Emojis
@@ -448,6 +450,8 @@ Command Description
 Makes the emojis contained in the server where the command is run unavailable to the |bot_prefix|\ emojify command.
 
 Run the command again to toggle the exclusion status of the server.
+
+When a server is set as unavailable, it will appear with a ``:no_entry:`` sign through the |bot_prefix|\ emojifysource command.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
