@@ -1,3 +1,5 @@
+.. _custreact:
+
 ****************
 Custom Reactions
 ****************

@@ -37,6 +37,9 @@ Using the command without any argument will show the current prefix.
 .. note::
     Generally speaking, there will never be a space in between the prefix and the command itself.
     A common prefix being used is a mention of the bot. If the bot mention is used, a space will be automatically added after the mention. This only applies if the bot mention is used, while any other mention will be considered as a normal character string.
+    
+.. note::
+    If you happen to forget the prefix for |bot_name|\ , try using "@\ |bot_name| hprefix". This reaction will only work if the :ref:`custreact` module is enabled.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
