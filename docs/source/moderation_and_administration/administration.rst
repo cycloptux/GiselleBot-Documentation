@@ -99,6 +99,21 @@ Examples
 
 ....
 
+|bot_prefix|\ logstatus
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal:: 
+    
+    |bot_prefix|\ logstatus
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Prints a summary of the enabled loggers, showing which logger(s) are enabled in which channel(s).
+
+....
+
 |bot_prefix|\ logignore
 -----------------------
 
