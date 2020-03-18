@@ -22,6 +22,7 @@ Supported Triggers
 * **NSFW Images**: recognizes possible NSFW images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is over the NSFW threshold for the server. Refer to :ref:`nsfwjs` for a deeper explanation of this detection system, and to :ref:`nsfwthreshold` to configure the server threshold.
 * **QR Codes**: recognizes QR codes contained in images sent by posting URLs in a message, or using message attachments, and triggers if at least one of the images posted is confirmed to contain a QR code. This check works on **both screenshots and pictures** (taken by a camera/webcam), even though the recognition rate of pictures may be affected by the quality of the image.
 * **Anti-Raid**: counts the number of users (either new, or existing users leaving and re-joining) joining your server within a certain span of time and triggers if the number server joins is over a threshold. The default (allowed) threshold pair is **5** users in **15** seconds, but can be configured in each server.
+* **Anti-Young Accounts**: checks the Discord account age (time from the account creation date) of each user joining your server and triggers if the account age is lower than a set threshold. The default threshold is **1 hour**, but can be configured in each server.
 
 .. note::
     Discord lag or connection problems can cause Anti-Spam and Anti-Attachment Spam false positives.
@@ -41,7 +42,7 @@ Supported Actions
 
 * **Automatic deletion of the offending message**.
 * **Auto-warn**: Automatically apply a generic warning on the offending user. Specify a rule with the dedicated option.
-* **Auto-mute**: Automatically mute the offending user. The applied mute is a temporary, 2 hours long, mute.
+* **Auto-mute**: Automatically mute the offending user. By default, the applied mute is a temporary (2 hours long) mute, but can be configured for each moderation trigger.
 * **Auto-kick**: Automatically kick the offending user.
 * **Auto-ban**: Automatically ban the offending user.
 

@@ -688,3 +688,79 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ shorturl http://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M 
+
+....
+
+.. _clockchannel:
+
+|bot_prefix|\ clockchannel
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ clockchannel (time zone name) [--template {custom channel name template}] [--12ht]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Creates a channel as "clock channel", updating its name every minute. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
+
+You can set a custom template for the channel name. You can use one (or more) of these placeholders in your custom channel name template:
+
+* **%time\_zone%** or **%tz%**: This will be replaced with the name of the chosen time zone.
+* **%clock%**: This will be replaced with the auto-updating clock.
+* **%date%**: This will be replaced with the current date.
+
+Additionally, you can add the ``--12ht`` parameter if you want the clock to be shown as 12 hours time.
+
+By default, the channel name template is ``%time_zone%: %clock%``.
+
+.. admonition:: Premium
+
+    Out of the box, each server is limited to having **1 clock channel**. You can unlock up to **5 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`).
+
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels, Manage Server
+| **Bot**: Manage Channels, Connect
+
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ clockchannel UTC
+    |bot_prefix|\ clockchannel Europe/London --12ht
+    |bot_prefix|\ clockchannel America/New_York --template Current Time: %clock%
+
+....
+
+.. _searchtz:
+
+|bot_prefix|\ searchtz
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ searchtz (country code or lookup string)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Searches for a valid time zone name.
+
+Using a 2-letters country identifier will show the available time zones for the specified country.
+
+Using any 3+ characters string will search for matching time zones.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ searchtz US
+    |bot_prefix|\ searchtz New
