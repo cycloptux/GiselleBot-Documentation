@@ -63,7 +63,7 @@ Tier 3: Unlocked Original Modules
 
 By becoming a **Tier 3** (or higher) patron, you'll unlock the whole potential of |bot_name|'s original modules:
 
-* (Forms Builder) create **up to 20 forms** in your server (removing the default cap of 3 form)
+* (Forms Builder) create **up to 20 forms** in your server (removing the default cap of 3 forms)
 * (Raid Rooms) **uncap the number of simultaneous Raid Rooms** that can be created in a server (removing the default cap of 5 simultaneous rooms)
 * (Trivia) get access to the |bot_prefix|\ triviaexport command, and to the full list of **"Trivia Template" commands**: |bot_prefix|\ triviatsave, |bot_prefix|\ triviatload, |bot_prefix|\ triviatdelete and |bot_prefix|\ triviatshow.
 * (Command Scheduler) **Command Scheduling** interval raised to **1 month**
