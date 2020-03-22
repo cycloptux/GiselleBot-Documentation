@@ -24,7 +24,7 @@ One or more roles can be set as "supervisor" roles. Supervisors will have modera
 
 .. admonition:: Premium
 
-    Out of the box, each server is limited to having a total of **3 simultaneous Raid Rooms**. If you want to remove this limitation, you can unlock the number of Raid Rooms as a **Premium** feature (see: :ref:`premium-perks`).
+    Out of the box, each server is limited to having a total of **5 simultaneous Raid Rooms**. If you want to remove this limitation, you can unlock the number of Raid Rooms as a **Premium** feature (see: :ref:`premium-perks`).
 
 ....
 
