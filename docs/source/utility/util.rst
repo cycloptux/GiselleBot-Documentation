@@ -691,6 +691,32 @@ Examples
 
 ....
 
+|bot_prefix|\ urban
+-------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ urban (search string) [--more]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Urban Dictionary text lookup. The output will be the highest ranked result. The embed title will hyperlink to the corresponding online page.
+
+Using ``--more`` will show up to 5 results, if available.
+
+.. warning::
+    Given the nature of the website, Urban Dictionary lookups will only be executed in channels that are marked as **NSFW**.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ urban guinea tee
+    
+....
+
 .. _clockchannel:
 
 |bot_prefix|\ clockchannel
