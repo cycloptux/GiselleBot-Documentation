@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /docs/build/html/
-    destination: /var/www/docs.cycloptux.com/gisellebot/public_html
+    destination: /var/www/gisellebot.com/docs/public_html
 hooks:
   BeforeInstall:
     - location: scripts/01-create-folder.sh
