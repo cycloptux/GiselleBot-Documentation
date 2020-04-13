@@ -111,7 +111,7 @@ html_context = {
 }
 
 # The URL which points to the root of the HTML documentation. It is used to indicate the location of document like canonical_url.
-html_baseurl = 'https://docs.cycloptux.com/gisellebot/'
+html_baseurl = 'https://docs.gisellebot.com/'
 
 # A list of paths that contain extra files not directly related to the documentation, such as robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They are copied to the output directory. They will overwrite any existing file of the same name.
 # As these files are not meant to be built, they are automatically excluded from source files.
