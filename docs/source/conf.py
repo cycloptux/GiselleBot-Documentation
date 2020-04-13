@@ -190,3 +190,10 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
+
+# -- Options for sphinx-sitemap ----------------------------------------------
+# https://pypi.org/project/sphinx-sitemap/
+
+# Customizing the URL scheme
+# sitemap_url_scheme = "{lang}{version}{link}"
+sitemap_url_scheme = "{lang}{link}"
