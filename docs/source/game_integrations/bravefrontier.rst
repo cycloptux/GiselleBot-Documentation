@@ -1,5 +1,5 @@
 ************************
-Brave Frontier News Feed
+Brave Frontier Connector
 ************************
 
 Be notified when a new in-game news is published in **Brave Frontier (Global)** by gumi and **Brave Frontier 2 (Japan)** by Alim.
