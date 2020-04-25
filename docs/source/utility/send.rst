@@ -37,11 +37,11 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ msgedit (message id) (new message content)
+    |bot_prefix|\ msgedit (channel id/mention) (message id) (new message content)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Edits a previously sent message in the current server.
+Edits a previously sent message.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
