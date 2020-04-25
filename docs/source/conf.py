@@ -24,9 +24,9 @@ copyright = '2020, cycloptux'
 author = 'cycloptux'
 
 # The short X.Y version
-version = '3.3'
+version = '4.0'
 # The full version, including alpha/beta/rc tags
-release = '3.3.0'
+release = '4.0.0'
 
 # Substitutions
 rst_prolog = '''
