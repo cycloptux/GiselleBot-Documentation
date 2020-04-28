@@ -67,6 +67,27 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ modanonymization
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ modanon
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles whether or not users that are affected by a moderation action will also be informed of the identify of the moderator using the command. Default state: **off** (i.e. moderators will **not** be anonymized).
+
+If enabled, the name of the moderator will be omitted on the DM that a user receives upon being hit by a moderation action, and a shield emoji (🛡️) will appear next to the "Performed By" field of the corresponding warning log embed to remind that moderators' protection is on for that case.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+....
+
 |bot_prefix|\ muterole
 ----------------------
 
@@ -270,6 +291,9 @@ If all of these arguments are skipped, the message will simply read "You were wa
 Channel specific commands which are missing the channel parameter will default to being targeted to the current channel. Channels that support time-based expiration (see above) will be treated as permanent if the timecode is missing.
 
 You can skip generating a case by appending the ``--skip-case`` tag. You can skip sending the DM (but still generate a case) by appending the ``--skip-dm`` tag.
+
+.. note::
+    When ``--skip-dm`` is used, a small 🔕 emoji will appear on the corresponding notification and warning log embed footer to track the fact that the action was "silent".
 
 Every warning, by default, will be worth a certain number of points based on the rule broken (as described in the "Warning Point System" section below.
 
