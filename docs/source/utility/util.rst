@@ -691,30 +691,34 @@ Examples
 
 ....
 
-|bot_prefix|\ urban
--------------------
+|bot_prefix|\ unitconverter
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ urban (search string) [--more]
+    |bot_prefix|\ unitconvert (value) (unit) [destination unit]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Urban Dictionary text lookup. The output will be the highest ranked result. The embed title will hyperlink to the corresponding online page.
 
-Using ``--more`` will show up to 5 results, if available.
+Converts between quantities in different units. It also supports converting currency with the most recent exchange rates.
 
-.. warning::
-    Given the nature of the website, Urban Dictionary lookups will only be executed in channels that are marked as **NSFW**.
+The value and originating unit are mandatory. If the destination unit is omitted or invalid (e.g. non-existing, or a unit in a different measure, like trying to convert length to mass) then the "best" destination unit will be picked. For currencies, if the destination currency is omitted or invalid, ``USD`` will be automatically used.
+
+.. seealso::
+    `Click here <https://www.npmjs.com/package/convert-units#supported-units>`_ for a list of all supported measurement units. `Click here <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported currencies.
 
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ urban guinea tee
-    
+    |bot_prefix|\ unitconvert 10 EUR USD
+    |bot_prefix|\ uconv 1000 mm
+    |bot_prefix|\ uconv 30 C F
+    |bot_prefix|\ uconv 1 MB b
+
 ....
 
 .. _clockchannel:
@@ -790,3 +794,29 @@ Examples
 
     |bot_prefix|\ searchtz US
     |bot_prefix|\ searchtz New
+
+....
+
+|bot_prefix|\ urban
+-------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ urban (search string) [--more]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Urban Dictionary text lookup. The output will be the highest ranked result. The embed title will hyperlink to the corresponding online page.
+
+Using ``--more`` will show up to 5 results, if available.
+
+.. warning::
+    Given the nature of the website, Urban Dictionary lookups will only be executed in channels that are marked as **NSFW**.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ urban guinea tee
