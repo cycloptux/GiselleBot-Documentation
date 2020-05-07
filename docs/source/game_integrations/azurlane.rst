@@ -148,6 +148,19 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the status transition UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_pst%**: This will be replaced with the status transition PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 
+Timestamp tags also support custom time zones. You can replace the ``utc`` part with either:
+
+* A different **valid** time zone identifier: use the :ref:`searchtz` command to look for a valid time zone name.
+* An **UTC offset**, in the form of ``[UTC/GMT](+/-)(hours)[:][minutes]``. Here are some valid examples:
+
+    * %timestamp\_Europe/London%
+    * %timestamp\_America/Los_Angeles%
+    * %timestamp\_Japan%
+    * %timestamp\_PST8PDT%
+    * %timestamp\_+0800%
+    * %timestamp\_-10:30%
+    * %timestamp\_UTC+2%
+
 All headers will be followed by the actual quote text, including the additional hashtags.
 
 **Default**: ``Shikikan shikikan, San Diego here with an important message for you from the %region% territory!``

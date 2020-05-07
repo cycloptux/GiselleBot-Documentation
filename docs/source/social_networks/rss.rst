@@ -116,6 +116,19 @@ Here's the list of supported tags:
 * **%timestamp\_pst%**: This will be replaced with the item creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the item URL. See below for more info.
 
+Timestamp tags also support custom time zones. You can replace the ``utc`` part with either:
+
+* A different **valid** time zone identifier: use the :ref:`searchtz` command to look for a valid time zone name.
+* An **UTC offset**, in the form of ``[UTC/GMT](+/-)(hours)[:][minutes]``. Here are some valid examples:
+
+    * %timestamp\_Europe/London%
+    * %timestamp\_America/Los_Angeles%
+    * %timestamp\_Japan%
+    * %timestamp\_PST8PDT%
+    * %timestamp\_+0800%
+    * %timestamp\_-10:30%
+    * %timestamp\_UTC+2%
+
 By default, without an explicit use of ``%url%``, all headers will be followed by the actual item URL on a new line; rendering of that URL will be done by Discord.
 
 If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
