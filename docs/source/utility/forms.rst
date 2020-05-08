@@ -34,11 +34,17 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ trellopair [team name]
+    |bot_prefix|\ trellopair [team name/URL, or "-"]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Pairs a Discord server with a Trello team. Using the command without the team name will unpair the server from the Trello team.
+Pairs a Discord server with a Trello team.
+
+In order to pair with a team, you can use the team name or the URL containing the team name (see the note below).
+
+Using the command without any argument will show the current paired Trello team.
+
+Using ``-`` as the only argument will unpair the current server from the paired Trello team.
 
 .. note::
     The team name is the one you find inside the Trello URL within the team page, which usually has this form: ``https://trello.com/TEAM_NAME/home``
