@@ -188,6 +188,9 @@ Shows all of the emojis from the current server into an embed.
 |bot_prefix|\ searchuser
 ------------------------
 
+.. warning::
+    This command is **temporarily** disabled due to changes in the Discord API that broke some of the shown parameters. It will be fixed soon.
+
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
