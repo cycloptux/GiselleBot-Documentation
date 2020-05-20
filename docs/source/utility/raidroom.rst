@@ -242,6 +242,123 @@ Examples
 
 ....
 
+|bot_prefix|\ rrkick
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrkick (room id) (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN or are re-invited.
+
+**Room Master only**.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrkick abcdef @cycloptux#1543
+
+....
+
+|bot_prefix|\ rrban
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrban (room id) (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN or are re-invited.
+
+**Room Master only**.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrban abcdef @cycloptux#1543
+
+....
+
+|bot_prefix|\ rrunban
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrunban (room id) (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN or are re-invited.
+
+**Room Master only**.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrunban abcdef @cycloptux#1543
+
+....
+
+.. _rrextend:
+
+|bot_prefix|\ rrextend
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrextend (room id)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Extends the duration of a room that is about to expire. This command can only be used when there are **less than 5 minutes left** on the normal expiration of a room.
+
+The room timer will be refreshed, adding the initial duration to the current time (e.g. if the room was supposed to last 24 hours, 24 more hours will be added to that room).
+
+This command can only be used once.
+
+**Room Master only**.
+
+.. note::
+    Server managers are able to prohibit the usage of this command through :ref:`rraextend`.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrextend abcdef
+
+....
+
 .. _supervisor-commands:
 
 Supervisor Commands
@@ -279,7 +396,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN.
+Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN or are re-invited.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -304,7 +421,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN.
+Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN or are re-invited.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -329,7 +446,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN.
+Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN or are re-invited.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -365,6 +482,75 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ rrsbreak abcdef
+
+....
+
+|bot_prefix|\ rrsforbid
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrsforbid (room id) (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Prohibits one or more users from creating Raid Rooms. This command won't break any existing room.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrsforbid abcdef @cycloptux#1543
+
+....
+
+|bot_prefix|\ rrsallow
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrsallow (room id) (user id(s)/mention(s)/q_name(s))
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lifts the prohibition status from one or more users, allowing them to create Raid Rooms.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrsallow abcdef @cycloptux#1543
+
+....
+
+|bot_prefix|\ rrslsforbid
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rrslsforbid
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Lists the users that are currently forbidden from creating Raid Rooms in the current server.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **Bot**: Manage Channels, Manage Messages
 
 ....
 
@@ -461,3 +647,23 @@ Examples
     |bot_prefix|\ rrasetsvrole --type voice --max-members 16 --duration 2h
     |bot_prefix|\ rrasetsvrole --max-duration
     |bot_prefix|\ rrasetsvrole
+
+.. _rraextend:
+
+|bot_prefix|\ rraextend
+-----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rraextend
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the ability for Room Masters to use the :ref:`rrextend` command.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Guild
+| **Bot**: Manage Channels, Manage Messages
