@@ -161,6 +161,11 @@ Examples
 
 ....
 
+Room Master Commands
+===================
+
+After creating a room through :ref:`rrcreate`, the user that opened the room becomes the "Room Master" and gains access to a set of additional commands used to manage the owned rooms.
+
 |bot_prefix|\ rrinvite
 ----------------------
 
@@ -173,8 +178,6 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Invite one or more users to your room. They will be automatically added without any interaction from the target user(s). The PIN won't be shared with the target user(s).
-
-**Room Master only**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -201,8 +204,6 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Closes the room, deleting the corresponding channel. If the room type was set as text, a chat log is dumped and saved (encrypted). The chat log will be posted into the raid rooms logger channel (see :ref:`first-setup`).
 
-**Room Master only**.
-
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **Bot**: Manage Channels, Manage Messages
@@ -227,8 +228,6 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Assigns a new PIN to the room, useful if the PIN is somehow leaked. The PIN will be sent to the room master via DM.
-
-**Room Master only**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -255,8 +254,6 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN or are re-invited.
 
-**Room Master only**.
-
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **Bot**: Manage Channels, Manage Messages
@@ -282,8 +279,6 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN or are re-invited.
 
-**Room Master only**.
-
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **Bot**: Manage Channels, Manage Messages
@@ -308,8 +303,6 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN or are re-invited.
-
-**Room Master only**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -341,8 +334,6 @@ Extends the duration of a room that is about to expire. This command can only be
 The room timer will be refreshed, adding the initial duration to the current time (e.g. if the room was supposed to last 24 hours, 24 more hours will be added to that room).
 
 This command can only be used once.
-
-**Room Master only**.
 
 .. note::
     Server managers are able to prohibit the usage of this command through :ref:`rraextend`.
