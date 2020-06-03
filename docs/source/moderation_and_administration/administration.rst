@@ -178,9 +178,9 @@ Within the configuration menu, users will be able to enable or disable this feat
 Greet Messages
 ==============
 
-The Greet Messages submodule lets server managers configure automatic and configurable messages that |bot_name| sill send when a user joins your server, or obtains a specific role.
+The Greet Messages submodule lets server managers configure automatic and configurable messages that |bot_name| sill send when a user joins/leaves your server, or obtains a specific role.
 
-Both use cases can be configured to send greet messages to a channel or to the user through a Direct Message.
+All use cases (minus the "goodbye" messages) can be configured to send greet messages to a channel or to the user through a Direct Message.
 
 |bot_prefix|\ greet
 -------------------
@@ -330,6 +330,96 @@ Examples
 
     |bot_prefix|\ greetdel 0
     |bot_prefix|\ greetdel 30
+
+....
+
+|bot_prefix|\ goodbye
+---------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles announcements on the current channel when someone leaves the server.
+
+.. note::
+    Due to Discord's caching system, some or all of the information needed to correctly fill the goodbye message might be missing at the time of leaving of a user. |bot_name| will still attempt to create the message with the info that can be fetched from the cache, but the information might be incomplete or incorrect. **This is not a bug**.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+....
+
+|bot_prefix|\ goodbyemsg
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyemsg [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new leave announcement message which will be shown in the server's channel. Using it with no message will show the current goodbye message.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyemsg See you soon, %fullusername%!
+
+....
+
+|bot_prefix|\ goodbyedel
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyedel (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time it takes (in seconds) for **in-server** goodbye messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyedel 0
+    |bot_prefix|\ goodbyedel 30
 
 ....
 
