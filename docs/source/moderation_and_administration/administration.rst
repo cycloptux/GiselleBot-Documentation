@@ -37,7 +37,7 @@ Using the command without any argument will show the current prefix.
 .. note::
     Generally speaking, there will never be a space in between the prefix and the command itself.
     A common prefix being used is a mention of the bot. If the bot mention is used, a space will be automatically added after the mention. This only applies if the bot mention is used, while any other mention will be considered as a normal character string.
-    
+
 .. note::
     If you happen to forget the prefix for |bot_name|\ , try using "@\ |bot_name| hprefix". This reaction will only work if the :ref:`custreact` module is enabled.
 
@@ -51,7 +51,7 @@ Examples
 
     |bot_prefix|\ prefix
     |bot_prefix|\ prefix b?
-    
+
 ....
 
 .. _log-command:
@@ -64,8 +64,8 @@ Server Activity Logging
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ log [type(s)]
 
 Command Description
@@ -107,8 +107,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ logstatus
 
 Command Description
@@ -153,7 +153,7 @@ Examples
 
     |bot_prefix|\ logignore members @cycloptux#1543
     |bot_prefix|\ logignore channels #admin-chat
-    
+
 ....
 
 |bot_prefix|\ logmatt
@@ -225,11 +225,20 @@ You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -264,11 +273,20 @@ You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -388,11 +406,20 @@ You can use one (or more) of these placeholders in your message:
 * **%role\_mention%**: This will be replaced with the mention of the obtained role.
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -429,11 +456,20 @@ You can use one (or more) of these placeholders in your message:
 * **%role\_mention%**: This will be replaced with the mention of the obtained role.
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -515,7 +551,7 @@ Examples
 
     |bot_prefix|\ aar
     |bot_prefix|\ aar RoleName1 RoleName2
-    
+
 ....
 
 |bot_prefix|\ autoremoverole
@@ -550,7 +586,7 @@ Examples
     |bot_prefix|\ arr
     |bot_prefix|\ arr 1h RoleName1 RoleName2
     |bot_prefix|\ arr RoleName2
-    
+
 ....
 
 |bot_prefix|\ vcrole
@@ -583,7 +619,7 @@ Examples
 
     |bot_prefix|\ vcrole
     |bot_prefix|\ vcrole VoiceRoleName
-    
+
 ....
 
 |bot_prefix|\ vcrolelist
@@ -598,9 +634,9 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Shows a list of currently set voice channel roles.
-    
+
 ....
-    
+
 .. _self-assignable-roles:
 
 Self-Assignable Roles
@@ -620,7 +656,7 @@ Each role group can be configured by editing the following settings:
   * **Single Mode**: Users can only have 1 role within this group.
   * **Multiple Mode**: Users can have a minimum and a maximum number of roles within this group.
   * **None**: No specific rules are applied. Required and ignored roles (see below) still apply.
-  
+
 * **Required Roles**: This setting requires users to have **at least one** of the specified roles to be able to self-assign one role within this group.
 * **Ignored Roles**: This setting requires users **not** to have **any** of the specified roles to be able to self-assign one role within this group. Or, in other words, users with at least one of the specified roles won't have access to this group.
 * **Prerequisites Check**: Toggles the **periodic monitoring of role requirements** for self-assigned roles.
@@ -671,8 +707,8 @@ Opens the self-assignable roles (i.e. role groups) interactive setup menu. Use t
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ asar [group id] (role id(s)/mention(s)/q_name(s))
 
 Command Description
@@ -691,7 +727,7 @@ Examples
 
     |bot_prefix|\ asar "Group 1"
     |bot_prefix|\ asar 2 @Testing123
-    |bot_prefix|\ asar 12 123456789098765432 
+    |bot_prefix|\ asar 12 123456789098765432
 
 ....
 
@@ -700,8 +736,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ rsar [group id] (role id(s)/mention(s)/q_name(s))
 
 Command Description
@@ -720,7 +756,7 @@ Examples
 
     |bot_prefix|\ rsar "Group 1"
     |bot_prefix|\ rsar 2 @Testing123
-    |bot_prefix|\ rsar 12 123456789098765432 
+    |bot_prefix|\ rsar 12 123456789098765432
 
 ....
 
@@ -764,8 +800,8 @@ Permissions Needed
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ iam (role id/mention/name)
 
 Command Description
@@ -781,8 +817,8 @@ Examples
 
     |bot_prefix|\ iam Group 1
     |bot_prefix|\ iam @Testing123
-    |bot_prefix|\ iam 123456789098765432 
-    
+    |bot_prefix|\ iam 123456789098765432
+
 ....
 
 .. _iamnot:
@@ -792,8 +828,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ iamnot (role id/mention/name)
 
 Command Description
@@ -809,8 +845,8 @@ Examples
 
     |bot_prefix|\ iamnot Group 1
     |bot_prefix|\ iamnot @Testing123
-    |bot_prefix|\ iamnot 123456789098765432 
-    
+    |bot_prefix|\ iamnot 123456789098765432
+
 ....
 
 |bot_prefix|\ rmcreate
@@ -818,8 +854,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ rmcreate [group id] [--m {message id}]
 
 Command Description
@@ -842,7 +878,7 @@ Examples
 
     |bot_prefix|\ rmcreate
     |bot_prefix|\ rmcreate 1 --m 123456789098765432
-    
+
 ....
 
 |bot_prefix|\ rmremove
@@ -850,8 +886,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ rmremove [message id]
 
 Command Description
@@ -871,7 +907,7 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ rmremove 123456789098765432
-    
+
 ....
 
 |bot_prefix|\ rmupdate
@@ -879,8 +915,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ rmupdate [message id]
 
 Command Description
@@ -913,12 +949,12 @@ With Server Boosts, Discord added a way for you and your community to work toget
 
 .. seealso::
     You can find everything about Server Boosts at this link: https://support.discordapp.com/hc/en-us/articles/360028038352
-    
+
 With |bot_name|\ , Server Boosts can now be tracked efficiently, and your members can be greeted through a custom message when they gift your server with a Boost!
 
 .. note::
     Due to technical issues (specifically, the lack of a real "event" in case of a Server Boost), |bot_name| will do its best to keep track of the Boosts that are gifted to your server. That said, users gifting more than 1 Boost to your server will not trigger the Boost event, and the removal of a Boost won't always be able to track down who removed the Boost.
-    
+
 Here's the full list of available commands for this sub-module:
 
 |bot_prefix|\ nsbaddnotif
@@ -926,8 +962,8 @@ Here's the full list of available commands for this sub-module:
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbaddnotif [channel id(s)/mention(s)/q_name(s)]
 
 Command Description
@@ -939,10 +975,10 @@ If used without any (valid) argument, the command will show which channels are c
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ nsbaddnotif
     |bot_prefix|\ nsbaddnotif 123456789098765432 234567890987654321
-    
+
 ....
 
 |bot_prefix|\ nsbaddtemplate
@@ -950,8 +986,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbaddtemplate [message content]
 
 Command Description
@@ -962,11 +998,20 @@ You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -975,10 +1020,10 @@ You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ nsbaddtemplate
     |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch!\nThe total Boost count for **%server%** is now **%boost_number%**.
-    
+
 ....
 
 |bot_prefix|\ nsbremnotif
@@ -986,8 +1031,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbremnotif [channel id(s)/mention(s)/q_name(s)]
 
 Command Description
@@ -999,10 +1044,10 @@ If used without any (valid) argument, the command will show which channels are c
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ nsbremnotif
     |bot_prefix|\ nsbremnotif 123456789098765432 234567890987654321
-    
+
 ....
 
 |bot_prefix|\ nsbremtemplate
@@ -1010,8 +1055,8 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbremtemplate [message content]
 
 Command Description
@@ -1022,11 +1067,20 @@ You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -1035,10 +1089,10 @@ You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ nsbremtemplate
     |bot_prefix|\ nsbremtemplate Oh no! %user% has just withdrawn a boost!\nThe total Boost count for **%server%** is now **%boost_number%**.
-    
+
 ....
 
 |bot_prefix|\ nsbdmnotif
@@ -1046,14 +1100,14 @@ Examples
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbdmnotif
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles Nitro Server Boost "thank you" messages, sent to the users who **Boost** the server, via Direct Message.
-    
+
 ....
 
 |bot_prefix|\ nsbdmtemplate
@@ -1061,8 +1115,8 @@ Toggles Nitro Server Boost "thank you" messages, sent to the users who **Boost**
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ nsbdmtemplate [message content]
 
 Command Description
@@ -1073,11 +1127,20 @@ You can use one (or more) of these placeholders in your message:
 
 * **%user%**: This will be replaced with a mention of the user.
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -1086,10 +1149,10 @@ You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ nsbdmtemplate
     |bot_prefix|\ nsbdmtemplate Thanks for boosting **%server%**! Our total Boost count is now **%boost_number%**.
-    
+
 ....
 
 |bot_prefix|\ nsblist
@@ -1119,17 +1182,17 @@ You can configure one or more roles that will be allowed to submit new emojis. I
 For each role, you will be able to configure:
 
 * Whether the role will be allowed to submit emojis without further verification.
-  
+
   * By setting a verification channel, authorized users (more on that below) will be able to accept or reject an emoji submission before it's actually uploaded.
   * By disabling the verification channel, the emoji will be immediately uploaded without further verification.
   * By **default**, the additional verification step is **disabled**.
-  
+
 * Which roles will be able to accept or reject an emoji submission, provided you enabled the verification channel.
 
   * These roles will also be mentioned within the verification channel when a submission is received.
   * Users that are enabled to use the administration module using the :ref:`permissions` will always be authorized to accept or reject any emoji submission.
   * By **default**, **no additional roles** are enabled to accept or reject emoji submissions.
-  
+
 * How many emojis (submitted through this system) the role will be allowed to have up at any given time.
 
   * If the verification step is active, users are virtually allowed to submit any number of emojis. By setting a maximum number of emojis through the dedicated setting, you are locking the maximum number of **accepted** emojis.
@@ -1151,8 +1214,8 @@ Here's the full list of available commands for this sub-module:
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ esubrole [role id(s)/mention(s)/q_name(s)]
 
 Command Description
@@ -1174,10 +1237,10 @@ Permissions Needed
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ esubrole
     |bot_prefix|\ esubrole 123456789098765432 234567890987654321
-    
+
 ....
 
 |bot_prefix|\ esubsetup
@@ -1252,9 +1315,9 @@ Lets users submit a new emoji, provided they have at least one of the "emoji sub
 
 .. note::
     This command is always available to everyone. A proper configuration of the emoji submitter roles will avoid an improper use of this command.
-    
+
     Users won't need "Manage Emojis" permissions to run this command, but |bot_name| will still check for its own "Manage Emojis" permissions to be sure it can (eventually) upload the emoji upon a successful verification, if any.
-    
+
     By default, no role is set as emoji submitter role (before a proper configuration) and this command will not have any effect.
 
 The emoji image can be provided by using an existing emoji **(this will only work if the bot has access to the emoji from another server)**, or a valid image URL, or an image provided in forms of an attachment to the submit message. Emoji images must be under 256 KB in size and one of these formats: ``.jpg``, ``.jpeg``, ``.png``, ``.gif``.
@@ -1273,7 +1336,7 @@ Permissions Needed
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ emojisubmit https://cdn.discordapp.com/emojis/614486002291048459.gif?v=1 amegablobsweats
 
 ....
@@ -1294,8 +1357,8 @@ Here's the full list of available commands for this sub-module:
 
 Command Syntax
 ^^^^^^^^^^^^^^
-.. parsed-literal:: 
-    
+.. parsed-literal::
+
     |bot_prefix|\ imggallery [channel id(s)/mention(s)/q_name(s)]
 
 Command Description
@@ -1307,7 +1370,7 @@ If used without any (valid) argument, the command will show which channels are c
 Examples
 ^^^^^^^^
 .. parsed-literal::
-    
+
     |bot_prefix|\ imggallery
     |bot_prefix|\ imggallery 123456789098765432 234567890987654321
 
