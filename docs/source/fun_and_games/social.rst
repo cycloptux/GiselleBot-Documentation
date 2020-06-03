@@ -6,7 +6,7 @@ The Social module tracks users' activity in a server (and globally) and rewards 
 
 .. warning::
     These limitations are applied to avoid users manipulating their EXP:
-    
+
     * EXP is calculated on the amount of messages that are sent by the user. Message length doesn't change the amount of EXP earned on each message.
     * Each message is given a random EXP value, ranging from 10 to 20 EXP.
     * A cooldown is applied after each EXP gain to avoid users spamming messages to power level their profile.
@@ -21,7 +21,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ profile [user id/mention]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Shows the server profile (including the EXP status) of a user. By default, it will show the profile of the user that runs the command. Users can check someone else's profile by tagging them or using their ID.
@@ -67,7 +67,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ lb [page #] [--days {# of days}]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the server social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days.
@@ -90,7 +90,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ glb [page #] [--days {# of days}]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the global social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days.
@@ -113,7 +113,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ expar (level) (role id(s)/mention(s)/q_name(s)) [--persistent] [--volatile]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Adds one (or more) **existing** role(s) as reward for reaching a certain EXP level.
@@ -127,12 +127,12 @@ By default, obtained roles are removed if, and when, a reward of higher tier is 
 
 .. note::
     Let's make a practical example. User X is currently Lv. 4, and the server currently has these settings:
-    
+
     * "Rookie", obtained at level 5, **volatile**;
     * "Known Member", obtained at level 5, **persistent**;
     * "Junior", obtained at level 7;
     * "Senior", obtained at level 10.
-    
+
     Upon levelling up to Lv. 5, X will obtain **Rookie** and **Known Member**.
     Upon levelling up to Lv. 6, X will lose **Rookie** (volatile).
     Upon levelling up to Lv. 7, X will obtain **Junior**, and keep **Known Member** (persistent).
@@ -163,7 +163,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ exprr (level) (role id(s)/mention(s)/q_name(s))
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Removes one (or more) role(s) as reward for reaching a certain EXP level.
@@ -193,7 +193,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ exproles
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lists all of the EXP roles that are currently set in the current server.
@@ -212,7 +212,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ exprapply
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Recalculates the EXP role(s) each server member is entitled to have, and applies the correct set of roles to each user.
@@ -237,7 +237,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ noexprole [- {or} role id/mention/q_name]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 In order to block certain users from gaining server EXP when messaging (refer to the top of this page), server managers can set one role as "No-Experience Role": users having this role will not gain any experience from their messages.
@@ -262,6 +262,40 @@ Examples
 
 ....
 
+|bot_prefix|\ noexpchannels
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ noexpchannels [- {or} channel(s) id/mention/q_name]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+In order to block certain channels (usually, spam channels) from being a source to gain server EXP when messaging (refer to the top of this page), server managers can set one or more channels as "No-Experience Channels": users chatting in these channels will not gain any experience from their messages.
+
+Running this command with one or more channel identifier(s) as argument will set those channels as No-EXP Channels. This command will always override the former list of channels.
+
+Running this command with ``-`` as argument will disable this feature (removing the "No-EXP Channel" flag from any former channel).
+
+Running this command without arguments will show the current No-EXP Channels, if any.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ noexpchannels #spam
+    |bot_prefix|\ noexpchannels #spam #bot-commands
+    |bot_prefix|\ noexpchannels
+    |bot_prefix|\ noexpchannels -
+
+....
+
 |bot_prefix|\ notifychannel
 ---------------------------
 
@@ -270,7 +304,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ notifychannel [channel id(s)/mention(s)/q_name(s)]
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 If used without any channel identifier, this command will toggle the in-channel notification for level ups in the whole server.
@@ -298,7 +332,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ notifychannelmode
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the notification channel mode from blacklist (default) to whitelist and viceversa.
@@ -317,7 +351,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ notifydm
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the DM notification for level ups for all server members.
@@ -332,7 +366,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ notifystatus
-    
+
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Shows the current status of the level up notification settings, as set by the above commands.
