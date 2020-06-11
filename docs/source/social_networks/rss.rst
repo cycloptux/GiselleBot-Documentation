@@ -5,7 +5,7 @@ RSS Reader
 The RSS (Really Simple Syndication) reader offers an easy way to stream new items from any RSS (XML, Atom) feed to one (or more) of the webhooks configured in your Discord server.
 
 .. seealso::
-    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
 By default, each item will be posted to the webhook by using the RSS feed name (if present in the feed, falling back to the website URL or feed URL otherwise) as author, and the feed image (if present, falling back to a default RSS logo image) as Discord profile picture. These settings (and other details) can be customized for each stream.
 

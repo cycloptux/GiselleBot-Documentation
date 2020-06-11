@@ -5,7 +5,7 @@ Twitter Connector
 The Twitter connector offers an easy way to stream tweets from any Twitter account to one (or more) of the webhooks configured in your Discord server.
 
 .. seealso::
-    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
 By default, each tweet will be posted to the webhook by using the Twitter account username as author, and Twitter avatar as Discord profile picture. These settings (and other details) can be customized for each stream.
 

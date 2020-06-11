@@ -101,7 +101,7 @@ YouTube Notifications
 =====================
 
 .. seealso::
-    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
+    In order to better understand this module (and the rest of the connector modules), it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
 By default, each notification will be posted to the webhook by using the YouTube channel name as author, and YouTube channel thumbnail as Discord profile picture. These settings (and other details) can be customized for each stream.
 

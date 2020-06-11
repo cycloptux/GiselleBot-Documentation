@@ -66,7 +66,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can vote for |bot_name| on `Discord Bot List <https://discordbots.org/bot/356831787445387285>`_ (click on the website name to be sent to the bot page).
+As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can vote for |bot_name| on `Top.gg (Discord Bot List) <https://top.gg/bot/356831787445387285>`_ (click on the website name to be sent to the bot page).
 
 Any Discord user can vote for each bot once every 12 hours. Each vote for |bot_name| will award you with **125 currency coins**.
 
@@ -75,6 +75,29 @@ To help give |bot_name| a better chance to fight for the top spots, votes will c
 By enabling the notification service using the |bot_prefix|\ dblnotify command in any server, you will also be notified when your Discord Bots List vote is available, thus being able to actively collect your daily coins efficiently. Each run of the command will toggle its previous state.
 
 Users will only be notified once per vote reset.
+
+....
+
+.. _bodvalidate:
+
+|bot_prefix|\ bodvalidate
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ bodvalidate
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+As an additional source of income for bot currency, and as a way to show your appreciation to |bot_name|\ , you can leave a review for |bot_name| on `Bots on Discord <https://bots.ondiscord.xyz/bots/356831787445387285>`_ (click on the website name to be sent to the bot page).
+
+This command will **anonymously** validate your review within the bot. |bot_name|\ will check for the existence of a review on your name, and will award **25,000 currency coins** if found.
+
+|bot_name|\ will not know which specific review was submitted, nor its positive or negative state.
+
+**This reward can only be obtained once!**
 
 ....
 

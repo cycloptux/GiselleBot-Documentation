@@ -162,7 +162,7 @@ Examples
 ....
 
 Room Master Commands
-===================
+====================
 
 After creating a room through :ref:`rrcreate`, the user that opened the room becomes the "Room Master" and gains access to a set of additional commands used to manage the owned rooms.
 

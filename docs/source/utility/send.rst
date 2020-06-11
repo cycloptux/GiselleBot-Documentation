@@ -13,13 +13,15 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ msgsend (channel id/mention) (message to send)
+    |bot_prefix|\ msgsend (channel id/mention) [message to send]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Sends a message to a channel in the current server.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+You can attach a file/image to the command to have |bot_name| send the file/image as attachment on the target message.
 
 Examples
 ^^^^^^^^
@@ -45,6 +47,8 @@ Edits a previously sent message.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
 
+You cannot edit a message attachment.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
@@ -69,6 +73,8 @@ Sends a message to a webhook **in the current channel**. If the webhook name is 
 This command is meant to test the functionality of a Discord webhook. For this reason, the feature is limited to sending a message to a webhook that is set within the channel from where the command is run.
 
 You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+You can attach a file/image to the command to have |bot_name| send the file/image as attachment on the target message.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^

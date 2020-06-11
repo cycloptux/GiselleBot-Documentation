@@ -971,6 +971,35 @@ Examples
 
 ....
 
+|bot_prefix|\ rmdmtoggle
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmdmtoggle [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the Direct Message confirmation for **successfully added or removed** self-assigned roles on a specific role menu, making them "silent" or re-enabling the verbose message confirmation. Roles not being assigned will still trigger the DM.
+
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmdmtoggle 123456789098765432
+
+....
+
 |bot_prefix|\ rmremove
 ----------------------
 
@@ -1038,7 +1067,7 @@ Nitro Server Boost Notifications
 With Server Boosts, Discord added a way for you and your community to work together to unlock fresh new and improved collective perks for a server of your choice, each month, and share those epic perks to the rest of the server community.
 
 .. seealso::
-    You can find everything about Server Boosts at this link: https://support.discordapp.com/hc/en-us/articles/360028038352
+    You can find everything about Server Boosts at this link: https://support.discord.com/hc/en-us/articles/360028038352
 
 With |bot_name|\ , Server Boosts can now be tracked efficiently, and your members can be greeted through a custom message when they gift your server with a Boost!
 

@@ -11,11 +11,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ gcstart [--channel {channel id/mention/q_name}] [--prize {prize name}] [--winners {# of winners (number)}] [--duration {duration timecode}] [--max {# of users after which the bot will stop the giveaway (number)}]
+    |bot_prefix|\ gcstart [--channel {channel id/mention/q_name}] [--prize {prize name}] [--winners {# of winners (number)}] [--duration {duration timecode}] [--roles {role(s) id/mention/q_name}] [--max {# of users after which the bot will stop the giveaway (number)}]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Starts a new giveaway in a channel (the current channel, if the ``--channel`` parameter is omitted). Members can participate by clicking on the reaction that is added by the bot.
+
+If the ``--roles`` parameter is used, the giveaway will only select winners among those participants that have **at least one of the selected roles** at the time of closure of the giveaway. The ``--roles`` parameter cannot be used in conjunction with the ``--max`` parameter, using both will ignore the ``--max`` parameter.
 
 All parameters are optional, the default values (on omission) are:
 
@@ -23,6 +25,7 @@ All parameters are optional, the default values (on omission) are:
 * **Prize Name**: "Sample Prize"
 * **Winners**: 1
 * **Duration**: 1 day (24 hours)
+* **Roles Restriction**: *None* (All participants will be considered)
 * **Max**: *None* (Infinite)
 
 .. note::
@@ -33,6 +36,7 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ gcstart --prize Free Steam Key --winners 2 --duration 1w
+    |bot_prefix|\ gcstart --prize Blue Hat --winners 5 --roles @BluePeople @WearingHats
     |bot_prefix|\ gcstart --channel #giveaways --prize Free Steam Key to the fastest 5! --winners 5 --max 5
 
 ....
@@ -50,7 +54,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Opens an editing menu for an existing giveaway in the current channel. The message ID is optional: if omitted, the most recent giveaway in the channel will be considered.
 
-You cannot edit a giveaway duration or channel.
+You cannot edit a giveaway duration, channel, list of restricted roles (if applicable) or maximum amount of users (if applicable, refer to the ``--max`` parameter).
 
 Examples
 ^^^^^^^^

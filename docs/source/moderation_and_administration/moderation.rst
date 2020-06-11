@@ -745,21 +745,23 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ slowmode [time code] [channel id(s)/mention(s)/q_name(s)]
+    |bot_prefix|\ slowmode [time code] [channel id(s)/mention(s)/q_name(s)] [--admode]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
 Sets slow mode for the current, or the selected, channels. This command leverages 2 different systems:
 
-* If the slow mode time code is within Discord's native slow mode time limit, the native slow mode is applied.
-* If the slow mode time code exceeds Discord's native time limit, the bot will apply an "extended slow mode" status.
+* If the slow mode time code is within Discord's native slow mode time limit (less than 6 hours), the native slow mode is applied.
+* If the slow mode time code exceeds Discord's native time limit (more than 6 hours), the bot will apply an "extended slow mode" status.
 
 The **extended slow mode** applies a minimal native slow mode to make sure the "Slowmode is enabled" message is shown. At the same time, each message sent by an unauthorized user will be automatically deleted, and the user will be notified of the applied slow mode.
 
 The extended slow mode doesn't have a higher cap.
 
 Using the command without any argument will show the current settings for the server. Using the command with **0** in place of the time code will disable the slow mode for the current, or the selected, channel(s).
+
+The usage of the optional ``--admode`` parameter will enable the **Auto-Delete** mode, a.k.a. **Bump Mode**. If the **extended slow mode** is active (this mode will not work on native slow mode), each message that is successfully sent into the slowed channel will also trigger an automatic deletion of the previous message sent by the user while slow mode is active.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^

@@ -220,6 +220,125 @@ Examples
 Message-related Tools
 =====================
 
+.. _publish:
+
+|bot_prefix|\ publish
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ publish [message id(s)] [--channel {channel id/mention/q_name}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+This command will publish one or more messages sent into an **Announcement Channel**. For more info about Announcement Channels and the publish feature, you can check `this link <https://support.discord.com/hc/en-us/articles/360032008192-Announcement-Channels->`_ from Discord.
+
+By default, the command will look for messages in the current channel. You can, however, specify a different channel using the ``--channel`` tag. Please make sure that the target channel is an Announcement Channel, otherwise |bot_name| will throw an error.
+
+If the message ID(s) are omitted, |bot_name| will attempt to publish the most recent message (above the command itself).
+
+You can also specify one or more ID(s) to publish specific messages from the target channel.
+
+.. note::
+    This specific command is particularly useful for **mobile users**, until Discord adds the ability for the mobile client to publish messages through the UI.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+While technically available to everyone, this command will check for the correct permissions for a user to be able to post/publish a message, according to Discord limitations:
+
+* **Send Messages Permission** will let you publish your own messages in the Announcement Channel
+* **Manage Messages Permission** will let you publish all messages in the Announcement Channel
+
+This also applies to |bot_name|\ : Manage Messages Permissions will be required to publish messages coming from other users, but Send Messages Permissions will be enough to make |bot_name| publish its own messages (e.g. messages sent through the :ref:`msgsend` command).
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ publish
+    |bot_prefix|\ publish 123456789098765432 234567890987654321
+    |bot_prefix|\ publish 123456789098765432 --channel #announcements
+
+....
+
+|bot_prefix|\ autopublishsetup
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autopublishsetup [--channel {channel id/mention/q_name}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+This command will open an interactive menu to configure the auto-publish feature on a target channel, provided the channel is set as an **Announcement Channel**. For more info about Announcement Channels and the publish feature, you can check `this link <https://support.discord.com/hc/en-us/articles/360032008192-Announcement-Channels->`_ from Discord.
+
+You can manually publish messages through |bot_name| using the :ref:`publish` command. Through the use of the auto-publish feature, however, you can set certain Announcement Channels to have all messages (or a subset of messages) automatically published upon being sent.
+
+Options 1. and 2. are used to save the settings you applied through the menu (the settings will not apply until you save them), or discard said changes.
+
+3. "Publish all messages" will automatically publish all messages sent into the target channel. When this setting is enabled, enabling or disabling any of the subsequent settings will not have any effect.
+4. "Publish all user messages" will automatically publish all messages coming from real users, ignoring bot messages and webhook/integration messages.
+5. "Publish all bot messages" will automatically publish all messages coming from bots, but ignore webhook/integration messages.
+6. "Publish all webhook messages" will automatically publish all messages coming from webhooks or external integrations.
+7. "Publish if the user/bot has at least one of these roles" will automatically publish messages coming from bots or users having certain roles, and ignore webhook/integration messages or messages coming from bots/users not having any of those roles.
+
+.. note::
+    You can configure options 4, 5, 6 and 7 in any mixed set to achieve the desired behavior. Please note that options 4 and 5 will override the role requirements configured through option 7 on the corresponding entity.
+
+If the **Messages** log is enabled in a server channel, each automatically published message will generate an entry into that log. Even publishing errors (e.g. due to rate limits) are logged.
+
+Please refer to the :ref:`log-command` section in the **Administration** module documentation.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+**Manage Server Permissions** are required to open the configuration menu.
+
+For the "publishing" permissions themselvers, this command will check for the correct permissions for a user to be able to post/publish a message, according to Discord limitations:
+
+* **Send Messages Permission** will let you publish your own messages in the Announcement Channel
+* **Manage Messages Permission** will let you publish all messages in the Announcement Channel
+
+This also applies to |bot_name|\ : Manage Messages Permissions will be required to publish messages coming from other users, but Send Messages Permissions will be enough to make |bot_name| publish its own messages (e.g. messages sent through the :ref:`msgsend` command).
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autopublishsetup
+    |bot_prefix|\ autopublishsetup #announcements
+
+....
+
+|bot_prefix|\ rawmessage
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rawmsg (message id) [--channel {channel id/mention}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows a specific message content in its "raw" version, making markdown-formatted messages or embeds easy to copy and paste.
+
+Embeds can be re-sent through |bot_name| using the :ref:`msgsend` command. This might not work 100% of the times for complex embeds.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rawmsg 123456789098765432
+    |bot_prefix|\ rawmsg 123456789098765432 --channel #rules
+    
+....
+
 |bot_prefix|\ savechat
 ----------------------
 
@@ -711,7 +830,7 @@ Converts between quantities in different units. It also supports converting curr
 The value and originating unit are mandatory. If the destination unit is omitted or invalid (e.g. non-existing, or a unit in a different measure, like trying to convert length to mass) then the "best" destination unit will be picked. For currencies, if the destination currency is omitted or invalid, ``USD`` will be automatically used.
 
 .. seealso::
-    `Click here <https://www.npmjs.com/package/convert-units#supported-units>`_ for a list of all supported measurement units. `Click here <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported currencies.
+    `Click here [1] <https://www.npmjs.com/package/convert-units#supported-units>`_ for a list of all supported **measurement units**. `Click here [2] <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported **currencies**.
 
 Examples
 ^^^^^^^^
@@ -738,7 +857,10 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Creates a channel as "clock channel", updating its name every minute. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
+Creates a channel as "clock channel", updating its name every 10 minutes. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
+
+.. note::
+    The initial implementation of this command used to have clocks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 10-minutes update is the safest update that is still useful to track time.
 
 You can set a custom template for the channel name. You can use one (or more) of these placeholders in your custom channel name template:
 
@@ -752,7 +874,7 @@ By default, the channel name template is ``%time_zone%: %clock%``.
 
 .. admonition:: Premium
 
-    Out of the box, each server is limited to having **1 clock channel**. You can unlock up to **5 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`).
+    Out of the box, each server is limited to having **5 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`). This Premium limit was increased from 1/5 after the Discord rate limit update.
 
 
 Permissions Needed

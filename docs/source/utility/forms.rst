@@ -38,7 +38,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Pairs a Discord server with a Trello team.
+Pairs a Discord server with a Trello team. No restrictions are applied to the number of Discord servers that can pair a Trello team, although **each server must pass the verification step individually** (see below).
 
 In order to pair with a team, you can use the team name or the URL containing the team name (see the note below).
 
@@ -48,6 +48,14 @@ Using ``-`` as the only argument will unpair the current server from the paired 
 
 .. note::
     The team name is the one you find inside the Trello URL within the team page, which usually has this form: ``https://trello.com/TEAM_NAME/home``
+
+**As a security measure, the Trello team pairing process is composed of 2 steps.** Running this command will issue a verification request to the target Trello team, giving the user who run the command a 6-digits unique code (that is generated randomly when the command is run). You must then verify that you have enough permissions to create cards on at least one Team board before the pairing is effective.
+
+|bot_name| will start querying the Trello team boards in order to find a card with the 6-digits code set as title. You must head to one of the Team boards and **create a card (in any list) with the provided 6-digits code as title**.
+
+If no card is found with the correct title within **5 minutes** from running the command, the pairing will fail. If the card is found, the pairing will complete and the team boards will be available for use in the Forms module.
+
+Once the card is found the pairing will complete, actvating the integration. The verification card will be deleted, and you will be notified (with a mention) in the current channel.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -128,6 +136,23 @@ Examples
 
     |bot_prefix|\ submitreactremove 123456789098765432
     
+....
+
+|bot_prefix|\ adsubmit
+----------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles the automatic deletion of the "confirmation" message that is sent upon using the |bot_prefix|\ submit command into a server, and of the command itself.
+
+The user-sent message will be deleted immediately. The confirmation message will be deleted after 5 seconds.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Messages
+| **Bot**: Manage Messages
+
 ....
 
 |bot_prefix|\ forminit
@@ -220,9 +245,10 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
     * **Enabling** a previously disabled voting arrow will **not** reapply the arrow to existing submissions. It **will** track the votes as long as **any user** adds the ``:arrow_up:`` and/or ``:arrow_down:`` reaction to the public submission message (as long as it's the native Discord reaction and not a custom one).
     
 12. "Toggle highlighting of attachments" enables or disables the public embed from having an additional field where all of the "attachment"-flagged fields are linked, using their ``gisl.eu`` short link (using the same engine behind :ref:`shorturl`).
-13. (Only useful in "Trello share mode") "Set target board" lists the available boards within the paired Trello team (refer to :ref:`trellopair`) and sets the linked Trello board for the current form. Renaming a board in Trello will not affect this link.
-14. (Only useful in "Trello share mode") "Toggle extended embed" enables or disabled the public in-Discord summary message extended mode: by default, a submission that has Trello set as "share mode" will only show a short summary of the submission, while the actual full post will be found in the linked Trello card. By enabling the "extended embed", the whole submission will be kept within Discord, while still having a link to the corresponding Trello card.
-15. (Only useful in "Discord share mode" or "Trello share mode" with "extended embed" active) "Anonymize public submissions" completely hides the submitter info from the public in-Discord summary message, keeping the user's anonymity intact (as long as "private"-flagged fields are used for other kinds of recognizable data within the form).
+13. "Set mentioned role(s)" sets the list of roles that will be mentioned in the public in-Discord summary message(s) when a submission is accepted.
+14. (Only useful in "Trello share mode") "Set target board" lists the available boards within the paired Trello team (refer to :ref:`trellopair`) and sets the linked Trello board for the current form. Renaming a board in Trello will not affect this link.
+15. (Only useful in "Trello share mode") "Toggle extended embed" enables or disabled the public in-Discord summary message extended mode: by default, a submission that has Trello set as "share mode" will only show a short summary of the submission, while the actual full post will be found in the linked Trello card. By enabling the "extended embed", the whole submission will be kept within Discord, while still having a link to the corresponding Trello card.
+16. (Only useful in "Discord share mode" or "Trello share mode" with "extended embed" active) "Anonymize public submissions" completely hides the submitter info from the public in-Discord summary message, keeping the user's anonymity intact (as long as "private"-flagged fields are used for other kinds of recognizable data within the form).
 
 Here's an example of a public in-Discord summary message with Trello share mode, extended embed, attachments highlighting and anonymizer on.
 

@@ -11,7 +11,7 @@ Server/Guild, Channel, Message, Role, User IDs
 
 Each entity in Discord is mapped with a unique ID. Knowing what an ID is, and how to get the ID of a said entity is crucial to knowing how a bot works. Obtaining an ID also requires that you have Discord's Developer Mode active.
 
-There are a lot of guides and tutorials about how to activate Developer Mode and how to get an ID for an entity in Discord. `This link <https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID->`_ will bring you to the official Discord support page about this topic.
+There are a lot of guides and tutorials about how to activate Developer Mode and how to get an ID for an entity in Discord. `This link <https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID->`_ will bring you to the official Discord support page about this topic.
 
 Obtaining a role ID may be trivial: you can obtain the role ID by prepending a role mention with ``\``, but that message will still mention the role.
 

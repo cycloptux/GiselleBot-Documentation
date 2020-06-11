@@ -49,3 +49,27 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Plays a round of bet roll.
+
+....
+
+Minesweeper
+===========
+
+Contrary to other games, this game does not involve any currency or bet, and can be played by any number of users on the same "board".
+
+Game rules and information about the current board will be shown upon running the command.
+
+|bot_prefix|\ minesweeper
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ mswp [--easy/--normal/--hard/--extreme]
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Generates a random minesweeper board. Any user can play locally by unhiding the spoiler tags on the board. No other kind of interaction is implemented, just have fun and play fair!
+
+Use one of the optional tags to create a new board of the selected difficulty. "Normal" is the default mode, if the difficulty tag is omitted.
