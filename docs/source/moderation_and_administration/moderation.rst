@@ -1065,7 +1065,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ delrule (rule id/name/alias)
+    |bot_prefix|\ delrule (rule(s) id/name/alias)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -1088,7 +1088,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ toggleglobalrule (rule id/name/alias)
+    |bot_prefix|\ toggleglobalrule (rule(s) id/name/alias)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
