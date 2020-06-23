@@ -341,6 +341,10 @@ Toggles the notification channel mode from blacklist (default) to whitelist and 
 
 **Whitelist** mode will only make the in-channel level up message appear in the selected channels.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels
+
 ....
 
 |bot_prefix|\ notifydm
@@ -356,6 +360,10 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the DM notification for level ups for all server members.
 
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels
+
 ....
 
 |bot_prefix|\ notifystatus
@@ -370,3 +378,24 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Shows the current status of the level up notification settings, as set by the above commands.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels
+
+....
+
+|bot_prefix|\ notifyoptout
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ notifyoptout
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Provides a way for individual users to disable the DM notification upon leveling up, even if the server-wide notifications are active.
+
+Run the command again to re-enable the DM notifications.
