@@ -66,11 +66,15 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ lb [page #] [--days {# of days}]
+    |bot_prefix|\ lb [page #] [--days {# of days}] [--roles (role id(s)/mention(s))] [--min {minimum score}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the server social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days.
+
+Using the ``--roles`` parameter will filter the leaderboard to those having at least one of the selected roles.
+
+Using the ``--min`` parameter will filter the leaderboard to those users whose gained EXP is greater than or equal to the selected value.
 
 Examples
 ^^^^^^^^
@@ -78,7 +82,7 @@ Examples
 
     |bot_prefix|\ leaderboard
     |bot_prefix|\ leaderboard 2
-    |bot_prefix|\ leaderboard --days 30
+    |bot_prefix|\ leaderboard --days 30 --roles @Players
 
 ....
 
@@ -89,11 +93,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ glb [page #] [--days {# of days}]
+    |bot_prefix|\ glb [page #] [--days {# of days}] [--min {minimum score}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Prints the global social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days.
+
+Using the ``--min`` parameter will filter the leaderboard to those users whose gained EXP is greater than or equal to the selected value.
 
 Examples
 ^^^^^^^^
@@ -101,7 +107,7 @@ Examples
 
     |bot_prefix|\ gleaderboard
     |bot_prefix|\ gleaderboard 2
-    |bot_prefix|\ gleaderboard --days 30
+    |bot_prefix|\ gleaderboard --days 30 --min 10000
 
 ....
 
