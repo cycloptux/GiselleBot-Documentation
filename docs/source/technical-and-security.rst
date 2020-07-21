@@ -14,7 +14,7 @@ The bot is written in Node.js, and uses `Discord.js v12 <https://discord.js.org/
 Here are some info and numbers about the bot (as of July 16th, 2020):
 
 * 99.9% uptime.
-* 25 self-developed RESTful microservices, supporting the bot in its operations.
+* 26 self-developed RESTful microservices, supporting the bot in its operations.
 * ~34,000 lines of code for the main process, and ~10,000 extra lines of code for the custom microservices, excluding JSON/data files.
 * Present in ~1500 Discord servers.
 * Development started in September, 2017, making GiselleBot 3 years old.
