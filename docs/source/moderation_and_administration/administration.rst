@@ -960,7 +960,7 @@ Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 
 | **User**: Manage Roles
-| **Bot**: Manage Roles
+| **Bot**: Manage Roles, Add Reactions
 
 Examples
 ^^^^^^^^
