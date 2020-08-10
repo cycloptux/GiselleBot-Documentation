@@ -5,7 +5,7 @@ User-Generated Content Disclaimer
 tl;dr
 =====
 
-|bot_name| and its developer, Cyc (cycloptux#1543 on Discord), are not responsible or liable in any manner for any content that is created by third parties through features that enable users to configure and/or add custom content to the bot, or to send message on behalf of the bot_name.
+|bot_name| and its developer, Cyc (cycloptux#1543 on Discord), **are not responsible or liable in any manner for any content that is created by third parties** through features that enable users to configure and/or add custom content to the bot, or to send message on behalf of the |bot_name|\ .
 
 In those cases, server managers must be considered accountable for such content.
 
