@@ -22,7 +22,7 @@ Here's a summary of the available Premium tiers and the corresponding unlocked p
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, please **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 on Discord to request the activation of the premium perks in your server**.
+    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, join the official Support Server on Discord (https://gisl.eu/support) and **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 with |bot_prefix|\ submit on Discord to request the activation of the premium perks in your server**. If the form does not show up in the list of available forms, send the |bot_prefix|\ submit command in the #bot-spam channel within the server.
 
 Tier 0: Show Your Support!
 ==========================
@@ -39,6 +39,8 @@ By becoming a **Tier 1** (or higher) patron, you'll get access to:
 * (Command Scheduler) **Command Scheduling** interval raised from 1 hour to **12 hours**
 * (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 * (Utility) **up to 5 simultaneous clock channels** (removing the default cap of 1 clock channel per server)
+
+You will also gain access to any or all of the "alpha" unreleased modules. Access to alpha modules, when available, must be specifically requested.
 
 Tier 2: Premium Support, Extended Modules
 =========================================

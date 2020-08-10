@@ -124,6 +124,8 @@ Repeat a message periodically in a channel.
 
 This command has a quick syntax (with 2 variations) and a full syntax. It is advised to use the full syntax if you want take advantage of the advanced settings. Some advanced parameters will still work with the quick syntaxes, but using that mix is not officially supported.
 
+Embed support is only available with the full syntax.
+
 .. admonition:: Premium
 
     Each server can have a maximum of 5 repeating messages. If you need more repeating messages, you can unlock more as a **Premium** feature (see: :ref:`premium-perks`).
