@@ -609,6 +609,8 @@ Examples
 Automated Roles Assignment/Removal
 ==================================
 
+.. _autoassignrole:
+
 |bot_prefix|\ autoassignrole
 ----------------------------
 
