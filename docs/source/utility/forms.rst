@@ -249,6 +249,7 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
 14. (Only useful in "Trello share mode") "Set target board" lists the available boards within the paired Trello team (refer to :ref:`trellopair`) and sets the linked Trello board for the current form. Renaming a board in Trello will not affect this link.
 15. (Only useful in "Trello share mode") "Toggle extended embed" enables or disabled the public in-Discord summary message extended mode: by default, a submission that has Trello set as "share mode" will only show a short summary of the submission, while the actual full post will be found in the linked Trello card. By enabling the "extended embed", the whole submission will be kept within Discord, while still having a link to the corresponding Trello card.
 16. (Only useful in "Discord share mode" or "Trello share mode" with "extended embed" active) "Anonymize public submissions" completely hides the submitter info from the public in-Discord summary message, keeping the user's anonymity intact (as long as "private"-flagged fields are used for other kinds of recognizable data within the form).
+17. "Anonymize rejection messages" enables or disables whether the name of the user that rejected a submission will appear in the rejection message on a specific form.
 
 Here's an example of a public in-Discord summary message with Trello share mode, extended embed, attachments highlighting and anonymizer on.
 
