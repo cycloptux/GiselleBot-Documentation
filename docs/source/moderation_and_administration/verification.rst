@@ -115,3 +115,24 @@ Here's an explanation of the available stats:
 In order to properly recognize whether a user left on their own or was kicked, "View Audit Log" permissions must be given to |bot_name|\ .
 
 If **Members Logging** is disabled, the above values will all be added to the **Errored Captchas** statistics.
+
+....
+
+|bot_prefix|\ verifyuser
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ verifyuser (user id(s)/mention(s)/q_name(s))
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Manually verifies one or more users. The corresponding log entry will track the user that run the command.
+
+The user(s) will be notified of the manual verification. The author of the command will not be disclosed in the notification DM.
+
+.. note::
+
+    Manually verified users will not appear in the verification module stats. Also, manually verifying a user will not count as a valid verification in regards to the verification bypass logic.
