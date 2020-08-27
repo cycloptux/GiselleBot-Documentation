@@ -103,8 +103,8 @@ Here's an explanation of the available stats:
 * "Users Sent Captchas" is the total number of sent captchas. It should normally be the sum of the following params, except for some edge cases.
 * "Users Passed" is the number of successfully passed captchas.
 * "Users Failed (Timer Expired)" and "Users Failed (Too Many Errors)" refer to captchas that were failed **while the user was still in the server**. Depending on the configuration of the module, this number also indicates the number of kicked users, if auto-kick is enabled.
-* "Users Leaving Before Verifying" refers to users that left the server on their own **before** their verification timeout was over.
-* "Users Kicked Before Verifying" refers to users that were kicked for reasons unrelated to the verification process **before** their verification timeout was over.
+* "Users Leaving While Verifying" refers to users that left the server on their own (while verifying) **before** their verification timeout was over.
+* "Users Kicked While Verifying" refers to users that were kicked for reasons unrelated to the verification process (while verifying) **before** their verification timeout was over.
 * "Users Kicked By Discord" refers to users that may have been kicked by Discord's automatic system for being flagged as suspicious accounts.
 * "Errored Captchas" refers to verifications that resulted in errors due to misconfigurations or other undefined problems (e.g. Discord API errors).
 * "Average Time To Verify" only takes into account **Passed** verifications.
