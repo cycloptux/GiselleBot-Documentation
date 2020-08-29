@@ -59,6 +59,7 @@ Tier 2 patrons unlock some improvements on the **trivia module** and get the who
 * (Music) access to the |bot_prefix|\ mpause, |bot_prefix|\ mresume, |bot_prefix|\ mvolume, |bot_prefix|\ mlyrics commands
 * (Command Scheduler) **Command Scheduling** interval raised to **1 week**
 * (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **7%** for **all users** in your server!
+* (Verification) Ability to set an **additional short message** to be sent to users that attempt a verification
 
 Tier 3: Unlocked Original Modules
 =================================
