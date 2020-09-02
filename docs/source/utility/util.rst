@@ -188,31 +188,21 @@ Shows all of the emojis from the current server into an embed.
 |bot_prefix|\ searchuser
 ------------------------
 
-.. warning::
-    This command is **temporarily** disabled due to changes in the Discord API that broke some of the shown parameters. It will be fixed soon.
-
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ searchuser (user id/mention/name, or a substring of the user's name or discriminator)
+    |bot_prefix|\ searchuser (user id/mention)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Searches for a user and returns the known info about that user.
 
-You can use the exact username, or look for users by using a substring of their name (this will only scan the bot cache).
-
-.. note::
-    Generally speaking, the bot will look into its cache to find the Discord user(s). If you want to look for uncached users, you **must** use their ID.
-
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ searchuser cyclopt
-    |bot_prefix|\ searchuser 1543
-    |bot_prefix|\ searchuser cycloptux#1543
+    |bot_prefix|\ searchuser @cycloptux#1543
     |bot_prefix|\ searchuser 123456789098765432
     
 ....
