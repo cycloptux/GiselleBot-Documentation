@@ -13,7 +13,7 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
 .. warning::
     For the **Trello** integration to work, some limitations currently apply:
     
-    1. You must **invite** the bot to your Trello team and give it permissions to edit the board in order for the bot to monitor, post and update cards.
+    1. You must **invite** |bot_name| to your Trello team and give it permissions to edit the board in order for the bot to monitor, post and update cards. You can invite |bot_name| to your Trello team using this email address: |bot_email|\ .
     2. You must **pair** the Discord server with the Trello team by using the |bot_prefix|\ trellopair command. Each Discord server can only be paired with 1 Trello team.
     3. Form settings will be fixed once a user sends a submission. Any change to a form will not apply to submissions that are already in the approval queue. This also means that the Trello board must be set (thus, exist) before a submission is sent.
     
