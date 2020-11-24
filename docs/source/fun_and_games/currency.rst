@@ -55,14 +55,14 @@ Once a day (by default, but the cooldown can be configured by the bot owner) use
 
 .. _topggnotify:
 
-|bot_prefix|\ _topggnotify
+|bot_prefix|\ topggnotify
 -----------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ _topggnotify
+    |bot_prefix|\ topggnotify
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -72,7 +72,7 @@ Any Discord user can vote for each bot once every 12 hours. Each vote for |bot_n
 
 To help give |bot_name| a better chance to fight for the top spots, votes will count double on the weekend (Fridays, Saturdays and Sundays). This also means **double the amount of coins**!
 
-By enabling the notification service using the |bot_prefix|\ _topggnotify command in any server, you will also be notified when your Discord Bots List vote is available, thus being able to actively collect your daily coins efficiently. Each run of the command will toggle its previous state.
+By enabling the notification service using the |bot_prefix|\ topggnotify command in any server, you will also be notified when your Discord Bots List vote is available, thus being able to actively collect your daily coins efficiently. Each run of the command will toggle its previous state.
 
 Users will only be notified once per vote reset.
 
