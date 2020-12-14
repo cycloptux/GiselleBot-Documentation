@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'GiselleBot'
-copyright = '2020, cycloptux'
+copyright = '2021, cycloptux'
 author = 'cycloptux'
 
 # The short X.Y version
