@@ -935,3 +935,18 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ urban guinea tee
+
+....
+
+|bot_prefix|\ lyrics
+--------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ lyrics (song name or search keyword)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Looks for lyrics of a song by song name or keyword.
