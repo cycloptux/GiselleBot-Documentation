@@ -699,7 +699,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **500** messages.
+Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **250** messages.
 
 ..  If you need to delete more than 500, you can append ``--force`` to remove the cap.
 
