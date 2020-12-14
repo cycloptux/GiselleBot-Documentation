@@ -56,7 +56,7 @@ Once a day (by default, but the cooldown can be configured by the bot owner) use
 .. _topggnotify:
 
 |bot_prefix|\ topggnotify
------------------------
+-------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
