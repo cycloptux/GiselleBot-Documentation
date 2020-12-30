@@ -239,6 +239,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -287,6 +288,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -380,6 +382,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -510,6 +513,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -560,6 +564,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -1133,6 +1138,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -1202,6 +1208,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
@@ -1262,6 +1269,7 @@ You can use one (or more) of these placeholders in your message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 

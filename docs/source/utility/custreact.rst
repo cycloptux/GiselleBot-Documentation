@@ -60,6 +60,7 @@ You can use one (or more) of these placeholders in your response message:
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
 * **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
 * **%prefix%**: This will be replaced with the current prefix for the server.
 * **%globalprefix%**: This will be replaced with the default, global prefix.
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
