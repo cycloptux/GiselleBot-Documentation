@@ -912,6 +912,44 @@ Examples
 
 ....
 
+.. _membercountchannel:
+
+|bot_prefix|\ membercountchannel
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ membercountchannel [--template {custom channel name template}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Creates a channel as "member count channel", showing the total amount of users that are currently in the server, updating its value every hour.
+
+You can set a custom template for the channel name. If you do so, you **must** use the **%count%** placeholder in your custom channel name template.
+
+By default, the channel name template is ``Members: %count%``.
+
+You can only have **1 member count channel** up at any time.
+
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels, Manage Server
+| **Bot**: Manage Channels, Connect
+
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ membercountchannel
+    |bot_prefix|\ membercountchannel --template Current Users: %count%
+
+....
+
 |bot_prefix|\ urban
 -------------------
 
