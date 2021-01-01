@@ -915,7 +915,7 @@ Examples
 .. _membercountchannel:
 
 |bot_prefix|\ membercountchannel
---------------------------
+--------------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
