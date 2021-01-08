@@ -36,6 +36,28 @@ Examples
     
 ....
 
+|bot_prefix|\ currencytransfer
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ currencytransfer (currency amount) (user id/mention)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Transfers a certain amount of currency from the user running the command to the target/receiving user. You can use ``all`` instead of the currency amount to transfer all your currency to the target/receiving user.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ ctransfer 5000 @cycloptux#1543
+    |bot_prefix|\ cpay all 123456789098765432
+    
+....
+
 .. _timely:
 
 |bot_prefix|\ timely
@@ -192,14 +214,14 @@ Permissions Needed
 
 ....
 
-|bot_prefix|\ award
--------------------
+|bot_prefix|\ currencyaward
+---------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ award (user and/or role id(s)/mention(s)/q_name(s)) (amount of currency)
+    |bot_prefix|\ currencyaward (user and/or role id(s)/mention(s)/q_name(s)) (amount of currency)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -211,14 +233,14 @@ Permissions Needed
 
 ....
 
-|bot_prefix|\ take
+|bot_prefix|\ currencytake
 ------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ take (user and/or role id(s)/mention(s)/q_name(s)) (amount of currency, or "all")
+    |bot_prefix|\ currencytake (user and/or role id(s)/mention(s)/q_name(s)) (amount of currency, or "all")
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -233,14 +255,14 @@ Permissions Needed
 
 .... 
 
-|bot_prefix|\ eventstart
+|bot_prefix|\ currencyeventstart
 ------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ eventstart [--amount/--a {amount of currency to gift to each reacting user}] [--pot-size/--p {maximum amount of currency that can be gifted}] [--duration/--d {event duration timecode}]
+    |bot_prefix|\ currencyeventstart [--amount/--a {amount of currency to gift to each reacting user}] [--pot-size/--p {maximum amount of currency that can be gifted}] [--duration/--d {event duration timecode}]
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
