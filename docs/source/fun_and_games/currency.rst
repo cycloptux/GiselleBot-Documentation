@@ -31,8 +31,8 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ $
-    |bot_prefix|\ $ @cycloptux#1543
-    |bot_prefix|\ $ 123456789098765432
+    |bot_prefix|\ balance @cycloptux#1543
+    |bot_prefix|\ bal 123456789098765432
     
 ....
 
