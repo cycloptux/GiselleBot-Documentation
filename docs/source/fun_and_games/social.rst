@@ -235,6 +235,99 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ expboost
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expboost [boost percentage value]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a custom Experience Boost Multiplier for the current server. This multiplier will be applied to the default rates of gaining EXP in order to increase or decrease the amount of gained server EXP when messaging (refer to the top of this page).
+
+* The **lower** hard limit for Experience Boosting is **-50%**, which corresponds to **0.5x** EXP gained per message (vs. the default value).
+* The **upper** hard limit for Experience Boosting is **100%**, which corresponds to **2x** EXP gained per message (vs. the default value).
+* The **default** multiplier for Experience Boosting is **0%**, which sets the EXP rate back to the default **1x**.
+
+Running this command without arguments will show the current EXP Boost Multiplier. Running it with a percentage value (without the ``%`` sign) between -50 and 200 will set a new EXP Boost on the current server.
+
+The new multiplier will be **rounded down to the nearest ten**, and must be within the aforementioned limits.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expboost -30
+    |bot_prefix|\ expboost 150
+    |bot_prefix|\ expboost
+
+....
+
+|bot_prefix|\ expedit
+---------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expedit (EXP amount) (user id/mention)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Adds or removes a certain amount of server EXP to a member of the server. You can increase or decrease someone's EXP of **up to 10,000 EXP** with this command. In order to increase or decrease someone's EXP of more than that, you must run the command multiple times.
+
+Use positive values to increase EXP. Use negative values to decrease EXP.
+
+Editing someone's EXP will not trigger EXP role assignments for any level in between the start level and end level.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expedit -2000 @cycloptux#1543
+    |bot_prefix|\ expedit 5000 123456789098765432
+
+....
+
+|bot_prefix|\ expreset
+----------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expreset (user id/mention)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Resets the server EXP and level of a member of the server.
+
+Any EXP role that the user had when running the command will be preserved and may need to be removed manually.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ expreset @cycloptux#1543
+    |bot_prefix|\ expreset 123456789098765432
+
+....
+
 |bot_prefix|\ noexprole
 -----------------------
 
