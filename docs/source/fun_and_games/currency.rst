@@ -234,7 +234,7 @@ Permissions Needed
 ....
 
 |bot_prefix|\ currencytake
-------------------
+--------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
@@ -256,7 +256,7 @@ Permissions Needed
 .... 
 
 |bot_prefix|\ currencyeventstart
-------------------------
+--------------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
