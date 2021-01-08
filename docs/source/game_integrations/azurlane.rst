@@ -219,6 +219,8 @@ Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Webhooks
 
+....
+
 |bot_prefix|\ azurrhook
 -----------------------
 

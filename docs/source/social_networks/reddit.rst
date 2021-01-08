@@ -198,6 +198,8 @@ Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Webhooks
 
+....
+
 |bot_prefix|\ reddrhook
 -----------------------
 

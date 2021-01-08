@@ -189,6 +189,8 @@ Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Webhooks
 
+....
+
 |bot_prefix|\ twtrhook
 ----------------------
 
