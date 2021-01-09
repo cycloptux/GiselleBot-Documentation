@@ -89,9 +89,10 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%username%**: This will be replaced with the Instagram account username
 * **%fullname%**: This will be replaced with the Instagram account full name, as set by the user
 * **%caption%**: This will be replaced with the caption/description of the media being posted
+* **%media\_url%**: This will be replaced with the direct URL to the media content (image or video) of the post
 * **%hashtags%**: This will be replaced with the list of hashtags that are included in the post
 * **%profile\_url%**: This will be replaced with the direct URL to the profile of the user
-* **%profile\_pic%**: This will be replaced with the direct URL to the media content (image or video) of the post
+* **%profile\_pic%**: This will be replaced with the direct URL to the profile picture of the user
 * **%total\_posts%**: This will be replaced with the total number of posts from the user, as shown in the user's profile
 * **%followed%**: This will be replaced with the total number of accounts that the user if following, as shown in the user's profile
 * **%follower%**: This will be replaced with the total number of followers of the user, as shown in the user's profile
