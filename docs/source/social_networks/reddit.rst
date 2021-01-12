@@ -122,6 +122,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%flair%**: This will be replaced with the name of the flair assigned to the post, if present, or "*None*" if no flair is assigned
 * **%content\_url%**: This will be replaced with the "URL" parameter of a post, which will be an URL to the comments if the post is a text post, or the URL of the content (image, video, link...) otherwise
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the submission creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the submission creation UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the submission creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the Reddit post permalink URL. See below for more info.
 

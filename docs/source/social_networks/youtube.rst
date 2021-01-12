@@ -204,6 +204,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%duration%**: This will be replaced with the YouTube video duration.
 * **%video\_status%**: This will be replaced with the word ``added`` if the notification refers to the upload of a new video, or the word ``updated`` if the notification refers to the update of a video's title or description.
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the video upload timestamp in UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the video upload timestamp in UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the video upload timestamp in PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the YouTube video URL. See below for more info.
 

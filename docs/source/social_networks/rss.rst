@@ -113,6 +113,7 @@ Here's the list of supported tags:
 * **%content\_clean%**: This will be replaced with the content ("description") of the item, stripped off all HTML tags (i.e. just plain text) (fallback: *None*)
 * **%categories%**: This will be replaced with the tags ("categories") assigned to an item, as a comma-separated list (fallback: *None*)
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the item creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the item creation UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the item creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the item URL. See below for more info.
 

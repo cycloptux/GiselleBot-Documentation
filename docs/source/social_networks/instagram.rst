@@ -97,6 +97,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%followed%**: This will be replaced with the total number of accounts that the user if following, as shown in the user's profile
 * **%follower%**: This will be replaced with the total number of followers of the user, as shown in the user's profile
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the post creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the post creation UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the post creation PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the Instagram post direct URL. See below for more info.
 

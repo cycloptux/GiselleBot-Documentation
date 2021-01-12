@@ -101,6 +101,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%screen\_name%**: This will be replaced with the ``@`` name of an account, minus the ``@`` (e.g. ``cnnbrk``)
 * **%name%**: This will be replaced with the actual name of an account. E.g. ``CNN Breaking News``
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the current UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the current UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the current PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the Twitter status URL. See below for more info.
 

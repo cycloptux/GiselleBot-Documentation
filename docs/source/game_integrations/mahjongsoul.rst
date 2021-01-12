@@ -146,6 +146,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%region%**: This will be replaced with the region name, capitalized (e.g. ``Chinese``, ``English``, ...)
 * **%region\_code%**: This will be replaced with the region code, uppercase (e.g. ``CN``, ``EN``, ...)
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the status transition UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the status transition UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the status transition PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 
 Timestamp tags also support custom time zones. You can replace the ``utc`` part with either:

@@ -147,6 +147,7 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%status%**: This will be replaced with the description that is usually added below a game title during a stream.
 * **%stream\_status%**: This will be replaced with one of the two values: ``Live`` upon a "going Live" notification, ``Offline`` upon a stream end.
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the UTC time of the start of the event, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%timestamp\_iso%**: This will be replaced with the UTC time of the start of the event, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the current PST time of the start of the event, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
 * **%url%**: This will be replaced with the Twitch profile URL. See below for more info.
 
