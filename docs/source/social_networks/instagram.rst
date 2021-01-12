@@ -84,12 +84,15 @@ These parameters will work together with ``--mode (AND/OR)``, allowing the Insta
 
 Adds a custom header message when submissions are posted. Custom headers can have a maximum of **1024** characters.
 
+Custom headers **can** be formatted as embeds by following a very specific syntax. Do know that both |bot_name| and Discord are very sensitive to this specific syntax, which is easily "broken" by special characters: for this reason, using embeds as header is not suggested, nor directly supported. **Use them at your own risk!** If you are brave enough, I suggest the usage of `this embed generator <https://leovoel.github.io/embed-visualizer/>`_ (click on the **"Enable webhook mode"** button at the bottom of the page).
+
 Custom headers support a few dynamic tags that are replaced with their respective "real" value during run-time. These are:
 
 * **%username%**: This will be replaced with the Instagram account username
 * **%fullname%**: This will be replaced with the Instagram account full name, as set by the user
 * **%caption%**: This will be replaced with the caption/description of the media being posted
 * **%media\_url%**: This will be replaced with the direct URL to the media content (image or video) of the post
+* **%display\_url%**: This will be replaced with the direct URL to the media content (image if the post is an image, or static image from the video if the post is a video) of the post
 * **%hashtags%**: This will be replaced with the list of hashtags that are included in the post
 * **%profile\_url%**: This will be replaced with the direct URL to the profile of the user
 * **%profile\_pic%**: This will be replaced with the direct URL to the profile picture of the user
@@ -114,11 +117,13 @@ Timestamp tags also support custom time zones. You can replace the ``utc`` part 
     * %timestamp\_-10:30%
     * %timestamp\_UTC+2%
 
-By default, without an explicit use of ``%url%``, all headers will be followed by the actual Instagram post direct URL on a new line; rendering of that URL will be done by Discord.
+By default, without an explicit use of ``%url%``, all headers will be followed by the actual Instagram post direct URL on a new line.
 
 If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
-**Default**: ``New post from %author%!`` followed by the post Caption
+Do note that Discord doesn't support the automatic rendering of Instagram URLs (yet). If you want to show the content of the Instagram post in Discord, use the above custom tags or keep the default header: the default header builds an embeds that previews the content of the new Instagram post.
+
+**Default**: ``New post from %author%!`` followed by the post URL and an embed showing the post
 
 ``--webhook-name (custom name)``
 """"""""""""""""""""""""""""""""

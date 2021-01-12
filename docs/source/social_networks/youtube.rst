@@ -197,6 +197,8 @@ These parameters will work together with ``--mode (AND/OR)``, allowing the YouTu
 
 Adds a custom header message when notifications are posted. Custom headers can have a maximum of **1024** characters.
 
+Custom headers **can** be formatted as embeds by following a very specific syntax. Do know that both |bot_name| and Discord are very sensitive to this specific syntax, which is easily "broken" by special characters: for this reason, using embeds as header is not suggested, nor directly supported. **Use them at your own risk!** If you are brave enough, I suggest the usage of `this embed generator <https://leovoel.github.io/embed-visualizer/>`_ (click on the **"Enable webhook mode"** button at the bottom of the page).
+
 Custom headers support a few dynamic tags that are replaced with their respective "real" value during run-time. These are:
 
 * **%title%**: This will be replaced with the YouTube video title.
