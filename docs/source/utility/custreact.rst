@@ -56,6 +56,7 @@ You can use one (or more) of these placeholders in your response message:
 * **%server%**: This will be replaced with the server name.
 * **%channel%**: This will be replaced with the channel name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -130,11 +131,11 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ lcr [--global] [--in {text}]
+    |bot_prefix|\ lcr [--global] [--alphabetical] [--in {text}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Lists all available custom reactions in the current server. Using the ``--global`` argument will show the list of global reactions.
+Lists all available custom reactions in the current server. Using the ``--global`` argument will show the list of global reactions. Using the ``--alphabetical`` argument will show the list of reactions in alphabetical order (by input parameter).
 
 Using the ``--in`` parameter will filter on reactions that are triggered by the text used within that argument.
 
