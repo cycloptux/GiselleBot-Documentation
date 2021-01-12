@@ -235,6 +235,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -284,6 +285,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -378,6 +380,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -509,6 +512,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -560,6 +564,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -1134,6 +1139,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -1204,6 +1210,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
@@ -1265,6 +1272,7 @@ You can use one (or more) of these placeholders in your message:
 * **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
 * **%server%**: This will be replaced with the server name.
 * **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
 * **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
 * **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
 * **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
