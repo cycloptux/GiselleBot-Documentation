@@ -142,7 +142,7 @@ Adds a custom header message when notifications are posted. Custom headers can h
 Custom headers support a few dynamic tags that are replaced with their respective "real" value during run-time. These are:
 
 * **%display\_name%**: This will be replaced with the display name of an account, including proper formatting of letter cases (e.g. ``Cycloptux``)
-* **%username%**: This will be replaced with the "URL" username of a Twitch user (tipically, lowercase). E.g. ``cycloptux``
+* **%username%**: This will be replaced with the "URL" username of a Twitch user (typically, lowercase). E.g. ``cycloptux``
 * **%game%**: This will be replaced with the name of the streamed game (e.g. ``Fortnite``)
 * **%status%**: This will be replaced with the description that is usually added below a game title during a stream.
 * **%stream\_status%**: This will be replaced with one of the two values: ``Live`` upon a "going Live" notification, ``Offline`` upon a stream end.
