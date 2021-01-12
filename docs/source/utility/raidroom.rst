@@ -118,11 +118,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrleave (room id)
+    |bot_prefix|\ rrleave [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Leave a specific room.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -143,11 +145,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrstatus (room id)
+    |bot_prefix|\ rrstatus [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Obtain info about a room by knowing its room ID.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -173,11 +177,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrinvite (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrinvite [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Invite one or more users to your room. They will be automatically added without any interaction from the target user(s). The PIN won't be shared with the target user(s).
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -198,11 +204,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrclose (room id)
+    |bot_prefix|\ rrclose [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Closes the room, deleting the corresponding channel. If the room type was set as text, a chat log is dumped and saved (encrypted). The chat log will be posted into the raid rooms logger channel (see :ref:`first-setup`).
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -223,11 +231,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrnewpw (room id)
+    |bot_prefix|\ rrnewpw [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Assigns a new PIN to the room, useful if the PIN is somehow leaked. The PIN will be sent to the room master via DM.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -248,11 +258,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrkick (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrkick [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -273,11 +285,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrban (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrban [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -298,11 +312,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrunban (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrunban [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -325,7 +341,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrextend (room id)
+    |bot_prefix|\ rrextend [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -334,6 +350,8 @@ Extends the duration of a room that is about to expire. This command can only be
 The room timer will be refreshed, adding the initial duration to the current time (e.g. if the room was supposed to last 24 hours, 24 more hours will be added to that room).
 
 This command can only be used once.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 .. note::
     Server managers are able to prohibit the usage of this command through :ref:`rraextend`.
@@ -383,11 +401,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrskick (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrskick [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Kicks one or more users from a room. Kicked users will be able to re-join the room if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -408,11 +428,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsban (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrsban [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Bans one or more users from a room. Banned users **won't** be able to re-join the room even if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -433,11 +455,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsunban (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrsunban [room id] (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Lifts ban status from one or more users for the specified room. Formerly banned users will now be able to re-join the room if they know the PIN or are re-invited.
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -458,11 +482,13 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsunban (room id)
+    |bot_prefix|\ rrsunban [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Forcefully closes the room, deleting the corresponding channel, without warning the room master. If the room type was set as text, a chat log is dumped and saved (encrypted). The chat log will be posted into the raid rooms logger channel (see :ref:`first-setup`).
+
+If the room ID is omitted and the command is executed inside an existing room, the action will be applied on the current room.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -483,7 +509,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsforbid (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrsforbid (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -497,7 +523,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsforbid abcdef @cycloptux#1543
+    |bot_prefix|\ rrsforbid @cycloptux#1543
 
 ....
 
@@ -508,7 +534,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsallow (room id) (user id(s)/mention(s)/q_name(s))
+    |bot_prefix|\ rrsallow (user id(s)/mention(s)/q_name(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -522,7 +548,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsallow abcdef @cycloptux#1543
+    |bot_prefix|\ rrsallow @cycloptux#1543
 
 ....
 
