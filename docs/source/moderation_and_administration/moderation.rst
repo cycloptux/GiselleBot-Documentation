@@ -78,9 +78,28 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Toggles whether or not users that are affected by a moderation action will also be informed of the identify of the moderator using the command. Default state: **off** (i.e. moderators will **not** be anonymized).
+Toggles whether or not users that are affected by a moderation action will also be informed of the identity of the moderator using the command. Default state: **off** (i.e. moderators **will not** be anonymized).
 
 If enabled, the name of the moderator will be omitted on the DM that a user receives upon being hit by a moderation action, and a shield emoji (🛡️) will appear next to the "Performed By" field of the corresponding warning log embed to remind that moderators' protection is on for that case.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+....
+
+|bot_prefix|\ modnotification
+-----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ modnotif
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles whether or not moderators will be informed with a mention in the Moderation/Warning logger in case of missing parameters when applying a moderation action with an "incomplete" syntax. Default state: **on** (i.e. moderators **will** be notified with a mention).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
