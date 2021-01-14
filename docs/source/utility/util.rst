@@ -260,7 +260,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ autopublishsetup [--channel {channel id/mention/q_name}]
+    |bot_prefix|\ autopublishsetup [channel id/mention/q_name]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -277,7 +277,7 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
 7. "Publish if the user/bot has at least one of these roles" will automatically publish messages coming from bots or users having certain roles, and ignore webhook/integration messages or messages coming from bots/users not having any of those roles.
 
 .. note::
-    You can configure options 4, 5, 6 and 7 in any mixed set to achieve the desired behavior. Please note that options 4 and 5 will override the role requirements configured through option 7 on the corresponding entity.
+    You can configure options 4, 5, 6, and 7 in any mixed set to achieve the desired behavior. Please note that options 4 and 5 will override the role requirements configured through option 7 on the corresponding entity.
 
 If the **Messages** log is enabled in a server channel, each automatically published message will generate an entry into that log. Even publishing errors (e.g. due to rate limits) are logged.
 
@@ -304,6 +304,53 @@ Examples
     |bot_prefix|\ autopublishsetup #announcements
 
 ....
+
+|bot_prefix|\ autoreactsetup
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autoreactsetup [channel id/mention/q_name]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Through the use of the auto-react feature, you can set pick a group of emojis that will be added to all messages (or a subset of messages) posted in a certain channel. You can enable this feature in more than one channel, and each channel can have a different set of emojis.
+
+You can select up to 20 emojis per channel. You can select native (Unicode) emojis, or custom emojis as long as the emoji is available in the current server.
+
+There is a **server-wide rate limit** to the amount of emojis that can be applied through the auto-react feature in a certain amount of time. |bot_name| will stop adding reactions after hitting **50 reactions in 5 minutes**, on a rolling time window.
+
+This command will open an interactive menu to configure the auto-react feature on a target channel.
+
+Options 1. and 2. are used to save the settings you applied through the menu (the settings will not apply until you save them), or discard said changes.
+
+3. "Select emojis" will allow you to set 1 or more emojis, specific to the channel you are configuring, that will automatically be applied to new messages according to the following conditions. An empty list will effectively disable the auto-react feature.
+4. "Publish all messages" will automatically publish all messages sent into the target channel. When this setting is enabled, enabling or disabling any of the subsequent settings will not have any effect.
+5. "Publish all user messages" will automatically publish all messages coming from real users, ignoring bot messages and webhook/integration messages.
+6. "Publish all bot messages" will automatically publish all messages coming from bots, but ignore webhook/integration messages.
+7. "Publish all webhook messages" will automatically publish all messages coming from webhooks or external integrations.
+8. "Publish if the user/bot has at least one of these roles" will automatically publish messages coming from bots or users having certain roles, and ignore webhook/integration messages or messages coming from bots/users not having any of those roles.
+
+.. note::
+    You can configure options 5, 6, 7, and 8 in any mixed set to achieve the desired behavior. Please note that options 5 and 6 will override the role requirements configured through option 8 on the corresponding entity.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+| **Bot**: Add Reactions
+
+**Manage Server Permissions** are required to open the configuration menu. **Add Reactions** (on the role, or on a specific channel) are required for |bot_name| to actually react on new messages.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ autoreactsetup
+    |bot_prefix|\ autoreactsetup #news
+
+...
 
 |bot_prefix|\ rawmessage
 ------------------------
