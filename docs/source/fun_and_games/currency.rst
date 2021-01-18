@@ -171,8 +171,122 @@ Examples
 
     |bot_prefix|\ currencyemoji 😀
     |bot_prefix|\ currencyemoji :BlobOwO:
+
+....
+
+Stonk Market: Buying and Selling Broccoli
+=========================================
+
+The **Stonk Market** allows users to buy and sell 🥦 broccoli at fluctuating prices, just like real stock markets.
+
+🥦 broccoli can be purchased **every Sunday morning before 12 PM UTC**. Their price fluctuates over time: **the purchase price will be different every week, and in every server**. During the week, users can sell 🥦 broccoli at different prices to make a profit. These prices will differ each morning and afternoon, and again, for each server.
+
+The pricing algorithm is the same that powers Animal Crossing: New Horizons's Stalk Market. You can read more about it `here <https://docs.google.com/document/d/1bSVNpOnH_dKxkAGr718-iqh8s8Z0qQ54L-0mD-lbrXo/edit#>`_ .
+
+Buying prices vary between 90 and 110 currency per head of 🥦 broccoli. There's no limit on how many you can buy or sell.
+
+🥦 broccoli must be sold within a week. Otherwise, **they will rot by the following Sunday morning and lose their monetary value**. |bot_name| will dispose of them for you when they are no longer good.
+
+|bot_prefix|\ broccoliprice
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcprice
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Checks the current 🥦 broccoli buying or selling price.
+
+🥦 broccoli can be purchased every Sunday morning before 12 PM UTC, and sold during the week (Monday to Saturday). The selling price changes every 12 hours (at 12 AM and 12 PM UTC). All markets are closed on Sunday afternoon.
     
 ....
+
+|bot_prefix|\ broccolibuy
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcbuy (amount to buy)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Buys the specified amount of 🥦 broccoli at the current buying price for the server.
+
+🥦 broccoli can be purchased every Sunday morning before 12 PM UTC. Prices vary between servers.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcbuy 50
+    
+....
+
+|bot_prefix|\ broccolisell
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcsell (amount to sell)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sells the specified amount of 🥦 broccoli at the current selling price for the server.
+
+🥦 broccoli can be sold during the week, from Monday to Saturday. Prices vary between servers, and every 12 hours (at 12 AM and 12 PM).
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcsell 30
+    
+....
+
+|bot_prefix|\ broccolibag
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcbag
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows the current amount of 🥦 broccoli a user has.
+
+....
+
+|bot_prefix|\ broccolianalysis
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ brcanalysis
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows the current highest and lowest buying/selling price for 🥦 broccoli.
+
+This will act as a benchmark to evaluate if the price you found in a server is good or not, or if there's any better price to be hunted!
+
+.. note::
+    This command is **only** available in **GiselleBot Support Center**. You can join the Discord server using this invite: https://gisl.eu/support
+
+....
+
+Bot Owner Reserved Commands
+===========================
 
 |bot_prefix|\ timelyreset
 -------------------------
