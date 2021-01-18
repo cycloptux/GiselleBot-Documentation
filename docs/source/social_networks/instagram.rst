@@ -16,9 +16,6 @@ This module will only work on **public accounts**.
 .. note::
     The goal of this module is offering a **free alternative** to something that is usually only achieved through the use of paid services. On the other hand, due to limitations that are applied to the Instagram API, this module might suffer from delays (new posts will be checked **every 1~3 hours**, and users' info may take up to 24 hours to be refreshed) and/or miss a few posts in high-traffic accounts (**the module will only catch up to 50 new posts in each check window**).
 
-.. warning::
-    This module is in a **beta** and **experimental** phase. Its main features, and even the future existence of the module, are still to be defined or confirmed. The module is currently only available to authorized servers.
-
 |bot_prefix|\ instahook
 -----------------------
 
