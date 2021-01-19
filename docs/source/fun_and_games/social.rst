@@ -361,6 +361,8 @@ Examples
 
 ....
 
+.. _noexpchannels:
+
 |bot_prefix|\ noexpchannels
 ---------------------------
 
@@ -395,88 +397,59 @@ Examples
 
 ....
 
-|bot_prefix|\ notifychannel
----------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ notifychannel [channel id(s)/mention(s)/q_name(s)]
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-If used without any channel identifier, this command will toggle the in-channel notification for level ups in the whole server.
-
-If used with one or more channel identifiers, it will toggle the channel into the blacklist/whitelist of channels that will show the in-channel notification. See below for more details.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Manage Channels
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ notifychannel
-    |bot_prefix|\ notifychannel #spam #bot-commands
-
-....
-
-|bot_prefix|\ notifychannelmode
--------------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ notifychannelmode
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Toggles the notification channel mode from blacklist (default) to whitelist and viceversa.
-
-**Blacklist** mode will make any channel that is added with the above command **not** to show the level up message, while the rest of the channels will show the in-channel level up message.
-
-**Whitelist** mode will only make the in-channel level up message appear in the selected channels.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Manage Channels
-
-....
-
-|bot_prefix|\ notifydm
-----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ notifydm
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Toggles the DM notification for level ups for all server members.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Manage Channels
-
-....
-
-|bot_prefix|\ notifystatus
+|bot_prefix|\ explvupsetup
 --------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ notifystatus
-
+    |bot_prefix|\ explvupsetup
+    
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Shows the current status of the level up notification settings, as set by the above commands.
+Opens an interactive menu to configure the EXP level-up notifications settings. Use the menu items to configure the available settings.
+
+Options 1. and 2. are used to save the settings you applied through the menu (the settings will not apply until you save them), or discard said changes.
+
+3. "Toggle in-server level-up notifications" toggles whether users are notified when they gain a level, into a server channel. You can enable option 3, or 4, or both at the same time. Default: **Disabled**
+4. "Toggle DM level-up notifications" toggles whether users are notified when they gain a level, with a DM sent by |bot_name|\ . You can enable option 3, or 4, or both at the same time. Default: **Disabled**
+5. "Select in-server level-up notifications location" lets you select one channel to be used as centralized level-up notifications channel. If this option is enabled, all level-up notifications will be posted in this channel. Otherwise, level-up notifications will be sent to the same channel where the message triggering the level-up was posted. Default: **Same Channel**
+6. "Set a custom in-server level-up message" lets you set a custom message to be posted as level-up message for in-server notifications. See below for more customizations info.
+7. "Set a custom DM level-up message" lets you set a custom message to be posted as level-up message for DM notifications. See below for more customizations info.
+8. "Add channels to the level-up notifications blacklist/whitelist" lets you select one or more channels that will be added to the blacklist (or whitelist, depending on the list mode). **Blacklist mode** will make any channel that is on the list **not to trigger** the level-up message, while the rest of the channels will trigger the in-server level-up messages. **Whitelist mode** will only make the in-server level-up message appear when a level is gained in one of the selected channels.
+9. "Toggle mode for the level-up notifications list" toggles between **blacklist mode** and **whitelist mode**.
+
+.. note::
+    List modes will only change whether or not messaging in the selected channel will trigger the level-up **message**: if you want to stop users from getting EXP **at all** in a certain channel, use the :ref:`noexpchannels` command.
+
+The custom messages support the following dynamic placeholders:
+
+* **%level%**: This will be replaced with the level that the user just achieved.
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Custom messages cannot exceed **1024 characters**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -484,14 +457,14 @@ Permissions Needed
 
 ....
 
-|bot_prefix|\ notifyoptout
---------------------------
+|bot_prefix|\ expnotifyoptout
+-----------------------------
 
 Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ notifyoptout
+    |bot_prefix|\ expnotifyoptout
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
