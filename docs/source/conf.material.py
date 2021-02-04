@@ -81,13 +81,22 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_material'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'repo_url': 'https://github.com/cycloptux/GiselleBot-Documentation',
+    'repo_name': 'GiselleBot-Documentation',
+    'html_minify': True,
+    'css_minify': True,
+    'nav_title': 'GiselleBot Docs',
+    'logo_icon': '&#xe869',
+    'globaltoc_depth': 0,
+    'globaltoc_collapse': True,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -102,7 +111,9 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
 
 
 html_context = {
