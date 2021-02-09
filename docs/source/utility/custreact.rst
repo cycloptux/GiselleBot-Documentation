@@ -148,17 +148,18 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ dcr (reaction id)
+    |bot_prefix|\ dcr (reaction id(s))
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Deletes a specific custom reaction. Global custom reactions can only be deleted by the bot owner.
+Deletes one or more specific custom reaction(s). Global custom reactions can only be deleted by the bot owner.
 
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
     |bot_prefix|\ dcr 3
+    |bot_prefix|\ dcr 11 25 67
 
 ....
 
