@@ -167,8 +167,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ twthook cnnbrk https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
-    |bot_prefix|\ twthook pokemon https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild tweet appeared!
+    |bot_prefix|\ twthook cnnbrk https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
+    |bot_prefix|\ twthook pokemon https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild tweet appeared!
 
 ....
 

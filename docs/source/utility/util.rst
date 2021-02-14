@@ -659,7 +659,7 @@ Embed enhancer tags are words in the form ``{tag}`` that are used to set a few f
     * If you need to add something that looks like an enhancer tag in your recruitment message, you can "escape" by prepending it with ``\``
     
 .. warning:: 
-    `Discord's native limits <https://discordapp.com/developers/docs/resources/channel#embed-limits>`_ for embeds still apply.
+    `Discord's native limits <https://discord.com/developers/docs/resources/channel#embed-limits>`_ for embeds still apply.
 
 Examples
 ^^^^^^^^

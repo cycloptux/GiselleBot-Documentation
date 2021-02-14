@@ -151,8 +151,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ instahook cristiano https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
-    |bot_prefix|\ instahook lamusicanelsilenzio https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild post appeared!
+    |bot_prefix|\ instahook cristiano https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
+    |bot_prefix|\ instahook lamusicanelsilenzio https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild post appeared!
 
 ....
 

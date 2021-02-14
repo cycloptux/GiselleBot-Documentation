@@ -167,8 +167,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rsshook http://xkcd.com/atom.xml https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
-    |bot_prefix|\ rsshook https://www.pokemon.com/us/pokemon-news/rss https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild item appeared!
+    |bot_prefix|\ rsshook http://xkcd.com/atom.xml https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
+    |bot_prefix|\ rsshook https://www.pokemon.com/us/pokemon-news/rss https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild item appeared!
 
 ....
 

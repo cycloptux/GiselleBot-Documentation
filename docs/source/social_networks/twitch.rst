@@ -203,8 +203,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ twchook cycloptux https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
-    |bot_prefix|\ twchook cycloptux https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header %user% is now %stream_status%! Game: %game%
+    |bot_prefix|\ twchook cycloptux https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
+    |bot_prefix|\ twchook cycloptux https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header %user% is now %stream_status%! Game: %game%
 
 ....
 

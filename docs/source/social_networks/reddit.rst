@@ -176,8 +176,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ reddhook tifu https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
-    |bot_prefix|\ reddhook pokemon https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild submission appeared!
+    |bot_prefix|\ reddhook tifu https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
+    |bot_prefix|\ reddhook pokemon https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header A wild submission appeared!
 
 ....
 

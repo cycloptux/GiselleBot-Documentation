@@ -264,8 +264,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ ythook vsauce https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
-    |bot_prefix|\ ythook NASAgovVideo https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header Recognized activity in %channel%!
+    |bot_prefix|\ ythook vsauce https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --nsfw
+    |bot_prefix|\ ythook NASAgovVideo https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --header Recognized activity in %channel%!
 
 ....
 

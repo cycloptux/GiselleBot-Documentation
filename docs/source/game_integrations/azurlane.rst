@@ -197,8 +197,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ azurhook https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
-    |bot_prefix|\ azurhook https://discordapp.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --region en --header %region\_code% server status changed at %timestamp%
+    |bot_prefix|\ azurhook https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN
+    |bot_prefix|\ azurhook https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN --region en --header %region\_code% server status changed at %timestamp%
 
 ....
 
