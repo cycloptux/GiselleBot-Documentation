@@ -52,6 +52,8 @@ Using the ``--silent`` parameter suppresses the in-channel embed output (this on
 
 If the number of messages is omitted, the bot will scan the latest 10 messages.
 
+The maximum number of messages the bot will scan is **250**.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Messages
@@ -84,6 +86,8 @@ Using the ``--csv`` parameter instructs the bot to send a ``.csv`` file containi
 Using the ``--silent`` parameter suppresses the in-channel embed output (this only works if used with ``--csv``).
 
 If the number of messages is omitted, the bot will scan the latest 10 messages.
+
+The maximum number of messages the bot will scan is **250**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -139,6 +143,8 @@ Using the ``--csv`` parameter instructs |bot_name| to send 2 ``.csv`` files to t
 2. A 2nd .csv with the list of users that meet that "Fraudulent Votes" criteria, with a separate record for each message they reacted to (including how they reacted to the message).
 
 Using the ``--silent`` parameter suppresses the in-channel embed output (this only works if used with ``--csv``).
+
+The maximum number of messages the bot will scan is **250**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
