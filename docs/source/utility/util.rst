@@ -185,6 +185,32 @@ Shows all of the emojis from the current server into an embed.
 
 ....
 
+|bot_prefix|\ createinvite
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ createinvite [--channel {channel id/mention/q_name}] [--expire {duration timecode}] [--uses {# of uses}] [--unique] [--temporary]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Creates an instant invite to the current server. All parameters are optional, here are the meanings of eaach parameter and the default values:
+
+ * ``--channel`` selects a target channel for the invite. The user running the command must have "View Channel" and "Create Instant Invite" permissions on the target channel. **Default**: the current channel.
+ * ``--expire`` sets how long the invite should last (use the time code syntax, e.g. ``1h``). **Default**: no expiration.
+ * ``--uses`` sets the maximum number of uses for the invite. **Default**: unlimited uses.
+ * ``--unique`` create a unique invite if selected, or uses an existing one with similar settings otherwise. Timed invites are always unique by default. **Default**: false (use an existing if available).
+ * ``--temporary`` sets whether members that joined via the invite should be automatically kicked after 24 hours if they have not yet received a role. **Default**: false.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server, Create Instant Invite
+| **Bot**: Create Instant Invite
+
+....
+
 |bot_prefix|\ searchuser
 ------------------------
 
