@@ -1154,7 +1154,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ halflogic (none/first/first-with-points/each/each-with-points)
+    |bot_prefix|\ halflogic (none/first/first-with-points/each)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
