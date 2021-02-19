@@ -964,7 +964,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Starts an interactive process to build a role menu (i.e. a message whose reactions will assign or remove the roles in the specified role group). The bot will guide you through the process of creating the role menu, follow the in-Discord instructions.
 
-If a valid message ID is specified through the dedicated parameter, the role menu will be created on the target message.
+If a valid message ID is specified through the dedicated parameter, the role menu will be created on the target message. If specified, the message ID must refer to a message in the same channel where the command is run.
 
 If the group ID is omitted, group **0** will be used as source role group.
 
@@ -996,7 +996,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Toggles the Direct Message confirmation for **successfully added or removed** self-assigned roles on a specific role menu, making them "silent" or re-enabling the verbose message confirmation. Roles not being assigned will still trigger the DM.
 
-If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1025,7 +1025,7 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Removes a role menu from an existing message. The message itself won't be deleted, nor the existing reactions will be removed, but the bot will now not do anything with reactions on that message.
 
-If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1057,7 +1057,7 @@ Updates a role menu with a new reaction if a role was added to the particular ro
 .. note::
     In order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
 
-If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel.
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
