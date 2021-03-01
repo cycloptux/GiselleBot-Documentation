@@ -21,6 +21,21 @@ Toggles the custom reactions module on the whole Discord server.
 
 ....
 
+|bot_prefix|\ verbosecustreact
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ vcr
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles verbose mode for custom reactions on the whole Discord server. When verbose mode is enabled, each custom reaction will be prepended with the ID of the reaction being printed.
+
+....
+
 |bot_prefix|\ addcustreact
 --------------------------
 
