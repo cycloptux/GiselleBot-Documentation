@@ -297,7 +297,7 @@ This is achieved by **prepending** the target users with a time code.
 -----------------------
 .. parsed-literal::
 
-    |bot_prefix|\ {warning command} [duration timecode] [channel id/mention/q_name {only for channel-specific commands}] (user id(s)/mention(s)/q_name(s)) [--rule {rule id/name/alias}] [--reason {textual description}] [--attachment/--att {urls}] [--padj {signed/unsigned number}] [--just/--justification {textual justification}] [--skip-case] [--skip-dm]
+    |bot_prefix|\ {warning command} [duration timecode] [channel id/mention/q_name {only for channel-specific commands}] (user id(s)/mention(s)/q_name(s)) [--rule {rule id/name/alias}] [--reason {textual description}] [--attachments {urls}] [--padj {signed/unsigned number}] [--justification {textual justification}] [--skip-case] [--skip-dm]
     
 
 (Common) Command Description
@@ -309,7 +309,7 @@ If all of these arguments are skipped, the message will simply read "You were wa
 
 Channel specific commands which are missing the channel parameter will default to being targeted to the current channel. Channels that support time-based expiration (see above) will be treated as permanent if the timecode is missing.
 
-You can skip generating a case by appending the ``--skip-case`` tag. You can skip sending the DM (but still generate a case) by appending the ``--skip-dm`` tag.
+You can skip generating a case by appending the ``--skip-case`` tag. You can skip sending the DM (but still generate a case) by appending the ``--skip-dm`` tag. ``--skip-case`` also implies ``--skip-dm``.
 
 .. note::
     When ``--skip-dm`` is used, a small 🔕 emoji will appear on the corresponding notification and warning log embed footer to track the fact that the action was "silent".
@@ -318,7 +318,17 @@ Every warning, by default, will be worth a certain number of points based on the
 
 The ``--padj``, or "points added/subtracted" argument, is completely optional and will not be included in the DM even if it is included in the command. Any signed number ("+" or "-") will be treated as a "delta" value over the default rule score, while an unsigned number will be treated as a fixed, absolute value and used as the actual warning score. The justification for points added/subtracted is invalid if no points were added or subtracted and should be ignored if the moderator does not add or subtract any points.
 
-Running the command as the "description" of a Discord attachment (e.g. by drag-and-dropping an image over the Discord client) will automatically add that object as the warning case attachment, even if the ``--attachment`` parameter is skipped.
+Each one of the command parameters has one or more aliases. Here are the available aliases:
+
+* ``--rule``: ``--r``
+* ``--reason``: ``--rs``
+* ``--attachments``: ``--attachment`` ``--att`` ``--a``
+* ``--padj``: ``--pa`` ``--p``
+* ``--justification``: ``--just`` ``--j``
+* ``--skip-case``: ``--skipcase`` ``--nocase`` ``--no-case``
+* ``--skip-dm``: ``--skipdm`` ``--nodm`` ``--no-dm``
+
+Running the command as the "description" of a Discord attachment (e.g. by drag-and-dropping an image over the Discord client) will automatically add that object as the warning case attachment, even if the ``--attachments`` parameter is skipped.
 
 As said above, these commands will automatically generate a server-specific case ID that can be used as reference in other commands. An embed including the following information will also be generated and put into the warning log:
 
@@ -396,7 +406,7 @@ Command Description
 
 |bot_prefix|\ ban has one additional, optional argument before the user identifier(s): either the number 24, or the number 7. If this argument is omitted, the user is banned without their message history being deleted. Otherwise, the bot uses the native ban API to delete the last 24 hours or 7 days of the banned users' message history.
 
-The same parameter can also be passed by using the ``--days`` argument (e.g. ``--days 1`` or ``--days 7``).
+The same parameter can also be passed by using the ``--days`` argument (e.g. ``--days 1`` or ``--days 7``). ``--days`` also has the following aliases: ``--msgdays`` ``--delmsg`` ``--purge`` ``--d``
 
 This command also works for banning users that are currently not in the server, as long as the user is known/cached by the bot. It is advised to use the user ID for that.
 
