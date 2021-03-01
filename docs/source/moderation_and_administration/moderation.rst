@@ -965,7 +965,8 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ edit (case id) [--rule {rule id/name/alias}] [--reason {textual description}] [--attachment/--att {urls}] [--padj {signed/unsigned number}] [--just/--justification {textual justification}]
+    |bot_prefix|\ edit (case id) [--rule {rule id/name/alias}] [--reason {textual description}] [--attachments {urls}] [--padj {signed/unsigned number}] [--justification {textual justification}] [--skip-dm]
+
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -974,7 +975,7 @@ Edits an existing case. You cannot edit a case type (e.g. turning a warn into a 
 
 Editing a case will generate a new warning log entry with the new details. The old entry will be edited with a clickable link that will bring you to the new edit.
 
-Please refer to :ref:`moderation` for more details about the individual parameters. Please also note that editing a case won't send a new DM to the target user, nor generate a new case ID.
+Please refer to :ref:`moderation` for more details about the individual parameters and their aliases.
 
 Examples
 ^^^^^^^^
