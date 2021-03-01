@@ -35,6 +35,8 @@ Supported Triggers
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
     
 When more then one trigger is active and a message is potentially breaking more than one of the active triggers, this priority order will apply: ``Server Invites > Mass Mentions > Banned Words > Anti-Spam > Anti-Attachment Spam > QR Codes > NSFW Images``.
+
+For automoderation triggers that apply on **messages**, you can also have |bot_name| scan server reference messages (a.k.a. messages coming from "followed channels" from other servers) by enabling **Scan "Followed Channels" messages**.
     
 ....
 
@@ -48,6 +50,8 @@ Supported Actions
 * **Auto-ban**: Automatically ban the offending user.
 
 When more then one action is configured on a trigger, this priority order will apply: ``Ban > Mute > Kick > Warn``.
+
+If **Scan "Followed Channels" messages** is enabled, the only option that will be applied on server reference messages is the **Automatic deletion of the offending message** (if it's enabled).
 
 ....
 

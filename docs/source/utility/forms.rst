@@ -233,7 +233,7 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
 4. "Set color" sets the form embeds color.
 5. "Set authorization channel" sets the channel where form submissions are sent to for the initial validation by the authorized users. This option is mandatory.
 6. "Set forwarding channel(s)" sets the additional forwarding channels where, if set, the public in-Discord summary message will be sent to. This is optional.
-7. "Set authorized role(s)" sets the list of roles that will be both authorized to accept and reject submissions to the current form, and mentioned within the authorization channel when a submission is received.
+7. "Set authorized role(s)" sets the list of roles that will be both authorized to accept and reject submissions to the current form, and mentioned (optional, see option 18) within the authorization channel when a submission is received.
 8. "Toggle share mode" sets the final target of a validated submission to either Trello, or just Discord.
 9. "Toggle publish status" works as an alias of |bot_prefix|\ formpublish and |bot_prefix|\ formwithhold to make a form available or unavailable for server members through |bot_name|\ 's DMs.
 10. "Toggle upvoting" enables or disables the upvote tracking feature (and upvote arrow application for new submissions) on a specific form.
@@ -250,6 +250,8 @@ Options 1. and 2. are used to save the settings you applied through the menu (th
 15. (Only useful in "Trello share mode") "Toggle extended embed" enables or disabled the public in-Discord summary message extended mode: by default, a submission that has Trello set as "share mode" will only show a short summary of the submission, while the actual full post will be found in the linked Trello card. By enabling the "extended embed", the whole submission will be kept within Discord, while still having a link to the corresponding Trello card.
 16. (Only useful in "Discord share mode" or "Trello share mode" with "extended embed" active) "Anonymize public submissions" completely hides the submitter info from the public in-Discord summary message, keeping the user's anonymity intact (as long as "private"-flagged fields are used for other kinds of recognizable data within the form).
 17. "Anonymize rejection messages" enables or disables whether the name of the user that rejected a submission will appear in the rejection message on a specific form.
+18. "Mention the authorized role(s) on new submissions" toggles whether the authorized role(s) will be mentioned when a new submission is received.
+19. "Toggle priority reactions" toggles whether the priority reactions are applied to the validation message. When this option is off, the only options will be "Pass (No Priority)" and "Drop".
 
 Here's an example of a public in-Discord summary message with Trello share mode, extended embed, attachments highlighting and anonymizer on.
 

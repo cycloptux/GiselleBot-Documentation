@@ -1326,7 +1326,7 @@ For each role, you will be able to configure:
 
 * Which roles will be able to accept or reject an emoji submission, provided you enabled the verification channel.
 
-  * These roles will also be mentioned within the verification channel when a submission is received.
+  * These roles will also be mentioned (optional, see below) within the verification channel when a submission is received.
   * Users that are enabled to use the administration module using the :ref:`permissions` will always be authorized to accept or reject any emoji submission.
   * By **default**, **no additional roles** are enabled to accept or reject emoji submissions.
 
@@ -1343,6 +1343,10 @@ For each role, you will be able to configure:
 
 .. note::
     Prerequisites checks only happen every 15-30 minutes.
+
+* Whether the authorized role(s) will be **mentioned** when a new emoji submission is received.
+
+  * By **default**, this option is enabled.
 
 Here's the full list of available commands for this sub-module:
 
