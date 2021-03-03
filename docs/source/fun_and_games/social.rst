@@ -13,6 +13,29 @@ The Social module tracks users' activity in a server (and globally) and rewards 
 
 If the level up notifications are enabled on a server, users may be notified by DM or in the current channel as soon as they level up. Global level ups are never notified.
 
+The EXP-to-level and level-to-EXP formulas are:
+
+.. math::
+    \text{Lv} = 1 + \frac{\sqrt{1 + (8 \ast \text{EXP}) / 50}}{2}
+
+    \text{EXP} = \frac{(\text{Lv}^2 - \text{Lv}) \ast 50}{2}
+
+For reference, EXP starts at level 1. From there, levelling up follows this pattern:
+
+* Level 1: 50 EXP needed to reach level 2
+* Level 2: 100 more EXP needed to reach level 3
+* Level 3: 150 more EXP needed to reach level 4
+* Level 3: 200 more EXP needed to reach level 4
+* etc.
+
+In other words, the progression table is as follows:
+
+* Level 1: 0 XP to 49 XP
+* Level 2: 50 XP to 149 XP 
+* Level 3: 150 XP to 299 XP
+* Level 4: 300 XP to 499 XP
+* etc.
+
 |bot_prefix|\ profile
 ---------------------
 
@@ -468,6 +491,6 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Provides a way for individual users to disable the DM notification upon leveling up, even if the server-wide notifications are active.
+Provides a way for individual users to disable the DM notification upon levelling up, even if the server-wide notifications are active.
 
 Run the command again to re-enable the DM notifications.
