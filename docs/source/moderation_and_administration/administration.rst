@@ -531,7 +531,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetrolemsg Congratulations for obtaining the **%role%** role, %user%! With great power comes great responsibility...
+    |bot_prefix|\ greetrolemsg @VIP Congratulations for obtaining the **%role%** role, %user%! With great power comes great responsibility...
+    |bot_prefix|\ greetrolemsg 123456789098765432 Welcome %user%, you are now a member of this server!
 
 ....
 
@@ -583,7 +584,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetroledmmsg Congratulations for obtaining the **%role%** role in **%server%**, %user%! With great power comes great responsibility...
+    |bot_prefix|\ greetroledmmsg @VIP Congratulations for obtaining the **%role%** role in **%server%**, %user%! With great power comes great responsibility...
+    |bot_prefix|\ greetroledmmsg 123456789098765432 Welcome %user%, you are now a member of the %server% server!
 
 ....
 
