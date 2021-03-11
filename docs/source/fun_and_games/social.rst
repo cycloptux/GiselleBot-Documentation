@@ -30,10 +30,10 @@ For reference, EXP starts at level 1. From there, levelling up follows this patt
 
 In other words, the progression table is as follows:
 
-* Level 1: 0 XP to 49 XP
-* Level 2: 50 XP to 149 XP 
-* Level 3: 150 XP to 299 XP
-* Level 4: 300 XP to 499 XP
+* Level 1: 0 EXP to 49 EXP
+* Level 2: 50 EXP to 149 EXP 
+* Level 3: 150 EXP to 299 EXP
+* Level 4: 300 EXP to 499 EXP
 * etc.
 
 |bot_prefix|\ profile
