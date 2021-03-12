@@ -154,24 +154,25 @@ Examples
     |bot_prefix|\ logignore members @cycloptux#1543
     |bot_prefix|\ logignore channels #admin-chat
 
-....
-
-|bot_prefix|\ logmatt
----------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
+.. 
+    ....
+..
     |bot_prefix|\ logmatt
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Opens an interactive menu to configure the message attachments logging feature on deleted messages.
-
-By default, deleting a message that contains an image as attachment will trigger an automatic reupload of said image into the Messages logging channel.
-
-Within the configuration menu, users will be able to enable or disable this feature, and to limit the feature to certain channels (**whitelist** mode) or exclude certain channels from this extra logging feature (**blacklist** mode).
+    ---------------------
+..
+    Command Syntax
+    ^^^^^^^^^^^^^^
+    .. parsed-literal::
+..
+        |bot_prefix|\ logmatt
+..
+    Command Description
+    ^^^^^^^^^^^^^^^^^^^
+    Opens an interactive menu to configure the message attachments logging feature on deleted messages.
+..
+    By default, deleting a message that contains an image as attachment will trigger an automatic reupload of said image into the Messages logging channel.
+..
+    Within the configuration menu, users will be able to enable or disable this feature, and to limit the feature to certain channels (**whitelist** mode) or exclude certain channels from this extra logging feature (**blacklist** mode).
 
 ....
 
