@@ -425,7 +425,7 @@ The file will be sent to the author of the command via Direct Message. Instead o
     The archive password is unknown to anyone but the author of the command, not even the bot developer!
     The archive will only be available for 30 days, after which it will be deleted.
 
-If the number of messages isn't specified, the default value of **150** messages will be used.
+If the number of messages isn't specified, the default value of **150** messages will be used. The maximum number of messages you can save is **2000**.
 
 .. warning::
     This command might be very slow, or even fail, if you are trying to dump a high amount of messages. Please be patient.
