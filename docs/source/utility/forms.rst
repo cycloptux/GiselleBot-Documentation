@@ -79,9 +79,11 @@ Command Description
 Shows the available forms for the servers a user is currently in, giving the option to start filling a submission.
 
 .. note::
-    This command is supposed to be run in a **Direct Message channel** with |bot_name|\ . In that case, |bot_name| will start the submission by showing a list of servers the user can pick among.
+    This command can be used in a **Direct Message channel** with |bot_name|\ . In that case, |bot_name| will start the submission by showing a list of servers the user can select.
     
     If used within an actual server, it will make |bot_name| send a DM to the user running the command, showing the available forms for the specific server the command was run into.
+
+    When the command is used in |bot_name|\ 's DMs, the list of available servers is taken from |bot_name|\ 's current cache. If the server you are looking for does not appear, use the |bot_prefix|\ submit command from within that server.
     
     This command **is not subject to any permissions** other than a specific blacklist check (see |bot_prefix|\ formblacklist).
     
