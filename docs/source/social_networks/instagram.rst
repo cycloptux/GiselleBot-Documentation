@@ -118,7 +118,8 @@ By default, without an explicit use of ``%url%``, all headers will be followed b
 
 If the ``%url%`` parameter is used, the default URL will **not** be appended to the custom header.
 
-Do note that Discord doesn't support the automatic rendering of Instagram URLs (yet). If you want to show the content of the Instagram post in Discord, use the above custom tags or keep the default header: the default header builds an embeds that previews the content of the new Instagram post.
+.. note::
+    Do note that Discord doesn't support the automatic rendering of Instagram URLs (yet). If you want to show the content of the Instagram post in Discord, use the above custom tags or keep the default header: the default header builds an embeds that previews the content of the new Instagram post.
 
 **Default**: ``New post from %author%!`` followed by the post URL and an embed showing the post
 
