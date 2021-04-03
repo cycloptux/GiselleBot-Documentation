@@ -25,6 +25,10 @@ Trello integration also includes the 2-way synchronization of upvotes/downvotes 
 
     Out of the box, each server is limited to having a total of **3 available forms**. If you want to remove this limitation and have up to **20** forms, you can unlock the number of forms as a **Premium** feature (see: :ref:`premium-perks`).
 
+.. hint::
+    In order to ease the creation of the complex strings you need to add questions to a form, you can use this `Forms Builder Helper <https://gisl.eu/formbuilder>`_ to create pre-made strings to be used in those phases. Just create a copy of that sheet and customize it to your needs.
+
+
 .. _trellopair:
 
 |bot_prefix|\ trellopair
@@ -207,7 +211,7 @@ Each question has to be set using 5 fields, separated by one ``|`` character.
     A field being "optional" means that its content can be left blank, but the field itself has to exist; e.g. ``message|Heads or Tails?||The user picked...|``
     
 .. hint::
-    In order to ease the creation of these complex strings, you can use this `Forms Builder Helper <https://docs.google.com/spreadsheets/d/1rn6CY2PVD2Nn0cda1gfF_E3OysBcBN63ma-BG602NyI/edit?usp=sharing>`_ to create a pre-made string to be used in this phase. Just create a copy of that sheet and customize it to your needs.
+    In order to ease the creation of these complex strings, you can use this `Forms Builder Helper <https://gisl.eu/formbuilder>`_ to create a pre-made string to be used in this phase. Just create a copy of that sheet and customize it to your needs.
     
 ....
 
