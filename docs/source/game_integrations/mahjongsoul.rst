@@ -4,7 +4,7 @@ Mahjong Soul Integration
 
 This module contains a few commands used to get information about **Mahjong Soul**, a Japanese mahjong game platform developed by Cat Food Studio and distributed, in its English and Japanese version, by Yostar. The game is available as a browser game, with Android and iOS mobile apps to be released in the future.
 
-The game was released in 4 regions/versions:
+The game was released in 3 regions/versions:
 
 * **CN** (Chinese)
 * **JP** (Japanese)
@@ -44,7 +44,7 @@ The Mahjong Soul Server Status Feed offers an easy way to monitor Mahjong Soul s
 .. seealso::
     In order to better understand this module, it's very important that you are familiar with Discord webhooks. For more details about this Discord feature, please take a look at `this official guide <https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks>`_.
 
-By default, the status feed mascot will be the Mahjong Soul character (ship) **San Diego**, and all of the feed messages will be Mahjong Soul-themed.
+By default, the status feed mascot will be the Mahjong Soul character **Ichihime**, and all of the feed messages will be Mahjong Soul-themed.
 
 The full list of feed messages and monitored transitions can be found `in this Google Spreadsheet <https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing>`_.
 
