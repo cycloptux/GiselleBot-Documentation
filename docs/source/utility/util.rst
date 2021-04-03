@@ -956,6 +956,37 @@ Examples
 
 ....
 
+|bot_prefix|\ clockchanneldelete
+--------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ clockchanneldelete [channel id/mention/name]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Deletes a clock channel, bypassing Discord's implicit denial: normally, "Manage Channels" does not apply if the user doesn't have "Connect" permissions to the channel. As long as |bot_name| has "Connect" permissions, this channel will allow users to delete the clock channel.
+
+You can omit the channel identifier if you are connected to the clock channel when you run the command.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Channels, Manage Server
+| **Bot**: Manage Channels, Connect
+
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ clockchanneldelete 123456789098765432
+    |bot_prefix|\ clockchanneldelete UTC Time: 9:10 AM
+
+....
+
 .. _searchtz:
 
 |bot_prefix|\ searchtz
