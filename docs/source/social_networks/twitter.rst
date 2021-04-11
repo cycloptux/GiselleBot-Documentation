@@ -9,6 +9,8 @@ The Twitter connector offers an easy way to stream tweets from any Twitter accou
 
 By default, each tweet will be posted to the webhook by using the Twitter account username as author, and Twitter avatar as Discord profile picture. These settings (and other details) can be customized for each stream.
 
+Replies and retweets are always ignored.
+
 Tweet URLs will be posted to Discord, while the tweet preview will leverage the native parsing of Twitter content offered by Discord.
 
 .. note::
