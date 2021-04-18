@@ -73,6 +73,27 @@ Examples
     
 ....
 
+|bot_prefix|\ twcrndgame
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ twcrndgame (game name)
+    
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Posts an URL to a random user's channel, playing the selected game. Discord includes a native auto-preview which lets users play the Twitch stream live in the current channel.
+    
+Examples
+^^^^^^^^
+.. parsed-literal::
+    
+    |bot_prefix|\ twcrndgame fortnite
+    
+....
+
 Twitch Notifications
 ====================
 
