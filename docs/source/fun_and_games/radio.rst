@@ -67,15 +67,15 @@ Command Description
 ^^^^^^^^^^^^^^^^^^^
 Immediately stops the web radio stream. If 3 or more people are listening in the same web radio voice channel, a vote will happen.
 
-For a vote skip to take effect, **70%** of the voice channel members must agree.
+For a "vote stop" to take effect, **70%** of the voice channel members must agree.
 
 .. note::
     Let's assume there are 10 users in the web radio voice channel.
     The threshold for skipping is calculated as 70% of 10 = 7 (numbers will be rounded down if needed).
-    For the vote skip to take effect, you would then need 7 positive votes.
+    For the "vote stop" to take effect, you would then need 7 positive votes.
 
 .. note::
-    Vote skip will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
+    "Vote stop" will not be active until there are 3 or more people in the voice channel (with one person, insta-skip is enabled and with two the threshold for skipping is 1).
     Server managers (users with "Manage Server" permissions) will bypass the voting system.
 
 ....
