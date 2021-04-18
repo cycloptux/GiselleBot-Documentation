@@ -61,7 +61,7 @@ Depending on the selected parameter, these are the NSFW behaviors:
 ``--filter (first word) [second word] [...]``
 """""""""""""""""""""""""""""""""""""""""""""
 
-Adds a **whitelist** filter to the stream. In this example, if the item contains ``first word`` and/or (see below) ``second word`` in its title, the item will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
+Adds a **whitelist** filter to the stream. In this example, if the item contains ``first word`` and/or (see below) ``second word`` **in its title**, the item will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will count as 2 filter elements: ``foo bar`` and ``test``.
 
