@@ -893,7 +893,7 @@ Converts between quantities in different units. It also supports converting curr
 The value and originating unit are mandatory. If the destination unit is omitted or invalid (e.g. non-existing, or a unit in a different measure, like trying to convert length to mass) then the "best" destination unit will be picked. For currencies, if the destination currency is omitted or invalid, ``USD`` will be automatically used.
 
 .. seealso::
-    `Click here [1] <https://www.npmjs.com/package/convert-units#supported-units>`_ for a list of all supported **measurement units**. `Click here [2] <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported **currencies**.
+    `Click here [1] <https://github.com/ben-ng/convert-units#supported-units>`_ for a list of all supported **measurement units**. `Click here [2] <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported **currencies**.
 
 Examples
 ^^^^^^^^
