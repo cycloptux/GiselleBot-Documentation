@@ -267,6 +267,7 @@ Collectively, these commands will be referred to as "warning commands".
 The list of "warning commands" is the following:
 
 * |bot_prefix|\ warn
+* |bot_prefix|\ kick
 * |bot_prefix|\ ban
 * |bot_prefix|\ delayban
 * |bot_prefix|\ mute
@@ -370,6 +371,23 @@ Examples
     |bot_prefix|\ warn @cycloptux#1543 --rule Discord ToS --reason The user is under 13 years of age --padj -2 --justification Testing the command
     
 ....    
+
+|bot_prefix|\ kick
+------------------
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Kicks the target user(s) from the current server. The user may be able to join the server again through a working invite.
+
+Refer to :ref:`moderation` for the exact command syntax.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Kick Members
+| **Bot**: Kick Members
+
+....  
 
 |bot_prefix|\ mute
 ------------------
@@ -695,27 +713,6 @@ Utility Commands
 
 These moderation commands may be used in conjunction with the rest of the moderation module to keep your server clean.
 
-|bot_prefix|\ kick
-------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ kick (user id(s)/mention(s)/q_name(s)) [--reason {textual description}] 
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Kicks the target user(s) from the current server. The ``--reason`` tag is used to specify a reason that will appear in the native Discord audit log.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-| **User**: Kick Members
-| **Bot**: Kick Members
-
-....
-
 |bot_prefix|\ prune
 -------------------
 
@@ -723,17 +720,12 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ prune (# of messages) [filter item] [--ignore {filter ignore}] [--force]
+    |bot_prefix|\ prune (# of messages) [filter item] [--ignore {filter ignore}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
 Deletes a certain number of messages from the channel in which the command is run. For security reasons, the bot caps this number to **250** messages.
-
-..  If you need to delete more than 500, you can append ``--force`` to remove the cap.
-
-    .. warning::
-        **BEWARE**: There isn't a higher cap. This command could potentially nuke a whole channel if ``--force`` is used. For this reason, the usage of the ``--force`` parameter is restricted to those with **Administrator** permissions.
 
 The filter items serve to delete/ignore a subset of messages in the set of messages specified by the integer argument. The list of available filters is:
 
@@ -762,8 +754,8 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ prune 100
-    |bot_prefix|\ purge 500 bots
-    |bot_prefix|\ clear 2500 @cycloptux#1543 --ignore images
+    |bot_prefix|\ purge 250 bots
+    |bot_prefix|\ clear 150 @cycloptux#1543 --ignore images
 
 ....
 
