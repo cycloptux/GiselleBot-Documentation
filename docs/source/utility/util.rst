@@ -203,6 +203,7 @@ Creates an instant invite to the current server. All parameters are optional, he
  * ``--uses`` sets the maximum number of uses for the invite. **Default**: unlimited uses.
  * ``--unique`` create a unique invite if selected, or uses an existing one with similar settings otherwise. Timed invites are always unique by default. **Default**: false (use an existing if available).
  * ``--temporary`` sets whether members that joined via the invite should be automatically kicked after 24 hours if they have not yet received a role. **Default**: false.
+ * ``--alias`` adds an optional alias (one word, maximum 32 characters long) to the invite. If the **Members** logger with invites tracking is active (refer to :ref:`log-command`) the alias will be shown under "Using Invite: ...". **Default**: no alias.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -296,11 +297,11 @@ You can manually publish messages through |bot_name| using the :ref:`publish` co
 
 Options 1. and 2. are used to save the settings you applied through the menu (the settings will not apply until you save them), or discard said changes.
 
-3. "Publish all messages" will automatically publish all messages sent into the target channel. When this setting is enabled, enabling or disabling any of the subsequent settings will not have any effect.
-4. "Publish all user messages" will automatically publish all messages coming from real users, ignoring bot messages and webhook/integration messages.
-5. "Publish all bot messages" will automatically publish all messages coming from bots, but ignore webhook/integration messages.
-6. "Publish all webhook messages" will automatically publish all messages coming from webhooks or external integrations.
-7. "Publish if the user/bot has at least one of these roles" will automatically publish messages coming from bots or users having certain roles, and ignore webhook/integration messages or messages coming from bots/users not having any of those roles.
+1. "Publish all messages" will automatically publish all messages sent into the target channel. When this setting is enabled, enabling or disabling any of the subsequent settings will not have any effect.
+2. "Publish all user messages" will automatically publish all messages coming from real users, ignoring bot messages and webhook/integration messages.
+3. "Publish all bot messages" will automatically publish all messages coming from bots, but ignore webhook/integration messages.
+4. "Publish all webhook messages" will automatically publish all messages coming from webhooks or external integrations.
+5. "Publish if the user/bot has at least one of these roles" will automatically publish messages coming from bots or users having certain roles, and ignore webhook/integration messages or messages coming from bots/users not having any of those roles.
 
 .. note::
     You can configure options 4, 5, 6, and 7 in any mixed set to achieve the desired behavior. Please note that options 4 and 5 will override the role requirements configured through option 7 on the corresponding entity.
