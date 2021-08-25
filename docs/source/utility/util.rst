@@ -609,7 +609,7 @@ When a server is set as unavailable through the |bot_prefix|\ emojifyexclude com
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Emojis
+| **User**: Manage Emojis and Stickers
 
 Examples
 ^^^^^^^^
@@ -920,7 +920,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Creates a channel as "clock channel", updating its name every 10 minutes. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
+Creates a channel as "clock channel", updating its name every 15 minutes. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
 
 .. note::
     The initial implementation of this command used to have clocks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 10-minutes update is the safest update that is still useful to track time.
@@ -937,7 +937,7 @@ By default, the channel name template is ``%time_zone%: %clock%``.
 
 .. admonition:: Premium
 
-    Out of the box, each server is limited to having **5 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`). This Premium limit was increased from 1/5 after the Discord rate limit update.
+    Out of the box, each server is limited to having **2 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`).
 
 
 Permissions Needed

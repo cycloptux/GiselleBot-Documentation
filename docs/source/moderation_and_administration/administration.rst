@@ -1375,8 +1375,8 @@ If used without any (valid) argument, the command will show which roles are curr
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 
-| **User**: Manage Emojis
-| **Bot**: Manage Emojis
+| **User**: Manage Emojis and Stickers
+| **Bot**: Manage Emojis and Stickers
 
 Examples
 ^^^^^^^^
@@ -1403,8 +1403,8 @@ Opens the interactive setup menu for the selected role. Use the menu items to co
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 
-| **User**: Manage Emojis
-| **Bot**: Manage Emojis
+| **User**: Manage Emojis and Stickers
+| **Bot**: Manage Emojis and Stickers
 
 ....
 
@@ -1460,7 +1460,7 @@ Lets users submit a new emoji, provided they have at least one of the "emoji sub
 .. note::
     This command is always available to everyone. A proper configuration of the emoji submitter roles will avoid an improper use of this command.
 
-    Users won't need "Manage Emojis" permissions to run this command, but |bot_name| will still check for its own "Manage Emojis" permissions to be sure it can (eventually) upload the emoji upon a successful verification, if any.
+    Users won't need "Manage Emojis and Stickers" permissions to run this command, but |bot_name| will still check for its own "Manage Emojis and Stickers" permissions to be sure it can upload the emoji upon a successful verification, if any.
 
     By default, no role is set as emoji submitter role (before a proper configuration) and this command will not have any effect.
 
@@ -1475,7 +1475,7 @@ In order to avoid unpredictable conflicts, if a user tries to submit an emoji wh
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 
-| **Bot**: Manage Emojis
+| **Bot**: Manage Emojis and Stickers
 
 Examples
 ^^^^^^^^
