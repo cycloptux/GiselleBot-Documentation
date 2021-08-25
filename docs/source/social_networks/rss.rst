@@ -113,6 +113,7 @@ Here's the list of supported tags:
 * **%title%**: This will be replaced with the title of the item (fallback: *Unknown*)
 * **%content%**: This will be replaced with the content ("description") of the item, with an automated attempt to **properly convert HTML formatting to markdown** (fallback: *None*)
 * **%content\_clean%**: This will be replaced with the content ("description") of the item, stripped off all HTML tags (i.e. just plain text) (fallback: *None*)
+* **%media\_url%**: This will be replaced with the direct URL to the media content of the item, if available (fallback: *Empty String*)
 * **%categories%**: This will be replaced with the tags ("categories") assigned to an item, as a comma-separated list (fallback: *None*)
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the item creation UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_iso%**: This will be replaced with the item creation UTC time, as ISO8601 string.
