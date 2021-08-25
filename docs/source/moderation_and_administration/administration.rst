@@ -87,7 +87,7 @@ You can also print the list of available loggers within Discord by using |bot_pr
 
 .. admonition:: Premium
 
-    The **Members**, **Messages**, **Roles**, **Channels**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Users**, **Server** and **Voice** loggers, you can unlock them as a **Premium** feature (see: :ref:`premium-perks`).
+    The **Members**, **Messages**, **Roles**, **Channels**, **Moderation** and **Warning** loggers are publicly available. If you want to enable **Users**, **Server** and **Voice** loggers, you can unlock them as a **Premium** feature (see: :ref:`premium-perks`). The "Invites Tracking" feature of the **Members** logger is only available as a **Premium** feature.
 
 | :sub:`\*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.`
 | :sub:`\*\*: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.`

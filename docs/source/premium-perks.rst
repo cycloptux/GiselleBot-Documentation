@@ -51,6 +51,7 @@ You'll also get to pick a custom color for your name in the official support ser
 
 Tier 2 patrons unlock some improvements on the **trivia module** and get the whole potential of the **music module**, plus some more perks:
 
+* (Server Administration) enhanced **Members** logging with the "Invites Tracking" feature
 * (Trivia) **up to 30 questions** per trivia game
 * (Trivia) maximum trivia games duration raised to **up to 7 days**
 * (Command Scheduler) **Command Scheduling** interval raised to **1 week**
