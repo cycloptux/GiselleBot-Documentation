@@ -38,7 +38,7 @@ By becoming a **Tier 1** (or higher) patron, you'll get access to:
 * (Server Administration) **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
 * (Command Scheduler) **Command Scheduling** interval raised from 1 hour to **12 hours**
 * (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
-* (Utility) **up to 5 simultaneous clock channels** (removing the default cap of 1 clock channel per server)
+* (Utility) **up to 10 simultaneous clock channels** (removing the default cap of 2 clock channels per server)
 
 You will also gain access to any or all of the "alpha" unreleased modules. Access to alpha modules, when available, must be specifically requested.
 
