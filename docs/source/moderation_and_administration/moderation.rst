@@ -122,7 +122,7 @@ Defines a role to be used as the mute role. Attempting to set a mute role that i
 
 Channel permissions for the mute role will be automatically set and updated every time the configuration or moderation command is used.
 
-Muted users will have the following permissions disabled for every channel (besides the "mute chat", see below): **Send Messages**, **Attach Files**, **Add Reactions**, **Speak**.
+Muted users will have the following permissions disabled for every channel (besides the "mute chat", see below): **Send Messages**, **Attach Files**, **Add Reactions**, **Use Public Threads**, **Use Private Threads**, **Speak**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -222,7 +222,7 @@ Command Description
 
 Channel permissions for the mute role will be automatically set and updated every time the configuration or moderation command is used.
 
-Muted users will have the following permissions disabled for the specified channel: **Send Messages**, **Attach Files**, **Add Reactions**, **Speak**.
+Muted users will have the following permissions disabled for the specified channel: **Send Messages**, **Attach Files**, **Add Reactions**, **Use Public Threads**, **Use Private Threads**, **Speak**.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
