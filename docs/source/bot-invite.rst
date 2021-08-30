@@ -14,4 +14,4 @@ The set of permissions that |bot_name| asks for enables most, if not all, of its
     By default, not all of |bot_name|'s commands are enabled for everyone in a server. Refer to :ref:`permissions` for more info.
 
 .. seealso::
-   Need more help or stuck with something? Join our official Support Server on Discord! https://gisl.eu/support
+    Need more help or stuck with something? Join our official Support Server on Discord! https://discord.gg/vY5zdmzukb
