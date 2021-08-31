@@ -33,6 +33,7 @@ rst_prolog = '''
 .. |bot_name| replace:: GiselleBot
 .. |bot_email| replace:: gisellebot@cycloptux.com
 .. |bot_invite| replace:: https://gisl.eu/invite
+.. |bot_support| replace:: https://discord.gg/vY5zdmzukb
 .. |bot_prefix| replace:: !
 .. |bot_prefix_name| replace:: an exclamation point
 '''

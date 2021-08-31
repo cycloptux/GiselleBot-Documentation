@@ -22,7 +22,7 @@ Here's a summary of the available Premium tiers and the corresponding unlocked p
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, join the official Support Server on Discord (https://discord.gg/vY5zdmzukb) and **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 with |bot_prefix|\ submit on Discord to request the activation of the premium perks in your server**. If the form does not show up in the list of available forms, send the |bot_prefix|\ submit command in the #bot-spam channel within the server.
+    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, join the official Support Server on Discord ( |bot_support| ) and **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 with |bot_prefix|\ submit on Discord to request the activation of the premium perks in your server**. If the form does not show up in the list of available forms, send the |bot_prefix|\ submit command in the #bot-spam channel within the server.
 
 Tier 0: Show Your Support!
 ==========================
@@ -45,7 +45,7 @@ You will also gain access to any or all of the "alpha" unreleased modules. Acces
 Tier 2: Premium Support, Extended Modules
 =========================================
 
-By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the `official support server <https://discord.gg/vY5zdmzukb>`_, where you'll get a priority answer from the developer upon encountering any issue.
+By becoming a **Tier 2** (or higher) patron, you'll gain access to a dedicated "priority support" channel within the Official Support Server ( |bot_support| ), where you'll get a priority answer from the developer upon encountering any issue.
 
 You'll also get to pick a custom color for your name in the official support server.
 

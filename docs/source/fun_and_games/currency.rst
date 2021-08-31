@@ -281,7 +281,7 @@ Shows the current highest and lowest buying/selling price for 🥦 broccoli.
 This will act as a benchmark to evaluate if the price you found in a server is good or not, or if there's any better price to be hunted!
 
 .. note::
-    This command is **only** available in **GiselleBot Support Center**. You can join the Discord server using this invite: https://discord.gg/vY5zdmzukb
+    This command is **only** available in **GiselleBot Support Center**. You can join the Discord server using this invite: |bot_support|
 
 ....
 
