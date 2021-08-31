@@ -15,6 +15,7 @@ Supported Triggers
 ==================
 
 * **Server Invites**: recognizes Discord server invites in user messages; this trigger supports **shortened** URLs (e.g. Discord invites hidden behind a bit.ly/gisl.eu shortening service), and ignores invites pointing to the current server.
+* **Anti-Phishing**: recognizes known phishing domains in user messages; this trigger supports **shortened** URLs (e.g. phishing domains hidden behind a bit.ly/gisl.eu shortening service). The list is updated on an hourly basis with new domains, and powered by cactus#0523's phishing domains list.
 * **Mass Mention**: counts the number of mentions (roles, users or everyone/here) sent by a user, in a channel, within a certain span of time and triggers if the number of mentions is over a threshold. The default (allowed) threshold pair is **5** mentions in **30** seconds, but can be configured in each server.
 * **Banned Words**: checks the message against a list of words, configured by the user, and triggers if one or more words are found within the message. Punctuation and letter case are ignored. The parser can be configured to trigger on an "exact match" (e.g. banned word: ``test``, matching word: ``test``), if the banned word is found at the "beginning of a word" within the message (e.g. banned word: ``test``, matching word: ``testing``), or "anywhere in word" (e.g. banned word: ``test``, matching word: ``attestation``).
 * **Anti-Spam**: counts the number of messages **with the same content** sent by a user, in a channel, within a certain span of time and triggers if the number of identical message is over a threshold. The default (allowed) threshold pair is **3** messages in **10** seconds, but can be configured in each server.
@@ -29,12 +30,12 @@ Supported Triggers
     Discord lag or connection problems can cause Anti-Spam and Anti-Attachment Spam false positives.
     
 .. note::
-    The Server Invites, Banned Words, NSFW Images and QR Codes triggers also support message editing: messages will be re-checked upon being edited.
+    The Server Invites, Anti-Phishing, Banned Words, NSFW Images and QR Codes triggers also support message editing: messages will be re-checked upon being edited.
     
 .. warning::
     The NSFW Images trigger, by no means, is supposed to reliably recognize all NSFW images. Use it at your own risk, and only as an additional tool to support humans in better moderating the server.
     
-When more then one trigger is active and a message is potentially breaking more than one of the active triggers, this priority order will apply: ``Server Invites > Mass Mentions > Banned Words > Anti-Spam > Anti-Attachment Spam > QR Codes > NSFW Images``.
+When more then one trigger is active and a message is potentially breaking more than one of the active triggers, this priority order will apply: ``Server Invites > Anti-Phishing > Mass Mentions > Banned Words > Anti-Spam > Anti-Attachment Spam > QR Codes > NSFW Images``.
 
 For automoderation triggers that apply on **messages**, you can also have |bot_name| scan server reference messages (a.k.a. messages coming from "followed channels" from other servers) by enabling **Scan "Followed Channels" messages**.
     
