@@ -212,6 +212,28 @@ Permissions Needed
 
 ....
 
+|bot_prefix|\ invitesusage
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ invitesusage [--channel {channel id/mention}] [--inviter {user id/mention}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Shows usage stats about active invites in the current server.
+
+You can filter by invite target channel through the ``--channel`` parameter, or by inviter through the ``--inviter`` parameter.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server, Create Instant Invite
+| **Bot**: Create Instant Invite
+
+....
+
 |bot_prefix|\ searchuser
 ------------------------
 
