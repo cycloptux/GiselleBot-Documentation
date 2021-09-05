@@ -621,6 +621,195 @@ Examples
 
 ....
 
+|bot_prefix|\ goodbyerole
+-------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyerole (role id/mention/q_name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles announcements on the current channel when someone loses a certain role.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyerole @Beta Tester
+    |bot_prefix|\ goodbyerole 123456789098765432
+    |bot_prefix|\ goodbyerole "Top Secret Pass"
+
+....
+
+|bot_prefix|\ goodbyeroledm
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledm (role id/mention/q_name)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Toggles announcements via Direct Message when someone loses a certain role (this is separate from goodbyerole - you can have both, any, or neither enabled).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledm @Beta Tester
+    |bot_prefix|\ goodbyeroledm 123456789098765432
+    |bot_prefix|\ goodbyeroledm "Top Secret Pass"
+
+....
+
+|bot_prefix|\ goodbyerolemsg
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyerolemsg (role id/mention/q_name) [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new role goodbye message which will be shown in the server's channel. Using it with no message will show the current goodbye message.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%role%**: This will be replaced with the name (in plain text) of the lost role.
+* **%role\_mention%**: This will be replaced with the mention of the lost role.
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyerolemsg @VIP Sorry to hear you losing the **%role%** role, %user%!
+    |bot_prefix|\ goodbyerolemsg 123456789098765432 %user%, you are no longer a member of this club!
+
+....
+
+|bot_prefix|\ goodbyeroledmmsg
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledmmsg (role id/mention/q_name) [message content]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets a new role goodbye message which will be sent to the user who lost the role. Using it with no message will show the current DM goodbye message.
+
+You can use one (or more) of these placeholders in your message:
+
+* **%role%**: This will be replaced with the name (in plain text) of the lost role.
+* **%role\_mention%**: This will be replaced with the mention of the lost role.
+* **%user%**: This will be replaced with a mention of the user.
+* **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
+* **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
+* **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
+* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
+* **%bot%**: This will be replaced with a mention of the bot.
+* **%botname%**: This will be replaced with the username of the bot, without the discriminator.
+* **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
+* **%fullbotname%**: This will be replaced with the username of the bot, including the discriminator.
+* **%bot\_avatar\_url%**: This will be replaced with the current bot avatar URL (in WebP or GIF format).
+* **%server%**: This will be replaced with the server name.
+* **%now%**: This will be replaced with the current time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
+* **%now\_iso%**: This will be replaced with the current time, as ISO8601 string.
+* **%server\_time%**: This will be replaced with the current time, with format ``HH:mm UTC``.
+* **%server\_icon\_url%**: This will be replaced with the current server icon URL (in WebP or GIF format).
+* **%server\_banner\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_splash\_url%**: This will be replaced with the current server icon URL (in WebP format).
+* **%server\_member\_count%**: This will be replaced with the current amount of members in the server.
+* **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
+* **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
+
+You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledmmsg @VIP Sorry to hear you losing the **%role%** role, %user%!
+    |bot_prefix|\ goodbyeroledmmsg 123456789098765432 %user%, you are no longer a member of this club!
+
+....
+
+|bot_prefix|\ goodbyeroledel
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledel (role id/mention/q_name) (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time it takes (in seconds) for **in-server** role goodbye messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+
+.. note::
+    This setting does not apply to DM goodbye messages.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledel @Beta Tester 0
+    |bot_prefix|\ goodbyeroledel "Top Secret Pass" 30
+
+....
+
 Automated Roles Assignment/Removal
 ==================================
 
