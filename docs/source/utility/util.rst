@@ -943,10 +943,20 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Creates a channel as "clock channel", updating its name every 15 minutes. You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command.
+Creates a channel as "clock channel", updating its name every 15 minutes.
+
+You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command. In addition to the listed time zones, custom **UTC offsets** are supported, in the form of ``[UTC/GMT](+/-)(hours)[:][minutes]``. Here are some valid examples:
+
+    * -9
+    * +800
+    * -230
+    * -10:30
+    * UTC+2
+    * GMT-4:30
+    * ...
 
 .. note::
-    The initial implementation of this command used to have clocks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 10-minutes update is the safest update that is still useful to track time.
+    Beware that the offset forms of the `Etc/UTC` area have a counterintuitive behavior, having their sign reversed from the standard ISO 8601 convention (e.g. "Etc/GMT-14" is 14 hours ahead of GMT) (more info: https://en.wikipedia.org/wiki/Tz_database#Area). If you want to specify a custom offset, use the simple "UTC" form instead of "Etc/UTC", as stated above.
 
 You can set a custom template for the channel name. You can use one (or more) of these placeholders in your custom channel name template:
 
@@ -960,7 +970,10 @@ By default, the channel name template is ``%time_zone%: %clock%``.
 
 .. admonition:: Premium
 
-    Out of the box, each server is limited to having **2 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`).
+    Out of the box, each server is limited to having **2 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`). Clock update frequency cannot be changed.
+
+.. note::
+    The initial implementation of this command used to have clcks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 10~15 minutes update seems to be the safest update that is still useful to track time.
 
 
 Permissions Needed
@@ -974,6 +987,7 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ clockchannel UTC
+    |bot_prefix|\ clockchannel GMT-8
     |bot_prefix|\ clockchannel Europe/London --12ht
     |bot_prefix|\ clockchannel America/New_York --template Current Time: %clock%
 
