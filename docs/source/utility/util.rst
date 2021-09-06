@@ -956,7 +956,7 @@ You must specify the time zone name: if you need to search for a valid time zone
     * ...
 
 .. note::
-    Beware that the offset forms of the `Etc/UTC` area have a counterintuitive behavior, having their sign reversed from the standard ISO 8601 convention (e.g. "Etc/GMT-14" is 14 hours ahead of GMT) (more info: https://en.wikipedia.org/wiki/Tz_database#Area). If you want to specify a custom offset, use the simple "UTC" form instead of "Etc/UTC", as stated above.
+    Beware that the offset forms of the ``Etc/UTC`` area have a counterintuitive behavior, having their sign reversed from the standard ISO 8601 convention (e.g. "Etc/GMT-14" is 14 hours ahead of GMT) (more info: https://en.wikipedia.org/wiki/Tz_database#Area). If you want to specify a custom offset, use the simple "UTC" form instead of "Etc/UTC", as stated above.
 
 You can set a custom template for the channel name. You can use one (or more) of these placeholders in your custom channel name template:
 
