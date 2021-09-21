@@ -80,14 +80,14 @@ That said, a typical time code would be like this:
 Timestamp Mentions
 ------------------
 
-While the standard time code represents a time span (or duration) in an explicit form (e.g. 3 hours; 10 minutes from now; etc.), each command that supports a time code can also be used with a "timestamp mention" (refer to `Message Formatting <https://discord.com/developers/docs/reference#message-formatting>`_ under "Unix Timestamp" or "Unix Timestamp (Styled)").
+While the standard time code represents a time span (or duration) in an explicit form (e.g. 3 hours; 10 minutes from now; etc.), each command that supports a time code can also be used with a "timestamp mention" (refer to `Message Formatting <https://discord.com/developers/docs/reference#message-formatting>`_, "Unix Timestamp" or "Unix Timestamp (Styled)").
 
 When using timestamp mentions as a time code replacement, |bot_name| will automatically convert the timestamp into the corresponding "time from now" interval to be used as time span.
 
 This may be particularly useful in some use cases when trying to trigger an action at a certain time of a day (e.g. reminders, repeating messages, scheduled commands, etc.).
 
 .. note::
-    You can easily create such timestamp mentions in a Discord-ready syntax using `HammerTime <https://hammertime.djdavid98.art/>`_ by `DJDavid98 <https://djdavid98.art>`_ .
+    You can easily create such timestamp mentions in a Discord-ready syntax using `HammerTime <https://hammertime.djdavid98.art/>`_ by `DJDavid98 <https://djdavid98.art>`_.
 
 .. warning::
     Using timestamp mentions as time code will only work if the timestamp you are using refers to a future date.
