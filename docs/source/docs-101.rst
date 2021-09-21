@@ -86,6 +86,9 @@ When using timestamp mentions as a time code replacement, |bot_name| will automa
 
 This may be particularly useful in some use cases when trying to trigger an action at a certain time of a day (e.g. reminders, repeating messages, scheduled commands, etc.).
 
+.. note::
+    You can easily create such timestamp mentions in a Discord-ready syntax using `HammerTime <https://hammertime.djdavid98.art/>`_ by `DJDavid98 <https://djdavid98.art>`_ .
+
 .. warning::
     Using timestamp mentions as time code will only work if the timestamp you are using refers to a future date.
 
