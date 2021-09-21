@@ -47,6 +47,9 @@ Within the documentation, you may find the tag ``q_name`` in command syntax snip
 Time Format Code
 ================
 
+Standard Time Code
+------------------
+
 Time durations are indicated through the use of a standard time format, which consists of 5 (or 6) time bits:
 
 +----------+-----------+
@@ -74,3 +77,15 @@ That said, a typical time code would be like this:
 
     2mo6h40m = 2 months, 6 hours, 40 minutes
     
+Timestamp Mentions
+------------------
+
+While the standard time code represents a time span (or duration) in an explicit form (e.g. 3 hours; 10 minutes from now; etc.), each command that supports a time code can also be used with a "timestamp mention" (refer to `Message Formatting <https://discord.com/developers/docs/reference#message-formatting>`_ under "Unix Timestamp" or "Unix Timestamp (Styled)").
+
+When using timestamp mentions as a time code replacement, |bot_name| will automatically convert the timestamp into the corresponding "time from now" interval to be used as time span.
+
+This may be particularly useful in some use cases when trying to trigger an action at a certain time of a day (e.g. reminders, repeating messages, scheduled commands, etc.).
+
+.. warning::
+    Using timestamp mentions as time code will only work if the timestamp you are using refers to a future date.
+
