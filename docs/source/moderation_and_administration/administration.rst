@@ -272,7 +272,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets a new join announcement message which will be sent to the user who joined. Using it with no message will show the current DM greet message.
+Sets a new join announcement message which will be sent to the user who joined, via DM. Using it with no message will show the current DM greet message.
 
 You can use one (or more) of these placeholders in your message:
 
@@ -311,6 +311,58 @@ Examples
 
 ....
 
+|bot_prefix|\ greetdelay
+------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetdelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **in-server** greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetdelay 0
+    |bot_prefix|\ greetdelay 10
+
+....
+
+|bot_prefix|\ greetdmdelay
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetdmdelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **Direct Message** greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetdmdelay 0
+    |bot_prefix|\ greetdmdelay 10
+
+....
+
 |bot_prefix|\ greetdel
 ----------------------
 
@@ -322,7 +374,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
 
 .. note::
     This setting does not apply to DM greet messages.
@@ -406,6 +458,32 @@ Examples
 
 ....
 
+|bot_prefix|\ goodbyedelay
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyedelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **in-server** goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyedelay 0
+    |bot_prefix|\ goodbyedelay 10
+
+....
+
 |bot_prefix|\ goodbyedel
 ------------------------
 
@@ -417,7 +495,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** goodbye messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -550,7 +628,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets a new role greeting message which will be sent to the user who obtained the role. Using it with no message will show the current DM greet message.
+Sets a new role greeting message which will be sent to the user who obtained the role, via DM. Using it with no message will show the current DM greet message.
 
 You can use one (or more) of these placeholders in your message:
 
@@ -592,6 +670,58 @@ Examples
 
 ....
 
+|bot_prefix|\ greetroledelay
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **in-server** role greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledelay @VIP 0
+    |bot_prefix|\ greetroledelay 123456789098765432 10
+
+....
+
+|bot_prefix|\ greetroledmdelay
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledmdelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **Direct Message** role greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ greetroledmdelay @VIP 0
+    |bot_prefix|\ greetroledmdelay 123456789098765432 10
+
+....
+
 |bot_prefix|\ greetroledel
 --------------------------
 
@@ -603,7 +733,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** role greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** role greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
 
 .. note::
     This setting does not apply to DM greet messages.
@@ -739,7 +869,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets a new role goodbye message which will be sent to the user who lost the role. Using it with no message will show the current DM goodbye message.
+Sets a new role goodbye message which will be sent to the user who lost the role, via DM. Using it with no message will show the current DM goodbye message.
 
 You can use one (or more) of these placeholders in your message:
 
@@ -781,6 +911,58 @@ Examples
 
 ....
 
+|bot_prefix|\ goodbyeroledelay
+------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **in-server** role goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledelay @VIP 0
+    |bot_prefix|\ goodbyeroledelay 123456789098765432 10
+
+....
+
+|bot_prefix|\ goodbyeroledmdelay
+--------------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledmdelay (seconds)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Sets the time (delay) it takes (in seconds) for **Direct Message** role goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ goodbyeroledmdelay @VIP 0
+    |bot_prefix|\ goodbyeroledmdelay 123456789098765432 10
+
+....
+
 |bot_prefix|\ goodbyeroledel
 ----------------------------
 
@@ -792,7 +974,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** role goodbye messages to be auto-deleted. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** role goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
 
 .. note::
     This setting does not apply to DM goodbye messages.
