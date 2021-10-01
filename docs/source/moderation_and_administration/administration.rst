@@ -677,7 +677,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetroledelay (seconds)
+    |bot_prefix|\ greetroledelay (role id/mention/q_name) (seconds)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -703,7 +703,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ greetroledmdelay (seconds)
+    |bot_prefix|\ greetroledmdelay (role id/mention/q_name) (seconds)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -918,7 +918,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ goodbyeroledelay (seconds)
+    |bot_prefix|\ goodbyeroledelay (role id/mention/q_name) (seconds)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -944,7 +944,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ goodbyeroledmdelay (seconds)
+    |bot_prefix|\ goodbyeroledmdelay (role id/mention/q_name) (seconds)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
