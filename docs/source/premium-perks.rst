@@ -35,7 +35,9 @@ Tier 1: Basic Addons
 By becoming a **Tier 1** (or higher) patron, you'll get access to:
 
 * (Alarms & Reminders) **unlimited repeating messages** (removing the default cap of 5 repeating messages per server)
-* (Server Administration) **Users**, **Server** and **Voice** loggers, and access to the |bot_prefix|\ logignore command
+* (Server Administration) **Users**, **Server** and **Voice** loggers
+* (Server Administration) access to the |bot_prefix|\ logignore command to **selectively ignore entities from being logged**
+* (Server Administration) send delay and auto-deletion maximum time for **greet and goodbye messages** (including role ones) **increased from 5 to 15 minutes**
 * (Command Scheduler) **Command Scheduling** interval raised from 1 hour to **12 hours**
 * (Currency System, Social/EXP Ranking) **Experience and Currency** gained on each message and by using the |bot_prefix|\ timely command will be boosted by **5%** for **all users** in your server!
 * (Utility) **up to 10 simultaneous clock channels** (removing the default cap of 2 clock channels per server)

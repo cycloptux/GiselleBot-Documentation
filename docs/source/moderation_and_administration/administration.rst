@@ -322,7 +322,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **in-server** greet messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -348,7 +354,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **Direct Message** greet messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -374,7 +386,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 .. note::
     This setting does not apply to DM greet messages.
@@ -469,7 +487,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **in-server** goodbye messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -495,7 +519,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -681,7 +711,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** role greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **in-server** role greet messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -707,7 +743,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** role greet messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **Direct Message** role greet messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -733,7 +775,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** role greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** role greet messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 .. note::
     This setting does not apply to DM greet messages.
@@ -922,7 +970,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** role goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **in-server** role goodbye messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -948,7 +1002,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** role goodbye messages to be sent. Set it to 0 to disable send delay. The maximum time you can set is 300 (5 minutes).
+Sets the time (delay) it takes (in seconds) for **Direct Message** role goodbye messages to be sent. Set it to 0 to disable send delay.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -974,7 +1034,13 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time it takes (in seconds) for **in-server** role goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion. The maximum time you can set is 300 (5 minutes).
+Sets the time it takes (in seconds) for **in-server** role goodbye messages to be auto-deleted after being sent. Set it to 0 to disable automatic deletion.
+
+The maximum time you can set is 300 (5 minutes).
+
+.. admonition:: Premium
+
+    You can extend the maximum time to 900 (15 minutes) as a **Premium** feature (see: :ref:`premium-perks`).
 
 .. note::
     This setting does not apply to DM goodbye messages.
