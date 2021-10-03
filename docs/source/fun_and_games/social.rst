@@ -453,7 +453,8 @@ The custom messages support the following dynamic placeholders:
 * **%username%**: This will be replaced with the username of the user, without the discriminator (e.g. cycloptux).
 * **%discriminator%**: This will be replaced with the discriminator of the user, without the ``#`` character (e.g. 1543).
 * **%fullusername%**: This will be replaced with the username of the user, including the discriminator (e.g. cycloptux#1543).
-* **%user\_avatar\_url%**: This will be replaced with the current user avatar URL (in WebP or GIF format).
+* **%user\_avatar\_url%**: This will be replaced with the current user global avatar URL (in WebP or GIF format).
+* **%user\_server\_avatar\_url%**: This will be replaced with the current user server avatar URL, if set, or the global avatar URL (in WebP or GIF format).
 * **%bot%**: This will be replaced with a mention of the bot.
 * **%botname%**: This will be replaced with the username of the bot, without the discriminator.
 * **%botdiscriminator%**: This will be replaced with the discriminator of the bot, without the ``#`` character.
