@@ -73,3 +73,7 @@ Command Description
 Generates a random minesweeper board. Any user can play locally by unhiding the spoiler tags on the board. No other kind of interaction is implemented, just have fun and play fair!
 
 Use one of the optional tags to create a new board of the selected difficulty. "Normal" is the default mode, if the difficulty tag is omitted.
+
+.. warning::
+    Due to a long running bug in the Discord desktop and web client, the "Hard" and "Extreme" difficulty boards will not correctly show up. The mobile clients do seem to show the boards correctly. Here's the related Discord bug report: https://bugs.discord.com/T812
+    
