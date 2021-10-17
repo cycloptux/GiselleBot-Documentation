@@ -899,6 +899,28 @@ Examples
 
 ....
 
+|bot_prefix|\ snowflaketime
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ snowflaketime (Discord snowflake)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Extracts the time from a valid Discord snowflake, showing it in multiple relative and absolute formats.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ snowflaketime 123456789098765432
+
+....
+
 |bot_prefix|\ unitconverter
 ---------------------------
 
