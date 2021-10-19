@@ -1605,7 +1605,8 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ nsbaddtemplate
-    |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch!\nThe total Boost count for **%server%** is now **%boost_number%**.
+    |bot_prefix|\ nsbaddtemplate %user% just boosted the server! Thanks a bunch!
+        The total Boost count for **%server%** is now **%boost_number%**.
 
 ....
 
