@@ -15,10 +15,6 @@ As a way to cover the hosting (and development) costs of the bot and its infrast
 
 Here's a summary of the available Premium tiers and the corresponding unlocked perks, the pricing details will be on the Patreon page.
 
-.. note::
-    As an alternative way of gaining access to Premium-locked features, if you are a representative of a "large" Discord server, you can apply for a **partnership**: getting access to the cool features and the developer involvement in steering the bot development towards your needs in exchange for advertisement of the bot and the its Patreon on your server.
-    For reference, "large" refers to servers with at least ~1,000 members and an active userbase, but you can still apply if you don't meet those requirements: we'll review the specific potential of your server on an individual base.
-
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
