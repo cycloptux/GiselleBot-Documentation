@@ -229,7 +229,8 @@ If the ``%url%`` parameter is used, the default URL will **not** be appended to 
 
 The YouTube module also supports a few extra, dynamic placeholders. These dynamic placeholders will be replaced with the corresponding value if the runtime value is present/applicable, or **deleted** if they are not applicable:
 
-* **%description%**: This will be replaced with the description of the video, if present and not empty.
+* **%description%**: This will be replaced with the description of the video, if present and not empty (the description length is truncated at 1024 characters).
+* **%short\_description%**: This will be replaced with a shorter version of the description of the video, if present and not empty (the description length is truncated at 256 characters).
 * **%tags%**: This will be replaced with a space-delimited list of tags applied to the video, if at least one tag is applied. The tags will be surrounded by \` \` characters.
 * **%thumbnail%**: This will be replaced with the direct URL of the video thumbnail, unless the thumbnail is absent (this is not supposed to happen, but might happen for unknown reasons).
 
