@@ -54,6 +54,7 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    credits
    docs-101
    premium-perks
+   privacy
    user-generated-content
    
 .. toctree::

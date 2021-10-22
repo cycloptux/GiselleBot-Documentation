@@ -18,18 +18,3 @@ Any report to the developer in regards to the present disclaimer must be address
 
 * **Discord:** cycloptux#1543
 * **Email:** cycloptux@discomm.cc
-
-Liability
-=========
-
-Work in progress.
-
-Privacy
-=======
-
-Work in progress.
-
-Acceptable Use
-==============
-
-Work in progress.
