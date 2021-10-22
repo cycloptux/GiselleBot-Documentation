@@ -169,7 +169,7 @@ What Are Your Privacy Rights?
 
 **In Short:** By choosing GDPR as our privacy framework, you have rights that allow you greater access to and control over your personal information.
 
-Multiple privacy frameworks may be applied when storing and processing your data. We chose to align with the European [General Data Protection Regulation](https://eur-lex.europa.eu/eli/reg/2016/679/oj) (GDPR), extending those rights to you independently of where you are.
+Multiple privacy frameworks may be applied when storing and processing your data. We chose to align with the European `General Data Protection Regulation <https://eur-lex.europa.eu/eli/reg/2016/679/oj>`_ (GDPR), extending those rights to you independently of where you are.
 
 In “GDPR terminology”, as referred in Article 4, we often refer to the following concept:
 
