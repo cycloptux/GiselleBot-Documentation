@@ -348,7 +348,7 @@ As said above, these commands will automatically generate a server-specific case
 
 If any of the rule, reason or attachments parameters are missing, the bot will tag the moderator upon action log generation prompting them to fill in the missing arguments using the |bot_prefix|\ edit command. The bot will also tag the moderator the first time that the user reaches a suggested action threshold.
 
-Each command has a "un-" version that reverts the active warning command. "un-" commands will follow a similar syntax but will never generate a new case, hence rendering the set of warning parameters (every parameter after the user identifier(s)) useless.
+Some moderation action commands have a "un-" version that reverts the corresponding moderation action. "un-" commands will follow a similar syntax but will never generate a new case, hence rendering the set of warning parameters (every parameter after the user identifier(s)) useless.
 
 What follows is a list of all of the commands in this section. As already said, each command description and syntax will be a diff over the common syntax shown here.
 
