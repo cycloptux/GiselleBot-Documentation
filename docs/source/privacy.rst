@@ -103,10 +103,14 @@ We may process or share your data that we hold based on the following legal basi
 * **Vital Interests:** We may disclose your information where we believe it is necessary to investigate, prevent, or take action regarding potential violations of our policies, suspected fraud, situations involving potential threats to the safety of any person and illegal activities, or as evidence in litigation in which we are involved.
 
 
-..
-    Do We Use Cookies And Other Tracking Technologies?
-    ==================================================
+Do We Use Cookies And Other Tracking Technologies?
+==================================================
 
+**In Short:** We don't use cookies or other website tracking technologies to collect and store your information.
+
+We don't use cookies, nor similar tracking technologies in our Website to access or store information.
+
+..
     **In Short:** We may use cookies and other tracking technologies to collect and store your information.
 
     We may use cookies and similar tracking technologies in our Website to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Policy.
