@@ -18,7 +18,7 @@ Here's a summary of the available Premium tiers and the corresponding unlocked p
 More perks will be added over time, including free currency and early access to new features!
 
 .. warning::
-    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, join the official Support Server on Discord ( |bot_support| ) and **submit an entry in the "Patreon Verification" form by sending a DM to GiselleBot#8602 with |bot_prefix|\ submit on Discord to request the activation of the premium perks in your server**. If the form does not show up in the list of available forms, send the |bot_prefix|\ submit command in the #bot-spam channel within the server.
+    You should be the **owner**, or an **administrator** (or a representative of similar rank), of the server you're activating the Patreon perks for. Upon successfully pledging for a Patreon tier, join the official Support Server on Discord ( |bot_support| ) and **submit an entry in the "Patreon Verification" form** by sending a DM to GiselleBot#8602 with |bot_prefix|\ submit on Discord to request the activation of the premium perks in your server. If the form does not show up in the list of available forms, send the |bot_prefix|\ submit command in the #bot-spam channel within the server.
 
 Tier 0: Show Your Support!
 ==========================
