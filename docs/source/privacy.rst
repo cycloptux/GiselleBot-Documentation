@@ -106,7 +106,7 @@ We may process or share your data that we hold based on the following legal basi
 Do We Use Cookies And Other Tracking Technologies?
 ==================================================
 
-**In Short:** We don't use cookies or other website tracking technologies to collect and store your information.
+**In Short:** No.
 
 We don't use cookies, nor similar tracking technologies in our Website to access or store information.
 
