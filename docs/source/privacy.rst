@@ -23,7 +23,7 @@ In this privacy policy, if we refer to:
 * "**Discord**", we are referring to Discord Inc. and its related companies;
 * "**Discord End User**", we are referring to you, as someone who is using Discord-related services according to the Discord privacy policies and terms of service;
 * "**Discord End User Data**", we are referring to the data you provide to Discord through the Discord App;
-* "**Discord App**", we are referring to the client(s) (desktop, mobile, web, …) that Discord offers to their End User(s) to access their services;
+* "**Discord App**", we are referring to the client(s) (desktop, mobile, web, ...) that Discord offers to their End User(s) to access their services;
 * "**Discord API**" we are referring to the API (Application Programming Interfaces) Discord provides to developers, that enables us to access your Discord End User Data according to the Discord privacy policies and terms of service.
 
 The purpose of this privacy policy is to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it.
@@ -74,10 +74,10 @@ We use the information we collect or receive:
 
 The personal information we process may be used for the following purposes:
 
-* **Discord ID:** We use your Discord ID to identify you among the different Services, and in relation to your "Discord End User Data";
-* **Partial Discord Message Content:** With partial Discord message content, we refer to the content of messages that let you directly interact with our Bot, such as when using commands; we use your partial Discord message content to provide you with the output of such commands;
-* **Full Discord Message Content:** With full Discord message content, we refer to the full content of messages that you send using the Discord App, even when the message is not related to a direct interaction with our Bot; we use your full Discord message content to provide specific features that may be offered through our Bot to you, or to other users, such as Server Moderation, Custom Reactions, Forms;
-* **Other Identifiers:** We may collect other types of identifiers, or contact details, other than your Discord ID if you are directly interacting with us; these identifiers will only be used to process specific inquiries, and may be deleted after the inquiry is complete;
+* **Discord ID:** We use your Discord ID to identify you among the different Services, and in relation to your "Discord End User Data".
+* **Partial Discord Message Content:** With partial Discord message content, we refer to the content of messages that let you directly interact with our Bot, such as when using commands. We use your partial Discord message content to provide you with the output of such commands.
+* **Full Discord Message Content:** With full Discord message content, we refer to the full content of messages that you send using the Discord App, even when the message is not related to a direct interaction with our Bot. We use your full Discord message content to provide specific features that may be offered through our Bot to you, or to other users, such as Server Moderation, Custom Reactions, Forms.
+* **Other Identifiers:** We may collect other types of identifiers, or contact details, other than your Discord ID if you are directly interacting with us; these identifiers will only be used to process specific inquiries, and may be deleted after the inquiry is complete.
 * **Other Discord End User Data:** We may collect, store, and process other types of content you share with Discord, and that is further provided to us through the Discord API, to provide specific features related to our Services.
 
 Hereafter, we also provide some additional remarks on how we process your data in relation to some specific use cases:
@@ -103,12 +103,13 @@ We may process or share your data that we hold based on the following legal basi
 * **Vital Interests:** We may disclose your information where we believe it is necessary to investigate, prevent, or take action regarding potential violations of our policies, suspected fraud, situations involving potential threats to the safety of any person and illegal activities, or as evidence in litigation in which we are involved.
 
 
-Do We Use Cookies And Other Tracking Technologies?
-==================================================
+..
+    Do We Use Cookies And Other Tracking Technologies?
+    ==================================================
 
-**In Short:** We may use cookies and other tracking technologies to collect and store your information.
+    **In Short:** We may use cookies and other tracking technologies to collect and store your information.
 
-We may use cookies and similar tracking technologies in our Website to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Policy.
+    We may use cookies and similar tracking technologies in our Website to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Policy.
 
 
 How Do We Handle Your Social Logins?
@@ -116,7 +117,7 @@ How Do We Handle Your Social Logins?
 
 **In Short:** If you choose to log in to our Services using your Discord account, we may have access to certain information about you.
 
-Our Services offer you the ability to register and login using your third-party social media account details (specifically, your Discord account). We don't specifically have an account management solution, nor you'll ever have an "account with us". When a login procedure is needed to access our Services, you will be using your Discord account.
+Our Services offer you the ability to register and login using your third-party social media account details (specifically, your Discord account). We don't specifically have an account management solution, nor will you ever have an "account with us". When a login procedure is needed to access our Services, you will be using your Discord account.
 
 When you do so, we will receive certain profile information about you from your social media provider (Discord). The profile information we receive may vary, but will often include your username, profile picture, as well as other information Discord may choose to make public.
 
@@ -128,7 +129,7 @@ Is Your Information Transferred Internationally?
 
 **In Short:** We may transfer, store, and process your information in countries other than your own.
 
-Our infrastructure is located in the United States. If you are accessing our Services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information, in and other countries.
+Our infrastructure is located in the United States. If you are accessing our Services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information, and in other countries.
 
 
 How Long Do We Keep Your Information?
@@ -150,7 +151,7 @@ We have implemented appropriate technical and organizational security measures d
 
 Hereafter, you'll find an exemplary and not exhaustive list of measures we implemented to keep your data safe:
 
-* **User Identification and Discord End User Data Processing:** Wherever possible, the only identification key related to you that is stored on our system is your "Discord ID". Your "Discord ID" is a number provided by the Discord API and linked to your Discord End User Data. Your username, message content, data you provide to Discord, ecc. is accessed by requesting such data through the Discord API using your Discord ID, while a minimal amount of data is stored in our Services.
+* **User Identification and Discord End User Data Processing:** Wherever possible, the only identification key related to you that is stored on our system is your "Discord ID". Your "Discord ID" is a number provided by the Discord API and linked to your Discord End User Data. Your username, message content, data you provide to Discord, etc. is accessed by requesting such data through the Discord API using your Discord ID, while a minimal amount of data is stored in our Services.
 * **Encryption at Rest:** Data stored by our Services is encrypted at rest (when saved in our database, or any data storage media we may be using) using best-in-class algorithms (e.g. AES-256-GCM) and following the most diffuse security guidelines. In some cases, data may be encrypted through multiple levels of encryption using different encryption keys; this approach is applied to all and any custom input we receive from the Discord API related to your Discord message content.
 * **Encryption in Transit:** Data processed by our Services, or transferred between different components of our infrastructure, is encrypted using best-in-class algorithms (e.g. TLS 1.2+ with Mutual Authentication) and following the most diffuse security guidelines.
 * **Authentication, Authorization, Auditing:** Our Services implement security measures that only allow authorized users to access any stored data.
@@ -170,7 +171,7 @@ In "GDPR terminology", as referred in Article 4, we often refer to the following
 * **Data Controller:** determines the purposes for which and the means by which personal data is processed;
 * **Data Processor:** processes personal data only on behalf of the controller;
 
-We are a **Data Controller **of the information you provide to us, and a **Data Processor** of the Discord End User Data we are provided by the Discord API.
+We are a **Data Controller** of the information you provide to us, and a **Data Processor** of the Discord End User Data we are provided by the Discord API.
 
 According to the GDPR, in certain circumstances (Chapter 3), you may have the following data protection rights:
 
@@ -199,10 +200,10 @@ Under certain circumstances, you may decide to opt-out of providing your data to
 
 In relation to the data that we collect, store, and process, you may have the following options regarding the ability to opt-out, or have your data deleted:
 
-* **Discord ID:** Opting out of providing your Discord ID may not be possible in all circumstances; your Discord ID is, in a general way, not a specific personal information unless it's matched with other personal information that is collected, stored, and processed by Discord. You may refer to the Discord privacy policies and terms of service to know how to opt-out of providing your Discord ID.
+* **Discord ID:** Opting out of providing your Discord ID may not be possible in all circumstances. Your Discord ID is, in a general way, not a specific personal information unless it's matched with other personal information that is collected, stored, and processed by Discord. You may refer to the Discord privacy policies and terms of service to know how to opt-out of providing your Discord ID.
 * **Partial Discord Message Content:** In regard to the content of messages that let you directly interact with our Bot, such as when using commands, you may self opt-out of all occasions where you provided us with any custom input by disabling, or properly reconfiguring, such features that were configured using custom inputs.
-* **Full Discord Message Content:** In regard to the content of messages that you send using the Discord App, even when the message is not related to a direct interaction with our Bot, you may (or may not) have the ability to self opt-out of providing your data depending on the technical implementation of such features that access your full message content; you may refer to the technical documentation of our Services for more information about whether this ability is provided.
-* **Other Identifiers:** When directly interacting with us, you may request your personal information to be deleted at any time during our interaction; in case where such request is made, we may not be able to provide you with the information, or Service, you are requesting from us.
+* **Full Discord Message Content:** In regard to the content of messages that you send using the Discord App, even when the message is not related to a direct interaction with our Bot, you may (or may not) have the ability to self opt-out of providing your data depending on the technical implementation of such features that access your full message content. You may refer to the technical documentation of our Services for more information about whether this ability is provided.
+* **Other Identifiers:** When directly interacting with us, you may request your personal information to be deleted at any time during our interaction. In case where such request is made, we may not be able to provide you with the information, or Service, you are requesting from us.
 * **Other Discord End User Data:** In regard to other types of content we may obtain through the Discord API, you may refer to the Discord privacy policies and terms of service to know how to opt-out of providing such data.
 
 In all cases where self opt-out is not an option, you may email us at privacy@discomm.cc detailing your inquiry. We will consider and act upon any request in accordance with applicable data protection laws.
