@@ -236,3 +236,5 @@ def setup(app):
 #         'enable_inline_math': True,
 #         'enable_math': True,
 #     }, True)
+
+html_favicon = 'favicon.ico'
