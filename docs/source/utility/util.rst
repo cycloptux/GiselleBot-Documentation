@@ -921,6 +921,28 @@ Examples
 
 ....
 
+|bot_prefix|\ checkphishing
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ checkphishing (URL)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Checks whether an URL is included in the phishing domains list.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ checkphishing https://discordc.gift/
+
+....
+
 |bot_prefix|\ unitconverter
 ---------------------------
 
