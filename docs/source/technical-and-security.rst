@@ -9,7 +9,7 @@ Core Engine
 
 The bot is written in Node.js, and uses `Discord.js v13 <https://discord.js.org/>`_ as core Discord library.
 
-Here are some info and numbers about the |bot_name|\ :
+Here are some info and numbers about |bot_name|\ :
 
 * 99.85% uptime.
 * 28 self-developed RESTful microservices, supporting the bot in its operations.
