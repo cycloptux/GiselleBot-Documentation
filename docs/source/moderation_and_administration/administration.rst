@@ -324,7 +324,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** greet messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **in-server** greet messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -356,7 +356,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** greet messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **Direct Message** greet messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -490,7 +490,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** goodbye messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **in-server** goodbye messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is not a member of the server when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -716,7 +716,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** role greet messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **in-server** role greet messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server, and has the role, when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -748,7 +748,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** role greet messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **Direct Message** role greet messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server, and has the role, when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -977,7 +977,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **in-server** role goodbye messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **in-server** role goodbye messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server, and doesn't have the role, when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
@@ -1009,7 +1009,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Sets the time (delay) it takes (in seconds) for **Direct Message** role goodbye messages to be sent. Set it to 0 to disable send delay.
+Sets the time (delay) it takes (in seconds) for **Direct Message** role goodbye messages to be sent. Set it to 0 to disable send delay. The message will only be sent if the user is still a member of the server, and doesn't have the role, when the time is up.
 
 The maximum time you can set is 300 (5 minutes).
 
