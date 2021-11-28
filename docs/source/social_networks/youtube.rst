@@ -125,7 +125,7 @@ Starts a notification service for the selected YouTube channel. If a new video i
     In order to protect yourself from this (rare) occasion, make sure you run this command in non-public channels.
     
 .. note::
-    Alternatively, you can replace the webhook URL with the ``--channel (channel id/mention/q_name)`` parameter: a new (unique) webhook will be created and the URL from the new webhook will be automatically used for this feed.
+    Alternatively, you can replace the webhook URL with the ``--channel (channel id/mention/q_name)`` parameter: a new dedicated webhook will be created and the URL from the new webhook will be automatically used for this feed.
     
     This alternative option requires |bot_name| to have "Manage Webhooks" permissions.
 
