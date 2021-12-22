@@ -20,9 +20,33 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-
 markdown_extensions:
   - tables
   - admonition
+  - md_in_html
+  - attr_list
+extra:
+  project: GiselleBot
+  copyright: 2021, cycloptux
+  author: cycloptux
+  version: 4.0
+  release: 4.0.0
+  bot:
+    name: GiselleBot
+    email: gisellebot@cycloptux.com
+    invite: https://gisl.eu/invite
+    prefix: !
+    prefix_name: an exclamation point
+    server: https://discord.gg/vY5zdmzukb
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/vY5zdmzukb
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/cycloptux
+plugins:
+    - macros
+
+
+
 
 

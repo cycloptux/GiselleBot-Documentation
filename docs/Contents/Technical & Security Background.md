@@ -13,31 +13,25 @@ Core Engine
 -----------
 
 The bot is written in Node.js, and uses [Discord.js
-v12](https://discord.js.org/) as core Discord library.
+v13](https://discord.js.org/) as core Discord library.
 
 Here are some info and numbers about the bot (as of July 16th, 2020):
 
--   99.9% uptime.
--   26 self-developed RESTful microservices, supporting the bot in its
-    operations.
--   \~34,000 lines of code for the main process, and \~10,000 extra
-    lines of code for the custom microservices, excluding JSON/data
-    files.
--   Present in \~1500 Discord servers.
--   Development started in September, 2017, making GiselleBot 3 years
-    old.
--   GiselleBot turned from being a private bot into a public bot in
-    March, 2018.
--   Since its launch, GiselleBot has handled over 178,000 successful
-    commands, with an average of 205 successful commands per day.
-
+- 99.85% uptime.
+- 28 self-developed RESTful microservices, supporting the bot in its operations.
+- ~90,000 lines of code.
+- Present in ~10,000 Discord servers, reaching ~7.8M users.
+- Development started in September, 2017.
+- GiselleBot turned from being a private bot into a public bot in March 2018.
+- Since December 2019, GiselleBot has handled over 870,000 successful commands, with an average of ~1,200 commands per day.
 ------------------------------------------------------------------------
 
 Infrastructure
 --------------
 
-![GiselleBot High-Level Architecture](../assets/images/GiselleBot_Architecture.png){.align-center
-width="600px"}
+<figure markdown>
+  ![GiselleBot High-Level Architecture](../assets/images/GiselleBot_Architecture.png)
+</figure>
 
 The bot is hosted in a public cloud infrastructure (specifically, Amazon
 Web Services). The infrastructure is currently composed of 5 main
@@ -77,8 +71,7 @@ few other managed services used by the bot:
     itself.
 -   An automatic build & deployment pipeline service, updating the
     documentation website as soon as a change is pushed to the [GitHub
-    documentation
-    repository](https://github.com/cycloptux/GiselleBot-Documentation).
+    documentation repository](https://github.com/cycloptux/GiselleBot-Documentation).
     The same pipeline service is used to build the Docker images for the
     RESTful microservices used on the Container Platform.
 
@@ -143,7 +136,7 @@ that have been implemented:
     internal network. The internal network can be accessed through a
     hardened VPN endpoint.
 -   SSH access to the virtual servers is protected via private keys and,
-    in some cases, multi-factor authentication.
+    in some cases, multifactor authentication.
 -   Authorization between the virtual servers and the external cloud
     services is managed by IAM roles on the infrastructure-level so that
     credentials don\'t need to be stored on the servers.
@@ -157,7 +150,7 @@ that have been implemented:
     fledged authentication and authorization workflow used to create and
     distribute temporary tokens to the end users. Further authorization
     checks are applied on the specific API calls to restrict
-    \"authorized\" users from requesting data that doesn\'t belong to
+    "authorized" users from requesting data that doesn't belong to
     them.
 
 ### Infrastructure Security
@@ -166,7 +159,7 @@ that have been implemented:
     firewall, making sure that only the required ports are open.
 -   The SSH service is not exposed to the internet.
 -   Cloud infrastructure management portals are protected by strong
-    passwords and multi-factor authentication.
+    passwords and multifactor authentication.
 -   Encryption keys, secret access keys, secret tokens, credentials,
     etc. are **never** stored into local drives. An external Key
     Management System (KMS) is used to fetch secret keys at runtime.

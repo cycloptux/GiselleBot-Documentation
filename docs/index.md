@@ -1,14 +1,15 @@
-Welcome to \'s documentation!
+Welcome to {{bot.name}}'s documentation!
 =============================
 
-is a Discord bot, developed by Cyc (cycloptux\#1543 on Discord).
+{{bot.name}} is a Discord bot, developed by Cyc (cycloptux\#1543 on Discord).
 
-::: {.seealso}
-Need more help or stuck with something? Join our official Support Server
-on Discord!
-:::
+!!!question "See also"
 
-was born as a \"small\" project to help the Brave Frontier-based
+    Need more help or stuck with something? Join our official Support Server
+    on Discord! [{{bot.server}}]({{bot.server}})
+
+
+{{bot.name}} was born as a "small" project to help the Brave Frontier-based
 Coalition (a group of people that played the same mobile game, Brave
 Frontier, from gumi Inc.) handle the kind-of-complicated (and fully
 documented, thanks to my friend and business partner NaviKing) members
@@ -51,26 +52,28 @@ include:
 -   Music: listen to music in your voice channels
 -   Much much more!
 
-::: {.seealso}
-is also listed on **Top.gg** and **Bots on Discord**. If you like the
-bot and want to support its growth, be sure to vote for it on those
-websites!
+!!!info "Note"
+        
+        {{bot.name}} is also listed on **Top.gg** and **Bots on Discord**. If you like the
+        bot and want to support its growth, be sure to vote for it on those
+        websites!
 
--   **Top.gg**: <https://top.gg/bot/356831787445387285> (rewards
-    included! Refer to `topggnotify`{.interpreted-text role="ref"})
--   **Bots on Discord**:
-    <https://bots.ondiscord.xyz/bots/356831787445387285> (rewards
-    included! Refer to `bodvalidate`{.interpreted-text role="ref"})
--   **Discord Bots**: <https://discord.bots.gg/bots/356831787445387285>
-:::
+        <figure markdown> 
+            ![TopGG](https://top.gg/api/widget/356831787445387285.svg){ align=left }
+            <figcaption>
+                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to `topggnotify`
+            </figcaption>
+        </figure>
 
-```{=html}
-<center><a href="https://top.gg/bot/356831787445387285" >
-<img src="https://top.gg/api/widget/356831787445387285.svg" alt="GiselleBot" /></a>
-&emsp;
-<a href="https://bots.ondiscord.xyz/bots/356831787445387285" >
-<img src="https://bots.ondiscord.xyz/bots/356831787445387285/embed" alt="GiselleBot" /></a></center> 
-```
+        <figure markdown> 
+            ![BOD](https://bots.ondiscord.xyz/bots/356831787445387285/embed){ align=right }
+            <figcaption>
+                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to `bodvalidate` 
+            </figcaption>
+        </figure>
+
+        **Discord Bots**: <https://discord.bots.gg/bots/356831787445387285>
+
 
 ------------------------------------------------------------------------
 
