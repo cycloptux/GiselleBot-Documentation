@@ -115,7 +115,7 @@ Note
 :::
 
 Alternatively, you can replace the webhook URL with the
-`--channel (channel id/mention/q_name)` parameter: a new (unique)
+`--channel (channel id/mention/q_name)` parameter: a new dedicated
 webhook will be created and the URL from the new webhook will be
 automatically used for this feed.
 

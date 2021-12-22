@@ -253,6 +253,35 @@ values:
 
 ------------------------------------------------------------------------
 
+|bot_prefix|\ pruneinvites
+--------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ pruneinvites [--channel {channel id/mention}] [--inviter {user id/mention}] [--uses {# of uses (inclusive) to consider invites "unused"}]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+Deletes unused invites (invites with 0 uses), or invites under a certain number of uses (inclusive). You can specify the number of uses to consider an invite as "unused" with ``--uses``.
+
+You can filter by invite target channel through the ``--channel`` parameter, or by inviter through the ``--inviter`` parameter.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+| **User**: Manage Server
+| **Bot**: Manage Server
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ pruneinvites --inviter 123456789098765432
+    |bot_prefix|\ pruneinvites --channel #greeter --uses 5
+
+....
+
 invitesusage
 ------------
 
@@ -272,8 +301,8 @@ parameter, or by inviter through the `--inviter` parameter.
 
 ### Permissions Needed
 
-| **User**: Manage Server, Create Instant Invite
-| **Bot**: Create Instant Invite
+| **User**: Manage Server
+| **Bot**: Manage Server
 
 ------------------------------------------------------------------------
 
@@ -1137,6 +1166,28 @@ snowflaketime 123456789098765432
 :::
 
 ------------------------------------------------------------------------
+
+{{bot.prefix}} checkphishing
+---------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ checkphishing (URL)
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+Checks whether an URL is included in the phishing domains list.
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ checkphishing https://discordc.gift/
+
+....
 
 unitconverter
 -------------

@@ -1,50 +1,8 @@
-Mahjong Soul Integration
-========================
+Revived Witch Connector
+=======================
 
-This module contains a few commands used to get information about
-**Mahjong Soul**, a Japanese mahjong game platform developed by Cat Food
-Studio and distributed, in its English and Japanese version, by Yostar.
-The game is available as a browser game, with Android and iOS mobile
-apps to be released in the future.
-
-The game was released in 3 regions/versions:
-
--   **CN** (Chinese)
--   **JP** (Japanese)
--   **EN** (English/Global)
-
-Commands
---------
-
-### mjsstatus
-
-#### Command Syntax
-
-::: {.parsed-literal}
-mjsstatus \[\--region {region code}\]
-:::
-
-#### Command Description
-
-Checks the status of Mahjong Soul\'s game servers. Omitting the region
-code will assume `--region en` and show the status of the (4, at the
-time of writing this page) English servers.
-
-#### Examples
-
-::: {.parsed-literal}
-mjsstatus mjsstatus \--region cn
-:::
-
-------------------------------------------------------------------------
-
-Server Status Live Feed
------------------------
-
-The Mahjong Soul Server Status Feed offers an easy way to monitor
-Mahjong Soul servers availability for **any region**, and be notified
-when something changes on one (or more) of the webhooks configured in
-your Discord server.
+This module sends news from **Revived Witch**, a pixel-art RPG mobile
+game distributed by Yostar, to the specified webhook or channel.
 
 ::: {.seealso}
 In order to better understand this module, it\'s very important that you
@@ -53,55 +11,20 @@ feature, please take a look at [this official
 guide](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 :::
 
-By default, the status feed mascot will be the Mahjong Soul character
-**Ichihime**, and all of the feed messages will be Mahjong Soul-themed.
+rwhook
+------
 
-The full list of feed messages and monitored transitions can be found
-[in this Google
-Spreadsheet](https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing).
-
-::: {.note}
-::: {.title}
-Note
-:::
-
-The spreadsheet contains a few yellow lines that are currently not used
-for technical reasons. These will be populated if/when they\'ll be
-applicable.
-:::
-
-Each message will be followed by a list of hashtags, that users may use
-to filter the specific messages they are interested into, indicating:
-
--   The region code whom the message refers to: `#cn` `#en` `#jp`
--   The current status of the region, using a technical status tag:
-    `#gateway_error` `#maintenance` `#partial_maintenance`
-    `#server_outage` `#operational`
--   If maintenance notes are found, the message will print the
-    maintenance notes (and track their changes throughout a
-    maintenance).
--   The quote ID (refer to the [Mahjong Soul Server Status Feed
-    Sentences Google
-    Spreadsheet](https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing))
-    for the region status transition and/or server status transition:
-    e.g. `#r_01` `#r_02` `s_02` \...
-
-![Mahjong Soul Status Feed Example](../assets/images/mahjongsoul_image_00.png){.align-center
-width="600px"}
-
-### mjshook
-
-#### Command Syntax
+### Command Syntax
 
 ::: {.parsed-literal}
-mjshook (webhook URL or \--channel (channel id/mention/q\_name))
+rwhook (webhook URL or \--channel (channel id/mention/q\_name))
 \[customization params\]
 :::
 
-#### Command Description
+### Command Description
 
-Starts a live feed on the specified webhook. When a new transition is
-found, its notification will be sent to the specified webhook service.
+Starts a live feed on the specified webhook. When some news is found,
+they will be sent to the specified webhook service.
 
 ::: {.warning}
 ::: {.title}
@@ -122,7 +45,7 @@ Note
 :::
 
 Alternatively, you can replace the webhook URL with the
-`--channel (channel id/mention/q_name)` parameter: a new dedicated 
+`--channel (channel id/mention/q_name)` parameter: a new dedicated
 webhook will be created and the URL from the new webhook will be
 automatically used for this feed.
 
@@ -132,27 +55,23 @@ permissions.
 
 **Customization Params**
 
-##### `--region (first region code) [second region code] [...]`
+#### `--event (first event) [second event] [...]`
 
-Adds a **whitelist**, **inclusive** filter for Mahjong Soul server
-regions to the stream. Transitions that are referring to (one of) the
-selected region(s) will be sent to the webhook, while the rest will be
-skipped.
+Adds a **whitelist**, **inclusive** filter for specific news events to
+the service. News will only be sent if the actual news type is equal to
+one of the filtered events.
 
-This parameter only supports these region codes: `cn` `en` `jp`
+The **only** supported events for this feed are: `Updates`, `Event`,
+`Notice`
 
-Region codes are case-insensitive.
+**Default**: No filter
 
-**Default**: No filter (all regions)
+#### `--filter (first word) [second word] [...]`
 
-##### `--filter (first word) [second word] [...]`
-
-Adds a **whitelist** filter to the feed. In this example, if the status
-quote contains `first word` and/or (see below) `second word`, the
-submission will be sent to the webhook, otherwise it will ignored. You
-can set one or more words, case-insensitive. This is especially
-effective if you are using the provided hashtags to filter specific
-events of interest.
+Adds a **whitelist** filter to the feed. In this example, if the news
+title contains `first word` and/or (see below) `second word`, the event
+will be sent to the webhook, otherwise it will ignored. You can set one
+or more words, case-insensitive.
 
 You can also set \"composite words\" (two or more words as a single
 filter) by quoting them: `"foo bar" test` will count as 2 filter
@@ -161,15 +80,9 @@ elements: `foo bar` and `test`.
 The filter works on partial words (e.g. \"announce\" will work on both
 \"announcement\" and \"announced\").
 
-The filter only checks the \"quote text\", column **G** of the [Mahjong
-Soul Server Status Feed Sentences Google
-Spreadsheet](https://docs.google.com/spreadsheets/d/1Pp-jVN2KOlx0e0sg0lUldqfNBqtKXs1cUGXdhHHjpLQ/edit?usp=sharing),
-and the additional message hashtags (if you filter by hashtag, you must
-include the \"\#\").
-
 **Default**: No filter
 
-##### `--mode (AND/OR)`
+#### `--mode (AND/OR)`
 
 Sets the filter behavior when more than 1 word is added to the whitelist
 filter.
@@ -181,7 +94,7 @@ filter.
 
 **Default**: `OR`
 
-##### `--include` or `--exclude`
+#### `--include` or `--exclude`
 
 Sets the filter behavior one or more words are added to the whitelist
 filter.
@@ -209,7 +122,7 @@ Using both parameters in the same command will give `--include` the
 strict priority and ignore `--exclude`.
 :::
 
-##### `--header (message)`
+#### `--header (message)`
 
 Adds a custom header message when status transition notifications are
 posted. Custom headers can have a maximum of **1024** characters.
@@ -226,10 +139,13 @@ generator](https://leovoel.github.io/embed-visualizer/) (click on the
 Custom headers support a few dynamic tags that are replaced with their
 respective \"real\" value during run-time. These are:
 
--   **%region%**: This will be replaced with the region name,
-    capitalized (e.g. `Chinese`, `English`, \...)
--   **%region\_code%**: This will be replaced with the region code,
-    uppercase (e.g. `CN`, `EN`, \...)
+-   **%title%**: This will be replaced with the news title.
+-   **%content%**: This will be replaced with the news content
+    (truncated at 1024 characters).
+-   **%short\_content%**: This will be replaced with a shorter version
+    of the news content (truncated at 256 characters).
+-   **%banner%**: This will be replaced with the news banner URL, if
+    present.
 -   **%timestamp% or %timestamp\_utc%**: This will be replaced with the
     status transition UTC time, with format `YYYY-MM-DD HH:mm:ss (UTC)`.
 -   **%timestamp\_iso%**: This will be replaced with the status
@@ -258,25 +174,24 @@ part with either:
 All headers will be followed by the actual quote text, including the
 additional hashtags.
 
-**Default**:
-`Jyanashi Sama, Ichihime here with an important message for you from the %region% region!`
+**Default**: `Dear Master, some news was just published!`
 
-##### `--webhook-name (custom name)`
+#### `--webhook-name (custom name)`
 
 Adds a custom username to the webhook when status transition
 notifications are posted. Custom usernames can have a maximum of 32
 characters.
 
-**Default**: \"MahjongSoul雀魂 Status Feed :: Offered by \"
+**Default**: \"Revived Witch News Feed :: Offered by \"
 
-##### `--no-username-overwrite`
+#### `--no-username-overwrite`
 
 Removes any custom name from the webhook. The real webhook name (the one
 that you assigned when creating the webhook in Discord) will be used.
 
 **Default**: `false` (Custom or default names will be applied)
 
-##### `--no-avatar-overwrite`
+#### `--no-avatar-overwrite`
 
 Removes any custom avatar from the webhook. The real webhook avatar (the
 one that you assigned when creating the webhook in Discord) will be
@@ -284,36 +199,37 @@ used.
 
 **Default**: `false` (Automated avatars will be applied)
 
-#### Permissions Needed
+### Permissions Needed
 
 | **User**: Manage Webhooks
 
-#### Examples
+### Examples
 
 ::: {.parsed-literal}
-mjshook
+rwhook
 <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
-mjshook
+rwhook
 <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
-\--region en \--header %region\_code% server status changed at
+\--event Updates \--header An update notification was just published at
 %timestamp%
 :::
 
 ------------------------------------------------------------------------
 
-### mjsehook
+rwehook
+-------
 
-#### Command Syntax
+### Command Syntax
 
 ::: {.parsed-literal}
-mjsehook (feed index) \[new customization params\]
+rwehook (feed index) \[new customization params\]
 :::
 
-#### Command Description
+### Command Description
 
 **Replaces** all previously set customization params for the selected
 feed with a new set of customization params. The feed index is the
-number shown with mjslhook.
+number shown with rwlhook.
 
 ::: {.warning}
 ::: {.title}
@@ -325,40 +241,42 @@ completely replace them. Take note of the existing params first, and use
 them in the command!
 :::
 
-#### Permissions Needed
+### Permissions Needed
 
 | **User**: Manage Webhooks
 
 ------------------------------------------------------------------------
 
-### mjsrhook
+rwrhook
+-------
 
-#### Command Syntax
+### Command Syntax
 
 ::: {.parsed-literal}
-mjsrhook (feed index)
+rwrhook (feed index)
 :::
 
-#### Command Description
+### Command Description
 
 Stops a previously set feed and removes its link to the server webhook.
-The stream index is the number shown with mjslhook.
+The stream index is the number shown with rwlhook.
 
-#### Permissions Needed
+### Permissions Needed
 
 | **User**: Manage Webhooks
 
-#### Examples
+### Examples
 
 ::: {.parsed-literal}
-mjsrhook 1
+rwrhook 1
 :::
 
 ------------------------------------------------------------------------
 
-### mjslhook
+rwlhook
+-------
 
-#### Command Description
+### Command Description
 
 Prints a list of all feeds that are linked to webhooks in the current
 server.
