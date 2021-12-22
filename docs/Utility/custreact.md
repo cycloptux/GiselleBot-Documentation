@@ -1,0 +1,279 @@
+Custom Reactions {#custreact}
+================
+
+The Custom Reactions module enables users to set up custom bot reactions
+and build pseudo-commands in a server.
+
+togglecustreact
+---------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+tcr
+:::
+
+### Command Description
+
+Toggles the custom reactions module on the whole Discord server.
+
+------------------------------------------------------------------------
+
+verbosecustreact
+----------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+vcr
+:::
+
+### Command Description
+
+Toggles verbose mode for custom reactions on the whole Discord server.
+When verbose mode is enabled, each custom reaction will be prepended
+with the ID of the reaction being printed.
+
+------------------------------------------------------------------------
+
+addcustreact
+------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+acr (\--in {trigger text}) (\--out {response text}) \[\--anywhere\]
+\[\--dm\] \[\--delete\] \[\--global\]
+:::
+
+### Command Description
+
+Adds a new custom reaction for the current server.
+
+Optional Parameters:
+
+-   `anywhere`: Triggers the reaction based on a text that appears
+    anywhere in a message, instead of starting with the trigger text.
+    Default: off.
+-   `dm`: Sends the response text via DM instead of using the current
+    channel. Default: off.
+-   `delete`: Deletes the original message after a reaction is
+    triggered. Default: off.
+-   `global`: **Bot Owner**. Makes the custom reaction global, hence
+    triggering in any server the bot is. Default: off.
+
+You can use one (or more) of these placeholders in your response
+message:
+
+-   **%user%**: This will be replaced with a mention of the user.
+-   **%username%**: This will be replaced with the username of the user,
+    without the discriminator (e.g. cycloptux).
+-   **%discriminator%**: This will be replaced with the discriminator of
+    the user, without the `#` character (e.g. 1543).
+-   **%fullusername%**: This will be replaced with the username of the
+    user, including the discriminator (e.g. cycloptux\#1543).
+-   **%user\_avatar\_url%**: This will be replaced with the current user
+    global avatar URL (in WebP or GIF format).
+-   **%user\_server\_avatar\_url%**: This will be replaced with the
+    current user server avatar URL, if set, or the global avatar URL (in
+    WebP or GIF format).
+-   **%bot%**: This will be replaced with a mention of the bot.
+-   **%botname%**: This will be replaced with the username of the bot,
+    without the discriminator.
+-   **%botdiscriminator%**: This will be replaced with the discriminator
+    of the bot, without the `#` character.
+-   **%fullbotname%**: This will be replaced with the username of the
+    bot, including the discriminator.
+-   **%bot\_avatar\_url%**: This will be replaced with the current bot
+    avatar URL (in WebP or GIF format).
+-   **%server%**: This will be replaced with the server name.
+-   **%channel%**: This will be replaced with the channel name.
+-   **%now%**: This will be replaced with the current time, with format
+    `YYYY-MM-DD HH:mm:ss (UTC)`.
+-   **%now\_iso%**: This will be replaced with the current time, as
+    ISO8601 string.
+-   **%server\_time%**: This will be replaced with the current time,
+    with format `HH:mm UTC`.
+-   **%server\_icon\_url%**: This will be replaced with the current
+    server icon URL (in WebP or GIF format).
+-   **%server\_banner\_url%**: This will be replaced with the current
+    server icon URL (in WebP format).
+-   **%server\_splash\_url%**: This will be replaced with the current
+    server icon URL (in WebP format).
+-   **%server\_member\_count%**: This will be replaced with the current
+    amount of members in the server.
+-   **%prefix%**: This will be replaced with the current prefix for the
+    server.
+-   **%globalprefix%**: This will be replaced with the default, global
+    prefix.
+-   **%boost\_level%**: This will be replaced with the current Nitro
+    Server Boost level for the server.
+-   **%boost\_number%**: This will be replaced with the current number
+    of Nitro Server Boosts that the server received.
+-   **%target%**: This will be replaced with anything the user wrote
+    after the trigger.
+
+You can use embed json from <https://eb.nadeko.bot/> instead of a
+regular text in the response parameter, if you want the message to be
+embedded.
+
+### Examples
+
+::: {.parsed-literal}
+acr \--in what time is it \--out Hello %user%! The current time is
+%now%. \--anywhere
+:::
+
+------------------------------------------------------------------------
+
+editcustreact
+-------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+ecr (reaction id) \[\--in {trigger text}\] \[\--out {response text}\]
+\[\--anywhere\] \[\--dm\] \[\--delete\] \[\--global\]
+:::
+
+### Command Description
+
+Edits an existing custom reaction for the current server. Global custom
+reactions can only be edited by the bot owner.
+
+The presence of an optional parameter will **toggle** the option to the
+opposite of what it was before the edit. `--global`, on the other hand,
+will need to be added or removed accordingly, depending on the scope of
+the reaction.
+
+### Examples
+
+::: {.parsed-literal}
+ecr 1 \--out Hello %user%! The current time is %server\_time%. \--delete
+:::
+
+------------------------------------------------------------------------
+
+showcustreact
+-------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+scr (reaction id)
+:::
+
+### Command Description
+
+Prints the current configuration for a specific custom reaction. It will
+also preview how the reaction is printed when triggered in a server
+(placeholders will **not** be replaced in this preview).
+
+### Examples
+
+::: {.parsed-literal}
+scr 3
+:::
+
+------------------------------------------------------------------------
+
+listcustreact
+-------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+lcr \[\--global\] \[\--alphabetical\] \[\--in {text}\]
+:::
+
+### Command Description
+
+Lists all available custom reactions in the current server. Using the
+`--global` argument will show the list of global reactions. Using the
+`--alphabetical` argument will show the list of reactions in
+alphabetical order (by input parameter).
+
+Using the `--in` parameter will filter on reactions that are triggered
+by the text used within that argument.
+
+------------------------------------------------------------------------
+
+delcustreact
+------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+dcr (reaction id(s))
+:::
+
+### Command Description
+
+Deletes one or more specific custom reaction(s). Global custom reactions
+can only be deleted by the bot owner.
+
+### Examples
+
+::: {.parsed-literal}
+dcr 3 dcr 11 25 67
+:::
+
+------------------------------------------------------------------------
+
+restcustreact
+-------------
+
+### Command Syntax
+
+::: {.parsed-literal}
+rcr (reaction id) \[role id(s)/mention(s)/q\_name(s)\] \[\--exclude\]
+\[\--and\]
+:::
+
+### Command Description
+
+Restricts an existing custom reaction to a specified set of roles, or
+exludes a set of roles from using a reaction.
+
+If used without any argument, the command will apply the default
+setting: **allowing** all users in a server.
+
+By using the command with one or more role identifiers, the command will
+restrict the custom reaction to all users that have at least one of
+those roles.
+
+By adding the `--exclude` parameter to the command, the logic will
+switch from whitelisting the specified roles to **blacklisting** them:
+users with at least one the specified roles will **not** be able to use
+the custom reaction.
+
+By adding the `--and` parameter to the command, the logic will switch
+from an **OR** logic to and **AND** logic, allowing or restricting a
+custom reaction to users that have (or lack) all of the configured
+roles.
+
+Use the above parameters to configure each custom reaction with the
+desided configuration. Each usage of this command will overwrite the
+previously set logic.
+
+### Examples
+
+::: {.parsed-literal}
+rcr 4 Moderators \"Authorized People\" rcr 3 \"Authorized People\"
+\"Sensitive Data\" \--and rcr 12 \@Restricted \--exclude rcr 27
+\"Unauthorized A\" \"Unauthorized B\" \--and \--exclude
+:::
+
+------------------------------------------------------------------------
+
+crclear
+-------
+
+### Command Description
+
+Deletes all server specific custom reactions. Global custom reactions
+can only be deleted by the bot owner.
+
+### Permissions Needed
+
+| **User**: Manage Server
