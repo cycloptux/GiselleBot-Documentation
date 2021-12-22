@@ -86,7 +86,7 @@ to filter the specific messages they are interested into, indicating:
     for the region status transition and/or server status transition:
     e.g. `#r_01` `#r_02` `s_02` \...
 
-![Mahjong Soul Status Feed Example](../images/mahjongsoul_image_00.png){.align-center
+![Mahjong Soul Status Feed Example](../assets/images/mahjongsoul_image_00.png){.align-center
 width="600px"}
 
 ### mjshook

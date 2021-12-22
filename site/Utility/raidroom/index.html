@@ -1,0 +1,3647 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Raidroom - GiselleBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raid-rooms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GiselleBot Documentation" class="md-header__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GiselleBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Raidroom
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Contents/Credits/" class="md-tabs__link">
+        Contents
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-tabs__link">
+        Fun And Games
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-tabs__link">
+        Game Integrations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-tabs__link">
+        Moderation & Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
+        Soical Networks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../alarm/" class="md-tabs__link md-tabs__link--active">
+        Utility
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GiselleBot Documentation" class="md-nav__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    GiselleBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Invite%20GiselleBot%20to%20your%20Discord%20Server/" class="md-nav__link">
+        Invite GiselleBot to your Discord Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Modules%20Documentation%20101/" class="md-nav__link">
+        Modules Documentation 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Premium%20Perks/" class="md-nav__link">
+        Premium Perks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Privacy%20Policy%20for%20GiselleBot/" class="md-nav__link">
+        Privacy Policy for GiselleBot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Technical%20%26%20Security%20Background/" class="md-nav__link">
+        Technical & Security Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/User-Generated%20Content%20Disclaimer/" class="md-nav__link">
+        User Generated Content Disclaimer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Fun And Games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fun And Games" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fun And Games
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-nav__link">
+        Auction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/currency/" class="md-nav__link">
+        Currency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/digimon/" class="md-nav__link">
+        Digimon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/games/" class="md-nav__link">
+        Games
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/giveaway/" class="md-nav__link">
+        Giveaway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/radio/" class="md-nav__link">
+        Radio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/social/" class="md-nav__link">
+        Social
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/trivia/" class="md-nav__link">
+        Trivia
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Game Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Game Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-nav__link">
+        Azurlane
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/bravefrontier/" class="md-nav__link">
+        Bravefrontier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/mahjongsoul/" class="md-nav__link">
+        Mahjongsoul
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Moderation & Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Moderation & Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Moderation & Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-nav__link">
+        Administration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/automoderator/" class="md-nav__link">
+        Automoderator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/moderation/" class="md-nav__link">
+        Moderation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/verification/" class="md-nav__link">
+        Verification
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Soical Networks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Soical Networks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+        Instagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+        Reddit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+        Rss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+        Twitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+        Youtube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Utility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utility" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alarm/" class="md-nav__link">
+        Alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custreact/" class="md-nav__link">
+        Custreact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Raidroom
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Raidroom
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-setup" class="md-nav__link">
+    First Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-commands" class="md-nav__link">
+    Public Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrcreate" class="md-nav__link">
+    rrcreate
+  </a>
+  
+    <nav class="md-nav" aria-label="rrcreate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrjoin" class="md-nav__link">
+    rrjoin
+  </a>
+  
+    <nav class="md-nav" aria-label="rrjoin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrleave" class="md-nav__link">
+    rrleave
+  </a>
+  
+    <nav class="md-nav" aria-label="rrleave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrstatus" class="md-nav__link">
+    rrstatus
+  </a>
+  
+    <nav class="md-nav" aria-label="rrstatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#room-master-commands" class="md-nav__link">
+    Room Master Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Room Master Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrinvite" class="md-nav__link">
+    rrinvite
+  </a>
+  
+    <nav class="md-nav" aria-label="rrinvite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrclose" class="md-nav__link">
+    rrclose
+  </a>
+  
+    <nav class="md-nav" aria-label="rrclose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrnewpw" class="md-nav__link">
+    rrnewpw
+  </a>
+  
+    <nav class="md-nav" aria-label="rrnewpw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_6" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrkick" class="md-nav__link">
+    rrkick
+  </a>
+  
+    <nav class="md-nav" aria-label="rrkick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_7" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrban" class="md-nav__link">
+    rrban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_8" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrunban" class="md-nav__link">
+    rrunban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_9" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrextend" class="md-nav__link">
+    rrextend
+  </a>
+  
+    <nav class="md-nav" aria-label="rrextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_10" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor-commands" class="md-nav__link">
+    Supervisor Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Supervisor Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrsls" class="md-nav__link">
+    rrsls
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_11" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrskick" class="md-nav__link">
+    rrskick
+  </a>
+  
+    <nav class="md-nav" aria-label="rrskick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_12" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsban" class="md-nav__link">
+    rrsban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_13" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsunban" class="md-nav__link">
+    rrsunban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_14" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsbreak" class="md-nav__link">
+    rrsbreak
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsbreak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_15" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsforbid" class="md-nav__link">
+    rrsforbid
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsforbid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_16" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_15" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsallow" class="md-nav__link">
+    rrsallow
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsallow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_17" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_16" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrslsforbid" class="md-nav__link">
+    rrslsforbid
+  </a>
+  
+    <nav class="md-nav" aria-label="rrslsforbid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_18" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_18" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_18" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administrator-commands" class="md-nav__link">
+    Administrator Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Administrator Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrasetsvrole" class="md-nav__link">
+    rrasetsvrole
+  </a>
+  
+    <nav class="md-nav" aria-label="rrasetsvrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_19" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_19" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_19" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_17" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rradefaults" class="md-nav__link">
+    rradefaults
+  </a>
+  
+    <nav class="md-nav" aria-label="rradefaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_20" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_20" class="md-nav__link">
+    Command Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-type" class="md-nav__link">
+    --type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-members" class="md-nav__link">
+    --members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-max-members" class="md-nav__link">
+    --max-members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-duration" class="md-nav__link">
+    --duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-max-duration" class="md-nav__link">
+    --max-duration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_20" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_18" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rraextend" class="md-nav__link">
+    rraextend
+  </a>
+  
+    <nav class="md-nav" aria-label="rraextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_21" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_21" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_21" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reactions/" class="md-nav__link">
+        Reactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../send/" class="md-nav__link">
+        Send
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/" class="md-nav__link">
+        Util
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-setup" class="md-nav__link">
+    First Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-commands" class="md-nav__link">
+    Public Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrcreate" class="md-nav__link">
+    rrcreate
+  </a>
+  
+    <nav class="md-nav" aria-label="rrcreate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrjoin" class="md-nav__link">
+    rrjoin
+  </a>
+  
+    <nav class="md-nav" aria-label="rrjoin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrleave" class="md-nav__link">
+    rrleave
+  </a>
+  
+    <nav class="md-nav" aria-label="rrleave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrstatus" class="md-nav__link">
+    rrstatus
+  </a>
+  
+    <nav class="md-nav" aria-label="rrstatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#room-master-commands" class="md-nav__link">
+    Room Master Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Room Master Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrinvite" class="md-nav__link">
+    rrinvite
+  </a>
+  
+    <nav class="md-nav" aria-label="rrinvite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrclose" class="md-nav__link">
+    rrclose
+  </a>
+  
+    <nav class="md-nav" aria-label="rrclose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrnewpw" class="md-nav__link">
+    rrnewpw
+  </a>
+  
+    <nav class="md-nav" aria-label="rrnewpw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_6" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrkick" class="md-nav__link">
+    rrkick
+  </a>
+  
+    <nav class="md-nav" aria-label="rrkick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_7" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrban" class="md-nav__link">
+    rrban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_8" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrunban" class="md-nav__link">
+    rrunban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_9" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrextend" class="md-nav__link">
+    rrextend
+  </a>
+  
+    <nav class="md-nav" aria-label="rrextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_10" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor-commands" class="md-nav__link">
+    Supervisor Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Supervisor Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrsls" class="md-nav__link">
+    rrsls
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_11" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrskick" class="md-nav__link">
+    rrskick
+  </a>
+  
+    <nav class="md-nav" aria-label="rrskick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_12" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsban" class="md-nav__link">
+    rrsban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_13" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsunban" class="md-nav__link">
+    rrsunban
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_14" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsbreak" class="md-nav__link">
+    rrsbreak
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsbreak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_15" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsforbid" class="md-nav__link">
+    rrsforbid
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsforbid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_16" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_15" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrsallow" class="md-nav__link">
+    rrsallow
+  </a>
+  
+    <nav class="md-nav" aria-label="rrsallow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_17" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_16" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrslsforbid" class="md-nav__link">
+    rrslsforbid
+  </a>
+  
+    <nav class="md-nav" aria-label="rrslsforbid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_18" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_18" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_18" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administrator-commands" class="md-nav__link">
+    Administrator Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Administrator Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rrasetsvrole" class="md-nav__link">
+    rrasetsvrole
+  </a>
+  
+    <nav class="md-nav" aria-label="rrasetsvrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_19" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_19" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_19" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_17" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rradefaults" class="md-nav__link">
+    rradefaults
+  </a>
+  
+    <nav class="md-nav" aria-label="rradefaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_20" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_20" class="md-nav__link">
+    Command Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-type" class="md-nav__link">
+    --type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-members" class="md-nav__link">
+    --members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-max-members" class="md-nav__link">
+    --max-members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-duration" class="md-nav__link">
+    --duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-max-duration" class="md-nav__link">
+    --max-duration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_20" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_18" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rraextend" class="md-nav__link">
+    rraextend
+  </a>
+  
+    <nav class="md-nav" aria-label="rraextend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_21" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_21" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_21" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/cycloptux/GiselleBot-Documentation/edit/master/docs/Utility/raidroom.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="raid-rooms">Raid Rooms</h1>
+<p>This module allows users to create private, temporary text or voice
+channels for cooperation purposes, such as during cooperative play time
+on MOBA games, and then delete the voice channel/text channel after an
+allotted time.</p>
+<p>Its best use case is giving a place to small groups of people that need
+to talk to each other privately for a short amount of time, then disband
+the group to later re-form another one with different people.</p>
+<p>A similar situation can be achieved by setting up a private group DM,
+with the downsides of:</p>
+<ol>
+<li>Having to befriend all those that are involved in the group DM (this
+    is only true for the creator of the group DM).</li>
+<li>Not having access to bots.</li>
+<li>Not having any kind of moderation or 3rd party control over what
+    happens in the group DM.</li>
+</ol>
+<p>In order to preserve the privacy of the group, each raid room will be
+assigned with a PIN that will only be shared with the room master
+(whoever created the room). Other users will only be able to enter the
+room by knowing the PIN code, or being invited by the room master.</p>
+<p>Each user can create a maximum of <strong>2</strong> rooms at the same time on a
+server: <strong>1</strong> text and <strong>1</strong> voice rooms.</p>
+<p>Each raid room will expire after a set amount of time, as defined by the
+user (a soft cap can be set by the mods/admins). When that happens, the
+channel is automatically deleted. Warning messages will be sent to the
+room master before that happens.</p>
+<p>When a text raid room expires, a chat log is dumped and saved
+(encrypted). The chat log will be posted into the raid rooms logger
+channel (see <code>first-setup</code>{.interpreted-text role="ref"}).</p>
+<p>One or more roles can be set as \"supervisor\" roles. Supervisors will
+have moderation powers over raid rooms, similar to how moderators have
+powers over the rest of the server (see
+<code>supervisor-commands</code>{.interpreted-text role="ref"}).</p>
+<p>::: {.admonition}
+Premium</p>
+<p>Out of the box, each server is limited to having a total of <strong>5
+simultaneous Raid Rooms</strong>. If you want to remove this limitation, you
+can unlock the number of Raid Rooms as a <strong>Premium</strong> feature (see:
+<code>premium-perks</code>{.interpreted-text role="ref"}).
+:::</p>
+<hr />
+<h2 id="first-setup">First Setup</h2>
+<p>Upon first creation of a room, a \"Raid Rooms\" channel category will be
+created. This category will host all of the created raid rooms and the
+raid rooms logger channel.</p>
+<p>This category and the logging channel are hidden to the rest of the
+server by default. The corresponding permissions will be updated on each
+command run for the supervisor roles, and both the category and the
+logger channel will be recreated on the next command run if they are
+deleted.</p>
+<p>You can change the category and channel names, and move the logger
+channel to another category after it\'s created.</p>
+<hr />
+<h2 id="public-commands">Public Commands</h2>
+<h3 id="rrcreate">rrcreate</h3>
+<h4 id="command-syntax">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrcreate [text/voice] [--members/--m {room size, including the
+master (number)}] [--duration/--d {duration timecode}]
+[--pin/--password/--p {custom PIN}]
+:::</p>
+<h4 id="command-description">Command Description</h4>
+<p>Creates a new raid room. The PIN will be sent to the room master via DM.</p>
+<p>All parameters are optional. If omitted, each parameter will be set as
+the default for the server (see <code>rradefaults</code>{.interpreted-text
+role="ref"}). If no default values are assigned for the specific server,
+the overall default values are:</p>
+<ul>
+<li><strong>Room Type</strong>: text</li>
+<li><strong>Members</strong>: 4</li>
+<li><strong>Duration</strong>: 1 hour</li>
+</ul>
+<p>Both parameters have a soft cap that can be set for the server. If these
+soft cap values aren\'t assigned for the specific server, the overall
+default values are:</p>
+<ul>
+<li><strong>Members</strong>: 8</li>
+<li><strong>Duration</strong>: 1 day</li>
+</ul>
+<h4 id="permissions-needed">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples">Examples</h4>
+<p>::: {.parsed-literal}
+rrcreate rrcreate voice rrcreate --members 6
+:::</p>
+<hr />
+<h3 id="rrjoin">rrjoin</h3>
+<h4 id="command-syntax_1">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrjoin (room id) (room PIN)
+:::</p>
+<h4 id="command-description_1">Command Description</h4>
+<p>Join a room by knowing its ID and PIN.</p>
+<p>The request message will be automatically deleted on success, in order
+to preserve the secrecy of the PIN.</p>
+<h4 id="permissions-needed_1">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_1">Examples</h4>
+<p>::: {.parsed-literal}
+rrjoin abcdef 1234
+:::</p>
+<hr />
+<h3 id="rrleave">rrleave</h3>
+<h4 id="command-syntax_2">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrleave [room id]
+:::</p>
+<h4 id="command-description_2">Command Description</h4>
+<p>Leave a specific room.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_2">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_2">Examples</h4>
+<p>::: {.parsed-literal}
+rrleave abcdef
+:::</p>
+<hr />
+<h3 id="rrstatus">rrstatus</h3>
+<h4 id="command-syntax_3">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrstatus [room id]
+:::</p>
+<h4 id="command-description_3">Command Description</h4>
+<p>Obtain info about a room by knowing its room ID.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_3">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_3">Examples</h4>
+<p>::: {.parsed-literal}
+rrstatus abcdef
+:::</p>
+<hr />
+<h2 id="room-master-commands">Room Master Commands</h2>
+<p>After creating a room through <code>rrcreate</code>{.interpreted-text role="ref"},
+the user that opened the room becomes the \"Room Master\" and gains
+access to a set of additional commands used to manage the owned rooms.</p>
+<h3 id="rrinvite">rrinvite</h3>
+<h4 id="command-syntax_4">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrinvite [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_4">Command Description</h4>
+<p>Invite one or more users to your room. They will be automatically added
+without any interaction from the target user(s). The PIN won\'t be
+shared with the target user(s).</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_4">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_4">Examples</h4>
+<p>::: {.parsed-literal}
+rrinvite abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrclose">rrclose</h3>
+<h4 id="command-syntax_5">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrclose [room id]
+:::</p>
+<h4 id="command-description_5">Command Description</h4>
+<p>Closes the room, deleting the corresponding channel. If the room type
+was set as text, a chat log is dumped and saved (encrypted). The chat
+log will be posted into the raid rooms logger channel (see
+<code>first-setup</code>{.interpreted-text role="ref"}).</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_5">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_5">Examples</h4>
+<p>::: {.parsed-literal}
+rrclose abcdef
+:::</p>
+<hr />
+<h3 id="rrnewpw">rrnewpw</h3>
+<h4 id="command-syntax_6">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrnewpw [room id]
+:::</p>
+<h4 id="command-description_6">Command Description</h4>
+<p>Assigns a new PIN to the room, useful if the PIN is somehow leaked. The
+PIN will be sent to the room master via DM.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_6">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_6">Examples</h4>
+<p>::: {.parsed-literal}
+rrnewpw abcdef
+:::</p>
+<hr />
+<h3 id="rrkick">rrkick</h3>
+<h4 id="command-syntax_7">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrkick [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_7">Command Description</h4>
+<p>Kicks one or more users from a room. Kicked users will be able to
+re-join the room if they know the PIN or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_7">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_7">Examples</h4>
+<p>::: {.parsed-literal}
+rrkick abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrban">rrban</h3>
+<h4 id="command-syntax_8">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrban [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_8">Command Description</h4>
+<p>Bans one or more users from a room. Banned users <strong>won\'t</strong> be able to
+re-join the room even if they know the PIN or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_8">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_8">Examples</h4>
+<p>::: {.parsed-literal}
+rrban abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrunban">rrunban</h3>
+<h4 id="command-syntax_9">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrunban [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_9">Command Description</h4>
+<p>Lifts ban status from one or more users for the specified room. Formerly
+banned users will now be able to re-join the room if they know the PIN
+or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_9">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_9">Examples</h4>
+<p>::: {.parsed-literal}
+rrunban abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrextend">rrextend</h3>
+<h4 id="command-syntax_10">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrextend [room id]
+:::</p>
+<h4 id="command-description_10">Command Description</h4>
+<p>Extends the duration of a room that is about to expire. This command can
+only be used when there are <strong>less than 5 minutes left</strong> on the normal
+expiration of a room.</p>
+<p>The room timer will be refreshed, adding the initial duration to the
+current time (e.g. if the room was supposed to last 24 hours, 24 more
+hours will be added to that room).</p>
+<p>This command can only be used once.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Server managers are able to prohibit the usage of this command through
+<code>rraextend</code>{.interpreted-text role="ref"}.
+:::</p>
+<h4 id="permissions-needed_10">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_10">Examples</h4>
+<p>::: {.parsed-literal}
+rrextend abcdef
+:::</p>
+<hr />
+<h2 id="supervisor-commands">Supervisor Commands</h2>
+<p>These commands can only be used by administrators and supervisors. To
+assign one (or more) role(s) as supervisor roles, see
+<code>rrasetsvrole</code>{.interpreted-text role="ref"}.</p>
+<h3 id="rrsls">rrsls</h3>
+<h4 id="command-syntax_11">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsls
+:::</p>
+<h4 id="command-description_11">Command Description</h4>
+<p>Lists all active raid rooms in the server.</p>
+<h4 id="permissions-needed_11">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<hr />
+<h3 id="rrskick">rrskick</h3>
+<h4 id="command-syntax_12">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrskick [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_12">Command Description</h4>
+<p>Kicks one or more users from a room. Kicked users will be able to
+re-join the room if they know the PIN or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_12">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_11">Examples</h4>
+<p>::: {.parsed-literal}
+rrskick abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrsban">rrsban</h3>
+<h4 id="command-syntax_13">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsban [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_13">Command Description</h4>
+<p>Bans one or more users from a room. Banned users <strong>won\'t</strong> be able to
+re-join the room even if they know the PIN or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_13">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_12">Examples</h4>
+<p>::: {.parsed-literal}
+rrsban abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrsunban">rrsunban</h3>
+<h4 id="command-syntax_14">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsunban [room id] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_14">Command Description</h4>
+<p>Lifts ban status from one or more users for the specified room. Formerly
+banned users will now be able to re-join the room if they know the PIN
+or are re-invited.</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_14">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_13">Examples</h4>
+<p>::: {.parsed-literal}
+rrsunban abcdef \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrsbreak">rrsbreak</h3>
+<h4 id="command-syntax_15">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsunban [room id]
+:::</p>
+<h4 id="command-description_15">Command Description</h4>
+<p>Forcefully closes the room, deleting the corresponding channel, without
+warning the room master. If the room type was set as text, a chat log is
+dumped and saved (encrypted). The chat log will be posted into the raid
+rooms logger channel (see <code>first-setup</code>{.interpreted-text role="ref"}).</p>
+<p>If the room ID is omitted and the command is executed inside an existing
+room, the action will be applied on the current room.</p>
+<h4 id="permissions-needed_15">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_14">Examples</h4>
+<p>::: {.parsed-literal}
+rrsbreak abcdef
+:::</p>
+<hr />
+<h3 id="rrsforbid">rrsforbid</h3>
+<h4 id="command-syntax_16">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsforbid (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_16">Command Description</h4>
+<p>Prohibits one or more users from creating Raid Rooms. This command
+won\'t break any existing room.</p>
+<h4 id="permissions-needed_16">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_15">Examples</h4>
+<p>::: {.parsed-literal}
+rrsforbid \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrsallow">rrsallow</h3>
+<h4 id="command-syntax_17">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrsallow (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_17">Command Description</h4>
+<p>Lifts the prohibition status from one or more users, allowing them to
+create Raid Rooms.</p>
+<h4 id="permissions-needed_17">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_16">Examples</h4>
+<p>::: {.parsed-literal}
+rrsallow \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="rrslsforbid">rrslsforbid</h3>
+<h4 id="command-syntax_18">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrslsforbid
+:::</p>
+<h4 id="command-description_18">Command Description</h4>
+<p>Lists the users that are currently forbidden from creating Raid Rooms in
+the current server.</p>
+<h4 id="permissions-needed_18">Permissions Needed</h4>
+<p>| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<hr />
+<h2 id="administrator-commands">Administrator Commands</h2>
+<p>Administrators and server managers (users with \"Manage Server\"
+permissions) have access to a few configuration commands used to apply
+server-specific raid room settings.</p>
+<h3 id="rrasetsvrole">rrasetsvrole</h3>
+<h4 id="command-syntax_19">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rrasetsvrole (role id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_19">Command Description</h4>
+<p>Toggles one or more role(s) as supervisor role (see
+<code>supervisor-commands</code>{.interpreted-text role="ref"}). Use with no params
+to see the current list of supervisor roles.</p>
+<h4 id="permissions-needed_19">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Guild
+| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_17">Examples</h4>
+<p>::: {.parsed-literal}
+rrasetsvrole \@RaidRoomSupervisor
+:::</p>
+<hr />
+<h3 id="rradefaults">rradefaults</h3>
+<h4 id="command-syntax_20">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rradefaults [--type [text/voice]] [--max-members [{number}]]
+[--members [{number}]] [--max-duration [{timecode}]]
+[--duration [{timecode}]]
+:::</p>
+<h4 id="command-description_20">Command Description</h4>
+<p>Sets the raid rooms default values for this server. Use any of the
+params without an argument to reset the param to the overall default
+value. Use with no params at all to see the current default settings.</p>
+<h5 id="-type"><code>--type</code></h5>
+<p>Type can be either <code>text</code> or <code>voice</code>. The overall default is <code>text</code>.</p>
+<h5 id="-members"><code>--members</code></h5>
+<p>This param lets administrators and managers configure the default value
+for the number of members in a raid room if <code>--members</code> is omitted in
+<code>rrcreate</code>{.interpreted-text role="ref"}.</p>
+<h5 id="-max-members"><code>--max-members</code></h5>
+<p>This param lets administrators and managers configure the soft cap for
+the maximum number of members that a user can request by using the
+<code>--members</code> param in <code>rrcreate</code>{.interpreted-text role="ref"}.</p>
+<p>The hard cap for the maximum number of members that can join a room is
+set to 9999.</p>
+<p>The hard cap for the minimum number of members that can join a room is
+set to 2.</p>
+<h5 id="-duration"><code>--duration</code></h5>
+<p>This param lets administrators and managers configure the default value
+for the duration of a raid room if <code>--duration</code> is omitted in
+<code>rrcreate</code>{.interpreted-text role="ref"}.</p>
+<h5 id="-max-duration"><code>--max-duration</code></h5>
+<p>This param lets administrators and managers configure the soft cap for
+the duration of a raid room that a user can request by using the
+<code>--duration</code> param in <code>rrcreate</code>{.interpreted-text role="ref"}.</p>
+<p>The hard cap for the longest duration of a room is set to 1 year.</p>
+<p>The hard cap for the shortest duration of a room is set to 10 minutes.</p>
+<h4 id="permissions-needed_20">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Guild
+| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+<h4 id="examples_18">Examples</h4>
+<p>::: {.parsed-literal}
+rrasetsvrole --type voice --max-members 16 --duration 2h rrasetsvrole
+--max-duration rrasetsvrole
+:::</p>
+<h3 id="rraextend">rraextend</h3>
+<h4 id="command-syntax_21">Command Syntax</h4>
+<p>::: {.parsed-literal}
+rraextend
+:::</p>
+<h4 id="command-description_21">Command Description</h4>
+<p>Toggles the ability for Room Masters to use the
+<code>rrextend</code>{.interpreted-text role="ref"} command.</p>
+<h4 id="permissions-needed_21">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Guild
+| <strong>Bot</strong>: Manage Channels, Manage Messages</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../forms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Forms" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Forms
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../reactions/" class="md-footer__link md-footer__link--next" aria-label="Next: Reactions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Reactions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

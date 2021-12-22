@@ -1,0 +1,2744 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Forms - GiselleBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#forms-builder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GiselleBot Documentation" class="md-header__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GiselleBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Forms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Contents/Credits/" class="md-tabs__link">
+        Contents
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-tabs__link">
+        Fun And Games
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-tabs__link">
+        Game Integrations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-tabs__link">
+        Moderation & Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
+        Soical Networks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../alarm/" class="md-tabs__link md-tabs__link--active">
+        Utility
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GiselleBot Documentation" class="md-nav__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    GiselleBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Invite%20GiselleBot%20to%20your%20Discord%20Server/" class="md-nav__link">
+        Invite GiselleBot to your Discord Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Modules%20Documentation%20101/" class="md-nav__link">
+        Modules Documentation 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Premium%20Perks/" class="md-nav__link">
+        Premium Perks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Privacy%20Policy%20for%20GiselleBot/" class="md-nav__link">
+        Privacy Policy for GiselleBot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Technical%20%26%20Security%20Background/" class="md-nav__link">
+        Technical & Security Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/User-Generated%20Content%20Disclaimer/" class="md-nav__link">
+        User Generated Content Disclaimer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Fun And Games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fun And Games" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fun And Games
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-nav__link">
+        Auction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/currency/" class="md-nav__link">
+        Currency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/digimon/" class="md-nav__link">
+        Digimon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/games/" class="md-nav__link">
+        Games
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/giveaway/" class="md-nav__link">
+        Giveaway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/radio/" class="md-nav__link">
+        Radio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/social/" class="md-nav__link">
+        Social
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/trivia/" class="md-nav__link">
+        Trivia
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Game Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Game Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-nav__link">
+        Azurlane
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/bravefrontier/" class="md-nav__link">
+        Bravefrontier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/mahjongsoul/" class="md-nav__link">
+        Mahjongsoul
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Moderation & Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Moderation & Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Moderation & Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-nav__link">
+        Administration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/automoderator/" class="md-nav__link">
+        Automoderator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/moderation/" class="md-nav__link">
+        Moderation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/verification/" class="md-nav__link">
+        Verification
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Soical Networks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Soical Networks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+        Instagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+        Reddit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+        Rss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+        Twitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+        Youtube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Utility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utility" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alarm/" class="md-nav__link">
+        Alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custreact/" class="md-nav__link">
+        Custreact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Forms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Forms
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trellopair" class="md-nav__link">
+    trellopair
+  </a>
+  
+    <nav class="md-nav" aria-label="trellopair">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit" class="md-nav__link">
+    submit
+  </a>
+  
+    <nav class="md-nav" aria-label="submit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitreact" class="md-nav__link">
+    submitreact
+  </a>
+  
+    <nav class="md-nav" aria-label="submitreact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitreactremove" class="md-nav__link">
+    submitreactremove
+  </a>
+  
+    <nav class="md-nav" aria-label="submitreactremove">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adsubmit" class="md-nav__link">
+    adsubmit
+  </a>
+  
+    <nav class="md-nav" aria-label="adsubmit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminit" class="md-nav__link">
+    forminit
+  </a>
+  
+    <nav class="md-nav" aria-label="forminit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsetup" class="md-nav__link">
+    formsetup
+  </a>
+  
+    <nav class="md-nav" aria-label="formsetup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formaddqst" class="md-nav__link">
+    formaddqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formaddqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formeditqst" class="md-nav__link">
+    formeditqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formeditqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formremqst" class="md-nav__link">
+    formremqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formremqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsortqst" class="md-nav__link">
+    formsortqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formsortqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formpublish" class="md-nav__link">
+    formpublish
+  </a>
+  
+    <nav class="md-nav" aria-label="formpublish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formwithhold" class="md-nav__link">
+    formwithhold
+  </a>
+  
+    <nav class="md-nav" aria-label="formwithhold">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formdelete" class="md-nav__link">
+    formdelete
+  </a>
+  
+    <nav class="md-nav" aria-label="formdelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formpreview" class="md-nav__link">
+    formpreview
+  </a>
+  
+    <nav class="md-nav" aria-label="formpreview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formblacklist" class="md-nav__link">
+    formblacklist
+  </a>
+  
+    <nav class="md-nav" aria-label="formblacklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsexport" class="md-nav__link">
+    formsexport
+  </a>
+  
+    <nav class="md-nav" aria-label="formsexport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raidroom/" class="md-nav__link">
+        Raidroom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reactions/" class="md-nav__link">
+        Reactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../send/" class="md-nav__link">
+        Send
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/" class="md-nav__link">
+        Util
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trellopair" class="md-nav__link">
+    trellopair
+  </a>
+  
+    <nav class="md-nav" aria-label="trellopair">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit" class="md-nav__link">
+    submit
+  </a>
+  
+    <nav class="md-nav" aria-label="submit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitreact" class="md-nav__link">
+    submitreact
+  </a>
+  
+    <nav class="md-nav" aria-label="submitreact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitreactremove" class="md-nav__link">
+    submitreactremove
+  </a>
+  
+    <nav class="md-nav" aria-label="submitreactremove">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adsubmit" class="md-nav__link">
+    adsubmit
+  </a>
+  
+    <nav class="md-nav" aria-label="adsubmit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forminit" class="md-nav__link">
+    forminit
+  </a>
+  
+    <nav class="md-nav" aria-label="forminit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsetup" class="md-nav__link">
+    formsetup
+  </a>
+  
+    <nav class="md-nav" aria-label="formsetup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formaddqst" class="md-nav__link">
+    formaddqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formaddqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formeditqst" class="md-nav__link">
+    formeditqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formeditqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formremqst" class="md-nav__link">
+    formremqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formremqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsortqst" class="md-nav__link">
+    formsortqst
+  </a>
+  
+    <nav class="md-nav" aria-label="formsortqst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formpublish" class="md-nav__link">
+    formpublish
+  </a>
+  
+    <nav class="md-nav" aria-label="formpublish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formwithhold" class="md-nav__link">
+    formwithhold
+  </a>
+  
+    <nav class="md-nav" aria-label="formwithhold">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formdelete" class="md-nav__link">
+    formdelete
+  </a>
+  
+    <nav class="md-nav" aria-label="formdelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formpreview" class="md-nav__link">
+    formpreview
+  </a>
+  
+    <nav class="md-nav" aria-label="formpreview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formblacklist" class="md-nav__link">
+    formblacklist
+  </a>
+  
+    <nav class="md-nav" aria-label="formblacklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formsexport" class="md-nav__link">
+    formsexport
+  </a>
+  
+    <nav class="md-nav" aria-label="formsexport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/cycloptux/GiselleBot-Documentation/edit/master/docs/Utility/forms.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="forms-builder">Forms Builder</h1>
+<p>The Forms Builder module enables users to create Q/A forms that are
+presented to end-users by sending a Direct Message to the bot. The Q/As
+can be set up to be a sequence of multi-choice or open questions, with
+the final output (submission) being sent into a server channel by the
+bot itself for further validation, priority assignment and optional
+integration with external services.</p>
+<p>(Optional features) Upon accepting a submission, a submission summary
+can be forwarded as a read-only post to a different channel and can be
+automatically given an \"upvote\" and \"downvote\" reaction for people
+to show their support (or lack thereof) to the specific submission.</p>
+<p>Currently, each form submission can be configured to remain within the
+Discord realm, or uploaded to <a href="https://trello.com/">Trello</a> (a powerful
+web-based, list-making application) as a \"Trello card\" (\"share
+mode\").</p>
+<p>Trello integration also includes the 2-way synchronization of
+upvotes/downvotes and comments number from and to Discord and Trello
+(showing the number of upvotes and downvotes on the Trello card, as well
+as showing the current number of Trello comments and votes on the
+Discord message), and Discord DM notifications to the author of the
+submission upon Trello card activities (new comments, title changes,
+card archival, etc.).</p>
+<p>::: {.warning}
+::: {.title}
+Warning
+:::</p>
+<p>For the <strong>Trello</strong> integration to work, some limitations currently
+apply:</p>
+<ol>
+<li>You must <strong>invite</strong> to your Trello team and give it permissions to
+    edit the board in order for the bot to monitor, post and update
+    cards. You can invite to your Trello team using this email address:
+    .</li>
+<li>You must <strong>pair</strong> the Discord server with the Trello team by using
+    the trellopair command. Each Discord server can only be paired with
+    1 Trello team.</li>
+<li>Form settings will be fixed once a user sends a submission. Any
+    change to a form will not apply to submissions that are already in
+    the approval queue. This also means that the Trello board must be
+    set (thus, exist) before a submission is sent.
+:::</li>
+</ol>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Users that are enabled to use the module using the
+<code>permissions</code>{.interpreted-text role="ref"} will always be authorized to
+accept or reject any submission coming from any form. In order to enable
+more roles to accept/reject specific forms, you can set one or more
+roles as \"authorized roles\" on each form both during the initial setup
+of the form and through the formsetup command.
+:::</p>
+<p>::: {.admonition}
+Premium</p>
+<p>Out of the box, each server is limited to having a total of <strong>3
+available forms</strong>. If you want to remove this limitation and have up to
+<strong>20</strong> forms, you can unlock the number of forms as a <strong>Premium</strong>
+feature (see: <code>premium-perks</code>{.interpreted-text role="ref"}).
+:::</p>
+<p>::: {.hint}
+::: {.title}
+Hint
+:::</p>
+<p>In order to ease the creation of the complex strings you need to add
+questions to a form, you can use this <a href="https://gisl.eu/formbuilder">Forms Builder
+Helper</a> to create pre-made strings to be
+used in those phases. Just create a copy of that sheet and customize it
+to your needs.
+:::</p>
+<h2 id="trellopair">trellopair</h2>
+<h3 id="command-syntax">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trellopair [team name/URL, or \"-\"]
+:::</p>
+<h3 id="command-description">Command Description</h3>
+<p>Pairs a Discord server with a Trello team. No restrictions are applied
+to the number of Discord servers that can pair a Trello team, although
+<strong>each server must pass the verification step individually</strong> (see
+below).</p>
+<p>In order to pair with a team, you can use the team name or the URL
+containing the team name (see the note below).</p>
+<p>Using the command without any argument will show the current paired
+Trello team.</p>
+<p>Using <code>-</code> as the only argument will unpair the current server from the
+paired Trello team.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>The team name is the one you find inside the Trello URL within the team
+page, which usually has this form: <code>https://trello.com/TEAM_NAME/home</code>
+:::</p>
+<p><strong>As a security measure, the Trello team pairing process is composed of
+2 steps.</strong> Running this command will issue a verification request to the
+target Trello team, giving the user who run the command a 6-digits
+unique code (that is generated randomly when the command is run). You
+must then verify that you have enough permissions to create cards on at
+least one Team board before the pairing is effective.</p>
+<p>will start querying the Trello team boards in order to find a card with
+the 6-digits code set as title. You must head to one of the Team boards
+and <strong>create a card (in any list) with the provided 6-digits code as
+title</strong>.</p>
+<p>If no card is found with the correct title within <strong>5 minutes</strong> from
+running the command, the pairing will fail. If the card is found, the
+pairing will complete and the team boards will be available for use in
+the Forms module.</p>
+<p>Once the card is found the pairing will complete, actvating the
+integration. The verification card will be deleted, and you will be
+notified (with a mention) in the current channel.</p>
+<h3 id="permissions-needed">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h2 id="submit">submit</h2>
+<h3 id="command-syntax_1">Command Syntax</h3>
+<p>::: {.parsed-literal}
+submit
+:::</p>
+<h3 id="command-description_1">Command Description</h3>
+<p>Shows the available forms for the servers a user is currently in, giving
+the option to start filling a submission.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>This command can be used in a <strong>Direct Message channel</strong> with . In that
+case, will start the submission by showing a list of servers the user
+can select.</p>
+<p>If used within an actual server, it will make send a DM to the user
+running the command, showing the available forms for the specific server
+the command was run into.</p>
+<p>When the command is used in \'s DMs, the list of available servers is
+taken from \'s current cache. If the server you are looking for does not
+appear, use the submit command from within that server.</p>
+<p>This command <strong>is not subject to any permissions</strong> other than a specific
+blacklist check (see formblacklist).</p>
+<p>The actual form submission must always happen though \'s DMs.
+:::</p>
+<hr />
+<h2 id="submitreact">submitreact</h2>
+<h3 id="command-syntax_2">Command Syntax</h3>
+<p>::: {.parsed-literal}
+submitreact [--m {message id}]
+:::</p>
+<h3 id="command-description_2">Command Description</h3>
+<p>Other than sending the <code>submit</code>{.interpreted-text role="ref"} command to
+via DM, or using it in a server to quickly start the DM workflow,
+authorized people can enable a specific reaction on a message of choice
+(or a message created by for that purpose) to have send the initial form
+submission DM to the user clicking on the reaction.</p>
+<p>This command starts a simple interactive process to build this \"submit
+reaction message\". will guide you through the process of creating this
+reaction, just follow the in-Discord instructions.</p>
+<p>If a valid message ID is specified through the dedicated parameter, the
+submit reaction will be created on the target message.</p>
+<h3 id="examples">Examples</h3>
+<p>::: {.parsed-literal}
+submitreact submitreact --m 123456789098765432
+:::</p>
+<hr />
+<h2 id="submitreactremove">submitreactremove</h2>
+<h3 id="command-syntax_3">Command Syntax</h3>
+<p>::: {.parsed-literal}
+submitreactremove [message id]
+:::</p>
+<h3 id="command-description_3">Command Description</h3>
+<p>Removes the submit reaction behavior from an existing message. The
+message itself won\'t be deleted, nor the existing reactions will be
+removed, but will now not do anything with the reaction on that message.</p>
+<p>If the message ID is omitted (or is invalid), will attempt to pick the
+latest submit reaction message in the current channel.</p>
+<h3 id="examples_1">Examples</h3>
+<p>::: {.parsed-literal}
+submitreactremove 123456789098765432
+:::</p>
+<hr />
+<h2 id="adsubmit">adsubmit</h2>
+<h3 id="command-description_4">Command Description</h3>
+<p>Toggles the automatic deletion of the \"confirmation\" message that is
+sent upon using the submit command into a server, and of the command
+itself.</p>
+<p>The user-sent message will be deleted immediately. The confirmation
+message will be deleted after 5 seconds.</p>
+<h3 id="permissions-needed_1">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages
+| <strong>Bot</strong>: Manage Messages</p>
+<hr />
+<h2 id="forminit">forminit</h2>
+<h3 id="command-syntax_4">Command Syntax</h3>
+<p>::: {.parsed-literal}
+foinit
+:::</p>
+<h3 id="command-description_5">Command Description</h3>
+<p>Initializes a new form builder. The bot will guide the user into setting
+up the basic configurations and first question.</p>
+<p>Forms questions will expire after:</p>
+<ul>
+<li>5 minutes, for reaction questions;</li>
+<li>15 minutes, for open questions.</li>
+</ul>
+<p>The format to set a form question is:</p>
+<p>::: {.parsed-literal}
+(message/reaction)(list of reactions)/[validation words][Trello
+mapping]
+:::</p>
+<p>Each question has to be set using 5 fields, separated by one <code>|</code>
+character.</p>
+<ul>
+<li>First field: <code>message</code> will require the question to be answered with
+    a plain text message. <code>reaction</code> will require the user to select one
+    answer by clicking on a reaction that will be added to the question
+    by the bot.</li>
+<li>Second field: The actual question.</li>
+<li>Third field:<ul>
+<li>If <code>reaction</code> is selected in the first field, this field will
+    list all of the possible answers, using <code>;</code> to separate these
+    answers. If this is the case, this field is <strong>mandatory</strong>.</li>
+<li>If <code>message</code> is selected in the first field, this field will
+    include a list of validation words: any answer given by the
+    target user will be ignored unless the message contains at least
+    one of the chosen words/sentences (case insensitive). Again, you
+    can separate words/sentences with <code>;</code>. If this is the case, this
+    field is optional.</li>
+</ul>
+</li>
+</ul>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Due to Discord limitations, there can only be a maximum of 20 answers in
+a reaction question. Answers from the 21st onward will be ignored.
+:::</p>
+<ul>
+<li>Fourth field: The question \"alias\". This is the title that will
+    replace the full question when the feedback is posted in the server
+    channel. This field is optional, but it\'s higly suggested that you
+    set an alias.</li>
+<li>Fifth field: This will map the question into one of the entities of
+    the Trello board. While <code>private</code> and <code>attachment</code> have a meaning in
+    in-Discord share mode (see formsetup), the rest is only useful if
+    you are interested in Trello integration; you can choose whether or
+    not including Trello integration later:<ul>
+<li><code>title</code> will use the answer as the title of a card.</li>
+<li><code>list</code> will use the answer as the title of a list.</li>
+<li><code>label</code> will add the answer as a card label.</li>
+<li><code>attachment</code> will add the answer as a card attachment. If the
+    \"attachments highlighting\" option is active, fields flagged as
+    <code>attachment</code> will also appear in the public in-Discord summary
+    message.</li>
+<li><code>description</code> will add the answer as part of the description
+    text, with the format: <code>{Alias}: {Text}</code>.</li>
+<li><code>private</code> will show the answer into the \"in-Discord\" embed
+    during the authorization process but won\'t upload the field to
+    Trello (or show it in the public in-Discord summary message)
+    whatsoever.</li>
+</ul>
+</li>
+</ul>
+<p>::: {.warning}
+::: {.title}
+Warning
+:::</p>
+<p>A field being \"optional\" means that its content can be left blank, but
+the field itself has to exist; e.g.
+<code>message|Heads or Tails?||The user picked...|</code>
+:::</p>
+<p>::: {.hint}
+::: {.title}
+Hint
+:::</p>
+<p>In order to ease the creation of these complex strings, you can use this
+<a href="https://gisl.eu/formbuilder">Forms Builder Helper</a> to create a pre-made
+string to be used in this phase. Just create a copy of that sheet and
+customize it to your needs.
+:::</p>
+<hr />
+<h2 id="formsetup">formsetup</h2>
+<h3 id="command-syntax_5">Command Syntax</h3>
+<p>::: {.parsed-literal}
+foset (form id)
+:::</p>
+<h3 id="command-description_6">Command Description</h3>
+<p>Opens the forms builder interactive configuration menu. Use the menu
+items to configure the available settings.</p>
+<p><img alt="Forms Builder Interactive Configuration Menu" src="../images/forms_image_00.png" />{.align-center
+width="400px"}</p>
+<p>Options 1. and 2. are used to save the settings you applied through the
+menu (the settings will not apply until you save them), or discard said
+changes.</p>
+<ol>
+<li>\"Set title\" sets the title of the form, as it appears when listed
+    by .</li>
+<li>\"Set color\" sets the form embeds color.</li>
+<li>\"Set authorization channel\" sets the channel where form
+    submissions are sent to for the initial validation by the authorized
+    users. This option is mandatory.</li>
+<li>\"Set forwarding channel(s)\" sets the additional forwarding
+    channels where, if set, the public in-Discord summary message will
+    be sent to. This is optional.</li>
+<li>\"Set authorized role(s)\" sets the list of roles that will be both
+    authorized to accept and reject submissions to the current form, and
+    mentioned (optional, see option 18) within the authorization channel
+    when a submission is received.</li>
+<li>\"Toggle share mode\" sets the final target of a validated
+    submission to either Trello, or just Discord.</li>
+<li>\"Toggle publish status\" works as an alias of formpublish and
+    formwithhold to make a form available or unavailable for server
+    members through \'s DMs.</li>
+<li>\"Toggle upvoting\" enables or disables the upvote tracking feature
+    (and upvote arrow application for new submissions) on a specific
+    form.</li>
+<li>\"Toggle downvoting\" enables or disables the downvote tracking
+    feature (and downvote arrow application for new submissions) on a
+    specific form.</li>
+</ol>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<ul>
+<li><strong>Disabling</strong> a voting arrow will <strong>not</strong> remove the <code>:arrow_up:</code>
+    and/or <code>:arrow_down:</code> reaction from existing submissions, but it
+    will stop those submissions\' votes from being tracked in Trello (if
+    you are using the Trello share mode). New submissions will <strong>not</strong>
+    have the corresponding arrow reaction applied.</li>
+<li>
+<p><strong>Enabling</strong> a previously disabled voting arrow will <strong>not</strong> reapply
+    the arrow to existing submissions. It <strong>will</strong> track the votes as
+    long as <strong>any user</strong> adds the <code>:arrow_up:</code> and/or <code>:arrow_down:</code>
+    reaction to the public submission message (as long as it\'s the
+    native Discord reaction and not a custom one).
+:::</p>
+</li>
+<li>
+<p>\"Toggle highlighting of attachments\" enables or disables the
+    public embed from having an additional field where all of the
+    \"attachment\"-flagged fields are linked, using their <code>gisl.eu</code>
+    short link (using the same engine behind
+    <code>shorturl</code>{.interpreted-text role="ref"}).</p>
+</li>
+<li>\"Set mentioned role(s)\" sets the list of roles that will be
+    mentioned in the public in-Discord summary message(s) when a
+    submission is accepted.</li>
+<li>(Only useful in \"Trello share mode\") \"Set target board\" lists
+    the available boards within the paired Trello team (refer to
+    <code>trellopair</code>{.interpreted-text role="ref"}) and sets the linked
+    Trello board for the current form. Renaming a board in Trello will
+    not affect this link.</li>
+<li>(Only useful in \"Trello share mode\") \"Toggle extended embed\"
+    enables or disabled the public in-Discord summary message extended
+    mode: by default, a submission that has Trello set as \"share mode\"
+    will only show a short summary of the submission, while the actual
+    full post will be found in the linked Trello card. By enabling the
+    \"extended embed\", the whole submission will be kept within
+    Discord, while still having a link to the corresponding Trello card.</li>
+<li>(Only useful in \"Discord share mode\" or \"Trello share mode\" with
+    \"extended embed\" active) \"Anonymize public submissions\"
+    completely hides the submitter info from the public in-Discord
+    summary message, keeping the user\'s anonymity intact (as long as
+    \"private\"-flagged fields are used for other kinds of recognizable
+    data within the form).</li>
+<li>\"Anonymize rejection messages\" enables or disables whether the
+    name of the user that rejected a submission will appear in the
+    rejection message on a specific form.</li>
+<li>\"Mention the authorized role(s) on new submissions\" toggles
+    whether the authorized role(s) will be mentioned when a new
+    submission is received.</li>
+<li>\"Toggle priority reactions\" toggles whether the priority reactions
+    are applied to the validation message. When this option is off, the
+    only options will be \"Pass (No Priority)\" and \"Drop\".</li>
+</ul>
+<p>Here\'s an example of a public in-Discord summary message with Trello
+share mode, extended embed, attachments highlighting and anonymizer on.</p>
+<p><img alt="Forms Builder Submission Example" src="../images/forms_image_01.png" />{.align-center
+width="600px"}</p>
+<hr />
+<h2 id="formaddqst">formaddqst</h2>
+<h3 id="command-syntax_6">Command Syntax</h3>
+<p>::: {.parsed-literal}
+foaq (form id)
+:::</p>
+<h3 id="command-description_7">Command Description</h3>
+<p>Adds a question to an existing form. Follow the instructions given by
+the bot to configure the question. Refer to the previous paragraph for
+more details.</p>
+<h3 id="examples_2">Examples</h3>
+<p>::: {.parsed-literal}
+foaq 1
+:::</p>
+<hr />
+<h2 id="formeditqst">formeditqst</h2>
+<h3 id="command-syntax_7">Command Syntax</h3>
+<p>::: {.parsed-literal}
+foeq (form id) (question id)
+:::</p>
+<h3 id="command-description_8">Command Description</h3>
+<p>Replaces the selected question from an existing form with a new one.
+Refer to the previous paragraphs for more details.</p>
+<h3 id="examples_3">Examples</h3>
+<p>::: {.parsed-literal}
+foeq 1 5
+:::</p>
+<hr />
+<h2 id="formremqst">formremqst</h2>
+<h3 id="command-syntax_8">Command Syntax</h3>
+<p>::: {.parsed-literal}
+forq (form id) (question id)
+:::</p>
+<h3 id="command-description_9">Command Description</h3>
+<p>Deletes a specific question from an existing form.</p>
+<h3 id="examples_4">Examples</h3>
+<p>::: {.parsed-literal}
+forq 1 5
+:::</p>
+<hr />
+<h2 id="formsortqst">formsortqst</h2>
+<h3 id="command-syntax_9">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fosq (form id) (question_ids)
+:::</p>
+<h3 id="command-description_10">Command Description</h3>
+<p>Sorts the questions of an existing workflow into the specified order.</p>
+<h3 id="examples_5">Examples</h3>
+<p>::: {.parsed-literal}
+fosq 1 4 5 1 2 3
+:::</p>
+<hr />
+<h2 id="formpublish">formpublish</h2>
+<h3 id="command-syntax_10">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fopub (form id)
+:::</p>
+<h3 id="command-description_11">Command Description</h3>
+<p>Publishes an existing form, making it available to server members
+through the dedicated section of the bot Direct Messages behavior (see
+<code>submit</code>{.interpreted-text role="ref"}).</p>
+<hr />
+<h2 id="formwithhold">formwithhold</h2>
+<h3 id="command-syntax_11">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fowh (form id)
+:::</p>
+<h3 id="command-description_12">Command Description</h3>
+<p>Witholds a previously published form, making it unavailable for server
+members. This is particularly useful, or even required, for forms that
+need to be edited/deleted.</p>
+<hr />
+<h2 id="formdelete">formdelete</h2>
+<h3 id="command-syntax_12">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fod (form id)
+:::</p>
+<h3 id="command-description_13">Command Description</h3>
+<p>Completely deletes a server form.</p>
+<hr />
+<h2 id="formpreview">formpreview</h2>
+<h3 id="command-syntax_13">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fop
+:::</p>
+<h3 id="command-description_14">Command Description</h3>
+<p>Prints the list of available forms for the current server. For each
+form, a preview of each question (and the corresponding question ID) is
+shown.</p>
+<hr />
+<h2 id="formblacklist">formblacklist</h2>
+<h3 id="command-syntax_14">Command Syntax</h3>
+<p>::: {.parsed-literal}
+fobl (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h3 id="command-description_15">Command Description</h3>
+<p>Toggles one (or more) user\'s presence on the forms blacklist.
+Blacklisted users won\'t be able to see any available form for the
+current server.</p>
+<h3 id="examples_6">Examples</h3>
+<p>::: {.parsed-literal}
+fobl cycloptux#1543
+:::</p>
+<hr />
+<h2 id="formsexport">formsexport</h2>
+<h3 id="command-syntax_15">Command Syntax</h3>
+<p>::: {.parsed-literal}
+foexp
+:::</p>
+<h3 id="command-description_16">Command Description</h3>
+<p>Exports the current forms submission statistics and contents for the
+current server.</p>
+<h3 id="permissions-needed_2">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../custreact/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Custreact" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Custreact
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../raidroom/" class="md-footer__link md-footer__link--next" aria-label="Next: Raidroom" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Raidroom
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

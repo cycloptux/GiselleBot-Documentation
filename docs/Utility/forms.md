@@ -372,7 +372,7 @@ foset (form id)
 Opens the forms builder interactive configuration menu. Use the menu
 items to configure the available settings.
 
-![Forms Builder Interactive Configuration Menu](../images/forms_image_00.png){.align-center
+![Forms Builder Interactive Configuration Menu](../assets/images/forms_image_00.png){.align-center
 width="400px"}
 
 Options 1. and 2. are used to save the settings you applied through the
@@ -460,7 +460,7 @@ Note
 Here\'s an example of a public in-Discord summary message with Trello
 share mode, extended embed, attachments highlighting and anonymizer on.
 
-![Forms Builder Submission Example](../images/forms_image_01.png){.align-center
+![Forms Builder Submission Example](../assets/images/forms_image_01.png){.align-center
 width="600px"}
 
 ------------------------------------------------------------------------

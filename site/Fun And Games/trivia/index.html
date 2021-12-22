@@ -1,0 +1,2908 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Trivia - GiselleBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trivia" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GiselleBot Documentation" class="md-header__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GiselleBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Trivia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Contents/Credits/" class="md-tabs__link">
+        Contents
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../auction/" class="md-tabs__link md-tabs__link--active">
+        Fun And Games
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-tabs__link">
+        Game Integrations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-tabs__link">
+        Moderation & Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
+        Soical Networks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Utility/alarm/" class="md-tabs__link">
+        Utility
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GiselleBot Documentation" class="md-nav__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    GiselleBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Invite%20GiselleBot%20to%20your%20Discord%20Server/" class="md-nav__link">
+        Invite GiselleBot to your Discord Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Modules%20Documentation%20101/" class="md-nav__link">
+        Modules Documentation 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Premium%20Perks/" class="md-nav__link">
+        Premium Perks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Privacy%20Policy%20for%20GiselleBot/" class="md-nav__link">
+        Privacy Policy for GiselleBot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Technical%20%26%20Security%20Background/" class="md-nav__link">
+        Technical & Security Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/User-Generated%20Content%20Disclaimer/" class="md-nav__link">
+        User Generated Content Disclaimer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Fun And Games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fun And Games" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fun And Games
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auction/" class="md-nav__link">
+        Auction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../currency/" class="md-nav__link">
+        Currency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digimon/" class="md-nav__link">
+        Digimon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games/" class="md-nav__link">
+        Games
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveaway/" class="md-nav__link">
+        Giveaway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radio/" class="md-nav__link">
+        Radio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../social/" class="md-nav__link">
+        Social
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Trivia
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Trivia
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#triviacategories" class="md-nav__link">
+    triviacategories
+  </a>
+  
+    <nav class="md-nav" aria-label="triviacategories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviainit" class="md-nav__link">
+    triviainit
+  </a>
+  
+    <nav class="md-nav" aria-label="triviainit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviasetup" class="md-nav__link">
+    triviasetup
+  </a>
+  
+    <nav class="md-nav" aria-label="triviasetup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviastart" class="md-nav__link">
+    triviastart
+  </a>
+  
+    <nav class="md-nav" aria-label="triviastart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaanswer" class="md-nav__link">
+    triviaanswer
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaanswer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaresults" class="md-nav__link">
+    triviaresults
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaresults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviamyresults" class="md-nav__link">
+    triviamyresults
+  </a>
+  
+    <nav class="md-nav" aria-label="triviamyresults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviashow" class="md-nav__link">
+    triviashow
+  </a>
+  
+    <nav class="md-nav" aria-label="triviashow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trivialist" class="md-nav__link">
+    trivialist
+  </a>
+  
+    <nav class="md-nav" aria-label="trivialist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviapause" class="md-nav__link">
+    triviapause
+  </a>
+  
+    <nav class="md-nav" aria-label="triviapause">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaresume" class="md-nav__link">
+    triviaresume
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaresume">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviadelete" class="md-nav__link">
+    triviadelete
+  </a>
+  
+    <nav class="md-nav" aria-label="triviadelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaexport" class="md-nav__link">
+    triviaexport
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaexport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatsave" class="md-nav__link">
+    triviatsave
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatsave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatload" class="md-nav__link">
+    triviatload
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatdelete" class="md-nav__link">
+    triviatdelete
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatdelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatshow" class="md-nav__link">
+    triviatshow
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatshow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatlist" class="md-nav__link">
+    triviatlist
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatlist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_15" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Game Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Game Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-nav__link">
+        Azurlane
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/bravefrontier/" class="md-nav__link">
+        Bravefrontier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/mahjongsoul/" class="md-nav__link">
+        Mahjongsoul
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Moderation & Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Moderation & Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Moderation & Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-nav__link">
+        Administration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/automoderator/" class="md-nav__link">
+        Automoderator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/moderation/" class="md-nav__link">
+        Moderation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/verification/" class="md-nav__link">
+        Verification
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Soical Networks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Soical Networks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+        Instagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+        Reddit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+        Rss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+        Twitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+        Youtube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Utility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utility" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/alarm/" class="md-nav__link">
+        Alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/custreact/" class="md-nav__link">
+        Custreact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/raidroom/" class="md-nav__link">
+        Raidroom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/reactions/" class="md-nav__link">
+        Reactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/send/" class="md-nav__link">
+        Send
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/util/" class="md-nav__link">
+        Util
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#triviacategories" class="md-nav__link">
+    triviacategories
+  </a>
+  
+    <nav class="md-nav" aria-label="triviacategories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviainit" class="md-nav__link">
+    triviainit
+  </a>
+  
+    <nav class="md-nav" aria-label="triviainit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviasetup" class="md-nav__link">
+    triviasetup
+  </a>
+  
+    <nav class="md-nav" aria-label="triviasetup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviastart" class="md-nav__link">
+    triviastart
+  </a>
+  
+    <nav class="md-nav" aria-label="triviastart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaanswer" class="md-nav__link">
+    triviaanswer
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaanswer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaresults" class="md-nav__link">
+    triviaresults
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaresults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviamyresults" class="md-nav__link">
+    triviamyresults
+  </a>
+  
+    <nav class="md-nav" aria-label="triviamyresults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviashow" class="md-nav__link">
+    triviashow
+  </a>
+  
+    <nav class="md-nav" aria-label="triviashow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trivialist" class="md-nav__link">
+    trivialist
+  </a>
+  
+    <nav class="md-nav" aria-label="trivialist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviapause" class="md-nav__link">
+    triviapause
+  </a>
+  
+    <nav class="md-nav" aria-label="triviapause">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaresume" class="md-nav__link">
+    triviaresume
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaresume">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviadelete" class="md-nav__link">
+    triviadelete
+  </a>
+  
+    <nav class="md-nav" aria-label="triviadelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviaexport" class="md-nav__link">
+    triviaexport
+  </a>
+  
+    <nav class="md-nav" aria-label="triviaexport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatsave" class="md-nav__link">
+    triviatsave
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatsave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatload" class="md-nav__link">
+    triviatload
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatdelete" class="md-nav__link">
+    triviatdelete
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatdelete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatshow" class="md-nav__link">
+    triviatshow
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatshow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triviatlist" class="md-nav__link">
+    triviatlist
+  </a>
+  
+    <nav class="md-nav" aria-label="triviatlist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_15" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/cycloptux/GiselleBot-Documentation/edit/master/docs/Fun And Games/trivia.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="trivia">Trivia</h1>
+<p>This module lets users play trivia quiz games on Discord. The module
+gets its default questions from the <strong>Open Trivia Database</strong>, which
+offers more than 3,000 validated questions in more than 15 categories.</p>
+<p>The trivia module is meant to be public and used by anyone for fun.
+Users with \"Manage Messages\" &amp; \"Manage Roles\" permissions, hereafter
+called \"Elevated Users\", will also have access to extra settings that
+will make them able to set trivia quiz games up for use by other users
+(typical use cases include events, giveaways, etc.).</p>
+<p>Trivia games can be <strong>timed</strong> or <strong>immediate</strong>.</p>
+<ul>
+<li><strong>Immediate</strong> trivia games move to the next question as soon as one
+    answer is collected.</li>
+<li><strong>Timed</strong> trivia games move to the next question as soon as a
+    certain time interval passes, and collect answers from anyone during
+    that period (limitations may apply, see later).</li>
+</ul>
+<p>Depending on the \"type\" of user running the command(s), some
+limitations apply to the usage of the trivia module. The following table
+shows such limitations.</p>
+<hr />
+<p>User Type                 MQ   MT          RR      TC        AD    SE</p>
+<hr />
+<p>Normal (non-\"Elevated\") 10   3 minutes   No      No        No    No</p>
+<p>Elevated                  20   6 hours     Yes*   Yes**   Yes   Yes</p>
+<p>Elevated (Premium)        30   7 days      Yes*   Yes**   Yes   Yes</p>
+<hr />
+<ul>
+<li><strong>MQ</strong>: Maximum # of Questions</li>
+<li><strong>MT</strong>: Maximum Time Interval</li>
+<li><strong>RR</strong>: Can set role restrictions</li>
+<li><strong>TC</strong>: Can set a different target channel</li>
+<li><strong>AD</strong>: Can configure auto-deletion of messages</li>
+<li><strong>SE</strong>: Can configure and/or start someone else\'s trivia</li>
+</ul>
+<p>| ~*:\ Users\ are\ not\ allowed\ to\ set\ a\ role\ restriction\ to\ roles\ higher\ than\ the\ highest\ role\ they\ have.~
+| ~**:\ Users\ are\ not\ allowed\ to\ set\ a\ target\ channel\ to\ a\ channel\ they\ don\'t\ have\ R/W\ access\ to\ (Read\ Messages\ and/or\ Send\ Messages).~</p>
+<p>The module also includes a set of \"template\" commands. As an
+alternative way of starting a trivia (other than initializing a new one
+with default settings), users can save a trivia template and load it at
+a later time. Trivia templates will be assigned with a new set of IDs
+(\"template IDs\") and will not directly be linked to their original
+trivia game configuration.</p>
+<p>Template commands can be recognized by their <code>triviat-</code> prefix.</p>
+<p>::: {.admonition}
+Premium</p>
+<p>As shown in the table, premium-enabled servers will have an increased
+cap of 30 questions and can set an interval for timed trivia games up to
+1 week (see: <code>premium-perks</code>{.interpreted-text role="ref"}).</p>
+<p>Additionally, template commands and triviaexport are only available
+within Premium-enabled servers.
+:::</p>
+<h2 id="triviacategories">triviacategories</h2>
+<h3 id="command-syntax">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trcat
+:::</p>
+<h3 id="command-description">Command Description</h3>
+<p>Shows all available trivia category names, and the corresponding number
+of available questions.</p>
+<hr />
+<h2 id="triviainit">triviainit</h2>
+<h3 id="command-syntax_1">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trinit
+:::</p>
+<h3 id="command-description_1">Command Description</h3>
+<p>Initializes a trivia in the current channel.</p>
+<p>Default settings are:</p>
+<ul>
+<li><strong>Name</strong>: None</li>
+<li><strong>Description</strong>: None</li>
+<li><strong>Channel</strong>: Current</li>
+<li><strong>Categories</strong>: Any</li>
+<li><strong>Role Restriction</strong>: None</li>
+<li><strong>Trivia Mode</strong>: Immediate</li>
+<li><strong>Trivia Questions</strong>: 5</li>
+<li><strong>Auto-delete Answer</strong>: Yes</li>
+<li><strong>Auto-delete Confirmation</strong>: No</li>
+</ul>
+<p>See triviasetup to understand the meaning of each parameter.</p>
+<hr />
+<h2 id="triviasetup">triviasetup</h2>
+<h3 id="command-syntax_2">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trsetup (trivia id)
+:::</p>
+<h3 id="command-description_2">Command Description</h3>
+<p>Opens the trivia game interactive setup menu. Use the menu items to
+configure the above settings.</p>
+<p><strong>Name</strong> will show in the title of each embed related to that trivia.
+Trivia names cannot be longer than 128 characters.</p>
+<p><strong>Description</strong> will appear on each question, and in the starting and
+final embed. Trivia descriptions cannot be longer than 1024 characters.</p>
+<p><strong>Categories</strong> can be left blank (\"any category\") or it can be used to
+restrict the questions to <strong>one or more</strong> categories. At the time of
+writing this documentation page, the categories available from the Open
+Trivia Database are:</p>
+<ol>
+<li>Animals</li>
+<li>Art</li>
+<li>Celebrities</li>
+<li>Entertainment: Board Games</li>
+<li>Entertainment: Books</li>
+<li>Entertainment: Cartoon &amp; Animations</li>
+<li>Entertainment: Comics</li>
+<li>Entertainment: Film</li>
+<li>Entertainment: Japanese Anime &amp; Manga</li>
+<li>Entertainment: Music</li>
+<li>Entertainment: Musicals &amp; Theatres</li>
+<li>Entertainment: Television</li>
+<li>Entertainment: Video Games</li>
+<li>General Knowledge</li>
+<li>Geography</li>
+<li>History</li>
+<li>Mythology</li>
+<li>Politics</li>
+<li>Science &amp; Nature</li>
+<li>Science: Computers</li>
+<li>Science: Gadgets</li>
+<li>Science: Mathematics</li>
+<li>Sports</li>
+<li>Vehicles</li>
+</ol>
+<p>The categories selection supports partial names: if you want to select
+\"Mythology\" you can just use \"myth\", etc.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>There will soon be a way to add custom categories and custom questions
+to the database.
+:::</p>
+<p><strong>Interval</strong> is the amount of time a question will be up in a <strong>timed</strong>
+trivia. Disabling this parameter sets the trivia mode to <strong>immediate</strong>.
+Go to the top of this page to understand the difference between the two
+modes.</p>
+<p><strong>Questions Amount</strong> is the number of questions after which the trivia
+game will end. Refer to the limitations table at the top of this page to
+know the limits. A trivia game will always end if the actual amount of
+available questions is lower than the \"configured\" amount.</p>
+<p><strong>Channel</strong> is the actual channel the trivia will be started into after
+the triviastart command. As stated in the limitations table, it can be
+set to another channel only if you are an \"Elevated\" user.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>There can only be <strong>1</strong> running (or paused) trivia game per channel at a
+given time.
+:::</p>
+<p><strong>Authorized Roles</strong>, as the name suggests, are roles authorized to
+submit answers to the selected trivia. If omitted, everyone will be able
+to submit an answer. If one or more roles are configured, users will
+need to have at least one of these roles to submit an answer.</p>
+<p><strong>Auto-deletion of Answers</strong> toggles whether or not the bot should
+delete the answers posted by a user. In order to keep the secrecy of a
+user\'s answer (especially in timed trivia games), this configuration is
+active by default.</p>
+<p><strong>Auto-deletion of Confirmation Messages</strong> toggles whether or not the
+bot should delete its own confirmation message upon registering an
+answer. The deletion of confirmation messages happens after 5 seconds.</p>
+<h3 id="examples">Examples</h3>
+<p>::: {.parsed-literal}
+trsetup 0 trset 2
+:::</p>
+<hr />
+<h2 id="triviastart">triviastart</h2>
+<h3 id="command-syntax_3">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trstart (trivia id)
+:::</p>
+<h3 id="command-description_3">Command Description</h3>
+<p>Starts a trivia game in the configured target channel, using the
+corresponding settings.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>There can only be <strong>1</strong> running (or paused) trivia game per channel at a
+given time.
+:::</p>
+<h3 id="examples_1">Examples</h3>
+<p>::: {.parsed-literal}
+trstart 0
+:::</p>
+<hr />
+<h2 id="triviaanswer">triviaanswer</h2>
+<h3 id="command-syntax_4">Command Syntax</h3>
+<p>::: {.parsed-literal}
+tra (answer number)
+:::</p>
+<h3 id="command-description_4">Command Description</h3>
+<p>Submits an answer to the currently running trivia. Since only 1 running
+trivia game can be running in a channel at a given time, you won\'t need
+to specify the trivia ID.</p>
+<h3 id="examples_2">Examples</h3>
+<p>::: {.parsed-literal}
+tra 2 tra 4
+:::</p>
+<hr />
+<h2 id="triviaresults">triviaresults</h2>
+<h3 id="command-syntax_5">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trres (trivia id)
+:::</p>
+<h3 id="command-description_5">Command Description</h3>
+<p>Prints the final results of a trivia game. This is the same embed that
+is printed when a trivia game ends, showing the top 5 users and their
+corresponding scores.</p>
+<p>This command only works on completed trivia games.</p>
+<h3 id="examples_3">Examples</h3>
+<p>::: {.parsed-literal}
+trres 0
+:::</p>
+<hr />
+<h2 id="triviamyresults">triviamyresults</h2>
+<h3 id="command-syntax_6">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trmyres (trivia id)
+:::</p>
+<h3 id="command-description_6">Command Description</h3>
+<p>Shows a detailed list of questions and the corresponding submitted
+answers for the user running this command, showing whether the given
+answers are correct or not.</p>
+<p>This command only works on completed trivia games.</p>
+<h3 id="examples_4">Examples</h3>
+<p>::: {.parsed-literal}
+trmyres 0 trmres 2
+:::</p>
+<hr />
+<h2 id="triviashow">triviashow</h2>
+<h3 id="command-syntax_7">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trshow [trivia id]
+:::</p>
+<h3 id="command-description_7">Command Description</h3>
+<p>Shows the current configuration of a trivia, given its ID.</p>
+<p>If the ID is omitted, the command will show the info of the running (or
+paused) trivia game in the current channel, if any.</p>
+<h3 id="examples_5">Examples</h3>
+<p>::: {.parsed-literal}
+trshow trshow 2
+:::</p>
+<hr />
+<h2 id="trivialist">trivialist</h2>
+<h3 id="command-syntax_8">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trlist
+:::</p>
+<h3 id="command-description_8">Command Description</h3>
+<p>Shows the list of all (non-deleted) trivia games in the server: their
+ID, name and status.</p>
+<h3 id="examples_6">Examples</h3>
+<p>::: {.parsed-literal}
+trls
+:::</p>
+<hr />
+<h2 id="triviapause">triviapause</h2>
+<h3 id="command-syntax_9">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trpause [trivia id]
+:::</p>
+<h3 id="command-description_9">Command Description</h3>
+<p><strong>This command is only available to Elevated Users.</strong></p>
+<p>Pauses a trivia, given its ID. Pausing a trivia will make users unable
+to submit answers for that trivia. If the trivia game was set as
+<strong>timed</strong>, the timer for the current question will continue to count
+down to zero, but the next question will not appear until the game is
+unpaused.</p>
+<p>If the ID is omitted, the command will attempt to pause the trivia game
+in the current channel, if any.</p>
+<h3 id="permissions-needed">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_7">Examples</h3>
+<p>::: {.parsed-literal}
+trpause trpause 2
+:::</p>
+<hr />
+<h2 id="triviaresume">triviaresume</h2>
+<h3 id="command-syntax_10">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trresume [trivia id]
+:::</p>
+<h3 id="command-description_10">Command Description</h3>
+<p><strong>This command is only available to Elevated Users.</strong></p>
+<p>Resumes a previously paused trivia, given its ID. Resuming a trivia will
+make users able to submit answers for that trivia again.</p>
+<p>If the ID is omitted, the command will attempt to resume the paused
+trivia game in the current channel, if any.</p>
+<h3 id="permissions-needed_1">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_8">Examples</h3>
+<p>::: {.parsed-literal}
+trresume trresume 2
+:::</p>
+<hr />
+<h2 id="triviadelete">triviadelete</h2>
+<h3 id="command-syntax_11">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trdelete [trivia id]
+:::</p>
+<h3 id="command-description_11">Command Description</h3>
+<p><strong>This command is only available to Elevated Users.</strong></p>
+<p><strong>This command only works on paused or completed trivia games.</strong></p>
+<p>Stops (if paused) and deletes a trivia game from the server, also hiding
+its ID from trivialist.</p>
+<p>If the ID is omitted, the command will attempt to delete the paused
+trivia game in the current channel, if any.</p>
+<h3 id="permissions-needed_2">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_9">Examples</h3>
+<p>::: {.parsed-literal}
+trdelete trdelete 2
+:::</p>
+<hr />
+<h2 id="triviaexport">triviaexport</h2>
+<h3 id="command-syntax_12">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trexp [trivia id]
+:::</p>
+<h3 id="command-description_12">Command Description</h3>
+<p><strong>This command is only available to Elevated Users in Premium-enabled
+servers.</strong></p>
+<p><strong>This command only works on completed trivia games.</strong></p>
+<p>Exports the detailed info about a completed trivia into a <code>.csv</code> file.
+The file will contain the complete list of users who answered to the
+trivia game and the corresponding correctness (or incorrectness) for
+each question in the trivia.</p>
+<p><em>This is the only way of having a full list of users. The top 5 users
+are shown in the trivia final results embed.</em></p>
+<h3 id="permissions-needed_3">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_10">Examples</h3>
+<p>::: {.parsed-literal}
+trexp 2
+:::</p>
+<hr />
+<h2 id="triviatsave">triviatsave</h2>
+<h3 id="command-syntax_13">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trtsave [trivia id]
+:::</p>
+<h3 id="command-description_13">Command Description</h3>
+<p><strong>This command is only available to Elevated Users in Premium-enabled
+servers.</strong></p>
+<p>Saves the current configuration for the selected trivia into a
+\"template\" which can then be re-used with trtload. Each run of this
+command will generate a new <strong>template ID</strong>.</p>
+<p>Once saved, a template becomes independent from the corresponding
+original trivia game: changing the settings for the originating trivia
+game will <strong>not</strong> update the corresponding template.</p>
+<h3 id="permissions-needed_4">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_11">Examples</h3>
+<p>::: {.parsed-literal}
+trtsave 3
+:::</p>
+<hr />
+<h2 id="triviatload">triviatload</h2>
+<h3 id="command-syntax_14">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trtload [template id]
+:::</p>
+<h3 id="command-description_14">Command Description</h3>
+<p><strong>This command is only available in Premium-enabled servers.</strong></p>
+<p>Loads a previously saved configuration from a template, creating a new
+trivia game with a new trivia ID.</p>
+<p>The new trivia game will be set in a \"Initialized\" status, and can be
+immediately started with trstart or furtherly configured with trset.</p>
+<h3 id="examples_12">Examples</h3>
+<p>::: {.parsed-literal}
+trtload 1
+:::</p>
+<hr />
+<h2 id="triviatdelete">triviatdelete</h2>
+<h3 id="command-syntax_15">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trtdelete [template id]
+:::</p>
+<h3 id="command-description_15">Command Description</h3>
+<p><strong>This command is only available to Elevated Users in Premium-enabled
+servers.</strong></p>
+<p>Deletes a previously saved configuration template (it will not delete
+the originating trivia game).</p>
+<h3 id="permissions-needed_5">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Messages, Manage Roles</p>
+<h3 id="examples_13">Examples</h3>
+<p>::: {.parsed-literal}
+trtdelete 1
+:::</p>
+<hr />
+<h2 id="triviatshow">triviatshow</h2>
+<h3 id="command-syntax_16">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trtshow [template id]
+:::</p>
+<h3 id="command-description_16">Command Description</h3>
+<p><strong>This command is only available in Premium-enabled servers.</strong></p>
+<p>Shows the current configuration of a trivia template, given its ID.</p>
+<h3 id="examples_14">Examples</h3>
+<p>::: {.parsed-literal}
+trtshow 1
+:::</p>
+<hr />
+<h2 id="triviatlist">triviatlist</h2>
+<h3 id="command-syntax_17">Command Syntax</h3>
+<p>::: {.parsed-literal}
+trtlist
+:::</p>
+<h3 id="command-description_17">Command Description</h3>
+<p><strong>This command is only available in Premium-enabled servers.</strong></p>
+<p>Shows the list of all (non-deleted) trivia templates in the server:
+their ID, name and basic info.</p>
+<h3 id="examples_15">Examples</h3>
+<p>::: {.parsed-literal}
+trtls
+:::</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../social/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Social" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Social
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Game%20Integrations/azurlane/" class="md-footer__link md-footer__link--next" aria-label="Next: Azurlane" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Azurlane
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

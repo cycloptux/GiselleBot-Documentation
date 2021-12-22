@@ -36,7 +36,7 @@ Here are some info and numbers about the bot (as of July 16th, 2020):
 Infrastructure
 --------------
 
-![GiselleBot High-Level Architecture](./images/GiselleBot_Architecture.png){.align-center
+![GiselleBot High-Level Architecture](../assets/images/GiselleBot_Architecture.png){.align-center
 width="600px"}
 
 The bot is hosted in a public cloud infrastructure (specifically, Amazon

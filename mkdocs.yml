@@ -1,11 +1,28 @@
-site_name: GiselleBot Documentation
+site_name: UNOFFICIAL GiselleBot Documentation
 repo_url: https://github.com/cycloptux/GiselleBot-Documentation
 repo_name: cycloptux/GiselleBot-Documentation
 theme:
   name: material
   features:
-     - navigation.top
-     - navigation.tabs
-     - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  - tables
+  - admonition
 
 

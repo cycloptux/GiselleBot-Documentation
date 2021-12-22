@@ -1,0 +1,2650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Currency - GiselleBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#currency-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GiselleBot Documentation" class="md-header__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GiselleBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Currency
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Contents/Credits/" class="md-tabs__link">
+        Contents
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../auction/" class="md-tabs__link md-tabs__link--active">
+        Fun And Games
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-tabs__link">
+        Game Integrations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-tabs__link">
+        Moderation & Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
+        Soical Networks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Utility/alarm/" class="md-tabs__link">
+        Utility
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GiselleBot Documentation" class="md-nav__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    GiselleBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Invite%20GiselleBot%20to%20your%20Discord%20Server/" class="md-nav__link">
+        Invite GiselleBot to your Discord Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Modules%20Documentation%20101/" class="md-nav__link">
+        Modules Documentation 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Premium%20Perks/" class="md-nav__link">
+        Premium Perks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Privacy%20Policy%20for%20GiselleBot/" class="md-nav__link">
+        Privacy Policy for GiselleBot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Technical%20%26%20Security%20Background/" class="md-nav__link">
+        Technical & Security Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/User-Generated%20Content%20Disclaimer/" class="md-nav__link">
+        User Generated Content Disclaimer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Fun And Games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fun And Games" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fun And Games
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auction/" class="md-nav__link">
+        Auction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Currency
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Currency
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    \$
+  </a>
+  
+    <nav class="md-nav" aria-label="\$">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencytransfer" class="md-nav__link">
+    currencytransfer
+  </a>
+  
+    <nav class="md-nav" aria-label="currencytransfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timely" class="md-nav__link">
+    timely
+  </a>
+  
+    <nav class="md-nav" aria-label="timely">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topggnotify" class="md-nav__link">
+    topggnotify
+  </a>
+  
+    <nav class="md-nav" aria-label="topggnotify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bodvalidate" class="md-nav__link">
+    bodvalidate
+  </a>
+  
+    <nav class="md-nav" aria-label="bodvalidate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaderboard" class="md-nav__link">
+    cleaderboard
+  </a>
+  
+    <nav class="md-nav" aria-label="cleaderboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyemoji" class="md-nav__link">
+    currencyemoji
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyemoji">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stonk-market-buying-and-selling-broccoli" class="md-nav__link">
+    Stonk Market: Buying and Selling Broccoli
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccoliprice" class="md-nav__link">
+    broccoliprice
+  </a>
+  
+    <nav class="md-nav" aria-label="broccoliprice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolibuy" class="md-nav__link">
+    broccolibuy
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolibuy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolisell" class="md-nav__link">
+    broccolisell
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolisell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolibag" class="md-nav__link">
+    broccolibag
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolibag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolianalysis" class="md-nav__link">
+    broccolianalysis
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolianalysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bot-owner-reserved-commands" class="md-nav__link">
+    Bot Owner Reserved Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelyreset" class="md-nav__link">
+    timelyreset
+  </a>
+  
+    <nav class="md-nav" aria-label="timelyreset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelyset" class="md-nav__link">
+    timelyset
+  </a>
+  
+    <nav class="md-nav" aria-label="timelyset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyaward" class="md-nav__link">
+    currencyaward
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyaward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencytake" class="md-nav__link">
+    currencytake
+  </a>
+  
+    <nav class="md-nav" aria-label="currencytake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyeventstart" class="md-nav__link">
+    currencyeventstart
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyeventstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digimon/" class="md-nav__link">
+        Digimon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games/" class="md-nav__link">
+        Games
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../giveaway/" class="md-nav__link">
+        Giveaway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../radio/" class="md-nav__link">
+        Radio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../social/" class="md-nav__link">
+        Social
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trivia/" class="md-nav__link">
+        Trivia
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Game Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Game Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-nav__link">
+        Azurlane
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/bravefrontier/" class="md-nav__link">
+        Bravefrontier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/mahjongsoul/" class="md-nav__link">
+        Mahjongsoul
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Moderation & Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Moderation & Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Moderation & Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/administration/" class="md-nav__link">
+        Administration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/automoderator/" class="md-nav__link">
+        Automoderator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/moderation/" class="md-nav__link">
+        Moderation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Moderation%20%26%20Administration/verification/" class="md-nav__link">
+        Verification
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Soical Networks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Soical Networks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+        Instagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+        Reddit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+        Rss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+        Twitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+        Youtube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Utility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utility" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/alarm/" class="md-nav__link">
+        Alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/custreact/" class="md-nav__link">
+        Custreact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/raidroom/" class="md-nav__link">
+        Raidroom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/reactions/" class="md-nav__link">
+        Reactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/send/" class="md-nav__link">
+        Send
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/util/" class="md-nav__link">
+        Util
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    \$
+  </a>
+  
+    <nav class="md-nav" aria-label="\$">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencytransfer" class="md-nav__link">
+    currencytransfer
+  </a>
+  
+    <nav class="md-nav" aria-label="currencytransfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timely" class="md-nav__link">
+    timely
+  </a>
+  
+    <nav class="md-nav" aria-label="timely">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topggnotify" class="md-nav__link">
+    topggnotify
+  </a>
+  
+    <nav class="md-nav" aria-label="topggnotify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bodvalidate" class="md-nav__link">
+    bodvalidate
+  </a>
+  
+    <nav class="md-nav" aria-label="bodvalidate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaderboard" class="md-nav__link">
+    cleaderboard
+  </a>
+  
+    <nav class="md-nav" aria-label="cleaderboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyemoji" class="md-nav__link">
+    currencyemoji
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyemoji">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stonk-market-buying-and-selling-broccoli" class="md-nav__link">
+    Stonk Market: Buying and Selling Broccoli
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccoliprice" class="md-nav__link">
+    broccoliprice
+  </a>
+  
+    <nav class="md-nav" aria-label="broccoliprice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolibuy" class="md-nav__link">
+    broccolibuy
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolibuy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolisell" class="md-nav__link">
+    broccolisell
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolisell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolibag" class="md-nav__link">
+    broccolibag
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolibag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broccolianalysis" class="md-nav__link">
+    broccolianalysis
+  </a>
+  
+    <nav class="md-nav" aria-label="broccolianalysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bot-owner-reserved-commands" class="md-nav__link">
+    Bot Owner Reserved Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelyreset" class="md-nav__link">
+    timelyreset
+  </a>
+  
+    <nav class="md-nav" aria-label="timelyreset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelyset" class="md-nav__link">
+    timelyset
+  </a>
+  
+    <nav class="md-nav" aria-label="timelyset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyaward" class="md-nav__link">
+    currencyaward
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyaward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencytake" class="md-nav__link">
+    currencytake
+  </a>
+  
+    <nav class="md-nav" aria-label="currencytake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currencyeventstart" class="md-nav__link">
+    currencyeventstart
+  </a>
+  
+    <nav class="md-nav" aria-label="currencyeventstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/cycloptux/GiselleBot-Documentation/edit/master/docs/Fun And Games/currency.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="currency-system">Currency System</h1>
+<p>Each user known to the bot has a currency wallet. Currency is earned in
+a few ways:</p>
+<ul>
+<li>Each message sent in a channel the bot has access to will give a
+    small amount of currency to the user (a cooldown is applied to avoid
+    plain spamming just to earn currency).</li>
+<li>Once a day, using the <code>timely</code>{.interpreted-text role="ref"}
+    command.</li>
+<li>Every once in a while, reacting to events on the main bot support
+    server.</li>
+<li>Playing with <code>games</code>{.interpreted-text role="ref"}.</li>
+</ul>
+<p>Currently, the main goal of currency is playing with games. More uses
+are planned, but still not implemented.</p>
+<h2 id="_1">\$</h2>
+<h3 id="command-syntax">Command Syntax</h3>
+<p>::: {.parsed-literal}
+\$ [user id/mention/q_name]
+:::</p>
+<h3 id="command-description">Command Description</h3>
+<p>Shows the current amount of currency of a user. By default, it will show
+the currency wallet info of the user that runs the command. Users can
+check someone else\'s wallet by tagging them or using their ID/name.</p>
+<h3 id="examples">Examples</h3>
+<p>::: {.parsed-literal}
+\$ balance \@cycloptux#1543 bal 123456789098765432
+:::</p>
+<hr />
+<h2 id="currencytransfer">currencytransfer</h2>
+<h3 id="command-syntax_1">Command Syntax</h3>
+<p>::: {.parsed-literal}
+currencytransfer (currency amount) (user id/mention)
+:::</p>
+<h3 id="command-description_1">Command Description</h3>
+<p>Transfers a certain amount of currency from the user running the command
+to the target/receiving user. You can use <code>all</code> instead of the currency
+amount to transfer all your currency to the target/receiving user.</p>
+<h3 id="examples_1">Examples</h3>
+<p>::: {.parsed-literal}
+ctransfer 5000 \@cycloptux#1543 cpay all 123456789098765432
+:::</p>
+<hr />
+<h2 id="timely">timely</h2>
+<h3 id="command-syntax_2">Command Syntax</h3>
+<p>::: {.parsed-literal}
+timely
+:::</p>
+<h3 id="command-description_2">Command Description</h3>
+<p>Once a day (by default, but the cooldown can be configured by the bot
+owner) users can earn a specified amount of currency by running this
+command. The default amount of currency earned is 10 per command run.</p>
+<hr />
+<h2 id="topggnotify">topggnotify</h2>
+<h3 id="command-syntax_3">Command Syntax</h3>
+<p>::: {.parsed-literal}
+topggnotify
+:::</p>
+<h3 id="command-description_3">Command Description</h3>
+<p>As an additional source of income for bot currency, and as a way to show
+your appreciation to , you can vote for on
+<a href="https://top.gg/bot/356831787445387285">Top.gg</a> (click on the website
+name to be sent to the bot page).</p>
+<p>Any Discord user can vote for each bot once every 12 hours. Each vote
+for will award you with <strong>250 currency coins</strong>.</p>
+<p>To help give a better chance to fight for the top spots, votes will
+count double on the weekend (Fridays, Saturdays and Sundays). This also
+means <strong>double the amount of coins</strong>!</p>
+<p>By enabling the notification service using the topggnotify command in
+any server, you will also be notified when your Discord Bots List vote
+is available, thus being able to actively collect your daily coins
+efficiently. Each run of the command will toggle its previous state.</p>
+<p>Users will only be notified once per vote reset.</p>
+<hr />
+<h2 id="bodvalidate">bodvalidate</h2>
+<h3 id="command-syntax_4">Command Syntax</h3>
+<p>::: {.parsed-literal}
+bodvalidate
+:::</p>
+<h3 id="command-description_4">Command Description</h3>
+<p>As an additional source of income for bot currency, and as a way to show
+your appreciation to , you can leave a review for on <a href="https://bots.ondiscord.xyz/bots/356831787445387285">Bots on
+Discord</a> (click on
+the website name to be sent to the bot page).</p>
+<p>This command will <strong>anonymously</strong> validate your review within the bot.
+will check for the existence of a review on your name, and will award
+<strong>25,000 currency coins</strong> if found.</p>
+<p>will not know which specific review was submitted, nor its positive or
+negative state.</p>
+<p><strong>This reward can only be obtained once!</strong></p>
+<hr />
+<h2 id="cleaderboard">cleaderboard</h2>
+<h3 id="command-syntax_5">Command Syntax</h3>
+<p>::: {.parsed-literal}
+clb [page #]
+:::</p>
+<h3 id="command-description_5">Command Description</h3>
+<p>Prints the <strong>global</strong> currency leaderboard.</p>
+<h3 id="examples_2">Examples</h3>
+<p>::: {.parsed-literal}
+clb clb 3
+:::</p>
+<hr />
+<h2 id="currencyemoji">currencyemoji</h2>
+<h3 id="command-syntax_6">Command Syntax</h3>
+<p>::: {.parsed-literal}
+currencyemoji [emoji]
+:::</p>
+<h3 id="command-description_6">Command Description</h3>
+<p>Sets a custom emoji as currency in the current server. Using the command
+without the extra emoji argument will reset the currency emoji to the
+default one.</p>
+<p>::: {.warning}
+::: {.title}
+Warning
+:::</p>
+<p>You <strong>must</strong> use reactions that are either \"global\" (Discord native
+emojis) or present in the server. Failing to do so may result in the
+currency emoji not to work.
+:::</p>
+<h3 id="permissions-needed">Permissions Needed</h3>
+<p>| <strong>User</strong>: Manage Server</p>
+<h3 id="examples_3">Examples</h3>
+<p>::: {.parsed-literal}
+currencyemoji 😀 currencyemoji :BlobOwO:
+:::</p>
+<hr />
+<h4 id="stonk-market-buying-and-selling-broccoli">Stonk Market: Buying and Selling Broccoli</h4>
+<p>The <strong>Stonk Market</strong> allows users to buy and sell 🥦 broccoli at
+fluctuating prices, just like real stock markets.</p>
+<p>🥦 broccoli can be purchased <strong>every Sunday morning before 12 PM UTC</strong>.
+Their price fluctuates over time: <strong>the purchase price will be different
+every week, and in every server</strong>. During the week, users can sell 🥦
+broccoli at different prices to make a profit. These prices will differ
+each morning and afternoon, and again, for each server.</p>
+<p>The pricing algorithm is the same that powers Animal Crossing: New
+Horizons\'s Stalk Market. You can read more about it
+<a href="https://docs.google.com/document/d/1bSVNpOnH_dKxkAGr718-iqh8s8Z0qQ54L-0mD-lbrXo/edit#">here</a>
+.</p>
+<p>Buying prices vary between 90 and 110 currency per head of 🥦 broccoli.
+There\'s no limit on how many you can buy or sell.</p>
+<p>🥦 broccoli must be sold within a week. Otherwise, <strong>they will rot by the
+following Sunday morning and lose their monetary value</strong>. will dispose
+of them for you when they are no longer good.</p>
+<h2 id="broccoliprice">broccoliprice</h2>
+<h3 id="command-syntax_7">Command Syntax</h3>
+<p>::: {.parsed-literal}
+brcprice
+:::</p>
+<h3 id="command-description_7">Command Description</h3>
+<p>Checks the current 🥦 broccoli buying or selling price.</p>
+<p>🥦 broccoli can be purchased every Sunday morning before 12 PM UTC, and
+sold during the week (Monday to Saturday). The selling price changes
+every 12 hours (at 12 AM and 12 PM UTC). All markets are closed on
+Sunday afternoon.</p>
+<hr />
+<h2 id="broccolibuy">broccolibuy</h2>
+<h3 id="command-syntax_8">Command Syntax</h3>
+<p>::: {.parsed-literal}
+brcbuy (amount to buy)
+:::</p>
+<h3 id="command-description_8">Command Description</h3>
+<p>Buys the specified amount of 🥦 broccoli at the current buying price for
+the server.</p>
+<p>🥦 broccoli can be purchased every Sunday morning before 12 PM UTC.
+Prices vary between servers.</p>
+<h3 id="examples_4">Examples</h3>
+<p>::: {.parsed-literal}
+brcbuy 50
+:::</p>
+<hr />
+<h2 id="broccolisell">broccolisell</h2>
+<h3 id="command-syntax_9">Command Syntax</h3>
+<p>::: {.parsed-literal}
+brcsell (amount to sell)
+:::</p>
+<h3 id="command-description_9">Command Description</h3>
+<p>Sells the specified amount of 🥦 broccoli at the current selling price
+for the server.</p>
+<p>🥦 broccoli can be sold during the week, from Monday to Saturday. Prices
+vary between servers, and every 12 hours (at 12 AM and 12 PM).</p>
+<h3 id="examples_5">Examples</h3>
+<p>::: {.parsed-literal}
+brcsell 30
+:::</p>
+<hr />
+<h2 id="broccolibag">broccolibag</h2>
+<h3 id="command-syntax_10">Command Syntax</h3>
+<p>::: {.parsed-literal}
+brcbag
+:::</p>
+<h3 id="command-description_10">Command Description</h3>
+<p>Shows the current amount of 🥦 broccoli a user has.</p>
+<hr />
+<h2 id="broccolianalysis">broccolianalysis</h2>
+<h3 id="command-syntax_11">Command Syntax</h3>
+<p>::: {.parsed-literal}
+brcanalysis
+:::</p>
+<h3 id="command-description_11">Command Description</h3>
+<p>Shows the current highest and lowest buying/selling price for 🥦
+broccoli.</p>
+<p>This will act as a benchmark to evaluate if the price you found in a
+server is good or not, or if there\'s any better price to be hunted!</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>This command is <strong>only</strong> available in <strong>GiselleBot Support Center</strong>. You
+can join the Discord server using this invite:
+:::</p>
+<hr />
+<h4 id="bot-owner-reserved-commands">Bot Owner Reserved Commands</h4>
+<h2 id="timelyreset">timelyreset</h2>
+<h3 id="command-syntax_12">Command Syntax</h3>
+<p>::: {.parsed-literal}
+timelyreset
+:::</p>
+<h3 id="command-description_12">Command Description</h3>
+<p>Resets the timely countdown for everyone.</p>
+<h3 id="permissions-needed_1">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+<hr />
+<h2 id="timelyset">timelyset</h2>
+<h3 id="command-syntax_13">Command Syntax</h3>
+<p>::: {.parsed-literal}
+timelyset [timecode] [# of currency coins]
+:::</p>
+<h3 id="command-description_13">Command Description</h3>
+<p>Sets the <strong>global</strong> amount of currency and/or cooldown for the timely
+command. Modified cooldown applies to everyone immediately, but doesn\'t
+reset users\' cooldown.</p>
+<p>Running the command with no arguments will show the current settings.</p>
+<h3 id="permissions-needed_2">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+<hr />
+<h2 id="currencyaward">currencyaward</h2>
+<h3 id="command-syntax_14">Command Syntax</h3>
+<p>::: {.parsed-literal}
+currencyaward (user and/or role id(s)/mention(s)/q_name(s)) (amount of
+currency)
+:::</p>
+<h3 id="command-description_14">Command Description</h3>
+<p>Awards the selected amount of currency to the specified user(s) and/or
+role(s).</p>
+<h3 id="permissions-needed_3">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+<hr />
+<h2 id="currencytake">currencytake</h2>
+<h3 id="command-syntax_15">Command Syntax</h3>
+<p>::: {.parsed-literal}
+currencytake (user and/or role id(s)/mention(s)/q_name(s)) (amount of
+currency, or \"all\")
+:::</p>
+<h3 id="command-description_15">Command Description</h3>
+<p>Takes the selected amount of currency from the specified user(s) and/or
+role(s). You can use <code>all</code> instead of the currency amount to remove all
+currency from the target user(s).</p>
+<p>::: {.warning}
+::: {.title}
+Warning
+:::</p>
+<p>The currency is permanently lost. It\'s <strong>not</strong> transferred to the
+owner.
+:::</p>
+<h3 id="permissions-needed_4">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+<hr />
+<h2 id="currencyeventstart">currencyeventstart</h2>
+<h3 id="command-syntax_16">Command Syntax</h3>
+<p>::: {.parsed-literal}
+currencyeventstart [--amount/--a {amount of currency to gift to each
+reacting user}] [--pot-size/--p {maximum amount of currency that can
+be gifted}] [--duration/--d {event duration timecode}]
+:::</p>
+<h3 id="command-description_16">Command Description</h3>
+<p>Starts an event reaction in the current channel.</p>
+<p>Each reacting user will be gifted with the selected amount of currency.
+You can define the amount of received currency with the <code>--amount</code>
+parameter.</p>
+<p>By default, each user will be rewarded with the specified amount of
+currency. You can set a maximum amount of currency for the event
+\"bucket\" by using the <code>--pot-size</code> parameter (e.g. if
+<code>--amount 50 --p 100</code> is used, only the first 2 users will actually
+receive 50 currency each). You can also set a custom duration for the
+event.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Checks are in place to ensure that users will only receive their gift
+the first time they react. Reacting more than once will <strong>not</strong> assign
+any extra currency.
+:::</p>
+<p>Here are the default values for the command parameters, on omission:</p>
+<ul>
+<li><strong>Amount</strong>: 100</li>
+<li><strong>Pot Size</strong>: 0 (= no limit)</li>
+<li><strong>Duration</strong>: 1 day</li>
+</ul>
+<h3 id="permissions-needed_5">Permissions Needed</h3>
+<p>| <strong>User</strong>: Bot Owner</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../auction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Auction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Auction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../digimon/" class="md-footer__link md-footer__link--next" aria-label="Next: Digimon" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Digimon
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

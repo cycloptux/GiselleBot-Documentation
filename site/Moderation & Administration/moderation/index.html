@@ -1,0 +1,5456 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Moderation - GiselleBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#server-moderation-manual-moderation-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GiselleBot Documentation" class="md-header__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GiselleBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Moderation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Contents/Credits/" class="md-tabs__link">
+        Contents
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-tabs__link">
+        Fun And Games
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-tabs__link">
+        Game Integrations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administration/" class="md-tabs__link md-tabs__link--active">
+        Moderation & Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
+        Soical Networks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Utility/alarm/" class="md-tabs__link">
+        Utility
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GiselleBot Documentation" class="md-nav__button md-logo" aria-label="GiselleBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    GiselleBot Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cycloptux/GiselleBot-Documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cycloptux/GiselleBot-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Invite%20GiselleBot%20to%20your%20Discord%20Server/" class="md-nav__link">
+        Invite GiselleBot to your Discord Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Modules%20Documentation%20101/" class="md-nav__link">
+        Modules Documentation 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Premium%20Perks/" class="md-nav__link">
+        Premium Perks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Privacy%20Policy%20for%20GiselleBot/" class="md-nav__link">
+        Privacy Policy for GiselleBot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/Technical%20%26%20Security%20Background/" class="md-nav__link">
+        Technical & Security Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contents/User-Generated%20Content%20Disclaimer/" class="md-nav__link">
+        User Generated Content Disclaimer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Fun And Games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fun And Games" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fun And Games
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/auction/" class="md-nav__link">
+        Auction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/currency/" class="md-nav__link">
+        Currency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/digimon/" class="md-nav__link">
+        Digimon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/games/" class="md-nav__link">
+        Games
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/giveaway/" class="md-nav__link">
+        Giveaway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/radio/" class="md-nav__link">
+        Radio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/social/" class="md-nav__link">
+        Social
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fun%20And%20Games/trivia/" class="md-nav__link">
+        Trivia
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Game Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Game Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/azurlane/" class="md-nav__link">
+        Azurlane
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/bravefrontier/" class="md-nav__link">
+        Bravefrontier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Game%20Integrations/mahjongsoul/" class="md-nav__link">
+        Mahjongsoul
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Moderation & Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Moderation & Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Moderation & Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administration/" class="md-nav__link">
+        Administration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automoderator/" class="md-nav__link">
+        Automoderator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Moderation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Moderation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-commands" class="md-nav__link">
+    Configuration Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modrole-moderation-role" class="md-nav__link">
+    modrole {#moderation-role}
+  </a>
+  
+    <nav class="md-nav" aria-label="modrole {#moderation-role}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modimmunity" class="md-nav__link">
+    modimmunity
+  </a>
+  
+    <nav class="md-nav" aria-label="modimmunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modanonymization" class="md-nav__link">
+    modanonymization
+  </a>
+  
+    <nav class="md-nav" aria-label="modanonymization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modnotification" class="md-nav__link">
+    modnotification
+  </a>
+  
+    <nav class="md-nav" aria-label="modnotification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muterole" class="md-nav__link">
+    muterole
+  </a>
+  
+    <nav class="md-nav" aria-label="muterole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutechat" class="md-nav__link">
+    mutechat
+  </a>
+  
+    <nav class="md-nav" aria-label="mutechat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagebanrole" class="md-nav__link">
+    imagebanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="imagebanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_6" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelbanrole" class="md-nav__link">
+    channelbanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelbanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_7" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmuterole" class="md-nav__link">
+    channelmuterole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelmuterole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_8" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelimagebanrole" class="md-nav__link">
+    channelimagebanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelimagebanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_9" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moderation-commands-moderation" class="md-nav__link">
+    Moderation Commands {#moderation}
+  </a>
+  
+    <nav class="md-nav" aria-label="Moderation Commands {#moderation}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-command-syntax" class="md-nav__link">
+    (Common) Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-command-description" class="md-nav__link">
+    (Common) Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warn" class="md-nav__link">
+    warn
+  </a>
+  
+    <nav class="md-nav" aria-label="warn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kick" class="md-nav__link">
+    kick
+  </a>
+  
+    <nav class="md-nav" aria-label="kick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_10" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mute" class="md-nav__link">
+    mute
+  </a>
+  
+    <nav class="md-nav" aria-label="mute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_11" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ban" class="md-nav__link">
+    ban
+  </a>
+  
+    <nav class="md-nav" aria-label="ban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_12" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeban" class="md-nav__link">
+    timeban
+  </a>
+  
+    <nav class="md-nav" aria-label="timeban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_13" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delayban" class="md-nav__link">
+    delayban
+  </a>
+  
+    <nav class="md-nav" aria-label="delayban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_14" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageban" class="md-nav__link">
+    imageban
+  </a>
+  
+    <nav class="md-nav" aria-label="imageban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_15" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cban" class="md-nav__link">
+    cban
+  </a>
+  
+    <nav class="md-nav" aria-label="cban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_16" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmute" class="md-nav__link">
+    cmute
+  </a>
+  
+    <nav class="md-nav" aria-label="cmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_18" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_17" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cimageban" class="md-nav__link">
+    cimageban
+  </a>
+  
+    <nav class="md-nav" aria-label="cimageban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_19" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_18" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unmute" class="md-nav__link">
+    unmute
+  </a>
+  
+    <nav class="md-nav" aria-label="unmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_20" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_19" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unban" class="md-nav__link">
+    unban
+  </a>
+  
+    <nav class="md-nav" aria-label="unban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_21" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_20" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelban" class="md-nav__link">
+    cancelban
+  </a>
+  
+    <nav class="md-nav" aria-label="cancelban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_22" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_21" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageunban" class="md-nav__link">
+    imageunban
+  </a>
+  
+    <nav class="md-nav" aria-label="imageunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_23" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_22" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cunmute" class="md-nav__link">
+    cunmute
+  </a>
+  
+    <nav class="md-nav" aria-label="cunmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_24" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_23" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cunban" class="md-nav__link">
+    cunban
+  </a>
+  
+    <nav class="md-nav" aria-label="cunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_25" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_24" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cimageunban" class="md-nav__link">
+    cimageunban
+  </a>
+  
+    <nav class="md-nav" aria-label="cimageunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_26" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_25" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-commands" class="md-nav__link">
+    Utility Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    prune
+  </a>
+  
+    <nav class="md-nav" aria-label="prune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_18" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_27" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_26" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slowmode" class="md-nav__link">
+    slowmode
+  </a>
+  
+    <nav class="md-nav" aria-label="slowmode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_19" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_28" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_27" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evasion-actions" class="md-nav__link">
+    Evasion Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-point-system" class="md-nav__link">
+    Warning Point System
+  </a>
+  
+    <nav class="md-nav" aria-label="Warning Point System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-accumulation-and-thresholds-point-accumulation" class="md-nav__link">
+    Point Accumulation and Thresholds {#point-accumulation}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-rules-and-points" class="md-nav__link">
+    Default Rules and Points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-system-commands" class="md-nav__link">
+    Warning System Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Warning System Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#warnhistory" class="md-nav__link">
+    warnhistory
+  </a>
+  
+    <nav class="md-nav" aria-label="warnhistory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_20" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_29" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case" class="md-nav__link">
+    case
+  </a>
+  
+    <nav class="md-nav" aria-label="case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_21" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_30" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit" class="md-nav__link">
+    edit
+  </a>
+  
+    <nav class="md-nav" aria-label="edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_22" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_31" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+    <nav class="md-nav" aria-label="delete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_23" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_32" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_28" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    restore
+  </a>
+  
+    <nav class="md-nav" aria-label="restore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_24" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_33" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_29" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listrules" class="md-nav__link">
+    listrules
+  </a>
+  
+    <nav class="md-nav" aria-label="listrules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_25" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_34" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addrule" class="md-nav__link">
+    addrule
+  </a>
+  
+    <nav class="md-nav" aria-label="addrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_26" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_35" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_30" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleterule" class="md-nav__link">
+    deleterule
+  </a>
+  
+    <nav class="md-nav" aria-label="deleterule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_27" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_36" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_31" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggleglobalrule" class="md-nav__link">
+    toggleglobalrule
+  </a>
+  
+    <nav class="md-nav" aria-label="toggleglobalrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_28" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_37" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_32" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editrule" class="md-nav__link">
+    editrule
+  </a>
+  
+    <nav class="md-nav" aria-label="editrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_29" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_38" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_33" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#halflogic-half-logic" class="md-nav__link">
+    halflogic {#half-logic}
+  </a>
+  
+    <nav class="md-nav" aria-label="halflogic {#half-logic}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_30" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_39" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_34" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnexpiry-not-implemented-yet" class="md-nav__link">
+    warnexpiry (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="warnexpiry (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_31" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_40" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_35" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expirypoints-not-implemented-yet" class="md-nav__link">
+    expirypoints (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="expirypoints (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_32" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_41" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_36" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setthreshold-not-implemented-yet" class="md-nav__link">
+    setthreshold (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="setthreshold (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_33" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_42" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_37" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verification/" class="md-nav__link">
+        Verification
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Soical Networks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Soical Networks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+        Instagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+        Reddit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+        Rss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+        Twitch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+        Youtube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Utility
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utility" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utility
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/alarm/" class="md-nav__link">
+        Alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/custreact/" class="md-nav__link">
+        Custreact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/raidroom/" class="md-nav__link">
+        Raidroom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/reactions/" class="md-nav__link">
+        Reactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/send/" class="md-nav__link">
+        Send
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utility/util/" class="md-nav__link">
+        Util
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-commands" class="md-nav__link">
+    Configuration Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modrole-moderation-role" class="md-nav__link">
+    modrole {#moderation-role}
+  </a>
+  
+    <nav class="md-nav" aria-label="modrole {#moderation-role}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modimmunity" class="md-nav__link">
+    modimmunity
+  </a>
+  
+    <nav class="md-nav" aria-label="modimmunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_1" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modanonymization" class="md-nav__link">
+    modanonymization
+  </a>
+  
+    <nav class="md-nav" aria-label="modanonymization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_2" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modnotification" class="md-nav__link">
+    modnotification
+  </a>
+  
+    <nav class="md-nav" aria-label="modnotification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_3" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muterole" class="md-nav__link">
+    muterole
+  </a>
+  
+    <nav class="md-nav" aria-label="muterole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_4" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutechat" class="md-nav__link">
+    mutechat
+  </a>
+  
+    <nav class="md-nav" aria-label="mutechat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_5" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagebanrole" class="md-nav__link">
+    imagebanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="imagebanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_6" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelbanrole" class="md-nav__link">
+    channelbanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelbanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_7" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmuterole" class="md-nav__link">
+    channelmuterole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelmuterole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_8" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_8" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_8" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelimagebanrole" class="md-nav__link">
+    channelimagebanrole
+  </a>
+  
+    <nav class="md-nav" aria-label="channelimagebanrole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_9" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_9" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_9" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moderation-commands-moderation" class="md-nav__link">
+    Moderation Commands {#moderation}
+  </a>
+  
+    <nav class="md-nav" aria-label="Moderation Commands {#moderation}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-command-syntax" class="md-nav__link">
+    (Common) Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-command-description" class="md-nav__link">
+    (Common) Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warn" class="md-nav__link">
+    warn
+  </a>
+  
+    <nav class="md-nav" aria-label="warn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_10" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kick" class="md-nav__link">
+    kick
+  </a>
+  
+    <nav class="md-nav" aria-label="kick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_11" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_10" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mute" class="md-nav__link">
+    mute
+  </a>
+  
+    <nav class="md-nav" aria-label="mute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_12" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_11" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ban" class="md-nav__link">
+    ban
+  </a>
+  
+    <nav class="md-nav" aria-label="ban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_10" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_13" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_12" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeban" class="md-nav__link">
+    timeban
+  </a>
+  
+    <nav class="md-nav" aria-label="timeban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_14" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_13" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delayban" class="md-nav__link">
+    delayban
+  </a>
+  
+    <nav class="md-nav" aria-label="delayban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_15" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_14" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageban" class="md-nav__link">
+    imageban
+  </a>
+  
+    <nav class="md-nav" aria-label="imageban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_16" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_15" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cban" class="md-nav__link">
+    cban
+  </a>
+  
+    <nav class="md-nav" aria-label="cban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_17" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_16" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmute" class="md-nav__link">
+    cmute
+  </a>
+  
+    <nav class="md-nav" aria-label="cmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_18" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_17" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cimageban" class="md-nav__link">
+    cimageban
+  </a>
+  
+    <nav class="md-nav" aria-label="cimageban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-description_19" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_18" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unmute" class="md-nav__link">
+    unmute
+  </a>
+  
+    <nav class="md-nav" aria-label="unmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_11" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_20" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_19" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unban" class="md-nav__link">
+    unban
+  </a>
+  
+    <nav class="md-nav" aria-label="unban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_12" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_21" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_20" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelban" class="md-nav__link">
+    cancelban
+  </a>
+  
+    <nav class="md-nav" aria-label="cancelban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_13" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_22" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_21" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imageunban" class="md-nav__link">
+    imageunban
+  </a>
+  
+    <nav class="md-nav" aria-label="imageunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_14" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_23" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_22" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cunmute" class="md-nav__link">
+    cunmute
+  </a>
+  
+    <nav class="md-nav" aria-label="cunmute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_15" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_24" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_23" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cunban" class="md-nav__link">
+    cunban
+  </a>
+  
+    <nav class="md-nav" aria-label="cunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_16" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_25" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_24" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cimageunban" class="md-nav__link">
+    cimageunban
+  </a>
+  
+    <nav class="md-nav" aria-label="cimageunban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_17" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_26" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_25" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-commands" class="md-nav__link">
+    Utility Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    prune
+  </a>
+  
+    <nav class="md-nav" aria-label="prune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_18" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_27" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_26" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slowmode" class="md-nav__link">
+    slowmode
+  </a>
+  
+    <nav class="md-nav" aria-label="slowmode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_19" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_28" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_27" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evasion-actions" class="md-nav__link">
+    Evasion Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-point-system" class="md-nav__link">
+    Warning Point System
+  </a>
+  
+    <nav class="md-nav" aria-label="Warning Point System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-accumulation-and-thresholds-point-accumulation" class="md-nav__link">
+    Point Accumulation and Thresholds {#point-accumulation}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-rules-and-points" class="md-nav__link">
+    Default Rules and Points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-system-commands" class="md-nav__link">
+    Warning System Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Warning System Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#warnhistory" class="md-nav__link">
+    warnhistory
+  </a>
+  
+    <nav class="md-nav" aria-label="warnhistory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_20" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_29" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case" class="md-nav__link">
+    case
+  </a>
+  
+    <nav class="md-nav" aria-label="case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_21" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_30" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit" class="md-nav__link">
+    edit
+  </a>
+  
+    <nav class="md-nav" aria-label="edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_22" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_31" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+    <nav class="md-nav" aria-label="delete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_23" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_32" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_28" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    restore
+  </a>
+  
+    <nav class="md-nav" aria-label="restore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_24" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_33" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_29" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listrules" class="md-nav__link">
+    listrules
+  </a>
+  
+    <nav class="md-nav" aria-label="listrules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_25" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_34" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addrule" class="md-nav__link">
+    addrule
+  </a>
+  
+    <nav class="md-nav" aria-label="addrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_26" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_35" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_30" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleterule" class="md-nav__link">
+    deleterule
+  </a>
+  
+    <nav class="md-nav" aria-label="deleterule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_27" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_36" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_31" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggleglobalrule" class="md-nav__link">
+    toggleglobalrule
+  </a>
+  
+    <nav class="md-nav" aria-label="toggleglobalrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_28" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_37" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_32" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editrule" class="md-nav__link">
+    editrule
+  </a>
+  
+    <nav class="md-nav" aria-label="editrule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_29" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_38" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_33" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#halflogic-half-logic" class="md-nav__link">
+    halflogic {#half-logic}
+  </a>
+  
+    <nav class="md-nav" aria-label="halflogic {#half-logic}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_30" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_39" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_34" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnexpiry-not-implemented-yet" class="md-nav__link">
+    warnexpiry (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="warnexpiry (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_31" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_40" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_35" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expirypoints-not-implemented-yet" class="md-nav__link">
+    expirypoints (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="expirypoints (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_32" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_41" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_36" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setthreshold-not-implemented-yet" class="md-nav__link">
+    setthreshold (not implemented yet)
+  </a>
+  
+    <nav class="md-nav" aria-label="setthreshold (not implemented yet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_33" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_42" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-needed_37" class="md-nav__link">
+    Permissions Needed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/cycloptux/GiselleBot-Documentation/edit/master/docs/Moderation & Administration/moderation.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="server-moderation-manual-moderation-module">Server Moderation (Manual) {#moderation-module}</h1>
+<p>A special thanks to my friend and partner, NaviKing#3820, for the
+design of this module.</p>
+<p>The purpose of this module is to warn users, track their infractions,
+and give the moderators the power to punish users accordingly.</p>
+<p>In order to fully take advantage of this module, enabling the
+case/scoring system is suggested. The scoring system is enabled if the
+<strong>Warning</strong> log is enabled in a server channel. Please refer to the
+<code>log-command</code>{.interpreted-text role="ref"} section in the
+<strong>Administration</strong> module documentation.</p>
+<hr />
+<h2 id="configuration-commands">Configuration Commands</h2>
+<p>These configuration commands are only enabled for those with Manage
+Server permissions. The usage of these commands will be recorded in the
+<strong>Moderation</strong> log.</p>
+<h3 id="modrole-moderation-role">modrole {#moderation-role}</h3>
+<h4 id="command-syntax">Command Syntax</h4>
+<p>::: {.parsed-literal}
+modrole [add/remove] [role id(s)/mention(s)/q_name(s)]
+:::</p>
+<h4 id="command-description">Command Description</h4>
+<p>Adds or removes a role as a moderator role (Mod Role),
+enabling/disabling them to use the moderation module regardless of other
+permissions on their roles. Provide no arguments to show the current mod
+roles.</p>
+<h4 id="permissions-needed">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<h4 id="examples">Examples</h4>
+<p>::: {.parsed-literal}
+modrole modrole add \"Discord Moderators\" \"Discord Officers\" modrole
+remove \@Reddit Moderators
+:::</p>
+<hr />
+<h3 id="modimmunity">modimmunity</h3>
+<h4 id="command-syntax_1">Command Syntax</h4>
+<p>::: {.parsed-literal}
+modimmunity
+:::</p>
+<h4 id="command-description_1">Command Description</h4>
+<p>Toggles whether or not users with the mod role can be affected by
+moderation commands. Default state: <strong>off</strong>.</p>
+<p>If enabled, attempting to take moderation actions on a moderator will
+return an error.</p>
+<h4 id="permissions-needed_1">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="modanonymization">modanonymization</h3>
+<h4 id="command-syntax_2">Command Syntax</h4>
+<p>::: {.parsed-literal}
+modanon
+:::</p>
+<h4 id="command-description_2">Command Description</h4>
+<p>Toggles whether or not users that are affected by a moderation action
+will also be informed of the identity of the moderator using the
+command. Default state: <strong>off</strong> (i.e. moderators <strong>will not</strong> be
+anonymized).</p>
+<p>If enabled, the name of the moderator will be omitted on the DM that a
+user receives upon being hit by a moderation action, and a shield emoji
+(🛡️) will appear next to the \"Performed By\" field of the corresponding
+warning log embed to remind that moderators\' protection is on for that
+case.</p>
+<h4 id="permissions-needed_2">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="modnotification">modnotification</h3>
+<h4 id="command-syntax_3">Command Syntax</h4>
+<p>::: {.parsed-literal}
+modnotif
+:::</p>
+<h4 id="command-description_3">Command Description</h4>
+<p>Toggles whether or not moderators will be informed with a mention in the
+Moderation/Warning logger in case of missing parameters when applying a
+moderation action with an \"incomplete\" syntax. Default state: <strong>on</strong>
+(i.e. moderators <strong>will</strong> be notified with a mention).</p>
+<h4 id="permissions-needed_3">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="muterole">muterole</h3>
+<h4 id="command-syntax_4">Command Syntax</h4>
+<p>::: {.parsed-literal}
+muterole [role id/mention/q_name]
+:::</p>
+<h4 id="command-description_4">Command Description</h4>
+<p>Defines a role to be used as the mute role. Attempting to set a mute
+role that is higher than either the command user\'s highest role or the
+bot\'s highest role will result in an error being thrown. Provide no
+arguments to show the current mute role.</p>
+<p>Channel permissions for the mute role will be automatically set and
+updated every time the configuration or moderation command is used.</p>
+<p>Muted users will have the following permissions disabled for every
+channel (besides the \"mute chat\", see below): <strong>Send Messages</strong>,
+<strong>Attach Files</strong>, <strong>Add Reactions</strong>, <strong>Use Public Threads</strong>, <strong>Use
+Private Threads</strong>, <strong>Speak</strong>.</p>
+<h4 id="permissions-needed_4">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="mutechat">mutechat</h3>
+<h4 id="command-syntax_5">Command Syntax</h4>
+<p>::: {.parsed-literal}
+mutechat [channel id(s)/mention(s)/q_name(s)]
+:::</p>
+<h4 id="command-description_5">Command Description</h4>
+<p>Sets one (or more) channel(s) for muted users to be able to speak for
+the purposes of discussing the moderation action taken against them.</p>
+<p>When the bot sets channel permissions for the mute role, this special
+channel(s) will have the following permissions:</p>
+<ul>
+<li><strong>Read Messages</strong>: Enabled</li>
+<li><strong>Send Messages</strong>: Enabled</li>
+<li><strong>Read Message History</strong>: Disabled</li>
+<li><strong>Add Reactions</strong>: Disabled</li>
+<li><strong>Attach Files</strong>: Enabled</li>
+<li><strong>Speak</strong>: Disabled</li>
+</ul>
+<h4 id="permissions-needed_5">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="imagebanrole">imagebanrole</h3>
+<h4 id="command-syntax_6">Command Syntax</h4>
+<p>::: {.parsed-literal}
+imagebanrole [role id/mention/q_name]
+:::</p>
+<h4 id="command-description_6">Command Description</h4>
+<p>Defines a role to be used as the image ban role. Attempting to set a
+image ban role that is higher than either the command user\'s highest
+role or the bot\'s highest role will result in an error being thrown.
+Provide no arguments to show the current image ban role.</p>
+<p>Channel permissions for the image ban role will be automatically set and
+updated every time the configuration or moderation command is used.</p>
+<p>Image banned users will have the following permissions disabled for
+every channel: <strong>Embed Links</strong>, <strong>Attach Files</strong>.</p>
+<h4 id="permissions-needed_6">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="channelbanrole">channelbanrole</h3>
+<h4 id="command-syntax_7">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cbanrole [channel id/mention/q_name] [role id/mention/q_name]
+:::</p>
+<h4 id="command-description_7">Command Description</h4>
+<p><strong>For the specified channel</strong>, defines a role to be used as the channel
+ban role. Attempting to set a channel ban role that is higher than
+either the command user\'s highest role or the bot\'s highest role will
+result in an error being thrown. Provide no arguments to show the
+current channel ban roles.</p>
+<p>Channel permissions for the channel ban role will be automatically set
+and updated every time the configuration or moderation command is used.</p>
+<p>Channel banned users will have the following permissions disabled for
+the specified channel: <strong>Read Messages</strong>, <strong>View Channel</strong>.</p>
+<h4 id="permissions-needed_7">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="channelmuterole">channelmuterole</h3>
+<h4 id="command-syntax_8">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cmuterole [channel id/mention/q_name] [role id/mention/q_name]
+:::</p>
+<h4 id="command-description_8">Command Description</h4>
+<p><strong>For the specified channel</strong>, defines a role to be used as the mute
+role. Attempting to set a mute role that is higher than either the
+command user\'s highest role or the bot\'s highest role will result in
+an error being thrown. Provide no arguments to show the current mute
+roles.</p>
+<p>Channel permissions for the mute role will be automatically set and
+updated every time the configuration or moderation command is used.</p>
+<p>Muted users will have the following permissions disabled for the
+specified channel: <strong>Send Messages</strong>, <strong>Attach Files</strong>, <strong>Add
+Reactions</strong>, <strong>Use Public Threads</strong>, <strong>Use Private Threads</strong>, <strong>Speak</strong>.</p>
+<h4 id="permissions-needed_8">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="channelimagebanrole">channelimagebanrole</h3>
+<h4 id="command-syntax_9">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cimagebanrole [channel id/mention/q_name] [role id/mention/q_name]
+:::</p>
+<h4 id="command-description_9">Command Description</h4>
+<p><strong>For the specified channel</strong>, defines a role to be used as the image
+ban role. Attempting to set a image ban role that is higher than either
+the command user\'s highest role or the bot\'s highest role will result
+in an error being thrown. Provide no arguments to show the current image
+ban roles.</p>
+<p>Channel permissions for the image ban role will be automatically set and
+updated every time the configuration or moderation command is used.</p>
+<p>Image banned users will have the following permissions disabled for the
+specified channel: <strong>Embed Links</strong>, <strong>Attach Files</strong>.</p>
+<h4 id="permissions-needed_9">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h2 id="moderation-commands-moderation">Moderation Commands {#moderation}</h2>
+<p>These moderation commands are the actual commands that are used to apply
+moderation actions. Each one of the following commands will be very
+similar in nature, and thus the common features of the commands will be
+discussed together in this section, and the specifics of each command in
+subsections.</p>
+<p>Collectively, these commands will be referred to as \"warning
+commands\".</p>
+<p>The list of \"warning commands\" is the following:</p>
+<ul>
+<li>warn</li>
+<li>kick</li>
+<li>ban</li>
+<li>delayban</li>
+<li>mute</li>
+<li>imageban</li>
+<li>cban</li>
+<li>cmute</li>
+<li>cimageban</li>
+</ul>
+<p>By default, warning commands will generate a new case if the <strong>Warning</strong>
+log is active. Upon generating a case, a DM will be sent to the target
+user(s), notifying them of the moderation action that has been triggered
+on them, who issued the moderation action and the specifics of the rules
+that are broken, if applicable. Please refer to the \"Warning Point
+System\" section below for more details about the rules system.</p>
+<p>These commands support being used on multiple users at once: if more
+than one user is targeted by these commands, the parameters will be
+parallelized for all of the users, while multiple cases will be
+generated.</p>
+<p>The following commands also support being set as \"automatically
+expiring after X time\":</p>
+<ul>
+<li>mute</li>
+<li>delayban</li>
+<li>imageban</li>
+<li>cban</li>
+<li>cmute</li>
+<li>cimageban</li>
+</ul>
+<p>This is achieved by <strong>prepending</strong> the target users with a time code.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>This time setting will overwrite the previous setting each time the
+command is run on a specified user: this also applies to converting a
+permanent action into a timed one and vice-versa, without removing the
+role on the target user.
+:::</p>
+<h3 id="common-command-syntax">(Common) Command Syntax</h3>
+<p>::: {.parsed-literal}
+{warning command} [duration timecode] [channel id/mention/q_name
+{only for channel-specific commands}] (user
+id(s)/mention(s)/q_name(s)) [--rule {rule id/name/alias}]
+[--reason {textual description}] [--attachments {urls}] [--padj
+{signed/unsigned number}] [--justification {textual justification}]
+[--skip-case] [--skip-dm]
+:::</p>
+<h3 id="common-command-description">(Common) Command Description</h3>
+<p>Informs the user(s) via DM that they have been warned/muted/banned/etc.,
+including the rule that they broke, the specific reason, attachments,
+and who warned them. These arguments are all optional when running
+warning commands (only the user identifier is required). If applicable,
+the <code>--reason</code> parameter will appear in the Discord native audit log as
+well.</p>
+<p>If all of these arguments are skipped, the message will simply read
+\"You were warned/muted/banned by [moderator].\".</p>
+<p>Channel specific commands which are missing the channel parameter will
+default to being targeted to the current channel. Channels that support
+time-based expiration (see above) will be treated as permanent if the
+timecode is missing.</p>
+<p>You can skip generating a case by appending the <code>--skip-case</code> tag. You
+can skip sending the DM (but still generate a case) by appending the
+<code>--skip-dm</code> tag. <code>--skip-case</code> also implies <code>--skip-dm</code>.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>When <code>--skip-dm</code> is used, a small 🔕 emoji will appear on the
+corresponding notification and warning log embed footer to track the
+fact that the action was \"silent\".
+:::</p>
+<p>Every warning, by default, will be worth a certain number of points
+based on the rule broken (as described in the \"Warning Point System\"
+section below.</p>
+<p>The <code>--padj</code>, or \"points added/subtracted\" argument, is completely
+optional and will not be included in the DM even if it is included in
+the command. Any signed number (\"+\" or \"-\") will be treated as a
+\"delta\" value over the default rule score, while an unsigned number
+will be treated as a fixed, absolute value and used as the actual
+warning score. The justification for points added/subtracted is invalid
+if no points were added or subtracted and should be ignored if the
+moderator does not add or subtract any points.</p>
+<p>Each one of the command parameters has one or more aliases. Here are the
+available aliases:</p>
+<ul>
+<li><code>--rule</code>: <code>--r</code></li>
+<li><code>--reason</code>: <code>--rs</code></li>
+<li><code>--attachments</code>: <code>--attachment</code> <code>--att</code> <code>--a</code></li>
+<li><code>--padj</code>: <code>--pa</code> <code>--p</code></li>
+<li><code>--justification</code>: <code>--just</code> <code>--j</code></li>
+<li><code>--skip-case</code>: <code>--skipcase</code> <code>--nocase</code> <code>--no-case</code></li>
+<li><code>--skip-dm</code>: <code>--skipdm</code> <code>--nodm</code> <code>--no-dm</code></li>
+</ul>
+<p>Running the command as the \"description\" of a Discord attachment (e.g.
+by drag-and-dropping an image over the Discord client) will
+automatically add that object as the warning case attachment, even if
+the <code>--attachments</code> parameter is skipped.</p>
+<p>As said above, these commands will automatically generate a
+server-specific case ID that can be used as reference in other commands.
+An embed including the following information will also be generated and
+put into the warning log:</p>
+<ul>
+<li>Warning Type (warn/mute/ban/etc.)</li>
+<li>Warned user\'s name</li>
+<li>Warned user\'s ID</li>
+<li>Mod Name</li>
+<li>Rule broken</li>
+<li>Reason</li>
+<li>Attachment (as embed\'s image, if applicable)</li>
+<li>Points added/subtracted (optional)</li>
+<li>Justification (only if points are added/subtracted)</li>
+<li>Total unexpired points as of warning for this user</li>
+<li><strong>Suggested moderation action &amp; number of points to next warning
+    threshold</strong></li>
+<li>Case ID &amp; timestamp (in footer)</li>
+</ul>
+<p>If any of the rule, reason or attachments parameters are missing, the
+bot will tag the moderator upon action log generation prompting them to
+fill in the missing arguments using the edit command. The bot will also
+tag the moderator the first time that the user reaches a suggested
+action threshold.</p>
+<p>Some moderation action commands have a \"un-\" version that reverts the
+corresponding moderation action. \"un-\" commands will follow a similar
+syntax but will never generate a new case, hence rendering the set of
+warning parameters (every parameter after the user identifier(s))
+useless.</p>
+<p>What follows is a list of all of the commands in this section. As
+already said, each command description and syntax will be a diff over
+the common syntax shown here.</p>
+<hr />
+<h3 id="warn">warn</h3>
+<h4 id="command-description_10">Command Description</h4>
+<p>warn does nothing but DM the user(s) with their warning. Its purpose is
+to officially record an infraction so that the accumulation of
+infractions can later be used to justify a mute or a ban (see the
+\"Warning Point System\" described later).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="examples_1">Examples</h4>
+<p>::: {.parsed-literal}
+warn \@cycloptux#1543 --rule Discord ToS --reason The user is under
+13 years of age --padj -2 --justification Testing the command
+:::</p>
+<hr />
+<h3 id="kick">kick</h3>
+<h4 id="command-description_11">Command Description</h4>
+<p>Kicks the target user(s) from the current server. The user may be able
+to join the server again through a working invite.</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_10">Permissions Needed</h4>
+<p>| <strong>User</strong>: Kick Members
+| <strong>Bot</strong>: Kick Members</p>
+<hr />
+<h3 id="mute">mute</h3>
+<h4 id="command-description_12">Command Description</h4>
+<p>mute applies the role configured in muterole (or creates a default
+\"Muted Users\" role at the bottom of the role list with no permissions
+if the mute role is not configured) to the target user(s) and sets all
+channel permissions (except for the ones configured as mute chat(s)) for
+the mute role, as described in the previous sections.</p>
+<p>The specific permissions for this command will be set (or
+checked/updated) every time the command is run, hence making the command
+slightly slower than usual. This is normal.</p>
+<p>The mute can be permanent (users will be muted until manual removal) or
+timed (users will be unmuted automatically after a certain time span).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_11">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles, Mute Members
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="ban">ban</h3>
+<h4 id="command-syntax_10">Command Syntax</h4>
+<p>::: {.parsed-literal}
+ban [24/7] ...
+:::</p>
+<h4 id="command-description_13">Command Description</h4>
+<p>ban has one additional, optional argument before the user identifier(s):
+either the number 24, or the number 7. If this argument is omitted, the
+user is banned without their message history being deleted. Otherwise,
+the bot uses the native ban API to delete the last 24 hours or 7 days of
+the banned users\' message history.</p>
+<p>The same parameter can also be passed by using the <code>--days</code> argument
+(e.g. <code>--days 1</code> or <code>--days 7</code>). <code>--days</code> also has the following
+aliases: <code>--msgdays</code> <code>--delmsg</code> <code>--purge</code> <code>--d</code></p>
+<p>This command also works for banning users that are currently not in the
+server, as long as the user is known/cached by the bot. It is advised to
+use the user ID for that.</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_12">Permissions Needed</h4>
+<p>| <strong>User</strong>: Ban Members
+| <strong>Bot</strong>: Ban Members</p>
+<hr />
+<h3 id="timeban">timeban</h3>
+<h4 id="command-description_14">Command Description</h4>
+<p>timeban bans a user from the current server for the specified amount of
+time.</p>
+<p>Once the ban period has ended, as long as the user hasn\'t been
+permanently banned by \"overwriting\" the timed ban with a fully fledged
+ban (or manually re-allowed through unban), the ban will be
+automatically lifted. If the time argument is omitted, it will default
+to 24 hours.</p>
+<p>Please allow for up to 1 extra minute before the ban is actually lifted
+after it has officially expired.</p>
+<p>This command also works for banning users that are currently not in the
+server, as long as the user is known/cached by the bot. It is advised to
+use the user ID for that.</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_13">Permissions Needed</h4>
+<p>| <strong>User</strong>: Ban Members
+| <strong>Bot</strong>: Ban Members</p>
+<hr />
+<h3 id="delayban">delayban</h3>
+<h4 id="command-description_15">Command Description</h4>
+<p>delayban mutes a user for the specified amount of time. If this mute
+status isn\'t removed with cancelban before the timer is out, the user
+will be banned from the server. If the time argument is omitted, it will
+default to 24 hours.</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_14">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles, Mute Members, Ban Members
+| <strong>Bot</strong>: Manage Roles, Mute Members, Ban Members</p>
+<hr />
+<h3 id="imageban">imageban</h3>
+<h4 id="command-description_16">Command Description</h4>
+<p>imageban applies the role configured in imagebanrole (or creates a
+default \"Image Banned Users\" role at the bottom of the role list with
+no permissions if the image ban role is not configured) to the target
+user(s) and sets all channel permissions for the image ban role, as
+described in the previous sections.</p>
+<p>The specific permissions for this command will be set (or
+checked/updated) every time the command is run, hence making the command
+slightly slower than usual. This is normal.</p>
+<p>The image ban can be permanent (users will be image banned until manual
+removal) or timed (users will be image unbanned automatically after a
+certain time span).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_15">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="cban">cban</h3>
+<h4 id="command-description_17">Command Description</h4>
+<p>cban applies the role configured in channelbanrole (or creates a default
+\"#%channel% Banned Users\" role at the bottom of the role list with no
+permissions if the channel ban role is not configured) to the target
+user(s) and sets the channel permissions for the ban role, as described
+in the previous sections.</p>
+<p>The specific permissions for this command will be set (or
+checked/updated) every time the command is run, hence making the command
+slightly slower than usual. This is normal.</p>
+<p>The channel ban can be permanent (users will be channel banned until
+manual removal) or timed (users will be channel unbanned automatically
+after a certain time span).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_16">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="cmute">cmute</h3>
+<h4 id="command-description_18">Command Description</h4>
+<p>cmute applies the role configured in channelmuterole (or creates a
+default \"#%channel% Muted Users\" role at the bottom of the role list
+with no permissions if the channel mute role is not configured) to the
+target user(s) and sets the channel permissions for the mute role, as
+described in the previous sections.</p>
+<p>The specific permissions for this command will be set (or
+checked/updated) every time the command is run, hence making the command
+slightly slower than usual. This is normal.</p>
+<p>The channel mute can be permanent (users will be channel muted until
+manual removal) or timed (users will be channel unmuted automatically
+after a certain time span).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_17">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles, Mute Members
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="cimageban">cimageban</h3>
+<h4 id="command-description_19">Command Description</h4>
+<p>cimageban applies the role configured in channelimagebanrole (or creates
+a default \"#%channel% Image Banned Users\" role at the bottom of the
+role list with no permissions if the channel image ban role is not
+configured) to the target user(s) and sets the channel permissions for
+the image ban role, as described in the previous sections.</p>
+<p>The specific permissions for this command will be set (or
+checked/updated) every time the command is run, hence making the command
+slightly slower than usual. This is normal.</p>
+<p>The channel image ban can be permanent (users will be channel image
+banned until manual removal) or timed (users will be channel image
+unbanned automatically after a certain time span).</p>
+<p>Refer to <code>moderation</code>{.interpreted-text role="ref"} for the exact
+command syntax.</p>
+<h4 id="permissions-needed_18">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="unmute">unmute</h3>
+<h4 id="command-syntax_11">Command Syntax</h4>
+<p>::: {.parsed-literal}
+unmute (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_20">Command Description</h4>
+<p>Lifts the mute role from the target user(s).</p>
+<h4 id="permissions-needed_19">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles, Mute Members
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="unban">unban</h3>
+<h4 id="command-syntax_12">Command Syntax</h4>
+<p>::: {.parsed-literal}
+unban (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_21">Command Description</h4>
+<p>Lifts the ban status from the target user(s).</p>
+<h4 id="permissions-needed_20">Permissions Needed</h4>
+<p>| <strong>User</strong>: Ban Members
+| <strong>Bot</strong>: Ban Members</p>
+<hr />
+<h3 id="cancelban">cancelban</h3>
+<h4 id="command-syntax_13">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cancelban (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_22">Command Description</h4>
+<p>Lifts the mute role from the target user(s), and cancels the
+corresponding timed ban.</p>
+<h4 id="permissions-needed_21">Permissions Needed</h4>
+<p>| <strong>User</strong>: Ban Members
+| <strong>Bot</strong>: Ban Members</p>
+<hr />
+<h3 id="imageunban">imageunban</h3>
+<h4 id="command-syntax_14">Command Syntax</h4>
+<p>::: {.parsed-literal}
+imageunban (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_23">Command Description</h4>
+<p>Lifts the image ban role from the target user(s).</p>
+<h4 id="permissions-needed_22">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="cunmute">cunmute</h3>
+<h4 id="command-syntax_15">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cunmute [channel id/mention/q_name] (user
+id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_24">Command Description</h4>
+<p>Lifts the channel mute role from the target user(s). Omission of the
+channel identifier will result in the current channel being considered
+by the command.</p>
+<h4 id="permissions-needed_23">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles, Mute Members
+| <strong>Bot</strong>: Manage Roles, Mute Members</p>
+<hr />
+<h3 id="cunban">cunban</h3>
+<h4 id="command-syntax_16">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cunban [channel id/mention/q_name] (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_25">Command Description</h4>
+<p>Lifts the channel ban role from the target user(s). Omission of the
+channel identifier will result in the current channel being considered
+by the command.</p>
+<h4 id="permissions-needed_24">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h3 id="cimageunban">cimageunban</h3>
+<h4 id="command-syntax_17">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cimageunban [channel id/mention/q_name] (user
+id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_26">Command Description</h4>
+<p>Lifts the channel image ban role from the target user(s). Omission of
+the channel identifier will result in the current channel being
+considered by the command.</p>
+<h4 id="permissions-needed_25">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Roles
+| <strong>Bot</strong>: Manage Roles</p>
+<hr />
+<h2 id="utility-commands">Utility Commands</h2>
+<p>These moderation commands may be used in conjunction with the rest of
+the moderation module to keep your server clean.</p>
+<h3 id="prune">prune</h3>
+<h4 id="command-syntax_18">Command Syntax</h4>
+<p>::: {.parsed-literal}
+prune (# of messages) [filter item] [--ignore {filter ignore}]
+:::</p>
+<h4 id="command-description_27">Command Description</h4>
+<p>Deletes a certain number of messages from the channel in which the
+command is run. For security reasons, the bot caps this number to
+<strong>250</strong> messages.</p>
+<p>The filter items serve to delete/ignore a subset of messages in the set
+of messages specified by the integer argument. The list of available
+filters is:</p>
+<ul>
+<li><code>images</code>: deletes all images in the set of messages</li>
+<li><code>bots</code>: deletes all messages from bots in the set of messages</li>
+<li><code>links</code>: deletes all messages with links in the set of messages</li>
+<li><code>emojis</code>: deletes all messages with emojis in the set of messages</li>
+<li><code>reactions</code>: deletes all of the reactions off of the messages in the
+    set of messages, <strong>not the messages themselves</strong></li>
+<li><code>embeds</code>: deletes all embeds in the set of messages (this doesn\'t
+    include embeds that are generated by links, see <code>links</code> for that)</li>
+<li><code>text</code>: deletes messages that only contain plain text in the set of
+    messages</li>
+<li><code>invites</code>: deletes messages containing Discord invites in the set of
+    messages</li>
+<li><code>mentions</code>: deletes messages containing a mention to a user, role,
+    \"\@everyone\" or \"\@here\" in the set of messages</li>
+<li><code>{user mention}</code>: deletes messages sent by the specified user in the
+    set of messages</li>
+<li><code>{any text string}</code>: deletes messages containing matching text from
+    the supplied text string in the set of messages (for example, prune
+    100 \"donald trump\" would delete all messages containing \"donald
+    trump\" in the last 100 messages)</li>
+</ul>
+<p>You can add an <code>--ignore</code> tag, combined with the aforementioned filter
+items, to ignore (and not delete) messages meeting that criteria. For
+example \"purge 100 bots --ignore embeds\" would delete all bot
+messages that weren\'t embeds.</p>
+<h4 id="permissions-needed_26">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Messages
+| <strong>Bot</strong>: Manage Messages</p>
+<h4 id="examples_2">Examples</h4>
+<p>::: {.parsed-literal}
+prune 100 purge 250 bots clear 150 \@cycloptux#1543 --ignore images
+:::</p>
+<hr />
+<h3 id="slowmode">slowmode</h3>
+<h4 id="command-syntax_19">Command Syntax</h4>
+<p>::: {.parsed-literal}
+slowmode [time code] [channel id(s)/mention(s)/q_name(s)]
+[--admode]
+:::</p>
+<h4 id="command-description_28">Command Description</h4>
+<p>Sets slow mode for the current, or the selected, channels. This command
+leverages 2 different systems:</p>
+<ul>
+<li>If the slow mode time code is within Discord\'s native slow mode
+    time limit (less than 6 hours), the native slow mode is applied.</li>
+<li>If the slow mode time code exceeds Discord\'s native time limit
+    (more than 6 hours, up to 1 year), the bot will apply an \"extended
+    slow mode\" status.</li>
+</ul>
+<p>The <strong>extended slow mode</strong> applies a minimal native slow mode to make
+sure the \"Slowmode is enabled\" message is shown. At the same time,
+each message sent by an unauthorized user will be automatically deleted,
+and the user will be notified of the applied slow mode.</p>
+<p>The extended slow mode doesn\'t have a higher cap.</p>
+<p>Using the command without any argument will show the current settings
+for the server. Using the command with <strong>0</strong> in place of the time code
+will disable the slow mode for the current, or the selected, channel(s).</p>
+<p>The usage of the optional <code>--admode</code> parameter will enable the
+<strong>Auto-Delete</strong> mode, a.k.a. <strong>Bump Mode</strong>. If the <strong>extended slow
+mode</strong> is active (this mode will not work on native slow mode), each
+message that is <strong>successfully</strong> sent into the slowed channel will
+<strong>also</strong> trigger an automatic deletion of the previous message sent by
+the user while slow mode is active.</p>
+<h4 id="permissions-needed_27">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Messages
+| <strong>Bot</strong>: Manage Messages</p>
+<h4 id="examples_3">Examples</h4>
+<p>::: {.parsed-literal}
+sm 1h45m #slow-channel sm 0 #slow-channel-1 #slow-channel-2 slowmode
+:::</p>
+<hr />
+<h2 id="evasion-actions">Evasion Actions</h2>
+<p>In addition to the active behavior of the warning commands, the
+following commands also support a special \"evasion\" action log:</p>
+<ul>
+<li>mute</li>
+<li>imageban</li>
+<li>cban</li>
+<li>cmute</li>
+<li>cimageban</li>
+</ul>
+<p>An \"evasion\" action happens when a user that is hit with one of these
+moderation actions leaves the server and rejoins while the corresponding
+role is still supposed to be up (either because the timed role still has
+to expire, or the role has been set as permanent by skipping the
+corresponding time code).</p>
+<p>If still applicable, the role will be applied again as soon as the user
+rejoins the server and an \"evasion\" log will appear in the warning
+log.</p>
+<hr />
+<h2 id="warning-point-system">Warning Point System</h2>
+<p>To account for the nature and severity of various infractions, users
+will incur a certain number of points based on which rule they break.
+Moderators will be able to use their judgment to adjust the default
+value of an infraction by adding or subtracting points from the warning.
+At certain point thresholds, it is recommended that certain moderation
+actions (such as a mute or ban) be taken against the user.</p>
+<p>This section will describe the details of the \"default\" warning point
+system backend as well as point out options or commands to configure
+parts of the system.</p>
+<h3 id="point-accumulation-and-thresholds-point-accumulation">Point Accumulation and Thresholds {#point-accumulation}</h3>
+<p>In addition to a user\'s total points being the sum of the points of
+their infractions, the following rules apply to points:</p>
+<ul>
+<li>Warning points expire after <strong>90 days</strong>, at which point the value of
+    the infraction decreases to <strong>1</strong>.</li>
+<li>The first warning for a particular rule is considered to be a \"soft
+    warning\" and worth half points (e.g., if a user broke the toxic
+    attitudes rule and the NSFW rule, both infractions would be recorded
+    at half points, but breaking the toxic attitudes rule twice would
+    result in the second infraction being recorded at full points). This
+    behavior can be configured with <code>half-logic</code>{.interpreted-text
+    role="ref"}.</li>
+<li>Each case score can be manually adjusted (<code>--padj</code>) but it must
+    always be >= 0. Validation rules are in place for a score not to be
+    negative. Any adjustment that brings the score to a negative value
+    will make the score account for 0.</li>
+<li>In order to preserve the severity of a banned user\'s warning
+    history, points for banned users will not expire <strong>while the user is
+    banned</strong>. Unbanning a user will make the points behave as usual
+    again.</li>
+</ul>
+<p>The following thresholds apply to the point total of a user. A user
+reaching one of these thresholds will cause the action log message
+related to that warning to include a tag of the issuing moderator
+informing him/her of the user reaching the threshold.</p>
+<ul>
+<li>18 <strong>unexpired</strong> points: The bot will recommend in the action log
+    that the user in question be muted.</li>
+<li>27 <strong>unexpired</strong> points: The bot will recommend in the action log
+    that the user in question be banned.</li>
+<li>54 points <strong>total, even if expired</strong>: The bot will recommend in the
+    action log that the user in question be banned. This is referred to
+    as the \"absolute ban threshold\".</li>
+<li><em>(not implemented yet)</em> <strong>Three channel specific warnings</strong>: The bot
+    will recommend in the action log that the user be banned from that
+    specific channel, regardless of the total point value. A user can
+    simultaneously reach this threshold and the point thresholds, and
+    the message in the action log should be constructed accordingly.</li>
+</ul>
+<p>The justification for these thresholds are as follows:</p>
+<ul>
+<li>Rules are given point values based on a severity from 1 to 10.</li>
+<li>Since the first infraction is worth half points, only even numbers
+    should be used for rule values.</li>
+<li>6 is the average rule value.</li>
+<li>A \"full warning\" (i.e., one soft warning and one regular warning)
+    would be 9 points on average.</li>
+<li>Two \"full warnings\" should result in a mute, and three should
+    result in a ban.</li>
+<li>The absolute ban threshold is twice the ban threshold, a
+    considerable feat even in one\'s lifetime of the server.</li>
+</ul>
+<h3 id="default-rules-and-points">Default Rules and Points</h3>
+<p>Ideally, users would configure their own rules and point values.
+However, there are definitely some rules that are common among servers
+and can be provided as a default hard-coded table. The default table is
+provided to use as a base:</p>
+<p>+-------+---+---------------------------------------------------------+---+
+| Rule  | R | Rule Description                                        | R |
+| Name  | u |                                                         | u |
+|       | l |                                                         | l |
+|       | e |                                                         | e |
+|       | A |                                                         | P |
+|       | l |                                                         | o |
+|       | i |                                                         | i |
+|       | a |                                                         | n |
+|       | s |                                                         | t |
+|       |   |                                                         | s |
++=======+===+=========================================================+===+
+| No    | T | Please behave and do not make a nuisance of yourself on | 6 |
+| Toxic | o | the server, including \"trolling\" or otherwise being   |   |
+| Atti  | x | disruptive or making others feel uncomfortable.         |   |
+| tudes | i |                                                         |   |
+|       | c |                                                         |   |
+|       | A |                                                         |   |
+|       | t |                                                         |   |
+|       | t |                                                         |   |
+|       | i |                                                         |   |
+|       | t |                                                         |   |
+|       | u |                                                         |   |
+|       | d |                                                         |   |
+|       | e |                                                         |   |
+|       | s |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| No    | O | Please refrain from posting offensive content such as   | 8 |
+| Offe  | f | politics, religion, acts of violence, rape, suicide,    |   |
+| nsive | f | school shootings, and other serious topics. Also keep   |   |
+| Con   | e | in mind that hate speech including racial slurs or      |   |
+| tent, | n | derivatives thereof, sexist or homophobic statements,   |   |
+| Hate  | s | and other similar types of behavior is not tolerated on |   |
+| S     | i | this server.                                            |   |
+| peech | v |                                                         |   |
+| or    | e |                                                         |   |
+| Sens  | C |                                                         |   |
+| itive | o |                                                         |   |
+| Mat   | n |                                                         |   |
+| erial | t |                                                         |   |
+|       | e |                                                         |   |
+|       | n |                                                         |   |
+|       | t |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| No    | H | This applies both to DMs and public chat channels, and  | 8 |
+| Haras | a | includes insults or other actions that target a         |   |
+| sment | r | specific user in order to make them feel uncomfortable  |   |
+|       | a | or unwelcome.                                           |   |
+|       | s |                                                         |   |
+|       | s |                                                         |   |
+|       | m |                                                         |   |
+|       | e |                                                         |   |
+|       | n |                                                         |   |
+|       | t |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| Be    | A | While measured discussion and questions regarding why   | 8 |
+| Respe | r | you were warned for something is fine, attacking the    |   |
+| ctful | g | moderators or becoming belligerent over being warned    |   |
+| to    | u | will likely result in another warning. You are welcome  |   |
+| Moder | i | to provide feedback in the relevant channels on the     |   |
+| ators | n | Discord server if your concern is general, or you may   |   |
+|       | g | DM a moderator or administrator regarding your warning  |   |
+|       |   | if your concern is specific.                            |   |
++-------+---+---------------------------------------------------------+---+
+| Do    | I | Encouraging the breaking of rules, inciting others to   | 1 |
+| Not   | n | be blatantly rude and offensive, or otherwise promoting | 0 |
+| I     | c | and/or encouraging conflicts between other members will |   |
+| ncite | i | result in punitive measures for both rulebreakers and   |   |
+| O     | t | those encouraging rule breaking.                        |   |
+| thers | e |                                                         |   |
+| to    | m |                                                         |   |
+| Break | e |                                                         |   |
+| The   | n |                                                         |   |
+| Rules | t |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| Do    | S | Spam is a broad term used to define unsolicited or      | 8 |
+| Not   | p | repetitious messages received electronically. Spamming  |   |
+| Spam  | a | is prohibited on this server and in DMs to server       |   |
+| the   | m | members. This includes image spam, text/link/emoji      |   |
+| S     |   | spam, and tag spam.                                     |   |
+| erver |   |                                                         |   |
+| or    |   |                                                         |   |
+| its   |   |                                                         |   |
+| Me    |   |                                                         |   |
+| mbers |   |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| Do    | P | Please do not share other people's personal information | 8 |
+| Not   | e | such as real names, addresses, other social media       |   |
+| Share | r | accounts, etc. without their permission. Sharing this   |   |
+| Other | s | with malicious intent may be construed as doxxing,      |   |
+| Peo   | o | which will result in an instant ban.                    |   |
+| ple's | n |                                                         |   |
+| Per   | a |                                                         |   |
+| sonal | l |                                                         |   |
+| I     | I |                                                         |   |
+| nform | n |                                                         |   |
+| ation | f |                                                         |   |
+|       | o |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| No    | A | Advertisement of other discord servers, giveaways,      | 6 |
+| A     | d | unofficial tournaments, or one's own social             |   |
+| dvert | v | media/content creation channels is prohibited without   |   |
+| ising | e | approval from a Discord Moderator. This includes        |   |
+|       | r | advertisement in group channels as well as in Direct    |   |
+|       | t | Messages (DMs) to server members.                       |   |
+|       | i |                                                         |   |
+|       | s |                                                         |   |
+|       | i |                                                         |   |
+|       | n |                                                         |   |
+|       | g |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| F     | C | Please remember to read channel descriptions and pins,  | 6 |
+| ollow | h | and comply with channel specific rules.                 |   |
+| Ch    | a |                                                         |   |
+| annel | n |                                                         |   |
+| Rules | n |                                                         |   |
+|       | e |                                                         |   |
+|       | l |                                                         |   |
+|       | R |                                                         |   |
+|       | u |                                                         |   |
+|       | l |                                                         |   |
+|       | e |                                                         |   |
+|       | s |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| Viol  | G | Violation of the game's terms of service, especially    | 5 |
+| ating | a | hacking or modding the game, will result in an instant  | 4 |
+| Game  | m | ban from the Discord server and possibly within the     |   |
+| ToS   | e | game as well.                                           |   |
+|       | T |                                                         |   |
+|       | o |                                                         |   |
+|       | S |                                                         |   |
++-------+---+---------------------------------------------------------+---+
+| Viol  | D | Please keep in mind that Discord itself has specific    | 1 |
+| ating | i | behavioral and content guidelines that you can read at  | 0 |
+| Di    | s | <a href="https://discord.com/guidelines">https://discord.com/guidelines</a>. Some of these         |   |
+| scord | c | violations may result in an instant ban. Of particular  |   |
+| ToS   | o | note are the following:                                 |   |
+|       | r |                                                         |   |
+|       | d | -   You must be at least 13 years of age to use Discord |   |
+|       | T | -   Sharing sexually explicit content of minors, both   |   |
+|       | o |     real and animated/drawn, is prohibited              |   |
+|       | S | -   Glorifying self harm or suicide                     |   |
+|       |   | -   Sharing pirated or illegally acquired content is    |   |
+|       |   |     prohibited                                          |   |
++-------+---+---------------------------------------------------------+---+
+| User  | U | Your profile picture, status message, and display name  | 4 |
+| Pr    | s | (i.e., your server nickname if you have one set, or     |   |
+| ofile | e | your actual username if not) should be compliant with   |   |
+| Must  | r | the rules of the server. In addition, your display name |   |
+| Meet  | P | must not imitate another user and meet the following    |   |
+| Ce    | r | criteria:                                               |   |
+| rtain | o |                                                         |   |
+| Cri   | f | -   Easily taggable/readable                            |   |
+| teria | i | -   Contains no inappropriate content                   |   |
+|       | l | -   Does not deliberately hoist you to the top of the   |   |
+|       | e |     online list                                         |   |
++-------+---+---------------------------------------------------------+---+
+| No    | N | Dissemination of NSFW content in any form is prohibited | 8 |
+| NSFW  | S | in all chats and includes excessive gore/extreme        |   |
+| Co    | F | violence, content related to self harm or harming       |   |
+| ntent | W | others, pornography or excessively sexual content. Any  |   |
+|       |   | in game art is exempt from this rule unless otherwise   |   |
+|       |   | noted.This rule applies to both images and text,        |   |
+|       |   | although some leniency will be allowed for text         |   |
+|       |   | content.                                                |   |
++-------+---+---------------------------------------------------------+---+</p>
+<hr />
+<h2 id="warning-system-commands">Warning System Commands</h2>
+<p>This section will describe all those commands that are needed to use
+(and configure, to a certain extent) the warning system, as described in
+the previous section.</p>
+<hr />
+<h3 id="warnhistory">warnhistory</h3>
+<h4 id="command-syntax_20">Command Syntax</h4>
+<p>::: {.parsed-literal}
+warnhistory (user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_29">Command Description</h4>
+<p>Shows the warning history of one (or more) user(s) in reverse
+chronological order. By default, this only includes a short summary for
+each warning. Warn histories longer than 2000 characters are paginated
+via reaction \"buttons\".</p>
+<h4 id="examples_4">Examples</h4>
+<p>::: {.parsed-literal}
+warnhistory 123456789098765432 history \@cycloptux#1543
+:::</p>
+<hr />
+<h3 id="case">case</h3>
+<h4 id="command-syntax_21">Command Syntax</h4>
+<p>::: {.parsed-literal}
+case (case id(s))
+:::</p>
+<h4 id="command-description_30">Command Description</h4>
+<p>Prints a detailed log embed for the selected case(s).</p>
+<h4 id="examples_5">Examples</h4>
+<p>::: {.parsed-literal}
+case 2 case 12 15 34
+:::</p>
+<hr />
+<h3 id="edit">edit</h3>
+<h4 id="command-syntax_22">Command Syntax</h4>
+<p>::: {.parsed-literal}
+edit (case id) [--rule {rule id/name/alias}] [--reason {textual
+description}] [--attachments {urls}] [--padj {signed/unsigned
+number}] [--justification {textual justification}] [--skip-dm]
+:::</p>
+<h4 id="command-description_31">Command Description</h4>
+<p>Edits an existing case. You cannot edit a case type (e.g. turning a warn
+into a mute). Only the original case owner (the issuing moderator) or a
+server administrator can edit a case.</p>
+<p>Editing a case will generate a new warning log entry with the new
+details. The old entry will be edited with a clickable link that will
+bring you to the new edit.</p>
+<p>Please refer to <code>moderation</code>{.interpreted-text role="ref"} for more
+details about the individual parameters and their aliases.</p>
+<h4 id="examples_6">Examples</h4>
+<p>::: {.parsed-literal}
+edit 3 --reason Spamming phishing links in the #general channel
+--padj +4 --just For repeated spamming despite being warned about it
+:::</p>
+<hr />
+<h3 id="delete">delete</h3>
+<h4 id="command-syntax_23">Command Syntax</h4>
+<p>::: {.parsed-literal}
+delete (case id(s))
+:::</p>
+<h4 id="command-description_32">Command Description</h4>
+<p>Deletes one (or more) existing case(s). Deleted cases are never actually
+removed from the bot memory and can be restored in the future if you
+remember the case ID(s).</p>
+<h4 id="permissions-needed_28">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<h4 id="examples_7">Examples</h4>
+<p>::: {.parsed-literal}
+delete 3 4 10
+:::</p>
+<hr />
+<h3 id="restore">restore</h3>
+<h4 id="command-syntax_24">Command Syntax</h4>
+<p>::: {.parsed-literal}
+restore (case id(s))
+:::</p>
+<h4 id="command-description_33">Command Description</h4>
+<p>Restores one (or more) previously deleted case(s).</p>
+<h4 id="permissions-needed_29">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<h4 id="examples_8">Examples</h4>
+<p>::: {.parsed-literal}
+restore 3 4
+:::</p>
+<hr />
+<h3 id="listrules">listrules</h3>
+<h4 id="command-syntax_25">Command Syntax</h4>
+<p>::: {.parsed-literal}
+listrules [rule id/name/alias] [--server] [--channel [channel
+id/mention/q_name]] [--mod]
+:::</p>
+<h4 id="command-description_34">Command Description</h4>
+<p>Lists the rules (both custom and default sets) of the server in order by
+Rule ID, including the Rule Title and Description for each rule. Provide
+an ID/Name/Alias to show a specific rule only. By default, the list will
+show both server wide and channel-specific rules. Use <code>--server</code> to
+limit the rules to the server wide ones. Use <code>--channel</code> with a channel
+tag to show only channel specific rules for that channel (omitting the
+channel identifier will show the rules for the current channel).</p>
+<p>The rule alias and points will be shown if a moderator or administrator
+appends the <code>--mod</code> parameter to the command.</p>
+<h4 id="examples_9">Examples</h4>
+<p>::: {.parsed-literal}
+listrules listrules --channel #general listrules NSFW --mod
+:::</p>
+<hr />
+<h3 id="addrule">addrule</h3>
+<h4 id="command-syntax_26">Command Syntax</h4>
+<p>::: {.parsed-literal}
+addrule (--name {rule name}) (--alias {rule alias}) (--description
+{rule description}) (--points {rule points (number)}) [--channel
+[channel id/mention/q_name]]
+:::</p>
+<h4 id="command-description_35">Command Description</h4>
+<p>Adds a custom rule to the rules list. Adding a custom rule generates a
+server-specific rule ID for that rule automatically, starting from
+<code>s_1</code>. Adding a channel identifier will assign that rule as being
+channel-specific (this is primarily used to track how close a user is to
+reaching a channel ban threshold)</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Channel ban thresholds are not implemented yet.
+:::</p>
+<h4 id="permissions-needed_30">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="deleterule">deleterule</h3>
+<h4 id="command-syntax_27">Command Syntax</h4>
+<p>::: {.parsed-literal}
+delrule (rule(s) id/name/alias)
+:::</p>
+<h4 id="command-description_36">Command Description</h4>
+<p>Deletes a custom rule from the list of rules. Use toggleglobalrule to
+hide a default rule from the list of rules (see below).</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>In order to preserve the history of users that were previously moderated
+according to a specific rule, \"deleted\" rules are never actually
+deleted. \"Deleted\" rules are instead <strong>hidden</strong>, and running the
+deleterule again on the same rule ID will restore the rule in its
+previous, visible state.
+:::</p>
+<h4 id="permissions-needed_31">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="toggleglobalrule">toggleglobalrule</h3>
+<h4 id="command-syntax_28">Command Syntax</h4>
+<p>::: {.parsed-literal}
+toggleglobalrule (rule(s) id/name/alias)
+:::</p>
+<h4 id="command-description_37">Command Description</h4>
+<p>Deletes (hides) a default native rule from the list of rules. Use
+deleterule to hide a custom rule from the list of rules (see above).</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>In order to preserve the history of users that were previously moderated
+according to a specific rule, \"deleted\" rules are never actually
+deleted. \"Deleted\" rules are instead <strong>hidden</strong>, and running the
+toggleglobalrule again on the same rule ID will restore the rule in its
+previous, visible state.
+:::</p>
+<h4 id="permissions-needed_32">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="editrule">editrule</h3>
+<h4 id="command-syntax_29">Command Syntax</h4>
+<p>::: {.parsed-literal}
+editrule (rule id/name/alias) [--name {rule name}] [--alias {rule
+alias}] [--description {rule description}] [--points {rule points
+(number)}] [--channel [-/channel id/mention/q_name]]
+:::</p>
+<h4 id="command-description_38">Command Description</h4>
+<p>Updates one or more fields of an existing rule to the new values.</p>
+<p>Use <code>--channel -</code> to convert a channel-specific rule into a server wide
+rule.</p>
+<h4 id="permissions-needed_33">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="halflogic-half-logic">halflogic {#half-logic}</h3>
+<h4 id="command-syntax_30">Command Syntax</h4>
+<p>::: {.parsed-literal}
+halflogic (none/first/first-with-points/each)
+:::</p>
+<h4 id="command-description_39">Command Description</h4>
+<p>As described in <code>point-accumulation</code>{.interpreted-text role="ref"}, the
+first warning for a particular rule is considered to be a \"soft
+warning\" and worth half points by default. This behavior can be
+configured as follows:</p>
+<ul>
+<li><strong>none</strong>: Don\'t halve the points for any warnings.</li>
+<li><strong>first</strong>: Only halve the first warning a user receives
+    (server-wide).</li>
+<li><strong>first-with-points</strong>: Only halve the first warning a user receives
+    <strong>excluding 0-points rules warnings</strong> (server-wide).</li>
+<li><strong>each</strong>: Halve the first warning a user receives under each rule
+    (default).</li>
+</ul>
+<p>Using the command with no arguments will show the current settings for
+the server.</p>
+<h4 id="permissions-needed_34">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="warnexpiry-not-implemented-yet">warnexpiry <em>(not implemented yet)</em></h3>
+<h4 id="command-syntax_31">Command Syntax</h4>
+<p>::: {.parsed-literal}
+warnexpiry (# of days)
+:::</p>
+<h4 id="command-description_40">Command Description</h4>
+<p>Sets the number of days after which warnings will expire for a
+particular server. Provide no arguments to reset to the default.</p>
+<h4 id="permissions-needed_35">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="expirypoints-not-implemented-yet">expirypoints <em>(not implemented yet)</em></h3>
+<h4 id="command-syntax_32">Command Syntax</h4>
+<p>::: {.parsed-literal}
+expirypoints (# of points)
+:::</p>
+<h4 id="command-description_41">Command Description</h4>
+<p>Sets the number of points a warning will decay to after they expire.
+Provide no arguments to reset to the default.</p>
+<p>Any warnings worth fewer points than the expirypoints value will not
+decay.</p>
+<h4 id="permissions-needed_36">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+<hr />
+<h3 id="setthreshold-not-implemented-yet">setthreshold <em>(not implemented yet)</em></h3>
+<h4 id="command-syntax_33">Command Syntax</h4>
+<p>::: {.parsed-literal}
+setthreshold (\"mute\"/\"ban\"/\"absban\") (# of points)
+:::</p>
+<h4 id="command-description_42">Command Description</h4>
+<p>Sets the number of points at which a mute, ban, or \"absolute ban\" is
+recommended. Integrity checks should ensure that mute points \&lt; ban
+points \&lt; absolute ban points.</p>
+<h4 id="permissions-needed_37">Permissions Needed</h4>
+<p>| <strong>User</strong>: Manage Server</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../automoderator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Automoderator" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Automoderator
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../permissions/" class="md-footer__link md-footer__link--next" aria-label="Next: Permissions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Permissions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

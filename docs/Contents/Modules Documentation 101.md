@@ -33,15 +33,12 @@ parenthesis indicates whether that parameter or string is mandatory,
 optional or just a simple description (hence, not an actual part of the
 command).
 
-  ------------------------
-  Type       Meaning
-  ---------- -------------
-  `()`       Mandatory
 
-  `[]`       Optional
-
-  `{}`       Description
-  ------------------------
+| Type | Meaning     |
+|------|-------------|
+| `()` | Mandatory   |
+| `[]` | Optional    |
+| `{}` | Description |
 
 Names and Double Quotes
 -----------------------
@@ -60,42 +57,32 @@ Time Format Code {#timecode}
 
 ### Standard Time Code
 
-Time durations are indicated through the use of a standard time format,
+Time is indicated through the use of a standard time format,
 which consists of 5 (or 6) time bits:
 
-  ----------------------
-  Time Bit   Meaning
-  ---------- -----------
-  `mo`       month(s)
+| Time Bit | Meaning   |
+|----------|-----------|
+| `mo`     | month(s)  |
+| `w`      | week(s)   |
+| `d`      | day(s)    |
+| `h`      | hour(s)   |
+| `m`      | minute(s) | 
 
-  `w`        week(s)
-
-  `d`        day(s)
-
-  `h`        hour(s)
-
-  `m`        minute(s)
-  ----------------------
 
 If specified, the time code may allow an extra bit, `s` for second(s).
 Each time bit has to be prepended with an actual (positive, integer)
 number, or omitted if the corresponding time bit would be set to 0.
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!! warning "Important Note"
 
-**Important Note**: While some flexibility is allowed in time codes, be
-sure to write the time bits in the correct order:
-`mo > w > d > h > m > s`
-:::
+    While some flexibility is allowed in time codes, be
+    sure to write the time bits in the correct order:
+    
+    `mo > w > d > h > m > s`
 
 That said, a typical time code would be like this:
 
-::: {.parsed-literal}
-2mo6h40m = 2 months, 6 hours, 40 minutes
-:::
+`2mo6h40m = 2 months, 6 hours, 40 minutes`
 
 ### Timestamp Mentions
 
@@ -114,21 +101,14 @@ This may be particularly useful in some use cases when trying to trigger
 an action at a certain time of a day (e.g. reminders, repeating
 messages, scheduled commands, etc.).
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! Tip "Tip"
 
-You can easily create such timestamp mentions in a Discord-ready syntax
-using [HammerTime](https://hammertime.djdavid98.art/) by
-[DJDavid98](https://djdavid98.art).
-:::
+    You can easily create such timestamp mentions in a Discord-ready syntax
+    using [HammerTime](https://hammertime.djdavid98.art/) by
+    [DJDavid98](https://djdavid98.art).
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!! warning "Warning"
 
-Using timestamp mentions as time code will only work if the timestamp
-you are using refers to a future date.
-:::
+    Using timestamp mentions as time code will only work if the timestamp
+    you are using refers to a future date.
+

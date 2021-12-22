@@ -79,7 +79,7 @@ to filter the specific messages they are interested into, indicating:
     for the region status transition and/or server status transition:
     e.g. `#r_01` `#r_02` `s_02` \...
 
-![Azur Lane Status Feed Example](../images/azurlane_image_00.png){.align-center
+![Azur Lane Status Feed Example](../assets/images/azurlane_image_00.png){.align-center
 width="600px"}
 
 ### azurhook

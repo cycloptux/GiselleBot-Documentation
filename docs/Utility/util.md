@@ -51,10 +51,10 @@ cached and used to refer to the original image.
 Here\'s an example of an output of this command, and the corresponding
 censored image:
 
-![NSFW Images Detection Output Example](../images/util_image_00.png){.align-center
+![NSFW Images Detection Output Example](../assets/images/util_image_00.png){.align-center
 width="600px"}
 
-![NSFW Images Detection Censored Image Example](../images/util_image_01.jpg){.align-center}
+![NSFW Images Detection Censored Image Example](../assets/images/util_image_01.jpg){.align-center}
 
 ::: {.seealso}
 For those of you with a background in image processing - yes, **Lenna**
