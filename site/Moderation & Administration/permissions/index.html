@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#permissions-system" class="md-skip">
           Skip to content
         </a>
       
@@ -315,8 +315,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Soical%20Networks/instagram/" class="md-tabs__link">
-        Soical Networks
+      <a href="../../Social%20Networks/instagram/" class="md-tabs__link">
+        Social Networks
       </a>
     </li>
   
@@ -863,8 +863,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../automoderator/" class="md-nav__link">
-        Automoderator
+      <a href="../moderation-auto/" class="md-nav__link">
+        Moderation auto
       </a>
     </li>
   
@@ -877,8 +877,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../moderation/" class="md-nav__link">
-        Moderation
+      <a href="../moderation-manual/" class="md-nav__link">
+        Moderation manual
       </a>
     </li>
   
@@ -900,9 +900,350 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Permissions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Permissions
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-module-permissions" class="md-nav__link">
+    Default Module Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Module Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-to-everyone" class="md-nav__link">
+    Available to everyone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-debugging" class="md-nav__link">
+    Permissions Debugging
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verbose" class="md-nav__link">
+    verbose
+  </a>
+  
+    <nav class="md-nav" aria-label="verbose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-users-permissions" class="md-nav__link">
+    Roles and Users Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles and Users Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permshow" class="md-nav__link">
+    permshow
+  </a>
+  
+    <nav class="md-nav" aria-label="permshow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permshowmod" class="md-nav__link">
+    permshowmod
+  </a>
+  
+    <nav class="md-nav" aria-label="permshowmod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permenablemod" class="md-nav__link">
+    permenablemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permenablemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permdisablemod" class="md-nav__link">
+    permdisablemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permdisablemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permtogglemod" class="md-nav__link">
+    permtogglemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permtogglemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-overrides" class="md-nav__link">
+    Channel Overrides
+  </a>
+  
+    <nav class="md-nav" aria-label="Channel Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chanpermtoggle" class="md-nav__link">
+    chanpermtoggle
+  </a>
+  
+    <nav class="md-nav" aria-label="chanpermtoggle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chanpermtogglemode" class="md-nav__link">
+    chanpermtogglemode
+  </a>
+  
+    <nav class="md-nav" aria-label="chanpermtogglemode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -994,14 +1335,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Soical Networks
+          Social Networks
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Soical Networks" data-md-level="1">
+      <nav class="md-nav" aria-label="Social Networks" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Soical Networks
+          Social Networks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1011,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/instagram/" class="md-nav__link">
+      <a href="../../Social%20Networks/instagram/" class="md-nav__link">
         Instagram
       </a>
     </li>
@@ -1025,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/reddit/" class="md-nav__link">
+      <a href="../../Social%20Networks/reddit/" class="md-nav__link">
         Reddit
       </a>
     </li>
@@ -1039,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/rss/" class="md-nav__link">
+      <a href="../../Social%20Networks/rss/" class="md-nav__link">
         Rss
       </a>
     </li>
@@ -1053,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/twitch/" class="md-nav__link">
+      <a href="../../Social%20Networks/twitch/" class="md-nav__link">
         Twitch
       </a>
     </li>
@@ -1067,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/twitter/" class="md-nav__link">
+      <a href="../../Social%20Networks/twitter/" class="md-nav__link">
         Twitter
       </a>
     </li>
@@ -1081,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Soical%20Networks/youtube/" class="md-nav__link">
+      <a href="../../Social%20Networks/youtube/" class="md-nav__link">
         Youtube
       </a>
     </li>
@@ -1261,6 +1602,331 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-module-permissions" class="md-nav__link">
+    Default Module Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Module Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-to-everyone" class="md-nav__link">
+    Available to everyone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-debugging" class="md-nav__link">
+    Permissions Debugging
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verbose" class="md-nav__link">
+    verbose
+  </a>
+  
+    <nav class="md-nav" aria-label="verbose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-users-permissions" class="md-nav__link">
+    Roles and Users Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles and Users Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permshow" class="md-nav__link">
+    permshow
+  </a>
+  
+    <nav class="md-nav" aria-label="permshow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_1" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_1" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permshowmod" class="md-nav__link">
+    permshowmod
+  </a>
+  
+    <nav class="md-nav" aria-label="permshowmod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_2" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_2" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permenablemod" class="md-nav__link">
+    permenablemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permenablemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_3" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_3" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permdisablemod" class="md-nav__link">
+    permdisablemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permdisablemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_4" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_4" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permtogglemod" class="md-nav__link">
+    permtogglemod
+  </a>
+  
+    <nav class="md-nav" aria-label="permtogglemod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_5" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_5" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-overrides" class="md-nav__link">
+    Channel Overrides
+  </a>
+  
+    <nav class="md-nav" aria-label="Channel Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chanpermtoggle" class="md-nav__link">
+    chanpermtoggle
+  </a>
+  
+    <nav class="md-nav" aria-label="chanpermtoggle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_6" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_6" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chanpermtogglemode" class="md-nav__link">
+    chanpermtogglemode
+  </a>
+  
+    <nav class="md-nav" aria-label="chanpermtogglemode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-syntax_7" class="md-nav__link">
+    Command Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-description_7" class="md-nav__link">
+    Command Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1276,10 +1942,198 @@
 </a>
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em></h1>
-<p><em>Line 1 in Markdown file:</em> <strong>Missing end of comment tag</strong> </p>
-<pre><code class="language-python">Permissions System {#permissions}
-</code></pre>
+<h1 id="permissions-system">Permissions System</h1>
+<p>As soon as you invite the bot to your server, a few modules will be
+immediately available to all of your members. The restricted modules, on
+the other hand, will only be available to <strong>server managers</strong> (users
+with \"Manage Server\" permissions).</p>
+<p>This module lets server managers authorize server members to use any of
+the bot\'s modules, on a module basis.</p>
+<p>Each module can be enabled for a list of roles and/or individual users,
+so that authorized members will immediately have access to all of the
+commands contained in said module. Discord permissions checks (e.g.
+\"Manage Messages\") will still apply and take precedence, where
+applicable. The list of Discord permissions needed to run each command
+is written below each command within this documentation.</p>
+<p>Modules can also be <strong>completely disabled</strong> within a server, which means
+not even server managers will be able to use them unless the module is
+re-enabled (see <code class="interpreted-text" role="ref">permtogglemod</code>).</p>
+<p><strong>Before</strong> role permissions are checked, another layer of permissions
+are checked <strong>for non-manager members</strong>: channel overrides. Each module
+can be locked to be only run <strong>within</strong> a specified set of channels
+(<strong>whitelist</strong> mode) or <strong>outside</strong> a specified set of channels
+(<strong>blacklist</strong> mode). See <code>channel-overrides</code>{.interpreted-text
+role="ref"}.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>A small subset of commands ignores these limitations and can <strong>always</strong>
+be run by everyone in the server, as long as the whole module isn\'t
+disabled. These commands have a dedicated way of setting their
+permissions, which is usually specified in the dedicated module page.
+This particular set contains the following commands:
+<code class="interpreted-text" role="ref">verbose</code>, <code>emojisubmit</code>{.interpreted-text
+role="ref"}, <code class="interpreted-text" role="ref">bid</code>,
+<code class="interpreted-text" role="ref">listrules</code>, <code>submit</code>{.interpreted-text
+role="ref"}, <code class="interpreted-text" role="ref">lsar</code>,
+<code class="interpreted-text" role="ref">iam</code> and <code>iamnot</code>{.interpreted-text
+role="ref"}.
+:::</p>
+<hr />
+<h2 id="default-module-permissions">Default Module Permissions</h2>
+<p>Here\'s the list of modules that are automatically enabled for everyone
+as soon as the bot joins a server and those that are locked to server
+managers only. Internal module permissions and in-Discord permissions
+checks (e.g. \"Manage Messages\") still apply.</p>
+<h3 id="available-to-everyone">Available to everyone</h3>
+<ul>
+<li>alarm</li>
+<li>azurlane</li>
+<li>currency</li>
+<li>digimon</li>
+<li>games</li>
+<li>help</li>
+<li>mahjongsoul</li>
+<li>miscellaneous</li>
+<li>music</li>
+<li>raidroom</li>
+<li>reactions</li>
+<li>scheduler</li>
+<li>social</li>
+<li>trivia</li>
+<li>twitch</li>
+<li>util</li>
+<li>youtube</li>
+</ul>
+<hr />
+<h2 id="permissions-debugging">Permissions Debugging</h2>
+<h3 id="verbose">verbose</h3>
+<h4 id="command-syntax">Command Syntax</h4>
+<p>::: {.parsed-literal}
+verbose
+:::</p>
+<h4 id="command-description">Command Description</h4>
+<p>Toggles <strong>verbose mode</strong> for the <strong>current user</strong> in the <strong>current
+server</strong>.</p>
+<p>Users in verbose mode will have send a Direct Message to them whenever
+one of their commands is rejected silently for a permissions issue.</p>
+<p>In addition, users incorrectly typing a command may receive a DM with a
+suggestion of a correct command they actually have access to (e.g.
+typing bang as moderator will suggest ban, while typing the same
+incorrect command as normal user will suggest urban).</p>
+<p>The output of verbose mode is <strong>always sent via DM</strong>, hence it can be
+activated on a user\'s basis on each specific server without messing
+with the server\'s activities.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>This command is always available to everyone.
+:::</p>
+<hr />
+<h2 id="roles-and-users-permissions">Roles and Users Permissions</h2>
+<h3 id="permshow">permshow</h3>
+<h4 id="command-syntax_1">Command Syntax</h4>
+<p>::: {.parsed-literal}
+pes
+:::</p>
+<h4 id="command-description_1">Command Description</h4>
+<p>Shows a summary of all the modules that are available within the current
+Discord server, and the corresponding permissions.</p>
+<hr />
+<h3 id="permshowmod">permshowmod</h3>
+<h4 id="command-syntax_2">Command Syntax</h4>
+<p>::: {.parsed-literal}
+pesm (module name)
+:::</p>
+<h4 id="command-description_2">Command Description</h4>
+<p>Shows a detailed view of the permissions (users, roles, channel
+overrides) for a single module.</p>
+<h4 id="examples">Examples</h4>
+<p>::: {.parsed-literal}
+pesm moderation
+:::</p>
+<hr />
+<h3 id="permenablemod">permenablemod</h3>
+<h4 id="command-syntax_3">Command Syntax</h4>
+<p>::: {.parsed-literal}
+peem (module name) (role and/or user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_3">Command Description</h4>
+<p>Enable the selected module for the specified users and/or groups. The
+bot will seamlessly understand if the entity you are using is a user or
+a role.</p>
+<h4 id="examples_1">Examples</h4>
+<p>::: {.parsed-literal}
+peem moderation \"Discord Moderators\" peem administration \@Staff
+:::</p>
+<hr />
+<h3 id="permdisablemod">permdisablemod</h3>
+<h4 id="command-syntax_4">Command Syntax</h4>
+<p>::: {.parsed-literal}
+pedm (module name) (role and/or user id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_4">Command Description</h4>
+<p>Disable the selected module for the specified users and/or groups. The
+bot will seamlessly understand if the entity you are using is a user or
+a role.</p>
+<h4 id="examples_2">Examples</h4>
+<p>::: {.parsed-literal}
+pedm moderation \"Not Discord Moderators\" pedm administration \@Lil
+Staff
+:::</p>
+<hr />
+<h3 id="permtogglemod">permtogglemod</h3>
+<h4 id="command-syntax_5">Command Syntax</h4>
+<p>::: {.parsed-literal}
+petm (module name)
+:::</p>
+<h4 id="command-description_5">Command Description</h4>
+<p>Toggles the whole module within the current server.</p>
+<p>Completely disabling a module will render it unusable by anyone,
+including administrators and managers. The module will virtually
+disappear from the server until re-enabled.</p>
+<h4 id="examples_3">Examples</h4>
+<p>::: {.parsed-literal}
+petm alarm
+:::</p>
+<hr />
+<h2 id="channel-overrides">Channel Overrides</h2>
+<h3 id="chanpermtoggle">chanpermtoggle</h3>
+<h4 id="command-syntax_6">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cpt (module name) (channel id(s)/mention(s)/q_name(s))
+:::</p>
+<h4 id="command-description_6">Command Description</h4>
+<p>Toggles the presence of one or more channels on the override list for
+the selected module. See below for more details.</p>
+<p><strong>Blacklist</strong> mode will make any channel that is added with the above
+command <strong>not</strong> to show the level up message, while the rest of the
+channels will show the in-channel level up message.</p>
+<p><strong>Whitelist</strong> mode will only make the in-channel level up message appear
+in the selected channels.</p>
+<h4 id="examples_4">Examples</h4>
+<p>::: {.parsed-literal}
+cpt games #spam #games
+:::</p>
+<hr />
+<h3 id="chanpermtogglemode">chanpermtogglemode</h3>
+<h4 id="command-syntax_7">Command Syntax</h4>
+<p>::: {.parsed-literal}
+cptm (module name)
+:::</p>
+<h4 id="command-description_7">Command Description</h4>
+<p>Toggles override list mode for the selected module:</p>
+<p><strong>Blacklist</strong> mode will make any command that is run in a channel on the
+override list <strong>not</strong> to work. This is the default mode, hence enabling
+the module on all channels if no overrides are specified.</p>
+<p><strong>Whitelist</strong> mode will only make the command work in the selected
+channels.</p>
+<h4 id="examples_5">Examples</h4>
+<p>::: {.parsed-literal}
+cptm games
+:::</p>
 
               
             </article>
@@ -1298,7 +2152,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../moderation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Moderation" rel="prev">
+        <a href="../moderation-manual/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Moderation manual" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1307,7 +2161,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Moderation
+              Moderation manual
             </div>
           </div>
         </a>
