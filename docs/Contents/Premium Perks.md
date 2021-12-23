@@ -13,7 +13,7 @@ income.
 
 !!!info See also
 
-        :fontawesome-brands-patreon:{ .patreon } [Patreon](https://www.patreon.com/) is a membership platform that makes
+        :fontawesome-brands-patreon: [Patreon](https://www.patreon.com/) is a membership platform that makes
         it easy for artists and creators to get paid. Within the Patreon
         dictionary, subscribers are called "patrons".
 

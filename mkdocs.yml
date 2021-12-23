@@ -46,8 +46,6 @@ extra:
       link: https://discord.gg/vY5zdmzukb
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/cycloptux
-extra_css:
-  - assets/stylesheets/extra.css
 plugins:
     - search
     - macros

@@ -3,51 +3,51 @@ Privacy Policy for GiselleBot
 
 *Last Revised: October 23, 2021*
 
-Thank you for choosing to be part of our community at {{ bot.bot_name }}
-(\"**we**\", \"**us**\", or \"**our**\"). We are committed to protecting
+Thank you for choosing to be part of our community at {{ bot.name }}
+("**we**", "**us**", or "**our**"). We are committed to protecting
 your personal information and your right to privacy. If you have any
 questions or concerns about this privacy policy or our practices with
 regard to your personal information, please contact us at
 <privacy@discomm.cc>.
 
-The privacy of your data --- and it is your data, not ours! --- is a big
+The privacy of your data ― and it is your data, not ours! ― is a big
 deal to us. In this policy, we lay out: what data we collect and why;
 how your data is handled; and your rights to your data. We promise we
 never sell your data: never have, never will.
 
 This privacy policy describes how we might use your information if you:
 
--   Visit our website at gisellebot.com, or related domains (gisl.eu,
-    cycloptux.com);
--   Use our Discord application(s) (a.k.a. \"**Discord Bot(s)**\" ---
+- Visit our website at <gisellebot.com>, or 
+    related domains <https://gisl.eu> & <https://cycloptux.com>;
+- Use our Discord application(s) (a.k.a. "**Discord Bot(s)**" ―
     GiselleBot, Belfast-chan);
--   Engage with us in other related ways ― including any sales,
+- Engage with us in other related ways ― including any sales,
     marketing, or events.
 
 In this privacy policy, if we refer to:
 
--   \"**Website**\", we are referring to any website of ours that
+-   "**Website**", we are referring to any website of ours that
     references or links to this policy;
--   \"**Bot**\" or \"**App**\", we are referring to any Discord
+-   "**Bot**" or "**App**", we are referring to any Discord
     application of ours that references or links to this policy,
     including any listed above;
--   \"**Services**\", we are referring to our Website, Bot, and other
+-   "**Services**", we are referring to our Website, Bot, and other
     related services, including any sales, marketing, or events;
--   \"**Data**\", we are referring to any data, content, and information
+-   "**Data**", we are referring to any data, content, and information
     (including personal information) owned, held, used or created by you
     (or on your behalf) that may be stored using, or processed by, our
     Services;
--   \"**Discord**\", we are referring to Discord Inc. and its related
+-   "**Discord**", we are referring to Discord Inc. and its related
     companies;
--   \"**Discord End User**\", we are referring to you, as someone who is
+-   "**Discord End User**", we are referring to you, as someone who is
     using Discord-related services according to the Discord privacy
     policies and terms of service;
--   \"**Discord End User Data**\", we are referring to the data you
+-   "**Discord End User Data**", we are referring to the data you
     provide to Discord through the Discord App;
--   \"**Discord App**\", we are referring to the client(s) (desktop,
+-   "**Discord App**", we are referring to the client(s) (desktop,
     mobile, web, \...) that Discord offers to their End User(s) to
     access their services;
--   \"**Discord API**\" we are referring to the API (Application
+-   "**Discord API**" we are referring to the API (Application
     Programming Interfaces) Discord provides to developers, that enables
     us to access your Discord End User Data according to the Discord
     privacy policies and terms of service.
@@ -83,7 +83,7 @@ The personal information we collect may include the following:
 
 -   **Discord ID:** Your Discord ID is your unique identifier in
     Discord, and in all of our Services, and the only way for us to
-    identify you in regards to your Discord End User Data;
+    identify you in regard to your Discord End User Data;
 -   **Discord Message Content:** Through the Discord API, we may access
     the content of messages you send using the Discord App;
 -   **Other Identifiers:** By directly interacting with us, we may
@@ -92,9 +92,9 @@ The personal information we collect may include the following:
 -   **Other Discord End User Data:** Through the Discord API, we may
     access other types of content you share with Discord, such as
     message attachments, information about your Discord profile, or your
-    presence in a specific \"Discord server\".
+    presence in a specific "Discord server".
 
-We may also collect other personal information outside of these
+We may also collect other personal information outside these
 categories instances where you interact with us in-person, online, or by
 mail in the context of:
 
@@ -121,7 +121,7 @@ below.
 We use the information we collect or receive:
 
 -   **To offer our Services to you.** Our Service may need your data,
-    specifically obtained through the Discord API (in that case, we\'re
+    specifically obtained through the Discord API (in that case, we're
     referring to Discord End User Data) or voluntarily and directly
     provided to us.
 -   **To post testimonials.** We may post testimonials on our Services
@@ -151,8 +151,8 @@ The personal information we process may be used for the following
 purposes:
 
 -   **Discord ID:** We use your Discord ID to identify you among the
-    different Services, and in relation to your \"Discord End User
-    Data\".
+    different Services, and in relation to your "Discord End User
+    Data".
 -   **Partial Discord Message Content:** With partial Discord message
     content, we refer to the content of messages that let you directly
     interact with our Bot, such as when using commands. We use your
@@ -182,7 +182,7 @@ your data in relation to some specific use cases:
     data related to your Discord user profile is provided from the
     Discord API based on your Discord ID, only when needed;
 -   **Server Activity Logging (Server Administration):** Data related to
-    the \"Server Activity Logging\" feature of the Bot is never stored
+    the "Server Activity Logging" feature of the Bot is never stored
     locally;
 -   **Statistics:** When statistics are provided by our Services, we
     only keep aggregated and anonymized data into our database.
@@ -224,7 +224,7 @@ Do We Use Cookies And Other Tracking Technologies?
 
 **In Short:** No.
 
-We don\'t use cookies, nor similar tracking technologies in our Website
+We don't use cookies, nor similar tracking technologies in our Website
 to access or store information.
 
 How Do We Handle Your Social Logins?
@@ -235,8 +235,8 @@ account, we may have access to certain information about you.
 
 Our Services offer you the ability to register and login using your
 third-party social media account details (specifically, your Discord
-account). We don\'t specifically have an account management solution,
-nor will you ever have an \"account with us\". When a login procedure is
+account). We don't specifically have an account management solution,
+nor will you ever have an "account with us". When a login procedure is
 needed to access our Services, you will be using your Discord account.
 
 When you do so, we will receive certain profile information about you
@@ -305,12 +305,12 @@ our best to protect your personal information, transmission of personal
 information to and from our Services is at your own risk. You should
 only access the Services within a secure environment.
 
-Hereafter, you\'ll find an exemplary and not exhaustive list of measures
+Hereafter, you'll find an exemplary and not exhaustive list of measures
 we implemented to keep your data safe:
 
 -   **User Identification and Discord End User Data Processing:**
     Wherever possible, the only identification key related to you that
-    is stored on our system is your \"Discord ID\". Your \"Discord ID\"
+    is stored on our system is your "Discord ID". Your "Discord ID"
     is a number provided by the Discord API and linked to your Discord
     End User Data. Your username, message content, data you provide to
     Discord, etc. is accessed by requesting such data through the
@@ -349,7 +349,7 @@ your data. We chose to align with the European [General Data Protection
 Regulation](https://eur-lex.europa.eu/eli/reg/2016/679/oj) (GDPR),
 extending those rights to you independently of where you are.
 
-In \"GDPR terminology\", as referred in Article 4, we often refer to the
+In "GDPR terminology", as referred in Article 4, we often refer to the
 following concept:
 
 -   **Data Subject:** any identifiable natural person whose personal
@@ -402,7 +402,7 @@ your identity, and for security or fraud-prevention purposes. We will
 delete such additionally provided information as soon as we finish
 verifying you.
 
-How Can You Opt-Out Of Providing Your Data?
+How Can You Opt Out Of Providing Your Data?
 -------------------------------------------
 
 **In Short:** Our Services may offer the ability to self opt-out of
@@ -422,7 +422,7 @@ your data deleted:
 
 -   **Discord ID:** Opting out of providing your Discord ID may not be
     possible in all circumstances. Your Discord ID is, in a general way,
-    not a specific personal information unless it\'s matched with other
+    not a specific personal information unless it's matched with other
     personal information that is collected, stored, and processed by
     Discord. You may refer to the Discord privacy policies and terms of
     service to know how to opt-out of providing your Discord ID.
@@ -461,7 +461,7 @@ Do We Make Updates To This Policy?
 compliant with relevant laws.
 
 We may update this privacy policy from time to time. The updated version
-will be indicated by an updated \"Last Revised\" date and the updated
+will be indicated by an updated "Last Revised" date and the updated
 version will be effective as soon as it is accessible. If we make
 material changes to this privacy policy, we may notify you either by
 prominently posting a policy of such changes or by directly sending you
@@ -488,27 +488,27 @@ Services to us. Thus, we are advising you to consult the respective
 privacy policies of these third-party providers for more detailed
 information.
 
-Here\'s a list of external third-party providers we rely upon:
+Here's a list of external third-party providers we rely upon:
 
 -   
 
     **Infrastructure:**
 
-    :   -   Amazon Web Services, Inc.
-        -   Google Cloud Platform (Google LLC)
-        -   GalaxyGate.net
+      -   Amazon Web Services, Inc.
+      -   Google Cloud Platform (Google LLC)
+      -   GalaxyGate.net
 
 -   
 
     **Email Services:**
 
-    :   -   Zoho Corporation
+       -   Zoho Corporation
 
 -   
 
     **Application Development Services:**
 
-    :   -   Trello, Inc. (Atlassian, Inc.)
+       -   Trello, Inc. (Atlassian, Inc.)
 
 How Can You Contact Us About This Policy?
 -----------------------------------------
