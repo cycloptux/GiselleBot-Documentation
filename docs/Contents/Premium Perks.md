@@ -1,55 +1,55 @@
 Premium Perks
 =============
 
-Throughout this documentation, you\'ll find a few notes about
+Throughout this documentation, you'll find a few notes about
 Premium-locked features. These features are only unlocked by either
-becoming a Patron for the developer, or by establishing a partnership
-with the developer.
+becoming a Patron for the developer.
 
-Here\'s a link to our Patreon page: <https://www.patreon.com/cycloptux>
+Here's a link to our Patreon page: <https://www.patreon.com/cycloptux>
 
 As a way to cover the hosting (and development) costs of the bot and its
 infrastructure, Patreon is used as the main source of month-to-month
 income.
 
-::: {.seealso}
-[Patreon](https://www.patreon.com/) is a membership platform that makes
-it easy for artists and creators to get paid. Within the Patreon
-dictionary, subscribers are called \"patrons\".
-:::
+!!!info See also
 
-Here\'s a summary of the available Premium tiers and the corresponding
+        :fontawesome-brands-patreon:{ .patreon } [Patreon](https://www.patreon.com/) is a membership platform that makes
+        it easy for artists and creators to get paid. Within the Patreon
+        dictionary, subscribers are called "patrons".
+
+
+Here's a summary of the available Premium tiers and the corresponding
 unlocked perks, the pricing details will be on the Patreon page.
 
 More perks will be added over time, including free currency and early
 access to new features!
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!!warning "Warning"
 
-You should be the **owner**, or an **administrator** (or a
-representative of similar rank), of the server you\'re activating the
-Patreon perks for. Upon successfully pledging for a Patreon tier, join
-the official Support Server on Discord ( ) and **submit an entry in the
-\"Patreon Verification\" form** by sending a DM to GiselleBot\#8602 with
-submit on Discord to request the activation of the premium perks in your
-server. If the form does not show up in the list of available forms,
-send the submit command in the \#bot-spam channel within the server.
-:::
+        You should be the **owner**, or an **administrator** (or a
+        representative of similar rank), of the server you're 
+        activating the Patreon perks for. Upon successfully 
+        pledging for a Patreon tier, join the official Support 
+        Server on Discord [{{bot.server}}]({{bot.server}}) and 
+        **submit an entry in the "Patreon Verification" form** by 
+        sending a DM to GiselleBot#8602 with `{{bot.prefix}}submit` 
+        on Discord to request the activation of the premium perks in 
+        your server. If the form does not show up in the list of 
+        available forms, send the submit command in the #bot-spam 
+        channel within the server.
+
 
 Tier 0: Show Your Support!
 --------------------------
 
-For a very small pledge, you\'re showing your appreciation of my work
-and participating in the costs of keeping the bot up. This tier won\'t
+For a very small pledge, you're showing your appreciation of my work
+and participating in the costs of keeping the bot up. This tier won't
 give you any extra perks.
 
 Tier 1: Basic Addons
 --------------------
 
-By becoming a **Tier 1** (or higher) patron, you\'ll get access to:
+By becoming a **Tier 1** (or higher) patron, you'll get access to:
 
 -   (Alarms & Reminders) **unlimited repeating messages** (removing the
     default cap of 5 repeating messages per server)
@@ -67,41 +67,42 @@ By becoming a **Tier 1** (or higher) patron, you\'ll get access to:
 -   (Utility) **up to 10 simultaneous clock channels** (removing the
     default cap of 2 clock channels per server)
 
-You will also gain access to any or all of the \"alpha\" unreleased
+You will also gain access to any or all of the "alpha" unreleased
 modules. Access to alpha modules, when available, must be specifically
 requested.
 
 Tier 2: Premium Support, Extended Modules
 -----------------------------------------
 
-By becoming a **Tier 2** (or higher) patron, you\'ll gain access to a
-dedicated \"priority support\" channel within the Official Support
-Server ( ), where you\'ll get a priority answer from the developer upon
-encountering any issue.
+By becoming a **Tier 2** (or higher) patron, you'll gain access to a
+dedicated "priority support" channel within the Official Support
+Server [{{bot.server}}]({{bot.server}}), where you'll get a priority 
+answer from the developer upon encountering any issue.
 
-You\'ll also get to pick a custom color for your name in the official
+You'll also get to pick a custom color for your name in the official
 support server.
 
-Tier 2 patrons unlock some improvements on the **trivia module** and get
-the whole potential of the **music module**, plus some more perks:
+Tier 2 patrons unlock some improvements on the **trivia module** 
+and get the whole potential of the **music module**, plus some 
+more perks:
 
--   (Server Administration) enhanced **Members** logging with the
-    \"Invites Tracking\" feature
--   (Trivia) **up to 30 questions** per trivia game
--   (Trivia) maximum trivia games duration raised to **up to 7 days**
--   (Command Scheduler) **Command Scheduling** interval raised to **1
+- (Server Administration) enhanced **Members** logging with the 
+    "Invites Tracking" feature
+- (Trivia) **up to 30 questions** per trivia game
+- (Trivia) maximum trivia games duration raised to **up to 7 days**
+- (Command Scheduler) **Command Scheduling** interval raised to **1
     week**
--   (Currency System, Social/EXP Ranking) **Experience and Currency**
+- (Currency System, Social/EXP Ranking) **Experience and Currency**
     gained on each message and by using the timely command will be
     boosted by **7%** for **all users** in your server!
--   (Verification) Ability to set an **additional short message** to be
+- (Verification) Ability to set an **additional short message** to be
     sent to users that attempt a verification
 
 Tier 3: Unlocked Original Modules
 ---------------------------------
 
-By becoming a **Tier 3** (or higher) patron, you\'ll unlock the whole
-potential of \'s original modules:
+By becoming a **Tier 3** (or higher) patron, you'll unlock the whole
+potential of {{bot.name}}'s original modules:
 
 -   (Forms Builder) create **up to 20 forms** in your server (removing
     the default cap of 3 forms)
@@ -109,7 +110,7 @@ potential of \'s original modules:
     can be created in a server (removing the default cap of 5
     simultaneous rooms)
 -   (Trivia) get access to the triviaexport command, and to the full
-    list of **\"Trivia Template\" commands**: triviatsave, triviatload,
+    list of **"Trivia Template" commands**: triviatsave, triviatload,
     triviatdelete and triviatshow.
 -   (Command Scheduler) **Command Scheduling** interval raised to **1
     month**

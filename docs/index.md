@@ -3,7 +3,7 @@ Welcome to {{bot.name}}'s documentation!
 
 {{bot.name}} is a Discord bot, developed by Cyc (cycloptux\#1543 on Discord).
 
-!!!question "See also"
+!!!question "Questions?"
 
     Need more help or stuck with something? Join our official Support Server
     on Discord! [{{bot.server}}]({{bot.server}})
@@ -27,7 +27,7 @@ include:
     dozen possible moderation actions, configurable rules list, and
     prompts to ensure moderators fill out every required piece of
     information on a warning for impeccable moderation documentation.
--   Self assignable roles system that includes the ability to add roles
+-   Self assignable roles' system that includes the ability to add roles
     to yourself via message reactions, not just bot commands! Configure
     groups of self assignable roles separately to require (or forbid)
     certain roles for obtaining them and set a minimum and maximum
@@ -50,9 +50,9 @@ include:
 -   Custom reactions: create your own commands with your own input and
     output text!
 -   Music: listen to music in your voice channels
--   Much much more!
+-   Much, much more!
 
-!!!info "Note"
+!!!abstract "Help Us!"
         
         {{bot.name}} is also listed on **Top.gg** and **Bots on Discord**. If you like the
         bot and want to support its growth, be sure to vote for it on those
