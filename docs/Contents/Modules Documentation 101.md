@@ -21,7 +21,7 @@ Server/Guild, Channel, Message, Role, User IDs
         will bring you to the official Discord support page about this topic.
 
         Obtaining a role ID may be trivial: you can obtain the role ID by
-        prepending a role mention with `\`, but that message will still mention
+        prepending a role mention with `\`, but, that message will still mention
         the role.
 
         In order to make your life easier, the bot offers a
