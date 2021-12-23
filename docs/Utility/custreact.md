@@ -1,4 +1,4 @@
-Custom Reactions {#custreact}
+Custom Reactions 
 ================
 
 The Custom Reactions module enables users to set up custom bot reactions

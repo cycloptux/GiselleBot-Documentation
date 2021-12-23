@@ -1,4 +1,4 @@
-Server Moderation (Manual) {#moderation-module}
+Server Moderation (Manual)
 ==========================
 
 A special thanks to my friend and partner, NaviKing\#3820, for the
@@ -22,7 +22,7 @@ These configuration commands are only enabled for those with Manage
 Server permissions. The usage of these commands will be recorded in the
 **Moderation** log.
 
-### modrole {#moderation-role}
+### modrole
 
 #### Command Syntax
 
@@ -295,7 +295,7 @@ specified channel: **Embed Links**, **Attach Files**.
 
 ------------------------------------------------------------------------
 
-Moderation Commands {#moderation}
+Moderation Commands
 -------------------
 
 These moderation commands are the actual commands that are used to apply
@@ -1016,8 +1016,7 @@ This section will describe the details of the \"default\" warning point
 system backend as well as point out options or commands to configure
 parts of the system.
 
-### Point Accumulation and Thresholds {#point-accumulation}
-
+### Point Accumulation and Thresholds
 In addition to a user\'s total points being the sum of the points of
 their infractions, the following rules apply to points:
 
@@ -1527,7 +1526,7 @@ rule.
 
 ------------------------------------------------------------------------
 
-### halflogic {#half-logic}
+### halflogic
 
 #### Command Syntax
 

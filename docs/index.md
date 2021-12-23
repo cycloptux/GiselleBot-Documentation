@@ -79,38 +79,57 @@ include:
 ## Quick Links
 
 ### Contents
-* [Technical & Security Background](/Contents/Technical & Security Background)
-* [Invite GiselleBot to your Discord Server](../docs/Contents/Invite GiselleBot to your Discord Server)
-* [Credits](../docs/Contents/Credits)
-* [Modules Documentation 101](../docs/Contents/Modules Documentation 101)
-* [Premium Perks](../docs/Contents/Premium Perks)
-* [Privacy Policy for GiselleBot](../docs/Contents/Privacy Policy for GiselleBot)
-* [User-Generated Content Disclaimer](../docs/Contents/User-Generated Content Disclaimer)
+* [Technical & Security Background](../Contents/Technical & Security Background)
+* [Invite GiselleBot to your Discord Server](../Contents/Invite GiselleBot to your Discord Server)
+* [Credits](../Contents/Credits)
+* [Modules Documentation 101](../Contents/Modules Documentation 101)
+* [Premium Perks](../Contents/Premium Perks)
+* [Privacy Policy for GiselleBot](../Contents/Privacy Policy for GiselleBot)
+* [User-Generated Content Disclaimer](../Contents/User-Generated Content Disclaimer)
 
-::: {.toctree maxdepth="1" caption="Use Cases & Guides" glob=""}
-guides/\*
-:::
+### Use Cases & Guides
+* [Step 1: Configuring the Administration Module](../Guides/1-Administration)
 
-::: {.toctree maxdepth="1" caption="Moderation & Administration" glob=""}
-moderation\_and\_administration/\*
-:::
+### Moderation & Administration
+* [Server Administration](../Moderation & Administration/administration)
+* [Server Moderation (AutoModerator)](../Moderation & Administration/moderation-auto)
+* [Server Moderation (Manual)](../Moderation & Administration/moderation-manual)
+* [Permissions System](../Moderation & Administration/permissions)
+* [Verification](../Moderation & Administration/verification)
 
-::: {.toctree maxdepth="1" caption="Social Network Connectors" glob=""}
-social\_networks/\*
-:::
+### Social Network Connectors
+* [Instagram Connector](../Social Networks/instagram)
+* [Reddit Connector](../Social Networks/reddit)
+* [RSS Reader](../Social Networks/rss)
+* [Twitch Connector](../Social Networks/twitch)
+* [Twitter Connector](../Social Networks/twitter)
+* [YouTube Connector](../Social Networks/youtube)
 
-::: {.toctree maxdepth="1" caption="Fun & Games" glob=""}
-fun\_and\_games/\*
-:::
+### Fun & Games
+* [Auction House](../Fun And Games/auction)
+* [Currency System](../Fun And Games/currency)
+* [Digimon](../Fun And Games/digimon)
+* [Games](../Fun And Games/games)
+* [Giveaway Campaigns](../Fun And Games/giveaway)
+* [Radio](../Fun And Games/radio)
+* [Social/EXP Ranking](../Fun And Games/social)
+* [Trivia](../Fun And Games/trivia)
 
-::: {.toctree maxdepth="1" caption="Utility" glob=""}
-utility/\*
-:::
+### Utility
+* [Alarms & Reminders](../Utility/alarm)
+* [Custom Reactions](../Utility/custreact)
+* [Forms Builder](../Utility/forms)
+* [Raid Rooms](../Utility/raidroom)
+* [Reactions Parsing](../Utility/reactions)
+* [Command Scheduler](../Utility/scheduler)
+* [Send](../Utility/send)
+* [Utility Commands](../Utility/util)
 
-::: {.toctree maxdepth="1" caption="Game Integrations" glob=""}
-game\_integrations/\*
-:::
+### Game Integrations
+* [Azur Lane Integration](../Game Integrations/azurlane)
+* [Brave Frontier Connector](../Game Integrations/bravefrontier)
+* [Mahjong Soul Integration](../Game Integrations/mahjongsoul)
+* [Revived Witch Connector](../Game Integrations/revivedwitch)
 
-::: {.toctree maxdepth="1" caption="Other Modules" glob=""}
-other\_modules/\*
-:::
+### Other Modules
+* [Miscellaneous](../Other Modules/miscellaneous)

@@ -7,7 +7,7 @@ otherwise categorized into a dedicated module.
 These commands might be safe for use by anyone, or locked behind
 in-Discord permissions.
 
-NSFW Images Detection Tools {#nsfwjs}
+NSFW Images Detection Tools
 ===========================
 
 implements an (experimental) **NSFW images detection system** using
@@ -253,17 +253,15 @@ values:
 
 ------------------------------------------------------------------------
 
-|bot_prefix|\ pruneinvites
+{{bot.prefix}} pruneinvites
 --------------------------
 
 Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
 
-    |bot_prefix|\ pruneinvites [--channel {channel id/mention}] [--inviter {user id/mention}] [--uses {# of uses (inclusive) to consider invites "unused"}]
+    INSERT COMMAND HERE LATER ON
 
 Command Description
-^^^^^^^^^^^^^^^^^^^
+
 Deletes unused invites (invites with 0 uses), or invites under a certain number of uses (inclusive). You can specify the number of uses to consider an invite as "unused" with ``--uses``.
 
 You can filter by invite target channel through the ``--channel`` parameter, or by inviter through the ``--inviter`` parameter.

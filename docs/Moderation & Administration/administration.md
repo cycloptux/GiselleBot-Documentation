@@ -1,4 +1,4 @@
-Server Administration {#administration}
+Server Administration
 =====================
 
 The Administration module contains tools used to manage a Discord server
@@ -72,7 +72,7 @@ prefix prefix b?
 
 ------------------------------------------------------------------------
 
-Server Activity Logging {#log-command}
+Server Activity Logging 
 -----------------------
 
 ### log
@@ -2141,7 +2141,7 @@ current server.
 
 ------------------------------------------------------------------------
 
-Emoji Submissions {#emoji-submission}
+Emoji Submissions
 -----------------
 
 Through the \"Emoji Submissions\" sub-module, you can let your members

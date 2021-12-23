@@ -1,4 +1,4 @@
-Permissions System {#permissions}
+Permissions System 
 ==================
 
 As soon as you invite the bot to your server, a few modules will be
