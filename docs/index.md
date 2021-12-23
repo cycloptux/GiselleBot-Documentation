@@ -6,7 +6,7 @@ Welcome to {{bot.name}}'s documentation!
 !!!question "Questions?"
 
     Need more help or stuck with something? Join our official Support Server
-    on Discord! [{{bot.server}}]({{bot.server}})
+    on Discord! <{{bot.server}}>
 
 
 {{bot.name}} was born as a "small" project to help the Brave Frontier-based
@@ -76,11 +76,16 @@ include:
 
 
 ------------------------------------------------------------------------
+## Quick Links
 
-::: {.toctree maxdepth="1" caption="Contents"}
-technical-and-security bot-invite credits docs-101 premium-perks privacy
-user-generated-content
-:::
+### Contents
+* [Technical & Security Background](/Contents/Technical & Security Background)
+* [Invite GiselleBot to your Discord Server](../docs/Contents/Invite GiselleBot to your Discord Server)
+* [Credits](../docs/Contents/Credits)
+* [Modules Documentation 101](../docs/Contents/Modules Documentation 101)
+* [Premium Perks](../docs/Contents/Premium Perks)
+* [Privacy Policy for GiselleBot](../docs/Contents/Privacy Policy for GiselleBot)
+* [User-Generated Content Disclaimer](../docs/Contents/User-Generated Content Disclaimer)
 
 ::: {.toctree maxdepth="1" caption="Use Cases & Guides" glob=""}
 guides/\*

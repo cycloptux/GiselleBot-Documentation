@@ -7,7 +7,7 @@ If you share a Discord server with, it is advised that you get an
 update invite by running invite in any channel she's in (usually, look
 for a bot spam channel, just in case).
 
-If you don't, here's a direct invite: [{{bot.invite}}]({{bot.invite}})
+If you don't, here's a direct invite: <{{bot.invite}}>
 
 The set of permissions that asks for enables most, if not all, of its
 commands in your server. Giving administrator permissions is advised if
@@ -21,9 +21,8 @@ not required.
     info.
 
 
-!!!tip "See also"
+!!!question "Questions?"
 
     Need more help or stuck with something? Join our official Support Server
-    on Discord!
-    [{{bot.server}}]({{bot.server}})
+    on Discord! <{{bot.server}}>
 

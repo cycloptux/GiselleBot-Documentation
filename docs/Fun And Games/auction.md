@@ -4,18 +4,14 @@ Auction House
 The Auction House module lets server members bid for items within a
 certain span of time.
 
-ahnew
+{{bot.prefix}}ahnew
 -----
 
 ### Command Syntax
 
-::: {.parsed-literal}
-ahnew \[\--item {item name}\] \[\--starting {starting bid price
-(number)}\] \[\--currency {currency name (singular,plural)}\]
-\[\--duration {duration timecode}\] \[\--roles {role
-id(s)/mention(s)/q\_name(s)}\] \[\--forward {user
-id(s)/mention(s)/q\_name(s)}\]
-:::
+!!! example ""
+
+        {{bot.prefix}}ahnew [--item {item name}] [--starting {starting bid price(number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {roleid(s)/mention(s)/q_name(s)}] [--forward {userid(s)/mention(s)/q_name(s)}]
 
 ### Command Description
 
@@ -23,14 +19,9 @@ Starts a new auction in the current channel. The currency parameter will
 define which currency names will be used in the message, separate
 singular and plural with a simple comma `,`.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!! note 
 
-No currency (see `currency-system`{.interpreted-text role="ref"}) is
-actually used.
-:::
+    No currency (see [Currency System](/Fun And Games/currency)) is actually used.
 
 The roles parameter will restrict the ability to vote to users that have
 (at least one of) the defined role(s). The forward parameter will define
@@ -41,24 +32,23 @@ for auditing purposes.
 
 All parameters are optional, the default values (on omission) are:
 
--   **Item Name**: \"Sample Item\"
+-   **Item Name**: "Sample Item"
 -   **Starting Bid Price**: 0
 -   **Currency**: *None*
 -   **Duration**: 1 day (24 hours)
 -   **Roles**: *None* (everyone)
 -   **Forward**: *None* (author only)
 
-### Examples
+### Example
 
-::: {.parsed-literal}
-ahnew \--item Steam Key \--starting 100 \--currency buck,bucks
-\--duration 5d \--roles \"Auction Enabled\" \@Gamers \--forward
-cycloptux\#1543
-:::
+!!! example ""
+
+        {{bot.prefix}}ahnew --item Steam Key --starting 100 --currency buck,bucks --duration 5d --roles "Auction Enabled" @Gamers --forward cycloptux#1543
+
 
 ------------------------------------------------------------------------
 
-ahstop
+{{bot.prefix}}ahstop
 ------
 
 ### Command Description
@@ -69,7 +59,7 @@ notified with the winner, etc.).
 
 ------------------------------------------------------------------------
 
-bid
+{{bot.prefix}}bid
 ---
 
 ### Command Syntax

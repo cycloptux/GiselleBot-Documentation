@@ -30,7 +30,7 @@ access to new features!
         representative of similar rank), of the server you're 
         activating the Patreon perks for. Upon successfully 
         pledging for a Patreon tier, join the official Support 
-        Server on Discord [{{bot.server}}]({{bot.server}}) and 
+        Server on Discord <{{bot.server}}> and 
         **submit an entry in the "Patreon Verification" form** by 
         sending a DM to GiselleBot#8602 with `{{bot.prefix}}submit` 
         on Discord to request the activation of the premium perks in 
