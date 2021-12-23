@@ -1,7 +1,7 @@
 Welcome to {{bot.name}}'s documentation!
 =============================
 
-{{bot.name}} is a Discord bot, developed by Cyc (cycloptux\#1543 on Discord).
+{{bot.name}} is a Discord bot, developed by Cyc (:fontawesome-brands-discord: cycloptux#1543).
 
 !!!question "Questions?"
 

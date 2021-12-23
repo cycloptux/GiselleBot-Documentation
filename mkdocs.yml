@@ -44,6 +44,8 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/vY5zdmzukb
+    - icon: material/gmail
+      link: cycloptux@discomm.cc
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/cycloptux
 plugins:
