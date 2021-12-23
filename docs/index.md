@@ -54,21 +54,21 @@ include:
 
 !!!abstract "Help Us!"
         
-        {{bot.name}} is also listed on **Top.gg** and **Bots on Discord**. If you like the
-        bot and want to support its growth, be sure to vote for it on those
-        websites!
+        {{bot.name}} is also listed on **Top.gg** and **Bots on Discord**.
+        If you like the bot and want to support its growth, be sure to 
+        vote for it on those websites!
 
         <figure markdown> 
             ![TopGG](https://top.gg/api/widget/356831787445387285.svg){ align=left }
             <figcaption>
-                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to `topggnotify`
+                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to `{{bot.prefix}}topggnotify`
             </figcaption>
         </figure>
 
         <figure markdown> 
             ![BOD](https://bots.ondiscord.xyz/bots/356831787445387285/embed){ align=right }
             <figcaption>
-                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to `bodvalidate` 
+                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to `{{bot.prefix}}bodvalidate` 
             </figcaption>
         </figure>
 
