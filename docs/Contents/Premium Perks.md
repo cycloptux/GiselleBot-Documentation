@@ -75,8 +75,8 @@ Tier 2: Premium Support, Extended Modules
 -----------------------------------------
 
 By becoming a **Tier 2** (or higher) patron, you'll gain access to a
-dedicated "priority support" channel within the Official Support
-Server [{{bot.server}}]({{bot.server}}), where you'll get a priority 
+dedicated "priority support" channel within the [Official Support
+Server]({{bot.server}}), where you'll get a priority 
 answer from the developer upon encountering any issue.
 
 You'll also get to pick a custom color for your name in the official
