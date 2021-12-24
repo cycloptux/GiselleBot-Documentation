@@ -33,7 +33,7 @@ shows such limitations.
   Elevated (Premium)        30   7 days      Yes\*   Yes\*\*   Yes   Yes
   ------------------------------------------------------------------------
 
--   **MQ**: Maximum \# of Questions
+-   **MQ**: Maximum \number of Questions
 -   **MT**: Maximum Time Interval
 -   **RR**: Can set role restrictions
 -   **TC**: Can set a different target channel

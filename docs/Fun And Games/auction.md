@@ -11,7 +11,7 @@ certain span of time.
 
 !!! example ""
 
-        {{bot.prefix}}ahnew [--item {item name}] [--starting {starting bid price(number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {roleid(s)/mention(s)/q_name(s)}] [--forward {userid(s)/mention(s)/q_name(s)}]
+        {{bot.prefix}}ahnew [--item {item name}] [--starting {starting bid price (number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {roleid(s)/mention(s)/q_name(s)}] [--forward {userid(s)/mention(s)/q_name(s)}]
 
 ### Command Description
 

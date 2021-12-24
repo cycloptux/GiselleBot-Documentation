@@ -875,7 +875,7 @@ the moderation module to keep your server clean.
 #### Command Syntax
 
 ::: {.parsed-literal}
-prune (\# of messages) \[filter item\] \[\--ignore {filter ignore}\]
+prune (\number of messages) \[filter item\] \[\--ignore {filter ignore}\]
 :::
 
 #### Command Description
@@ -1563,7 +1563,7 @@ the server.
 #### Command Syntax
 
 ::: {.parsed-literal}
-warnexpiry (\# of days)
+warnexpiry (\number of days)
 :::
 
 #### Command Description
@@ -1582,7 +1582,7 @@ particular server. Provide no arguments to reset to the default.
 #### Command Syntax
 
 ::: {.parsed-literal}
-expirypoints (\# of points)
+expirypoints (\number of points)
 :::
 
 #### Command Description
@@ -1604,7 +1604,7 @@ decay.
 #### Command Syntax
 
 ::: {.parsed-literal}
-setthreshold (\"mute\"/\"ban\"/\"absban\") (\# of points)
+setthreshold (\"mute\"/\"ban\"/\"absban\") (\number of points)
 :::
 
 #### Command Description

@@ -215,7 +215,7 @@ createinvite
 
 ::: {.parsed-literal}
 createinvite \[\--channel {channel id/mention/q\_name}\] \[\--expire
-{duration timecode}\] \[\--uses {\# of uses}\] \[\--unique\]
+{duration timecode}\] \[\--uses {\number of uses}\] \[\--unique\]
 \[\--temporary\]
 :::
 
@@ -594,7 +594,7 @@ savechat
 ### Command Syntax
 
 ::: {.parsed-literal}
-savechat \[\# of messages\]
+savechat \[\number of messages\]
 :::
 
 ### Command Description

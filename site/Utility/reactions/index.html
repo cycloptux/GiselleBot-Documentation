@@ -1650,10 +1650,10 @@ reprint 123456789098765432 reprint 123456789098765432 --sort nickname
 <h2 id="resummary">resummary</h2>
 <h3 id="command-syntax_1">Command Syntax</h3>
 <p>::: {.parsed-literal}
-resummary [# of messages] [--csv] [--silent]
+resummary [number of messages] [--csv] [--silent]
 :::</p>
 <h3 id="command-description_1">Command Description</h3>
-<p>Prints a list of messages with reactions within the last <code># of messages</code>
+<p>Prints a list of messages with reactions within the last <code>number of messages</code>
 in the current channel, showing the list of reactions and number of uses
 per each reaction.</p>
 <p>Using the <code>--csv</code> parameter instructs the bot to send a <code>.csv</code> file
@@ -1673,7 +1673,7 @@ resummary resummary 20 --csv --silent resummary --csv
 <h2 id="reunique">reunique</h2>
 <h3 id="command-syntax_2">Command Syntax</h3>
 <p>::: {.parsed-literal}
-reunique [# of messages] [--csv] [--silent]
+reunique [number of messages] [--csv] [--silent]
 :::</p>
 <h3 id="command-description_2">Command Description</h3>
 <p>Prints a list of <strong>unique users</strong> that reacted to at least one message
@@ -1697,7 +1697,7 @@ reunique reunique 20 --csv --silent reunique --csv
 <h2 id="recontest">recontest</h2>
 <h3 id="command-syntax_3">Command Syntax</h3>
 <p>::: {.parsed-literal}
-recontest [# of messages] [--age (time code)] [--joined (time
+recontest [number of messages] [--age (time code)] [--joined (time
 code)] [--members (number)]
 :::</p>
 <h3 id="command-description_3">Command Description</h3>
@@ -1739,7 +1739,7 @@ fraudulent.</p>
 command author:</p>
 <ol>
 <li>A .csv with the same output of resummary, showing the list of
-    messages with reactions within the last <code># of messages</code> in the
+    messages with reactions within the last <code>number of messages</code> in the
     current channel, including the list of reactions and number of uses
     per each reaction. This is further enhanced with a \"Fraudulent
     Flag\" and a \"Fraudulent Votes\" extra column.</li>

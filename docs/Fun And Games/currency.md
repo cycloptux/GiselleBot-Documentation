@@ -352,7 +352,7 @@ Resets the timely countdown for everyone.
 ### Command Syntax
 !!!example ""
 
-        {{bot.prefix}}timelyset [timecode] [# of currency coins]
+        {{bot.prefix}}timelyset [timecode] [number of currency coins]
 
 ### Command Description
 

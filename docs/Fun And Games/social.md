@@ -100,7 +100,7 @@ leaderboard
 ### Command Syntax
 
 ::: {.parsed-literal}
-lb \[page \#\] \[\--days {\# of days}\] \[\--roles (role
+lb \[page \#\] \[\--days {\number of days}\] \[\--roles (role
 id(s)/mention(s))\] \[\--min {minimum score}\]
 :::
 
@@ -129,7 +129,7 @@ gleaderboard
 ### Command Syntax
 
 ::: {.parsed-literal}
-glb \[page \#\] \[\--days {\# of days}\] \[\--min {minimum score}\]
+glb \[page \#\] \[\--days {\number of days}\] \[\--min {minimum score}\]
 :::
 
 ### Command Description

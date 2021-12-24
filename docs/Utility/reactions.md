@@ -44,12 +44,12 @@ resummary
 ### Command Syntax
 
 ::: {.parsed-literal}
-resummary \[\# of messages\] \[\--csv\] \[\--silent\]
+resummary \[\number of messages\] \[\--csv\] \[\--silent\]
 :::
 
 ### Command Description
 
-Prints a list of messages with reactions within the last `# of messages`
+Prints a list of messages with reactions within the last `number of messages`
 in the current channel, showing the list of reactions and number of uses
 per each reaction.
 
@@ -82,7 +82,7 @@ reunique
 ### Command Syntax
 
 ::: {.parsed-literal}
-reunique \[\# of messages\] \[\--csv\] \[\--silent\]
+reunique \[\number of messages\] \[\--csv\] \[\--silent\]
 :::
 
 ### Command Description
@@ -121,7 +121,7 @@ recontest
 ### Command Syntax
 
 ::: {.parsed-literal}
-recontest \[\# of messages\] \[\--age (time code)\] \[\--joined (time
+recontest \[\number of messages\] \[\--age (time code)\] \[\--joined (time
 code)\] \[\--members (number)\]
 :::
 
@@ -173,7 +173,7 @@ Using the `--csv` parameter instructs to send 2 `.csv` files to the
 command author:
 
 1.  A .csv with the same output of resummary, showing the list of
-    messages with reactions within the last `# of messages` in the
+    messages with reactions within the last `number of messages` in the
     current channel, including the list of reactions and number of uses
     per each reaction. This is further enhanced with a \"Fraudulent
     Flag\" and a \"Fraudulent Votes\" extra column.
