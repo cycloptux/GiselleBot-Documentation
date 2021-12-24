@@ -1,25 +1,22 @@
 Social/EXP Ranking
 ==================
 
-The Social module tracks users\' activity in a server (and globally) and
+The Social module tracks users' activity in a server (and globally) and
 rewards a certain number of experience points on each message. A server
 and a global leaderboards exist, making users aware of how much they are
 engaging with the community.
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!!warning "Warning"
 
-These limitations are applied to avoid users manipulating their EXP:
+        These limitations are applied to avoid users manipulating their EXP:
 
--   EXP is calculated on the amount of messages that are sent by the
-    user. Message length doesn\'t change the amount of EXP earned on
-    each message.
--   Each message is given a random EXP value, ranging from 10 to 20 EXP.
--   A cooldown is applied after each EXP gain to avoid users spamming
-    messages to power level their profile.
-:::
+        - EXP is calculated on the amount of messages that are sent by the
+            user. Message length doesn't change the amount of EXP earned on
+            each message.
+        - Each message is given a random EXP value, ranging from 10 to 20 EXP.
+        - A cooldown is applied after each EXP gain to avoid users spamming
+            messages to power level their profile.
+
 
 If the level up notifications are enabled on a server, users may be
 notified by DM or in the current channel as soon as they level up.
@@ -27,7 +24,9 @@ Global level ups are never notified.
 
 The EXP-to-level and level-to-EXP formulas are:
 
-$$\text{Lv} = 1 + \frac{\sqrt{1 + (8 \ast \text{EXP}) / 50}}{2}$$$$\text{EXP} = \frac{(\text{Lv}^2 - \text{Lv}) \ast 50}{2}$$
+$$\text{Lv} = 1 + \frac{\sqrt{1 + (8 \ast \text{EXP}) / 50}}{2}$$
+
+$$\text{EXP} = \frac{(\text{Lv}^2 - \text{Lv}) \ast 50}{2}$$
 
 For reference, EXP starts at level 1. From there, levelling up follows
 this pattern:
@@ -36,7 +35,7 @@ this pattern:
 -   Level 2: 100 more EXP needed to reach level 3
 -   Level 3: 150 more EXP needed to reach level 4
 -   Level 3: 200 more EXP needed to reach level 4
--   etc.
+-   etc...
 
 In other words, the progression table is as follows:
 
@@ -46,14 +45,14 @@ In other words, the progression table is as follows:
 -   Level 4: 300 EXP to 499 EXP
 -   etc.
 
-profile
+{{bot.prefix}}profile
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-profile \[user id/mention\]
-:::
+        {{bot.prefix}}profile [user id/mention]
+
 
 ### Command Description
 
@@ -63,21 +62,23 @@ Users can check someone else\'s profile by tagging them or using their
 ID.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-profile profile \@cycloptux\#1543 profile 123456789098765432
-:::
+        {{bot.prefix}}profile
+        {{bot.prefix}}profile @cycloptux#1543 
+        {{bot.prefix}}profile 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-gprofile
+{{bot.prefix}}gprofile
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gprofile \[user id/mention\]
-:::
+        {{bot.prefix}}gprofile [user id/mention]
+
 
 ### Command Description
 
@@ -87,22 +88,23 @@ Users can check someone else\'s profile by tagging them or using their
 ID.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gprofile gprofile \@cycloptux\#1543 gprofile 123456789098765432
-:::
+        {{bot.prefix}}gprofile 
+        {{bot.prefix}}gprofile @cycloptux#1543 
+        {{bot.prefix}}gprofile 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-leaderboard
+{{bot.prefix}}leaderboard
 -----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-lb \[page \#\] \[\--days {\number of days}\] \[\--roles (role
-id(s)/mention(s))\] \[\--min {minimum score}\]
-:::
+        {{bot.prefix}}lb [page #] [--days {number of days}] [--roles (roleid(s)/mention(s)/q_name(s))] [--min {minimum score}]
+
 
 ### Command Description
 
@@ -116,21 +118,23 @@ Using the `--min` parameter will filter the leaderboard to those users
 whose gained EXP is greater than or equal to the selected value.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-leaderboard leaderboard 2 leaderboard \--days 30 \--roles \@Players
-:::
+        {{bot.prefix}}leaderboard
+        {{bot.prefix}}leaderboard 2
+        {{bot.prefix}}leaderboard --days 30 --roles @Players
+
 
 ------------------------------------------------------------------------
 
-gleaderboard
+{{bot.prefix}}gleaderboard
 ------------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-glb \[page \#\] \[\--days {\number of days}\] \[\--min {minimum score}\]
-:::
+        {{bot.prefix}}glb [page #] [--days {number of days}] [--min {minimum score}]
+
 
 ### Command Description
 
@@ -141,22 +145,22 @@ Using the `--min` parameter will filter the leaderboard to those users
 whose gained EXP is greater than or equal to the selected value.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gleaderboard gleaderboard 2 gleaderboard \--days 30 \--min 10000
-:::
+        {{bot.prefix}}gleaderboard 
+        {{bot.prefix}}gleaderboard 2 
+        {{bot.prefix}}gleaderboard --days 30 --min 10000
+
 
 ------------------------------------------------------------------------
 
-expaddrole
+{{bot.prefix}}expaddrole
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-expar (level) (role id(s)/mention(s)/q\_name(s)) \[\--persistent\]
-\[\--volatile\]
-:::
+        {{bot.prefix}}expar (level) (role id(s)/mention(s)/q_name(s)) [--persistent] [--volatile]
 
 ### Command Description
 
@@ -167,113 +171,110 @@ By default, obtained roles are removed if, and when, a reward of higher
 tier is reached. This behavior can be customized by using the
 `--persistent` or `--volatile` tags:
 
--   A **persistent** role is kept \"forever\", even after obtaining a
+-   A **persistent** role is kept "forever", even after obtaining a
     role given at a higher tier (level).
 -   A **volatile** role is removed as soon as the user reaches the
     immediate next level.
 
-\"Adding\" a role that already exists on a level replaces its settings
+"Adding" a role that already exists on a level replaces its settings
 with the new settings.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!note "Note"
 
-Let\'s make a practical example. User X is currently Lv. 4, and the
-server currently has these settings:
+        Let's make a practical example. User X is currently Lv. 4, and the
+        server currently has these settings:
 
--   \"Rookie\", obtained at level 5, **volatile**;
--   \"Known Member\", obtained at level 5, **persistent**;
--   \"Junior\", obtained at level 7;
--   \"Senior\", obtained at level 10.
+        - "Rookie", obtained at level 5, **volatile**;
+        - "Known Member", obtained at level 5, **persistent**;
+        - "Junior", obtained at level 7;
+        - "Senior", obtained at level 10.
 
-Upon levelling up to Lv. 5, X will obtain **Rookie** and **Known
-Member**. Upon levelling up to Lv. 6, X will lose **Rookie** (volatile).
-Upon levelling up to Lv. 7, X will obtain **Junior**, and keep **Known
-Member** (persistent). Upon levelling up to Lv. 10, X will obtain
-**Senior**, lose **Junior**, and keep **Known Member** (persistent).
-:::
+        Upon levelling up to Lv. 5, X will obtain **Rookie** and **Known
+        Member**. Upon levelling up to Lv. 6, X will lose **Rookie** (volatile).
+        Upon levelling up to Lv. 7, X will obtain **Junior**, and keep **Known
+        Member** (persistent). Upon levelling up to Lv. 10, X will obtain
+        **Senior**, lose **Junior**, and keep **Known Member** (persistent).
+
 
 ### Permissions Needed
 
-| **User**: Manage Roles
-| **Bot**: Manage Roles
+**User**: Manage Roles
+**Bot**: Manage Roles
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-expar 5 \@Rookie \--volatile expar 5 \"Known Member\" \--persistent
-expar 7 Junior expar 10 \@Senior expar 15 \"VIP Member\"
-123456789098765432 \--persistent
-:::
+        {{bot.prefix}}expar 5 @Rookie --volatile 
+        {{bot.prefix}}expar 5 "Known Member" --persistent
+        {{bot.prefix}}expar 7 Junior 
+        {{bot.prefix}}expar 10 @Senior 
+        {{bot.prefix}}expar 15 "VIP Member" 123456789098765432 --persistent
+
 
 ------------------------------------------------------------------------
 
-expremrole
+{{bot.prefix}}expremrole
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-exprr (level) (role id(s)/mention(s)/q\_name(s))
-:::
+        {{bot.prefix}}exprr (level) (role id(s)/mention(s)/q_name(s))
+
 
 ### Command Description
 
 Removes one (or more) role(s) as reward for reaching a certain EXP
 level.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!abstract "Note"
 
-This command will **not** remove any previously aquired role(s) from
-server members. It will only stop server members from obtaining the
-role(s) upon levelling up.
-:::
+        This command will **not** remove any previously aquired role(s) from
+        server members. It will only stop server members from obtaining the
+        role(s) upon levelling up.
+
 
 ### Permissions Needed
 
-| **User**: Manage Roles
-| **Bot**: Manage Roles
+**User**: Manage Roles
+**Bot**: Manage Roles
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-exprr 5 \@Rookie exprr 15 123456789098765432
-:::
+        {{bot.prefix}}exprr 5 @Rookie
+        {{bot.prefix}}exprr 15 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-exproles
+{{bot.prefix}}exproles
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-exproles
-:::
+        {{bot.prefix}}exproles
+
 
 ### Command Description
 
-Lists all of the EXP roles that are currently set in the current server.
+Lists all the EXP roles that are currently set in the current server.
 
 ### Permissions Needed
 
-| **Bot**: Manage Roles
+**Bot**: Manage Roles
 
 ------------------------------------------------------------------------
 
-exprapply
+{{bot.prefix}}exprapply
 ---------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-exprapply
-:::
+        {{bot.prefix}}exprapply
+
 
 ### Command Description
 
@@ -281,33 +282,30 @@ Recalculates the EXP role(s) each server member is entitled to have, and
 applies the correct set of roles to each user.
 
 The command will apply the highest EXP tier role(s) and every
-\"persistent\" role below the current user level.
+"persistent" role below the current user level.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!info "Note"
 
-This command will **not** remove any previously aquired role(s) from
-server members, even if the role in question is set as EXP role and no
-longer available to the user based on the current EXP roles chain.
-:::
+        This command will **not** remove any previously aquired role(s) from
+        server members, even if the role in question is set as EXP role and no
+        longer available to the user based on the current EXP roles chain.
+
 
 ### Permissions Needed
 
-| **User**: Manage Roles
-| **Bot**: Manage Roles
+**User**: Manage Roles
+**Bot**: Manage Roles
 
 ------------------------------------------------------------------------
 
-expboost
+{{bot.prefix}}expboost
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-expboost \[boost percentage value\]
-:::
+        {{bot.prefix}}expboost [boost percentage value]
+
 
 ### Command Description
 
@@ -334,58 +332,61 @@ be within the aforementioned limits.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-expboost -30 expboost 150 expboost
-:::
+        {{bot.prefix}}expboost -30 
+        {{bot.prefix}}expboost 150 
+        {{bot.prefix}}expboost
+
 
 ------------------------------------------------------------------------
 
-expedit
+{{bot.prefix}}expedit
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-expedit (EXP amount) (user id/mention)
-:::
+        {{bot.prefix}}expedit (EXP amount) (user id/mention)
+
 
 ### Command Description
 
 Adds or removes a certain amount of server EXP to a member of the
-server. You can increase or decrease someone\'s EXP of **up to 10,000
-EXP** with this command. In order to increase or decrease someone\'s EXP
+server. You can increase or decrease someone's EXP of **up to 10,000
+EXP** with this command. In order to increase or decrease someone's EXP
 of more than that, you must run the command multiple times.
 
 Use positive values to increase EXP. Use negative values to decrease
 EXP.
 
-Editing someone\'s EXP will not trigger EXP role assignments for any
+Editing someone's EXP will not trigger EXP role assignments for any
 level in between the start level and end level.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-expedit -2000 \@cycloptux\#1543 expedit 5000 123456789098765432
-:::
+        {{bot.prefix}}expedit -2000 @cycloptux#1543 
+        {{bot.prefix}}expedit 5000 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-expreset
+{{bot.prefix}}expreset
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-expreset (user id/mention)
-:::
+        {{bot.prefix}}expreset (user id/mention)
+
 
 ### Command Description
 
@@ -396,68 +397,71 @@ preserved and may need to be removed manually.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-expreset \@cycloptux\#1543 expreset 123456789098765432
-:::
+        {{bot.prefix}}expreset @cycloptux#1543 
+        {{bot.prefix}}expreset 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-noexprole
+{{bot.prefix}}noexprole
 ---------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-noexprole \[- {or} role id/mention/q\_name\]
-:::
+        {{bot.prefix}}noexprole [- {or} role id/mention/q_name]
+
 
 ### Command Description
 
 In order to block certain users from gaining server EXP when messaging
 (refer to the top of this page), server managers can set one role as
-\"No-Experience Role\": users having this role will not gain any
+"No-Experience Role": users having this role will not gain any
 experience from their messages.
 
 Running this command with one role identifier as argument will set that
 role as No-EXP Role.
 
 Running this command with `-` as argument will disable this feature
-(removing the \"No-EXP Role\" flag from the former role).
+(removing the "No-EXP Role" flag from the former role).
 
 Running this command without arguments will show the current No-EXP
 Role, if any.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-noexprole \@Spammer noexprole noexprole -
-:::
+        {{bot.prefix}}noexprole @Spammer 
+        {{bot.prefix}}noexprole 
+        {{bot.prefix}}noexprole -
+
 
 ------------------------------------------------------------------------
 
-noexpchannels
+{{bot.prefix}}noexpchannels
 -------------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-noexpchannels \[- {or} channel(s) id/mention/q\_name\]
-:::
+        {{bot.prefix}}noexpchannels [- {or} channel(s) id/mention/q_name]
+
 
 ### Command Description
 
 In order to block certain channels (usually, spam channels) from being a
 source to gain server EXP when messaging (refer to the top of this
-page), server managers can set one or more channels as \"No-Experience
-Channels\": users chatting in these channels will not gain any
+page), server managers can set one or more channels as "No-Experience
+Channels": users chatting in these channels will not gain any
 experience from their messages.
 
 Running this command with one or more channel identifier(s) as argument
@@ -465,32 +469,34 @@ will set those channels as No-EXP Channels. This command will always
 override the former list of channels.
 
 Running this command with `-` as argument will disable this feature
-(removing the \"No-EXP Channel\" flag from any former channel).
+(removing the "No-EXP Channel" flag from any former channel).
 
 Running this command without arguments will show the current No-EXP
 Channels, if any.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-noexpchannels \#spam noexpchannels \#spam \#bot-commands noexpchannels
-noexpchannels -
-:::
+        {{bot.prefix}}noexpchannels #spam 
+        {{bot.prefix}}noexpchannels #spam #bot-commands 
+        {{bot.prefix}}noexpchannels
+        {{bot.prefix}}noexpchannels -
+
 
 ------------------------------------------------------------------------
 
-explvupsetup
+{{bot.prefix}}explvupsetup
 ------------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-explvupsetup
-:::
+        {{bot.prefix}}explvupsetup
+
 
 ### Command Description
 
@@ -501,26 +507,26 @@ Options 1. and 2. are used to save the settings you applied through the
 menu (the settings will not apply until you save them), or discard said
 changes.
 
-3.  \"Toggle in-server level-up notifications\" toggles whether users
+3.  "Toggle in-server level-up notifications" toggles whether users
     are notified when they gain a level, into a server channel. You can
     enable option 3, or 4, or both at the same time. Default:
     **Disabled**
-4.  \"Toggle DM level-up notifications\" toggles whether users are
+4.  "Toggle DM level-up notifications" toggles whether users are
     notified when they gain a level, with a DM sent by . You can enable
     option 3, or 4, or both at the same time. Default: **Disabled**
-5.  \"Select in-server level-up notifications location\" lets you select
+5.  "Select in-server level-up notifications location" lets you select
     one channel to be used as centralized level-up notifications
     channel. If this option is enabled, all level-up notifications will
     be posted in this channel. Otherwise, level-up notifications will be
     sent to the same channel where the message triggering the level-up
     was posted. Default: **Same Channel**
-6.  \"Set a custom in-server level-up message\" lets you set a custom
+6.  "Set a custom in-server level-up message" lets you set a custom
     message to be posted as level-up message for in-server
     notifications. See below for more customizations info.
-7.  \"Set a custom DM level-up message\" lets you set a custom message
+7.  "Set a custom DM level-up message" lets you set a custom message
     to be posted as level-up message for DM notifications. See below for
     more customizations info.
-8.  \"Add channels to the level-up notifications blacklist/whitelist\"
+8.  "Add channels to the level-up notifications blacklist/whitelist"
     lets you select one or more channels that will be added to the
     blacklist (or whitelist, depending on the list mode). **Blacklist
     mode** will make any channel that is on the list **not to trigger**
@@ -528,19 +534,16 @@ changes.
     the in-server level-up messages. **Whitelist mode** will only make
     the in-server level-up message appear when a level is gained in one
     of the selected channels.
-9.  \"Toggle mode for the level-up notifications list\" toggles between
+9.  "Toggle mode for the level-up notifications list" toggles between
     **blacklist mode** and **whitelist mode**.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!info Note
 
-List modes will only change whether or not messaging in the selected
-channel will trigger the level-up **message**: if you want to stop users
-from getting EXP **at all** in a certain channel, use the
-`noexpchannels`{.interpreted-text role="ref"} command.
-:::
+        List modes will only change whether or not messaging in the selected
+        channel will trigger the level-up **message**: if you want to stop users
+        from getting EXP **at all** in a certain channel, use the
+        [`{{bot.prefix}}noexpchannels`](/Fun And Games/social/#noexpchannels) command.
+
 
 The custom messages support the following dynamic placeholders:
 
@@ -594,18 +597,18 @@ Custom messages cannot exceed **1024 characters**.
 
 ### Permissions Needed
 
-| **User**: Manage Channels
+**User**: Manage Channels
 
 ------------------------------------------------------------------------
 
-expnotifyoptout
+{{bot.prefix}}expnotifyoptout
 ---------------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-expnotifyoptout
-:::
+        {{bot.prefix}}expnotifyoptout
+
 
 ### Command Description
 
