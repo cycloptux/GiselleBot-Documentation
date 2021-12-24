@@ -1,3 +1,8 @@
+---
+title: Brave Frontier Connector
+
+---
+
 Brave Frontier Connector
 ========================
 
@@ -7,14 +12,14 @@ Be notified when a new in-game news is published in **Brave Frontier
 The news URL and a preview will be posted in the specified channel, as
 you see them in-game.
 
-bf1news
+{{bot.prefix}}bf1news
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-bf1news \[channel id/mention/q\_name\] \[\--stop\]
-:::
+        {{bot.prefix}}bf1news [channel id/mention/q_name] [--stop]
+
 
 ### Command Description
 
@@ -24,21 +29,23 @@ Frontier (Global) news feed in the selected channel.
 If the channel is omitted, the current configuration will be shown.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-bf1news bf1news \#bfgl-news bf1news \--stop
-:::
+        {{bot.prefix}}bf1news 
+        {{bot.prefix}}bf1news #bfgl-news
+        {{bot.prefix}}bf1news --stop
+
 
 ------------------------------------------------------------------------
 
-bf2news
+{{bot.prefix}}bf2news
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-bf2news \[channel id/mention/q\_name\] \[\--stop\]
-:::
+        {{bot.prefix}}bf2news [channel id/mention/q_name] [--stop]
+
 
 ### Command Description
 
@@ -48,7 +55,9 @@ Frontier 2 (Japan) news feed in the selected channel.
 If the channel is omitted, the current configuration will be shown.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-bf2news bf2news \#bf2jp-news bf2news \--stop
-:::
+        {{bot.prefix}}bf2news
+        {{bot.prefix}}bf2news #bf2jp-news
+        {{bot.prefix}}bf2news --stop
+
