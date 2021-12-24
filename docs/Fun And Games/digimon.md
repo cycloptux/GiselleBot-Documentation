@@ -2,53 +2,50 @@ Digimon
 =======
 
 **Digimon** (デジモン Dejimon, branded as **Digimon: Digital Monsters**,
-stylized as **DIGIMON**), short for \"Digital Monsters\"
+stylized as **DIGIMON**), short for "Digital Monsters"
 (デジタルモンスター Dejitaru Monsutā), is a Japanese media franchise
 encompassing virtual pet toys, anime, manga, video games, films and a
 trading card game. The franchise focuses on Digimon creatures, which are
-monsters living in a \"Digital World\", a parallel universe that
+monsters living in a "Digital World", a parallel universe that
 originated from Earth\'s various communication networks. (Source:
 [Wikipedia](https://en.wikipedia.org/wiki/Digimon))
 
 This module allows users to obtain, collect and train their own
 Digimons. The set of available Digimons is the same one that you can
 find in the video game **Digimon Story: Cyber Sleuth** and its sequel,
-**Digimon Story: Cyber Sleuth -- Hacker\'s Memory**.
+**Digimon Story: Cyber Sleuth -- Hacker's Memory**.
 
-::: {.seealso}
-I\'d like to thanks **Chia** (Chia\#8045 on Discord) for her work in
-gathering the full list of Digimons and their respective stats into the
-[Digimon Cyber Sleuth Hacker\'s Memory Competitive Database
-(DigiDB)](http://digidb.io/). This module would not exist if it wasn\'t
-for her huge indirect help.
+!!!abstract "See also"
 
-[Click here](https://discord.gg/ynWMccz) to join her Discord server, or
-[here](https://www.patreon.com/digidb) to support her via Patreon!
-:::
+        I'd like to thank **Chia** (:fontawesome-brands-discord: Chia#8045) for her work in
+        gathering the full list of Digimons and their respective stats into the
+        [Digimon Cyber Sleuth Hacker's Memory Competitive Database (DigiDB)](http://digidb.io/).
+        This module would not exist if it wasn't for her huge indirect help.
+
+        Her: [:fontawesome-brands-discord:](https://discord.gg/ynWMccz) & [:fontawesome-brands-patreon:](https://www.patreon.com/digidb)
+
 
 The current version of the game lets users:
 
--   Obtain one of the first 5 \"Baby\" (starter) Digimons with a gacha
-    mechanism
+-   Obtain one of the first 5 "Baby" (starter) Digimons with a gacha mechanism
 -   Exercising your Digimons to make them gain EXP
--   Digivolving and De-Digivolving your Digimons in order to give them a
-    new form
+-   Digivolving and De-Digivolving your Digimons in order to give them a new form
 -   Enhancing the stats of your Digimons through specific boost items
 -   Buy items (evolution items, stat boosters, inventory expansions)
     through an interactive shop menu
 
 The following documentation will further explain some of these concepts.
 
-| ~Digimon\ names,\ images,\ and\ related\ information\ are\ property\ of\ Akiyoshi\ Hongo,\ Bandai\ and\ Toei\ Animation.~
+~Digimon~ ~names,~ ~images,~ ~and~ ~related~ ~information~ ~are~ ~property~ ~of~ ~Akiyoshi~ ~Hongo,~ ~Bandai~ ~and~ ~Toei~ ~Animation.~
 
-dgparam
+{{bot.prefix}}dgparam
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgparam
-:::
+        {{bot.prefix}}dgparam
+
 
 ### Command Description
 
@@ -56,14 +53,14 @@ Shows basic parameters about the user and the game itself.
 
 ------------------------------------------------------------------------
 
-dggacha
+{{bot.prefix}}dggacha
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dggacha
-:::
+        {{bot.prefix}}dggacha
+
 
 ### Command Description
 
@@ -92,14 +89,14 @@ The NX units cannot be evolved, or obtained through evolution.
 
 ------------------------------------------------------------------------
 
-dgarchive
+{{bot.prefix}}dgarchive
 ---------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgarchive
-:::
+        {{bot.prefix}}dgarchive
+
 
 ### Command Description
 
@@ -107,14 +104,14 @@ Shows a summary of all Digimons ever owned by the user.
 
 ------------------------------------------------------------------------
 
-dginventory
+{{bot.prefix}}dginventory
 -----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dginv
-:::
+        {{bot.prefix}}dginv
+
 
 ### Command Description
 
@@ -122,14 +119,14 @@ Shows the current user inventory.
 
 ------------------------------------------------------------------------
 
-dgshop
+{{bot.prefix}}dgshop
 ------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgshop
-:::
+        {{bot.prefix}}dgshop
+
 
 ### Command Description
 
@@ -137,14 +134,14 @@ Opens the items shop.
 
 ------------------------------------------------------------------------
 
-dgdex
+{{bot.prefix}}dgdex
 -----
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgdex \[Digimon -partial- name\]
-:::
+        {{bot.prefix}}dgdex [Digimon -partial- name]
+
 
 ### Command Description
 
@@ -152,36 +149,35 @@ Shows all Digimons currently owned by the user. If a name is specified,
 the output will restrict the list to the corresponding Digimon(s), if
 any.
 
-Partial names are supported (e.g. \"pabu\" instead of \"Pabumon\").
+Partial names are supported (e.g. "pabu" instead of "Pabumon").
 
 ------------------------------------------------------------------------
 
-dglookup
+{{bot.prefix}}dglookup
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dglookup (Digimon -partial- name)
-:::
+        {{bot.prefix}}dglookup (Digimon -partial- name)
+
 
 ### Command Description
 
 Shows generic info about a specific Digimon.
 
-Partial names are supported (e.g. \"pabu\" instead of \"Pabumon\").
+Partial names are supported (e.g. "pabu" instead of "Pabumon").
 
 ------------------------------------------------------------------------
 
-dgechain
+{{bot.prefix}}dgechain
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgechain (starting Digimon -partial- name) (ending Digimon -partial-
-name)
-:::
+        {{bot.prefix}}dgechain (starting Digimon -partial- name) (ending Digimon -partial- name)
+
 
 ### Command Description
 
@@ -189,18 +185,18 @@ Given two **mandatory** Digimon names, this command shows the
 Digivolution/Degeneration chain that is needed to go from the first
 Digimon to the second one, if any.
 
-Partial names are supported (e.g. \"pabu\" instead of \"Pabumon\").
+Partial names are supported (e.g. "pabu" instead of "Pabumon").
 
 ------------------------------------------------------------------------
 
-dgexercise
+{{bot.prefix}}dgexercise
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgexer (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgexer (Digimon -partial- name)
+
 
 ### Command Description
 
@@ -211,75 +207,72 @@ the farm. One exercise session costs 250 currency.
 During that time, the Digimon will be unavailable for other uses.
 
 The Digimon will receive the EXP immediately: eventual info about a
-level up event will show up immediately, but you still won\'t be able to
-\"use\" the Digimon until it\'s done exercising.
+level up event will show up immediately, but you still won't be able to
+"use" the Digimon until it's done exercising.
 
 You will not receive a warning when the exercise session is done, but
 you can check the time left in the Digi-Dex page for that Digimon or
 using dgfarm.
 
-You must manually retrieve a Digimon from the Digi-Farm once it\'s done
+You must manually retrieve a Digimon from the Digi-Farm once it's done
 exercising. You must also have at least one free slot in your Digi-Dex
 when you do so (sending a Digimon to the Digi-Farm temporarily frees up
 one slot in your Digi-Dex).
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!info "Note"
 
-The exercise session curve is based on the following criterias:
+        The exercise session curve is based on the following criterias:
+        
+        - Shorter times yield more EXP per hour (2,500 EXP in 15 minutes =
+            10,000 EXP per hour) but cost more currency (2,500 EXP per 250 coins
+            = 10 EXP per coin).
+        - Longer times yield less EXP per hour (10,500 EXP in 8 hours =
+            1,312.5 EXP per hour) but cost less currency (10,500 EXP per 250
+            coins = 42 EXP per coin).
 
--   Shorter times yield more EXP per hour (2,500 EXP in 15 minutes =
-    10,000 EXP per hour) but cost more currency (2,500 EXP per 250 coins
-    = 10 EXP per coin).
--   Longer times yield less EXP per hour (10,500 EXP in 8 hours =
-    1,312.5 EXP per hour) but cost less currency (10,500 EXP per 250
-    coins = 42 EXP per coin).
-:::
 
 ------------------------------------------------------------------------
 
-dgretrieve
+{{bot.prefix}}dgretrieve
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgreturn (Digimon -partial- name) dgret (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgreturn (Digimon -partial- name) dgret (Digimon -partial- name)
 
-### Command Description
-
-Returns a Digimon to the user\'s Digi-Dex once it has finished
-exercising in the Digi-Farm. The Digimon will wait in an \"idle\" state
-within the farm until it\'s manually retrieved.
-
-------------------------------------------------------------------------
-
-dgfarm
-------
-
-### Command Syntax
-
-::: {.parsed-literal}
-dgfarm
-:::
 
 ### Command Description
 
-Shows info and parameters about the user\'s Digi-Farm.
+Returns a Digimon to the user's Digi-Dex once it has finished
+exercising in the Digi-Farm. The Digimon will wait in an "idle" state
+within the farm until it's manually retrieved.
 
 ------------------------------------------------------------------------
 
-dgdrop
+{{bot.prefix}}dgfarm
 ------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgdrop (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgfarm
+
+
+### Command Description
+
+Shows info and parameters about the user's Digi-Farm.
+
+------------------------------------------------------------------------
+
+{{bot.prefix}}dgdrop
+------
+
+### Command Syntax
+!!!example ""
+
+        {{bot.prefix}}dgdrop (Digimon -partial- name)
+
 
 ### Command Description
 
@@ -288,25 +281,25 @@ be undone.
 
 ------------------------------------------------------------------------
 
-dgevolve
+{{bot.prefix}}dgevolve
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgevolve (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgevolve (Digimon -partial- name)
+
 
 ### Command Description
 
 Digivolves a Digimon into one of its possible new forms. A Digivolution
 will always require one or more evolution items, will usually have a
-level requirement and may have an additional stats requirement.
+level requirement and may have an additional stats' requirement.
 
 There are 2 evolution items:
 
--   Digivolution-Chips: these are used for \"standard\" evolutions.
--   Digi-Eggs: these are used to evolve a Digimon to its \"Armor\" form.
+-   Digivolution-Chips: these are used for "standard" evolutions.
+-   Digi-Eggs: these are used to evolve a Digimon to its "Armor" form.
     Currently, there are only 3 Armor Digimons: Flamedramon, Magnamon
     and Rapidmon (Armor). Digi-Eggs cannot be bought and are only
     obtained through specific giveaways or events.
@@ -321,26 +314,24 @@ obtained by De-Digivolutions: upon degenerating a Digimon, you will gain
 1 point of ABI per 9,900 EXP points that the Digimon has gained in that
 specific form. ABI is kept during Digivolution/Degenerations.
 
-::: {.admonition}
-Example
+!!!note "Example"
 
-Wizardmon needs 10 ABI to Digivolve into Myotismon. You can exercise
-Wizardmon (or a lower form that still has a further lower form) until it
-has gained 99,000 EXP (Lv. 63\~64), then Degenerate it to Keramon (which
-will now have 10 ABI), Digivolve it again to Wizardmon, then up to
-Myotismon.
-:::
+        Wizardmon needs 10 ABI to Digivolve into Myotismon. You can exercise
+        Wizardmon (or a lower form that still has a further lower form) until it
+        has gained 99,000 EXP (Lv. 63\~64), then Degenerate it to Keramon (which
+        will now have 10 ABI), Digivolve it again to Wizardmon, then up to Myotismon.
+
 
 ------------------------------------------------------------------------
 
-dgdegenerate
+{{bot.prefix}}dgdegenerate
 ------------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgdegen (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgdegen (Digimon -partial- name)
+
 
 ### Command Description
 
@@ -349,18 +340,18 @@ lower form. The only requirement of doing so is that the lower form you
 are Degenerating to must be one you have already obtained in the past.
 
 You can check the list of Digimons you have seen in the past with
-dgarchive.
+[{{bot.prefix}}dgarchive](/Fun And Games/digimon/#dgarchive).
 
 ------------------------------------------------------------------------
 
-dguseitem
+{{bot.prefix}}dguseitem
 ---------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dguseitem
-:::
+        {{bot.prefix}}dguseitem
+
 
 ### Command Description
 
@@ -369,14 +360,14 @@ through an interactive menu.
 
 ------------------------------------------------------------------------
 
-dgdropitem
+{{bot.prefix}}dgdropitem
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgdropitem
-:::
+        {{bot.prefix}}dgdropitem
+
 
 ### Command Description
 
@@ -385,14 +376,14 @@ through an interactive menu. This action cannot be undone.
 
 ------------------------------------------------------------------------
 
-dgenhance
+{{bot.prefix}}dgenhance
 ---------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-dgenhance (Digimon -partial- name)
-:::
+        {{bot.prefix}}dgenhance (Digimon -partial- name)
+
 
 ### Command Description
 
