@@ -1,8 +1,3 @@
----
-title: Premium Perks
-
----
-
 Premium Perks
 =============
 

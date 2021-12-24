@@ -1,8 +1,3 @@
----
-title: Invite GiselleBot to your Discord Server
-
----
-
 Invite to your Discord Server
 =============================
 

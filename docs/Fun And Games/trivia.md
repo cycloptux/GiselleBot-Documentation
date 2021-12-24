@@ -51,12 +51,12 @@ Template commands can be recognized by their `triviat-` prefix.
 
 !!!tip "Premium Perks"
 
-        As shown in the table, [Premium-enabled](../Contents/Premium Perks.md) servers will have an increased
+        As shown in the table, [Premium-enabled](../Contents/premium-perks.md) servers will have an increased
         cap of 30 questions and can set an interval for timed trivia games up to
-        1 week (see: [Premium Perks](../../Contents/Premium Perks)).
+        1 week (see: [Premium Perks](../Contents/premium-perks.md)).
 
         Additionally, template commands and triviaexport are only available
-        within [Premium-enabled](../Contents/Premium Perks.md) servers.
+        within [Premium-enabled](../Contents/premium-perks.md)) servers.
 
 
 {{bot.prefix}}triviacategories
@@ -470,7 +470,7 @@ trivia game in the current channel, if any.
 
 ### Command Description
 
-**This command is only available to Elevated Users in [Premium-enabled](../Contents/Premium Perks.md)
+**This command is only available to Elevated Users in [Premium-enabled](../Contents/premium-perks.md)
 servers.**
 
 **This command only works on completed trivia games.**
@@ -506,7 +506,7 @@ are shown in the trivia final results embed.*
 
 ### Command Description
 
-**This command is only available to Elevated Users in [Premium-enabled](../Contents/Premium Perks.md)
+**This command is only available to Elevated Users in [Premium-enabled](../Contents/premium-perks.md)
 servers.**
 
 Saves the current configuration for the selected trivia into a
@@ -540,7 +540,7 @@ game will **not** update the corresponding template.
 
 ### Command Description
 
-**This command is only available in [[Premium-enabled](../Contents/Premium Perks.md)](../Contents/Premium Perks.md) servers.**
+**This command is only available in [Premium-enabled](../Contents/premium-perks.md) servers.**
 
 Loads a previously saved configuration from a template, creating a new
 trivia game with a new trivia ID.
@@ -567,7 +567,7 @@ immediately started with trstart or furtherly configured with trset.
 
 ### Command Description
 
-**This command is only available to Elevated Users in [[Premium-enabled](../Contents/Premium Perks.md)](../Contents/Premium Perks.md)
+**This command is only available to Elevated Users in [Premium-enabled](../Contents/premium-perks.md)
 servers.**
 
 Deletes a previously saved configuration template (it will not delete
@@ -596,7 +596,7 @@ the originating trivia game).
 
 ### Command Description
 
-**This command is only available in [Premium-enabled](../Contents/Premium Perks.md) servers.**
+**This command is only available in [Premium-enabled](../Contents/premium-perks.md) servers.**
 
 Shows the current configuration of a trivia template, given its ID.
 
@@ -619,7 +619,7 @@ Shows the current configuration of a trivia template, given its ID.
 
 ### Command Description
 
-**This command is only available in [Premium-enabled](../Contents/Premium Perks.md) servers.**
+**This command is only available in [Premium-enabled](../Contents/premium-perks.md) servers.**
 
 Shows the list of all (non-deleted) trivia templates in the server:
 their ID, name and basic info.
