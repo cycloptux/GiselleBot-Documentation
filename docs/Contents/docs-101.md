@@ -1,3 +1,8 @@
+---
+title: Modules Documentation 101
+
+---
+
 Modules Documentation 101
 =========================
 

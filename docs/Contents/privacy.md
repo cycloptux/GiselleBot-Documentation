@@ -1,3 +1,8 @@
+---
+title: Privacy Policy for GiselleBot
+
+---
+
 Privacy Policy for GiselleBot
 =============================
 
