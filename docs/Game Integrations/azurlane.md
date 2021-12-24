@@ -1,8 +1,13 @@
+---
+title: Azur Lane Integration 
+
+---
+
 Azur Lane Integration
 =====================
 
 This module contains a few commands used to get information about **Azur
-Lane**, a side-scrolling shoot \'em up mobile video game created by
+Lane**, a side-scrolling shoot 'em up mobile video game created by
 Chinese developers Shanghai Manjuu and Xiamen Yongshi, released in 2017
 for the iOS and Android operating systems.
 
@@ -16,17 +21,17 @@ The game was released in 4 regions/versions:
 Commands
 --------
 
-### azurstatus
+### {{bot.prefix}}azurstatus
 
 #### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-azurstatus \[\--region {region code}\]
-:::
+        {{bot.prefix}}azurstatus [--region {region code}]
+
 
 #### Command Description
 
-Checks the status of Azur Lane\'s game servers. Omitting the region code
+Checks the status of Azur Lane's game servers. Omitting the region code
 will assume `--region en` and show the status of the (4, at the time of
 writing this page) English servers.
 
@@ -35,10 +40,11 @@ for the iOS servers. Other regions have common servers among the 2
 platforms.
 
 #### Examples
+!!!example ""
 
-::: {.parsed-literal}
-azurstatus azurstatus \--region cn
-:::
+        {{bot.prefix}}azurstatus
+        {{bot.prefix}}azurstatus --region cn
+
 
 ------------------------------------------------------------------------
 
@@ -50,15 +56,16 @@ servers availability for **any region**, and be notified when something
 changes on one (or more) of the webhooks configured in your Discord
 server.
 
-::: {.seealso}
-In order to better understand this module, it\'s very important that you
-are familiar with Discord webhooks. For more details about this Discord
-feature, please take a look at [this official
-guide](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
-:::
+!!!info "See Also"
+
+        In order to better understand this module, it\'s very important that you
+        are familiar with Discord webhooks. For more details about this Discord
+        feature, please take a look at [this official
+        guide](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+
 
 By default, the status feed mascot will be the Azur Lane character
-(ship) **San Diego**, and all of the feed messages will be Azur
+(ship) **San Diego**, and all the feed messages will be Azur
 Lane-themed.
 
 The full list of feed messages and monitored transitions can be found
@@ -72,59 +79,47 @@ to filter the specific messages they are interested into, indicating:
 -   The current status of the region, using a technical status tag:
     `#gateway_error` `#full_offline` `#partial_offline` `#operational`
 -   One or more server name tags, indicating the specific impacted
-    servers: e.g. `#avrora` `#lexington` \...
--   The quote ID (refer to the [Azur Lane Server Status Feed Sentences
-    Google
+    servers: e.g. `#avrora` `#lexington` ...
+-   The quote ID (refer to the [Azur Lane Server Status Feed Sentences Google
     Spreadsheet](https://docs.google.com/spreadsheets/d/1TGtR5Ffp4segbB4sFYfi1J9dyGc48jbQdBlwELpgzaQ/edit?usp=sharing))
     for the region status transition and/or server status transition:
-    e.g. `#r_01` `#r_02` `s_02` \...
+    e.g. `#r_01` `#r_02` `s_02` ...
 
-![Azur Lane Status Feed Example](../assets/images/azurlane_image_00.png){.align-center
-width="600px"}
+![Azur Lane Status Feed Example](../assets/images/azurlane_image_00.png)
 
-### azurhook
+### {{bot.prefix}}azurhook
 
 #### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-azurhook (webhook URL or \--channel (channel id/mention/q\_name))
-\[customization params\]
-:::
+        {{bot.prefix}}azurhook (webhook URL or --channel (channel id/mention/q_name)) [customization params]
+
 
 #### Command Description
 
 Starts a live feed on the specified webhook. When a new transition is
 found, its notification will be sent to the specified webhook service.
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!!danger "Danger"
 
-Discord webhooks are a very powerful feature, but they (currently) lack
-2-way authentication of messages. This means that a malicious user
-knowing a webhook URL will be able, with some effort, to forge a message
-containing any kind of content using external tools and send that
-message to the webhook. In order to protect yourself from this (rare)
-occasion, make sure you run this command in non-public channels.
-:::
+        Discord webhooks are a very powerful feature, but they (currently) lack
+        2-way authentication of messages. This means that a malicious user
+        knowing a webhook URL will be able, with some effort, to forge a message
+        containing any kind of content using external tools and send that
+        message to the webhook. In order to protect yourself from this (rare)
+        occasion, make sure you run this command in non-public channels.
 
-::: {.note}
-::: {.title}
-Note
-:::
 
-Alternatively, you can replace the webhook URL with the
-`--channel (channel id/mention/q_name)` parameter: a new dedicated
-webhook will be created and the URL from the new webhook will be
-automatically used for this feed.
+!!!abstract "Note"
 
-This alternative option requires to have \"Manage Webhooks\"
-permissions.
-:::
+        Alternatively, you can replace the webhook URL with the
+        
+        `--channel (channel id/mention/q_name)` parameter: a new dedicated webhook will be created and the URL from the new webhook will be automatically used for this feed.
+
+        This alternative option requires {{bot.name}} to have "Manage Webhooks" permissions.
+
 
 **Customization Params**
-
 ##### `--region (first region code) [second region code] [...]`
 
 Adds a **whitelist**, **inclusive** filter for Azur Lane server regions
@@ -137,27 +132,26 @@ Region codes are case-insensitive.
 
 **Default**: No filter (all regions)
 
+
 ##### `--filter (first word) [second word] [...]`
 
 Adds a **whitelist** filter to the feed. In this example, if the status
 quote contains `first word` and/or (see below) `second word`, the
-submission will be sent to the webhook, otherwise it will ignored. You
+submission will be sent to the webhook, otherwise it will be ignored. You
 can set one or more words, case-insensitive. This is especially
 effective if you are using the provided hashtags to filter specific
 events of interest.
 
-You can also set \"composite words\" (two or more words as a single
+You can also set "composite words" (two or more words as a single
 filter) by quoting them: `"foo bar" test` will count as 2 filter
 elements: `foo bar` and `test`.
 
-The filter works on partial words (e.g. \"announce\" will work on both
-\"announcement\" and \"announced\").
+The filter works on partial words (e.g. "announce" will work on both
+"announcement" and "announced").
 
-The filter only checks the \"quote text\", column **G** of the [Azur
-Lane Server Status Feed Sentences Google
-Spreadsheet](https://docs.google.com/spreadsheets/d/1TGtR5Ffp4segbB4sFYfi1J9dyGc48jbQdBlwELpgzaQ/edit?usp=sharing),
-and the additional message hashtags (if you filter by hashtag, you must
-include the \"\#\").
+The filter only checks the "quote text", column **G** of the [Azur Lane Server Status Feed Sentences Google
+Spreadsheet](https://docs.google.com/spreadsheets/d/1TGtR5Ffp4segbB4sFYfi1J9dyGc48jbQdBlwELpgzaQ/view),
+and the additional message hashtags (if you filter by hashtag, you must include the "#").
 
 **Default**: No filter
 
@@ -192,48 +186,43 @@ is absent from the submission (OR)).
 
 **Default**: `--include`
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!tip "Tip"
 
-Using both parameters in the same command will give `--include` the
-strict priority and ignore `--exclude`.
-:::
+        Using both parameters in the same command will give `--include` the strict priority and ignore `--exclude`.
+
 
 ##### `--header (message)`
 
 Adds a custom header message when status transition notifications are
 posted. Custom headers can have a maximum of **1024** characters.
 
-Custom headers **can** be formatted as embeds by following a very
-specific syntax. Do know that both and Discord are very sensitive to
-this specific syntax, which is easily \"broken\" by special characters:
-for this reason, using embeds as header is not suggested, nor directly
-supported. **Use them at your own risk!** If you are brave enough, I
-suggest the usage of [this embed
-generator](https://leovoel.github.io/embed-visualizer/) (click on the
-**\"Enable webhook mode\"** button at the bottom of the page).
+!!!tip "Tip"
+
+        Custom headers **can** be formatted as embeds by following a very specific syntax. 
+
+!!!warning "Warning"
+
+        Do know that both {{bot.name}} and Discord are very sensitive to this specific syntax, which is easily "broken" by special characters: for this reason, using embeds as header is not suggested, nor directly supported. **Use them at your own risk!** If you are brave enough, I suggest the usage of [this embed generator](https://leovoel.github.io/embed-visualizer/) (click on the **"Enable webhook mode"** button at the bottom of the page).
 
 Custom headers support a few dynamic tags that are replaced with their
-respective \"real\" value during run-time. These are:
+respective "real" value during run-time. These are:
 
 -   **%region%**: This will be replaced with the region name,
-    capitalized (e.g. `Chinese`, `English`, \...)
+    capitalized (e.g. `Chinese`, `English`, ...)
 -   **%region\_code%**: This will be replaced with the region code,
-    uppercase (e.g. `CN`, `EN`, \...)
--   **%timestamp% or %timestamp\_utc%**: This will be replaced with the
+    uppercase (e.g. `CN`, `EN`, ...)
+-   **%timestamp% or %timestamp_utc%**: This will be replaced with the
     status transition UTC time, with format `YYYY-MM-DD HH:mm:ss (UTC)`.
--   **%timestamp\_iso%**: This will be replaced with the status
+-   **%timestamp_iso%**: This will be replaced with the status
     transition UTC time, as ISO8601 string.
--   **%timestamp\_pst%**: This will be replaced with the status
+-   **%timestamp_pst%**: This will be replaced with the status
     transition PST time, with format `YYYY-MM-DD HH:mm:ss (PST)`.
 
 Timestamp tags also support custom time zones. You can replace the `utc`
 part with either:
 
 -   A different **valid** time zone identifier: use the
-    `searchtz`{.interpreted-text role="ref"} command to look for a valid
+    [`{{bot.prefix}}searchtz`](/GiselleBot-Documentation/Utility/util/#searchtz) command to look for a valid
     time zone name.
 
 -   An **UTC offset**, in the form of
@@ -259,7 +248,7 @@ Adds a custom username to the webhook when status transition
 notifications are posted. Custom usernames can have a maximum of 32
 characters.
 
-**Default**: \"Azur Lane Status Feed :: Offered by \"
+**Default**: "Azur Lane Status Feed :: Offered by {{bot.name}}"
 
 ##### `--no-username-overwrite`
 
@@ -267,6 +256,7 @@ Removes any custom name from the webhook. The real webhook name (the one
 that you assigned when creating the webhook in Discord) will be used.
 
 **Default**: `false` (Custom or default names will be applied)
+
 
 ##### `--no-avatar-overwrite`
 
@@ -278,77 +268,68 @@ used.
 
 #### Permissions Needed
 
-| **User**: Manage Webhooks
+**User**: Manage Webhooks
 
 #### Examples
+!!!example ""
 
-::: {.parsed-literal}
-azurhook
-<https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
-azurhook
-<https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
-\--region en \--header %region\_code% server status changed at
-%timestamp%
-:::
+        {{bot.prefix}}azurhook <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
+        {{bot.prefix}}azurhook <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN> --region en --header %region_code% server status changed at %timestamp%
+
 
 ------------------------------------------------------------------------
 
-### azurehook
+### {{bot.prefix}}azurehook
 
 #### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-azurehook (feed index) \[new customization params\]
-:::
+        {{bot.prefix}}azurehook (feed index) [new customization params]
+
 
 #### Command Description
 
 **Replaces** all previously set customization params for the selected
 feed with a new set of customization params. The feed index is the
-number shown with azurlhook.
+number shown with [{{bot.prefix}}azurlhook](/GiselleBot-Documentation/Fun And Games/azurlane#azurlhook).
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!!warning "Warning"
 
-Editing the webhook will not change the existing params, it will
-completely replace them. Take note of the existing params first, and use
-them in the command!
-:::
+        Editing the webhook will not change the existing params, it will completely replace them. Take note of the existing params first, and use them in the command!
+
 
 #### Permissions Needed
 
-| **User**: Manage Webhooks
+**User**: Manage Webhooks
 
 ------------------------------------------------------------------------
 
-### azurrhook
+### {{bot.prefix}}azurrhook
 
 #### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-azurrhook (feed index)
-:::
+        {{bot.prefix}}azurrhook (feed index)
+
 
 #### Command Description
 
 Stops a previously set feed and removes its link to the server webhook.
-The stream index is the number shown with azurlhook.
+The stream index is the number shown with [{{bot.prefix}}azurlhook](/GiselleBot-Documentation/Fun And Games/azurlane#azurlhook).
 
 #### Permissions Needed
 
-| **User**: Manage Webhooks
+**User**: Manage Webhooks
 
 #### Examples
+!!!example ""
 
-::: {.parsed-literal}
-azurrhook 1
-:::
+        {{bot.prefix}}azurrhook 1
+
 
 ------------------------------------------------------------------------
 
-### azurlhook
+### {{bot.prefix}}azurlhook
 
 #### Command Description
 
