@@ -71,7 +71,7 @@ notified with the winner, etc.).
 ### Command Description
 
 Lets a user bid a certain amount for the current auction. Validation
-rules are in place to make sure that the bid is valid before it\'s
+rules are in place to make sure that the bid is valid before it's
 registered. Invalid bids will still be registered in the detailed .csv
 that is sent to the author, but those will not interfere with the actual
 auction.

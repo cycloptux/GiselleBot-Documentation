@@ -11,7 +11,7 @@ Wheel of Fortune
 ----------------
 
 Bets a certain amount of currency on the wheel of fortune. The wheel can
-stop on one of many different multipliers. Won amount is rounded down to
+stop on one of many multipliers. Won amount is rounded down to
 the nearest whole number.
 
 ### wheeloffortune

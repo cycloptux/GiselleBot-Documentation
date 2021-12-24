@@ -61,14 +61,14 @@ include:
         <figure markdown> 
             ![TopGG](https://top.gg/api/widget/356831787445387285.svg){ align=left }
             <figcaption>
-                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to `{{bot.prefix}}topggnotify`
+                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to [{{bot.prefix}}topggnotify](../Fun And Games/currency#topggnotify)
             </figcaption>
         </figure>
 
         <figure markdown> 
             ![BOD](https://bots.ondiscord.xyz/bots/356831787445387285/embed){ align=right }
             <figcaption>
-                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to `{{bot.prefix}}bodvalidate` 
+                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to [{{bot.prefix}}bodvalidate](../Fun And Games/currency#bodvalidate) 
             </figcaption>
         </figure>
 
