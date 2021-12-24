@@ -3,7 +3,7 @@ title: Step 2 - Reaction Roles and Self Assignable Roles
 
 ---
 
-Step 2 - Reaction Roles and Self Assignable Roles
+Reaction Roles and Self Assignable Roles
 =============================================
 
 **Author**: NaviKing\#3820

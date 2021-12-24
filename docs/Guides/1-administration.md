@@ -1,4 +1,9 @@
-Step 1: Configuring the Administration Module
+---
+title: Step 1 - Configuring the Administration Module
+
+---
+
+Configuring the Administration Module
 =============================================
 
 **Author**: NaviKing\#3820

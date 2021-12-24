@@ -1,3 +1,8 @@
+---
+title: Credits
+
+---
+
 Credits
 =======
 

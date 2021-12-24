@@ -1,3 +1,8 @@
+---
+title: User-Generated Content Disclaimer
+
+---
+
 User-Generated Content Disclaimer
 =================================
 

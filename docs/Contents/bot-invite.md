@@ -1,3 +1,8 @@
+---
+title: Step 1 - Configuring the Administration Module
+
+---
+
 Invite to your Discord Server
 =============================
 
