@@ -25,7 +25,7 @@ singular and plural with a simple comma `,`.
 
 The `--roles` parameter will restrict the ability to vote to users that have
 (at least one of) the defined role(s). The forward parameter will define
-more users that will receive the auction closure notification via DM
+more users that will receive the auction closure notification via a DM
 (the author of the auction will always be notified). The final
 notification will also include a .csv containing the full bid history,
 for auditing purposes.

@@ -1908,53 +1908,53 @@
 </a>
 
 
-<h1 id="alarms-reminders">Alarms &amp; Reminders</h1>
+<h1 id="alarms-reminders">Alarms &amp; Reminders<a class="headerlink" href="#alarms-reminders" title="Permanent link">📋</a></h1>
 <p>This module includes tools to set timed reminders.</p>
-<h2 id="remind">remind</h2>
-<h3 id="command-syntax">Command Syntax</h3>
+<h2 id="remind">remind<a class="headerlink" href="#remind" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 remind (recipient) (time code) (message)
 :::</p>
-<h3 id="command-description">Command Description</h3>
+<h3 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h3>
 <p>Sends a message to you (via DM) or a channel within the current server,
 after certain amount of time.</p>
 <p>The recipient parameter can be either <code>me</code>, <code>here</code>, or a channel mention
 or name.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 remind #party-chat 2h It\'s party time!
 :::</p>
 <hr />
-<h2 id="remindlist">remindlist</h2>
-<h3 id="command-syntax_1">Command Syntax</h3>
+<h2 id="remindlist">remindlist<a class="headerlink" href="#remindlist" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 remindlist
 :::</p>
-<h3 id="command-description_1">Command Description</h3>
+<h3 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h3>
 <p>Lists all reminders you created within the server.</p>
-<h3 id="examples_1">Examples</h3>
+<h3 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 remindls
 :::</p>
 <hr />
-<h2 id="reminddel">reminddel</h2>
-<h3 id="command-syntax_2">Command Syntax</h3>
+<h2 id="reminddel">reminddel<a class="headerlink" href="#reminddel" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reminddel (reminder index)
 :::</p>
-<h3 id="command-description_2">Command Description</h3>
+<h3 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h3>
 <p>Deletes a reminder on the specified index, as shown by remindlist.</p>
-<h3 id="examples_2">Examples</h3>
+<h3 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reminddel 1 remindrm 3
 :::</p>
 <hr />
-<h2 id="remindtemplate">remindtemplate</h2>
-<h3 id="command-syntax_3">Command Syntax</h3>
+<h2 id="remindtemplate">remindtemplate<a class="headerlink" href="#remindtemplate" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 remindtemplate (reminder message)
 :::</p>
-<h3 id="command-description_3">Command Description</h3>
+<h3 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h3>
 <p><strong>This command is currently not active.</strong></p>
 <p>Sets message template for when a reminder is triggered.</p>
 <p>You can use one (or more) of these placeholders in your response
@@ -1968,22 +1968,22 @@ message:</p>
     the command.</li>
 <li><strong>%server%</strong>: This will be replaced with the server name.</li>
 </ul>
-<h3 id="permissions-needed">Permissions Needed</h3>
+<h3 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Bot Owner</p>
-<h3 id="examples_3">Examples</h3>
+<h3 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
-remindtemplate Hello %user%\~! %botname% here to tell you %message%!
+remindtemplate Hello %user%~! %botname% here to tell you %message%!
 :::</p>
 <hr />
-<h2 id="repeat">repeat</h2>
-<h3 id="command-syntax_4">Command Syntax</h3>
+<h2 id="repeat">repeat<a class="headerlink" href="#repeat" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repeat (time in minutes) (message) repeat (time of day, HH:mm, UTC
 timezone) (message) repeat (--message/--m {message to repeat})
 [--no-redundant/--n] [--interval/--i {time code}]
 [--channel/--c {channel id/mention/q_name}]
 :::</p>
-<h3 id="command-description_4">Command Description</h3>
+<h3 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h3>
 <p>Repeat a message periodically in a channel.</p>
 <p>This command has a quick syntax (with 2 variations) and a full syntax.
 It is advised to use the full syntax if you want take advantage of the
@@ -2009,55 +2009,55 @@ Note
 automatically set the interval to 1 day, and repeat the message everyday
 around the same clock time.
 :::</p>
-<h3 id="permissions-needed_1">Permissions Needed</h3>
+<h3 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_4">Examples</h3>
+<h3 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repeat 120 2 hours have passed since my last message. repeat 8:00
 Everyone, wake up! repeat --m This is not a spam channel, please behave
 correctly. --c #serious-chat --i 6h --no-redundant
 :::</p>
 <hr />
-<h2 id="repeatlist">repeatlist</h2>
-<h3 id="command-syntax_5">Command Syntax</h3>
+<h2 id="repeatlist">repeatlist<a class="headerlink" href="#repeatlist" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repeatlist
 :::</p>
-<h3 id="command-description_5">Command Description</h3>
+<h3 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h3>
 <p>Lists all repeating messages within the server.</p>
-<h3 id="examples_5">Examples</h3>
+<h3 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repls
 :::</p>
 <hr />
-<h2 id="repeatremove">repeatremove</h2>
-<h3 id="command-syntax_6">Command Syntax</h3>
+<h2 id="repeatremove">repeatremove<a class="headerlink" href="#repeatremove" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repeatremove (repeating message index)
 :::</p>
-<h3 id="command-description_6">Command Description</h3>
+<h3 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h3>
 <p>Deletes a repeating message on the specified index, as shown by
 repeatlist.</p>
-<h3 id="permissions-needed_2">Permissions Needed</h3>
+<h3 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_6">Examples</h3>
+<h3 id="examples_6">Examples<a class="headerlink" href="#examples_6" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reprm 3
 :::</p>
 <hr />
-<h2 id="repeatinvoke">repeatinvoke</h2>
-<h3 id="command-syntax_7">Command Syntax</h3>
+<h2 id="repeatinvoke">repeatinvoke<a class="headerlink" href="#repeatinvoke" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repeatinvoke (repeating message index)
 :::</p>
-<h3 id="command-description_7">Command Description</h3>
+<h3 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h3>
 <p>Immediately invokes (sends) a repeating message on the specified index,
 as shown by remindlist.</p>
 <p>Invoking a message also restarts its timer, hence potentially changing
 the clock time when the next reminders are going to show.</p>
-<h3 id="permissions-needed_3">Permissions Needed</h3>
+<h3 id="permissions-needed_3">Permissions Needed<a class="headerlink" href="#permissions-needed_3" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_7">Examples</h3>
+<h3 id="examples_7">Examples<a class="headerlink" href="#examples_7" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 repinv 3
 :::</p>
@@ -2115,6 +2115,10 @@ repinv 3
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2149,6 +2153,15 @@ repinv 3
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -2163,6 +2176,12 @@ repinv 3
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

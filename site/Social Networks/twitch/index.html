@@ -2000,7 +2000,7 @@
 </a>
 
 
-<h1 id="twitch-connector">Twitch Connector</h1>
+<h1 id="twitch-connector">Twitch Connector<a class="headerlink" href="#twitch-connector" title="Permanent link">📋</a></h1>
 <p>The Twitch module &amp; connector offers two macro-features:</p>
 <ul>
 <li>A set of commands to interact with Twitch to get info about users
@@ -2009,63 +2009,63 @@
     and offline, sending these notifications to one (or more) of the
     webhooks configured in your Discord server.</li>
 </ul>
-<h2 id="commands">Commands</h2>
-<h3 id="twcuser">twcuser</h3>
-<h4 id="command-syntax">Command Syntax</h4>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">📋</a></h2>
+<h3 id="twcuser">twcuser<a class="headerlink" href="#twcuser" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcuser (Twitch username)
 :::</p>
-<h4 id="command-description">Command Description</h4>
+<h4 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h4>
 <p>Shows generic info about a user on Twitch. The username is
 case-insensitive.</p>
-<h4 id="examples">Examples</h4>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcuser cycloptux
 :::</p>
 <hr />
-<h3 id="twcstream">twcstream</h3>
-<h4 id="command-syntax_1">Command Syntax</h4>
+<h3 id="twcstream">twcstream<a class="headerlink" href="#twcstream" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcstream (Twitch username)
 :::</p>
-<h4 id="command-description_1">Command Description</h4>
+<h4 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h4>
 <p>Shows specific details about the stream properties of a user\'s channel.
 This command will not work if the target user is not streaming. The
 username is case-insensitive.</p>
-<h4 id="examples_1">Examples</h4>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcstream cycloptux
 :::</p>
 <hr />
-<h3 id="twcwatch">twcwatch</h3>
-<h4 id="command-syntax_2">Command Syntax</h4>
+<h3 id="twcwatch">twcwatch<a class="headerlink" href="#twcwatch" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcwatch (Twitch username)
 :::</p>
-<h4 id="command-description_2">Command Description</h4>
+<h4 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h4>
 <p>Posts an URL to the user\'s channel. Discord includes a native
 auto-preview which lets users play the Twitch stream live in the current
 channel.</p>
-<h4 id="examples_2">Examples</h4>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcwatch cycloptux
 :::</p>
 <hr />
-<h3 id="twcrndgame">twcrndgame</h3>
-<h4 id="command-syntax_3">Command Syntax</h4>
+<h3 id="twcrndgame">twcrndgame<a class="headerlink" href="#twcrndgame" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcrndgame (game name)
 :::</p>
-<h4 id="command-description_3">Command Description</h4>
+<h4 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h4>
 <p>Posts an URL to a random user\'s channel, playing the selected game.
 Discord includes a native auto-preview which lets users play the Twitch
 stream live in the current channel.</p>
-<h4 id="examples_3">Examples</h4>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcrndgame fortnite
 :::</p>
 <hr />
-<h2 id="twitch-notifications">Twitch Notifications</h2>
+<h2 id="twitch-notifications">Twitch Notifications<a class="headerlink" href="#twitch-notifications" title="Permanent link">📋</a></h2>
 <p>::: {.seealso}
 In order to better understand this module (and the rest of the connector
 modules), it\'s very important that you are familiar with Discord
@@ -2090,13 +2090,13 @@ Discord notification, and/or miss a few notifications every once in a
 while, and/or send duplicate notifications. Additional checks are in
 place to minimize the amount occurrencies of duplicate notifications.
 :::</p>
-<h3 id="twchook">twchook</h3>
-<h4 id="command-syntax_4">Command Syntax</h4>
+<h3 id="twchook">twchook<a class="headerlink" href="#twchook" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twchook (Twitch username) (webhook URL or --channel (channel
 id/mention/q_name)) [customization params]
 :::</p>
-<h4 id="command-description_4">Command Description</h4>
+<h4 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h4>
 <p>Starts a notification service for the selected Twitch account. If a user
 starts or ends a Live stream a notification will be sent to the
 specified webhook service.</p>
@@ -2123,7 +2123,7 @@ automatically used for this feed.</p>
 permissions.
 :::</p>
 <p><strong>Customization Params</strong></p>
-<h5 id="-game-first-game-second-game"><code>--game (first game) [second game] [...]</code></h5>
+<h5 id="-game-first-game-second-game"><code>--game (first game) [second game] [...]</code><a class="headerlink" href="#-game-first-game-second-game" title="Permanent link">📋</a></h5>
 <p>Adds a <strong>whitelist</strong>, <strong>inclusive</strong> filter for game names to the
 service. Notifications for the selected user will only be sent if the
 streamed game is equal to one of the filtered games. Actions related to
@@ -2142,7 +2142,7 @@ a stream. Changing the game throughout a stream will not trigger the
 additional \"Live\" notification.
 :::</p>
 <p><strong>Default</strong>: No filter</p>
-<h5 id="-event-first-event-second-event"><code>--event (first event) [second event] [...]</code></h5>
+<h5 id="-event-first-event-second-event"><code>--event (first event) [second event] [...]</code><a class="headerlink" href="#-event-first-event-second-event" title="Permanent link">📋</a></h5>
 <p>Adds a <strong>whitelist</strong>, <strong>inclusive</strong> filter for specific events to the
 service. Notifications will only be sent if the actual notification
 event is equal to one of the filtered events.</p>
@@ -2152,7 +2152,7 @@ event is equal to one of the filtered events.</p>
 <li><code>offline</code>, corresponding to Twitch users ending their stream.</li>
 </ul>
 <p><strong>Default</strong>: No filter</p>
-<h5 id="-header-message"><code>--header (message)</code></h5>
+<h5 id="-header-message"><code>--header (message)</code><a class="headerlink" href="#-header-message" title="Permanent link">📋</a></h5>
 <p>Adds a custom header message when notifications are posted. Custom
 headers can have a maximum of <strong>1024</strong> characters.</p>
 <p>Custom headers <strong>can</strong> be formatted as embeds by following a very
@@ -2224,23 +2224,23 @@ of the <code>%stream_status%</code> tag to differentiate between the two message
 <p><strong>Default</strong>:
 <code>:red_circle: Now Live on Twitch: %display_name% | :video_game: Playing %game%.</code>
 and <code>Stream Offline: %display_name% | :video_game: Playing %game%.</code></p>
-<h5 id="-webhook-name-custom-name"><code>--webhook-name (custom name)</code></h5>
+<h5 id="-webhook-name-custom-name"><code>--webhook-name (custom name)</code><a class="headerlink" href="#-webhook-name-custom-name" title="Permanent link">📋</a></h5>
 <p>Adds a custom username to the webhook when notifications are sent.
 Custom usernames can have a maximum of 32 characters.</p>
 <p><strong>Default</strong>: New notifications will be sent by a webhook with the
 display name of the Twitch account</p>
-<h5 id="-no-username-overwrite"><code>--no-username-overwrite</code></h5>
+<h5 id="-no-username-overwrite"><code>--no-username-overwrite</code><a class="headerlink" href="#-no-username-overwrite" title="Permanent link">📋</a></h5>
 <p>Removes any custom name from the webhook. The real webhook name (the one
 that you assigned when creating the webhook in Discord) will be used.</p>
 <p><strong>Default</strong>: <code>false</code> (Custom or automated names will be applied)</p>
-<h5 id="-no-avatar-overwrite"><code>--no-avatar-overwrite</code></h5>
+<h5 id="-no-avatar-overwrite"><code>--no-avatar-overwrite</code><a class="headerlink" href="#-no-avatar-overwrite" title="Permanent link">📋</a></h5>
 <p>Removes any custom avatar from the webhook. The real webhook avatar (the
 one that you assigned when creating the webhook in Discord) will be
 used.</p>
 <p><strong>Default</strong>: <code>false</code> (Automated avatars will be applied)</p>
-<h4 id="permissions-needed">Permissions Needed</h4>
+<h4 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Webhooks</p>
-<h4 id="examples_4">Examples</h4>
+<h4 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twchook cycloptux
 <a href="https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN">https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN</a>
@@ -2249,12 +2249,12 @@ twchook cycloptux
 --header %user% is now %stream_status%! Game: %game%
 :::</p>
 <hr />
-<h3 id="twcehook">twcehook</h3>
-<h4 id="command-syntax_5">Command Syntax</h4>
+<h3 id="twcehook">twcehook<a class="headerlink" href="#twcehook" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcehook (Twitch username/stream index) [new customization params]
 :::</p>
-<h4 id="command-description_5">Command Description</h4>
+<h4 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h4>
 <p><strong>Replaces</strong> all previously set customization params for the selected
 Twitch notification service with a new set of customization params. The
 stream index is the number shown with twclhook.</p>
@@ -2266,27 +2266,27 @@ Warning
 completely replace them. Take note of the existing params first, and use
 them in the command!
 :::</p>
-<h4 id="permissions-needed_1">Permissions Needed</h4>
+<h4 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Webhooks</p>
 <hr />
-<h3 id="twcrhook">twcrhook</h3>
-<h4 id="command-syntax_6">Command Syntax</h4>
+<h3 id="twcrhook">twcrhook<a class="headerlink" href="#twcrhook" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcrhook (Twitch username/stream index)
 :::</p>
-<h4 id="command-description_6">Command Description</h4>
+<h4 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h4>
 <p>Stops a previously set Twitch notification service and removes its link
 to the server webhook. The stream index is the number shown with
 twclhook.</p>
-<h4 id="permissions-needed_2">Permissions Needed</h4>
+<h4 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Webhooks</p>
-<h4 id="examples_5">Examples</h4>
+<h4 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 twcrhook cycloptux twcrhook 2
 :::</p>
 <hr />
-<h3 id="twclhook">twclhook</h3>
-<h4 id="command-description_7">Command Description</h4>
+<h3 id="twclhook">twclhook<a class="headerlink" href="#twclhook" title="Permanent link">📋</a></h3>
+<h4 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h4>
 <p>Prints a list of all the Twitch notification services that are linked to
 webhooks in the current server.</p>
 
@@ -2343,6 +2343,10 @@ webhooks in the current server.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2377,6 +2381,15 @@ webhooks in the current server.</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -2391,6 +2404,12 @@ webhooks in the current server.</p>
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

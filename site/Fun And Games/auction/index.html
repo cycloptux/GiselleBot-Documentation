@@ -675,8 +675,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#example_1" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -1456,8 +1456,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#example_1" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -1484,24 +1484,24 @@
 </a>
 
 
-<h1 id="auction-house">Auction House</h1>
+<h1 id="auction-house">Auction House<a class="headerlink" href="#auction-house" title="Permanent link">📋</a></h1>
 <p>The Auction House module lets server members bid for items within a
 certain span of time.</p>
-<h2 id="ahnew">!ahnew</h2>
-<h3 id="command-syntax">Command Syntax</h3>
+<h2 id="ahnew">!ahnew<a class="headerlink" href="#ahnew" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h3>
 <div class="admonition example">
-<pre><code>!ahnew [--item {item name}] [--starting {starting bid price(number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {roleid(s)/mention(s)/q_name(s)}] [--forward {userid(s)/mention(s)/q_name(s)}]
+<pre><code>!ahnew [--item {item name}] [--starting {starting bid price (number)}] [--currency {currency name (singular,plural)}] [--duration {duration timecode}] [--roles {roleid(s)/mention(s)/q_name(s)}] [--forward {userid(s)/mention(s)/q_name(s)}]
 </code></pre>
 </div>
-<h3 id="command-description">Command Description</h3>
+<h3 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h3>
 <p>Starts a new auction in the current channel. The currency parameter will
 define which currency names will be used in the message, separate
 singular and plural with a simple comma <code>,</code>.</p>
-<div class="admonition note">
+<div class="admonition abstract">
 <p class="admonition-title">Note</p>
 <p>No currency (see <a href="/Fun And Games/currency">Currency System</a>) is actually used.</p>
 </div>
-<p>The roles parameter will restrict the ability to vote to users that have
+<p>The <code>--roles</code> parameter will restrict the ability to vote to users that have
 (at least one of) the defined role(s). The forward parameter will define
 more users that will receive the auction closure notification via DM
 (the author of the auction will always be notified). The final
@@ -1516,39 +1516,39 @@ for auditing purposes.</p>
 <li><strong>Roles</strong>: <em>None</em> (everyone)</li>
 <li><strong>Forward</strong>: <em>None</em> (author only)</li>
 </ul>
-<h3 id="example">Example</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">📋</a></h3>
 <div class="admonition example">
 <pre><code>!ahnew --item Steam Key --starting 100 --currency buck,bucks --duration 5d --roles "Auction Enabled" @Gamers --forward cycloptux#1543
 </code></pre>
 </div>
 <hr />
-<h2 id="ahstop">!ahstop</h2>
-<h3 id="command-description_1">Command Description</h3>
+<h2 id="ahstop">!ahstop<a class="headerlink" href="#ahstop" title="Permanent link">📋</a></h2>
+<h3 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h3>
 <p>Stops the auction (in the current channel) that was started by the
 command author, as if the timer had expired (e.g. the author will be
 notified with the winner, etc.).</p>
 <hr />
-<h2 id="bid">!bid</h2>
-<h3 id="command-syntax_1">Command Syntax</h3>
-<p>::: {.parsed-literal}
-bid (amount)
-:::</p>
-<h3 id="command-description_2">Command Description</h3>
+<h2 id="bid">!bid<a class="headerlink" href="#bid" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h3>
+<div class="admonition example">
+<pre><code>!bid (amount)
+</code></pre>
+</div>
+<h3 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h3>
 <p>Lets a user bid a certain amount for the current auction. Validation
-rules are in place to make sure that the bid is valid before it\'s
+rules are in place to make sure that the bid is valid before it's
 registered. Invalid bids will still be registered in the detailed .csv
 that is sent to the author, but those will not interfere with the actual
 auction.</p>
-<p>::: {.note}
-::: {.title}
-Note
-:::</p>
-<p>This command is always available to everyone.
-:::</p>
-<h3 id="examples">Examples</h3>
-<p>::: {.parsed-literal}
-bid 110
-:::</p>
+<div class="admonition abstract">
+<p class="admonition-title">Note<p>This command is always available to everyone.</p>
+</p>
+</div>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">📋</a></h3>
+<div class="admonition example">
+<pre><code>!bid 110
+</code></pre>
+</div>
 
               
             </article>
@@ -1603,6 +1603,10 @@ bid 110
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -1637,6 +1641,15 @@ bid 110
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -1651,6 +1664,12 @@ bid 110
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -5686,7 +5686,7 @@
 </a>
 
 
-<h1 id="server-administration">Server Administration</h1>
+<h1 id="server-administration">Server Administration<a class="headerlink" href="#server-administration" title="Permanent link">📋</a></h1>
 <p>The Administration module contains tools used to manage a Discord server
 and its members.</p>
 <p>::: {.seealso}
@@ -5695,13 +5695,13 @@ using the administration module. You can find it here:
 <code class="interpreted-text" role="ref">guide-administration</code>
 :::</p>
 <hr />
-<h2 id="bot-prefix">Bot Prefix</h2>
-<h3 id="prefix">prefix</h3>
-<h4 id="command-syntax">Command Syntax</h4>
+<h2 id="bot-prefix">Bot Prefix<a class="headerlink" href="#bot-prefix" title="Permanent link">📋</a></h2>
+<h3 id="prefix">prefix<a class="headerlink" href="#prefix" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 prefix [new prefix]
 :::</p>
-<h4 id="command-description">Command Description</h4>
+<h4 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h4>
 <p>Sets the bot prefix for all bot commands within the current server.</p>
 <p>Using the command without any argument will show the current prefix.</p>
 <p>::: {.warning}
@@ -5729,20 +5729,20 @@ Note
 reaction will only work if the <code class="interpreted-text" role="ref">custreact</code>
 module is enabled.
 :::</p>
-<h4 id="permissions-needed">Permissions Needed</h4>
+<h4 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples">Examples</h4>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 prefix prefix b?
 :::</p>
 <hr />
-<h2 id="server-activity-logging">Server Activity Logging</h2>
-<h3 id="log">log</h3>
-<h4 id="command-syntax_1">Command Syntax</h4>
+<h2 id="server-activity-logging">Server Activity Logging<a class="headerlink" href="#server-activity-logging" title="Permanent link">📋</a></h2>
+<h3 id="log">log<a class="headerlink" href="#log" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 log [type(s)]
 :::</p>
-<h4 id="command-description_1">Command Description</h4>
+<h4 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h4>
 <p>Toggles one or more logger types in the current channel. Available
 loggers are:</p>
 <ul>
@@ -5778,29 +5778,29 @@ and <strong>Warning</strong> loggers are publicly available. If you want to enab
 role="ref"}). The \"Invites Tracking\" feature of the <strong>Members</strong> logger
 is only available as a <strong>Premium</strong> feature.
 :::</p>
-<p>| ~*:\ Due\ to\ the\ high\ amount\ of\ info\ that\ can\ be\ edited,\ these\ commands\ are\ limited\ to\ monitoring\ the\ main\ parameters.~
-| ~**:\ Thread\ editing\ will\ track\ thread\ archival\ and\ unarchival\ events.~
-| ~***:\ Evasion\ is\ intended\ as\ leaving\ and\ re-joining\ a\ server\ while\ a\ permanent\ or\ time-based\ mute/ban\ action\ is\ taken\ on\ the\ user,\ in\ an\ attempt\ to\ clear\ the\ moderation\ roles.\ The\ roles\ will\ be\ reapplied\ and\ the\ administrators/moderators\ will\ be\ notified.~</p>
-<h4 id="examples_1">Examples</h4>
+<p>| <sub>*: Due to the high amount of info that can be edited, these commands are limited to monitoring the main parameters.</sub>
+| <sub>**: Thread editing will track thread archival and unarchival events.</sub>
+| <sub>***: Evasion is intended as leaving and re-joining a server while a permanent or time-based mute/ban action is taken on the user, in an attempt to clear the moderation roles. The roles will be reapplied and the administrators/moderators will be notified.</sub></p>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 log members log voice messages log ALL
 :::</p>
 <hr />
-<h3 id="logstatus">logstatus</h3>
-<h4 id="command-syntax_2">Command Syntax</h4>
+<h3 id="logstatus">logstatus<a class="headerlink" href="#logstatus" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 logstatus
 :::</p>
-<h4 id="command-description_2">Command Description</h4>
+<h4 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h4>
 <p>Prints a summary of the enabled loggers, showing which logger(s) are
 enabled in which channel(s).</p>
 <hr />
-<h3 id="logignore">logignore</h3>
-<h4 id="command-syntax_3">Command Syntax</h4>
+<h3 id="logignore">logignore<a class="headerlink" href="#logignore" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 logignore (logger type) [entity id/mention/q_name]
 :::</p>
-<h4 id="command-description_3">Command Description</h4>
+<h4 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h4>
 <p>::: {.admonition}
 Premium</p>
 <p>This feature is only available to <strong>Premium</strong>-enabled servers (see:
@@ -5823,38 +5823,38 @@ filters:</p>
 </ul>
 <p>You can also print the list of currently set filters by using logignore
 (logger type) without any additional argument.</p>
-<h4 id="examples_2">Examples</h4>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 logignore members \@cycloptux#1543 logignore channels #admin-chat
 :::</p>
 <hr />
-<h2 id="greet-messages">Greet Messages</h2>
+<h2 id="greet-messages">Greet Messages<a class="headerlink" href="#greet-messages" title="Permanent link">📋</a></h2>
 <p>The Greet Messages submodule lets server managers configure automatic
 and configurable messages that still send when a user joins/leaves your
 server, or obtains a specific role.</p>
 <p>All use cases (minus the \"goodbye\" messages) can be configured to send
 greet messages to a channel or to the user through a Direct Message.</p>
-<h3 id="greet">greet</h3>
-<h4 id="command-description_4">Command Description</h4>
+<h3 id="greet">greet<a class="headerlink" href="#greet" title="Permanent link">📋</a></h3>
+<h4 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h4>
 <p>Toggles announcements on the current channel when someone joins the
 server.</p>
-<h4 id="permissions-needed_1">Permissions Needed</h4>
+<h4 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="greetdm">greetdm</h3>
-<h4 id="command-description_5">Command Description</h4>
+<h3 id="greetdm">greetdm<a class="headerlink" href="#greetdm" title="Permanent link">📋</a></h3>
+<h4 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h4>
 <p>Toggles announcements via Direct Message when someone joins the server
 (this is separate from greet - you can have both, any, or neither
 enabled).</p>
-<h4 id="permissions-needed_2">Permissions Needed</h4>
+<h4 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="greetmsg">greetmsg</h3>
-<h4 id="command-syntax_4">Command Syntax</h4>
+<h3 id="greetmsg">greetmsg<a class="headerlink" href="#greetmsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetmsg [message content]
 :::</p>
-<h4 id="command-description_6">Command Description</h4>
+<h4 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h4>
 <p>Sets a new join announcement message which will be shown in the
 server\'s channel. Using it with no message will show the current greet
 message.</p>
@@ -5903,19 +5903,19 @@ message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_3">Permissions Needed</h4>
+<h4 id="permissions-needed_3">Permissions Needed<a class="headerlink" href="#permissions-needed_3" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_3">Examples</h4>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetmsg Welcome, %user%.
 :::</p>
 <hr />
-<h3 id="greetdmmsg">greetdmmsg</h3>
-<h4 id="command-syntax_5">Command Syntax</h4>
+<h3 id="greetdmmsg">greetdmmsg<a class="headerlink" href="#greetdmmsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdmmsg [message content]
 :::</p>
-<h4 id="command-description_7">Command Description</h4>
+<h4 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h4>
 <p>Sets a new join announcement message which will be sent to the user who
 joined, via DM. Using it with no message will show the current DM greet
 message.</p>
@@ -5964,19 +5964,19 @@ message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_4">Permissions Needed</h4>
+<h4 id="permissions-needed_4">Permissions Needed<a class="headerlink" href="#permissions-needed_4" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_4">Examples</h4>
+<h4 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdmmsg Welcome to %server%, %user%.
 :::</p>
 <hr />
-<h3 id="greetdelay">greetdelay</h3>
-<h4 id="command-syntax_6">Command Syntax</h4>
+<h3 id="greetdelay">greetdelay<a class="headerlink" href="#greetdelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdelay (seconds)
 :::</p>
-<h4 id="command-description_8">Command Description</h4>
+<h4 id="command-description_8">Command Description<a class="headerlink" href="#command-description_8" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>in-server</strong> greet
 messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -5985,19 +5985,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_5">Permissions Needed</h4>
+<h4 id="permissions-needed_5">Permissions Needed<a class="headerlink" href="#permissions-needed_5" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_5">Examples</h4>
+<h4 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdelay 0 greetdelay 10
 :::</p>
 <hr />
-<h3 id="greetdmdelay">greetdmdelay</h3>
-<h4 id="command-syntax_7">Command Syntax</h4>
+<h3 id="greetdmdelay">greetdmdelay<a class="headerlink" href="#greetdmdelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdmdelay (seconds)
 :::</p>
-<h4 id="command-description_9">Command Description</h4>
+<h4 id="command-description_9">Command Description<a class="headerlink" href="#command-description_9" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>Direct Message</strong> greet
 messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6006,19 +6006,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_6">Permissions Needed</h4>
+<h4 id="permissions-needed_6">Permissions Needed<a class="headerlink" href="#permissions-needed_6" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_6">Examples</h4>
+<h4 id="examples_6">Examples<a class="headerlink" href="#examples_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdmdelay 0 greetdmdelay 10
 :::</p>
 <hr />
-<h3 id="greetdel">greetdel</h3>
-<h4 id="command-syntax_8">Command Syntax</h4>
+<h3 id="greetdel">greetdel<a class="headerlink" href="#greetdel" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_8">Command Syntax<a class="headerlink" href="#command-syntax_8" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdel (seconds)
 :::</p>
-<h4 id="command-description_10">Command Description</h4>
+<h4 id="command-description_10">Command Description<a class="headerlink" href="#command-description_10" title="Permanent link">📋</a></h4>
 <p>Sets the time it takes (in seconds) for <strong>in-server</strong> greet messages to
 be auto-deleted after being sent. Set it to 0 to disable automatic
 deletion.</p>
@@ -6034,15 +6034,15 @@ Note
 :::</p>
 <p>This setting does not apply to DM greet messages.
 :::</p>
-<h4 id="permissions-needed_7">Permissions Needed</h4>
+<h4 id="permissions-needed_7">Permissions Needed<a class="headerlink" href="#permissions-needed_7" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_7">Examples</h4>
+<h4 id="examples_7">Examples<a class="headerlink" href="#examples_7" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetdel 0 greetdel 30
 :::</p>
 <hr />
-<h3 id="goodbye">goodbye</h3>
-<h4 id="command-description_11">Command Description</h4>
+<h3 id="goodbye">goodbye<a class="headerlink" href="#goodbye" title="Permanent link">📋</a></h3>
+<h4 id="command-description_11">Command Description<a class="headerlink" href="#command-description_11" title="Permanent link">📋</a></h4>
 <p>Toggles announcements on the current channel when someone leaves the
 server.</p>
 <p>::: {.note}
@@ -6055,15 +6055,15 @@ leaving of a user. will still attempt to create the message with the
 info that can be fetched from the cache, but the information might be
 incomplete or incorrect. <strong>This is not a bug</strong>.
 :::</p>
-<h4 id="permissions-needed_8">Permissions Needed</h4>
+<h4 id="permissions-needed_8">Permissions Needed<a class="headerlink" href="#permissions-needed_8" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="goodbyemsg">goodbyemsg</h3>
-<h4 id="command-syntax_9">Command Syntax</h4>
+<h3 id="goodbyemsg">goodbyemsg<a class="headerlink" href="#goodbyemsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_9">Command Syntax<a class="headerlink" href="#command-syntax_9" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyemsg [message content]
 :::</p>
-<h4 id="command-description_12">Command Description</h4>
+<h4 id="command-description_12">Command Description<a class="headerlink" href="#command-description_12" title="Permanent link">📋</a></h4>
 <p>Sets a new leave announcement message which will be shown in the
 server\'s channel. Using it with no message will show the current
 goodbye message.</p>
@@ -6112,19 +6112,19 @@ goodbye message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_9">Permissions Needed</h4>
+<h4 id="permissions-needed_9">Permissions Needed<a class="headerlink" href="#permissions-needed_9" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_8">Examples</h4>
+<h4 id="examples_8">Examples<a class="headerlink" href="#examples_8" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyemsg See you soon, %fullusername%!
 :::</p>
 <hr />
-<h3 id="goodbyedelay">goodbyedelay</h3>
-<h4 id="command-syntax_10">Command Syntax</h4>
+<h3 id="goodbyedelay">goodbyedelay<a class="headerlink" href="#goodbyedelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_10">Command Syntax<a class="headerlink" href="#command-syntax_10" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyedelay (seconds)
 :::</p>
-<h4 id="command-description_13">Command Description</h4>
+<h4 id="command-description_13">Command Description<a class="headerlink" href="#command-description_13" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>in-server</strong> goodbye
 messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6133,19 +6133,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_10">Permissions Needed</h4>
+<h4 id="permissions-needed_10">Permissions Needed<a class="headerlink" href="#permissions-needed_10" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_9">Examples</h4>
+<h4 id="examples_9">Examples<a class="headerlink" href="#examples_9" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyedelay 0 goodbyedelay 10
 :::</p>
 <hr />
-<h3 id="goodbyedel">goodbyedel</h3>
-<h4 id="command-syntax_11">Command Syntax</h4>
+<h3 id="goodbyedel">goodbyedel<a class="headerlink" href="#goodbyedel" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_11">Command Syntax<a class="headerlink" href="#command-syntax_11" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyedel (seconds)
 :::</p>
-<h4 id="command-description_14">Command Description</h4>
+<h4 id="command-description_14">Command Description<a class="headerlink" href="#command-description_14" title="Permanent link">📋</a></h4>
 <p>Sets the time it takes (in seconds) for <strong>in-server</strong> goodbye messages
 to be auto-deleted after being sent. Set it to 0 to disable automatic
 deletion.</p>
@@ -6155,52 +6155,52 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_11">Permissions Needed</h4>
+<h4 id="permissions-needed_11">Permissions Needed<a class="headerlink" href="#permissions-needed_11" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_10">Examples</h4>
+<h4 id="examples_10">Examples<a class="headerlink" href="#examples_10" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyedel 0 goodbyedel 30
 :::</p>
 <hr />
-<h3 id="greetrole">greetrole</h3>
-<h4 id="command-syntax_12">Command Syntax</h4>
+<h3 id="greetrole">greetrole<a class="headerlink" href="#greetrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_12">Command Syntax<a class="headerlink" href="#command-syntax_12" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetrole (role id/mention/q_name)
 :::</p>
-<h4 id="command-description_15">Command Description</h4>
+<h4 id="command-description_15">Command Description<a class="headerlink" href="#command-description_15" title="Permanent link">📋</a></h4>
 <p>Toggles announcements on the current channel when someone obtains a
 certain role.</p>
-<h4 id="permissions-needed_12">Permissions Needed</h4>
+<h4 id="permissions-needed_12">Permissions Needed<a class="headerlink" href="#permissions-needed_12" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_11">Examples</h4>
+<h4 id="examples_11">Examples<a class="headerlink" href="#examples_11" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetrole \@Beta Tester greetrole 123456789098765432 greetrole \"Top
 Secret Pass\"
 :::</p>
 <hr />
-<h3 id="greetroledm">greetroledm</h3>
-<h4 id="command-syntax_13">Command Syntax</h4>
+<h3 id="greetroledm">greetroledm<a class="headerlink" href="#greetroledm" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_13">Command Syntax<a class="headerlink" href="#command-syntax_13" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledm (role id/mention/q_name)
 :::</p>
-<h4 id="command-description_16">Command Description</h4>
+<h4 id="command-description_16">Command Description<a class="headerlink" href="#command-description_16" title="Permanent link">📋</a></h4>
 <p>Toggles announcements via Direct Message when someone obtains a certain
 role (this is separate from greetrole - you can have both, any, or
 neither enabled).</p>
-<h4 id="permissions-needed_13">Permissions Needed</h4>
+<h4 id="permissions-needed_13">Permissions Needed<a class="headerlink" href="#permissions-needed_13" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_12">Examples</h4>
+<h4 id="examples_12">Examples<a class="headerlink" href="#examples_12" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledm \@Beta Tester greetroledm 123456789098765432 greetroledm
 \"Top Secret Pass\"
 :::</p>
 <hr />
-<h3 id="greetrolemsg">greetrolemsg</h3>
-<h4 id="command-syntax_14">Command Syntax</h4>
+<h3 id="greetrolemsg">greetrolemsg<a class="headerlink" href="#greetrolemsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_14">Command Syntax<a class="headerlink" href="#command-syntax_14" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetrolemsg (role id/mention/q_name) [message content]
 :::</p>
-<h4 id="command-description_17">Command Description</h4>
+<h4 id="command-description_17">Command Description<a class="headerlink" href="#command-description_17" title="Permanent link">📋</a></h4>
 <p>Sets a new role greeting message which will be shown in the server\'s
 channel. Using it with no message will show the current greet message.</p>
 <p>You can use one (or more) of these placeholders in your message:</p>
@@ -6252,21 +6252,21 @@ channel. Using it with no message will show the current greet message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_14">Permissions Needed</h4>
+<h4 id="permissions-needed_14">Permissions Needed<a class="headerlink" href="#permissions-needed_14" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_13">Examples</h4>
+<h4 id="examples_13">Examples<a class="headerlink" href="#examples_13" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetrolemsg \@VIP Congratulations for obtaining the <strong>%role%</strong> role,
 %user%! With great power comes great responsibility... greetrolemsg
 123456789098765432 Welcome %user%, you are now a member of this server!
 :::</p>
 <hr />
-<h3 id="greetroledmmsg">greetroledmmsg</h3>
-<h4 id="command-syntax_15">Command Syntax</h4>
+<h3 id="greetroledmmsg">greetroledmmsg<a class="headerlink" href="#greetroledmmsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_15">Command Syntax<a class="headerlink" href="#command-syntax_15" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledmmsg (role id/mention/q_name) [message content]
 :::</p>
-<h4 id="command-description_18">Command Description</h4>
+<h4 id="command-description_18">Command Description<a class="headerlink" href="#command-description_18" title="Permanent link">📋</a></h4>
 <p>Sets a new role greeting message which will be sent to the user who
 obtained the role, via DM. Using it with no message will show the
 current DM greet message.</p>
@@ -6319,9 +6319,9 @@ current DM greet message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_15">Permissions Needed</h4>
+<h4 id="permissions-needed_15">Permissions Needed<a class="headerlink" href="#permissions-needed_15" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_14">Examples</h4>
+<h4 id="examples_14">Examples<a class="headerlink" href="#examples_14" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledmmsg \@VIP Congratulations for obtaining the <strong>%role%</strong> role
 in <strong>%server%</strong>, %user%! With great power comes great responsibility...
@@ -6329,12 +6329,12 @@ greetroledmmsg 123456789098765432 Welcome %user%, you are now a member
 of the %server% server!
 :::</p>
 <hr />
-<h3 id="greetroledelay">greetroledelay</h3>
-<h4 id="command-syntax_16">Command Syntax</h4>
+<h3 id="greetroledelay">greetroledelay<a class="headerlink" href="#greetroledelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_16">Command Syntax<a class="headerlink" href="#command-syntax_16" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledelay (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_19">Command Description</h4>
+<h4 id="command-description_19">Command Description<a class="headerlink" href="#command-description_19" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>in-server</strong> role greet
 messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6343,19 +6343,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_16">Permissions Needed</h4>
+<h4 id="permissions-needed_16">Permissions Needed<a class="headerlink" href="#permissions-needed_16" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_15">Examples</h4>
+<h4 id="examples_15">Examples<a class="headerlink" href="#examples_15" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledelay \@VIP 0 greetroledelay 123456789098765432 10
 :::</p>
 <hr />
-<h3 id="greetroledmdelay">greetroledmdelay</h3>
-<h4 id="command-syntax_17">Command Syntax</h4>
+<h3 id="greetroledmdelay">greetroledmdelay<a class="headerlink" href="#greetroledmdelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_17">Command Syntax<a class="headerlink" href="#command-syntax_17" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledmdelay (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_20">Command Description</h4>
+<h4 id="command-description_20">Command Description<a class="headerlink" href="#command-description_20" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>Direct Message</strong> role
 greet messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6364,19 +6364,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_17">Permissions Needed</h4>
+<h4 id="permissions-needed_17">Permissions Needed<a class="headerlink" href="#permissions-needed_17" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_16">Examples</h4>
+<h4 id="examples_16">Examples<a class="headerlink" href="#examples_16" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledmdelay \@VIP 0 greetroledmdelay 123456789098765432 10
 :::</p>
 <hr />
-<h3 id="greetroledel">greetroledel</h3>
-<h4 id="command-syntax_18">Command Syntax</h4>
+<h3 id="greetroledel">greetroledel<a class="headerlink" href="#greetroledel" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_18">Command Syntax<a class="headerlink" href="#command-syntax_18" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledel (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_21">Command Description</h4>
+<h4 id="command-description_21">Command Description<a class="headerlink" href="#command-description_21" title="Permanent link">📋</a></h4>
 <p>Sets the time it takes (in seconds) for <strong>in-server</strong> role greet
 messages to be auto-deleted after being sent. Set it to 0 to disable
 automatic deletion.</p>
@@ -6392,52 +6392,52 @@ Note
 :::</p>
 <p>This setting does not apply to DM greet messages.
 :::</p>
-<h4 id="permissions-needed_18">Permissions Needed</h4>
+<h4 id="permissions-needed_18">Permissions Needed<a class="headerlink" href="#permissions-needed_18" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_17">Examples</h4>
+<h4 id="examples_17">Examples<a class="headerlink" href="#examples_17" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 greetroledel \@Beta Tester 0 greetroledel \"Top Secret Pass\" 30
 :::</p>
 <hr />
-<h3 id="goodbyerole">goodbyerole</h3>
-<h4 id="command-syntax_19">Command Syntax</h4>
+<h3 id="goodbyerole">goodbyerole<a class="headerlink" href="#goodbyerole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_19">Command Syntax<a class="headerlink" href="#command-syntax_19" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyerole (role id/mention/q_name)
 :::</p>
-<h4 id="command-description_22">Command Description</h4>
+<h4 id="command-description_22">Command Description<a class="headerlink" href="#command-description_22" title="Permanent link">📋</a></h4>
 <p>Toggles announcements on the current channel when someone loses a
 certain role.</p>
-<h4 id="permissions-needed_19">Permissions Needed</h4>
+<h4 id="permissions-needed_19">Permissions Needed<a class="headerlink" href="#permissions-needed_19" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_18">Examples</h4>
+<h4 id="examples_18">Examples<a class="headerlink" href="#examples_18" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyerole \@Beta Tester goodbyerole 123456789098765432 goodbyerole
 \"Top Secret Pass\"
 :::</p>
 <hr />
-<h3 id="goodbyeroledm">goodbyeroledm</h3>
-<h4 id="command-syntax_20">Command Syntax</h4>
+<h3 id="goodbyeroledm">goodbyeroledm<a class="headerlink" href="#goodbyeroledm" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_20">Command Syntax<a class="headerlink" href="#command-syntax_20" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledm (role id/mention/q_name)
 :::</p>
-<h4 id="command-description_23">Command Description</h4>
+<h4 id="command-description_23">Command Description<a class="headerlink" href="#command-description_23" title="Permanent link">📋</a></h4>
 <p>Toggles announcements via Direct Message when someone loses a certain
 role (this is separate from goodbyerole - you can have both, any, or
 neither enabled).</p>
-<h4 id="permissions-needed_20">Permissions Needed</h4>
+<h4 id="permissions-needed_20">Permissions Needed<a class="headerlink" href="#permissions-needed_20" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_19">Examples</h4>
+<h4 id="examples_19">Examples<a class="headerlink" href="#examples_19" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledm \@Beta Tester goodbyeroledm 123456789098765432
 goodbyeroledm \"Top Secret Pass\"
 :::</p>
 <hr />
-<h3 id="goodbyerolemsg">goodbyerolemsg</h3>
-<h4 id="command-syntax_21">Command Syntax</h4>
+<h3 id="goodbyerolemsg">goodbyerolemsg<a class="headerlink" href="#goodbyerolemsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_21">Command Syntax<a class="headerlink" href="#command-syntax_21" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyerolemsg (role id/mention/q_name) [message content]
 :::</p>
-<h4 id="command-description_24">Command Description</h4>
+<h4 id="command-description_24">Command Description<a class="headerlink" href="#command-description_24" title="Permanent link">📋</a></h4>
 <p>Sets a new role goodbye message which will be shown in the server\'s
 channel. Using it with no message will show the current goodbye message.</p>
 <p>You can use one (or more) of these placeholders in your message:</p>
@@ -6489,21 +6489,21 @@ channel. Using it with no message will show the current goodbye message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_21">Permissions Needed</h4>
+<h4 id="permissions-needed_21">Permissions Needed<a class="headerlink" href="#permissions-needed_21" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_20">Examples</h4>
+<h4 id="examples_20">Examples<a class="headerlink" href="#examples_20" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyerolemsg \@VIP Sorry to hear you losing the <strong>%role%</strong> role,
 %user%! goodbyerolemsg 123456789098765432 %user%, you are no longer a
 member of this club!
 :::</p>
 <hr />
-<h3 id="goodbyeroledmmsg">goodbyeroledmmsg</h3>
-<h4 id="command-syntax_22">Command Syntax</h4>
+<h3 id="goodbyeroledmmsg">goodbyeroledmmsg<a class="headerlink" href="#goodbyeroledmmsg" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_22">Command Syntax<a class="headerlink" href="#command-syntax_22" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledmmsg (role id/mention/q_name) [message content]
 :::</p>
-<h4 id="command-description_25">Command Description</h4>
+<h4 id="command-description_25">Command Description<a class="headerlink" href="#command-description_25" title="Permanent link">📋</a></h4>
 <p>Sets a new role goodbye message which will be sent to the user who lost
 the role, via DM. Using it with no message will show the current DM
 goodbye message.</p>
@@ -6556,21 +6556,21 @@ goodbye message.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="permissions-needed_22">Permissions Needed</h4>
+<h4 id="permissions-needed_22">Permissions Needed<a class="headerlink" href="#permissions-needed_22" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_21">Examples</h4>
+<h4 id="examples_21">Examples<a class="headerlink" href="#examples_21" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledmmsg \@VIP Sorry to hear you losing the <strong>%role%</strong> role,
 %user%! goodbyeroledmmsg 123456789098765432 %user%, you are no longer a
 member of this club!
 :::</p>
 <hr />
-<h3 id="goodbyeroledelay">goodbyeroledelay</h3>
-<h4 id="command-syntax_23">Command Syntax</h4>
+<h3 id="goodbyeroledelay">goodbyeroledelay<a class="headerlink" href="#goodbyeroledelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_23">Command Syntax<a class="headerlink" href="#command-syntax_23" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledelay (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_26">Command Description</h4>
+<h4 id="command-description_26">Command Description<a class="headerlink" href="#command-description_26" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>in-server</strong> role
 goodbye messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6579,19 +6579,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_23">Permissions Needed</h4>
+<h4 id="permissions-needed_23">Permissions Needed<a class="headerlink" href="#permissions-needed_23" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_22">Examples</h4>
+<h4 id="examples_22">Examples<a class="headerlink" href="#examples_22" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledelay \@VIP 0 goodbyeroledelay 123456789098765432 10
 :::</p>
 <hr />
-<h3 id="goodbyeroledmdelay">goodbyeroledmdelay</h3>
-<h4 id="command-syntax_24">Command Syntax</h4>
+<h3 id="goodbyeroledmdelay">goodbyeroledmdelay<a class="headerlink" href="#goodbyeroledmdelay" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_24">Command Syntax<a class="headerlink" href="#command-syntax_24" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledmdelay (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_27">Command Description</h4>
+<h4 id="command-description_27">Command Description<a class="headerlink" href="#command-description_27" title="Permanent link">📋</a></h4>
 <p>Sets the time (delay) it takes (in seconds) for <strong>Direct Message</strong> role
 goodbye messages to be sent. Set it to 0 to disable send delay.</p>
 <p>The maximum time you can set is 300 (5 minutes).</p>
@@ -6600,19 +6600,19 @@ Premium</p>
 <p>You can extend the maximum time to 900 (15 minutes) as a <strong>Premium</strong>
 feature (see: <code class="interpreted-text" role="ref">premium-perks</code>).
 :::</p>
-<h4 id="permissions-needed_24">Permissions Needed</h4>
+<h4 id="permissions-needed_24">Permissions Needed<a class="headerlink" href="#permissions-needed_24" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_23">Examples</h4>
+<h4 id="examples_23">Examples<a class="headerlink" href="#examples_23" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledmdelay \@VIP 0 goodbyeroledmdelay 123456789098765432 10
 :::</p>
 <hr />
-<h3 id="goodbyeroledel">goodbyeroledel</h3>
-<h4 id="command-syntax_25">Command Syntax</h4>
+<h3 id="goodbyeroledel">goodbyeroledel<a class="headerlink" href="#goodbyeroledel" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_25">Command Syntax<a class="headerlink" href="#command-syntax_25" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledel (role id/mention/q_name) (seconds)
 :::</p>
-<h4 id="command-description_28">Command Description</h4>
+<h4 id="command-description_28">Command Description<a class="headerlink" href="#command-description_28" title="Permanent link">📋</a></h4>
 <p>Sets the time it takes (in seconds) for <strong>in-server</strong> role goodbye
 messages to be auto-deleted after being sent. Set it to 0 to disable
 automatic deletion.</p>
@@ -6628,20 +6628,20 @@ Note
 :::</p>
 <p>This setting does not apply to DM goodbye messages.
 :::</p>
-<h4 id="permissions-needed_25">Permissions Needed</h4>
+<h4 id="permissions-needed_25">Permissions Needed<a class="headerlink" href="#permissions-needed_25" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_24">Examples</h4>
+<h4 id="examples_24">Examples<a class="headerlink" href="#examples_24" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 goodbyeroledel \@Beta Tester 0 goodbyeroledel \"Top Secret Pass\" 30
 :::</p>
 <hr />
-<h2 id="automated-roles-assignmentremoval">Automated Roles Assignment/Removal</h2>
-<h3 id="autoassignrole">autoassignrole</h3>
-<h4 id="command-syntax_26">Command Syntax</h4>
+<h2 id="automated-roles-assignmentremoval">Automated Roles Assignment/Removal<a class="headerlink" href="#automated-roles-assignmentremoval" title="Permanent link">📋</a></h2>
+<h3 id="autoassignrole">autoassignrole<a class="headerlink" href="#autoassignrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_26">Command Syntax<a class="headerlink" href="#command-syntax_26" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 autoassignrole [role id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_29">Command Description</h4>
+<h4 id="command-description_29">Command Description<a class="headerlink" href="#command-description_29" title="Permanent link">📋</a></h4>
 <p>Automaticaly assigns one or more specified roles to every user who joins
 the server.</p>
 <p>Providing one or more role identifiers will toggle whether or not users
@@ -6654,20 +6654,20 @@ Note
 role to disable the auto assignment on join.
 :::</p>
 <p>Provide no parameters to show the current settings.</p>
-<h4 id="permissions-needed_26">Permissions Needed</h4>
+<h4 id="permissions-needed_26">Permissions Needed<a class="headerlink" href="#permissions-needed_26" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_25">Examples</h4>
+<h4 id="examples_25">Examples<a class="headerlink" href="#examples_25" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 aar aar RoleName1 RoleName2
 :::</p>
 <hr />
-<h3 id="autoremoverole">autoremoverole</h3>
-<h4 id="command-syntax_27">Command Syntax</h4>
+<h3 id="autoremoverole">autoremoverole<a class="headerlink" href="#autoremoverole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_27">Command Syntax<a class="headerlink" href="#command-syntax_27" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 arr [time code] [role id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_30">Command Description</h4>
+<h4 id="command-description_30">Command Description<a class="headerlink" href="#command-description_30" title="Permanent link">📋</a></h4>
 <p>Automaticaly removes one or more specified roles from any user after the
 specified amount of time, no matter how that role was gained.</p>
 <p>Providing one or more role identifiers <strong>and a time code</strong> will set the
@@ -6675,20 +6675,20 @@ expiration time of those roles.</p>
 <p>Providing one or more role identifiers <strong>without a time code</strong> will
 disable the expiration of those roles.</p>
 <p>Provide no parameters to show the current settings.</p>
-<h4 id="permissions-needed_27">Permissions Needed</h4>
+<h4 id="permissions-needed_27">Permissions Needed<a class="headerlink" href="#permissions-needed_27" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_26">Examples</h4>
+<h4 id="examples_26">Examples<a class="headerlink" href="#examples_26" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 arr arr 1h RoleName1 RoleName2 arr RoleName2
 :::</p>
 <hr />
-<h3 id="vcrole">vcrole</h3>
-<h4 id="command-syntax_28">Command Syntax</h4>
+<h3 id="vcrole">vcrole<a class="headerlink" href="#vcrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_28">Command Syntax<a class="headerlink" href="#command-syntax_28" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 vcrole [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_31">Command Description</h4>
+<h4 id="command-description_31">Command Description<a class="headerlink" href="#command-description_31" title="Permanent link">📋</a></h4>
 <p>Automaticaly assigns a role to users who join the voice channel you\'re
 in when you run this command. Provide no role identifier to disable.</p>
 <p>Provide no parameters to disable this feature.</p>
@@ -6698,23 +6698,23 @@ Warning
 :::</p>
 <p>You must be in a voice channel to run this command.
 :::</p>
-<h4 id="permissions-needed_28">Permissions Needed</h4>
+<h4 id="permissions-needed_28">Permissions Needed<a class="headerlink" href="#permissions-needed_28" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_27">Examples</h4>
+<h4 id="examples_27">Examples<a class="headerlink" href="#examples_27" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 vcrole vcrole VoiceRoleName
 :::</p>
 <hr />
-<h3 id="vcrolelist">vcrolelist</h3>
-<h4 id="command-syntax_29">Command Syntax</h4>
+<h3 id="vcrolelist">vcrolelist<a class="headerlink" href="#vcrolelist" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_29">Command Syntax<a class="headerlink" href="#command-syntax_29" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 vcrolelist
 :::</p>
-<h4 id="command-description_32">Command Description</h4>
+<h4 id="command-description_32">Command Description<a class="headerlink" href="#command-description_32" title="Permanent link">📋</a></h4>
 <p>Shows a list of currently set voice channel roles.</p>
 <hr />
-<h2 id="self-assignable-roles">Self-Assignable Roles</h2>
+<h2 id="self-assignable-roles">Self-Assignable Roles<a class="headerlink" href="#self-assignable-roles" title="Permanent link">📋</a></h2>
 <p><strong>IMPORTANT NOTE</strong>: The bot will be able to assign a role only if it has
 both \"Manage Roles\" permissions <strong>AND</strong> if the role it\'s trying to
 assign is <strong>lower</strong> than the highest role the bot has. Please arrange
@@ -6808,8 +6808,8 @@ be available to users:</p>
     using the \"Required Roles\" and \"Ignored Roles\" settings.</li>
 </ul>
 <p>Here\'s the full list of available commands for this sub-module:</p>
-<h3 id="sargs">sargs</h3>
-<h4 id="command-description_33">Command Description</h4>
+<h3 id="sargs">sargs<a class="headerlink" href="#sargs" title="Permanent link">📋</a></h3>
+<h4 id="command-description_33">Command Description<a class="headerlink" href="#command-description_33" title="Permanent link">📋</a></h4>
 <p>Opens the self-assignable roles (i.e. role groups) interactive setup
 menu. Use the menu items to configure the above settings.</p>
 <p>::: {.note}
@@ -6820,40 +6820,40 @@ Note
 currently set as active.
 :::</p>
 <hr />
-<h3 id="asar">asar</h3>
-<h4 id="command-syntax_30">Command Syntax</h4>
+<h3 id="asar">asar<a class="headerlink" href="#asar" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_30">Command Syntax<a class="headerlink" href="#command-syntax_30" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 asar [group id] (role id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_34">Command Description</h4>
+<h4 id="command-description_34">Command Description<a class="headerlink" href="#command-description_34" title="Permanent link">📋</a></h4>
 <p>Adds one or more roles to the specified group. If the group ID is
 omitted, group <strong>0</strong> will be used as target role group.</p>
-<h4 id="permissions-needed_29">Permissions Needed</h4>
+<h4 id="permissions-needed_29">Permissions Needed<a class="headerlink" href="#permissions-needed_29" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_28">Examples</h4>
+<h4 id="examples_28">Examples<a class="headerlink" href="#examples_28" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 asar \"Group 1\" asar 2 \@Testing123 asar 12 123456789098765432
 :::</p>
 <hr />
-<h3 id="rsar">rsar</h3>
-<h4 id="command-syntax_31">Command Syntax</h4>
+<h3 id="rsar">rsar<a class="headerlink" href="#rsar" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_31">Command Syntax<a class="headerlink" href="#command-syntax_31" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rsar [group id] (role id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_35">Command Description</h4>
+<h4 id="command-description_35">Command Description<a class="headerlink" href="#command-description_35" title="Permanent link">📋</a></h4>
 <p>Removes one or more roles from the specified group. If the group ID is
 omitted, the role(s) will be removed from <strong>all</strong> role groups.</p>
-<h4 id="permissions-needed_30">Permissions Needed</h4>
+<h4 id="permissions-needed_30">Permissions Needed<a class="headerlink" href="#permissions-needed_30" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_29">Examples</h4>
+<h4 id="examples_29">Examples<a class="headerlink" href="#examples_29" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rsar \"Group 1\" rsar 2 \@Testing123 rsar 12 123456789098765432
 :::</p>
 <hr />
-<h3 id="lsar">lsar</h3>
-<h4 id="command-description_36">Command Description</h4>
+<h3 id="lsar">lsar<a class="headerlink" href="#lsar" title="Permanent link">📋</a></h3>
+<h4 id="command-description_36">Command Description<a class="headerlink" href="#command-description_36" title="Permanent link">📋</a></h4>
 <p>Prints a list of all role groups and the relative self-assignable
 groups.</p>
 <p>::: {.note}
@@ -6863,23 +6863,23 @@ Note
 <p>This command is always available to everyone.
 :::</p>
 <hr />
-<h3 id="adsarm">adsarm</h3>
-<h4 id="command-description_37">Command Description</h4>
+<h3 id="adsarm">adsarm<a class="headerlink" href="#adsarm" title="Permanent link">📋</a></h3>
+<h4 id="command-description_37">Command Description<a class="headerlink" href="#command-description_37" title="Permanent link">📋</a></h4>
 <p>Toggles the automatic deletion of the \"public\" self-assignable
 roles-related messages upon using the iam and iamnot commands.</p>
 <p>Only successful messages will be deleted.</p>
 <p>The user-sent message will be deleted immediately. The confirmation
 message will be deleted after 5 seconds.</p>
-<h4 id="permissions-needed_31">Permissions Needed</h4>
+<h4 id="permissions-needed_31">Permissions Needed<a class="headerlink" href="#permissions-needed_31" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Messages
 | <strong>Bot</strong>: Manage Messages</p>
 <hr />
-<h3 id="iam">iam</h3>
-<h4 id="command-syntax_32">Command Syntax</h4>
+<h3 id="iam">iam<a class="headerlink" href="#iam" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_32">Command Syntax<a class="headerlink" href="#command-syntax_32" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 iam (role id/mention/name)
 :::</p>
-<h4 id="command-description_38">Command Description</h4>
+<h4 id="command-description_38">Command Description<a class="headerlink" href="#command-description_38" title="Permanent link">📋</a></h4>
 <p>Assings one role among those that are flagged as self-assignable,
 provided the requirements are met.</p>
 <p>::: {.note}
@@ -6888,17 +6888,17 @@ Note
 :::</p>
 <p>This command is always available to everyone.
 :::</p>
-<h4 id="examples_30">Examples</h4>
+<h4 id="examples_30">Examples<a class="headerlink" href="#examples_30" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 iam Group 1 iam \@Testing123 iam 123456789098765432
 :::</p>
 <hr />
-<h3 id="iamnot">iamnot</h3>
-<h4 id="command-syntax_33">Command Syntax</h4>
+<h3 id="iamnot">iamnot<a class="headerlink" href="#iamnot" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_33">Command Syntax<a class="headerlink" href="#command-syntax_33" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 iamnot (role id/mention/name)
 :::</p>
-<h4 id="command-description_39">Command Description</h4>
+<h4 id="command-description_39">Command Description<a class="headerlink" href="#command-description_39" title="Permanent link">📋</a></h4>
 <p>Removes one role among those that are flagged as self-assignable,
 provided the requirements are met.</p>
 <p>::: {.note}
@@ -6907,17 +6907,17 @@ Note
 :::</p>
 <p>This command is always available to everyone.
 :::</p>
-<h4 id="examples_31">Examples</h4>
+<h4 id="examples_31">Examples<a class="headerlink" href="#examples_31" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 iamnot Group 1 iamnot \@Testing123 iamnot 123456789098765432
 :::</p>
 <hr />
-<h3 id="rmcreate">rmcreate</h3>
-<h4 id="command-syntax_34">Command Syntax</h4>
+<h3 id="rmcreate">rmcreate<a class="headerlink" href="#rmcreate" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_34">Command Syntax<a class="headerlink" href="#command-syntax_34" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmcreate [group id] [--m {message id}]
 :::</p>
-<h4 id="command-description_40">Command Description</h4>
+<h4 id="command-description_40">Command Description<a class="headerlink" href="#command-description_40" title="Permanent link">📋</a></h4>
 <p>Starts an interactive process to build a role menu (i.e. a message whose
 reactions will assign or remove the roles in the specified role group).
 The bot will guide you through the process of creating the role menu,
@@ -6928,20 +6928,20 @@ message ID must refer to a message in the same channel where the command
 is run.</p>
 <p>If the group ID is omitted, group <strong>0</strong> will be used as source role
 group.</p>
-<h4 id="permissions-needed_32">Permissions Needed</h4>
+<h4 id="permissions-needed_32">Permissions Needed<a class="headerlink" href="#permissions-needed_32" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles, Add Reactions</p>
-<h4 id="examples_32">Examples</h4>
+<h4 id="examples_32">Examples<a class="headerlink" href="#examples_32" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmcreate rmcreate 1 --m 123456789098765432
 :::</p>
 <hr />
-<h3 id="rmdmtoggle">rmdmtoggle</h3>
-<h4 id="command-syntax_35">Command Syntax</h4>
+<h3 id="rmdmtoggle">rmdmtoggle<a class="headerlink" href="#rmdmtoggle" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_35">Command Syntax<a class="headerlink" href="#command-syntax_35" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmdmtoggle [message id]
 :::</p>
-<h4 id="command-description_41">Command Description</h4>
+<h4 id="command-description_41">Command Description<a class="headerlink" href="#command-description_41" title="Permanent link">📋</a></h4>
 <p>Toggles the Direct Message confirmation for <strong>successfully added or
 removed</strong> self-assigned roles on a specific role menu, making them
 \"silent\" or re-enabling the verbose message confirmation. Roles not
@@ -6950,20 +6950,20 @@ being assigned will still trigger the DM.</p>
 pick the latest role menu in the current channel. If specified, the
 message ID must refer to a message in the same channel where the command
 is run.</p>
-<h4 id="permissions-needed_33">Permissions Needed</h4>
+<h4 id="permissions-needed_33">Permissions Needed<a class="headerlink" href="#permissions-needed_33" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_33">Examples</h4>
+<h4 id="examples_33">Examples<a class="headerlink" href="#examples_33" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmdmtoggle 123456789098765432
 :::</p>
 <hr />
-<h3 id="rmremove">rmremove</h3>
-<h4 id="command-syntax_36">Command Syntax</h4>
+<h3 id="rmremove">rmremove<a class="headerlink" href="#rmremove" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_36">Command Syntax<a class="headerlink" href="#command-syntax_36" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmremove [message id]
 :::</p>
-<h4 id="command-description_42">Command Description</h4>
+<h4 id="command-description_42">Command Description<a class="headerlink" href="#command-description_42" title="Permanent link">📋</a></h4>
 <p>Removes a role menu from an existing message. The message itself won\'t
 be deleted, nor the existing reactions will be removed, but the bot will
 now not do anything with reactions on that message.</p>
@@ -6971,20 +6971,20 @@ now not do anything with reactions on that message.</p>
 pick the latest role menu in the current channel. If specified, the
 message ID must refer to a message in the same channel where the command
 is run.</p>
-<h4 id="permissions-needed_34">Permissions Needed</h4>
+<h4 id="permissions-needed_34">Permissions Needed<a class="headerlink" href="#permissions-needed_34" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_34">Examples</h4>
+<h4 id="examples_34">Examples<a class="headerlink" href="#examples_34" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmremove 123456789098765432
 :::</p>
 <hr />
-<h3 id="rmupdate">rmupdate</h3>
-<h4 id="command-syntax_37">Command Syntax</h4>
+<h3 id="rmupdate">rmupdate<a class="headerlink" href="#rmupdate" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_37">Command Syntax<a class="headerlink" href="#command-syntax_37" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmupdate [message id]
 :::</p>
-<h4 id="command-description_43">Command Description</h4>
+<h4 id="command-description_43">Command Description<a class="headerlink" href="#command-description_43" title="Permanent link">📋</a></h4>
 <p>Updates a role menu with a new reaction if a role was added to the
 particular role group.</p>
 <p>::: {.note}
@@ -6998,15 +6998,15 @@ role menu and create a new one.
 pick the latest role menu in the current channel. If specified, the
 message ID must refer to a message in the same channel where the command
 is run.</p>
-<h4 id="permissions-needed_35">Permissions Needed</h4>
+<h4 id="permissions-needed_35">Permissions Needed<a class="headerlink" href="#permissions-needed_35" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
-<h4 id="examples_35">Examples</h4>
+<h4 id="examples_35">Examples<a class="headerlink" href="#examples_35" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 rmupdate 123456789098765432
 :::</p>
 <hr />
-<h2 id="nitro-server-boost-notifications">Nitro Server Boost Notifications</h2>
+<h2 id="nitro-server-boost-notifications">Nitro Server Boost Notifications<a class="headerlink" href="#nitro-server-boost-notifications" title="Permanent link">📋</a></h2>
 <p>With Server Boosts, Discord added a way for you and your community to
 work together to unlock fresh new and improved collective perks for a
 server of your choice, each month, and share those epic perks to the
@@ -7029,27 +7029,27 @@ Boost to your server will not trigger the Boost event, and the removal
 of a Boost won\'t always be able to track down who removed the Boost.
 :::</p>
 <p>Here\'s the full list of available commands for this sub-module:</p>
-<h3 id="nsbaddnotif">nsbaddnotif</h3>
-<h4 id="command-syntax_38">Command Syntax</h4>
+<h3 id="nsbaddnotif">nsbaddnotif<a class="headerlink" href="#nsbaddnotif" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_38">Command Syntax<a class="headerlink" href="#command-syntax_38" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbaddnotif [channel id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_44">Command Description</h4>
+<h4 id="command-description_44">Command Description<a class="headerlink" href="#command-description_44" title="Permanent link">📋</a></h4>
 <p>Toggles Nitro Server Boost announcements, on the selected channel(s),
 when someone <strong>Boosts</strong> the server.</p>
 <p>If used without any (valid) argument, the command will show which
 channels are currently enabled for these announcements.</p>
-<h4 id="examples_36">Examples</h4>
+<h4 id="examples_36">Examples<a class="headerlink" href="#examples_36" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbaddnotif nsbaddnotif 123456789098765432 234567890987654321
 :::</p>
 <hr />
-<h3 id="nsbaddtemplate">nsbaddtemplate</h3>
-<h4 id="command-syntax_39">Command Syntax</h4>
+<h3 id="nsbaddtemplate">nsbaddtemplate<a class="headerlink" href="#nsbaddtemplate" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_39">Command Syntax<a class="headerlink" href="#command-syntax_39" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbaddtemplate [message content]
 :::</p>
-<h4 id="command-description_45">Command Description</h4>
+<h4 id="command-description_45">Command Description<a class="headerlink" href="#command-description_45" title="Permanent link">📋</a></h4>
 <p>Sets a new Nitro Server Boost announcement message which will be shown
 in the selected server\'s channel(s) when someone <strong>Boosts</strong> the server.
 Using it with no message will show the current template.</p>
@@ -7098,34 +7098,34 @@ Using it with no message will show the current template.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="examples_37">Examples</h4>
+<h4 id="examples_37">Examples<a class="headerlink" href="#examples_37" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbaddtemplate nsbaddtemplate %user% just boosted the server! Thanks a
 bunch! The total Boost count for <strong>%server%</strong> is now
 <strong>%boost_number%</strong>.
 :::</p>
 <hr />
-<h3 id="nsbremnotif">nsbremnotif</h3>
-<h4 id="command-syntax_40">Command Syntax</h4>
+<h3 id="nsbremnotif">nsbremnotif<a class="headerlink" href="#nsbremnotif" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_40">Command Syntax<a class="headerlink" href="#command-syntax_40" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbremnotif [channel id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_46">Command Description</h4>
+<h4 id="command-description_46">Command Description<a class="headerlink" href="#command-description_46" title="Permanent link">📋</a></h4>
 <p>Toggles Nitro Server Boost announcements, on the selected channel(s),
 when someone <strong>removes a Boost</strong> for the server.</p>
 <p>If used without any (valid) argument, the command will show which
 channels are currently enabled for these announcements.</p>
-<h4 id="examples_38">Examples</h4>
+<h4 id="examples_38">Examples<a class="headerlink" href="#examples_38" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbremnotif nsbremnotif 123456789098765432 234567890987654321
 :::</p>
 <hr />
-<h3 id="nsbremtemplate">nsbremtemplate</h3>
-<h4 id="command-syntax_41">Command Syntax</h4>
+<h3 id="nsbremtemplate">nsbremtemplate<a class="headerlink" href="#nsbremtemplate" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_41">Command Syntax<a class="headerlink" href="#command-syntax_41" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbremtemplate [message content]
 :::</p>
-<h4 id="command-description_47">Command Description</h4>
+<h4 id="command-description_47">Command Description<a class="headerlink" href="#command-description_47" title="Permanent link">📋</a></h4>
 <p>Sets a new Nitro Server Boost announcement message which will be shown
 in the selected server\'s channel(s) when someone <strong>removes a Boost</strong>
 for the server. Using it with no message will show the current template.</p>
@@ -7174,28 +7174,28 @@ for the server. Using it with no message will show the current template.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="examples_39">Examples</h4>
+<h4 id="examples_39">Examples<a class="headerlink" href="#examples_39" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbremtemplate nsbremtemplate Oh no! %user% has just withdrawn a
 boost!nThe total Boost count for <strong>%server%</strong> is now
 <strong>%boost_number%</strong>.
 :::</p>
 <hr />
-<h3 id="nsbdmnotif">nsbdmnotif</h3>
-<h4 id="command-syntax_42">Command Syntax</h4>
+<h3 id="nsbdmnotif">nsbdmnotif<a class="headerlink" href="#nsbdmnotif" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_42">Command Syntax<a class="headerlink" href="#command-syntax_42" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbdmnotif
 :::</p>
-<h4 id="command-description_48">Command Description</h4>
+<h4 id="command-description_48">Command Description<a class="headerlink" href="#command-description_48" title="Permanent link">📋</a></h4>
 <p>Toggles Nitro Server Boost \"thank you\" messages, sent to the users who
 <strong>Boost</strong> the server, via Direct Message.</p>
 <hr />
-<h3 id="nsbdmtemplate">nsbdmtemplate</h3>
-<h4 id="command-syntax_43">Command Syntax</h4>
+<h3 id="nsbdmtemplate">nsbdmtemplate<a class="headerlink" href="#nsbdmtemplate" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_43">Command Syntax<a class="headerlink" href="#command-syntax_43" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbdmtemplate [message content]
 :::</p>
-<h4 id="command-description_49">Command Description</h4>
+<h4 id="command-description_49">Command Description<a class="headerlink" href="#command-description_49" title="Permanent link">📋</a></h4>
 <p>Sets a new Nitro Server Boost \"thank you\" message which will be sent
 to the user who boost the server. Using it with no message will show the
 current template.</p>
@@ -7244,22 +7244,22 @@ current template.</p>
 </ul>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text, if you want the message to be embedded.</p>
-<h4 id="examples_40">Examples</h4>
+<h4 id="examples_40">Examples<a class="headerlink" href="#examples_40" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsbdmtemplate nsbdmtemplate Thanks for boosting <strong>%server%</strong>! Our total
 Boost count is now <strong>%boost_number%</strong>.
 :::</p>
 <hr />
-<h3 id="nsblist">nsblist</h3>
-<h4 id="command-syntax_44">Command Syntax</h4>
+<h3 id="nsblist">nsblist<a class="headerlink" href="#nsblist" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_44">Command Syntax<a class="headerlink" href="#command-syntax_44" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 nsblist
 :::</p>
-<h4 id="command-description_50">Command Description</h4>
+<h4 id="command-description_50">Command Description<a class="headerlink" href="#command-description_50" title="Permanent link">📋</a></h4>
 <p>Lists all members that contributed with at least one Server Boost in the
 current server.</p>
 <hr />
-<h2 id="emoji-submissions">Emoji Submissions</h2>
+<h2 id="emoji-submissions">Emoji Submissions<a class="headerlink" href="#emoji-submissions" title="Permanent link">📋</a></h2>
 <p>Through the \"Emoji Submissions\" sub-module, you can let your members
 submit new emojis to be used your server.</p>
 <p>You can configure one or more roles that will be allowed to submit new
@@ -7328,12 +7328,12 @@ Note
 </li>
 </ul>
 <p>Here\'s the full list of available commands for this sub-module:</p>
-<h3 id="esubrole">esubrole</h3>
-<h4 id="command-syntax_45">Command Syntax</h4>
+<h3 id="esubrole">esubrole<a class="headerlink" href="#esubrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_45">Command Syntax<a class="headerlink" href="#command-syntax_45" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 esubrole [role id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_51">Command Description</h4>
+<h4 id="command-description_51">Command Description<a class="headerlink" href="#command-description_51" title="Permanent link">📋</a></h4>
 <p>Toggles the \"emoji submitter\" status of the selected role(s).</p>
 <p>If used without any (valid) argument, the command will show which roles
 are currently enabled to submit new emojis.</p>
@@ -7345,55 +7345,55 @@ Note
 either use the mention (which will obviously ping everyone) or the
 <strong>server ID</strong>.
 :::</p>
-<h4 id="permissions-needed_36">Permissions Needed</h4>
+<h4 id="permissions-needed_36">Permissions Needed<a class="headerlink" href="#permissions-needed_36" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Emojis and Stickers
 | <strong>Bot</strong>: Manage Emojis and Stickers</p>
-<h4 id="examples_41">Examples</h4>
+<h4 id="examples_41">Examples<a class="headerlink" href="#examples_41" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 esubrole esubrole 123456789098765432 234567890987654321
 :::</p>
 <hr />
-<h3 id="esubsetup">esubsetup</h3>
-<h4 id="command-syntax_46">Command Syntax</h4>
+<h3 id="esubsetup">esubsetup<a class="headerlink" href="#esubsetup" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_46">Command Syntax<a class="headerlink" href="#command-syntax_46" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 esubset (role id/mention/q_name)
 :::</p>
-<h4 id="command-description_52">Command Description</h4>
+<h4 id="command-description_52">Command Description<a class="headerlink" href="#command-description_52" title="Permanent link">📋</a></h4>
 <p>Opens the interactive setup menu for the selected role. Use the menu
 items to configure the settings shown in
 <code class="interpreted-text" role="ref">emoji-submission</code>.</p>
-<h4 id="permissions-needed_37">Permissions Needed</h4>
+<h4 id="permissions-needed_37">Permissions Needed<a class="headerlink" href="#permissions-needed_37" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Emojis and Stickers
 | <strong>Bot</strong>: Manage Emojis and Stickers</p>
 <hr />
-<h3 id="esublist">esublist</h3>
-<h4 id="command-syntax_47">Command Syntax</h4>
+<h3 id="esublist">esublist<a class="headerlink" href="#esublist" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_47">Command Syntax<a class="headerlink" href="#command-syntax_47" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 esublist [user id/mention/name]
 :::</p>
-<h4 id="command-description_53">Command Description</h4>
+<h4 id="command-description_53">Command Description<a class="headerlink" href="#command-description_53" title="Permanent link">📋</a></h4>
 <p>Lists all <strong>active/accepted</strong> submitted emojis that users submitted
 through this system.</p>
 <p>If this command is used with a user identifier, it will filter the
 output on emojis submitted by the specified user.</p>
 <hr />
-<h3 id="esubpending">esubpending</h3>
-<h4 id="command-syntax_48">Command Syntax</h4>
+<h3 id="esubpending">esubpending<a class="headerlink" href="#esubpending" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_48">Command Syntax<a class="headerlink" href="#command-syntax_48" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 esubpending [user id/mention/name]
 :::</p>
-<h4 id="command-description_54">Command Description</h4>
+<h4 id="command-description_54">Command Description<a class="headerlink" href="#command-description_54" title="Permanent link">📋</a></h4>
 <p>Lists all <strong>pending</strong> submitted emojis that users submitted through this
 system, with a quick link to jump to the verification channel message.</p>
 <p>If this command is used with a user identifier, it will filter the
 output on emojis submitted by the specified user.</p>
 <hr />
-<h3 id="emojisubmit">emojisubmit</h3>
-<h4 id="command-syntax_49">Command Syntax</h4>
+<h3 id="emojisubmit">emojisubmit<a class="headerlink" href="#emojisubmit" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_49">Command Syntax<a class="headerlink" href="#command-syntax_49" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 emojisubmit [existing emoji, or image URL] (valid emoji name)
 :::</p>
-<h4 id="command-description_55">Command Description</h4>
+<h4 id="command-description_55">Command Description<a class="headerlink" href="#command-description_55" title="Permanent link">📋</a></h4>
 <p>Lets users submit a new emoji, provided they have at least one of the
 \"emoji submitter\" roles.</p>
 <p>::: {.note}
@@ -7426,16 +7426,16 @@ of already active server emojis.</p>
 emoji while having more than one \"emoji submitter\" role up, <strong>only the
 highest role will be considered</strong> for the optional
 limits/configurations.</p>
-<h4 id="permissions-needed_38">Permissions Needed</h4>
+<h4 id="permissions-needed_38">Permissions Needed<a class="headerlink" href="#permissions-needed_38" title="Permanent link">📋</a></h4>
 <p>| <strong>Bot</strong>: Manage Emojis and Stickers</p>
-<h4 id="examples_42">Examples</h4>
+<h4 id="examples_42">Examples<a class="headerlink" href="#examples_42" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 emojisubmit
 <a href="https://cdn.discordapp.com/emojis/614486002291048459.gif?v=1">https://cdn.discordapp.com/emojis/614486002291048459.gif?v=1</a>
 amegablobsweats
 :::</p>
 <hr />
-<h2 id="image-gallery-channels">Image Gallery Channels</h2>
+<h2 id="image-gallery-channels">Image Gallery Channels<a class="headerlink" href="#image-gallery-channels" title="Permanent link">📋</a></h2>
 <p>Through the \"Image Gallery Channels\" sub-module, you can set one or
 more channels to only \"accept\" image attachments, hence becoming a
 virtual gallery.</p>
@@ -7447,20 +7447,20 @@ else will be deleted. This check also happens on edited messages.</p>
 permissions (on their role and/or through channel overrides) will be
 able to post messages that contain text.</p>
 <p>Here\'s the full list of available commands for this sub-module:</p>
-<h3 id="imggallery">imggallery</h3>
-<h4 id="command-syntax_50">Command Syntax</h4>
+<h3 id="imggallery">imggallery<a class="headerlink" href="#imggallery" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_50">Command Syntax<a class="headerlink" href="#command-syntax_50" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 imggallery [channel id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_56">Command Description</h4>
+<h4 id="command-description_56">Command Description<a class="headerlink" href="#command-description_56" title="Permanent link">📋</a></h4>
 <p>Toggles the Image Gallery mode on the selected channel(s).</p>
 <p>If used without any (valid) argument, the command will show which
 channels are currently enabled as image galleries.</p>
-<h4 id="examples_43">Examples</h4>
+<h4 id="examples_43">Examples<a class="headerlink" href="#examples_43" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 imggallery imggallery 123456789098765432 234567890987654321
 :::</p>
-<h4 id="permissions-needed_39">Permissions Needed</h4>
+<h4 id="permissions-needed_39">Permissions Needed<a class="headerlink" href="#permissions-needed_39" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Messages
 | <strong>Bot</strong>: Manage Messages</p>
 
@@ -7517,6 +7517,10 @@ imggallery imggallery 123456789098765432 234567890987654321
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -7551,6 +7555,15 @@ imggallery imggallery 123456789098765432 234567890987654321
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -7565,6 +7578,12 @@ imggallery imggallery 123456789098765432 234567890987654321
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

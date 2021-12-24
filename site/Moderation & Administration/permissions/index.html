@@ -1942,7 +1942,7 @@
 </a>
 
 
-<h1 id="permissions-system">Permissions System</h1>
+<h1 id="permissions-system">Permissions System<a class="headerlink" href="#permissions-system" title="Permanent link">📋</a></h1>
 <p>As soon as you invite the bot to your server, a few modules will be
 immediately available to all of your members. The restricted modules, on
 the other hand, will only be available to <strong>server managers</strong> (users
@@ -1981,12 +1981,12 @@ role="ref"}, <code class="interpreted-text" role="ref">lsar</code>,
 role="ref"}.
 :::</p>
 <hr />
-<h2 id="default-module-permissions">Default Module Permissions</h2>
+<h2 id="default-module-permissions">Default Module Permissions<a class="headerlink" href="#default-module-permissions" title="Permanent link">📋</a></h2>
 <p>Here\'s the list of modules that are automatically enabled for everyone
 as soon as the bot joins a server and those that are locked to server
 managers only. Internal module permissions and in-Discord permissions
 checks (e.g. \"Manage Messages\") still apply.</p>
-<h3 id="available-to-everyone">Available to everyone</h3>
+<h3 id="available-to-everyone">Available to everyone<a class="headerlink" href="#available-to-everyone" title="Permanent link">📋</a></h3>
 <ul>
 <li>alarm</li>
 <li>azurlane</li>
@@ -2007,13 +2007,13 @@ checks (e.g. \"Manage Messages\") still apply.</p>
 <li>youtube</li>
 </ul>
 <hr />
-<h2 id="permissions-debugging">Permissions Debugging</h2>
-<h3 id="verbose">verbose</h3>
-<h4 id="command-syntax">Command Syntax</h4>
+<h2 id="permissions-debugging">Permissions Debugging<a class="headerlink" href="#permissions-debugging" title="Permanent link">📋</a></h2>
+<h3 id="verbose">verbose<a class="headerlink" href="#verbose" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 verbose
 :::</p>
-<h4 id="command-description">Command Description</h4>
+<h4 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h4>
 <p>Toggles <strong>verbose mode</strong> for the <strong>current user</strong> in the <strong>current
 server</strong>.</p>
 <p>Users in verbose mode will have send a Direct Message to them whenever
@@ -2032,80 +2032,80 @@ Note
 <p>This command is always available to everyone.
 :::</p>
 <hr />
-<h2 id="roles-and-users-permissions">Roles and Users Permissions</h2>
-<h3 id="permshow">permshow</h3>
-<h4 id="command-syntax_1">Command Syntax</h4>
+<h2 id="roles-and-users-permissions">Roles and Users Permissions<a class="headerlink" href="#roles-and-users-permissions" title="Permanent link">📋</a></h2>
+<h3 id="permshow">permshow<a class="headerlink" href="#permshow" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 pes
 :::</p>
-<h4 id="command-description_1">Command Description</h4>
+<h4 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h4>
 <p>Shows a summary of all the modules that are available within the current
 Discord server, and the corresponding permissions.</p>
 <hr />
-<h3 id="permshowmod">permshowmod</h3>
-<h4 id="command-syntax_2">Command Syntax</h4>
+<h3 id="permshowmod">permshowmod<a class="headerlink" href="#permshowmod" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 pesm (module name)
 :::</p>
-<h4 id="command-description_2">Command Description</h4>
+<h4 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h4>
 <p>Shows a detailed view of the permissions (users, roles, channel
 overrides) for a single module.</p>
-<h4 id="examples">Examples</h4>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 pesm moderation
 :::</p>
 <hr />
-<h3 id="permenablemod">permenablemod</h3>
-<h4 id="command-syntax_3">Command Syntax</h4>
+<h3 id="permenablemod">permenablemod<a class="headerlink" href="#permenablemod" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 peem (module name) (role and/or user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_3">Command Description</h4>
+<h4 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h4>
 <p>Enable the selected module for the specified users and/or groups. The
 bot will seamlessly understand if the entity you are using is a user or
 a role.</p>
-<h4 id="examples_1">Examples</h4>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 peem moderation \"Discord Moderators\" peem administration \@Staff
 :::</p>
 <hr />
-<h3 id="permdisablemod">permdisablemod</h3>
-<h4 id="command-syntax_4">Command Syntax</h4>
+<h3 id="permdisablemod">permdisablemod<a class="headerlink" href="#permdisablemod" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 pedm (module name) (role and/or user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_4">Command Description</h4>
+<h4 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h4>
 <p>Disable the selected module for the specified users and/or groups. The
 bot will seamlessly understand if the entity you are using is a user or
 a role.</p>
-<h4 id="examples_2">Examples</h4>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 pedm moderation \"Not Discord Moderators\" pedm administration \@Lil
 Staff
 :::</p>
 <hr />
-<h3 id="permtogglemod">permtogglemod</h3>
-<h4 id="command-syntax_5">Command Syntax</h4>
+<h3 id="permtogglemod">permtogglemod<a class="headerlink" href="#permtogglemod" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 petm (module name)
 :::</p>
-<h4 id="command-description_5">Command Description</h4>
+<h4 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h4>
 <p>Toggles the whole module within the current server.</p>
 <p>Completely disabling a module will render it unusable by anyone,
 including administrators and managers. The module will virtually
 disappear from the server until re-enabled.</p>
-<h4 id="examples_3">Examples</h4>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 petm alarm
 :::</p>
 <hr />
-<h2 id="channel-overrides">Channel Overrides</h2>
-<h3 id="chanpermtoggle">chanpermtoggle</h3>
-<h4 id="command-syntax_6">Command Syntax</h4>
+<h2 id="channel-overrides">Channel Overrides<a class="headerlink" href="#channel-overrides" title="Permanent link">📋</a></h2>
+<h3 id="chanpermtoggle">chanpermtoggle<a class="headerlink" href="#chanpermtoggle" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cpt (module name) (channel id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_6">Command Description</h4>
+<h4 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h4>
 <p>Toggles the presence of one or more channels on the override list for
 the selected module. See below for more details.</p>
 <p><strong>Blacklist</strong> mode will make any channel that is added with the above
@@ -2113,24 +2113,24 @@ command <strong>not</strong> to show the level up message, while the rest of the
 channels will show the in-channel level up message.</p>
 <p><strong>Whitelist</strong> mode will only make the in-channel level up message appear
 in the selected channels.</p>
-<h4 id="examples_4">Examples</h4>
+<h4 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cpt games #spam #games
 :::</p>
 <hr />
-<h3 id="chanpermtogglemode">chanpermtogglemode</h3>
-<h4 id="command-syntax_7">Command Syntax</h4>
+<h3 id="chanpermtogglemode">chanpermtogglemode<a class="headerlink" href="#chanpermtogglemode" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cptm (module name)
 :::</p>
-<h4 id="command-description_7">Command Description</h4>
+<h4 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h4>
 <p>Toggles override list mode for the selected module:</p>
 <p><strong>Blacklist</strong> mode will make any command that is run in a channel on the
 override list <strong>not</strong> to work. This is the default mode, hence enabling
 the module on all channels if no overrides are specified.</p>
 <p><strong>Whitelist</strong> mode will only make the command work in the selected
 channels.</p>
-<h4 id="examples_5">Examples</h4>
+<h4 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cptm games
 :::</p>
@@ -2188,6 +2188,10 @@ cptm games
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2222,6 +2226,15 @@ cptm games
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -2236,6 +2249,12 @@ cptm games
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

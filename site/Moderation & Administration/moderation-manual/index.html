@@ -4376,7 +4376,7 @@
 </a>
 
 
-<h1 id="server-moderation-manual">Server Moderation (Manual)</h1>
+<h1 id="server-moderation-manual">Server Moderation (Manual)<a class="headerlink" href="#server-moderation-manual" title="Permanent link">📋</a></h1>
 <p>A special thanks to my friend and partner, NaviKing#3820, for the
 design of this module.</p>
 <p>The purpose of this module is to warn users, track their infractions,
@@ -4387,47 +4387,47 @@ case/scoring system is suggested. The scoring system is enabled if the
 <code class="interpreted-text" role="ref">log-command</code> section in the
 <strong>Administration</strong> module documentation.</p>
 <hr />
-<h2 id="configuration-commands">Configuration Commands</h2>
+<h2 id="configuration-commands">Configuration Commands<a class="headerlink" href="#configuration-commands" title="Permanent link">📋</a></h2>
 <p>These configuration commands are only enabled for those with Manage
 Server permissions. The usage of these commands will be recorded in the
 <strong>Moderation</strong> log.</p>
-<h3 id="modrole">modrole</h3>
-<h4 id="command-syntax">Command Syntax</h4>
+<h3 id="modrole">modrole<a class="headerlink" href="#modrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 modrole [add/remove] [role id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description">Command Description</h4>
+<h4 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h4>
 <p>Adds or removes a role as a moderator role (Mod Role),
 enabling/disabling them to use the moderation module regardless of other
 permissions on their roles. Provide no arguments to show the current mod
 roles.</p>
-<h4 id="permissions-needed">Permissions Needed</h4>
+<h4 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples">Examples</h4>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 modrole modrole add \"Discord Moderators\" \"Discord Officers\" modrole
 remove \@Reddit Moderators
 :::</p>
 <hr />
-<h3 id="modimmunity">modimmunity</h3>
-<h4 id="command-syntax_1">Command Syntax</h4>
+<h3 id="modimmunity">modimmunity<a class="headerlink" href="#modimmunity" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 modimmunity
 :::</p>
-<h4 id="command-description_1">Command Description</h4>
+<h4 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h4>
 <p>Toggles whether or not users with the mod role can be affected by
 moderation commands. Default state: <strong>off</strong>.</p>
 <p>If enabled, attempting to take moderation actions on a moderator will
 return an error.</p>
-<h4 id="permissions-needed_1">Permissions Needed</h4>
+<h4 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="modanonymization">modanonymization</h3>
-<h4 id="command-syntax_2">Command Syntax</h4>
+<h3 id="modanonymization">modanonymization<a class="headerlink" href="#modanonymization" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 modanon
 :::</p>
-<h4 id="command-description_2">Command Description</h4>
+<h4 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h4>
 <p>Toggles whether or not users that are affected by a moderation action
 will also be informed of the identity of the moderator using the
 command. Default state: <strong>off</strong> (i.e. moderators <strong>will not</strong> be
@@ -4437,28 +4437,28 @@ user receives upon being hit by a moderation action, and a shield emoji
 (🛡️) will appear next to the \"Performed By\" field of the corresponding
 warning log embed to remind that moderators\' protection is on for that
 case.</p>
-<h4 id="permissions-needed_2">Permissions Needed</h4>
+<h4 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="modnotification">modnotification</h3>
-<h4 id="command-syntax_3">Command Syntax</h4>
+<h3 id="modnotification">modnotification<a class="headerlink" href="#modnotification" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 modnotif
 :::</p>
-<h4 id="command-description_3">Command Description</h4>
+<h4 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h4>
 <p>Toggles whether or not moderators will be informed with a mention in the
 Moderation/Warning logger in case of missing parameters when applying a
 moderation action with an \"incomplete\" syntax. Default state: <strong>on</strong>
 (i.e. moderators <strong>will</strong> be notified with a mention).</p>
-<h4 id="permissions-needed_3">Permissions Needed</h4>
+<h4 id="permissions-needed_3">Permissions Needed<a class="headerlink" href="#permissions-needed_3" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="muterole">muterole</h3>
-<h4 id="command-syntax_4">Command Syntax</h4>
+<h3 id="muterole">muterole<a class="headerlink" href="#muterole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 muterole [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_4">Command Description</h4>
+<h4 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h4>
 <p>Defines a role to be used as the mute role. Attempting to set a mute
 role that is higher than either the command user\'s highest role or the
 bot\'s highest role will result in an error being thrown. Provide no
@@ -4469,16 +4469,16 @@ updated every time the configuration or moderation command is used.</p>
 channel (besides the \"mute chat\", see below): <strong>Send Messages</strong>,
 <strong>Attach Files</strong>, <strong>Add Reactions</strong>, <strong>Use Public Threads</strong>, <strong>Use
 Private Threads</strong>, <strong>Speak</strong>.</p>
-<h4 id="permissions-needed_4">Permissions Needed</h4>
+<h4 id="permissions-needed_4">Permissions Needed<a class="headerlink" href="#permissions-needed_4" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="mutechat">mutechat</h3>
-<h4 id="command-syntax_5">Command Syntax</h4>
+<h3 id="mutechat">mutechat<a class="headerlink" href="#mutechat" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 mutechat [channel id(s)/mention(s)/q_name(s)]
 :::</p>
-<h4 id="command-description_5">Command Description</h4>
+<h4 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h4>
 <p>Sets one (or more) channel(s) for muted users to be able to speak for
 the purposes of discussing the moderation action taken against them.</p>
 <p>When the bot sets channel permissions for the mute role, this special
@@ -4491,15 +4491,15 @@ channel(s) will have the following permissions:</p>
 <li><strong>Attach Files</strong>: Enabled</li>
 <li><strong>Speak</strong>: Disabled</li>
 </ul>
-<h4 id="permissions-needed_5">Permissions Needed</h4>
+<h4 id="permissions-needed_5">Permissions Needed<a class="headerlink" href="#permissions-needed_5" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="imagebanrole">imagebanrole</h3>
-<h4 id="command-syntax_6">Command Syntax</h4>
+<h3 id="imagebanrole">imagebanrole<a class="headerlink" href="#imagebanrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 imagebanrole [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_6">Command Description</h4>
+<h4 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h4>
 <p>Defines a role to be used as the image ban role. Attempting to set a
 image ban role that is higher than either the command user\'s highest
 role or the bot\'s highest role will result in an error being thrown.
@@ -4508,16 +4508,16 @@ Provide no arguments to show the current image ban role.</p>
 updated every time the configuration or moderation command is used.</p>
 <p>Image banned users will have the following permissions disabled for
 every channel: <strong>Embed Links</strong>, <strong>Attach Files</strong>.</p>
-<h4 id="permissions-needed_6">Permissions Needed</h4>
+<h4 id="permissions-needed_6">Permissions Needed<a class="headerlink" href="#permissions-needed_6" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="channelbanrole">channelbanrole</h3>
-<h4 id="command-syntax_7">Command Syntax</h4>
+<h3 id="channelbanrole">channelbanrole<a class="headerlink" href="#channelbanrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cbanrole [channel id/mention/q_name] [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_7">Command Description</h4>
+<h4 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h4>
 <p><strong>For the specified channel</strong>, defines a role to be used as the channel
 ban role. Attempting to set a channel ban role that is higher than
 either the command user\'s highest role or the bot\'s highest role will
@@ -4527,16 +4527,16 @@ current channel ban roles.</p>
 and updated every time the configuration or moderation command is used.</p>
 <p>Channel banned users will have the following permissions disabled for
 the specified channel: <strong>Read Messages</strong>, <strong>View Channel</strong>.</p>
-<h4 id="permissions-needed_7">Permissions Needed</h4>
+<h4 id="permissions-needed_7">Permissions Needed<a class="headerlink" href="#permissions-needed_7" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="channelmuterole">channelmuterole</h3>
-<h4 id="command-syntax_8">Command Syntax</h4>
+<h3 id="channelmuterole">channelmuterole<a class="headerlink" href="#channelmuterole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_8">Command Syntax<a class="headerlink" href="#command-syntax_8" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cmuterole [channel id/mention/q_name] [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_8">Command Description</h4>
+<h4 id="command-description_8">Command Description<a class="headerlink" href="#command-description_8" title="Permanent link">📋</a></h4>
 <p><strong>For the specified channel</strong>, defines a role to be used as the mute
 role. Attempting to set a mute role that is higher than either the
 command user\'s highest role or the bot\'s highest role will result in
@@ -4547,16 +4547,16 @@ updated every time the configuration or moderation command is used.</p>
 <p>Muted users will have the following permissions disabled for the
 specified channel: <strong>Send Messages</strong>, <strong>Attach Files</strong>, <strong>Add
 Reactions</strong>, <strong>Use Public Threads</strong>, <strong>Use Private Threads</strong>, <strong>Speak</strong>.</p>
-<h4 id="permissions-needed_8">Permissions Needed</h4>
+<h4 id="permissions-needed_8">Permissions Needed<a class="headerlink" href="#permissions-needed_8" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="channelimagebanrole">channelimagebanrole</h3>
-<h4 id="command-syntax_9">Command Syntax</h4>
+<h3 id="channelimagebanrole">channelimagebanrole<a class="headerlink" href="#channelimagebanrole" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_9">Command Syntax<a class="headerlink" href="#command-syntax_9" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cimagebanrole [channel id/mention/q_name] [role id/mention/q_name]
 :::</p>
-<h4 id="command-description_9">Command Description</h4>
+<h4 id="command-description_9">Command Description<a class="headerlink" href="#command-description_9" title="Permanent link">📋</a></h4>
 <p><strong>For the specified channel</strong>, defines a role to be used as the image
 ban role. Attempting to set a image ban role that is higher than either
 the command user\'s highest role or the bot\'s highest role will result
@@ -4566,11 +4566,11 @@ ban roles.</p>
 updated every time the configuration or moderation command is used.</p>
 <p>Image banned users will have the following permissions disabled for the
 specified channel: <strong>Embed Links</strong>, <strong>Attach Files</strong>.</p>
-<h4 id="permissions-needed_9">Permissions Needed</h4>
+<h4 id="permissions-needed_9">Permissions Needed<a class="headerlink" href="#permissions-needed_9" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h2 id="moderation-commands">Moderation Commands</h2>
+<h2 id="moderation-commands">Moderation Commands<a class="headerlink" href="#moderation-commands" title="Permanent link">📋</a></h2>
 <p>These moderation commands are the actual commands that are used to apply
 moderation actions. Each one of the following commands will be very
 similar in nature, and thus the common features of the commands will be
@@ -4620,7 +4620,7 @@ command is run on a specified user: this also applies to converting a
 permanent action into a timed one and vice-versa, without removing the
 role on the target user.
 :::</p>
-<h3 id="common-command-syntax">(Common) Command Syntax</h3>
+<h3 id="common-command-syntax">(Common) Command Syntax<a class="headerlink" href="#common-command-syntax" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 {warning command} [duration timecode] [channel id/mention/q_name
 {only for channel-specific commands}] (user
@@ -4629,7 +4629,7 @@ id(s)/mention(s)/q_name(s)) [--rule {rule id/name/alias}]
 {signed/unsigned number}] [--justification {textual justification}]
 [--skip-case] [--skip-dm]
 :::</p>
-<h3 id="common-command-description">(Common) Command Description</h3>
+<h3 id="common-command-description">(Common) Command Description<a class="headerlink" href="#common-command-description" title="Permanent link">📋</a></h3>
 <p>Informs the user(s) via DM that they have been warned/muted/banned/etc.,
 including the rule that they broke, the specific reason, attachments,
 and who warned them. These arguments are all optional when running
@@ -4712,32 +4712,32 @@ useless.</p>
 already said, each command description and syntax will be a diff over
 the common syntax shown here.</p>
 <hr />
-<h3 id="warn">warn</h3>
-<h4 id="command-description_10">Command Description</h4>
+<h3 id="warn">warn<a class="headerlink" href="#warn" title="Permanent link">📋</a></h3>
+<h4 id="command-description_10">Command Description<a class="headerlink" href="#command-description_10" title="Permanent link">📋</a></h4>
 <p>warn does nothing but DM the user(s) with their warning. Its purpose is
 to officially record an infraction so that the accumulation of
 infractions can later be used to justify a mute or a ban (see the
 \"Warning Point System\" described later).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="examples_1">Examples</h4>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 warn \@cycloptux#1543 --rule Discord ToS --reason The user is under
 13 years of age --padj -2 --justification Testing the command
 :::</p>
 <hr />
-<h3 id="kick">kick</h3>
-<h4 id="command-description_11">Command Description</h4>
+<h3 id="kick">kick<a class="headerlink" href="#kick" title="Permanent link">📋</a></h3>
+<h4 id="command-description_11">Command Description<a class="headerlink" href="#command-description_11" title="Permanent link">📋</a></h4>
 <p>Kicks the target user(s) from the current server. The user may be able
 to join the server again through a working invite.</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_10">Permissions Needed</h4>
+<h4 id="permissions-needed_10">Permissions Needed<a class="headerlink" href="#permissions-needed_10" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Kick Members
 | <strong>Bot</strong>: Kick Members</p>
 <hr />
-<h3 id="mute">mute</h3>
-<h4 id="command-description_12">Command Description</h4>
+<h3 id="mute">mute<a class="headerlink" href="#mute" title="Permanent link">📋</a></h3>
+<h4 id="command-description_12">Command Description<a class="headerlink" href="#command-description_12" title="Permanent link">📋</a></h4>
 <p>mute applies the role configured in muterole (or creates a default
 \"Muted Users\" role at the bottom of the role list with no permissions
 if the mute role is not configured) to the target user(s) and sets all
@@ -4750,16 +4750,16 @@ slightly slower than usual. This is normal.</p>
 timed (users will be unmuted automatically after a certain time span).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_11">Permissions Needed</h4>
+<h4 id="permissions-needed_11">Permissions Needed<a class="headerlink" href="#permissions-needed_11" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles, Mute Members
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="ban">ban</h3>
-<h4 id="command-syntax_10">Command Syntax</h4>
+<h3 id="ban">ban<a class="headerlink" href="#ban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_10">Command Syntax<a class="headerlink" href="#command-syntax_10" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 ban [24/7] ...
 :::</p>
-<h4 id="command-description_13">Command Description</h4>
+<h4 id="command-description_13">Command Description<a class="headerlink" href="#command-description_13" title="Permanent link">📋</a></h4>
 <p>ban has one additional, optional argument before the user identifier(s):
 either the number 24, or the number 7. If this argument is omitted, the
 user is banned without their message history being deleted. Otherwise,
@@ -4773,12 +4773,12 @@ server, as long as the user is known/cached by the bot. It is advised to
 use the user ID for that.</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_12">Permissions Needed</h4>
+<h4 id="permissions-needed_12">Permissions Needed<a class="headerlink" href="#permissions-needed_12" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Ban Members
 | <strong>Bot</strong>: Ban Members</p>
 <hr />
-<h3 id="timeban">timeban</h3>
-<h4 id="command-description_14">Command Description</h4>
+<h3 id="timeban">timeban<a class="headerlink" href="#timeban" title="Permanent link">📋</a></h3>
+<h4 id="command-description_14">Command Description<a class="headerlink" href="#command-description_14" title="Permanent link">📋</a></h4>
 <p>timeban bans a user from the current server for the specified amount of
 time.</p>
 <p>Once the ban period has ended, as long as the user hasn\'t been
@@ -4793,24 +4793,24 @@ server, as long as the user is known/cached by the bot. It is advised to
 use the user ID for that.</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_13">Permissions Needed</h4>
+<h4 id="permissions-needed_13">Permissions Needed<a class="headerlink" href="#permissions-needed_13" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Ban Members
 | <strong>Bot</strong>: Ban Members</p>
 <hr />
-<h3 id="delayban">delayban</h3>
-<h4 id="command-description_15">Command Description</h4>
+<h3 id="delayban">delayban<a class="headerlink" href="#delayban" title="Permanent link">📋</a></h3>
+<h4 id="command-description_15">Command Description<a class="headerlink" href="#command-description_15" title="Permanent link">📋</a></h4>
 <p>delayban mutes a user for the specified amount of time. If this mute
 status isn\'t removed with cancelban before the timer is out, the user
 will be banned from the server. If the time argument is omitted, it will
 default to 24 hours.</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_14">Permissions Needed</h4>
+<h4 id="permissions-needed_14">Permissions Needed<a class="headerlink" href="#permissions-needed_14" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles, Mute Members, Ban Members
 | <strong>Bot</strong>: Manage Roles, Mute Members, Ban Members</p>
 <hr />
-<h3 id="imageban">imageban</h3>
-<h4 id="command-description_16">Command Description</h4>
+<h3 id="imageban">imageban<a class="headerlink" href="#imageban" title="Permanent link">📋</a></h3>
+<h4 id="command-description_16">Command Description<a class="headerlink" href="#command-description_16" title="Permanent link">📋</a></h4>
 <p>imageban applies the role configured in imagebanrole (or creates a
 default \"Image Banned Users\" role at the bottom of the role list with
 no permissions if the image ban role is not configured) to the target
@@ -4824,12 +4824,12 @@ removal) or timed (users will be image unbanned automatically after a
 certain time span).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_15">Permissions Needed</h4>
+<h4 id="permissions-needed_15">Permissions Needed<a class="headerlink" href="#permissions-needed_15" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="cban">cban</h3>
-<h4 id="command-description_17">Command Description</h4>
+<h3 id="cban">cban<a class="headerlink" href="#cban" title="Permanent link">📋</a></h3>
+<h4 id="command-description_17">Command Description<a class="headerlink" href="#command-description_17" title="Permanent link">📋</a></h4>
 <p>cban applies the role configured in channelbanrole (or creates a default
 \"#%channel% Banned Users\" role at the bottom of the role list with no
 permissions if the channel ban role is not configured) to the target
@@ -4843,12 +4843,12 @@ manual removal) or timed (users will be channel unbanned automatically
 after a certain time span).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_16">Permissions Needed</h4>
+<h4 id="permissions-needed_16">Permissions Needed<a class="headerlink" href="#permissions-needed_16" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="cmute">cmute</h3>
-<h4 id="command-description_18">Command Description</h4>
+<h3 id="cmute">cmute<a class="headerlink" href="#cmute" title="Permanent link">📋</a></h3>
+<h4 id="command-description_18">Command Description<a class="headerlink" href="#command-description_18" title="Permanent link">📋</a></h4>
 <p>cmute applies the role configured in channelmuterole (or creates a
 default \"#%channel% Muted Users\" role at the bottom of the role list
 with no permissions if the channel mute role is not configured) to the
@@ -4862,12 +4862,12 @@ manual removal) or timed (users will be channel unmuted automatically
 after a certain time span).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_17">Permissions Needed</h4>
+<h4 id="permissions-needed_17">Permissions Needed<a class="headerlink" href="#permissions-needed_17" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles, Mute Members
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="cimageban">cimageban</h3>
-<h4 id="command-description_19">Command Description</h4>
+<h3 id="cimageban">cimageban<a class="headerlink" href="#cimageban" title="Permanent link">📋</a></h3>
+<h4 id="command-description_19">Command Description<a class="headerlink" href="#command-description_19" title="Permanent link">📋</a></h4>
 <p>cimageban applies the role configured in channelimagebanrole (or creates
 a default \"#%channel% Image Banned Users\" role at the bottom of the
 role list with no permissions if the channel image ban role is not
@@ -4881,105 +4881,105 @@ banned until manual removal) or timed (users will be channel image
 unbanned automatically after a certain time span).</p>
 <p>Refer to <code class="interpreted-text" role="ref">moderation</code> for the exact
 command syntax.</p>
-<h4 id="permissions-needed_18">Permissions Needed</h4>
+<h4 id="permissions-needed_18">Permissions Needed<a class="headerlink" href="#permissions-needed_18" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="unmute">unmute</h3>
-<h4 id="command-syntax_11">Command Syntax</h4>
+<h3 id="unmute">unmute<a class="headerlink" href="#unmute" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_11">Command Syntax<a class="headerlink" href="#command-syntax_11" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 unmute (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_20">Command Description</h4>
+<h4 id="command-description_20">Command Description<a class="headerlink" href="#command-description_20" title="Permanent link">📋</a></h4>
 <p>Lifts the mute role from the target user(s).</p>
-<h4 id="permissions-needed_19">Permissions Needed</h4>
+<h4 id="permissions-needed_19">Permissions Needed<a class="headerlink" href="#permissions-needed_19" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles, Mute Members
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="unban">unban</h3>
-<h4 id="command-syntax_12">Command Syntax</h4>
+<h3 id="unban">unban<a class="headerlink" href="#unban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_12">Command Syntax<a class="headerlink" href="#command-syntax_12" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 unban (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_21">Command Description</h4>
+<h4 id="command-description_21">Command Description<a class="headerlink" href="#command-description_21" title="Permanent link">📋</a></h4>
 <p>Lifts the ban status from the target user(s).</p>
-<h4 id="permissions-needed_20">Permissions Needed</h4>
+<h4 id="permissions-needed_20">Permissions Needed<a class="headerlink" href="#permissions-needed_20" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Ban Members
 | <strong>Bot</strong>: Ban Members</p>
 <hr />
-<h3 id="cancelban">cancelban</h3>
-<h4 id="command-syntax_13">Command Syntax</h4>
+<h3 id="cancelban">cancelban<a class="headerlink" href="#cancelban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_13">Command Syntax<a class="headerlink" href="#command-syntax_13" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cancelban (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_22">Command Description</h4>
+<h4 id="command-description_22">Command Description<a class="headerlink" href="#command-description_22" title="Permanent link">📋</a></h4>
 <p>Lifts the mute role from the target user(s), and cancels the
 corresponding timed ban.</p>
-<h4 id="permissions-needed_21">Permissions Needed</h4>
+<h4 id="permissions-needed_21">Permissions Needed<a class="headerlink" href="#permissions-needed_21" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Ban Members
 | <strong>Bot</strong>: Ban Members</p>
 <hr />
-<h3 id="imageunban">imageunban</h3>
-<h4 id="command-syntax_14">Command Syntax</h4>
+<h3 id="imageunban">imageunban<a class="headerlink" href="#imageunban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_14">Command Syntax<a class="headerlink" href="#command-syntax_14" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 imageunban (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_23">Command Description</h4>
+<h4 id="command-description_23">Command Description<a class="headerlink" href="#command-description_23" title="Permanent link">📋</a></h4>
 <p>Lifts the image ban role from the target user(s).</p>
-<h4 id="permissions-needed_22">Permissions Needed</h4>
+<h4 id="permissions-needed_22">Permissions Needed<a class="headerlink" href="#permissions-needed_22" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="cunmute">cunmute</h3>
-<h4 id="command-syntax_15">Command Syntax</h4>
+<h3 id="cunmute">cunmute<a class="headerlink" href="#cunmute" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_15">Command Syntax<a class="headerlink" href="#command-syntax_15" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cunmute [channel id/mention/q_name] (user
 id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_24">Command Description</h4>
+<h4 id="command-description_24">Command Description<a class="headerlink" href="#command-description_24" title="Permanent link">📋</a></h4>
 <p>Lifts the channel mute role from the target user(s). Omission of the
 channel identifier will result in the current channel being considered
 by the command.</p>
-<h4 id="permissions-needed_23">Permissions Needed</h4>
+<h4 id="permissions-needed_23">Permissions Needed<a class="headerlink" href="#permissions-needed_23" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles, Mute Members
 | <strong>Bot</strong>: Manage Roles, Mute Members</p>
 <hr />
-<h3 id="cunban">cunban</h3>
-<h4 id="command-syntax_16">Command Syntax</h4>
+<h3 id="cunban">cunban<a class="headerlink" href="#cunban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_16">Command Syntax<a class="headerlink" href="#command-syntax_16" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cunban [channel id/mention/q_name] (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_25">Command Description</h4>
+<h4 id="command-description_25">Command Description<a class="headerlink" href="#command-description_25" title="Permanent link">📋</a></h4>
 <p>Lifts the channel ban role from the target user(s). Omission of the
 channel identifier will result in the current channel being considered
 by the command.</p>
-<h4 id="permissions-needed_24">Permissions Needed</h4>
+<h4 id="permissions-needed_24">Permissions Needed<a class="headerlink" href="#permissions-needed_24" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h3 id="cimageunban">cimageunban</h3>
-<h4 id="command-syntax_17">Command Syntax</h4>
+<h3 id="cimageunban">cimageunban<a class="headerlink" href="#cimageunban" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_17">Command Syntax<a class="headerlink" href="#command-syntax_17" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 cimageunban [channel id/mention/q_name] (user
 id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_26">Command Description</h4>
+<h4 id="command-description_26">Command Description<a class="headerlink" href="#command-description_26" title="Permanent link">📋</a></h4>
 <p>Lifts the channel image ban role from the target user(s). Omission of
 the channel identifier will result in the current channel being
 considered by the command.</p>
-<h4 id="permissions-needed_25">Permissions Needed</h4>
+<h4 id="permissions-needed_25">Permissions Needed<a class="headerlink" href="#permissions-needed_25" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Roles
 | <strong>Bot</strong>: Manage Roles</p>
 <hr />
-<h2 id="utility-commands">Utility Commands</h2>
+<h2 id="utility-commands">Utility Commands<a class="headerlink" href="#utility-commands" title="Permanent link">📋</a></h2>
 <p>These moderation commands may be used in conjunction with the rest of
 the moderation module to keep your server clean.</p>
-<h3 id="prune">prune</h3>
-<h4 id="command-syntax_18">Command Syntax</h4>
+<h3 id="prune">prune<a class="headerlink" href="#prune" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_18">Command Syntax<a class="headerlink" href="#command-syntax_18" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
-prune (number of messages) [filter item] [--ignore {filter ignore}]
+prune (\number of messages) [filter item] [--ignore {filter ignore}]
 :::</p>
-<h4 id="command-description_27">Command Description</h4>
+<h4 id="command-description_27">Command Description<a class="headerlink" href="#command-description_27" title="Permanent link">📋</a></h4>
 <p>Deletes a certain number of messages from the channel in which the
 command is run. For security reasons, the bot caps this number to
 <strong>250</strong> messages.</p>
@@ -5012,21 +5012,21 @@ filters is:</p>
 items, to ignore (and not delete) messages meeting that criteria. For
 example \"purge 100 bots --ignore embeds\" would delete all bot
 messages that weren\'t embeds.</p>
-<h4 id="permissions-needed_26">Permissions Needed</h4>
+<h4 id="permissions-needed_26">Permissions Needed<a class="headerlink" href="#permissions-needed_26" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Messages
 | <strong>Bot</strong>: Manage Messages</p>
-<h4 id="examples_2">Examples</h4>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 prune 100 purge 250 bots clear 150 \@cycloptux#1543 --ignore images
 :::</p>
 <hr />
-<h3 id="slowmode">slowmode</h3>
-<h4 id="command-syntax_19">Command Syntax</h4>
+<h3 id="slowmode">slowmode<a class="headerlink" href="#slowmode" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_19">Command Syntax<a class="headerlink" href="#command-syntax_19" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 slowmode [time code] [channel id(s)/mention(s)/q_name(s)]
 [--admode]
 :::</p>
-<h4 id="command-description_28">Command Description</h4>
+<h4 id="command-description_28">Command Description<a class="headerlink" href="#command-description_28" title="Permanent link">📋</a></h4>
 <p>Sets slow mode for the current, or the selected, channels. This command
 leverages 2 different systems:</p>
 <ul>
@@ -5050,15 +5050,15 @@ mode</strong> is active (this mode will not work on native slow mode), each
 message that is <strong>successfully</strong> sent into the slowed channel will
 <strong>also</strong> trigger an automatic deletion of the previous message sent by
 the user while slow mode is active.</p>
-<h4 id="permissions-needed_27">Permissions Needed</h4>
+<h4 id="permissions-needed_27">Permissions Needed<a class="headerlink" href="#permissions-needed_27" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Messages
 | <strong>Bot</strong>: Manage Messages</p>
-<h4 id="examples_3">Examples</h4>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 sm 1h45m #slow-channel sm 0 #slow-channel-1 #slow-channel-2 slowmode
 :::</p>
 <hr />
-<h2 id="evasion-actions">Evasion Actions</h2>
+<h2 id="evasion-actions">Evasion Actions<a class="headerlink" href="#evasion-actions" title="Permanent link">📋</a></h2>
 <p>In addition to the active behavior of the warning commands, the
 following commands also support a special \"evasion\" action log:</p>
 <ul>
@@ -5077,7 +5077,7 @@ corresponding time code).</p>
 rejoins the server and an \"evasion\" log will appear in the warning
 log.</p>
 <hr />
-<h2 id="warning-point-system">Warning Point System</h2>
+<h2 id="warning-point-system">Warning Point System<a class="headerlink" href="#warning-point-system" title="Permanent link">📋</a></h2>
 <p>To account for the nature and severity of various infractions, users
 will incur a certain number of points based on which rule they break.
 Moderators will be able to use their judgment to adjust the default
@@ -5087,7 +5087,7 @@ actions (such as a mute or ban) be taken against the user.</p>
 <p>This section will describe the details of the \"default\" warning point
 system backend as well as point out options or commands to configure
 parts of the system.</p>
-<h3 id="point-accumulation-and-thresholds">Point Accumulation and Thresholds</h3>
+<h3 id="point-accumulation-and-thresholds">Point Accumulation and Thresholds<a class="headerlink" href="#point-accumulation-and-thresholds" title="Permanent link">📋</a></h3>
 <p>In addition to a user\'s total points being the sum of the points of
 their infractions, the following rules apply to points:</p>
 <ul>
@@ -5140,7 +5140,7 @@ informing him/her of the user reaching the threshold.</p>
 <li>The absolute ban threshold is twice the ban threshold, a
     considerable feat even in one\'s lifetime of the server.</li>
 </ul>
-<h3 id="default-rules-and-points">Default Rules and Points</h3>
+<h3 id="default-rules-and-points">Default Rules and Points<a class="headerlink" href="#default-rules-and-points" title="Permanent link">📋</a></h3>
 <p>Ideally, users would configure their own rules and point values.
 However, there are definitely some rules that are common among servers
 and can be provided as a default hard-coded table. The default table is
@@ -5312,46 +5312,46 @@ provided to use as a base:</p>
 |       |   | content.                                                |   |
 +-------+---+---------------------------------------------------------+---+</p>
 <hr />
-<h2 id="warning-system-commands">Warning System Commands</h2>
+<h2 id="warning-system-commands">Warning System Commands<a class="headerlink" href="#warning-system-commands" title="Permanent link">📋</a></h2>
 <p>This section will describe all those commands that are needed to use
 (and configure, to a certain extent) the warning system, as described in
 the previous section.</p>
 <hr />
-<h3 id="warnhistory">warnhistory</h3>
-<h4 id="command-syntax_20">Command Syntax</h4>
+<h3 id="warnhistory">warnhistory<a class="headerlink" href="#warnhistory" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_20">Command Syntax<a class="headerlink" href="#command-syntax_20" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 warnhistory (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h4 id="command-description_29">Command Description</h4>
+<h4 id="command-description_29">Command Description<a class="headerlink" href="#command-description_29" title="Permanent link">📋</a></h4>
 <p>Shows the warning history of one (or more) user(s) in reverse
 chronological order. By default, this only includes a short summary for
 each warning. Warn histories longer than 2000 characters are paginated
 via reaction \"buttons\".</p>
-<h4 id="examples_4">Examples</h4>
+<h4 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 warnhistory 123456789098765432 history \@cycloptux#1543
 :::</p>
 <hr />
-<h3 id="case">case</h3>
-<h4 id="command-syntax_21">Command Syntax</h4>
+<h3 id="case">case<a class="headerlink" href="#case" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_21">Command Syntax<a class="headerlink" href="#command-syntax_21" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 case (case id(s))
 :::</p>
-<h4 id="command-description_30">Command Description</h4>
+<h4 id="command-description_30">Command Description<a class="headerlink" href="#command-description_30" title="Permanent link">📋</a></h4>
 <p>Prints a detailed log embed for the selected case(s).</p>
-<h4 id="examples_5">Examples</h4>
+<h4 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 case 2 case 12 15 34
 :::</p>
 <hr />
-<h3 id="edit">edit</h3>
-<h4 id="command-syntax_22">Command Syntax</h4>
+<h3 id="edit">edit<a class="headerlink" href="#edit" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_22">Command Syntax<a class="headerlink" href="#command-syntax_22" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 edit (case id) [--rule {rule id/name/alias}] [--reason {textual
 description}] [--attachments {urls}] [--padj {signed/unsigned
 number}] [--justification {textual justification}] [--skip-dm]
 :::</p>
-<h4 id="command-description_31">Command Description</h4>
+<h4 id="command-description_31">Command Description<a class="headerlink" href="#command-description_31" title="Permanent link">📋</a></h4>
 <p>Edits an existing case. You cannot edit a case type (e.g. turning a warn
 into a mute). Only the original case owner (the issuing moderator) or a
 server administrator can edit a case.</p>
@@ -5360,49 +5360,49 @@ details. The old entry will be edited with a clickable link that will
 bring you to the new edit.</p>
 <p>Please refer to <code class="interpreted-text" role="ref">moderation</code> for more
 details about the individual parameters and their aliases.</p>
-<h4 id="examples_6">Examples</h4>
+<h4 id="examples_6">Examples<a class="headerlink" href="#examples_6" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 edit 3 --reason Spamming phishing links in the #general channel
 --padj +4 --just For repeated spamming despite being warned about it
 :::</p>
 <hr />
-<h3 id="delete">delete</h3>
-<h4 id="command-syntax_23">Command Syntax</h4>
+<h3 id="delete">delete<a class="headerlink" href="#delete" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_23">Command Syntax<a class="headerlink" href="#command-syntax_23" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 delete (case id(s))
 :::</p>
-<h4 id="command-description_32">Command Description</h4>
+<h4 id="command-description_32">Command Description<a class="headerlink" href="#command-description_32" title="Permanent link">📋</a></h4>
 <p>Deletes one (or more) existing case(s). Deleted cases are never actually
 removed from the bot memory and can be restored in the future if you
 remember the case ID(s).</p>
-<h4 id="permissions-needed_28">Permissions Needed</h4>
+<h4 id="permissions-needed_28">Permissions Needed<a class="headerlink" href="#permissions-needed_28" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_7">Examples</h4>
+<h4 id="examples_7">Examples<a class="headerlink" href="#examples_7" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 delete 3 4 10
 :::</p>
 <hr />
-<h3 id="restore">restore</h3>
-<h4 id="command-syntax_24">Command Syntax</h4>
+<h3 id="restore">restore<a class="headerlink" href="#restore" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_24">Command Syntax<a class="headerlink" href="#command-syntax_24" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 restore (case id(s))
 :::</p>
-<h4 id="command-description_33">Command Description</h4>
+<h4 id="command-description_33">Command Description<a class="headerlink" href="#command-description_33" title="Permanent link">📋</a></h4>
 <p>Restores one (or more) previously deleted case(s).</p>
-<h4 id="permissions-needed_29">Permissions Needed</h4>
+<h4 id="permissions-needed_29">Permissions Needed<a class="headerlink" href="#permissions-needed_29" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
-<h4 id="examples_8">Examples</h4>
+<h4 id="examples_8">Examples<a class="headerlink" href="#examples_8" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 restore 3 4
 :::</p>
 <hr />
-<h3 id="listrules">listrules</h3>
-<h4 id="command-syntax_25">Command Syntax</h4>
+<h3 id="listrules">listrules<a class="headerlink" href="#listrules" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_25">Command Syntax<a class="headerlink" href="#command-syntax_25" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 listrules [rule id/name/alias] [--server] [--channel [channel
 id/mention/q_name]] [--mod]
 :::</p>
-<h4 id="command-description_34">Command Description</h4>
+<h4 id="command-description_34">Command Description<a class="headerlink" href="#command-description_34" title="Permanent link">📋</a></h4>
 <p>Lists the rules (both custom and default sets) of the server in order by
 Rule ID, including the Rule Title and Description for each rule. Provide
 an ID/Name/Alias to show a specific rule only. By default, the list will
@@ -5412,19 +5412,19 @@ tag to show only channel specific rules for that channel (omitting the
 channel identifier will show the rules for the current channel).</p>
 <p>The rule alias and points will be shown if a moderator or administrator
 appends the <code>--mod</code> parameter to the command.</p>
-<h4 id="examples_9">Examples</h4>
+<h4 id="examples_9">Examples<a class="headerlink" href="#examples_9" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 listrules listrules --channel #general listrules NSFW --mod
 :::</p>
 <hr />
-<h3 id="addrule">addrule</h3>
-<h4 id="command-syntax_26">Command Syntax</h4>
+<h3 id="addrule">addrule<a class="headerlink" href="#addrule" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_26">Command Syntax<a class="headerlink" href="#command-syntax_26" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 addrule (--name {rule name}) (--alias {rule alias}) (--description
 {rule description}) (--points {rule points (number)}) [--channel
 [channel id/mention/q_name]]
 :::</p>
-<h4 id="command-description_35">Command Description</h4>
+<h4 id="command-description_35">Command Description<a class="headerlink" href="#command-description_35" title="Permanent link">📋</a></h4>
 <p>Adds a custom rule to the rules list. Adding a custom rule generates a
 server-specific rule ID for that rule automatically, starting from
 <code>s_1</code>. Adding a channel identifier will assign that rule as being
@@ -5436,15 +5436,15 @@ Note
 :::</p>
 <p>Channel ban thresholds are not implemented yet.
 :::</p>
-<h4 id="permissions-needed_30">Permissions Needed</h4>
+<h4 id="permissions-needed_30">Permissions Needed<a class="headerlink" href="#permissions-needed_30" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="deleterule">deleterule</h3>
-<h4 id="command-syntax_27">Command Syntax</h4>
+<h3 id="deleterule">deleterule<a class="headerlink" href="#deleterule" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_27">Command Syntax<a class="headerlink" href="#command-syntax_27" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 delrule (rule(s) id/name/alias)
 :::</p>
-<h4 id="command-description_36">Command Description</h4>
+<h4 id="command-description_36">Command Description<a class="headerlink" href="#command-description_36" title="Permanent link">📋</a></h4>
 <p>Deletes a custom rule from the list of rules. Use toggleglobalrule to
 hide a default rule from the list of rules (see below).</p>
 <p>::: {.note}
@@ -5457,15 +5457,15 @@ deleted. \"Deleted\" rules are instead <strong>hidden</strong>, and running the
 deleterule again on the same rule ID will restore the rule in its
 previous, visible state.
 :::</p>
-<h4 id="permissions-needed_31">Permissions Needed</h4>
+<h4 id="permissions-needed_31">Permissions Needed<a class="headerlink" href="#permissions-needed_31" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="toggleglobalrule">toggleglobalrule</h3>
-<h4 id="command-syntax_28">Command Syntax</h4>
+<h3 id="toggleglobalrule">toggleglobalrule<a class="headerlink" href="#toggleglobalrule" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_28">Command Syntax<a class="headerlink" href="#command-syntax_28" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 toggleglobalrule (rule(s) id/name/alias)
 :::</p>
-<h4 id="command-description_37">Command Description</h4>
+<h4 id="command-description_37">Command Description<a class="headerlink" href="#command-description_37" title="Permanent link">📋</a></h4>
 <p>Deletes (hides) a default native rule from the list of rules. Use
 deleterule to hide a custom rule from the list of rules (see above).</p>
 <p>::: {.note}
@@ -5478,29 +5478,29 @@ deleted. \"Deleted\" rules are instead <strong>hidden</strong>, and running the
 toggleglobalrule again on the same rule ID will restore the rule in its
 previous, visible state.
 :::</p>
-<h4 id="permissions-needed_32">Permissions Needed</h4>
+<h4 id="permissions-needed_32">Permissions Needed<a class="headerlink" href="#permissions-needed_32" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="editrule">editrule</h3>
-<h4 id="command-syntax_29">Command Syntax</h4>
+<h3 id="editrule">editrule<a class="headerlink" href="#editrule" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_29">Command Syntax<a class="headerlink" href="#command-syntax_29" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 editrule (rule id/name/alias) [--name {rule name}] [--alias {rule
 alias}] [--description {rule description}] [--points {rule points
 (number)}] [--channel [-/channel id/mention/q_name]]
 :::</p>
-<h4 id="command-description_38">Command Description</h4>
+<h4 id="command-description_38">Command Description<a class="headerlink" href="#command-description_38" title="Permanent link">📋</a></h4>
 <p>Updates one or more fields of an existing rule to the new values.</p>
 <p>Use <code>--channel -</code> to convert a channel-specific rule into a server wide
 rule.</p>
-<h4 id="permissions-needed_33">Permissions Needed</h4>
+<h4 id="permissions-needed_33">Permissions Needed<a class="headerlink" href="#permissions-needed_33" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="halflogic">halflogic</h3>
-<h4 id="command-syntax_30">Command Syntax</h4>
+<h3 id="halflogic">halflogic<a class="headerlink" href="#halflogic" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_30">Command Syntax<a class="headerlink" href="#command-syntax_30" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
 halflogic (none/first/first-with-points/each)
 :::</p>
-<h4 id="command-description_39">Command Description</h4>
+<h4 id="command-description_39">Command Description<a class="headerlink" href="#command-description_39" title="Permanent link">📋</a></h4>
 <p>As described in <code class="interpreted-text" role="ref">point-accumulation</code>, the
 first warning for a particular rule is considered to be a \"soft
 warning\" and worth half points by default. This behavior can be
@@ -5516,43 +5516,43 @@ configured as follows:</p>
 </ul>
 <p>Using the command with no arguments will show the current settings for
 the server.</p>
-<h4 id="permissions-needed_34">Permissions Needed</h4>
+<h4 id="permissions-needed_34">Permissions Needed<a class="headerlink" href="#permissions-needed_34" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="warnexpiry-not-implemented-yet">warnexpiry <em>(not implemented yet)</em></h3>
-<h4 id="command-syntax_31">Command Syntax</h4>
+<h3 id="warnexpiry-not-implemented-yet">warnexpiry <em>(not implemented yet)</em><a class="headerlink" href="#warnexpiry-not-implemented-yet" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_31">Command Syntax<a class="headerlink" href="#command-syntax_31" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
-warnexpiry (number of days)
+warnexpiry (\number of days)
 :::</p>
-<h4 id="command-description_40">Command Description</h4>
+<h4 id="command-description_40">Command Description<a class="headerlink" href="#command-description_40" title="Permanent link">📋</a></h4>
 <p>Sets the number of days after which warnings will expire for a
 particular server. Provide no arguments to reset to the default.</p>
-<h4 id="permissions-needed_35">Permissions Needed</h4>
+<h4 id="permissions-needed_35">Permissions Needed<a class="headerlink" href="#permissions-needed_35" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="expirypoints-not-implemented-yet">expirypoints <em>(not implemented yet)</em></h3>
-<h4 id="command-syntax_32">Command Syntax</h4>
+<h3 id="expirypoints-not-implemented-yet">expirypoints <em>(not implemented yet)</em><a class="headerlink" href="#expirypoints-not-implemented-yet" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_32">Command Syntax<a class="headerlink" href="#command-syntax_32" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
-expirypoints (number of points)
+expirypoints (\number of points)
 :::</p>
-<h4 id="command-description_41">Command Description</h4>
+<h4 id="command-description_41">Command Description<a class="headerlink" href="#command-description_41" title="Permanent link">📋</a></h4>
 <p>Sets the number of points a warning will decay to after they expire.
 Provide no arguments to reset to the default.</p>
 <p>Any warnings worth fewer points than the expirypoints value will not
 decay.</p>
-<h4 id="permissions-needed_36">Permissions Needed</h4>
+<h4 id="permissions-needed_36">Permissions Needed<a class="headerlink" href="#permissions-needed_36" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h3 id="setthreshold-not-implemented-yet">setthreshold <em>(not implemented yet)</em></h3>
-<h4 id="command-syntax_33">Command Syntax</h4>
+<h3 id="setthreshold-not-implemented-yet">setthreshold <em>(not implemented yet)</em><a class="headerlink" href="#setthreshold-not-implemented-yet" title="Permanent link">📋</a></h3>
+<h4 id="command-syntax_33">Command Syntax<a class="headerlink" href="#command-syntax_33" title="Permanent link">📋</a></h4>
 <p>::: {.parsed-literal}
-setthreshold (\"mute\"/\"ban\"/\"absban\") (number of points)
+setthreshold (\"mute\"/\"ban\"/\"absban\") (\number of points)
 :::</p>
-<h4 id="command-description_42">Command Description</h4>
+<h4 id="command-description_42">Command Description<a class="headerlink" href="#command-description_42" title="Permanent link">📋</a></h4>
 <p>Sets the number of points at which a mute, ban, or \"absolute ban\" is
 recommended. Integrity checks should ensure that mute points \&lt; ban
 points \&lt; absolute ban points.</p>
-<h4 id="permissions-needed_37">Permissions Needed</h4>
+<h4 id="permissions-needed_37">Permissions Needed<a class="headerlink" href="#permissions-needed_37" title="Permanent link">📋</a></h4>
 <p>| <strong>User</strong>: Manage Server</p>
 
               
@@ -5608,6 +5608,10 @@ points \&lt; absolute ban points.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -5642,6 +5646,15 @@ points \&lt; absolute ban points.</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -5656,6 +5669,12 @@ points \&lt; absolute ban points.</p>
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

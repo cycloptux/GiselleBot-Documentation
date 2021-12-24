@@ -1622,16 +1622,16 @@
 </a>
 
 
-<h1 id="reactions-parsing">Reactions Parsing</h1>
+<h1 id="reactions-parsing">Reactions Parsing<a class="headerlink" href="#reactions-parsing" title="Permanent link">📋</a></h1>
 <p>This module enables users to gather stats about the reactions sent into
 a channel.</p>
-<h2 id="reprint">reprint</h2>
-<h3 id="command-syntax">Command Syntax</h3>
+<h2 id="reprint">reprint<a class="headerlink" href="#reprint" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reprint (message id) [--sort username/discriminator/nickname]
 [--show username/nickname] [--emoji {default or custom emoji}]
 :::</p>
-<h3 id="command-description">Command Description</h3>
+<h3 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h3>
 <p>Prints the list of users that reacted to the specified message in a
 readable way.</p>
 <p>Setting the <code>--sort</code> parameter will sort the output using the specified
@@ -1641,18 +1641,18 @@ outputs them.</p>
 setting. Defaults to showing the users by their username.</p>
 <p>Setting the <code>--emoji</code> parameter will filter the output to the specified
 emoji.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reprint 123456789098765432 reprint 123456789098765432 --sort nickname
 --show nickname reprint 123456789098765432 --emoji :pikathink:
 :::</p>
 <hr />
-<h2 id="resummary">resummary</h2>
-<h3 id="command-syntax_1">Command Syntax</h3>
+<h2 id="resummary">resummary<a class="headerlink" href="#resummary" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
-resummary [number of messages] [--csv] [--silent]
+resummary [\number of messages] [--csv] [--silent]
 :::</p>
-<h3 id="command-description_1">Command Description</h3>
+<h3 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h3>
 <p>Prints a list of messages with reactions within the last <code>number of messages</code>
 in the current channel, showing the list of reactions and number of uses
 per each reaction.</p>
@@ -1663,19 +1663,19 @@ containing the details of the summary to the command author.</p>
 <p>If the number of messages is omitted, the bot will scan the latest 10
 messages.</p>
 <p>The maximum number of messages the bot will scan is <strong>250</strong>.</p>
-<h3 id="permissions-needed">Permissions Needed</h3>
+<h3 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_1">Examples</h3>
+<h3 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 resummary resummary 20 --csv --silent resummary --csv
 :::</p>
 <hr />
-<h2 id="reunique">reunique</h2>
-<h3 id="command-syntax_2">Command Syntax</h3>
+<h2 id="reunique">reunique<a class="headerlink" href="#reunique" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
-reunique [number of messages] [--csv] [--silent]
+reunique [\number of messages] [--csv] [--silent]
 :::</p>
-<h3 id="command-description_2">Command Description</h3>
+<h3 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h3>
 <p>Prints a list of <strong>unique users</strong> that reacted to at least one message
 within the last <code>number-of-messages</code> in the current channel.</p>
 <p>Using the <code>--csv</code> parameter instructs the bot to send a <code>.csv</code> file
@@ -1687,20 +1687,20 @@ user reacted to each reaction.</p>
 <p>If the number of messages is omitted, the bot will scan the latest 10
 messages.</p>
 <p>The maximum number of messages the bot will scan is <strong>250</strong>.</p>
-<h3 id="permissions-needed_1">Permissions Needed</h3>
+<h3 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_2">Examples</h3>
+<h3 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 reunique reunique 20 --csv --silent reunique --csv
 :::</p>
 <hr />
-<h2 id="recontest">recontest</h2>
-<h3 id="command-syntax_3">Command Syntax</h3>
+<h2 id="recontest">recontest<a class="headerlink" href="#recontest" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
-recontest [number of messages] [--age (time code)] [--joined (time
+recontest [\number of messages] [--age (time code)] [--joined (time
 code)] [--members (number)]
 :::</p>
-<h3 id="command-description_3">Command Description</h3>
+<h3 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h3>
 <p>This function is specifically built with reaction contests in mind. Its
 output is focused on highlighting reactions that are added by Discord
 accounts that have been recently created, in order to perform a better
@@ -1750,9 +1750,9 @@ command author:</p>
 <p>Using the <code>--silent</code> parameter suppresses the in-channel embed output
 (this only works if used with <code>--csv</code>).</p>
 <p>The maximum number of messages the bot will scan is <strong>250</strong>.</p>
-<h3 id="permissions-needed_2">Permissions Needed</h3>
+<h3 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages</p>
-<h3 id="examples_3">Examples</h3>
+<h3 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 recontest --age 5d --joined 1d recontest recontest 50 --age 2w
 --joined 1w --members 10 --csv --silent
@@ -1811,6 +1811,10 @@ recontest --age 5d --joined 1d recontest recontest 50 --age 2w
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -1845,6 +1849,15 @@ recontest --age 5d --joined 1d recontest recontest 50 --age 2w
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -1859,6 +1872,12 @@ recontest --age 5d --joined 1d recontest recontest 50 --age 2w
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

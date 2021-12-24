@@ -1864,34 +1864,34 @@
 </a>
 
 
-<h1 id="custom-reactions">Custom Reactions</h1>
+<h1 id="custom-reactions">Custom Reactions<a class="headerlink" href="#custom-reactions" title="Permanent link">📋</a></h1>
 <p>The Custom Reactions module enables users to set up custom bot reactions
 and build pseudo-commands in a server.</p>
-<h2 id="togglecustreact">togglecustreact</h2>
-<h3 id="command-syntax">Command Syntax</h3>
+<h2 id="togglecustreact">togglecustreact<a class="headerlink" href="#togglecustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 tcr
 :::</p>
-<h3 id="command-description">Command Description</h3>
+<h3 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h3>
 <p>Toggles the custom reactions module on the whole Discord server.</p>
 <hr />
-<h2 id="verbosecustreact">verbosecustreact</h2>
-<h3 id="command-syntax_1">Command Syntax</h3>
+<h2 id="verbosecustreact">verbosecustreact<a class="headerlink" href="#verbosecustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 vcr
 :::</p>
-<h3 id="command-description_1">Command Description</h3>
+<h3 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h3>
 <p>Toggles verbose mode for custom reactions on the whole Discord server.
 When verbose mode is enabled, each custom reaction will be prepended
 with the ID of the reaction being printed.</p>
 <hr />
-<h2 id="addcustreact">addcustreact</h2>
-<h3 id="command-syntax_2">Command Syntax</h3>
+<h2 id="addcustreact">addcustreact<a class="headerlink" href="#addcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 acr (--in {trigger text}) (--out {response text}) [--anywhere]
 [--dm] [--delete] [--global]
 :::</p>
-<h3 id="command-description_2">Command Description</h3>
+<h3 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h3>
 <p>Adds a new custom reaction for the current server.</p>
 <p>Optional Parameters:</p>
 <ul>
@@ -1959,50 +1959,50 @@ message:</p>
 <p>You can use embed json from <a href="https://eb.nadeko.bot/">https://eb.nadeko.bot/</a> instead of a
 regular text in the response parameter, if you want the message to be
 embedded.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 acr --in what time is it --out Hello %user%! The current time is
 %now%. --anywhere
 :::</p>
 <hr />
-<h2 id="editcustreact">editcustreact</h2>
-<h3 id="command-syntax_3">Command Syntax</h3>
+<h2 id="editcustreact">editcustreact<a class="headerlink" href="#editcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 ecr (reaction id) [--in {trigger text}] [--out {response text}]
 [--anywhere] [--dm] [--delete] [--global]
 :::</p>
-<h3 id="command-description_3">Command Description</h3>
+<h3 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h3>
 <p>Edits an existing custom reaction for the current server. Global custom
 reactions can only be edited by the bot owner.</p>
 <p>The presence of an optional parameter will <strong>toggle</strong> the option to the
 opposite of what it was before the edit. <code>--global</code>, on the other hand,
 will need to be added or removed accordingly, depending on the scope of
 the reaction.</p>
-<h3 id="examples_1">Examples</h3>
+<h3 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 ecr 1 --out Hello %user%! The current time is %server_time%. --delete
 :::</p>
 <hr />
-<h2 id="showcustreact">showcustreact</h2>
-<h3 id="command-syntax_4">Command Syntax</h3>
+<h2 id="showcustreact">showcustreact<a class="headerlink" href="#showcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 scr (reaction id)
 :::</p>
-<h3 id="command-description_4">Command Description</h3>
+<h3 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h3>
 <p>Prints the current configuration for a specific custom reaction. It will
 also preview how the reaction is printed when triggered in a server
 (placeholders will <strong>not</strong> be replaced in this preview).</p>
-<h3 id="examples_2">Examples</h3>
+<h3 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 scr 3
 :::</p>
 <hr />
-<h2 id="listcustreact">listcustreact</h2>
-<h3 id="command-syntax_5">Command Syntax</h3>
+<h2 id="listcustreact">listcustreact<a class="headerlink" href="#listcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 lcr [--global] [--alphabetical] [--in {text}]
 :::</p>
-<h3 id="command-description_5">Command Description</h3>
+<h3 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h3>
 <p>Lists all available custom reactions in the current server. Using the
 <code>--global</code> argument will show the list of global reactions. Using the
 <code>--alphabetical</code> argument will show the list of reactions in
@@ -2010,26 +2010,26 @@ alphabetical order (by input parameter).</p>
 <p>Using the <code>--in</code> parameter will filter on reactions that are triggered
 by the text used within that argument.</p>
 <hr />
-<h2 id="delcustreact">delcustreact</h2>
-<h3 id="command-syntax_6">Command Syntax</h3>
+<h2 id="delcustreact">delcustreact<a class="headerlink" href="#delcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 dcr (reaction id(s))
 :::</p>
-<h3 id="command-description_6">Command Description</h3>
+<h3 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h3>
 <p>Deletes one or more specific custom reaction(s). Global custom reactions
 can only be deleted by the bot owner.</p>
-<h3 id="examples_3">Examples</h3>
+<h3 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 dcr 3 dcr 11 25 67
 :::</p>
 <hr />
-<h2 id="restcustreact">restcustreact</h2>
-<h3 id="command-syntax_7">Command Syntax</h3>
+<h2 id="restcustreact">restcustreact<a class="headerlink" href="#restcustreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 rcr (reaction id) [role id(s)/mention(s)/q_name(s)] [--exclude]
 [--and]
 :::</p>
-<h3 id="command-description_7">Command Description</h3>
+<h3 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h3>
 <p>Restricts an existing custom reaction to a specified set of roles, or
 exludes a set of roles from using a reaction.</p>
 <p>If used without any argument, the command will apply the default
@@ -2048,18 +2048,18 @@ roles.</p>
 <p>Use the above parameters to configure each custom reaction with the
 desided configuration. Each usage of this command will overwrite the
 previously set logic.</p>
-<h3 id="examples_4">Examples</h3>
+<h3 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 rcr 4 Moderators \"Authorized People\" rcr 3 \"Authorized People\"
 \"Sensitive Data\" --and rcr 12 \@Restricted --exclude rcr 27
 \"Unauthorized A\" \"Unauthorized B\" --and --exclude
 :::</p>
 <hr />
-<h2 id="crclear">crclear</h2>
-<h3 id="command-description_8">Command Description</h3>
+<h2 id="crclear">crclear<a class="headerlink" href="#crclear" title="Permanent link">📋</a></h2>
+<h3 id="command-description_8">Command Description<a class="headerlink" href="#command-description_8" title="Permanent link">📋</a></h3>
 <p>Deletes all server specific custom reactions. Global custom reactions
 can only be deleted by the bot owner.</p>
-<h3 id="permissions-needed">Permissions Needed</h3>
+<h3 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Server</p>
 
               
@@ -2115,6 +2115,10 @@ can only be deleted by the bot owner.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2149,6 +2153,15 @@ can only be deleted by the bot owner.</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -2163,6 +2176,12 @@ can only be deleted by the bot owner.</p>
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

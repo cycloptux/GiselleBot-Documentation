@@ -2352,7 +2352,7 @@
 </a>
 
 
-<h1 id="forms-builder">Forms Builder</h1>
+<h1 id="forms-builder">Forms Builder<a class="headerlink" href="#forms-builder" title="Permanent link">📋</a></h1>
 <p>The Forms Builder module enables users to create Q/A forms that are
 presented to end-users by sending a Direct Message to the bot. The Q/As
 can be set up to be a sequence of multi-choice or open questions, with
@@ -2422,12 +2422,12 @@ Helper</a> to create pre-made strings to be
 used in those phases. Just create a copy of that sheet and customize it
 to your needs.
 :::</p>
-<h2 id="trellopair">trellopair</h2>
-<h3 id="command-syntax">Command Syntax</h3>
+<h2 id="trellopair">trellopair<a class="headerlink" href="#trellopair" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 trellopair [team name/URL, or \"-\"]
 :::</p>
-<h3 id="command-description">Command Description</h3>
+<h3 id="command-description">Command Description<a class="headerlink" href="#command-description" title="Permanent link">📋</a></h3>
 <p>Pairs a Discord server with a Trello team. No restrictions are applied
 to the number of Discord servers that can pair a Trello team, although
 <strong>each server must pass the verification step individually</strong> (see
@@ -2462,15 +2462,15 @@ the Forms module.</p>
 <p>Once the card is found the pairing will complete, actvating the
 integration. The verification card will be deleted, and you will be
 notified (with a mention) in the current channel.</p>
-<h3 id="permissions-needed">Permissions Needed</h3>
+<h3 id="permissions-needed">Permissions Needed<a class="headerlink" href="#permissions-needed" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Server</p>
 <hr />
-<h2 id="submit">submit</h2>
-<h3 id="command-syntax_1">Command Syntax</h3>
+<h2 id="submit">submit<a class="headerlink" href="#submit" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_1">Command Syntax<a class="headerlink" href="#command-syntax_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 submit
 :::</p>
-<h3 id="command-description_1">Command Description</h3>
+<h3 id="command-description_1">Command Description<a class="headerlink" href="#command-description_1" title="Permanent link">📋</a></h3>
 <p>Shows the available forms for the servers a user is currently in, giving
 the option to start filling a submission.</p>
 <p>::: {.note}
@@ -2491,12 +2491,12 @@ blacklist check (see formblacklist).</p>
 <p>The actual form submission must always happen though \'s DMs.
 :::</p>
 <hr />
-<h2 id="submitreact">submitreact</h2>
-<h3 id="command-syntax_2">Command Syntax</h3>
+<h2 id="submitreact">submitreact<a class="headerlink" href="#submitreact" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_2">Command Syntax<a class="headerlink" href="#command-syntax_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 submitreact [--m {message id}]
 :::</p>
-<h3 id="command-description_2">Command Description</h3>
+<h3 id="command-description_2">Command Description<a class="headerlink" href="#command-description_2" title="Permanent link">📋</a></h3>
 <p>Other than sending the <code class="interpreted-text" role="ref">submit</code> command to
 via DM, or using it in a server to quickly start the DM workflow,
 authorized people can enable a specific reaction on a message of choice
@@ -2507,44 +2507,44 @@ reaction message\". will guide you through the process of creating this
 reaction, just follow the in-Discord instructions.</p>
 <p>If a valid message ID is specified through the dedicated parameter, the
 submit reaction will be created on the target message.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 submitreact submitreact --m 123456789098765432
 :::</p>
 <hr />
-<h2 id="submitreactremove">submitreactremove</h2>
-<h3 id="command-syntax_3">Command Syntax</h3>
+<h2 id="submitreactremove">submitreactremove<a class="headerlink" href="#submitreactremove" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_3">Command Syntax<a class="headerlink" href="#command-syntax_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 submitreactremove [message id]
 :::</p>
-<h3 id="command-description_3">Command Description</h3>
+<h3 id="command-description_3">Command Description<a class="headerlink" href="#command-description_3" title="Permanent link">📋</a></h3>
 <p>Removes the submit reaction behavior from an existing message. The
 message itself won\'t be deleted, nor the existing reactions will be
 removed, but will now not do anything with the reaction on that message.</p>
 <p>If the message ID is omitted (or is invalid), will attempt to pick the
 latest submit reaction message in the current channel.</p>
-<h3 id="examples_1">Examples</h3>
+<h3 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 submitreactremove 123456789098765432
 :::</p>
 <hr />
-<h2 id="adsubmit">adsubmit</h2>
-<h3 id="command-description_4">Command Description</h3>
+<h2 id="adsubmit">adsubmit<a class="headerlink" href="#adsubmit" title="Permanent link">📋</a></h2>
+<h3 id="command-description_4">Command Description<a class="headerlink" href="#command-description_4" title="Permanent link">📋</a></h3>
 <p>Toggles the automatic deletion of the \"confirmation\" message that is
 sent upon using the submit command into a server, and of the command
 itself.</p>
 <p>The user-sent message will be deleted immediately. The confirmation
 message will be deleted after 5 seconds.</p>
-<h3 id="permissions-needed_1">Permissions Needed</h3>
+<h3 id="permissions-needed_1">Permissions Needed<a class="headerlink" href="#permissions-needed_1" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Manage Messages
 | <strong>Bot</strong>: Manage Messages</p>
 <hr />
-<h2 id="forminit">forminit</h2>
-<h3 id="command-syntax_4">Command Syntax</h3>
+<h2 id="forminit">forminit<a class="headerlink" href="#forminit" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_4">Command Syntax<a class="headerlink" href="#command-syntax_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foinit
 :::</p>
-<h3 id="command-description_5">Command Description</h3>
+<h3 id="command-description_5">Command Description<a class="headerlink" href="#command-description_5" title="Permanent link">📋</a></h3>
 <p>Initializes a new form builder. The bot will guide the user into setting
 up the basic configurations and first question.</p>
 <p>Forms questions will expire after:</p>
@@ -2629,12 +2629,12 @@ string to be used in this phase. Just create a copy of that sheet and
 customize it to your needs.
 :::</p>
 <hr />
-<h2 id="formsetup">formsetup</h2>
-<h3 id="command-syntax_5">Command Syntax</h3>
+<h2 id="formsetup">formsetup<a class="headerlink" href="#formsetup" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_5">Command Syntax<a class="headerlink" href="#command-syntax_5" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foset (form id)
 :::</p>
-<h3 id="command-description_6">Command Description</h3>
+<h3 id="command-description_6">Command Description<a class="headerlink" href="#command-description_6" title="Permanent link">📋</a></h3>
 <p>Opens the forms builder interactive configuration menu. Use the menu
 items to configure the available settings.</p>
 <p><img alt="Forms Builder Interactive Configuration Menu" src="../../assets/images/forms_image_00.png" />{.align-center
@@ -2729,118 +2729,118 @@ share mode, extended embed, attachments highlighting and anonymizer on.</p>
 <p><img alt="Forms Builder Submission Example" src="../../assets/images/forms_image_01.png" />{.align-center
 width="600px"}</p>
 <hr />
-<h2 id="formaddqst">formaddqst</h2>
-<h3 id="command-syntax_6">Command Syntax</h3>
+<h2 id="formaddqst">formaddqst<a class="headerlink" href="#formaddqst" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_6">Command Syntax<a class="headerlink" href="#command-syntax_6" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foaq (form id)
 :::</p>
-<h3 id="command-description_7">Command Description</h3>
+<h3 id="command-description_7">Command Description<a class="headerlink" href="#command-description_7" title="Permanent link">📋</a></h3>
 <p>Adds a question to an existing form. Follow the instructions given by
 the bot to configure the question. Refer to the previous paragraph for
 more details.</p>
-<h3 id="examples_2">Examples</h3>
+<h3 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foaq 1
 :::</p>
 <hr />
-<h2 id="formeditqst">formeditqst</h2>
-<h3 id="command-syntax_7">Command Syntax</h3>
+<h2 id="formeditqst">formeditqst<a class="headerlink" href="#formeditqst" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_7">Command Syntax<a class="headerlink" href="#command-syntax_7" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foeq (form id) (question id)
 :::</p>
-<h3 id="command-description_8">Command Description</h3>
+<h3 id="command-description_8">Command Description<a class="headerlink" href="#command-description_8" title="Permanent link">📋</a></h3>
 <p>Replaces the selected question from an existing form with a new one.
 Refer to the previous paragraphs for more details.</p>
-<h3 id="examples_3">Examples</h3>
+<h3 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foeq 1 5
 :::</p>
 <hr />
-<h2 id="formremqst">formremqst</h2>
-<h3 id="command-syntax_8">Command Syntax</h3>
+<h2 id="formremqst">formremqst<a class="headerlink" href="#formremqst" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_8">Command Syntax<a class="headerlink" href="#command-syntax_8" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 forq (form id) (question id)
 :::</p>
-<h3 id="command-description_9">Command Description</h3>
+<h3 id="command-description_9">Command Description<a class="headerlink" href="#command-description_9" title="Permanent link">📋</a></h3>
 <p>Deletes a specific question from an existing form.</p>
-<h3 id="examples_4">Examples</h3>
+<h3 id="examples_4">Examples<a class="headerlink" href="#examples_4" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 forq 1 5
 :::</p>
 <hr />
-<h2 id="formsortqst">formsortqst</h2>
-<h3 id="command-syntax_9">Command Syntax</h3>
+<h2 id="formsortqst">formsortqst<a class="headerlink" href="#formsortqst" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_9">Command Syntax<a class="headerlink" href="#command-syntax_9" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fosq (form id) (question_ids)
 :::</p>
-<h3 id="command-description_10">Command Description</h3>
+<h3 id="command-description_10">Command Description<a class="headerlink" href="#command-description_10" title="Permanent link">📋</a></h3>
 <p>Sorts the questions of an existing workflow into the specified order.</p>
-<h3 id="examples_5">Examples</h3>
+<h3 id="examples_5">Examples<a class="headerlink" href="#examples_5" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fosq 1 4 5 1 2 3
 :::</p>
 <hr />
-<h2 id="formpublish">formpublish</h2>
-<h3 id="command-syntax_10">Command Syntax</h3>
+<h2 id="formpublish">formpublish<a class="headerlink" href="#formpublish" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_10">Command Syntax<a class="headerlink" href="#command-syntax_10" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fopub (form id)
 :::</p>
-<h3 id="command-description_11">Command Description</h3>
+<h3 id="command-description_11">Command Description<a class="headerlink" href="#command-description_11" title="Permanent link">📋</a></h3>
 <p>Publishes an existing form, making it available to server members
 through the dedicated section of the bot Direct Messages behavior (see
 <code class="interpreted-text" role="ref">submit</code>).</p>
 <hr />
-<h2 id="formwithhold">formwithhold</h2>
-<h3 id="command-syntax_11">Command Syntax</h3>
+<h2 id="formwithhold">formwithhold<a class="headerlink" href="#formwithhold" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_11">Command Syntax<a class="headerlink" href="#command-syntax_11" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fowh (form id)
 :::</p>
-<h3 id="command-description_12">Command Description</h3>
+<h3 id="command-description_12">Command Description<a class="headerlink" href="#command-description_12" title="Permanent link">📋</a></h3>
 <p>Witholds a previously published form, making it unavailable for server
 members. This is particularly useful, or even required, for forms that
 need to be edited/deleted.</p>
 <hr />
-<h2 id="formdelete">formdelete</h2>
-<h3 id="command-syntax_12">Command Syntax</h3>
+<h2 id="formdelete">formdelete<a class="headerlink" href="#formdelete" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_12">Command Syntax<a class="headerlink" href="#command-syntax_12" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fod (form id)
 :::</p>
-<h3 id="command-description_13">Command Description</h3>
+<h3 id="command-description_13">Command Description<a class="headerlink" href="#command-description_13" title="Permanent link">📋</a></h3>
 <p>Completely deletes a server form.</p>
 <hr />
-<h2 id="formpreview">formpreview</h2>
-<h3 id="command-syntax_13">Command Syntax</h3>
+<h2 id="formpreview">formpreview<a class="headerlink" href="#formpreview" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_13">Command Syntax<a class="headerlink" href="#command-syntax_13" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fop
 :::</p>
-<h3 id="command-description_14">Command Description</h3>
+<h3 id="command-description_14">Command Description<a class="headerlink" href="#command-description_14" title="Permanent link">📋</a></h3>
 <p>Prints the list of available forms for the current server. For each
 form, a preview of each question (and the corresponding question ID) is
 shown.</p>
 <hr />
-<h2 id="formblacklist">formblacklist</h2>
-<h3 id="command-syntax_14">Command Syntax</h3>
+<h2 id="formblacklist">formblacklist<a class="headerlink" href="#formblacklist" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_14">Command Syntax<a class="headerlink" href="#command-syntax_14" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fobl (user id(s)/mention(s)/q_name(s))
 :::</p>
-<h3 id="command-description_15">Command Description</h3>
+<h3 id="command-description_15">Command Description<a class="headerlink" href="#command-description_15" title="Permanent link">📋</a></h3>
 <p>Toggles one (or more) user\'s presence on the forms blacklist.
 Blacklisted users won\'t be able to see any available form for the
 current server.</p>
-<h3 id="examples_6">Examples</h3>
+<h3 id="examples_6">Examples<a class="headerlink" href="#examples_6" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 fobl cycloptux#1543
 :::</p>
 <hr />
-<h2 id="formsexport">formsexport</h2>
-<h3 id="command-syntax_15">Command Syntax</h3>
+<h2 id="formsexport">formsexport<a class="headerlink" href="#formsexport" title="Permanent link">📋</a></h2>
+<h3 id="command-syntax_15">Command Syntax<a class="headerlink" href="#command-syntax_15" title="Permanent link">📋</a></h3>
 <p>::: {.parsed-literal}
 foexp
 :::</p>
-<h3 id="command-description_16">Command Description</h3>
+<h3 id="command-description_16">Command Description<a class="headerlink" href="#command-description_16" title="Permanent link">📋</a></h3>
 <p>Exports the current forms submission statistics and contents for the
 current server.</p>
-<h3 id="permissions-needed_2">Permissions Needed</h3>
+<h3 id="permissions-needed_2">Permissions Needed<a class="headerlink" href="#permissions-needed_2" title="Permanent link">📋</a></h3>
 <p>| <strong>User</strong>: Bot Owner</p>
 
               
@@ -2896,6 +2896,10 @@ current server.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2021 Cycloptux
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2930,6 +2934,15 @@ current server.</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
+      
+      
+    
+    <a href="https://gisl.eu/youtube" target="_blank" rel="noopener" title="gisl.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+    </a>
+  
 </div>
       
     </div>
@@ -2944,6 +2957,12 @@ current server.</p>
     
     
       <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
