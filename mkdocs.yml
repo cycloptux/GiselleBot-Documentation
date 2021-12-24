@@ -1,6 +1,7 @@
 site_name: UNOFFICIAL GiselleBot Documentation
 repo_url: https://github.com/cycloptux/GiselleBot-Documentation
 repo_name: cycloptux/GiselleBot-Documentation
+copyright: Copyright &copy; 2019 - 2021 Cycloptux
 theme:
   name: material
   features:
@@ -28,9 +29,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: '📋'
 extra:
   project: GiselleBot
-  copyright: 2021, cycloptux
   author: cycloptux
   version: 4.0
   release: 4.0.0
@@ -48,6 +50,8 @@ extra:
       link: cycloptux@discomm.cc
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/cycloptux
+    - icon: material/youtube
+      link: https://gisl.eu/youtube
 plugins:
     - search
     - macros
