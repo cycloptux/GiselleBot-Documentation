@@ -19,7 +19,7 @@ reaction to a specific message.
 GiselleBot has both of these features, and this article will give you a
 brief overview of how you can set up your very own self-assignable roles
 and reaction roles. If you want to learn more about how self-assignable
-roles work, you can take a look at the documentation [here](../GiselleBot-Documentation/Moderation & Administration/administration#self-assignable-roles).
+roles work, you can take a look at the documentation [here](../../docs/Moderation & Administration/administration#self-assignable-roles).
 
 Step 1: Create a role group
 The very first thing you need to do to create a self-assignable role is to add an existing role to a role group. A role group is simply any set of roles grouped together via GiselleBot’s !asar command. For example
