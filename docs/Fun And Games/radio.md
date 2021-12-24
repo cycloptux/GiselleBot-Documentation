@@ -8,14 +8,14 @@ The Radio module must be first enabled by a server manager (someone with
 **Manage Server** permissions) by setting a web radio channel with the
 rchannel command.
 
-rchannel
+{{bot.prefix}}rchannel
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-rchannel \[channel id, or \"-\"\]
-:::
+        {{bot.prefix}}rchannel [channel id, or "-"]
+
 
 ### Command Description
 
@@ -28,30 +28,32 @@ also use the ID of a voice channel.
 Running this command while not in a voice channel and without any extra
 argument will show the current authorized web radio channel.
 
-Using \"-\" as argument will remove the current authorized web radio
+Using "-" as argument will remove the current authorized web radio
 channel and disable the radio module until a voice channel is
 authorized.
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-rchannel rchannel 123456789098765432 rchannel -
-:::
+        {{bot.prefix}}rchannel 
+        {{bot.prefix}}rchannel 123456789098765432 
+        {{bot.prefix}}rchannel -
+
 
 ------------------------------------------------------------------------
 
-rplay
+{{bot.prefix}}rplay
 -----
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-rp
-:::
+        {{bot.prefix}}rp
+
 
 ### Command Description
 
@@ -59,55 +61,49 @@ Shows the list of available web radio stations.
 
 ------------------------------------------------------------------------
 
-rstop
+{{bot.prefix}}rstop
 -----
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-rstop
-:::
+        {{bot.prefix}}rstop
+
 
 ### Command Description
 
 Immediately stops the web radio stream. If 3 or more people are
 listening in the same web radio voice channel, a vote will happen.
 
-For a \"vote stop\" to take effect, **70%** of the voice channel members
+For a "vote stop" to take effect, **70%** of the voice channel members
 must agree.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!note "Note"
 
-Let\'s assume there are 10 users in the web radio voice channel. The
-threshold for skipping is calculated as 70% of 10 = 7 (numbers will be
-rounded down if needed). For the \"vote stop\" to take effect, you would
-then need 7 positive votes.
-:::
+        Let's assume there are 10 users in the web radio voice channel. The
+        threshold for skipping is calculated as 70% of 10 = 7 (numbers will be
+        rounded down if needed). For the "vote stop" to take effect, you would
+        then need 7 positive votes.
 
-::: {.note}
-::: {.title}
-Note
-:::
 
-\"Vote stop\" will not be active until there are 3 or more people in the
-voice channel (with one person, insta-skip is enabled and with two the
-threshold for skipping is 1). Server managers (users with \"Manage
-Server\" permissions) will bypass the voting system.
-:::
+!!!info "Note"
+
+        "Vote stop" will not be active until there are 3 or more people in the
+        voice channel (with one person, insta-skip is enabled and with two the
+        threshold for skipping is 1). Server managers (users with "Manage
+        Server" permissions) will bypass the voting system.
+
 
 ------------------------------------------------------------------------
 
-rnowplaying
+{{bot.prefix}}rnowplaying
 -----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-rnp
-:::
+        {{bot.prefix}}rnp
+
 
 ### Command Description
 
