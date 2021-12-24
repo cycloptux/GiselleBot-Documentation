@@ -26,6 +26,8 @@ markdown_extensions:
   - admonition
   - md_in_html
   - attr_list
+  - pymdownx.tilde
+  - pymdownx.caret
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
