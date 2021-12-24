@@ -7,10 +7,10 @@ a few ways:
 -   Each message sent in a channel the bot has access to will give a
     small amount of currency to the user (a cooldown is applied to avoid
     plain spamming just to earn currency).
--   Once a day, using the [{{bot.prefix}}timely](/Fun And Games/currency#timely) command.
+-   Once a day, using the [{{bot.prefix}}timely](/GiselleBot-Documentation/Fun And Games/currency#timely) command.
 -   Every once in a while, reacting to events on the main bot support
     server.
--   Playing with [{{bot.prefix}}games](/Fun And Games/games).
+-   Playing with [{{bot.prefix}}games](/GiselleBot-Documentation/Fun And Games/games).
 
 Currently, the main goal of currency is playing with games. More uses
 are planned, but still not implemented.
@@ -99,7 +99,7 @@ To help give a better chance to fight for the top spots, votes will
 count double on the weekend (Fridays, Saturdays and Sundays). This also
 means **double the amount of coins**!
 
-By enabling the notification service using the [{{bot.prefix}}topggnotify](/Fun And Games/currency#topggnotify) command in
+By enabling the notification service using the [{{bot.prefix}}topggnotify](/GiselleBot-Documentation/Fun And Games/currency#topggnotify) command in
 any server, you will also be notified when your Discord Bots List vote
 is available, thus being able to actively collect your daily coins
 efficiently. Each run of the command will toggle its previous state.

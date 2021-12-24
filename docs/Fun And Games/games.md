@@ -2,7 +2,7 @@ Games
 =====
 
 As a way of betting, spending and/or earning currency (see
-[Currency](/Fun And Games/currency)), a few simple games are
+[Currency](/GiselleBot-Documentation/Fun And Games/currency)), a few simple games are
 available.
 
 ------------------------------------------------------------------------

@@ -61,14 +61,14 @@ include:
         <figure markdown> 
             ![TopGG](https://top.gg/api/widget/356831787445387285.svg){ align=left }
             <figcaption>
-                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to [{{bot.prefix}}topggnotify](/Fun And Games/currency#topggnotify)
+                **Top.gg**: <https://top.gg/bot/356831787445387285> rewards included! Refer to [{{bot.prefix}}topggnotify](/GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/currency#topggnotify)
             </figcaption>
         </figure>
 
         <figure markdown> 
             ![BOD](https://bots.ondiscord.xyz/bots/356831787445387285/embed){ align=right }
             <figcaption>
-                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to [{{bot.prefix}}bodvalidate](/Fun And Games/currency#bodvalidate) 
+                 **Bots on Discord**: <https://bots.ondiscord.xyz/bots/356831787445387285> rewards included! Refer to [{{bot.prefix}}bodvalidate](/GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/currency#bodvalidate) 
             </figcaption>
         </figure>
 
@@ -106,14 +106,14 @@ include:
 * [YouTube Connector](../GiselleBot-Documentation/Social Networks/youtube)
 
 ### Fun & Games
-* [Auction House](../GiselleBot-Documentation/Fun And Games/auction)
-* [Currency System](../GiselleBot-Documentation/Fun And Games/currency)
-* [Digimon](../GiselleBot-Documentation/Fun And Games/digimon)
-* [Games](../GiselleBot-Documentation/Fun And Games/games)
-* [Giveaway Campaigns](../GiselleBot-Documentation/Fun And Games/giveaway)
-* [Radio](../GiselleBot-Documentation/Fun And Games/radio)
-* [Social/EXP Ranking](../GiselleBot-Documentation/Fun And Games/social)
-* [Trivia](../GiselleBot-Documentation/Fun And Games/trivia)
+* [Auction House](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/auction)
+* [Currency System](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/currency)
+* [Digimon](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/digimon)
+* [Games](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/games)
+* [Giveaway Campaigns](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/giveaway)
+* [Radio](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/radio)
+* [Social/EXP Ranking](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/social)
+* [Trivia](../GiselleBot-Documentation/GiselleBot-Documentation/Fun And Games/trivia)
 
 ### Utility
 * [Alarms & Reminders](../GiselleBot-Documentation/Utility/alarm)

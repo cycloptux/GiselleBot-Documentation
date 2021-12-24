@@ -6,7 +6,7 @@ Step 1: Configuring the Administration Module
 ------------------------------------------------------------------------
 
 The Administration module is the first module you should use when
-managing a Discord server. It will let you configure all of the
+managing a Discord server. It will let you configure all the
 following options:
 
 -   Bot prefix
@@ -52,7 +52,7 @@ the rest of the modules. Unless otherwise specified, this introduction
 will assume you have a dedicated, private channel, such as
 \#bot-console, for running bot commands. You don\'t need to have such a
 channel setup, but it\'s often useful to separate bot commands from
-other messages and it keep them private.
+other messages, and it keeps them private.
 
 Server Activity Logging
 -----------------------
@@ -96,7 +96,7 @@ Here is one way to set up the logging for your server.
 > h.  log voice (if you are a patron)
 > i.  log server (if you are a patron)
 
-3.  If your Discord name is \@NaviKing\#3820, you are a patron and you
+3.  If your Discord name is \@NaviKing\#3820, you are a patron, and you
     have an \#admin-channel that isn\'t visible to Moderators, you could
     have the bot ignore you and all the messages in that channel using
     the following commands

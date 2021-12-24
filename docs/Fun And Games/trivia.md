@@ -100,7 +100,7 @@ Default settings are:
 -   **Auto-delete Answer**: Yes
 -   **Auto-delete Confirmation**: No
 
-See [`{{bot.prefix}}triviasetup`](/Fun And Games/trivia#triviasetup) to understand the meaning of each parameter.
+See [`{{bot.prefix}}triviasetup`](/GiselleBot-Documentation/Fun And Games/trivia#triviasetup) to understand the meaning of each parameter.
 
 ------------------------------------------------------------------------
 

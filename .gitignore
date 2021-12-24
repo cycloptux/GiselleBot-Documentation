@@ -52,7 +52,6 @@ whoosh_index
 xml_output
 public_*
 private_*
-.rope_project/
 readthedocs/htmlcov
 tags
 .python-version
@@ -61,7 +60,6 @@ tags
 scripts/travis/elasticsearch*
 
 # Environments
-.env
 .venv
 env/
 venv/

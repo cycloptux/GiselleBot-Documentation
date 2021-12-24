@@ -21,7 +21,7 @@ singular and plural with a simple comma `,`.
 
 !!!abstract "Note" 
 
-    No currency (see [Currency System](/Fun And Games/currency)) is actually used.
+    No currency (see [Currency System](/GiselleBot-Documentation/Fun And Games/currency)) is actually used.
 
 The `--roles` parameter will restrict the ability to vote to users that have
 (at least one of) the defined role(s). The forward parameter will define

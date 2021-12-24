@@ -36,10 +36,6 @@ markdown_extensions:
   - toc:
       permalink: '📋'
 extra:
-  project: GiselleBot
-  author: cycloptux
-  version: 4.0
-  release: 4.0.0
   bot:
     name: GiselleBot
     email: gisellebot@cycloptux.com

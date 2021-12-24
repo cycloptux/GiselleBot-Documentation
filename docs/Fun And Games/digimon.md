@@ -340,7 +340,7 @@ lower form. The only requirement of doing so is that the lower form you
 are Degenerating to must be one you have already obtained in the past.
 
 You can check the list of Digimons you have seen in the past with
-[{{bot.prefix}}dgarchive](/Fun And Games/digimon/#dgarchive).
+[{{bot.prefix}}dgarchive](/GiselleBot-Documentation/Fun And Games/digimon/#dgarchive).
 
 ------------------------------------------------------------------------
 

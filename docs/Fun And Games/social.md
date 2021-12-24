@@ -542,7 +542,7 @@ changes.
         List modes will only change whether or not messaging in the selected
         channel will trigger the level-up **message**: if you want to stop users
         from getting EXP **at all** in a certain channel, use the
-        [`{{bot.prefix}}noexpchannels`](/Fun And Games/social/#noexpchannels) command.
+        [`{{bot.prefix}}noexpchannels`](/GiselleBot-Documentation/Fun And Games/social/#noexpchannels) command.
 
 
 The custom messages support the following dynamic placeholders:
