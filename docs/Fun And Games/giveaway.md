@@ -4,17 +4,14 @@ Giveaway Campaigns
 The Giveaway Campaigns module enables users to start and manage
 giveaways in a Discord server.
 
-gcstart
+{{bot.prefix}}gcstart
 -------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gcstart \[\--channel {channel id/mention/q\_name}\] \[\--prize {prize
-name}\] \[\--winners {\# of winners (number)}\] \[\--duration {duration
-timecode}\] \[\--roles {role(s) id/mention/q\_name}\] \[\--max {\# of
-users after which the bot will stop the giveaway (number)}\]
-:::
+        {{bot.prefix}}gcstart [--channel {channel id/mention/q_name}] [--prize {prize name}] [--winners {number of winners}] [--duration {duration timecode}] [--roles {role(s) id/mention/q_name}] [--max {number of users after which the bot will stop the giveaway}]
+
 
 ### Command Description
 
@@ -31,42 +28,38 @@ using both will ignore the `--max` parameter.
 All parameters are optional, the default values (on omission) are:
 
 -   **Channel**: Current channel
--   **Prize Name**: \"Sample Prize\"
+-   **Prize Name**: "Sample Prize"
 -   **Winners**: 1
 -   **Duration**: 1 day (24 hours)
 -   **Roles Restriction**: *None* (All participants will be considered)
 -   **Max**: *None* (Infinite)
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!abstract "Note"
 
-Users must still be members of the server at the time of the giveaway
-campaign end for them to be rolled as winners. Users that are not in the
-server when the campaign ends will not be considered. Bots reacting to
-the giveaway campaign will always be ignored.
-:::
+        Users must still be members of the server at the time of the giveaway
+        campaign end for them to be rolled as winners. Users that are not in the
+        server when the campaign ends will not be considered. Bots reacting to
+        the giveaway campaign will always be ignored.
+
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gcstart \--prize Free Steam Key \--winners 2 \--duration 1w gcstart
-\--prize Blue Hat \--winners 5 \--roles \@BluePeople \@WearingHats
-gcstart \--channel \#giveaways \--prize Free Steam Key to the fastest 5!
-\--winners 5 \--max 5
-:::
+        {{bot.prefix}}gcstart --prize Free Steam Key --winners 2 --duration 1w
+        {{bot.prefix}}gcstart --prize Blue Hat --winners 5 --roles @BluePeople @WearingHats
+        {{bot.prefix}}gcstart --channel #giveaways --prize Free Steam Key to the fastest 5! --winners 5 --max 5
+
 
 ------------------------------------------------------------------------
 
-gcedit
+{{bot.prefix}}gcedit
 ------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gcedit \[message id\]
-:::
+        gcedit [message id]
+
 
 ### Command Description
 
@@ -79,21 +72,22 @@ You cannot edit a giveaway duration, channel, list of restricted roles
 `--max` parameter).
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gcedit \--prize 2 Free Steam Keys gcedit 123456789098765432 \--winners 5
-:::
+        {{bot.prefix}}gcedit --prize 2 Free Steam Keys
+        {{bot.prefix}}gcedit 123456789098765432 --winners 5
+
 
 ------------------------------------------------------------------------
 
-gcend
+{{bot.prefix}}gcend
 -----
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gcend \[message id\]
-:::
+        {{bot.prefix}}gcend [message id]
+
 
 ### Command Description
 
@@ -101,25 +95,27 @@ Immediately ends a giveaway and picks a winner (or more winners) among
 those that participated. The message ID is optional: if omitted, the
 most recent giveaway in the channel will be considered.
 
-*Side note*: You can completely abort a campaign by deleting the
-campaign message that the bot sent.
+!!!tip "Tip"
+
+        You can completely abort a campaign by deleting the campaign message that the bot sent.
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gcend gcend 123456789098765432
-:::
+        {{bot.prefix}}gcend
+        {{bot.prefix}}gcend 123456789098765432
+
 
 ------------------------------------------------------------------------
 
-gcreroll
+{{bot.prefix}}gcreroll
 --------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gcreroll \[message id\] \[\--winners {\# of winners (number)}\]
-:::
+        {{bot.prefix}}gcreroll [message id] [--winners {number of winners}]
+
 
 ### Command Description
 
@@ -131,36 +127,34 @@ You can only reroll up to 10 winners per command run.
 
 This command will not overwrite the existing winners in the original
 message. It will also keep track of former winners and previous rerolls
-to make sure that the new winners weren\'t already picked in a previous
+to make sure that the new winners weren't already picked in a previous
 iteration of the command.
 
-::: {.note}
-::: {.title}
-Note
-:::
+!!!abstract "Note"
 
-Users must still be members of the server at the time of the giveaway
-campaign reroll for them to be rolled as winners. Users that are not in
-the server when the campaign is rerolled will not be considered. Bots
-reacting to the giveaway campaign will always be ignored.
-:::
+        Users must still be members of the server at the time of the giveaway
+        campaign reroll for them to be rolled as winners. Users that are not in
+        the server when the campaign is rerolled will not be considered. Bots
+        reacting to the giveaway campaign will always be ignored.
+
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gcreroll gcreroll 123456789098765432 \--winners 5
-:::
+        {{bot.prefix}}gcreroll
+        {{bot.prefix}}gcreroll 123456789098765432 --winners 5
+
 
 ------------------------------------------------------------------------
 
-gclist
+{{bot.prefix}}gclist
 ------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gclist
-:::
+        {{bot.prefix}}gclist
+
 
 ### Command Description
 
@@ -168,14 +162,14 @@ Lists all ongoing giveaways in the current server.
 
 ------------------------------------------------------------------------
 
-gcreaction
+{{bot.prefix}}gcreaction
 ----------
 
 ### Command Syntax
+!!!example ""
 
-::: {.parsed-literal}
-gcreaction \[emoji\]
-:::
+        {{bot.prefix}}gcreaction [emoji]
+
 
 ### Command Description
 
@@ -185,24 +179,22 @@ This change only applies to new giveaways: giveaway campaigns that are
 already running will keep their former reaction setting.
 
 Use with no parameters (no emoji) to show the current giveaway reaction
-emoji. Use with `-` as parameter to restore the default emoji:
-`:tickets:`
+emoji. Use with `-` as parameter to restore the default emoji: :tickets:
 
-::: {.warning}
-::: {.title}
-Warning
-:::
+!!!warning "Warning"
 
-You **must** use reactions that are either \"global\" (Discord native
-emojis) or present in the server.
-:::
+        You **must** use reactions that are either "global" (Discord native emojis) or present in the server.
+
 
 ### Permissions Needed
 
-| **User**: Manage Server
+**User**: Manage Server
 
 ### Examples
+!!!example ""
 
-::: {.parsed-literal}
-gcreaction 😀 gcreaction :BlobOwO: gcreaction -gcreaction
-:::
+        gcreaction 😀
+        gcreaction :GiselleDrink:
+        gcreaction -
+        gcreaction
+
