@@ -17,20 +17,21 @@ Commands
 --------
 
 ### {{bot.prefix}}mjsstatus
+----------------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}mjsstatus [--region {region code}]
 
 
-#### Command Description
+### Command Description
 
 Checks the status of Mahjong Soul's game servers. Omitting the region
 code will assume `--region en` and show the status of the (4, at the
 time of writing this page) English servers.
 
-#### Examples
+### Examples
 !!!example ""
 
         {{bot.prefix}}mjsstatus
@@ -84,15 +85,16 @@ to filter the specific messages they are interested into, indicating:
 
 ![Mahjong Soul Status Feed Example](../assets/images/mahjongsoul_image_00.png)
 
-### {{bot.prefix}}mjshook
+{{bot.prefix}}mjshook
+-------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}mjshook (webhook URL or --channel (channel id/mention/q_name))[customization params]
 
 
-#### Command Description
+### Command Description
 
 Starts a live feed on the specified webhook. When a new transition is
 found, its notification will be sent to the specified webhook service.
@@ -264,11 +266,11 @@ used.
 
 **Default**: `false` (Automated avatars will be applied)
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
-#### Examples
+### Examples
 !!!example ""
 
         {{bot.prefix}}mjshook <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
@@ -277,15 +279,16 @@ used.
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}mjsehook
+{{bot.prefix}}mjsehook
+-------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}mjsehook (feed index) [new customization params]
 
 
-#### Command Description
+### Command Description
 
 **Replaces** all previously set customization params for the selected
 feed with a new set of customization params. The feed index is the
@@ -298,30 +301,31 @@ number shown with [{{bot.prefix}}mjslhook](/GiselleBot-Documentation/Game Integr
         them in the command!
 
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}mjsrhook
+{{bot.prefix}}mjsrhook
+-------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}mjsrhook (feed index)
 
 
-#### Command Description
+### Command Description
 
 Stops a previously set feed and removes its link to the server webhook.
 The stream index is the number shown with [{{bot.prefix}}mjslhook](/GiselleBot-Documentation/Game Integrations/mahjongsoul#mjslhook).
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
-#### Example
+### Example
 !!!example ""
 
         {{bot.prefix}}mjsrhook 1
@@ -329,9 +333,10 @@ The stream index is the number shown with [{{bot.prefix}}mjslhook](/GiselleBot-D
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}mjslhook
+{bot.prefix}}mjslhook
+-------
 
-#### Command Description
+### Command Description
 
 Prints a list of all feeds that are linked to webhooks in the current
 server.

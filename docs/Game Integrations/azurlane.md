@@ -21,7 +21,7 @@ The game was released in 4 regions/versions:
 Commands
 --------
 
-### {{bot.prefix}}azurstatus
+{{bot.prefix}}azurstatus
 
 #### Command Syntax
 !!!example ""
@@ -29,7 +29,7 @@ Commands
         {{bot.prefix}}azurstatus [--region {region code}]
 
 
-#### Command Description
+### Command Description
 
 Checks the status of Azur Lane's game servers. Omitting the region code
 will assume `--region en` and show the status of the (4, at the time of
@@ -39,7 +39,7 @@ The Chinese region will print 2 embeds: one for the Android servers, one
 for the iOS servers. Other regions have common servers among the 2
 platforms.
 
-#### Examples
+### Examples
 !!!example ""
 
         {{bot.prefix}}azurstatus
@@ -87,15 +87,15 @@ to filter the specific messages they are interested into, indicating:
 
 ![Azur Lane Status Feed Example](../assets/images/azurlane_image_00.png)
 
-### {{bot.prefix}}azurhook
+{bot.prefix}}azurhook
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}azurhook (webhook URL or --channel (channel id/mention/q_name)) [customization params]
 
 
-#### Command Description
+### Command Description
 
 Starts a live feed on the specified webhook. When a new transition is
 found, its notification will be sent to the specified webhook service.
@@ -266,11 +266,11 @@ used.
 
 **Default**: `false` (Automated avatars will be applied)
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
-#### Examples
+### Examples
 !!!example ""
 
         {{bot.prefix}}azurhook <https://discord.com/api/webhooks/123456789098765432/LONG_WEBHOOK_TOKEN>
@@ -279,15 +279,16 @@ used.
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}azurehook
+{{bot.prefix}}azurehook
+-------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}azurehook (feed index) [new customization params]
 
 
-#### Command Description
+### Command Description
 
 **Replaces** all previously set customization params for the selected
 feed with a new set of customization params. The feed index is the
@@ -298,30 +299,31 @@ number shown with [{{bot.prefix}}azurlhook](/GiselleBot-Documentation/Fun And Ga
         Editing the webhook will not change the existing params, it will completely replace them. Take note of the existing params first, and use them in the command!
 
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}azurrhook
+{{bot.prefix}}azurrhook
+-------
 
-#### Command Syntax
+### Command Syntax
 !!!example ""
 
         {{bot.prefix}}azurrhook (feed index)
 
 
-#### Command Description
+### Command Description
 
 Stops a previously set feed and removes its link to the server webhook.
 The stream index is the number shown with [{{bot.prefix}}azurlhook](/GiselleBot-Documentation/Fun And Games/azurlane#azurlhook).
 
-#### Permissions Needed
+### Permissions Needed
 
 **User**: Manage Webhooks
 
-#### Example
+### Example
 !!!example ""
 
         {{bot.prefix}}azurrhook 1
@@ -329,9 +331,10 @@ The stream index is the number shown with [{{bot.prefix}}azurlhook](/GiselleBot-
 
 ------------------------------------------------------------------------
 
-### {{bot.prefix}}azurlhook
+{{bot.prefix}}azurlhook
+-------
 
-#### Command Description
+### Command Description
 
 Prints a list of all feeds that are linked to webhooks in the current
 server.

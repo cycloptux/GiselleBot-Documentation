@@ -12,6 +12,9 @@ Be notified when a new in-game news is published in **Brave Frontier
 The news URL and a preview will be posted in the specified channel, as
 you see them in-game.
 
+Commands
+--------
+
 {{bot.prefix}}bf1news
 -------
 
