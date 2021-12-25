@@ -58,7 +58,7 @@ server.
 
 !!!info "See Also"
 
-        In order to better understand this module, it\'s very important that you
+        In order to better understand this module, it's very important that you
         are familiar with Discord webhooks. For more details about this Discord
         feature, please take a look at [this official
         guide](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
@@ -228,13 +228,13 @@ part with either:
 -   An **UTC offset**, in the form of
     `[UTC/GMT](+/-)(hours)[:][minutes]`. Here are some valid examples:
 
-    > -   %timestamp\_Europe/London%
-    > -   %timestamp\_America/Los\_Angeles%
-    > -   %timestamp\_Japan%
-    > -   %timestamp\_PST8PDT%
-    > -   %timestamp\_+0800%
-    > -   %timestamp\_-10:30%
-    > -   %timestamp\_UTC+2%
+    > -   %timestamp_Europe/London%
+    > -   %timestamp_America/Los_Angeles%
+    > -   %timestamp_Japan%
+    > -   %timestamp_PST8PDT%
+    > -   %timestamp_+0800%
+    > -   %timestamp_-10:30%
+    > -   %timestamp_UTC+2%
 
 All headers will be followed by the actual quote text, including the
 additional hashtags.
@@ -321,7 +321,7 @@ The stream index is the number shown with [{{bot.prefix}}azurlhook](/GiselleBot-
 
 **User**: Manage Webhooks
 
-#### Examples
+#### Example
 !!!example ""
 
         {{bot.prefix}}azurrhook 1
