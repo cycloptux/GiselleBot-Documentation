@@ -1,8 +1,8 @@
 .. _guide-administration:
 
-*********************************************
-Step 1: Configuring the Administration Module
-*********************************************
+*****************************************
+#1: Configuring the Administration Module
+*****************************************
 
 **Author**: NaviKing#3820
 
@@ -143,6 +143,9 @@ You can undo these commands in the following fashion
 
 Self Assignable Roles
 ---------------------
+
+.. seealso::
+    Different use cases of the same topic are described in :ref:`guide-self-assignable-roles`
 
 One of the most complex modules of the bot, this allows you to configure roles that users can assign to themselves via the bot. It is strongly recommended to read the full documentation on self assignable roles. This section will cover only the basics.
 
