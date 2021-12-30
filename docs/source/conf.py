@@ -47,7 +47,12 @@ rst_prolog = '''
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_sitemap']
+import sphinx_rtd_theme
+
+extensions = [
+    'sphinx_rtd_theme',
+    'sphinx_sitemap'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -105,12 +110,10 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-    ],
-}
+# https://github.com/readthedocs/sphinx_rtd_theme/issues/1240
+html_css_files = [
+    "_static/theme_overrides.css" # override wide tables in RTD theme
+]
 
 # The URL which points to the root of the HTML documentation. It is used to indicate the location of document like canonical_url.
 html_baseurl = 'https://docs.gisellebot.com/'
