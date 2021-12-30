@@ -31,7 +31,7 @@ Plays a round of wheel of fortune.
 Bet Roll
 ========
 
-Bets a certain amount of currency and rolls a dice. Possible outputs are 0-100.
+Bets a certain amount of currency and rolls a die. Possible outputs are 0-100.
 
 * Rolling over 66 yields x2 of the bet currency
 * Rolling over 90 yields x4 of the bet currency
