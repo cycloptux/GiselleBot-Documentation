@@ -102,7 +102,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ scheduleremove (scheduler index)
+    |bot_prefix|\ schedrm (scheduler index)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -112,8 +112,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ scheddel 1
-    |bot_prefix|\ schedrm 3
+    |bot_prefix|\ schedrm 1
 
 ....
     
@@ -195,7 +194,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ schedrecdel (scheduler index)
+    |bot_prefix|\ schedrecrm (scheduler index)
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -209,8 +208,7 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ schedrecdel 1
-    |bot_prefix|\ schedrecrm 3
+    |bot_prefix|\ schedrecrm 1
 
 ....
 
