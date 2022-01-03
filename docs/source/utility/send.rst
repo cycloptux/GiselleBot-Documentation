@@ -49,11 +49,15 @@ You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if
 
 You cannot edit a message attachment.
 
+.. note::
+    To remove the content (plain text) of a message, pass ``{"content":""}`` as new message content.
+    To remove all embeds of a message, pass ``{"embeds":[]}`` as new message content.
+
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ msgedit 123456789098765432 Hello world! I'm alive!
+    |bot_prefix|\ msgedit #that-channel 123456789098765432 Hello world! I'm alive!
 
 ....
 
