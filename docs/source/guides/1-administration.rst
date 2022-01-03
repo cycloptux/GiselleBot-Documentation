@@ -6,6 +6,8 @@
 
 **Author**: NaviKing#3820
 
+**Note**: To be updated to describe the new workflow with buttons-based role menus.
+
 ....
 
 The Administration module is the first module you should use when managing a Discord server. It will let you configure all of the following options:

@@ -6,6 +6,8 @@
 
 **Author**: NaviKing#3820
 
+**Note**: To be updated to describe the new workflow with buttons-based role menus.
+
 .. seealso::
     Different use cases of the same topic are described in :ref:`guide-administration`
 
