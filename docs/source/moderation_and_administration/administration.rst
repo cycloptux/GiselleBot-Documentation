@@ -1407,45 +1407,18 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rmcreate [group id] [--m {message id}]
+    |bot_prefix|\ rmcreate [group id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Starts an interactive process to build a role menu (i.e. a message whose reactions will assign or remove the roles in the specified role group). The bot will guide you through the process of creating the role menu, follow the in-Discord instructions.
 
-If a valid message ID is specified through the dedicated parameter, the role menu will be created on the target message. If specified, the message ID must refer to a message in the same channel where the command is run.
+.. note::
+    **It is no longer possible to create (legacy) role menus with emoji reactions.** Existing legacy role menus will keep working **until May 1st, 2022**. Please, **replace your existing legacy role menus with the new buttons-based role menus** by running the |bot_prefix|\ rmremovelegacy on the old menu and then creating a new menu with |bot_prefix|\ rmcreate, or use |bot_prefix|\ rmconvertlegacy to attempt a direct conversion.
+    You can customize the content of the role menu with the |bot_prefix|\ msgedit command after the new menu is created.
+
+Creates a role menu in the current channel (i.e. a message with buttons, each click on a button will assign or remove the roles in the specified role group).
 
 If the group ID is omitted, group **0** will be used as source role group.
-
-Permissions Needed
-^^^^^^^^^^^^^^^^^^
-
-| **User**: Manage Roles
-| **Bot**: Manage Roles, Add Reactions
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ rmcreate
-    |bot_prefix|\ rmcreate 1 --m 123456789098765432
-
-....
-
-|bot_prefix|\ rmdmtoggle
-------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ rmdmtoggle [message id]
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Toggles the Direct Message confirmation for **successfully added or removed** self-assigned roles on a specific role menu, making them "silent" or re-enabling the verbose message confirmation. Roles not being assigned will still trigger the DM.
-
-If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1457,7 +1430,8 @@ Examples
 ^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rmdmtoggle 123456789098765432
+    |bot_prefix|\ rmcreate
+    |bot_prefix|\ rmcreate 1
 
 ....
 
@@ -1472,7 +1446,12 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Removes a role menu from an existing message. The message itself won't be deleted, nor the existing reactions will be removed, but the bot will now not do anything with reactions on that message.
+
+.. note::
+    **It is no longer possible to create (legacy) role menus with emoji reactions.** Existing legacy role menus will keep working **until May 1st, 2022**. Please, **replace your existing legacy role menus with the new buttons-based role menus** by running the |bot_prefix|\ rmremovelegacy on the old menu and then creating a new menu with |bot_prefix|\ rmcreate, or use |bot_prefix|\ rmconvertlegacy to attempt a direct conversion.
+    You can customize the content of the role menu with the |bot_prefix|\ msgedit command after the new menu is created.
+
+Removes a role menu from an existing message. The message itself won't be deleted, nor the existing buttons will be removed, but the bot will no longer do anything with buttons on that message.
 
 If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
@@ -1501,10 +1480,12 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Updates a role menu with a new reaction if a role was added to the particular role group.
 
 .. note::
-    In order to remove a role from a role menu, you'll need to delete the role menu and create a new one.
+    **It is no longer possible to create (legacy) role menus with emoji reactions.** Existing legacy role menus will keep working **until May 1st, 2022**. Please, **replace your existing legacy role menus with the new buttons-based role menus** by running the |bot_prefix|\ rmremovelegacy on the old menu and then creating a new menu with |bot_prefix|\ rmcreate, or use |bot_prefix|\ rmconvertlegacy to attempt a direct conversion.
+    You can customize the content of the role menu with the |bot_prefix|\ msgedit command after the new menu is created.
+    
+Updates a role menu with new buttons if one or more roles were added to the particular role group, or removes the buttons corresponding to roles that were removed from the role group.
 
 If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
 
@@ -1519,6 +1500,74 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ rmupdate 123456789098765432
+
+....
+
+|bot_prefix|\ rmremovelegacy
+----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmremovelegacy [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+.. note::
+    **It is no longer possible to create (legacy) role menus with emoji reactions.** Existing legacy role menus will keep working **until May 1st, 2022**. Please, **replace your existing legacy role menus with the new buttons-based role menus** by running the |bot_prefix|\ rmremovelegacy on the old menu and then creating a new menu with |bot_prefix|\ rmcreate, or use |bot_prefix|\ rmconvertlegacy to attempt a direct conversion.
+    You can customize the content of the role menu with the |bot_prefix|\ msgedit command after the new menu is created.
+
+Removes a role menu from an existing message. The message itself won't be deleted, nor the existing reactions will be removed, but the bot will no longer do anything with reactions on that message.
+
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmremovelegacy 123456789098765432
+
+....
+
+|bot_prefix|\ rmconvertlegacy
+-----------------------------
+
+Command Syntax
+^^^^^^^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmconvertlegacy [message id]
+
+Command Description
+^^^^^^^^^^^^^^^^^^^
+
+.. note::
+    **It is no longer possible to create (legacy) role menus with emoji reactions.** Existing legacy role menus will keep working **until May 1st, 2022**. Please, **replace your existing legacy role menus with the new buttons-based role menus** by running the |bot_prefix|\ rmremovelegacy on the old menu and then creating a new menu with |bot_prefix|\ rmcreate, or use |bot_prefix|\ rmconvertlegacy to attempt a direct conversion.
+    You can customize the content of the role menu with the |bot_prefix|\ msgedit command after the new menu is created.
+
+Converts a legacy role menu (with reactions) to a new role menu (with buttons), provided that the existing role menu is built on a message sent by |bot_name|\ .
+
+If the message ID is omitted (or is invalid), the bot will attempt to pick the latest role menu in the current channel. If specified, the message ID must refer to a message in the same channel where the command is run.
+
+Permissions Needed
+^^^^^^^^^^^^^^^^^^
+
+| **User**: Manage Roles
+| **Bot**: Manage Roles
+
+Examples
+^^^^^^^^
+.. parsed-literal::
+
+    |bot_prefix|\ rmconvertlegacy 123456789098765432
 
 ....
 
