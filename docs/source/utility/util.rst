@@ -438,6 +438,7 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ rawmsg (message id) [--channel {channel id/mention}]
+    |bot_prefix|\ rawmsg (message URL)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -451,6 +452,7 @@ Examples
 
     |bot_prefix|\ rawmsg 123456789098765432
     |bot_prefix|\ rawmsg 123456789098765432 --channel #rules
+    |bot_prefix|\ rawmsg https://discord.com/channels/533372744130363392/534171951732752394/534751296847216642
     
 ....
 
@@ -802,9 +804,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-While offering easy ways of obtaining the IDs of a certain number of entities, Discord doesn't offer an easy way to get the ID of a role, which is often needed for bot commands (see :ref:`discord-ids`).
-
-This commands shows a list of roles and the corresponding IDs found, starting from the name (or substring thereof) of the role. The lookup string is case-insensitive.
+Finds the roles that correspond to the provided name (or substring thereof), and shows a list of such roles and the corresponding IDs. The lookup string is case-insensitive.
 
 Examples
 ^^^^^^^^
@@ -822,19 +822,22 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ inrole (role id/mention/name)
+    |bot_prefix|\ inrole (role id/mention/name) [--format (id/mention)]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Prints the list of users that currently have the specified role.
+Prints the list of users that currently have the specified role. Users will be printed using their username (default behavior), but you can use the ``--format`` parameter to specify whether you want the list to be printed using the user IDs or mentions.
+
+The list will **always** be sorted in alphabetical order based on the users' usernames.
 
 Examples
 ^^^^^^^^
 .. parsed-literal::
 
     |bot_prefix|\ inrole Discord Moderator
-    |bot_prefix|\ inrole 123456789098765432 
+    |bot_prefix|\ inrole 123456789098765432 --format mention
+    |bot_prefix|\ inrole Verified --format id
     
 ....
 
