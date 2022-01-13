@@ -120,7 +120,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Repeat a message periodically in a channel.
+Repeat a message periodically in a channel. |bot_name| will delete its old message when repeating the message.
 
 This command has a quick syntax (with 2 variations) and a full syntax. It is advised to use the full syntax if you want take advantage of the advanced settings. Some advanced parameters will still work with the quick syntaxes, but using that mix is not officially supported.
 
