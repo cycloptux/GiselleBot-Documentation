@@ -93,7 +93,7 @@ Command Syntax
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Prints the server social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days.
+Prints the server social leaderboard. Use the ``--days`` parameter to look at the leaderboard limited to the latest X days (up to 99).
 
 Using the ``--roles`` parameter will filter the leaderboard to those having at least one of the selected roles.
 
