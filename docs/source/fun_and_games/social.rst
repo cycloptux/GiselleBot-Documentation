@@ -16,7 +16,7 @@ If the level up notifications are enabled on a server, users may be notified by 
 The EXP-to-level and level-to-EXP formulas are:
 
 .. math::
-    \text{Lv} = 1 + \frac{\sqrt{1 + (8 \ast \text{EXP}) / 50}}{2}
+    \text{Lv} = \frac{1 + \sqrt{1 + (8 \ast \text{EXP}) / 50}}{2}
 
     \text{EXP} = \frac{(\text{Lv}^2 - \text{Lv}) \ast 50}{2}
 
