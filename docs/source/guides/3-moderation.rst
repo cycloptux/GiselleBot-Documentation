@@ -8,7 +8,7 @@
 
 ....
 
-|bot_name| features a robust moderation system that allows you to track misbehavior and notes for your server's users with an incredible amount of detail and nuance using a points-based moderation system. This guide will serve as a brief introduction on how to set up and use the moderation moderation module. However, it is not meant as a replacement to the documentation for each command, and not all commands are covered in this guide. For more details, please consult the :ref:`moderation-module` full documentation page or use |bot_name|\ 's |bot_prefix|\ help command to learn more about each individual command.
+|bot_name| features a robust moderation system that allows you to track misbehavior and notes for your server's users with an incredible amount of detail and nuance using a points-based moderation system. This guide will serve as a brief introduction on how to set up and use the moderation module. However, it is not meant as a replacement to the documentation for each command, and not all commands are covered in this guide. For more details, please consult the :ref:`moderation-module` full documentation page or use |bot_name|\ 's |bot_prefix|\ help command to learn more about each individual command.
 
 Enabling the moderation module
 ------------------------------
