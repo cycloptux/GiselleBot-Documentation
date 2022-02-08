@@ -1019,7 +1019,7 @@ Command Syntax
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 
-Creates a channel as "clock channel", updating its name every 15 minutes.
+Creates a channel as "clock channel", updating its name every 15~60 minutes.
 
 You must specify the time zone name: if you need to search for a valid time zone name, use the :ref:`searchtz` command. In addition to the listed time zones, custom **UTC offsets** are supported, in the form of ``[UTC/GMT](+/-)(hours)[:][minutes]``. Here are some valid examples:
 
