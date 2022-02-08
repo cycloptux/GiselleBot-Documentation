@@ -482,7 +482,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ rrsunban [room id]
+    |bot_prefix|\ rrsbreak [room id]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
