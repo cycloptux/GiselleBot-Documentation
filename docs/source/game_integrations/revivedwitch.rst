@@ -44,7 +44,7 @@ The **only** supported events for this feed are: ``Updates``, ``Event``, ``Notic
 ``--filter (first word) [second word] [...]``
 """""""""""""""""""""""""""""""""""""""""""""
 
-Adds a **whitelist** filter to the feed. In this example, if the news title contains ``first word`` and/or (see below) ``second word``, the event will be sent to the webhook, otherwise it will ignored. You can set one or more words, case-insensitive.
+Adds a **whitelist** filter to the feed. In this example, if the news title contains ``first word`` and/or (see below) ``second word``, the event will be sent to the webhook, otherwise it will be ignored. You can set one or more words, case-insensitive.
 
 You can also set "composite words" (two or more words as a single filter) by quoting them: ``"foo bar" test`` will count as 2 filter elements: ``foo bar`` and ``test``.
 

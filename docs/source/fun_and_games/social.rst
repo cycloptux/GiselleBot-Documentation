@@ -89,7 +89,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ lb [page #] [--days {# of days}] [--roles (role id(s)/mention(s))] [--min {minimum score}]
+    |bot_prefix|\ lb [page #] [--days {# of days}] [--roles (role id(s)/mention(s)/q_name(s))] [--min {minimum score}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
