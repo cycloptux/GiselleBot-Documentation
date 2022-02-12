@@ -181,7 +181,7 @@ Examples
 Greet Messages
 ==============
 
-The Greet Messages submodule lets server managers configure automatic and configurable messages that |bot_name| still send when a user joins/leaves your server, or obtains a specific role.
+The Greet Messages submodule lets server managers configure automatic and configurable messages that |bot_name| will send when a user joins/leaves your server, or obtains a specific role.
 
 All use cases (minus the "goodbye" messages) can be configured to send greet messages to a channel or to the user through a Direct Message.
 
