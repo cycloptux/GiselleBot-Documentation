@@ -35,9 +35,9 @@ In regards to the use of our Bot(s), you acknowledge that by inviting the Bot(s)
 
 You acknowledge that your access to any of our Services might be revoked upon any breach of these Terms, and upon a breach of the Terms and/or Policies set by Discord, such us:
 
-* `Discord's Terms of Service <https://discord.com/terms>`_ ;
-* `Discord Privacy Policy <https://discord.com/privacy>`_ ;
-* `Discord Community Guidelines <https://discord.com/guidelines>`_ ;
+* `Discord's Terms of Service <https://discord.com/terms>`_
+* `Discord Privacy Policy <https://discord.com/privacy>`_
+* `Discord Community Guidelines <https://discord.com/guidelines>`_
 
 All information supplied by our Services is provided for entertainment and informational purposes only. You agree that you will only use our Services, and/or data/information provided by them, for their intended purposes, and not for other commercial ventures without first seeking explicit approval from us.
 
