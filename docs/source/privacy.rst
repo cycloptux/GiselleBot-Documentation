@@ -2,7 +2,7 @@
 Privacy Policy for GiselleBot
 *****************************
 
-*Last Revised: October 23, 2021*
+*Last Revised: March 13, 2022*
 
 Thank you for choosing to be part of our community at GiselleBot ("**we**", "**us**", or "**our**"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy policy or our practices with regard to your personal information, please contact us at privacy@discomm.cc.
 
@@ -133,7 +133,7 @@ Is Your Information Transferred Internationally?
 
 **In Short:** We may transfer, store, and process your information in countries other than your own.
 
-Our infrastructure is located in the United States. If you are accessing our Services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information, and in other countries.
+Our infrastructure is located in Canada. If you are accessing our Services from outside Canada, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information, and in other countries.
 
 
 How Long Do We Keep Your Information?
@@ -239,7 +239,7 @@ Here's a list of external third-party providers we rely upon:
 * **Infrastructure:**
     * Amazon Web Services, Inc.
     * Google Cloud Platform (Google LLC)
-    * GalaxyGate.net
+    * So you Start (OVH Groupe SAS)
 * **Email Services:**
     * Zoho Corporation
 * **Application Development Services:**
