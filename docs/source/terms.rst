@@ -115,7 +115,7 @@ You also agree to allow us to distribute communications (e.g. to your Discord Se
 We may, but are not required to, provide a way to opt-out of receiving third party sponsored communications. In such cases, please contact us.
 
 
-Affiliation and External Resources
+Affiliation And External Resources
 ==================================
 
 Our Services are not affiliated with, supported or made by Discord.
