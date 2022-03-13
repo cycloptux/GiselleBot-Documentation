@@ -11,14 +11,14 @@ The privacy of your data — and it is your data, not ours! — is a big deal to
 This privacy policy describes how we might use your information if you:
 
 * Visit our website at gisellebot.com, or related domains (gisl.eu, cycloptux.com);
-* Use our Discord application(s) (a.k.a. "**Discord Bot(s)**" — GiselleBot, Belfast-chan);
+* Use our Discord application(s) (a.k.a. "**Discord Bot(s)**" — GiselleBot, Belfast-chan, ...);
 * Engage with us in other related ways ― including any sales, marketing, or events.
 
 In this privacy policy, if we refer to:
 
 * "**Website**", we are referring to any website of ours that references or links to this policy;
 * "**Bot**" or "**App**", we are referring to any Discord application of ours that references or links to this policy, including any listed above;
-* "**Services**", we are referring to our Website, Bot, and other related services, including any sales, marketing, or events;
+* "**Service(s)**", we are referring to our Website, Bot, and other related services, including any sales, marketing, or events;
 * "**Data**", we are referring to any data, content, and information (including personal information) owned, held, used or created by you (or on your behalf) that may be stored using, or processed by, our Services;
 * "**Discord**", we are referring to Discord Inc. and its related companies;
 * "**Discord End User**", we are referring to you, as someone who is using Discord-related services according to the Discord privacy policies and terms of service;
