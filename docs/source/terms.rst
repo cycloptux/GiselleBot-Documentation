@@ -1,18 +1,18 @@
-***************************
-Terms of Use for GiselleBot
-***************************
+*******************************
+Terms of Service for GiselleBot
+*******************************
 
 *Last Revised: March 13, 2022*
 
-These Terms of Use ("Terms") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and GiselleBot ("**we**", "**us**", or "**our**"), concerning your access to and use of our Services (as defined below). You agree that by accessing any of our Services, you have read, understood, and agree to be bound by all of these Terms.
+These Terms of Service ("Terms") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and GiselleBot ("**we**", "**us**", or "**our**"), concerning your access to and use of our Services (as defined below). You agree that by accessing any of our Services, you have read, understood, and agree to be bound by all of these Terms.
 
 **If you do not agree with all of these Terms, then you are expressly prohibited from using our Services and must discontinue their use immediately.**
 
-We reserve the right, in our sole discretion, to make changes or modifications to these Terms of Use at any time and for any reason. We will alert you about any changes by updating the "Last Revised" date of these Terms of Use, and you waive any right to receive specific notice of each such change. Please ensure that you check the applicable Terms every time you use our Services so that you understand which Terms apply. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms of Use by your continued use of the Services after the date such revised Terms of Use are posted.
+We reserve the right, in our sole discretion, to make changes or modifications to these Terms of Service at any time and for any reason. We will alert you about any changes by updating the "Last Revised" date of these Terms of Service, and you waive any right to receive specific notice of each such change. Please ensure that you check the applicable Terms every time you use our Services so that you understand which Terms apply. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms of Service by your continued use of the Services after the date such revised Terms of Service are posted.
 
 The information provided through our Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.
 
-In these Terms of Use, if we refer to:
+In these Terms of Service, if we refer to:
 
 * "**Website**", we are referring to any website of ours that references or links to this Terms;
 * "**Bot**" or "**App**", we are referring to any Discord application of ours that references or links to this Terms, including any listed above;
@@ -31,7 +31,13 @@ Use Of The Service
 
 By accessing any of our Services, you acknowledge to be bound by all of these Terms, and you agree that any data managed by, or through the use of, our Services shall be treated according to our `Privacy Policy <https://gisl.eu/privacy>`_ .
 
-In regards to the use of our Bot(s), you acknowledge that by inviting the Bot(s), and/or using the features offered by such Bot(s), in one or more Discord Servers constitutes an implicit agreement to these Terms.
+In regards to the use of our Bot(s), you acknowledge that by
+
+a. inviting our Bot(s) in one or more Discord Servers,
+b. using the features offered by our Bot(s) in one or more Discord Servers, or
+c. sharing one or more Discord Server with our Bot(s),
+
+constitutes an implicit agreement to these Terms.
 
 You acknowledge that your access to any of our Services might be revoked upon any breach of these Terms, and upon a breach of the Terms and/or Policies set by Discord, such as:
 
