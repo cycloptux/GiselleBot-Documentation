@@ -112,8 +112,6 @@ You may choose to or we may invite you to submit comments or ideas about our Ser
 
 You also agree to allow us to distribute communications (e.g. to your Discord Server(s)) as we deem necessary, without limitation.
 
-We may, but are not required to, provide a way to opt-out of receiving third party sponsored communications. In such cases, please contact us.
-
 
 Affiliation And External Resources
 ==================================
