@@ -33,7 +33,7 @@ By accessing any of our Services, you acknowledge to be bound by all of these Te
 
 In regards to the use of our Bot(s), you acknowledge that by inviting the Bot(s), and/or using the features offered by such Bot(s), in one or more Discord Servers constitutes an implicit agreement to these Terms.
 
-You acknowledge that your access to any of our Services might be revoked upon any breach of these Terms, and upon a breach of the Terms and/or Policies set by Discord, such us:
+You acknowledge that your access to any of our Services might be revoked upon any breach of these Terms, and upon a breach of the Terms and/or Policies set by Discord, such as:
 
 * `Discord's Terms of Service <https://discord.com/terms>`_
 * `Discord Privacy Policy <https://discord.com/privacy>`_
@@ -72,7 +72,7 @@ We are not responsible or liable in any manner for any content that is created b
 
 The owner(s) of the Bot(s) may not be made liable for individuals breaking these Terms at any given time.
 
-Any offensive, inappropriate, obscene, unlawful or otherwise objectionable content you may encounter within our Services shall be reported to us as soon as possible. We may act on such content (and on the inviduals uploading such content) at our discretion.
+Any offensive, inappropriate, obscene, unlawful or otherwise objectionable content you may encounter within our Services shall be reported to us as soon as possible. We may act on such content (and on the individuals uploading such content) at our discretion.
 
 
 Exclusion Of Warranties
