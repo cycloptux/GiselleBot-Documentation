@@ -55,7 +55,7 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
    docs-101
    premium-perks
    privacy
-   user-generated-content
+   terms
    
 .. toctree::
    :maxdepth: 1
