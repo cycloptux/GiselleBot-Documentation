@@ -239,7 +239,7 @@ Here's a list of external third-party providers we rely upon:
 * **Infrastructure:**
     * Amazon Web Services, Inc.
     * Google Cloud Platform (Google LLC)
-    * GalaxyGate.net
+    * SoYouStart.com (OVH Hosting Inc.)
 * **Email Services:**
     * Zoho Corporation
 * **Application Development Services:**
