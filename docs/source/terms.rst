@@ -51,7 +51,7 @@ By using our Services, you may need to interact with other Services users. You a
 
 The use of our Service is limited to individuals above the minimum age prescribed in the `Discord's Terms of Service <https://discord.com/terms>`_ .
 
-Some features, such as those marked as "NSFW" ("Not Safe For Work") might not be accessed by individuals under the age of maturity in their respective country. Any violation of such prescriptions might result in the immediate interruption of our Services for the involved individuals.
+Some features, such as those marked as "NSFW" ("Not Safe For Work") should not be accessed by individuals under the age of maturity in their respective country. Any violation of such prescriptions might result in the immediate interruption of our Services for the involved individuals.
 
 
 License And Restrictions
@@ -74,7 +74,7 @@ You expressly understand and agree that we, our subsidiaries and affiliates, and
 
 We do not warrant or guarantee the accuracy, completeness, timeliness, merchantability or fitness for a particular purpose of the information and data provided or distributed by our Services. In no event shall we be liable to you or anyone else for any decision made or action taken by you in reliance of any information or data found through our Services.
 
-We are not responsible or liable in any manner for any content that is created by third parties through features that enable individuals to configure and/or add custom content to the our Services, such us sending message(s) on behalf of our Bot(s).
+We are not responsible or liable in any manner for any content that is created by third parties through features that enable individuals to configure and/or add custom content to our Services, such as sending message(s) on behalf of our Bot(s).
 
 The owner(s) of the Bot(s) may not be made liable for individuals breaking these Terms at any given time.
 
@@ -105,12 +105,12 @@ You acknowledge and agree that our Services may change from time to time without
 We shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of our Services.
 
 
-Ideas, Feedback, Communications, Sponsorships
-=============================================
+Ideas, Feedback, Communications
+===============================
 
 You may choose to or we may invite you to submit comments or ideas about our Services, including but not limited to ideas about improving the Service or our products ("Ideas"). By submitting any Idea, you agree that your disclosure is unsolicited and without restriction and will not place us under any fiduciary or other obligation, and that we are free to use the Idea without any additional compensation to you, and/or to disclose the Idea on a non-confidential basis or otherwise to anyone.
 
-You also agree to allow us to distribute communications (e.g. to your Discord Server(s)) as we deem necessary, without limitation. This might include the ability to associate a sponsored communication (promoting either our Services or a third party) alongside the our message.
+You also agree to allow us to distribute communications (e.g. to your Discord Server(s)) as we deem necessary, without limitation.
 
 We may, but are not required to, provide a way to opt-out of receiving third party sponsored communications. In such cases, please contact us.
 
