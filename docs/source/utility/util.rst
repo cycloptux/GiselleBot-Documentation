@@ -227,6 +227,8 @@ Deletes unused invites (invites with 0 uses), or invites under a certain number 
 
 You can filter by invite target channel through the ``--channel`` parameter, or by inviter through the ``--inviter`` parameter.
 
+Up to 100 invites will be pruned for each command use. If you need to prune more than that, use the command multiple times. This command might be slow and seem temporarily unresponsive for high amount of invites being pruned.
+
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Server
