@@ -24,9 +24,9 @@ copyright = '2022, cycloptux'
 author = 'cycloptux'
 
 # The short X.Y version
-version = '1.13'
+version = '1.14'
 # The full version, including alpha/beta/rc tags
-release = '1.13.0-dev'
+release = '1.14.0-dev'
 
 # Substitutions
 rst_prolog = '''
@@ -121,6 +121,12 @@ html_baseurl = 'https://docs.gisellebot.com/'
 # A list of paths that contain extra files not directly related to the documentation, such as robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They are copied to the output directory. They will overwrite any existing file of the same name.
 # As these files are not meant to be built, they are automatically excluded from source files.
 html_extra_path = ['robots.txt']
+
+# Logo of the docs, or URL that points an image file for the logo. It is placed at the top of the sidebar
+html_logo = 'images/gisellebot-logo.png'
+
+# Website Favicon
+html_favicon = 'favicon.ico'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
