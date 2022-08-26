@@ -1049,7 +1049,7 @@ By default, the channel name template is ``%time_zone%: %clock%``.
     Out of the box, each server is limited to having **2 clock channels**. You can unlock up to **10 different clock channels** as a **Premium** feature (see: :ref:`premium-perks`). Clock update frequency cannot be changed.
 
 .. note::
-    The initial implementation of this command used to have clcks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 10~15 minutes update seems to be the safest update that is still useful to track time.
+    The initial implementation of this command used to have clocks update every minute. Discord suddenly changed the rate limit of channel updates to **2 updates every 10 minutes**, but the rate limiter is not precise. The 15~60 minutes update seems to be the safest update that is still useful to track time.
 
 
 Permissions Needed
