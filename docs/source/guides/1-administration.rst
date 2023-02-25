@@ -6,8 +6,6 @@
 
 **Author**: NaviKing#3820
 
-**Note**: To be updated to describe the new workflow with buttons-based role menus.
-
 ....
 
 The Administration module is the first module you should use when managing a Discord server. It will let you configure all of the following options:
@@ -16,7 +14,7 @@ The Administration module is the first module you should use when managing a Dis
 * Activity Logging
 * Greeter
 * Automatic role assignment/removal
-* Self assignable roles
+* Self-assignable roles
 
 This guide will serve as a brief introduction for how, why, and when you should use these commands. It is not meant as a replacement to the documentation for each command. For more details, please consult the :ref:`administration` full documentation page.
 
@@ -143,25 +141,25 @@ You can undo these commands in the following fashion
 .. note::
     The time code format uses mo/w/d/h/m for months/weeks/days/hours/minutes. Any command that uses a timecode in any module follows this format. For example, if you use 1d3h2m as the time code, that lets the bot know that it should be 1 day, 3 hours, and 2 minutes. More info in :ref:`timecode`.
 
-Self Assignable Roles
+Self-Assignable Roles
 ---------------------
 
 .. seealso::
     Different use cases of the same topic are described in :ref:`guide-self-assignable-roles`
 
-One of the most complex modules of the bot, this allows you to configure roles that users can assign to themselves via the bot. It is strongly recommended to read the full documentation on self assignable roles. This section will cover only the basics.
+One of the most complex modules of the bot, this allows you to configure roles that users can assign to themselves via the bot. It is strongly recommended to read the full documentation on self-assignable roles. This section will cover only the basics.
 
-Self assignable roles are used for many reasons.
+Self-assignable roles are used for many reasons.
 
 * Users may want to opt in or opt out of specific channels. By allowing specific roles access (or excluding them) via channel permissions, users have control over which channels they can or can't see.
 * Users may want to change their Discord name color. By creating roles with a variety of colors, users can self assign a color of their choice
-* Users may want to volunteer for certain duties. For example, creating a taggable @Helper role and making it self assignable allows people to volunteer to be tagged if they need help.
+* Users may want to volunteer for certain duties. For example, creating a taggable @Helper role and making it self-assignable allows people to volunteer to be tagged if they need help.
 * Users may want to opt in for notifications. For example, instead of using @everyone for server updates, you can create a taggable @Server Updates role. Users can then opt in to this role and be tagged if there are updates about the Discord server
 
-Setting up Self Assignable Roles - Basics
+Setting up Self-Assignable Roles - Basics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this bot, you can assign any number of roles to a group of self assignable roles like so
+In this bot, you can assign any number of roles to a group of self-assignable roles like so
 
 .. parsed-literal::
 
@@ -174,9 +172,9 @@ Will add the following roles to group 1
 * Role 3
 * Role4
 
-You can remove roles from a group with |bot_prefix|\ rsar in the same fashion (e.g., |bot_prefix|\ rsar 1 Role1 will remove Role1 from group 1). You can list all the self assignable roles on the server with |bot_prefix|\ lsar. It will display them by group.
+You can remove roles from a group with |bot_prefix|\ rsar in the same fashion (e.g., |bot_prefix|\ rsar 1 Role1 will remove Role1 from group 1). You can list all the self-assignable roles on the server with |bot_prefix|\ lsar. It will display them by group.
 
-You can use the |bot_prefix|\ sargs command and a role ID to configure advanced options for self assignable roles. For example
+You can use the |bot_prefix|\ sargs command and a role ID to configure advanced options for self-assignable roles. For example
 
 .. parsed-literal::
 
@@ -184,7 +182,7 @@ You can use the |bot_prefix|\ sargs command and a role ID to configure advanced 
 
 will let you configure additional options for group 1. These are explained in the resulting command menu and also on the dedicated documentation page (see :ref:`self-assignable-roles`), and will not be covered here.
 
-Using Self Assignable Roles
+Using Self-Assignable Roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users can then assign themselves these roles using a role menu (explained later) or via |bot_prefix|\ iam and remove these roles via |bot_prefix|\ iamnot. For example
@@ -204,33 +202,27 @@ will remove the role
 Role Menus
 ^^^^^^^^^^
 
-Some users find it difficult to use |bot_prefix|\ iam and |bot_prefix|\ iamnot because it requires the command and role name to be typed exactly correct. Many users find it simpler to use role menus, which allow users to assign and remove roles from a single group by reacting to a message. Continuing the previous example, you can use the following command to create a role menu for group 1
+Some users find it difficult to use |bot_prefix|\ iam and |bot_prefix|\ iamnot because it requires the command and role name to be typed exactly correct. Many users find it simpler to use role menus, which allow users to assign and remove roles from a single group by clicking on a button of a message. Continuing the previous example, you can use the following command to create a role menu for group 1
 
 .. parsed-literal::
 
     |bot_prefix|\ rmcreate 1
 
-The bot will create a message to use as the role menu and prompt you to provide a reaction for each role. The bot will build the role menu as you react and let users know which reactions correspond to which roles. You can also create your own role menu by using ``--m`` and providing a valid message ID. To get a message ID, make sure developer mode is enabled (User Settings -> Appearance -> Developer Mode) and then right click on a message and choose Copy ID. For example
+The bot will create a message to use as the role menu with one button for each role, using the name of the role as text of the button.
 
-.. parsed-literal::
-
-    |bot_prefix|\ rmcreate 1 --m 591116046606270464
-
-will create a role menu using the message with the ID 591116046606270464 in the current channel.
-
-You may also find that you want to add additional roles to a role group. In that case, you can run the following command to have the bot add reactions for the new roles in the most recent role group in the channel, or use ``--m`` and a valid message ID to update the role menu on that channel
+You may also find that you want to add additional roles to a role group. In that case, you can run the following command to have the bot refresh the buttons for the roles in the most recent role group in the channel, or specify a valid message ID to update the role menu on that channel
 
 .. parsed-literal::
 
     |bot_prefix|\ rmupdate
 
-Similarly, if you want to remove a role menu, you can use the following command to remove the most recent role menu in the channel, or use ``--m`` and a valid message ID to remove the role menu from that message. It will not delete the reactions, just prevent them from being used as a role menu.
+Similarly, if you want to remove a role menu, you can use the following command to remove the most recent role menu in the channel, or specify a valid message ID to remove the role menu from that message. It will not delete the buttons, just prevent them from being used as a role menu.
 
 .. parsed-literal::
 
     |bot_prefix|\ rmremove
 
-It is often useful to have a separate channel for self assignable roles and have multiple role menus in that channel, so using the ``--m`` parameter to specify a particular message is extremely useful. Be sure that when you are configuring the role menus that you are using emoji from Discord or from your own server, as the bot cannot use emotes it does not have access to.
+Refer to :ref:`guide-self-assignable-roles` for more information about this specific use case.
 
 Summary
 -------

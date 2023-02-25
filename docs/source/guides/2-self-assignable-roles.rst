@@ -6,14 +6,12 @@
 
 **Author**: NaviKing#3820
 
-**Note**: To be updated to describe the new workflow with buttons-based role menus.
-
 .. seealso::
     Different use cases of the same topic are described in :ref:`guide-administration`
 
 ....
 
-One popular bot feature is the ability to have self-assignable roles and reaction roles. Self assignable roles are roles that user's are able to freely add to and remove from themselves via a bot, while reaction roles refer to a method of assigning these roles by adding or removing a reaction to a specific message.
+One popular bot feature is the ability to have self-assignable roles and reaction (button) roles. Self assignable roles are roles that user's are able to freely add to and remove from themselves via a bot, while reaction (button) roles refer to a method of assigning these roles by clicking on a button on a specific message.
 
 |bot_name| has both of these features, and this article will give you a brief overview of how you can set up your very own self-assignable roles and reaction roles. If you want to learn more about how self-assignable roles work, you can take a look at the documentation here: :ref:`self-assignable-roles`
 
@@ -44,16 +42,17 @@ You can configure a self-assignable Role Group by using the |bot_prefix|\ sargs 
 Step 3: Create a reaction role menu
 -----------------------------------
 
-The last step is to set up your reaction role menu using |bot_prefix|\ rmcreate. You can add a reaction role to an existing message by supplying a message ID or have |bot_name| create a message by not including a message ID. Two examples are as follows:
+The last step is to set up your reaction role menu using |bot_prefix|\ rmcreate. This is as easy as just using the command with the group ID of the self-assignable role group you want to turn into a menu.
 
 .. parsed-literal::
 
-    |bot_prefix|\ rmcreate 1 --m 901252411002351668
     |bot_prefix|\ rmcreate 1
 
-The first version will add a self-assignable role menu to message 901252411002351668 in the channel where the command is run, while the second will cause |bot_name| to send its own message to use as the self-assignable role menu. You can then react to the setup message it provides to configure which reactions are associated with each role. You can use emoji from outside of your server if you want, but |bot_name| must be on the server with the emoji you want to use when you run the command.
+|bot_name| will then send an embed instructing people to press a button to assign a role. Each button will be named after the role it's for. If you want the buttons to be named something else, you can simply rename your roles to what you want the buttons to say, create the role menu, and then change the name of the roles back to normal. This is great for making a self-assignable verification role menu to have the button say "I agree to the server rules" while keeping the role itself named "Member" long term.
 
-If you add more roles to a role group later, you can update your reaction role menu using the |bot_prefix|\ rmupdate command. However, if you remove a role from your role group, you cannot automatically remove that role's reaction from the reaction role menu. In this case, your best option might be to disable the reaction role menu using |bot_prefix|\ rmremove, remove all reactions from the message with Discord's right click option to remove all reactions, and then recreate the role menu. Additionally, you can disable the confirmation message that |bot_name| sends to users when a role is successfully assigned using the |bot_prefix|\ rmdmtoggle command if you want.
+If you want to edit the default message, you can use the |bot_prefix|\ msgedit command to do so. If you want to make an embed, I suggest using a website like https://embedbuilder.nadekobot.me/ to generate the embed text. More information about the |bot_prefix|\ msgedit command is available on its documentation page.
+
+If you modify the roles that are in your role group, you can update your reaction role menu using the |bot_prefix|\ rmupdate command. Do note that if you used the trick mentioned earlier to manipulate the names of the buttons such that they are different from the roles, you will need to temporarily update your role names again to match what the buttons say or running this command will also rename your existing buttons to your current role names.
 
 Summary
 -------
