@@ -7,6 +7,13 @@ The YouTube module & connector offers two macro-features:
 * A set of commands to interact with YouTube to get info about videos and channels/users.
 * A notification service which can monitor YouTube channels/users uploading new videos (or updating their titles and descriptions), sending these notifications to one (or more) of the webhooks configured in your Discord server.
 
+.. note::
+    Throughout the documentation, the **YouTube channel identifier** refers to:
+
+    * The ID of the channel, which is usually the ``XXXXXX`` part of the YouTube URL ``https://www.youtube.com/channel/XXXXXXXXXXXXXXXXXXXXXXXX``.
+    * The name (or handle) of the channel, which is usually the ``YYYYYY`` part of the YouTube URL ``https://www.youtube.com/YYYYYYYYYY`` (sometimes prepended with a ``@``).
+    * The display name of the channel, which is usually the name you can see above the username of the YouTube user on the home page of a channel.
+
 Commands
 ========
 
@@ -118,7 +125,7 @@ Command Syntax
     
 Command Description
 ^^^^^^^^^^^^^^^^^^^
-Starts a notification service for the selected YouTube channel. If a new video is uploaded on the channel, or an existing video has its title or description updated, a notification will be sent to the specified webhook service.
+Starts a notification service for the selected YouTube channel. If a new video is uploaded on the channel, a notification will be sent to the specified webhook service.
 
 .. warning::
     Discord webhooks are a very powerful feature, but they (currently) lack 2-way authentication of messages. This means that a malicious user knowing a webhook URL will be able, with some effort, to forge a message containing any kind of content using external tools and send that message to the webhook.
@@ -130,18 +137,6 @@ Starts a notification service for the selected YouTube channel. If a new video i
     This alternative option requires |bot_name| to have "Manage Webhooks" permissions.
 
 **Customization Params**
-
-``--event (first event) [second event] [...]``
-""""""""""""""""""""""""""""""""""""""""""""""
-
-Adds a **whitelist**, **inclusive** filter for specific events to the service. Notifications will only be sent if the actual notification event is equal to one of the filtered events.
-
-The **only** supported events for this feed are:
-
-* ``added``, corresponding to new YouTube videos being uploaded;
-* ``updated``, corresponding to YouTube videos having their title or description changed.
-
-**Default**: No filter
 
 ``--nsfw [censor/skip/only]``
 """""""""""""""""""""""""""""
@@ -204,7 +199,6 @@ Custom headers support a few dynamic tags that are replaced with their respectiv
 * **%title%**: This will be replaced with the YouTube video title.
 * **%channel%**: This will be replaced with the YouTube channel name.
 * **%duration%**: This will be replaced with the YouTube video duration.
-* **%video\_status%**: This will be replaced with the word ``added`` if the notification refers to the upload of a new video, or the word ``updated`` if the notification refers to the update of a video's title or description.
 * **%timestamp% or %timestamp\_utc%**: This will be replaced with the video upload timestamp in UTC time, with format ``YYYY-MM-DD HH:mm:ss (UTC)``.
 * **%timestamp\_iso%**: This will be replaced with the video upload timestamp in UTC time, as ISO8601 string.
 * **%timestamp\_pst%**: This will be replaced with the video upload timestamp in PST time, with format ``YYYY-MM-DD HH:mm:ss (PST)``.
