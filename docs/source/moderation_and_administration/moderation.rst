@@ -405,7 +405,7 @@ Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles, Mute Members
+| **User**: Timeout Members
 | **Bot**: Manage Roles, Mute Members
 
 ....
@@ -472,7 +472,7 @@ Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles, Mute Members, Ban Members
+| **User**: Timeout Members, Ban Members
 | **Bot**: Manage Roles, Mute Members, Ban Members
 
 ....
@@ -535,7 +535,7 @@ Refer to :ref:`moderation` for the exact command syntax.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles, Mute Members
+| **User**: Timeout Members
 | **Bot**: Manage Roles, Mute Members
 
 ....
@@ -577,7 +577,7 @@ Lifts the mute role from the target user(s).
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles, Mute Members
+| **User**: Timeout Members
 | **Bot**: Manage Roles, Mute Members
 
 ....
@@ -619,8 +619,8 @@ Lifts the mute role from the target user(s), and cancels the corresponding timed
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Ban Members
-| **Bot**: Ban Members
+| **User**: Timeout Members, Ban Members
+| **Bot**: Manage Roles, Mute Members, Ban Members
 
 ....
 
@@ -661,7 +661,7 @@ Lifts the channel mute role from the target user(s). Omission of the channel ide
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
-| **User**: Manage Roles, Mute Members
+| **User**: Timeout Members
 | **Bot**: Manage Roles, Mute Members
 
 ....
