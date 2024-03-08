@@ -248,7 +248,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -299,7 +299,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -465,7 +465,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -636,7 +636,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -690,7 +690,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -897,7 +897,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -951,7 +951,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
@@ -1647,7 +1647,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Examples
 ^^^^^^^^
@@ -1720,7 +1720,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Examples
 ^^^^^^^^
@@ -1783,7 +1783,7 @@ You can use one (or more) of these placeholders in your message:
 * **%boost\_level%**: This will be replaced with the current Nitro Server Boost level for the server.
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text, if you want the message to be embedded.
 
 Examples
 ^^^^^^^^

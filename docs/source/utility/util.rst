@@ -707,7 +707,7 @@ Command Syntax
 ^^^^^^^^^^^^^^
 .. parsed-literal::
 
-    |bot_prefix|\ embed (text build with Nadeko's embed builder, or using embed enhancer tags)
+    |bot_prefix|\ embed (embed json built with https://discohook.org/, or using embed enhancer tags)
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
@@ -715,7 +715,7 @@ Answers to the author's message with an embedded message.
 
 In order to customize your embed, you can either use:
 
-* `NadekoBot's Embed Builder <https://eb.nadeko.bot/>`_
+* `Discohook <https://discohook.org/>`_
 * The available embed enhancer tags
 
 Embed enhancer tags are words in the form ``{tag}`` that are used to set a few fields of an embed. Currently, these tags are supported:

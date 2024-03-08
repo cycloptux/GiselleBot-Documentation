@@ -84,7 +84,7 @@ You can use one (or more) of these placeholders in your response message:
 * **%boost\_number%**: This will be replaced with the current number of Nitro Server Boosts that the server received.
 * **%target%**: This will be replaced with anything the user wrote after the trigger.
 
-You can use embed json from https://eb.nadeko.bot/ instead of a regular text in the response parameter, if you want the message to be embedded.
+You can use embed json built with https://discohook.org/ instead of a regular text in the response parameter, if you want the message to be embedded.
 
 Examples
 ^^^^^^^^

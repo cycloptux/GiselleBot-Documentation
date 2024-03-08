@@ -50,7 +50,7 @@ The last step is to set up your reaction role menu using |bot_prefix|\ rmcreate.
 
 |bot_name| will then send an embed instructing people to press a button to assign a role. Each button will be named after the role it's for. If you want the buttons to be named something else, you can simply rename your roles to what you want the buttons to say, create the role menu, and then change the name of the roles back to normal. This is great for making a self-assignable verification role menu to have the button say "I agree to the server rules" while keeping the role itself named "Member" long term.
 
-If you want to edit the default message, you can use the |bot_prefix|\ msgedit command to do so. If you want to make an embed, I suggest using a website like https://embedbuilder.nadekobot.me/ to generate the embed text. More information about the |bot_prefix|\ msgedit command is available on its documentation page.
+If you want to edit the default message, you can use the |bot_prefix|\ msgedit command to do so. If you want to make an embed, I suggest using a website like https://discohook.org/ to generate the embed text. More information about the |bot_prefix|\ msgedit command is available on its documentation page.
 
 If you modify the roles that are in your role group, you can update your reaction role menu using the |bot_prefix|\ rmupdate command. Do note that if you used the trick mentioned earlier to manipulate the names of the buttons such that they are different from the roles, you will need to temporarily update your role names again to match what the buttons say or running this command will also rename your existing buttons to your current role names.
 
