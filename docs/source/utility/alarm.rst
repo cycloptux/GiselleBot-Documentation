@@ -115,14 +115,13 @@ Command Syntax
 .. parsed-literal::
 
     |bot_prefix|\ repeat (time in minutes) (message)
-    |bot_prefix|\ repeat (time of day, HH:mm, UTC timezone) (message)
     |bot_prefix|\ repeat (--message/--m {message to repeat}) [--no-redundant/--n] [--interval/--i {time code}] [--channel/--c {channel id/mention/q_name}]
 
 Command Description
 ^^^^^^^^^^^^^^^^^^^
 Repeat a message periodically in a channel. |bot_name| will delete its old message when repeating the message.
 
-This command has a quick syntax (with 2 variations) and a full syntax. It is advised to use the full syntax if you want take advantage of the advanced settings. Some advanced parameters will still work with the quick syntaxes, but using that mix is not officially supported.
+This command has a quick syntax and a full syntax. It is advised to use the full syntax if you want take advantage of the advanced settings. Some advanced parameters will still work with the quick syntax, but using that mix is not officially supported.
 
 Embed support is only available with the full syntax.
 
@@ -134,9 +133,6 @@ The default interval time is set to 1 day, and the first message will begin bein
 
 The ``--no-redundant`` parameter will instruct the bot to skip sending a repeating message if the latest message in the channel is still the last repeating message.
 
-.. note::
-    Using the 2nd syntax (the one that specifies the time of the day) will automatically set the interval to 1 day, and repeat the message everyday around the same clock time.
-
 Permissions Needed
 ^^^^^^^^^^^^^^^^^^
 | **User**: Manage Messages
@@ -146,7 +142,6 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ repeat 120 2 hours have passed since my last message.
-    |bot_prefix|\ repeat 8:00 Everyone, wake up!
     |bot_prefix|\ repeat --m This is not a spam channel, please behave correctly. --c #serious-chat --i 6h --no-redundant
 
 ....
