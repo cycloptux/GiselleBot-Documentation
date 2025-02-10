@@ -16,7 +16,7 @@ Nowadays, the bot is used on servers both large and small, official and unoffici
 * Points based automatic and manual moderation system with half a dozen possible moderation actions, configurable rules list, and prompts to ensure moderators fill out every required piece of information on a warning for impeccable moderation documentation.
 * Self assignable roles system that includes the ability to add roles to yourself via message reactions, not just bot commands! Configure groups of self assignable roles separately to require (or forbid) certain roles for obtaining them and set a minimum and maximum number of roles in each group
 * Deep logging, including members, channels, roles, messages, server, voice, and moderation-related actions (including logging of deleted attachments)
-* Social networks integrations, streaming tweets from Twitter to Discord in real-time (more integrations to come)
+* Social networks integrations, streaming content from multiple social feeds to Discord in real-time
 * New user management, including greet messages, automatically assigned roles, and automatically removed roles
 * Permissions system to configure the usage of each module
 * Social and currency system to allow users to rank up based on activity and earn currency to use on games in the bot
