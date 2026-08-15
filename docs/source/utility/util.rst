@@ -977,36 +977,6 @@ Examples
 
 ....
 
-|bot_prefix|\ unitconverter
----------------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ unitconvert (value) (unit) [destination unit]
-
-Command Description
-^^^^^^^^^^^^^^^^^^^
-
-Converts between quantities in different units. It also supports converting currency with the most recent exchange rates.
-
-The value and originating unit are mandatory. If the destination unit is omitted or invalid (e.g. non-existing, or a unit in a different measure, like trying to convert length to mass) then the "best" destination unit will be picked. For currencies, if the destination currency is omitted or invalid, ``USD`` will be automatically used.
-
-.. seealso::
-    `Click here [1] <https://github.com/ben-ng/convert-units#supported-units>`_ for a list of all supported **measurement units**. `Click here [2] <https://oxr.readme.io/docs/supported-currencies>`_ for a list of all supported **currencies**.
-
-Examples
-^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ unitconvert 10 EUR USD
-    |bot_prefix|\ uconv 1000 mm
-    |bot_prefix|\ uconv 30 C F
-    |bot_prefix|\ uconv 1 MB b
-
-....
-
 .. _clockchannel:
 
 |bot_prefix|\ clockchannel
@@ -1192,18 +1162,3 @@ Examples
 .. parsed-literal::
 
     |bot_prefix|\ urban guinea tee
-
-....
-
-|bot_prefix|\ lyrics
---------------------
-
-Command Syntax
-^^^^^^^^^^^^^^
-.. parsed-literal::
-
-    |bot_prefix|\ lyrics (song name or search keyword)
-    
-Command Description
-^^^^^^^^^^^^^^^^^^^
-Looks for lyrics of a song by song name or keyword.
