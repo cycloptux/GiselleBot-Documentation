@@ -30,7 +30,6 @@ Available to everyone
 * alarm
 * azurlane
 * currency
-* digimon
 * games
 * help
 * mahjongsoul
